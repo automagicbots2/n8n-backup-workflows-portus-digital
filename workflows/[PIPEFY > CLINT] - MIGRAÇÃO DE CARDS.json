@@ -1,0 +1,2100 @@
+{
+  "active": false,
+  "connections": {
+    "create/update_lead": {
+      "main": [
+        [
+          {
+            "node": "novo lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking \"Test workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "loop": {
+      "main": [
+        [
+          {
+            "node": "Replace Me",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "sem_emailetelefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sem_emailetelefone": {
+      "main": [
+        [
+          {
+            "node": "loop",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead3": {
+      "main": [
+        [
+          {
+            "node": "nao_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "novo lead": {
+      "main": [
+        [
+          {
+            "node": "create/update_deal1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PRIMEIRO CONTATO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PRIMEIRO CONTATO": {
+      "main": [
+        [
+          {
+            "node": "create/update_deal",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "CONECTADO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CONECTADO": {
+      "main": [
+        [
+          {
+            "node": "create/update_deal2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "NO SHOW",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NO SHOW": {
+      "main": [
+        [
+          {
+            "node": "create/update_deal3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "OFERTA / REUNIÃO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OFERTA / REUNIÃO": {
+      "main": [
+        [
+          {
+            "node": "create/update_deal4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "FOLLOW-UP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FOLLOW-UP": {
+      "main": [
+        [
+          {
+            "node": "create/update_deal5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "CONTRATO ENVIADO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CONTRATO ENVIADO": {
+      "main": [
+        [
+          {
+            "node": "create/update_deal6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "VENDA REALIZADA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "VENDA REALIZADA": {
+      "main": [
+        [
+          {
+            "node": "create/update_deal7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PERDIDOS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PERDIDOS": {
+      "main": [
+        [
+          {
+            "node": "create/update_deal8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe": {
+      "main": [
+        [
+          {
+            "node": "insere_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "create/update_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_dados1": {
+      "main": [
+        [
+          {
+            "node": "create/update_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create/update_deal8": {
+      "main": [
+        [
+          {
+            "node": "Replace Me1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create/update_deal7": {
+      "main": [
+        [
+          {
+            "node": "Replace Me1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create/update_deal": {
+      "main": [
+        [
+          {
+            "node": "Replace Me1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create/update_deal6": {
+      "main": [
+        [
+          {
+            "node": "Replace Me1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create/update_deal5": {
+      "main": [
+        [
+          {
+            "node": "Replace Me1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create/update_deal4": {
+      "main": [
+        [
+          {
+            "node": "Replace Me1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create/update_deal3": {
+      "main": [
+        [
+          {
+            "node": "Replace Me1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create/update_deal1": {
+      "main": [
+        [
+          {
+            "node": "Replace Me1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create/update_deal2": {
+      "main": [
+        [
+          {
+            "node": "Replace Me1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Replace Me1": {
+      "main": [
+        [
+          {
+            "node": "loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-07-10T13:43:43.604Z",
+  "id": "JjFpfwaNRismWxg5",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[PIPEFY > CLINT] - MIGRAÇÃO DE CARDS",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "ba633613-227d-4342-b70b-2bde73428c32",
+      "name": "When clicking \"Test workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1700,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/80cf8c3b-6a07-4c85-9679-0e13782fcd7f",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"Code\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] ? '+' + $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] : '' }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"Code\"].json[\"instagram\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"Code\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"Code\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"Code\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"Code\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"Code\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "id_bd",
+              "value": "={{ $node[\"insere_dados1\"].runIndex >= 0 ? $node[\"insere_dados1\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_lead3\"].json[\"id_lead\"] }}"
+            },
+            {
+              "name": "nome_da_empresa",
+              "value": "={{ $node[\"Code\"].json[\"Nome da empresa\"] }}"
+            },
+            {
+              "name": "cargo",
+              "value": "={{ $node[\"Code\"].json[\"cargo\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "630add56-2bde-4a5d-8083-d02c87e780f4",
+      "name": "create/update_lead",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        0,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/8f76af8a-50cb-444c-84ff-14b032160598",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "conhece_a_portus",
+              "value": "={{ $node[\"Code\"].json[\"nos_conhece\"] }}"
+            },
+            {
+              "name": "funil",
+              "value": "=sessao-estrategica"
+            },
+            {
+              "name": "qnt_pessoas_na_equipe",
+              "value": "={{ $node[\"Code\"].json[\"pessoas_no_time\"] }}"
+            },
+            {
+              "name": "cargo",
+              "value": "={{ $node[\"Code\"].json[\"cargo\"] }}"
+            },
+            {
+              "name": "produto_servido_validado",
+              "value": "={{  $node[\"Code\"].json[\"produto_servico\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{  $node[\"Code\"].json[\"faturamento_mensal\"] }}"
+            },
+            {
+              "name": "meta_faturamento_2024",
+              "value": "={{ $node[\"Code\"].json[\"meta_faturamento_2024\"] }}"
+            },
+            {
+              "name": "vaga_aberta",
+              "value": "={{ $node[\"Code\"].json[\"nome_vaga\"] ? 'Sim' : 'Não' }}"
+            },
+            {
+              "name": "profissional_procurado",
+              "value": "={{  $node[\"Code\"].json[\"profissional_procurado\"] }}"
+            },
+            {
+              "name": "parceiro",
+              "value": "={{ $node[\"Code\"].json[\"parceiro\"] }}"
+            },
+            {
+              "name": "origem",
+              "value": "={{  $node[\"Code\"].json[\"content\"][\"origem\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{  $node[\"Code\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "modelo_negocio",
+              "value": "={{  $node[\"Code\"].json[\"modelo_negocio\"] }}"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"Code\"].json[\"data_criacao\"] }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"Code\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] ? '+' + $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] : '' }}"
+            },
+            {
+              "name": "dono_negocio"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{  $node[\"Code\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{  $node[\"Code\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{  $node[\"Code\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{  $node[\"Code\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{  $node[\"Code\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "tags",
+              "value": "Sessão Estratégica"
+            },
+            {
+              "name": "etapa",
+              "value": "1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "349e2b91-5a3a-4369-a89a-4d5401d077a7",
+      "name": "create/update_deal1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        720,
+        60
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "a670f365-e795-4113-8184-4989cc7f2df6",
+      "name": "Replace Me",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -980,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "//Formatar telefone\nfunction formatarTelefone(telefone) {\n  const telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\n  let ddi;\n  let ddd;\n  let telefoneFormatado;\n\n  // Verificar se o telefone começa com \"55\" antes de formatá-lo\n  if (telefoneLimpo.startsWith('55')) {\n    ddi = telefoneLimpo.slice(0, 2);\n    ddd = telefoneLimpo.slice(2, 4);\n    if (parseInt(ddd, 10) > 28) {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n    } else {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n    }\n  } else {\n    ddi = '55';\n    ddd = telefoneLimpo.slice(0, 2);\n    if (parseInt(ddd, 10) > 28) {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n    } else {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n    }\n  }\n\n  return telefoneFormatado;\n}\n\n// Função para formatação de nomes\nfunction formatarNome(nome) {\n  if (nome) {\n    const palavras = nome.trim().split(/\\s+/);\n\n    const palavrasMinusculas = ['de', 'dos', 'da', 'e', 'do', 'das', 'di', 'du', 'o', 'a', 'u'];\n\n    for (let i = 0; i < palavras.length; i++) {\n      const palavraAtual = palavras[i].toLowerCase();\n      if (i === 0 || i === palavras.length - 1 || !palavrasMinusculas.includes(palavraAtual)) {\n        palavras[i] = palavraAtual.charAt(0).toUpperCase() + palavraAtual.slice(1);\n      } else {\n        palavras[i] = palavraAtual;\n      }\n    }\n\n    return palavras.join(\" \");\n  }\n  return '';\n}\n\n// Validar se o parâmetro \"email\" é um email válido e colocar todas as letras em minúsculo\nconst email = $node[\"loop\"].json[\"Email\"].toLowerCase();\nconst isEmailValid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);\n\nfunction formatarInstagram(username) {\n  if (typeof username === 'string') {\n    // Remover espaços em branco extras\n    const usernameSemEspacos = username.trim();\n\n    // Remover o \"@\" do início do username, se existir\n    const usernameSemArroba = usernameSemEspacos.replace(/^@/, '');\n\n    // Converter para minúsculas\n    const usernameFormatado = usernameSemArroba.toLowerCase();\n\n    return usernameFormatado;\n  }\n  return '';\n}\n;\n\nconst motivo_perda = $node[\"loop\"].json[\"Motivo da perda\"] || '';\nconst nome_vaga = $node[\"loop\"].json[\"Nome da vaga\"] || '';\nconst data_criacao = $node[\"loop\"].json[\"Criado em\"] || '';\nconst nome_empresa = $node[\"loop\"].json[\"Nome da Empresa\"] ? $node[\"loop\"].json[\"Nome da Empresa\"] : $node[\"loop\"].json[\"Título\"] || '';\nconst nome1 = formatarNome($node[\"loop\"].json[\"Nome do Lead\"]) || '';\nconst telefone1 = formatarTelefone($node[\"loop\"].json[\"Whatsapp do Lead\"]) || '';\nconst nome = formatarNome($node[\"loop\"].json[\"Título\"]) || '';\nconst resp = formatarNome($node[\"loop\"].json[\"Criador\"]) || '';\nconst cargo = $node[\"loop\"].json[\"Cargo do Lead\"] || '';\nconst pessoas_no_time = $node[\"loop\"].json[\"Quantas pessoas tem no time atual?\"] || '';\nconst servico_a_contratar = $node[\"loop\"].json[\"Qual tipo de serviço deseja contratar?\"] || '';\nconst nos_conhece = $node[\"loop\"].json[\"Já conhece a Portüs Digital? \"]  || '';\nconst como_soube_de_nos = $node[\"loop\"].json[\"💬 Como ficou sabendo da Portus?\"]  || '';\nconst valor_contrato = $node[\"loop\"].json[\"Valor do Contrato\"] || '';\nconst tipo_contrato = $node[\"loop\"].json[\"Tipo de Contrato\"] || '';\nconst prazo_garantia = $node[\"loop\"].json[\"Prazo de Garantia\"] || '';\nconst forma_pag = $node[\"loop\"].json[\"Forma de Pagamento\"] || '';\nconst numero_vagas = $node[\"loop\"].json[\"Número de Vagas\"] || '';\nconst tempo_contrato = $node[\"loop\"].json[\"Tempo de Contrato\"] || '';\nconst fase = $node[\"loop\"].json[\"Fase atual\"] || ''; \n\nreturn{\n  \"E-mail do Cliente\": email,\n  \"Telefone do Cliente - Formato Z-API\": telefone1,\n  \"Nome do Cliente\": nome1 ? nome1 : nome,\n  \"Nome da empresa\": nome_empresa,\n  Responsavel: resp,\n  data_criacao,\n  nome_vaga,\n  motivo_perda,\n  cargo,\n  pessoas_no_time,\n  servico_a_contratar,\n  nos_conhece,\n  como_soube_de_nos,\n  valor_contrato,\n  tipo_contrato,\n  prazo_garantia,\n  forma_pag,\n  numero_vagas,\n  tempo_contrato,\n  fase\n}"
+      },
+      "id": "ade6c94c-d7f7-4fe8-bc23-1a6ca48cc230",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -760,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "12TQ_Hflz6loiT9KwgYi2GpYApw1ptH32j0WmeAm8En8",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1456597366,
+          "mode": "list",
+          "cachedResultName": "Report (3)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12TQ_Hflz6loiT9KwgYi2GpYApw1ptH32j0WmeAm8En8/edit#gid=1456597366"
+        },
+        "options": {}
+      },
+      "id": "f6e79182-d9ee-474c-9bee-97aeb7a84907",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.3,
+      "position": [
+        -1480,
+        380
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ZaWeoW3t9GWDnGXA",
+          "name": "[Google Sheets] - AutomagicBots Auth"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "8b3ae6f2-d60e-4177-abd1-33be6d682b7c",
+      "name": "loop",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -1220,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "50501464-b33b-47da-b711-1442ebc606d5",
+              "leftValue": "={{ $json[\"Email\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "eecd7211-d97d-4175-90f2-65ef6ab10eb0",
+              "leftValue": "={{ $json[\"Whatsapp do Lead\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "9e905926-2ded-4fc9-ac30-5763ac1498b2",
+      "name": "sem_emailetelefone",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -980,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"]  || '-----------------------'}}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] || '-----------------------'}}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] || '-----------------------'}}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"]  || '-----------------------'}}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "1c863606-1156-466c-86cd-c47246ef95e1",
+      "name": "pesquisa_lead3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -580,
+        480
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "7a4b3e0a-4ac1-4c28-a8ad-e6c6b7e80b04",
+              "leftValue": "={{ $node[\"loop\"].json[\"Fase atual\"] }}",
+              "rightValue": "NOVO LEAD",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "9664db55-57bb-4033-b1cc-62bd674d8eeb",
+      "name": "novo lead",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        320,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "7a4b3e0a-4ac1-4c28-a8ad-e6c6b7e80b04",
+              "leftValue": "={{ $node[\"loop\"].json[\"Fase atual\"] }}",
+              "rightValue": "PRIMEIRO CONTATO",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "0d4d78ea-a9d4-42df-aeee-955d0309e45d",
+      "name": "PRIMEIRO CONTATO",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        340,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "7a4b3e0a-4ac1-4c28-a8ad-e6c6b7e80b04",
+              "leftValue": "={{ $node[\"loop\"].json[\"Fase atual\"] }}",
+              "rightValue": "CONECTADO",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "b2630305-e412-430d-ad7f-387237156c4d",
+      "name": "CONECTADO",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        340,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "7a4b3e0a-4ac1-4c28-a8ad-e6c6b7e80b04",
+              "leftValue": "={{ $node[\"loop\"].json[\"Fase atual\"] }}",
+              "rightValue": "NO SHOW",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "c283174e-92d2-45ce-a1e8-5bd18347ed45",
+      "name": "NO SHOW",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        380,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "7a4b3e0a-4ac1-4c28-a8ad-e6c6b7e80b04",
+              "leftValue": "={{ $node[\"loop\"].json[\"Fase atual\"] }}",
+              "rightValue": "OFERTA / REUNIÃO",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "1ee95ece-5248-4937-8c9c-438f2aa4b816",
+      "name": "OFERTA / REUNIÃO",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        400,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "7a4b3e0a-4ac1-4c28-a8ad-e6c6b7e80b04",
+              "leftValue": "={{ $node[\"loop\"].json[\"Fase atual\"] }}",
+              "rightValue": "FOLLOW-UP",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "26fe2b15-7eb0-4058-bc10-6fe31e6d4ef6",
+      "name": "FOLLOW-UP",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        420,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "7a4b3e0a-4ac1-4c28-a8ad-e6c6b7e80b04",
+              "leftValue": "={{ $node[\"loop\"].json[\"Fase atual\"] }}",
+              "rightValue": "CONTRATO ENVIADO",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "d2f279de-81b3-433d-9bb6-563d1462dfce",
+      "name": "CONTRATO ENVIADO",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        440,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "7a4b3e0a-4ac1-4c28-a8ad-e6c6b7e80b04",
+              "leftValue": "={{ $node[\"loop\"].json[\"Fase atual\"] }}",
+              "rightValue": "VENDA REALIZADA",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "3ce17bbf-4939-4005-82c8-ed269f158d70",
+      "name": "VENDA REALIZADA",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        440,
+        1580
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "7a4b3e0a-4ac1-4c28-a8ad-e6c6b7e80b04",
+              "leftValue": "={{ $node[\"loop\"].json[\"Fase atual\"] }}",
+              "rightValue": "PERDIDOS",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a120e1ab-72bf-4019-9c53-153ccd4fb4fb",
+      "name": "PERDIDOS",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        580,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead3\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "05ac2c87-2f7c-4f93-bb64-049010046fa4",
+      "name": "nao_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -400,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"Code\"].json[\"Nome do Cliente\"].split(\" \")[0] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"Code\"].json[\"Nome do Cliente\"].split(\" \").slice(1).join(\" \") }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"Code\"].json[\"Instagram\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "43c62803-8de9-495c-83fc-be0cbb339876",
+      "name": "insere_dados1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -200,
+        320
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/8f76af8a-50cb-444c-84ff-14b032160598",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "conhece_a_portus",
+              "value": "={{ $node[\"Code\"].json[\"nos_conhece\"] }}"
+            },
+            {
+              "name": "funil",
+              "value": "=sessao-estrategica"
+            },
+            {
+              "name": "qnt_pessoas_na_equipe",
+              "value": "={{ $node[\"Code\"].json[\"pessoas_no_time\"] }}"
+            },
+            {
+              "name": "cargo",
+              "value": "={{ $node[\"Code\"].json[\"cargo\"] }}"
+            },
+            {
+              "name": "produto_servido_validado",
+              "value": "={{  $node[\"Code\"].json[\"produto_servico\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{  $node[\"Code\"].json[\"faturamento_mensal\"] }}"
+            },
+            {
+              "name": "meta_faturamento_2024",
+              "value": "={{ $node[\"Code\"].json[\"meta_faturamento_2024\"] }}"
+            },
+            {
+              "name": "vaga_aberta",
+              "value": "={{ $node[\"Code\"].json[\"nome_vaga\"] ? 'Sim' : 'Não' }}"
+            },
+            {
+              "name": "profissional_procurado",
+              "value": "={{  $node[\"Code\"].json[\"profissional_procurado\"] }}"
+            },
+            {
+              "name": "parceiro",
+              "value": "={{ $node[\"Code\"].json[\"parceiro\"] }}"
+            },
+            {
+              "name": "origem",
+              "value": "={{  $node[\"Code\"].json[\"content\"][\"origem\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{  $node[\"Code\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "modelo_negocio",
+              "value": "={{  $node[\"Code\"].json[\"modelo_negocio\"] }}"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"Code\"].json[\"data_criacao\"] }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"Code\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] ? '+' + $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] : '' }}"
+            },
+            {
+              "name": "dono_negocio"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{  $node[\"Code\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{  $node[\"Code\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{  $node[\"Code\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{  $node[\"Code\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{  $node[\"Code\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "tags",
+              "value": "Sessão Estratégica"
+            },
+            {
+              "name": "etapa",
+              "value": "2"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "be2280de-16d9-4a00-ac72-cef0fd61f960",
+      "name": "create/update_deal",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        740,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/8f76af8a-50cb-444c-84ff-14b032160598",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "conhece_a_portus",
+              "value": "={{ $node[\"Code\"].json[\"nos_conhece\"] }}"
+            },
+            {
+              "name": "funil",
+              "value": "=sessao-estrategica"
+            },
+            {
+              "name": "qnt_pessoas_na_equipe",
+              "value": "={{ $node[\"Code\"].json[\"pessoas_no_time\"] }}"
+            },
+            {
+              "name": "cargo",
+              "value": "={{ $node[\"Code\"].json[\"cargo\"] }}"
+            },
+            {
+              "name": "produto_servido_validado",
+              "value": "={{  $node[\"Code\"].json[\"produto_servico\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{  $node[\"Code\"].json[\"faturamento_mensal\"] }}"
+            },
+            {
+              "name": "meta_faturamento_2024",
+              "value": "={{ $node[\"Code\"].json[\"meta_faturamento_2024\"] }}"
+            },
+            {
+              "name": "vaga_aberta",
+              "value": "={{ $node[\"Code\"].json[\"nome_vaga\"] ? 'Sim' : 'Não' }}"
+            },
+            {
+              "name": "profissional_procurado",
+              "value": "={{  $node[\"Code\"].json[\"profissional_procurado\"] }}"
+            },
+            {
+              "name": "parceiro",
+              "value": "={{ $node[\"Code\"].json[\"parceiro\"] }}"
+            },
+            {
+              "name": "origem",
+              "value": "={{  $node[\"Code\"].json[\"content\"][\"origem\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{  $node[\"Code\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "modelo_negocio",
+              "value": "={{  $node[\"Code\"].json[\"modelo_negocio\"] }}"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"Code\"].json[\"data_criacao\"] }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"Code\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] ? '+' + $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] : '' }}"
+            },
+            {
+              "name": "dono_negocio"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{  $node[\"Code\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{  $node[\"Code\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{  $node[\"Code\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{  $node[\"Code\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{  $node[\"Code\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "tags",
+              "value": "Sessão Estratégica"
+            },
+            {
+              "name": "etapa",
+              "value": "3"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ff4b926c-7642-45f4-aceb-091683bafd63",
+      "name": "create/update_deal2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        740,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/8f76af8a-50cb-444c-84ff-14b032160598",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "conhece_a_portus",
+              "value": "={{ $node[\"Code\"].json[\"nos_conhece\"] }}"
+            },
+            {
+              "name": "funil",
+              "value": "=sessao-estrategica"
+            },
+            {
+              "name": "qnt_pessoas_na_equipe",
+              "value": "={{ $node[\"Code\"].json[\"pessoas_no_time\"] }}"
+            },
+            {
+              "name": "cargo",
+              "value": "={{ $node[\"Code\"].json[\"cargo\"] }}"
+            },
+            {
+              "name": "produto_servido_validado",
+              "value": "={{  $node[\"Code\"].json[\"produto_servico\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{  $node[\"Code\"].json[\"faturamento_mensal\"] }}"
+            },
+            {
+              "name": "meta_faturamento_2024",
+              "value": "={{ $node[\"Code\"].json[\"meta_faturamento_2024\"] }}"
+            },
+            {
+              "name": "vaga_aberta",
+              "value": "={{ $node[\"Code\"].json[\"nome_vaga\"] ? 'Sim' : 'Não' }}"
+            },
+            {
+              "name": "profissional_procurado",
+              "value": "={{  $node[\"Code\"].json[\"profissional_procurado\"] }}"
+            },
+            {
+              "name": "parceiro",
+              "value": "={{ $node[\"Code\"].json[\"parceiro\"] }}"
+            },
+            {
+              "name": "origem",
+              "value": "={{  $node[\"Code\"].json[\"content\"][\"origem\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{  $node[\"Code\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "modelo_negocio",
+              "value": "={{  $node[\"Code\"].json[\"modelo_negocio\"] }}"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"Code\"].json[\"data_criacao\"] }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"Code\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] ? '+' + $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] : '' }}"
+            },
+            {
+              "name": "dono_negocio"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{  $node[\"Code\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{  $node[\"Code\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{  $node[\"Code\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{  $node[\"Code\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{  $node[\"Code\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "tags",
+              "value": "Sessão Estratégica"
+            },
+            {
+              "name": "etapa",
+              "value": "4"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0e9a9545-7b56-4ae4-98b9-bed135d033b1",
+      "name": "create/update_deal3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        740,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/8f76af8a-50cb-444c-84ff-14b032160598",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "conhece_a_portus",
+              "value": "={{ $node[\"Code\"].json[\"nos_conhece\"] }}"
+            },
+            {
+              "name": "funil",
+              "value": "=sessao-estrategica"
+            },
+            {
+              "name": "qnt_pessoas_na_equipe",
+              "value": "={{ $node[\"Code\"].json[\"pessoas_no_time\"] }}"
+            },
+            {
+              "name": "cargo",
+              "value": "={{ $node[\"Code\"].json[\"cargo\"] }}"
+            },
+            {
+              "name": "produto_servido_validado",
+              "value": "={{  $node[\"Code\"].json[\"produto_servico\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{  $node[\"Code\"].json[\"faturamento_mensal\"] }}"
+            },
+            {
+              "name": "meta_faturamento_2024",
+              "value": "={{ $node[\"Code\"].json[\"meta_faturamento_2024\"] }}"
+            },
+            {
+              "name": "vaga_aberta",
+              "value": "={{ $node[\"Code\"].json[\"nome_vaga\"] ? 'Sim' : 'Não' }}"
+            },
+            {
+              "name": "profissional_procurado",
+              "value": "={{  $node[\"Code\"].json[\"profissional_procurado\"] }}"
+            },
+            {
+              "name": "parceiro",
+              "value": "={{ $node[\"Code\"].json[\"parceiro\"] }}"
+            },
+            {
+              "name": "origem",
+              "value": "={{  $node[\"Code\"].json[\"content\"][\"origem\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{  $node[\"Code\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "modelo_negocio",
+              "value": "={{  $node[\"Code\"].json[\"modelo_negocio\"] }}"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"Code\"].json[\"data_criacao\"] }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"Code\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] ? '+' + $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] : '' }}"
+            },
+            {
+              "name": "dono_negocio"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{  $node[\"Code\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{  $node[\"Code\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{  $node[\"Code\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{  $node[\"Code\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{  $node[\"Code\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "tags",
+              "value": "Sessão Estratégica"
+            },
+            {
+              "name": "etapa",
+              "value": "5"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "453fc38a-abec-43a0-b09b-49ea8f96f667",
+      "name": "create/update_deal4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        760,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/8f76af8a-50cb-444c-84ff-14b032160598",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "conhece_a_portus",
+              "value": "={{ $node[\"Code\"].json[\"nos_conhece\"] }}"
+            },
+            {
+              "name": "funil",
+              "value": "=sessao-estrategica"
+            },
+            {
+              "name": "qnt_pessoas_na_equipe",
+              "value": "={{ $node[\"Code\"].json[\"pessoas_no_time\"] }}"
+            },
+            {
+              "name": "cargo",
+              "value": "={{ $node[\"Code\"].json[\"cargo\"] }}"
+            },
+            {
+              "name": "produto_servido_validado",
+              "value": "={{  $node[\"Code\"].json[\"produto_servico\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{  $node[\"Code\"].json[\"faturamento_mensal\"] }}"
+            },
+            {
+              "name": "meta_faturamento_2024",
+              "value": "={{ $node[\"Code\"].json[\"meta_faturamento_2024\"] }}"
+            },
+            {
+              "name": "vaga_aberta",
+              "value": "={{ $node[\"Code\"].json[\"nome_vaga\"] ? 'Sim' : 'Não' }}"
+            },
+            {
+              "name": "profissional_procurado",
+              "value": "={{  $node[\"Code\"].json[\"profissional_procurado\"] }}"
+            },
+            {
+              "name": "parceiro",
+              "value": "={{ $node[\"Code\"].json[\"parceiro\"] }}"
+            },
+            {
+              "name": "origem",
+              "value": "={{  $node[\"Code\"].json[\"content\"][\"origem\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{  $node[\"Code\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "modelo_negocio",
+              "value": "={{  $node[\"Code\"].json[\"modelo_negocio\"] }}"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"Code\"].json[\"data_criacao\"] }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"Code\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] ? '+' + $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] : '' }}"
+            },
+            {
+              "name": "dono_negocio"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{  $node[\"Code\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{  $node[\"Code\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{  $node[\"Code\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{  $node[\"Code\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{  $node[\"Code\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "tags",
+              "value": "Sessão Estratégica"
+            },
+            {
+              "name": "etapa",
+              "value": "6"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "93ef230a-4968-44e5-9164-0c98a45ced12",
+      "name": "create/update_deal5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        760,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/8f76af8a-50cb-444c-84ff-14b032160598",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "conhece_a_portus",
+              "value": "={{ $node[\"Code\"].json[\"nos_conhece\"] }}"
+            },
+            {
+              "name": "funil",
+              "value": "=sessao-estrategica"
+            },
+            {
+              "name": "qnt_pessoas_na_equipe",
+              "value": "={{ $node[\"Code\"].json[\"pessoas_no_time\"] }}"
+            },
+            {
+              "name": "cargo",
+              "value": "={{ $node[\"Code\"].json[\"cargo\"] }}"
+            },
+            {
+              "name": "produto_servido_validado",
+              "value": "={{  $node[\"Code\"].json[\"produto_servico\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{  $node[\"Code\"].json[\"faturamento_mensal\"] }}"
+            },
+            {
+              "name": "meta_faturamento_2024",
+              "value": "={{ $node[\"Code\"].json[\"meta_faturamento_2024\"] }}"
+            },
+            {
+              "name": "vaga_aberta",
+              "value": "={{ $node[\"Code\"].json[\"nome_vaga\"] ? 'Sim' : 'Não' }}"
+            },
+            {
+              "name": "profissional_procurado",
+              "value": "={{  $node[\"Code\"].json[\"profissional_procurado\"] }}"
+            },
+            {
+              "name": "parceiro",
+              "value": "={{ $node[\"Code\"].json[\"parceiro\"] }}"
+            },
+            {
+              "name": "origem",
+              "value": "={{  $node[\"Code\"].json[\"content\"][\"origem\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{  $node[\"Code\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "modelo_negocio",
+              "value": "={{  $node[\"Code\"].json[\"modelo_negocio\"] }}"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"Code\"].json[\"data_criacao\"] }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"Code\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] ? '+' + $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] : '' }}"
+            },
+            {
+              "name": "dono_negocio"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{  $node[\"Code\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{  $node[\"Code\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{  $node[\"Code\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{  $node[\"Code\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{  $node[\"Code\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "tags",
+              "value": "Sessão Estratégica, CONTRATO ENVIADO"
+            },
+            {
+              "name": "etapa",
+              "value": "1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e18348e4-c81e-4327-b580-1feb52a9970b",
+      "name": "create/update_deal6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        760,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/8f76af8a-50cb-444c-84ff-14b032160598",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "conhece_a_portus",
+              "value": "={{ $node[\"Code\"].json[\"nos_conhece\"] }}"
+            },
+            {
+              "name": "funil",
+              "value": "=sessao-estrategica"
+            },
+            {
+              "name": "qnt_pessoas_na_equipe",
+              "value": "={{ $node[\"Code\"].json[\"pessoas_no_time\"] }}"
+            },
+            {
+              "name": "cargo",
+              "value": "={{ $node[\"Code\"].json[\"cargo\"] }}"
+            },
+            {
+              "name": "produto_servido_validado",
+              "value": "={{  $node[\"Code\"].json[\"produto_servico\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{  $node[\"Code\"].json[\"faturamento_mensal\"] }}"
+            },
+            {
+              "name": "meta_faturamento_2024",
+              "value": "={{ $node[\"Code\"].json[\"meta_faturamento_2024\"] }}"
+            },
+            {
+              "name": "vaga_aberta",
+              "value": "={{ $node[\"Code\"].json[\"nome_vaga\"] ? 'Sim' : 'Não' }}"
+            },
+            {
+              "name": "profissional_procurado",
+              "value": "={{  $node[\"Code\"].json[\"profissional_procurado\"] }}"
+            },
+            {
+              "name": "parceiro",
+              "value": "={{ $node[\"Code\"].json[\"parceiro\"] }}"
+            },
+            {
+              "name": "origem",
+              "value": "={{  $node[\"Code\"].json[\"content\"][\"origem\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{  $node[\"Code\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "modelo_negocio",
+              "value": "={{  $node[\"Code\"].json[\"modelo_negocio\"] }}"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"Code\"].json[\"data_criacao\"] }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"Code\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] ? '+' + $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] : '' }}"
+            },
+            {
+              "name": "dono_negocio"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{  $node[\"Code\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{  $node[\"Code\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{  $node[\"Code\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{  $node[\"Code\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{  $node[\"Code\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "tags",
+              "value": "Sessão Estratégica"
+            },
+            {
+              "name": "etapa",
+              "value": "7"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7cd244d5-4396-43e5-96f8-2333b79c0a01",
+      "name": "create/update_deal7",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        760,
+        1400
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/8f76af8a-50cb-444c-84ff-14b032160598",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $node[\"Code\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "conhece_a_portus",
+              "value": "={{ $node[\"Code\"].json[\"nos_conhece\"] }}"
+            },
+            {
+              "name": "funil",
+              "value": "=sessao-estrategica"
+            },
+            {
+              "name": "qnt_pessoas_na_equipe",
+              "value": "={{ $node[\"Code\"].json[\"pessoas_no_time\"] }}"
+            },
+            {
+              "name": "cargo",
+              "value": "={{ $node[\"Code\"].json[\"cargo\"] }}"
+            },
+            {
+              "name": "produto_servido_validado",
+              "value": "={{  $node[\"Code\"].json[\"produto_servico\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{  $node[\"Code\"].json[\"faturamento_mensal\"] }}"
+            },
+            {
+              "name": "meta_faturamento_2024",
+              "value": "={{ $node[\"Code\"].json[\"meta_faturamento_2024\"] }}"
+            },
+            {
+              "name": "vaga_aberta",
+              "value": "={{ $node[\"Code\"].json[\"nome_vaga\"] ? 'Sim' : 'Não' }}"
+            },
+            {
+              "name": "profissional_procurado",
+              "value": "={{  $node[\"Code\"].json[\"profissional_procurado\"] }}"
+            },
+            {
+              "name": "parceiro",
+              "value": "={{ $node[\"Code\"].json[\"parceiro\"] }}"
+            },
+            {
+              "name": "origem",
+              "value": "={{  $node[\"Code\"].json[\"content\"][\"origem\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{  $node[\"Code\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "modelo_negocio",
+              "value": "={{  $node[\"Code\"].json[\"modelo_negocio\"] }}"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"Code\"].json[\"data_criacao\"] }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"Code\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] ? '+' + $node[\"Code\"].json[\"Telefone do Cliente - Formato Z-API\"] : '' }}"
+            },
+            {
+              "name": "dono_negocio"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{  $node[\"Code\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{  $node[\"Code\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{  $node[\"Code\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{  $node[\"Code\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{  $node[\"Code\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "tags",
+              "value": "Sessão Estratégica"
+            },
+            {
+              "name": "etapa",
+              "value": "8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1869fc34-a691-4242-af78-f42393c83d12",
+      "name": "create/update_deal8",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        780,
+        1580
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "5f98f65b-9f21-4c27-a004-2b9df6a32e8d",
+      "name": "Replace Me1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1220,
+        20
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-07-11T17:46:25.287Z",
+  "versionId": "04c81cd3-a46a-42ee-84c3-c80b8711c95b"
+}
