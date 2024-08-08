@@ -1,0 +1,1639 @@
+{
+  "active": false,
+  "connections": {
+    "duplica_contrato": {
+      "main": [
+        [
+          {
+            "node": "formata_contrato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_contrato": {
+      "main": [
+        [
+          {
+            "node": "converte_to_PDF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "converte_to_PDF": {
+      "main": [
+        [
+          {
+            "node": "envia_no_email_do_prestador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_no_email_do_prestador": {
+      "main": [
+        [
+          {
+            "node": "insere",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cliente_assinou": {
+      "main": [
+        [
+          {
+            "node": "tratamento_de_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tratamento_de_dados": {
+      "main": [
+        [
+          {
+            "node": "dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "avisa_priscila2": {
+      "main": [
+        [
+          {
+            "node": "insere1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_no_banco1": {
+      "main": [
+        [
+          {
+            "node": "nao_existe1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe1": {
+      "main": [
+        [
+          {
+            "node": "nao_es_um_prestador_de_servico",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "baixa_pdf",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_es_um_prestador_de_servico": {
+      "main": [
+        [
+          {
+            "node": "avisa_amanda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "baixa_pdf": {
+      "main": [
+        [
+          {
+            "node": "upa_o_novo_no_drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "deleta_arquivo_antigo": {
+      "main": [
+        [
+          {
+            "node": "avisa_priscila2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere": {
+      "main": [
+        [
+          {
+            "node": "avisa_conclusao_priscila",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "upa_o_novo_no_drive": {
+      "main": [
+        [
+          {
+            "node": "deleta_arquivo_antigo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "avisa_amanda": {
+      "main": [
+        [
+          {
+            "node": "avisa_viviane",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_no_banco1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "mentoria?": {
+      "main": [
+        [
+          {
+            "node": "formata_contrato_mentoria",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "formata_contrato_trafego",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_contrato_mentoria": {
+      "main": [
+        [
+          {
+            "node": "cadastrar_contato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_contrato_trafego": {
+      "main": [
+        [
+          {
+            "node": "cadastrar_contato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cadastrar_contato": {
+      "main": [
+        [
+          {
+            "node": "avisa_Priscilla1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "duplica_contrato1": {
+      "main": [
+        [
+          {
+            "node": "mentoria?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "trata_dados1": {
+      "main": [
+        [
+          {
+            "node": "dados_validados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "contrato_enviado": {
+      "main": [
+        [
+          {
+            "node": "trata_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-07-15T17:54:09.561Z",
+  "id": "6ubur03Sj2HBxBGp",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "✅⌚[PORTUS][AUTENTIQUE] - GERAÇÃO DE CONTRATOS",
+  "nodes": [
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"ID_priscila_bot_conversa\"] }}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🚨 *NOTIFICAÇÃO - CONTRATO*\n\nO contrato do(a) prestador(a) de serviço com email {{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}, não pôde ser gerado pois os dados do contrato fornecidos por este prestador não foram encontratos na planilha (https://docs.google.com/spreadsheets/d/1wH0tDaN7jGIgbtOi5g1FBhjbHnr0wlYIMoH0hSW9N40/edit#gid=0).\n\nFavor incluir as informações faltantes deste(a) prestador(a) na planilha acima ou pedir para que ele(a) preencha o formulário de prestador primeiro e assim tente novamente: \n\n👉 *FORMULÁRIO DO PRESTADOR:* https://xtrafego.com.br/quillforms/formulario-para-contratacao-de-prestacao-de-servicos-xtrafego/\n👉 *FORMULÁRIO DA EMPRESA:* https://xtrafego.com.br/quillforms/formulario-para-contratacao-de-prestacao-de-servicos-empresa-xtrafego/\n\n.................................\n*Email do(a) Prestador(a):* {{ $node[\"segundo_ou_mais_erro\"].json[\"content\"][\"email\"] }}\n*Contrato:* {{ $node[\"segundo_ou_mais_erro\"].json[\"content\"][\"modelo_de_contrato\"] }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "avisa_priscila",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2360,
+        240
+      ],
+      "id": "bb2bd939-4b72-4402-92c7-28935337c538",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "copy",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"modelo_de_contrato\"].replace('Gestor de Tráfego JR', $node[\"chega_da_fila\"].json[\"content\"][\"id_contrato_gestor_trafego_junior\"]).replace('Gestor de Tráfego PL', $node[\"chega_da_fila\"].json[\"content\"][\"id_contrato_gestor_trafego_pleno\"]).replace('Gestor de Tráfego SR', $node[\"chega_da_fila\"].json[\"content\"][\"id_contrato_gestor_trafego_senior\"]) }}",
+          "mode": "id"
+        },
+        "options": {
+          "name": "={{ $node[\"pesquisa_no_banco\"].json[\"nome_completo\"].toUpperCase() }} - CONTRATO {{ $node[\"chega_da_fila\"].json[\"content\"][\"modelo_de_contrato\"].toUpperCase() }}",
+          "parents": [
+            "={{\n  $node[\"chega_da_fila\"].json[\"content\"][\"modelo_de_contrato\"].includes(\"Gestor de Tráfego\") ? $node[\"chega_da_fila\"].json[\"content\"][\"id_pasta_gestores_de_trafego\"] : ''}}"
+          ]
+        }
+      },
+      "name": "duplica_contrato",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        420
+      ],
+      "id": "ce2ff457-de42-4507-a0db-518b361ba453",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "FkFkMqymMJCPVMOB",
+          "name": "[Google Drive] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{ $node[\"duplica_contrato\"].json[\"id\"] }}",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "replaceAll",
+              "text": "{FULL_NAME}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"nome_completo\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{CPF}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"cpf\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{CNPJ}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"cnpj\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{RUA}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"rua\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{NUMERO}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"numero\"] === '0' || $node[\"pesquisa_no_banco\"].json[\"numero\"] === '' ? 'S/N' : $node[\"pesquisa_no_banco\"].json[\"numero\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{BAIRRO}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"bairro\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{CIDADE}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"cidade\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{ESTADO}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"estado\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{CEP}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"cep\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{EMAIL}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"email_do_prestador\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{DATAINICIO}",
+              "replaceText": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_de_inicio_prestacao_de_servico\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{DATAFIM}",
+              "replaceText": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_de_encerramento_primeiro_contrato\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{REMUNERACAO}",
+              "replaceText": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"valor_da_remuneracao\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{REMUNERACAOEXTENSO}",
+              "replaceText": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"valor_da_remuneracao_por_extenso\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{DATAPAGAMENTO1}",
+              "replaceText": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_do_primeiro_pagamento\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{DIASTRABALHADOS}",
+              "replaceText": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"dias_trabalhados_para_o_primeiro_pagamento\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{DATAPERIODOINICIO}",
+              "replaceText": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_de_inicio_periodo_trabalhado_para_primeiro_pagamento\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{DATAPERIODOFINAL}",
+              "replaceText": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_final_do_periodo_trabalhado_para_primeiro_pagamento\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{NUMERODACONTA}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"numero_da_conta_corrente_pj\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{NUMEROAGENCIA}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"numero_da_agencia\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{BANCO}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"nome_do_banco\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{TIPODECHAVE}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"tipo_de_chave_pj\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{CHAVEPIX}",
+              "replaceText": "={{ $node[\"pesquisa_no_banco\"].json[\"chave_pix_pj\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{DIADOMES}",
+              "replaceText": "={{$now.toFormat('dd')}}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{MESEXTENSO}",
+              "replaceText": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"mes_corrente\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{ANO}",
+              "replaceText": "={{$now.toFormat('yyyy')}}",
+              "matchCase": true
+            }
+          ]
+        }
+      },
+      "name": "formata_contrato",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        1240,
+        420
+      ],
+      "id": "fded52c6-88a3-4d4d-98e0-878962f31945",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "OBvnBUSoNc25ugKH",
+          "name": "[Google Docs] - Portus"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "delete",
+        "fileId": {
+          "__rl": true,
+          "value": "=1NHut_vdiH9I7pfTthJ7HOxsu4JGPiTusAbrF0kSeako",
+          "mode": "id"
+        }
+      },
+      "name": "deletar_arquivos_via_id",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 1,
+      "position": [
+        2460,
+        340
+      ],
+      "id": "edaca2ab-520c-4ad0-8b3b-574df39ab36a",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"chega_da_fila\"].json[\"content\"][\"ID_priscila_bot_conversa\"] }}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=📄 *NOVO CONTRATO GERADO*\n\nO contrato  do(a) Prestador(a) {{ $node[\"pesquisa_no_banco\"].json[\"nome_completo\"] }} para o cargo de {{ $node[\"chega_da_fila\"].json[\"content\"][\"modelo_de_contrato\"] }}, acabou de ficar pronto e a automação já enviou no email dele(a) para assinatura. \n\n----------------------------\nPara visualizar o arquivo gerado, basta acessar o seguinte link https://docs.google.com/document/d/{{ $node[\"duplica_contrato\"].json[\"id\"] }}/edit"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "avisa_conclusao_priscila",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2040,
+        420
+      ],
+      "id": "6dbd229b-f254-452f-96ee-cc89ce5a1272",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $node[\"formata_contrato\"].json[\"documentId\"] }}",
+          "mode": "id"
+        },
+        "options": {
+          "googleFileConversion": {
+            "conversion": {
+              "docsToFormat": "application/pdf",
+              "drawingsToFormat": "application/pdf",
+              "slidesToFormat": "application/pdf",
+              "sheetsToFormat": "application/pdf"
+            }
+          },
+          "fileName": "Contrato.pdf"
+        }
+      },
+      "name": "converte_to_PDF",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 1,
+      "position": [
+        1440,
+        420
+      ],
+      "id": "b7d4d5a1-91d8-4e2a-8b9a-4451751bd58b",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "FkFkMqymMJCPVMOB",
+          "name": "[Google Drive] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.autentique.com.br/v2/graphql",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"token_autentique\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "operations",
+              "value": "={\"query\":\"mutation CreateDocumentMutation($document: DocumentInput!, $signers: [SignerInput!]!, $file: Upload!) {createDocument(sandbox: false, document: $document, signers: $signers, file: $file) {id name refusable sortable created_at signatures { public_id name email created_at action { name } link { short_link } user { id name email }}}}\", \"variables\":{\"document\": {\"name\": \"{{ $node[\"pesquisa_no_banco\"].json[\"nome_completo\"].toUpperCase() }} - CONTRATO {{ $node[\"chega_da_fila\"].json[\"content\"][\"modelo_de_contrato\"].toUpperCase() }}\"},\"signers\": [{\"email\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}\",\"action\": \"SIGN\"}],\"file\":null}}"
+            },
+            {
+              "name": "map",
+              "value": "{\"file\": [\"variables.file\"]}"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        }
+      },
+      "id": "e53d598f-7611-4181-b3d5-7ba1c52826d1",
+      "name": "envia_no_email_do_prestador",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1640,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "cliente-assinou",
+        "options": {}
+      },
+      "id": "6288ec9e-3d82-4665-a019-85336a5cf81a",
+      "name": "cliente_assinou",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        60,
+        1080
+      ],
+      "webhookId": "bbe6dd1d-8597-40da-ad53-252028f37679"
+    },
+    {
+      "parameters": {
+        "jsCode": "function formatarNome(nome) {\n  if (nome) {\n    const palavras = nome.trim().split(/\\s+/);\n\n    const palavrasMinusculas = ['de', 'dos', 'da', 'e', 'do', 'das', 'di', 'du', 'o', 'a', 'u'];\n\n    for (let i = 0; i < palavras.length; i++) {\n      const palavraAtual = palavras[i].toLowerCase();\n      if (i === 0 || i === palavras.length - 1 || !palavrasMinusculas.includes(palavraAtual)) {\n        palavras[i] = palavraAtual.charAt(0).toUpperCase() + palavraAtual.slice(1);\n      } else {\n        palavras[i] = palavraAtual;\n      }\n    }\n\n    return palavras.join(\" \");\n  }\n  return '';\n}\n\nconst email = $node[\"cliente_assinou\"].json[\"body\"][\"partes[0][email]\"] || '';\nconst nome = $node[\"cliente_assinou\"].json[\"body\"][\"partes[0][nome]\"] || '';\nconst cpf = $node[\"cliente_assinou\"].json[\"body\"][\"partes[0][cpf]\"] || '';\nconst nascimento = $node[\"cliente_assinou\"].json[\"body\"][\"partes[0][nascimento]\"] || '';\nconst data_assinatura = $node[\"cliente_assinou\"].json[\"body\"][\"partes[0][created]\"] || '';\nconst assinado_em = $node[\"cliente_assinou\"].json[\"body\"][\"partes[0][visualizado][geotrack][city]\"] || '' + ','+ ' '+ $node[\"cliente_assinou\"].json[\"body\"][\"partes[0][visualizado][geotrack][state]\"] || '' + ','+ ' '+ $node[\"cliente_assinou\"].json[\"body\"][\"partes[0][visualizado][geotrack][country]\"].replace('Brazil','Brasil') || '';\nconst nome_do_documento = $node[\"cliente_assinou\"].json[\"body\"][\"documento[nome]\"] || '';\nconst link_do_arquivo = $node[\"cliente_assinou\"].json[\"body\"][\"arquivo[assinado]\"] || '';\n\nreturn {\n  nome: nome,\n  cpf: cpf,\n  email: email,\n  nascimento: nascimento,\n  data_assinatura: data_assinatura,\n  assinado_em: assinado_em,\n  nome_do_documento: nome_do_documento,\n  link_do_arquivo: link_do_arquivo\n}"
+      },
+      "id": "aa358a15-4f79-4387-a2f7-668ba94628a6",
+      "name": "tratamento_de_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"dados1\"].json[\"id_priscila_financeiro\"] }}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🚨 *NOVO CONTRATO ASSINADO*\n\nO(A) Prestador(a) {{ $node[\"dados1\"].json[\"nome\"] }}, acabou de assinar o contrato por meio do Autentique.\n\n.................................\n🔗 *Link do documento no Autentique:* {{ $node[\"tratamento_de_dados\"].json[\"link_do_arquivo\"] }}\n\n🔗 *Link do documento no Drive:* https://drive.google.com/file/d/{{ $node[\"upa_o_novo_no_drive\"].json[\"id\"] }}/view"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"dados1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "avisa_priscila2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1600,
+        1180
+      ],
+      "id": "32abd4fe-17bc-4c6c-b918-875b03ed899f",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "contratos_prestadores",
+          "mode": "list",
+          "cachedResultName": "contratos_prestadores"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email_do_prestador",
+              "value": "={{ $node[\"dados1\"].json[\"email\"] || '-----------------------' }}"
+            },
+            {
+              "column": "cpf",
+              "value": "={{ $node[\"dados1\"].json[\"cpf\"] || '-----------------------' }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "ec56a183-84db-48f5-8e65-4205aed3f644",
+      "name": "pesquisa_no_banco1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        620,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_no_banco1\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "2f336c86-1326-43d7-a2d5-39adcbaff3ba",
+      "name": "nao_existe1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        800,
+        1080
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "38d29848-0efc-4619-8b59-90f3f8b7ef14",
+      "name": "nao_es_um_prestador_de_servico",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"dados1\"].json[\"link_do_arquivo\"] }}",
+        "options": {}
+      },
+      "id": "85ad411e-9c7c-451f-a05c-b182642f9b34",
+      "name": "baixa_pdf",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1020,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "delete",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $node[\"pesquisa_no_banco1\"].json[\"link_arquivo\"].split('/')[5] }}",
+          "mode": "id"
+        }
+      },
+      "name": "deleta_arquivo_antigo",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 1,
+      "position": [
+        1420,
+        1180
+      ],
+      "id": "7b39fe32-5faa-43bf-ad94-be07600372ee"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "contratos_prestadores",
+          "mode": "list",
+          "cachedResultName": "contratos_prestadores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "email_do_prestador",
+        "valueToMatchOn": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "link_arquivo",
+              "value": "=https://docs.google.com/document/d/{{ $node[\"duplica_contrato\"].json[\"id\"] }}/edit"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ed015ef7-c771-4554-bade-6d8dfca29866",
+      "name": "insere",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1840,
+        420
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "binaryData": true,
+        "name": "={{ $node[\"dados1\"].json[\"nome_do_documento\"] }}.pdf",
+        "parents": [
+          "={{$node[\"dados1\"].json[\"nome_do_documento\"].includes(\"GESTOR DE TRÁFEGO\") ? $node[\"dados1\"].json[\"id_pasta_gestores_de_trafego\"] : ''}}"
+        ],
+        "options": {}
+      },
+      "name": "upa_o_novo_no_drive",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 1,
+      "position": [
+        1220,
+        1180
+      ],
+      "id": "d3606b02-c8ad-47a2-a5a6-80ea359e1c07"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "contratos_prestadores",
+          "mode": "list",
+          "cachedResultName": "contratos_prestadores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "email_do_prestador",
+        "valueToMatchOn": "={{ $node[\"dados1\"].json[\"email\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "link_arquivo",
+              "value": "=https://drive.google.com/file/d/{{ $node[\"upa_o_novo_no_drive\"].json[\"id\"] }}/view"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5affe23e-78dc-461f-8c42-3b79622fe530",
+      "name": "insere1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1800,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"dados1\"].json[\"id_amanda_closer\"] }}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🚨 *NOVO CONTRATO ASSINADO*\n\nO(A) Cliente(a) {{ $node[\"dados1\"].json[\"nome\"] }}, acabou de assinar o contrato por meio do Autentique.\n\n.................................\n🔗 *{{ $node[\"dados1\"].json[\"nome_do_documento\"] }}:* {{ $node[\"tratamento_de_dados\"].json[\"link_do_arquivo\"] }}\n\n👉 *ASSINADO EM:* {{ $node[\"dados1\"].json[\"data_assinatura\"].slice(8,10) }}/{{ $node[\"dados1\"].json[\"data_assinatura\"].slice(5,7) }}/{{ $node[\"dados1\"].json[\"data_assinatura\"].slice(0,4) }} às {{ $node[\"dados1\"].json[\"data_assinatura\"].slice(11,16) }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"dados1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "avisa_amanda",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1220,
+        960
+      ],
+      "id": "0b613f4d-4a73-4256-92d9-7dd77695a4e4",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"dados1\"].json[\"id_viviane_closer\"] }}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🚨 *NOVO CONTRATO ASSINADO*\n\nO(A) Cliente(a) {{ $node[\"dados1\"].json[\"nome\"] }}, acabou de assinar o contrato por meio do Autentique.\n\n.................................\n🔗 *{{ $node[\"dados1\"].json[\"nome_do_documento\"] }}:* {{ $node[\"tratamento_de_dados\"].json[\"link_do_arquivo\"] }}\n\n👉 *ASSINADO EM:* {{ $node[\"dados1\"].json[\"data_assinatura\"].slice(8,10) }}/{{ $node[\"dados1\"].json[\"data_assinatura\"].slice(5,7) }}/{{ $node[\"dados1\"].json[\"data_assinatura\"].slice(0,4) }} às {{ $node[\"dados1\"].json[\"data_assinatura\"].slice(11,16) }}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"dados1\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "avisa_viviane",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1420,
+        960
+      ],
+      "id": "b754db95-3445-48a5-8a11-10c2766fc2d4",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "API-KEY",
+              "stringValue": "d029204f-6407-43ea-bc83-bee5f62670df"
+            },
+            {
+              "name": "id_viviane_closer",
+              "stringValue": "332695454"
+            },
+            {
+              "name": "id_amanda_closer",
+              "stringValue": "229097146"
+            },
+            {
+              "name": "id_priscila_financeiro",
+              "stringValue": "229109811"
+            },
+            {
+              "name": "id_pasta_gestores_de_trafego",
+              "stringValue": "1XPOSCVANB3U6IXqMhD3ufEGYRHmB4c-F"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fda3f09c-9313-47b0-8dd2-f953305bb4c1",
+      "name": "dados1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        420,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"dados_validados\"].json[\"Tipo de Contrato\"] }}",
+              "value2": "Mentoria"
+            }
+          ]
+        }
+      },
+      "id": "102ccc19-8de6-4b40-8535-49cbd1cfe245",
+      "name": "mentoria?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2300,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{ $node[\"duplica_contrato1\"].json[\"id\"] }}",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "replaceAll",
+              "text": "{{NOMECOMPLETO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Razão Social\"] ? $node[\"dados_validados\"].json[\"Nome Completo\"] + '/' + $node[\"dados_validados\"].json[\"Razão Social\"] : $node[\"dados_validados\"].json[\"Nome Completo\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{DIA}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Dia\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{MESEXTENSO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Mês Extenso\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ANO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Ano\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{VALORAVISTA}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Valor \"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{VALORPARCELADO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Parcelas\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{VALORPARCELA}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Parcelas\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{DATAINICIAL}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Data Inicial\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{DATAFINAL}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Data Final\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{AREAMEMBROSMENTORIA}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Area de membros mentoria\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{EMAIL}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Email\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ENDEREÇO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Endereço\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{DOCUMENTO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"CPF ou CNPJ?\"].replace('CPF','física de direito privado, inscrita no CPF sob nº').replace('CNPJ','jurídica de direito privado, inscrita no CNPJ sob nº') }} {{ $node[\"dados_validados\"].json[\"CPF/CNPJ\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{PRAZOMENTORIA}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Período Mentoria\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{PRAZOMENTORIAEXTENSO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Período Mentoria\"].replace('1 ANO','um').replace('6 MESES','seis') }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{PERIODO2}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Período Mentoria\"].replace('1 ANO','o 1').replace('6 MESES','os seis') }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{MESOUANO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Período Mentoria\"].replace('1 ANO','ano').replace('6 MESES','meses') }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{RENOVACAO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Período Mentoria\"].replace('1 ANO','1 (um) ano').replace('6 MESES','6 (seis) meses') }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{PERIODO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Período Mentoria\"].replace('1 ANO','01').replace('6 MESES','06') }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{CEP}}",
+              "replaceText": "=:{{ String($node[\"dados_validados\"].json[\"CEP\"]).slice(0,2) }}.{{ String($node[\"dados_validados\"].json[\"CEP\"]).slice(2,5) }}-{{ String($node[\"dados_validados\"].json[\"CEP\"]).slice(-3) }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{QUANTPARCELAS}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Quantidade de Parcelas\"].replace(' parcelas','').replace('parcelas','').replace(' parcela','').replace('parcela','') }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{MELHORDIACLIENTE}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Melhor dia cliente Completo\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{DATADEHOJE}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Data do Primeiro Pagamento\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{DATAINICIOSERVICO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Melhor Dia escolhido por Cliente\"] }}{{$now.toFormat('dd/MM/yyyy').slice(2)}}",
+              "matchCase": true
+            }
+          ]
+        }
+      },
+      "name": "formata_contrato_mentoria",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        2560,
+        820
+      ],
+      "id": "7c84f5f6-1ecb-43a3-a9d8-0d24c99a7c11",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{ $node[\"duplica_contrato1\"].json[\"id\"] }}",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "replaceAll",
+              "text": "{{NOMECOMPLETO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Razão Social\"] ? $node[\"dados_validados\"].json[\"Nome Completo\"] + '/' + $node[\"dados_validados\"].json[\"Razão Social\"] : $node[\"dados_validados\"].json[\"Nome Completo\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{DIA}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Dia\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{MESEXTENSO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Mês Extenso\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ANO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Ano\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{MELHORDIACLIENTE}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Melhor dia cliente Completo\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{DATAINICIAL}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Data Inicial\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{DATAFINAL}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Data Final\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{EMAIL}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Email\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{ENDERECO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Endereço\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{DOCUMENTO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"CPF ou CNPJ?\"].replace('CPF','física de direito privado, inscrita no CPF sob nº').replace('CNPJ','jurídica de direito privado, inscrita no CNPJ sob nº') }} {{ $node[\"dados_validados\"].json[\"CPF/CNPJ\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{DATAINICIOSERVICO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Melhor Dia escolhido por Cliente\"] }}{{$now.toFormat('dd/MM/yyyy').slice(2)}}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{CEP}}",
+              "replaceText": "=:{{ String($node[\"dados_validados\"].json[\"CEP\"]).slice(0,2) }}.{{ String($node[\"dados_validados\"].json[\"CEP\"]).slice(2,5) }}-{{ String($node[\"dados_validados\"].json[\"CEP\"]).slice(-3) }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{NEGOCIACAO}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Negociação\"] }}",
+              "matchCase": true
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{DATADEHOJE}}",
+              "replaceText": "={{ $node[\"dados_validados\"].json[\"Data do Primeiro Pagamento\"] }}",
+              "matchCase": true
+            }
+          ]
+        }
+      },
+      "name": "formata_contrato_trafego",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        2560,
+        1060
+      ],
+      "id": "2a650ebf-7c0f-4ac8-bc97-7e29a3faf2f1",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "phone",
+              "value": "+5511992452991"
+            },
+            {
+              "name": "first_name",
+              "value": "=Priscilla"
+            },
+            {
+              "name": "last_name",
+              "value": "Lima"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"dados_bc\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "cadastrar_contato",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2860,
+        920
+      ],
+      "id": "3bbb694f-bd12-4dc8-be01-eca88b87e2e5"
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato\"].json[\"id\"] }}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "=🔔 *NOVO CONTRATO GERADO*\n\nO contrato  do cliente {{ $node[\"dados_validados\"].json[\"Nome Completo\"] }}, da empresa {{ $node[\"dados_validados\"].json[\"Razão Social\"] }} acabou de ser gerado. \n\n*CONTRATO DE {{ $node[\"dados_validados\"].json[\"Tipo de Contrato\"].toUpperCase() }}:*\n----------------------------\n👉🏻 NOME: {{ $node[\"dados_validados\"].json[\"Nome Completo\"].split(' ')[0] }}\n👉🏻 EMAIL: {{ $node[\"dados_validados\"].json[\"Email\"] }}\n👉🏻 LINK DO WHATSAPP: https://wa.me/{{ $node[\"dados_validados\"].json[\"Telefone\"] }}\n👉🏻 DATA E HORÁRIO DO EVENTO: {{$now.toFormat('dd/MM/yyyy')}} às\n {{$now.toFormat('HH:mm')}}\n\nO arquivo foi gerado no link https://docs.google.com/document/d/{{ $node[\"duplica_contrato1\"].json[\"id\"] }}/edit\n\n🚨 Confira se está tudo certo para subir e enviar para o cliente no e-mail {{ $node[\"dados_validados\"].json[\"Email\"] }} pelo {{ $node[\"dados_validados\"].json[\"ferramenta_contrato\"] }}.\n\n"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"dados_bc\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "avisa_Priscilla1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        3040,
+        920
+      ],
+      "id": "4c5c2b89-737d-4e5d-87ac-5cc37626bde4",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "copy",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $node[\"dados_validados\"].json[\"Tipo de Contrato\"].replace('Mentoria','14rUAcJIfg-dsw70TouYvFnrNOOefyl_RSyAQY5elnMg').replace('Tráfego','1bR3OOri008GFM7FecBuL8yqcc5TdrhCY4YcYo6r4P2w').replace('Trafego','1bR3OOri008GFM7FecBuL8yqcc5TdrhCY4YcYo6r4P2w') }}",
+          "mode": "id"
+        },
+        "options": {
+          "name": "={{ $node[\"dados_validados\"].json[\"Nome Completo\"] }} - {{ $node[\"trata_dados\"].json[\"resultado\"][\"Contrato\"].replace('Mentoria','CONTRATO PRESTAÇÃO DE SERVIÇOS DE MENTORIA').replace('Tráfego','CONTRATO PRESTAÇÃO DE SERVIÇOS DE TRÁFEGO PAGO') }}",
+          "parents": [
+            "={{ $node[\"dados_validados\"].json[\"Tipo de Contrato\"].replace('Mentoria','19v-egS1ok0zcHThuVHNOgFDvDaHKf6bc').replace('Tráfego','1AEkU4BvAj1sKcohsFOCCwgFHeyuoAaGP') }}"
+          ]
+        }
+      },
+      "name": "duplica_contrato1",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 1,
+      "position": [
+        2080,
+        920
+      ],
+      "id": "a7b6df66-17e8-4250-b7ab-3f76b59fffdf"
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome_completo",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"nome_completo\"] }}"
+            },
+            {
+              "name": "e-mail",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"email\"] }}"
+            },
+            {
+              "name": "cpf",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"cpf\"] }}"
+            },
+            {
+              "name": "cnpj",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"cnpj\"] }}"
+            },
+            {
+              "name": "razao_social",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"razao_social\"] }}"
+            },
+            {
+              "name": "data_de_nascimento",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"data_de_nascimento\"] }}"
+            },
+            {
+              "name": "numero_da_conta_pj",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"numero_da_conta_pj\"] }}"
+            },
+            {
+              "name": "agencia",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"agencia\"] }}"
+            },
+            {
+              "name": "nome_do_banco",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"nome_do_banco\"] }}"
+            },
+            {
+              "name": "chave_pix_conta_corrente_pj",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"chave_pix_conta_corrente_pj\"] }}"
+            },
+            {
+              "name": "estado",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"estado\"] }}"
+            },
+            {
+              "name": "cidade",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"cidade\"] }}"
+            },
+            {
+              "name": "bairro",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"bairro\"] }}"
+            },
+            {
+              "name": "rua",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"rua\"] }}"
+            },
+            {
+              "name": "numero",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"numero\"] }}"
+            },
+            {
+              "name": "tipo_de_chave",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"tipo_de_chave\"] }}"
+            },
+            {
+              "name": "cep",
+              "value": "={{ $node[\"trata_dados1\"].json[\"resultado\"][\"cep\"] }}"
+            },
+            {
+              "name": "API-KEY",
+              "value": "d029204f-6407-43ea-bc83-bee5f62670df"
+            },
+            {
+              "name": "id_priscila_no_bc",
+              "value": "229109811"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e46636b2-8a54-419a-b2f7-113162b0df9a",
+      "name": "dados_validados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        1380,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Formatação de Contratos",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "350e5894-8b38-44ff-af06-bcf46688c8fb",
+      "name": "entra_na_fila",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        1600,
+        -120
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "UNsBZpoYhAtf5Api",
+          "name": "[RabbitMQ] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "function formatarNome(nome) {\n  if (nome) {\n    const palavras = nome.trim().split(/\\s+/);\n\n    const palavrasMinusculas = ['de', 'dos', 'da', 'e', 'do', 'das', 'di', 'du', 'o', 'a', 'u'];\n\n    for (let i = 0; i < palavras.length; i++) {\n      const palavraAtual = palavras[i].toLowerCase();\n      if (i === 0 || i === palavras.length - 1 || !palavrasMinusculas.includes(palavraAtual)) {\n        palavras[i] = palavraAtual.charAt(0).toUpperCase() + palavraAtual.slice(1);\n      } else {\n        palavras[i] = palavraAtual;\n      }\n    }\n\n    return palavras.join(\" \");\n  }\n  return '';\n}\n\nfunction formatarCPFCNPJ(valor) {\n  if (!valor) {\n    return \"\"; // Retorna uma string vazia se o campo estiver vazio\n  }\n\n  valor = valor.toString().replace(/[^\\d]/g, ''); // Certifica-se de que o valor seja uma string e remove caracteres não numéricos\n\n  if (valor.length === 11) {\n    // Se o tamanho for 11, assume que é CPF e formata como CPF\n    return valor.replace(/(\\d{3})(\\d{3})(\\d{3})(\\d{2})/, '$1.$2.$3-$4');\n  } else if (valor.length === 14) {\n    // Se o tamanho for 14, assume que é CNPJ e formata como CNPJ\n    return valor.replace(/(\\d{2})(\\d{3})(\\d{3})(\\d{4})(\\d{2})/, '$1.$2.$3/$4-$5');\n  } else {\n    // Caso contrário, retorna o valor original sem formatação\n    return valor;\n  }\n}\n\nfunction formatarCEP(valor) {\n  if (!valor) {\n    return \"\"; // Retorna uma string vazia se o campo estiver vazio\n  }\n\n  valor = valor.toString().replace(/[^\\d]/g, ''); // Certifica-se de que o valor seja uma string e remove caracteres não numéricos\n\n  if (valor.length === 8) {\n    // Se o tamanho for 8, formata como CEP\n    return valor.replace(/(\\d{5})(\\d{3})/, '$1-$2');\n  } else {\n    // Caso contrário, retorna o valor original sem formatação\n    return valor;\n  }\n}\n\n//Formatar número Internacional\nfunction formatarTelefone(telefone) {\n  const telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\n  let ddi;\n  let ddd;\n  let telefoneFormatado;\n\n  // Verificar se o telefone começa com \"55\" antes de formatá-lo\n  if (telefoneLimpo.startsWith('55')) {\n    ddi = telefoneLimpo.slice(0, 2);\n    ddd = telefoneLimpo.slice(2, 4);\n    if (parseInt(ddd, 10) > 28) {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n    } else {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n    }\n  } else {\n    // Se o DDI for diferente de 55, manter o número como está\n    telefoneFormatado = telefoneLimpo;\n  }\n\n  return telefoneFormatado;\n}\n\n\n// Formatar o parâmetro \"name\" do objeto \"invitee\" com a primeira letra de cada palavra em maiúsculo\nconst name = formatarNome($node[\"contrato_enviado\"].json[\"body\"][\"nome_completo\"]) || '';\nconst telefone = formatarTelefone(String($node[\"contrato_enviado\"].json[\"body\"][\"telefone\"])) || '';\n// Pegar o parâmetro \"Qual seu melhor e-mail?\"\nconst email = $node[\"contrato_enviado\"].json[\"body\"][\"email\"] || '';\nconst emailFormatado = email.trim().toLowerCase();\n// Pegar o parâmetro \"cpf\"\nconst cpf = formatarCPFCNPJ($node[\"contrato_enviado\"].json[\"body\"][\"cpf\"]) || '';\n// Pegar o parâmetro \"cnpj\"\nconst cnpj = formatarCPFCNPJ($node[\"contrato_enviado\"].json[\"body\"][\"cnpj\"]) || '';\n// Pegar o parâmetro \"razao\"\nconst razao_social = formatarNome($node[\"contrato_enviado\"].json[\"body\"][\"razao_social\"]) || '';\n// Pegar o parâmetro \"estado\"\nconst estado = formatarNome($node[\"contrato_enviado\"].json[\"body\"][\"estado\"]) || '';\n// Pegar o parâmetro \"cidade\"\nconst cidade = formatarNome($node[\"contrato_enviado\"].json[\"body\"][\"cidade\"]) || '';\n// Pegar o parâmetro \"bairro\"\nconst bairro = formatarNome($node[\"contrato_enviado\"].json[\"body\"][\"bairro\"]) || '';\n// Pegar o parâmetro \"rua\"\nconst rua = formatarNome($node[\"contrato_enviado\"].json[\"body\"][\"rua\"]) || '';\n// Pegar o parâmetro \"cep\"\nconst cep = formatarCEP($node[\"contrato_enviado\"].json[\"body\"][\"cep\"]) || '';\n// Pegar o parâmetro \"numero\"\nconst numero = $node[\"contrato_enviado\"].json[\"body\"][\"numero\"] || '';\n// Pegar o parâmetro \"tipo de chave\"\nconst tipo_de_chave = $node[\"contrato_enviado\"].json[\"body\"][\"tipo_da_chave_pix\"] || '';\n// Pegar o parâmetro \"data de nascimento\"\nconst data_de_nascimento = $node[\"contrato_enviado\"].json[\"body\"][\"data_de_nascimento\"] || '';\n// Pegar o parâmetro \"conta pj\"\nconst numero_da_conta_pj = $node[\"contrato_enviado\"].json[\"body\"][\"numero_da_conta_pj\"] || '';\n// Pegar o parâmetro \"numero agencia\"\nconst numero_da_agencia = $node[\"contrato_enviado\"].json[\"body\"][\"numero_da_agencia\"] || '';\n// Pegar o parâmetro \"banco\"\nconst nome_do_banco = formatarNome($node[\"contrato_enviado\"].json[\"body\"][\"nome_do_banco\"]) || '';\n// Pegar o parâmetro \"chave pix\"\nconst chave_pix_conta_corrente_pj = $node[\"contrato_enviado\"].json[\"body\"][\"chave_pix_conta_corrente_pj\"] || '';\n// Pegar o parâmetro \"agencia\"\nconst agencia = String($node[\"contrato_enviado\"].json[\"body\"][\"agencia\"]) || '';\n// Resultado\nreturn {\n  \"Nome do Cliente\": name,\n  \"E-mail do Cliente\": emailFormatado,\n  \"Telefone do Cliente - Formato BC\": telefone,\n  \"Telefone do Cliente - Formato Z-API\": telefone ? '+' + telefone : '',\n  cpf: cpf,\n  cnpj: cnpj,\n  razao_social: razao_social,\n  data_de_nascimento: data_de_nascimento,\n  numero_da_conta_pj: numero_da_conta_pj,\n  agencia: agencia,\n  nome_do_banco: nome_do_banco,\n  chave_pix_conta_corrente_pj: chave_pix_conta_corrente_pj,\n  estado: estado,\n  cidade: cidade,\n  bairro: bairro,\n  rua: rua,\n  numero: String(numero),\n  tipo_de_chave: tipo_de_chave,\n  cep: cep\n}"
+      },
+      "id": "33bfdef5-f034-4c6d-b6b8-a0dfca3f57bc",
+      "name": "trata_dados1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "evento1",
+        "options": {}
+      },
+      "id": "00613fbd-b362-4c4c-94d7-1e87faa73385",
+      "name": "contrato_enviado",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        960,
+        -120
+      ],
+      "webhookId": "6a06856e-09f5-4344-90c7-3332d8841753"
+    }
+  ],
+  "pinData": {
+    "contrato_enviado": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookxtrafego.automagicbots.com.br",
+            "user-agent": "WordPress/6.4.4; https://xtrafego.com.br",
+            "content-length": "358",
+            "accept": "*/*",
+            "accept-encoding": "deflate, gzip",
+            "content-type": "application/json",
+            "x-forwarded-for": "177.154.191.223",
+            "x-forwarded-host": "n8nwebhookxtrafego.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "cdf1ac2efa2e",
+            "x-real-ip": "177.154.191.223"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "email": "wae@jfk.com",
+            "nome_completo": "pge",
+            "cpf": "56564656",
+            "cnpj": "5666665665",
+            "razao_social": "wadaw",
+            "estado": "Acre",
+            "cidade": "aegs",
+            "rua": "srfgs",
+            "numero": 7,
+            "bairro": "77",
+            "cep": "d77",
+            "data_de_nascimento": "07/10/2020",
+            "numero_da_conta_pj": "356",
+            "agencia": "4",
+            "nome_do_banco": "849",
+            "chave_pix_conta_corrente_pj": "84",
+            "tipo_da_chave_pix": "Chave de CNPJ"
+          },
+          "webhookUrl": "https://n8nwebhookxtrafego.automagicbots.com.br/webhook/forms-enviado-pelo-colaborador",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-07-15T19:12:33.882Z",
+  "versionId": "ddbc3764-8a93-4fdc-bee3-41be57cfc8af"
+}
