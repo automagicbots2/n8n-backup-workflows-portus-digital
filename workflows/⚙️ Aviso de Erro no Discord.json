@@ -1,0 +1,62 @@
+{
+  "active": false,
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-03-14T13:31:14.638Z",
+  "id": "p3FaRDkYc5EoM9KR",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⚙️ Aviso de Erro no Discord",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "2e605d22-9428-4e94-8194-a54f43dfbb94",
+      "name": "Error Trigger",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        180,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "webhookUri": "https://discord.com/api/webhooks/1051557732941058118/bR9saqZ3PRvvbYzTDR9odD1sIKwiWkTnK_hx84LUjs2_wgbDThYfwaxIO4EoU-o-yzRU",
+        "text": "=🚨 **Workflow com erro no N8N da Portus**\n\nO Workflow **{{ $json[\"workflow\"][\"name\"] }}**, do **ID {{ $json[\"workflow\"][\"id\"] }}**, acabou de apresentar um erro.\n\nAssim que puder, dê uma conferida e ajuste o erro apresentado.",
+        "options": {}
+      },
+      "id": "8aa374eb-c730-408f-9636-2faab1307fe0",
+      "name": "Discord",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 1,
+      "position": [
+        400,
+        120
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": false,
+    "callerPolicy": "workflowsFromSameOwner",
+    "saveDataSuccessExecution": "none"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2024-07-09T23:17:30.743Z",
+  "versionId": "2d4a0406-f1fa-455e-a921-e00feec68fc4"
+}
