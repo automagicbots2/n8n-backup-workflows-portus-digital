@@ -1,0 +1,1032 @@
+{
+  "active": false,
+  "connections": {
+    "ler_planilha": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas": {
+      "main": [
+        [
+          {
+            "node": "Item Lists1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cadastrar_contato": {
+      "main": [
+        [
+          {
+            "node": "notifica_responsavel",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "variaveis_evolution1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "excluir_enviados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "insere_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas1": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "EnviaMensagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "excluir_enviados": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_telefone": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "puxa_lista": {
+      "main": [
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_status": {
+      "main": [
+        [
+          {
+            "node": "Retorna Output Aleatorio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists1": {
+      "main": [
+        [
+          {
+            "node": "puxa_lista",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "variaveis_evolution1": {
+      "main": [
+        [
+          {
+            "node": "ler_planilha",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Retorna Output Aleatorio": {
+      "main": [
+        [
+          {
+            "node": "Saida Aleatoria",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Saida Aleatoria": {
+      "main": [
+        [
+          {
+            "node": "40s",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "45s",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "50s",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "53s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "12hrs": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "EnviaMensagem1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "53s": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "50s": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "45s": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "40s": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EnviaMensagem": {
+      "main": [
+        [
+          {
+            "node": "atualiza_status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-05-20T13:14:15.787Z",
+  "id": "BFO70PsmuBHdTdRe",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[Evolution] - Disparo em massa - 20/05 10hrs",
+  "nodes": [
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1rgg2JBWZZ7ZRuXwyDZJky8RmfgKxOVlFDz5ECq4SpQU",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rgg2JBWZZ7ZRuXwyDZJky8RmfgKxOVlFDz5ECq4SpQU/edit#gid=0"
+        },
+        "options": {}
+      },
+      "id": "8ab4c028-6e3d-43c2-847b-4bcaff71ee47",
+      "name": "ler_planilha",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        -380,
+        380
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "6haYpAmOsZXFxR68",
+          "name": "[Google Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "5a831a21-cbd8-42c9-aa37-4358af93b33e",
+      "name": "separa_em_linhas",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -180,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "phone",
+              "value": "={{ $node[\"dados\"].json[\"numero_notificacao\"] }}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $node[\"dados\"].json[\"nome_responsavel\"].split(' ')[0] }}"
+            },
+            {
+              "name": "last_name",
+              "value": "={{ $node[\"dados\"].json[\"nome_responsavel\"].split(' ')[1] ? $node[\"dados\"].json[\"nome_responsavel\"].split(' ').slice(1).join(\" \") : \".\"}}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"dados\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "cadastrar_contato",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1940,
+        220
+      ],
+      "id": "80383b0b-4d99-4767-a0bf-24a7ecf9a198",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "API-KEY"
+            },
+            {
+              "name": "numero_notificacao",
+              "stringValue": "5562981196678"
+            },
+            {
+              "name": "nome_responsavel",
+              "stringValue": "Mateus Diniz"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a55d535a-07af-4285-8b5b-89d4929d6539",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        -740,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $now.toFormat('dd/MM/yyyy') }}",
+              "value2": "20/05/2024"
+            }
+          ]
+        }
+      },
+      "id": "51f86c76-f75d-4354-951d-2b1d6e69468a",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1100,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "294a4186-4cd4-4b3b-91f6-96d177472d86",
+      "name": "Item Lists",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        880,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const telefoneOriginal = $node[\"separa_em_linhas\"].json[\"telefone\"].toString();\n\n// Removendo caracteres não numéricos\nconst telefoneLimpo = telefoneOriginal.replace(/\\D/g, '');\n\n// Define o DDI padrão\nconst ddiPadrao = '55';\n\n// Extrai o DDD e o número, considerando que o telefone limpo pode já vir com o DDI\nlet ddd, numero;\nif (telefoneLimpo.startsWith(ddiPadrao)) {\n    // Se o número já começa com o DDI padrão, extrai sem o DDI\n    ddd = telefoneLimpo.slice(2, 4);\n    numero = telefoneLimpo.slice(4);\n} else {\n    // Se o número não contém o DDI, extrai o DDD e o número como estão\n    ddd = telefoneLimpo.slice(0, 2);\n    numero = telefoneLimpo.slice(2);\n}\n\n// Monta o número de telefone final, adicionando o DDI apenas se não estava presente\nconst telefoneFinal = telefoneLimpo.startsWith(ddiPadrao) ? ddiPadrao + ddd + numero : ddiPadrao + telefoneLimpo;\n\nreturn { telefonefinal: telefoneFinal };\n"
+      },
+      "id": "cdd29880-c04b-4c61-8b6b-9750374feccc",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        60,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"status\"] }}",
+              "value2": "enviado"
+            }
+          ]
+        }
+      },
+      "id": "315e0f39-186d-4d60-a62d-315056cc5f4c",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        440,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "edf65818-61f4-46a9-a203-b132b114206a",
+      "name": "separa_em_linhas1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        660,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "deleteTable",
+        "table": {
+          "__rl": true,
+          "value": "disparos_em_massa",
+          "mode": "list",
+          "cachedResultName": "disparos_em_massa"
+        },
+        "deleteCommand": "delete",
+        "where": {
+          "values": [
+            {
+              "column": "status",
+              "value": "enviado"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7fd11891-e675-45f2-8f02-8c507dac35b4",
+      "name": "excluir_enviados",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -920,
+        380
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "disparos_em_massa",
+          "mode": "list",
+          "cachedResultName": "disparos_em_massa"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"telefonefinal\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "95671028-3584-4036-adfc-9dcfefb9e9cd",
+      "name": "insere_telefone",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        260,
+        460
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "disparos_em_massa",
+          "mode": "list",
+          "cachedResultName": "disparos_em_massa"
+        },
+        "returnAll": true,
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "d929a09b-81ac-444e-8855-cc9af134f4cb",
+      "name": "puxa_lista",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        260,
+        300
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "disparos_em_massa",
+          "mode": "list",
+          "cachedResultName": "disparos_em_massa"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "telefone",
+        "valueToMatchOn": "={{ $node[\"separa_em_linhas1\"].json[\"telefone\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "status",
+              "value": "enviado"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d3473a42-07dc-4973-a2ee-eda5f3e8d1be",
+      "name": "atualiza_status",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1060,
+        400
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "limit"
+      },
+      "id": "f30ef96a-22ee-460f-90b0-6493ea2de59a",
+      "name": "Item Lists1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        60,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "url_base",
+              "value": "https://evolutionapi.automagicbots.com.br"
+            },
+            {
+              "name": "apikey",
+              "value": "zogtwgh1lwjhqk6vy94kp"
+            },
+            {
+              "name": "nome_da_instancia",
+              "value": "Portus_Digital"
+            },
+            {
+              "name": "nome_evento"
+            },
+            {
+              "name": "link_do_audio"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4f1421a7-6e36-458b-a0f4-f4c23be0a39d",
+      "name": "variaveis_evolution1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -560,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return {aleatorio: Math.floor(Math.random() * 4)};"
+      },
+      "id": "a2af036d-38ea-4dc2-a53b-d8f32b87d9fe",
+      "name": "Retorna Output Aleatorio",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        1240,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "value1": "={{ $json[\"aleatorio\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "operation": "equal"
+            },
+            {
+              "operation": "equal",
+              "value2": 1,
+              "output": 1
+            },
+            {
+              "operation": "equal",
+              "value2": 2,
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "46c28958-bfec-4f8e-a3c1-24f5043d3922",
+      "name": "Saida Aleatoria",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        1420,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 40,
+        "unit": "seconds"
+      },
+      "id": "9e69a240-20fe-477f-b817-bc0ecfd99857",
+      "name": "40s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        380
+      ],
+      "webhookId": "72e46d9b-f8b3-49b0-977d-327fa2f1294a"
+    },
+    {
+      "parameters": {
+        "amount": 45,
+        "unit": "seconds"
+      },
+      "id": "afe3b7c6-c9af-4d5e-8c08-be47ea6fb614",
+      "name": "45s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        520
+      ],
+      "webhookId": "a8b1f4d0-2636-4e01-9afb-2af6c8a28c82"
+    },
+    {
+      "parameters": {
+        "amount": 50,
+        "unit": "seconds"
+      },
+      "id": "32060d04-fadb-46bb-af99-805eed6448d2",
+      "name": "50s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        660
+      ],
+      "webhookId": "24aae043-a623-4795-8250-2fdedd771516"
+    },
+    {
+      "parameters": {
+        "amount": 53,
+        "unit": "seconds"
+      },
+      "id": "0f061925-f5fa-44a1-a780-53f97a619644",
+      "name": "53s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        800
+      ],
+      "webhookId": "35d71159-9617-4d37-9d4d-b4fd48867257"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                6
+              ],
+              "triggerAtHour": 20
+            }
+          ]
+        }
+      },
+      "id": "d817029c-a2fc-4e94-8c02-d83c8cd978d6",
+      "name": "12hrs",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -1260,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato\"].json[\"id\"] }}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"cadastrar_contato\"].json[\"first_name\"] }}, o disparo em massa na Evolution foi finalizado."
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"dados\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "notifica_responsavel",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2140,
+        220
+      ],
+      "id": "2250b595-d5e2-451e-8cba-b88b49360155",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "amount": 3
+      },
+      "id": "e683876e-d83b-4dd5-9a8b-df7c73d590b0",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1340,
+        200
+      ],
+      "webhookId": "4224a8c3-fb6a-4655-bbb7-81dc4b59bfef"
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "335894286266992",
+        "recipientPhoneNumber": "=+{{ $node[\"dados\"].json[\"numero_notificacao\"] }}",
+        "template": "disparo_concluido|pt_BR"
+      },
+      "id": "fd825aab-cbb0-4512-8c23-793a579b1176",
+      "name": "WhatsApp Business Cloud1",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        20
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "jvqZJXjWJXwpV03j",
+          "name": "[API Oficial WhatsApp] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "335894286266992",
+        "recipientPhoneNumber": "=+{{ $node[\"separa_em_linhas1\"].json[\"telefone\"] }}",
+        "template": "falta_2_dias_disparo_18_05|pt_BR"
+      },
+      "id": "e92fe60b-53d4-4e8c-9f38-f9a0ed5ebf9a",
+      "name": "WhatsApp Business Cloud",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        240,
+        720
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "jvqZJXjWJXwpV03j",
+          "name": "[API Oficial WhatsApp] - Portus"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"variaveis_evolution1\"].json[\"url_base\"] }}/message/sendText/{{ $node[\"variaveis_evolution1\"].json[\"nome_da_instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis_evolution1\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"separa_em_linhas1\"].json[\"telefone\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "=Sua agenda está livre para às 20h?\n\nHoje é o dia da sala secreta.\n\nNeste horário, eu e dezenas de empresários estaremos esperando você no ZOOM para falar sobre estruturação de times para negócios digitais.\n\nVocê vai aprender a contratar as pessoas certas – de acordo com o que seu negócio precisa –, criar lideranças internas e escalar resultados através do seu time.\n\nDepois de hoje, você nunca mais vai precisar perder tempo na operação, e poderá focar somente no estratégico do seu negócio – como um empresário deve fazer.\n\nLembrando que não terá replay, pois eu mostrarei algumas informações internas bem sensíveis de algumas empresas digitais.\n\nMais tarde eu volto com o link de acesso.\n\nAté!"
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ false }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "781b0eef-6d08-4ad1-a38e-d2288f95507b",
+      "name": "EnviaMensagem",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        880,
+        400
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"variaveis_evolution1\"].json[\"url_base\"] }}/message/sendText/{{ $node[\"variaveis_evolution1\"].json[\"nome_da_instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis_evolution1\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"variaveis_evolution1\"].json[\"numero_notificacao\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "={{ $node[\"variaveis_evolution1\"].json[\"nome_responsavel\"].split (' ')[0] }}, disparo em massa finalizado na Evolution."
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ false }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "1fd20536-1a9c-48aa-ba9b-6159db1c9f89",
+      "name": "EnviaMensagem1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1060,
+        220
+      ],
+      "typeVersion": 4
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+  },
+  "staticData": {
+    "node:12hrs": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-05-20T16:39:53.161Z",
+  "versionId": "7ef119fa-2cf3-4577-94ae-ef8d2cf227fd"
+}
