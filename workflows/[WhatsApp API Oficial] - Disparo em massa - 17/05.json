@@ -1,0 +1,940 @@
+{
+  "active": false,
+  "connections": {
+    "ler_planilha": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas": {
+      "main": [
+        [
+          {
+            "node": "Item Lists1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cadastrar_contato": {
+      "main": [
+        [
+          {
+            "node": "notifica_responsavel",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "variaveis_evolution1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "excluir_enviados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "insere_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "separa_em_linhas1": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "WhatsApp Business Cloud",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "excluir_enviados": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_telefone": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "puxa_lista": {
+      "main": [
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_status": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists1": {
+      "main": [
+        [
+          {
+            "node": "puxa_lista",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "variaveis_evolution1": {
+      "main": [
+        [
+          {
+            "node": "ler_planilha",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Retorna Output Aleatorio": {
+      "main": [
+        [
+          {
+            "node": "Saida Aleatoria",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Saida Aleatoria": {
+      "main": [
+        [
+          {
+            "node": "40s",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "45s",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "50s",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "53s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "separa_em_linhas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Business Cloud1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "20 hrs": {
+      "main": [
+        [
+          {
+            "node": "puxa_lista",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Business Cloud": {
+      "main": [
+        [
+          {
+            "node": "atualiza_status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-05-17T21:54:59.614Z",
+  "id": "wpfkd7ORgEcpvcEK",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[WhatsApp API Oficial] - Disparo em massa - 17/05",
+  "nodes": [
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1rgg2JBWZZ7ZRuXwyDZJky8RmfgKxOVlFDz5ECq4SpQU",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 223716377,
+          "mode": "list",
+          "cachedResultName": "17/05",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rgg2JBWZZ7ZRuXwyDZJky8RmfgKxOVlFDz5ECq4SpQU/edit#gid=223716377"
+        },
+        "options": {}
+      },
+      "id": "857d0e05-5adc-4d7e-9f72-05a81608d7c1",
+      "name": "ler_planilha",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.1,
+      "position": [
+        -380,
+        380
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "6haYpAmOsZXFxR68",
+          "name": "[Google Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "91099cf9-b60d-43c7-879a-cdf838549f8c",
+      "name": "separa_em_linhas",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -180,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "phone",
+              "value": "={{ $node[\"dados\"].json[\"numero_notificacao\"] }}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $node[\"dados\"].json[\"nome_responsavel\"].split(' ')[0] }}"
+            },
+            {
+              "name": "last_name",
+              "value": "={{ $node[\"dados\"].json[\"nome_responsavel\"].split(' ')[1] ? $node[\"dados\"].json[\"nome_responsavel\"].split(' ').slice(1).join(\" \") : \".\"}}"
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"dados\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "cadastrar_contato",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1940,
+        220
+      ],
+      "id": "424c88dd-bb18-4972-85a2-a5daba64263c",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "API-KEY"
+            },
+            {
+              "name": "numero_notificacao",
+              "stringValue": "5562981196678"
+            },
+            {
+              "name": "nome_responsavel",
+              "stringValue": "Mateus Diniz"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2bc1bc14-57d3-45e6-8b2e-94694f5416e6",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        -740,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $now.toFormat('dd/MM/yyyy') }}",
+              "value2": "17/05/2024"
+            }
+          ]
+        }
+      },
+      "id": "38fc0b72-9455-496c-9395-91c4e6113e4e",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1100,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "2a9feb9f-aa57-4597-aece-6b53025387d2",
+      "name": "Item Lists",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        880,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const telefoneOriginal = $node[\"separa_em_linhas\"].json[\"telefone\"].toString();\n\n// Removendo caracteres não numéricos\nconst telefoneLimpo = telefoneOriginal.replace(/\\D/g, '');\n\n// Define o DDI padrão\nconst ddiPadrao = '55';\n\n// Extrai o DDD e o número, considerando que o telefone limpo pode já vir com o DDI\nlet ddd, numero;\nif (telefoneLimpo.startsWith(ddiPadrao)) {\n    // Se o número já começa com o DDI padrão, extrai sem o DDI\n    ddd = telefoneLimpo.slice(2, 4);\n    numero = telefoneLimpo.slice(4);\n} else {\n    // Se o número não contém o DDI, extrai o DDD e o número como estão\n    ddd = telefoneLimpo.slice(0, 2);\n    numero = telefoneLimpo.slice(2);\n}\n\n// Monta o número de telefone final, adicionando o DDI apenas se não estava presente\nconst telefoneFinal = telefoneLimpo.startsWith(ddiPadrao) ? ddiPadrao + ddd + numero : ddiPadrao + telefoneLimpo;\n\nreturn { telefonefinal: telefoneFinal };\n"
+      },
+      "id": "c80c1c0f-2f18-4c89-a5c4-b7dccf8f6bd6",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        60,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"status\"] }}",
+              "value2": "enviado"
+            }
+          ]
+        }
+      },
+      "id": "c2585c93-993d-415e-a3fd-bcbbe01bcb9e",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        440,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "a47d0338-dd5f-45ea-9753-47034786c3cb",
+      "name": "separa_em_linhas1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        660,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "deleteTable",
+        "table": {
+          "__rl": true,
+          "value": "disparos_em_massa",
+          "mode": "list",
+          "cachedResultName": "disparos_em_massa"
+        },
+        "deleteCommand": "delete",
+        "where": {
+          "values": [
+            {
+              "column": "status",
+              "value": "enviado"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d11510af-5b41-426c-9cf0-139aca44bcf9",
+      "name": "excluir_enviados",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -920,
+        380
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "disparos_em_massa",
+          "mode": "list",
+          "cachedResultName": "disparos_em_massa"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"Code\"].json[\"telefonefinal\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "671a6bc0-0e87-422d-8ae7-ee4056407b40",
+      "name": "insere_telefone",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        260,
+        460
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "disparos_em_massa",
+          "mode": "list",
+          "cachedResultName": "disparos_em_massa"
+        },
+        "returnAll": true,
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "2edf1a40-87f4-4b7d-8f39-bb43f508facb",
+      "name": "puxa_lista",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        260,
+        300
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "disparos_em_massa",
+          "mode": "list",
+          "cachedResultName": "disparos_em_massa"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "telefone",
+        "valueToMatchOn": "={{ $node[\"separa_em_linhas1\"].json[\"telefone\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "status",
+              "value": "enviado"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aca84605-eea7-4a13-beb1-a369acb7520f",
+      "name": "atualiza_status",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1060,
+        400
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "limit"
+      },
+      "id": "9652a8bd-ba63-4420-82e5-e497572ce837",
+      "name": "Item Lists1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        60,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "url_base",
+              "value": "https://evolutionapi.automagicbots.com.br"
+            },
+            {
+              "name": "apikey"
+            },
+            {
+              "name": "nome_da_instancia"
+            },
+            {
+              "name": "nome_evento"
+            },
+            {
+              "name": "link_do_audio"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b10ee693-0fd6-4a76-8748-8ed4179dc1d7",
+      "name": "variaveis_evolution1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -560,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return {aleatorio: Math.floor(Math.random() * 4)};"
+      },
+      "id": "d185b9ba-2aa4-4fbd-96a2-12fd2ab451e6",
+      "name": "Retorna Output Aleatorio",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        1780,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "value1": "={{ $json[\"aleatorio\"] }}",
+        "rules": {
+          "rules": [
+            {
+              "operation": "equal"
+            },
+            {
+              "operation": "equal",
+              "value2": 1,
+              "output": 1
+            },
+            {
+              "operation": "equal",
+              "value2": 2,
+              "output": 2
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "fcab04af-2e53-4827-b61d-3faa0273318d",
+      "name": "Saida Aleatoria",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        1960,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 40,
+        "unit": "seconds"
+      },
+      "id": "eb91b1bd-75f1-45bb-b5c3-37014198e396",
+      "name": "40s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2280,
+        380
+      ],
+      "webhookId": "83b4e01c-b6b3-4f59-8a22-610df41e942b"
+    },
+    {
+      "parameters": {
+        "amount": 45,
+        "unit": "seconds"
+      },
+      "id": "f28c1282-7fcf-4c11-865b-5311601009a2",
+      "name": "45s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2280,
+        520
+      ],
+      "webhookId": "3cf6fdb8-6480-426e-aa18-56d0f103239b"
+    },
+    {
+      "parameters": {
+        "amount": 50,
+        "unit": "seconds"
+      },
+      "id": "32ea9799-5742-4579-84a2-a7a18e5c0996",
+      "name": "50s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2280,
+        660
+      ],
+      "webhookId": "7684b53c-74c8-4405-8865-26d849fc9688"
+    },
+    {
+      "parameters": {
+        "amount": 53,
+        "unit": "seconds"
+      },
+      "id": "04fac258-a4b4-4378-b2aa-6cee9909ab9f",
+      "name": "53s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        2280,
+        800
+      ],
+      "webhookId": "29141b6a-8d16-471e-8efe-92c218bfc6a0"
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/{{ $node[\"cadastrar_contato\"].json[\"id\"] }}/send_message/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "type",
+              "value": "text"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"cadastrar_contato\"].json[\"first_name\"] }}, o disparo em massa na Evolution foi finalizado."
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"dados\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "notifica_responsavel",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        2140,
+        220
+      ],
+      "id": "ae4478fd-0458-4bd7-bfbe-df381992cdef",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "amount": 3
+      },
+      "id": "3c94d24e-f52e-4474-addb-6b05d136d107",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1260,
+        400
+      ],
+      "webhookId": "2c948129-d42f-402a-adca-37620fdc1bcf"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"variaveis_evolution1\"].json[\"url_base\"] }}/message/sendText/{{ $node[\"variaveis_evolution1\"].json[\"nome_da_instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"variaveis_evolution1\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"dados\"].json[\"numero_notificacao\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "={{ $node[\"dados\"].json[\"nome_responsavel\"].split(' ')[0] }}, o disparo em massa na API Oficial da Portus foi finalizado."
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "68908d11-47a0-4fdc-a603-4343739767f5",
+      "name": "EnviaMensagemNotificação",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1620,
+        220
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                5
+              ],
+              "triggerAtHour": 20
+            }
+          ]
+        }
+      },
+      "id": "45a32743-f25b-45c4-9f8d-99717892e256",
+      "name": "20 hrs",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        40,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "335894286266992",
+        "recipientPhoneNumber": "=+{{ $node[\"separa_em_linhas1\"].json[\"telefone\"] }}",
+        "template": "disparo_17_05_20_hrs|pt_BR"
+      },
+      "id": "25867fc8-cc2e-4295-9170-8b06f42b6510",
+      "name": "WhatsApp Business Cloud",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        880,
+        400
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "jvqZJXjWJXwpV03j",
+          "name": "[API Oficial WhatsApp] - Portus"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "phoneNumberId": "335894286266992",
+        "recipientPhoneNumber": "=+{{ $node[\"dados\"].json[\"numero_notificacao\"] }}",
+        "template": "disparo_concluido|pt_BR"
+      },
+      "id": "f965f6f1-983c-4843-b009-d12c9d806d5d",
+      "name": "WhatsApp Business Cloud1",
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        220
+      ],
+      "credentials": {
+        "whatsAppApi": {
+          "id": "jvqZJXjWJXwpV03j",
+          "name": "[API Oficial WhatsApp] - Portus"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+  },
+  "staticData": {
+    "node:12hrs": {
+      "recurrencyRules": []
+    },
+    "node:20 hrs": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-05-17T22:58:20.030Z",
+  "versionId": "afc00bd9-456d-46a1-b334-0a6a1e1a2cb0"
+}
