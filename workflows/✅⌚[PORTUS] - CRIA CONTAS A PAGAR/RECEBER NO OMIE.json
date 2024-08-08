@@ -1,0 +1,4955 @@
+{
+  "active": true,
+  "connections": {
+    "atualiza_lead3": {
+      "main": [
+        [
+          {
+            "node": "add_conta_a_receber_omie3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formata Data de Vencimento": {
+      "main": [
+        [
+          {
+            "node": "Formata Data de Vencimento Original",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formata Data de Vencimento Original": {
+      "main": [
+        [
+          {
+            "node": "Formata Data do Pagamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dados do Evento": {
+      "main": [
+        [
+          {
+            "node": "Credito_ou_debito",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formata Data de Criacao": {
+      "main": [
+        [
+          {
+            "node": "Formata Data de Vencimento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formata Data do Pagamento": {
+      "main": [
+        [
+          {
+            "node": "Formata Data de Credito",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formata Data de Credito": {
+      "main": [
+        [
+          {
+            "node": "Formata Data de Credito Estimada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formata Data de Credito Estimada": {
+      "main": [
+        [
+          {
+            "node": "Formata Data da Ultima Visualizacao da Fatura",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formata Data da Ultima Visualizacao da Fatura": {
+      "main": [
+        [
+          {
+            "node": "Formata Data da Ultima Visualizacao do Boleto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formata Data da Ultima Visualizacao do Boleto": {
+      "main": [
+        [
+          {
+            "node": "Busca Cliente no Asaas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Busca Cliente no Asaas": {
+      "main": [
+        [
+          {
+            "node": "Dados do Evento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_telefone": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe2": {
+      "main": [
+        [
+          {
+            "node": "insere_dados",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "telefone_preenchido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_preenchido1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_tel_empresa1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_lead3": {
+      "main": [
+        [
+          {
+            "node": "debito1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_tel_empresa1": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados1": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_lead2": {
+      "main": [
+        [
+          {
+            "node": "debito",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_venda": {
+      "main": [
+        [
+          {
+            "node": "nao_existe1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe1": {
+      "main": [
+        [
+          {
+            "node": "insert_data_vendas",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_vendas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_vendas": {
+      "main": [
+        [
+          {
+            "node": "id_conversion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_conversion": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_venda1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_conversion1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_venda1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_venda1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_hj_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_hj_data_lake": {
+      "main": [
+        [
+          {
+            "node": "nao_existe_conversion",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "nao_existe_conversion1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia2": {
+      "main": [
+        [
+          {
+            "node": "insert_data_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia3": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia": {
+      "main": [
+        [
+          {
+            "node": "nada",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia4": {
+      "main": [
+        [
+          {
+            "node": "nada1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe_conversion": {
+      "main": [
+        [
+          {
+            "node": "lead_ja_existia2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lead_ja_existia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe_conversion1": {
+      "main": [
+        [
+          {
+            "node": "lead_ja_existia3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lead_ja_existia4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_preenchido": {
+      "main": [
+        [
+          {
+            "node": "telefone_preenchido1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_tel_normal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_tel_normal": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_vendas": {
+      "main": [
+        [
+          {
+            "node": "id_conversion1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asaas": {
+      "main": [
+        [
+          {
+            "node": "Formata Data de Criacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_dados": {
+      "main": [
+        [
+          {
+            "node": "id_lead2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead2": {
+      "main": [
+        [
+          {
+            "node": "nao_existe2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_lead": {
+      "main": [
+        [
+          {
+            "node": "add_conta_a_receber_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_id_omie": {
+      "main": [
+        [
+          {
+            "node": "existe_cc_omie",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_cliente_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_lead1": {
+      "main": [
+        [
+          {
+            "node": "add_conta_a_receber_omie1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_cc_omie": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_lead1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_lead2": {
+      "main": [
+        [
+          {
+            "node": "add_conta_a_receber_omie2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "debito": {
+      "main": [
+        [
+          {
+            "node": "add_cliente_omie3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_cliente_omie1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_pagar_omie7": {
+      "main": [
+        [
+          {
+            "node": "baixa_conta_a_pagar_omie1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_lead4": {
+      "main": [
+        [
+          {
+            "node": "add_conta_a_pagar_omie7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_id_omie1": {
+      "main": [
+        [
+          {
+            "node": "existe_cc_omie1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_cliente_omie2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_lead5": {
+      "main": [
+        [
+          {
+            "node": "add_conta_a_pagar_omie9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_cc_omie1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_lead5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_lead6": {
+      "main": [
+        [
+          {
+            "node": "add_conta_a_pagar_omie10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_pagar_omie9": {
+      "main": [
+        [
+          {
+            "node": "baixa_conta_a_pagar_omie1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_pagar_omie10": {
+      "main": [
+        [
+          {
+            "node": "baixa_conta_a_pagar_omie1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_lead7": {
+      "main": [
+        [
+          {
+            "node": "add_conta_a_pagar_omie11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_pagar_omie11": {
+      "main": [
+        [
+          {
+            "node": "baixa_conta_a_pagar_omie1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "debito1": {
+      "main": [
+        [
+          {
+            "node": "existe_id_omie1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "existe_id_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "baixa_conta_a_receber_omie": {
+      "main": [
+        [
+          {
+            "node": "nao_houve_taxa1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_lead8": {
+      "main": [
+        [
+          {
+            "node": "add_conta_a_receber_omie12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Credito_ou_debito": {
+      "main": [
+        [
+          {
+            "node": "formata_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_receber_omie12": {
+      "main": [
+        [
+          {
+            "node": "dados_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_receber_omie": {
+      "main": [
+        [
+          {
+            "node": "dados_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_receber_omie1": {
+      "main": [
+        [
+          {
+            "node": "dados_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_receber_omie3": {
+      "main": [
+        [
+          {
+            "node": "dados_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe3": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead9",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_lead9": {
+      "main": [
+        [
+          {
+            "node": "add_conta_a_receber_omie4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_receber_omie4": {
+      "main": [
+        [
+          {
+            "node": "dados_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe4": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead10",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_pagar_omie": {
+      "main": [
+        [
+          {
+            "node": "baixa_conta_a_pagar_omie1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_lead10": {
+      "main": [
+        [
+          {
+            "node": "add_conta_a_pagar_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe5": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead11",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_lead7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_pagar_omie12": {
+      "main": [
+        [
+          {
+            "node": "baixa_conta_a_pagar_omie1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_lead11": {
+      "main": [
+        [
+          {
+            "node": "add_conta_a_pagar_omie12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "baixa_conta_a_pagar_omie1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_venda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_cliente_omie": {
+      "main": [
+        [
+          {
+            "node": "existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_cliente_omie1": {
+      "main": [
+        [
+          {
+            "node": "nao_existe3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_cliente_omie2": {
+      "main": [
+        [
+          {
+            "node": "nao_existe4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_cliente_omie3": {
+      "main": [
+        [
+          {
+            "node": "nao_existe5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_omie": {
+      "main": [
+        [
+          {
+            "node": "baixa_conta_a_receber_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "baixa_conta_a_pagar_omie": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_venda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_receber_omie2": {
+      "main": [
+        [
+          {
+            "node": "dados_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conta_a_pagar_omie13": {
+      "main": [
+        [
+          {
+            "node": "baixa_conta_a_pagar_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_houve_taxa1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_venda",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_conta_a_pagar_omie13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-06-17T17:49:23.086Z",
+  "id": "CPZPTqP44cMEWCR4",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "✅⌚[PORTUS] - CRIA CONTAS A PAGAR/RECEBER NO OMIE",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"id_lead2\"].json[\"id_lead \"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_cliente_omie",
+              "value": "={{ $node[\"add_cliente_omie1\"].json[\"codigo_cliente_omie\"] }}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"Dados do Evento\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a69079aa-14fb-42cd-8af8-240b18b81267",
+      "name": "atualiza_lead3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5180,
+        3760
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"dueDate\"] }}",
+        "dataPropertyName": "Data de Vencimento Formatada",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {}
+      },
+      "id": "74df4517-83b5-4e0b-a090-e8fa601ac8cc",
+      "name": "Formata Data de Vencimento",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        3520
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"originalDueDate\"] }}",
+        "dataPropertyName": "Data de Vencimento Original Formatada",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {}
+      },
+      "id": "4e67c5a4-d2dd-4537-9b5c-82751991ac37",
+      "name": "Formata Data de Vencimento Original",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        3520
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Evento",
+              "value": "={{      $node[\"Asaas\"].json[\"body\"][\"event\"].replace('PAYMENT_CREATED','Cobrança Gerada').replace('PAYMENT_AWAITING_RISK_ANALYSIS','Aguardando Aprovação de Pagamento em Cartão pela Análise Manual de Risco').replace('PAYMENT_APPROVED_BY_RISK_ANALYSIS','Pagamento em Cartão Aprovado pela Análise Manual de Risco').replace('PAYMENT_REPROVED_BY_RISK_ANALYSIS','Pagamento em Cartão Reprovado pela Análise Manual de Risco').replace('PAYMENT_UPDATED','Cobrança Alterada').replace('PAYMENT_CONFIRMED','Cobrança Confirmada ainda não disponibilizada').replace('PAYMENT_RECEIVED','Cobrança Recebida').replace('PAYMENT_ANTICIPATED','Cobrança Antecipada').replace('PAYMENT_OVERDUE','Cobrança Vencida').replace('PAYMENT_DELETED','Cobrança Removida').replace('PAYMENT_RESTORED','Cobrança Restaurada').replace('PAYMENT_REFUNDED','Cobrança Estornada').replace('PAYMENT_RECEIVED_IN_CASH_UNDONE','Recebimento em Dinheiro desfeito').replace('PAYMENT_CHARGEBACK_REQUESTED','Chargeback Solicitado').replace('PAYMENT_CHARGEBACK_DISPUTE','Em disputa de Chargeback').replace('PAYMENT_AWAITING_CHARGEBACK_REVERSAL','Disputa de Chargeback Vencida').replace('PAYMENT_DUNNING_RECEIVED','Recebimento de Negativação').replace('PAYMENT_DUNNING_REQUESTED','Pedido de Negativação').replace('PAYMENT_BANK_SLIP_VIEWED','Boleto Visualizado pelo Cliente').replace('PAYMENT_CHECKOUT_VIEWED','Fatura Visualizada pelo Cliente').replace('TRANSFER_DONE','Tranferência Feita')    }}"
+            },
+            {
+              "name": "ID do Evento",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"id\"] }}"
+            },
+            {
+              "name": "Data do Evento",
+              "value": "={{ $node[\"Formata Data de Criacao\"].json[\"Data de Criacao Formatada\"] }}"
+            },
+            {
+              "name": "ID do Cliente",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"customer\"] }}"
+            },
+            {
+              "name": "Valor Bruto do Pagamento",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"value\"] }}"
+            },
+            {
+              "name": "Valor Líquido do Pagamento",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"netValue\"] }}"
+            },
+            {
+              "name": "Descrição do Pagamento",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"description\"] }}"
+            },
+            {
+              "name": "Forma de Pagamento",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"billingType\"].replace('BOLETO','Boleto Bancário').replace('CREDIT_CARD','Cartão de Crédito').replace('DEBIT_CARD','Cartão de Débito').replace('UNDEFINED','Escolha do Cliente').replace('TRANSFER','Transferência Bancária').replace('DEPOSIT','Depósito Bancário')   }}"
+            },
+            {
+              "name": "Data de Vencimento",
+              "value": "={{ $node[\"Formata Data de Vencimento\"].json[\"Data de Vencimento Formatada\"] }}"
+            },
+            {
+              "name": "Status",
+              "value": "={{     $node[\"Asaas\"].json[\"body\"][\"payment\"][\"status\"].replace('RECEIVED','Recebida').replace('PENDING','Pendente').replace('REQUESTED','Solicitada').replace('DONE','Realizada')     }}"
+            },
+            {
+              "name": "Data de Vencimento Original",
+              "value": "={{ $node[\"Formata Data de Vencimento Original\"].json[\"Data de Vencimento Original Formatada\"] }}"
+            },
+            {
+              "name": "Data do Pagamento",
+              "value": "={{ $node[\"Formata Data do Pagamento\"].json[\"Data do Pagamento Formatada\"] }}"
+            },
+            {
+              "name": "Numero da Parcela",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"installmentNumber\"] }}"
+            },
+            {
+              "name": "Link da Fatura",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"invoiceUrl\"] }}"
+            },
+            {
+              "name": "Numero da Fatura",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"invoiceNumber\"] }}"
+            },
+            {
+              "name": "Data de Credito",
+              "value": "={{ $node[\"Formata Data de Credito\"].json[\"Data de Credito Formatada\"] }}"
+            },
+            {
+              "name": "Data de Credito Estimada",
+              "value": "={{ $node[\"Formata Data de Credito Estimada\"].json[\"Data de Credito Estimada Formatada\"] }}"
+            },
+            {
+              "name": "Nosso Numero",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"nossoNumero\"] }}"
+            },
+            {
+              "name": "Link do Boleto",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"bankSlipUrl\"] }}"
+            },
+            {
+              "name": "Data da Ultima Visualizacao da Fatura",
+              "value": "={{ $node[\"Formata Data da Ultima Visualizacao da Fatura\"].json[\"Data de Ultima Visualizacao da Fatura Formatada\"] }}"
+            },
+            {
+              "name": "Data da Ultima Visualizacao do Boleto",
+              "value": "={{ $node[\"Formata Data da Ultima Visualizacao do Boleto\"].json[\"Data da Ultima Visualizacao do Boleto Formatada\"] }}"
+            },
+            {
+              "name": "Valor do Desconto",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"discount\"][\"value\"] }}"
+            },
+            {
+              "name": "Reembolso",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"refunds\"] }}"
+            },
+            {
+              "name": "URL do Recibo",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"transactionReceiptUrl\"] }}"
+            },
+            {
+              "name": "Nome do Produto",
+              "value": "={{ $node[\"Asaas\"].json.body.payment.description }}"
+            },
+            {
+              "name": "Telefone",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"mobilePhone\"] }}"
+            },
+            {
+              "name": "API-KEY",
+              "value": "e6b9a9d7-6e67-4653-91c5-f2276679b777"
+            },
+            {
+              "name": "ID EmailSE",
+              "value": "1543685"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados",
+              "value": "1543710"
+            },
+            {
+              "name": "codServico",
+              "value": "5208153175"
+            },
+            {
+              "name": "nome_fantasia",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"name\"] }}"
+            },
+            {
+              "name": "descricao_cc",
+              "value": "Banco Inter"
+            },
+            {
+              "name": "tipo_conta_corrente",
+              "value": "CC"
+            },
+            {
+              "name": "codigo_banco",
+              "value": "077"
+            },
+            {
+              "name": "descricao"
+            },
+            {
+              "name": "cidade_prestacao_servico"
+            },
+            {
+              "name": "OMIE_APP_KEY",
+              "value": "4486352513643"
+            },
+            {
+              "name": "OMIE_APP_SECRET",
+              "value": "b639126e175094af1c6f9af953d3153a"
+            },
+            {
+              "name": "nCodCC",
+              "value": "1745966686"
+            },
+            {
+              "name": "descricao",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"description\"] }}"
+            }
+          ],
+          "boolean": [
+            {
+              "name": "Pode pagar depois de expirar",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"canBePaidAfterDueDate\"] }}"
+            },
+            {
+              "name": "Antecipado",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"anticipated\"] }}"
+            }
+          ],
+          "number": [
+            {
+              "name": "saldo_inicial"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "71223879-64eb-4559-91aa-0a403bc0a498",
+      "name": "Dados do Evento",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        2520,
+        3520
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"body\"][\"payment\"][\"dateCreated\"] }}",
+        "dataPropertyName": "Data de Criacao Formatada",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {}
+      },
+      "id": "d191bdc6-b949-4fcf-b586-8eec58d4a3ce",
+      "name": "Formata Data de Criacao",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        860,
+        3520
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"paymentDate\"] }}",
+        "dataPropertyName": "Data do Pagamento Formatada",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {}
+      },
+      "id": "a706ed89-2a0a-4523-937f-d389efc52b9a",
+      "name": "Formata Data do Pagamento",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        1380,
+        3520
+      ],
+      "alwaysOutputData": true,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"creditDate\"] }}",
+        "dataPropertyName": "Data de Credito Formatada",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {}
+      },
+      "id": "5610dff0-ab5c-4b18-b9d6-d9e7e2d14a55",
+      "name": "Formata Data de Credito",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        1560,
+        3520
+      ],
+      "alwaysOutputData": true,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"estimatedCreditDate\"] }}",
+        "dataPropertyName": "Data de Credito Estimada Formatada",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {}
+      },
+      "id": "7b684f74-842a-4cc6-b021-6b57ef77a8f4",
+      "name": "Formata Data de Credito Estimada",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        3520
+      ],
+      "alwaysOutputData": true,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"lastInvoiceViewedDate\"] }}",
+        "dataPropertyName": "Data de Ultima Visualizacao da Fatura Formatada",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {}
+      },
+      "id": "dc925c8d-393b-4350-adb6-028bbda73ee7",
+      "name": "Formata Data da Ultima Visualizacao da Fatura",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        3520
+      ],
+      "alwaysOutputData": true,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"lastBankSlipViewedDate\"] }}",
+        "dataPropertyName": "Data da Ultima Visualizacao do Boleto Formatada",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {}
+      },
+      "id": "594d3cfc-b98b-40f8-99e9-241a4d5c9ef5",
+      "name": "Formata Data da Ultima Visualizacao do Boleto",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        2100,
+        3520
+      ],
+      "alwaysOutputData": true,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "url": "=https://www.asaas.com/api/v3/customers/{{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"customer\"] }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "8748110f-1d84-4576-baba-f0c9bc682690",
+      "name": "Busca Cliente no Asaas",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        2320,
+        3520
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "YQkRlKZeE69i12Az",
+          "name": "[Asaas] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Função para calcular a taxa de pagamento\nfunction getPaymentFee(payment) {\n    // Verificar se os campos necessários existem\n    if (payment && payment.value != null && payment.netValue != null) {\n        // Calcular a taxa\n        const fee = payment.value - payment.netValue;\n        return fee;\n    } else {\n        // Se os campos não existirem, retornar null\n        return null;\n    }\n}\n\n// Exemplo de uso da função com as variáveis fornecidas\nconst payment = {\n    value: $node[\"Asaas\"].json[\"body\"][\"payment\"][\"value\"],\n    netValue: $node[\"Asaas\"].json[\"body\"][\"payment\"][\"netValue\"]\n};\n\nconst fee = getPaymentFee(payment);\n\n// Função para formatar números de telefone\nfunction formatarTelefone(telefone) {\n    const telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\n    let ddi;\n    let ddd;\n    let telefoneFormatado;\n\n    // Verificar se o telefone começa com \"55\" antes de formatá-lo\n    if (telefoneLimpo.startsWith('55')) {\n        ddi = telefoneLimpo.slice(0, 2);\n        ddd = telefoneLimpo.slice(2, 4);\n        if (parseInt(ddd, 10) > 28) {\n            telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n        } else {\n            telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n        }\n    } else {\n        // Se o DDI for diferente de 55, manter o número como está\n        telefoneFormatado = telefoneLimpo;\n    }\n\n    return telefoneFormatado;\n}\n\n// Função para formatação de nomes\nfunction formatarNome(nome) {\n    if (nome) {\n        const palavras = nome.trim().split(/\\s+/);\n\n        const palavrasMinusculas = ['de', 'dos', 'da', 'e', 'do', 'das', 'di', 'du', 'o', 'a', 'u'];\n\n        for (let i = 0; i < palavras.length; i++) {\n            const palavraAtual = palavras[i].toLowerCase();\n            if (i === 0 || i === palavras.length - 1 || !palavrasMinusculas.includes(palavraAtual)) {\n                palavras[i] = palavraAtual.charAt(0).toUpperCase() + palavraAtual.slice(1);\n            } else {\n                palavras[i] = palavraAtual;\n            }\n        }\n\n        return palavras.join(\" \");\n    }\n    return '';\n}\n\n// Função para formatar nomes de usuário do Instagram\nfunction formatarInstagram(username) {\n    if (typeof username === 'string') {\n        // Remover espaços em branco extras\n        const usernameSemEspacos = username.trim();\n\n        // Remover o \"@\" do início do username, se existir\n        const usernameSemArroba = usernameSemEspacos.replace(/^@/, '');\n\n        // Converter para minúsculas\n        const usernameFormatado = usernameSemArroba.toLowerCase();\n\n        return usernameFormatado;\n    }\n    return '';\n}\n\n// Obter telefone e CPF/CNPJ dos dados de entrada\nconst telefone = $node[\"Busca Cliente no Asaas\"].json[\"phone\"] || $node[\"Busca Cliente no Asaas\"].json[\"mobilePhone\"] || '';\nconst cpfCnpj = $node[\"Busca Cliente no Asaas\"].json[\"cpfCnpj\"] || '';\nlet cpfCnpjFormatado;\n\n// Formatar CPF/CNPJ conforme necessário\nif (cpfCnpj.length === 11) {\n    // Formatar como CPF: XXX.XXX.XXX-XX\n    cpfCnpjFormatado = cpfCnpj.replace(/(\\d{3})(\\d{3})(\\d{3})(\\d{2})/, '$1.$2.$3-$4');\n} else if (cpfCnpj.length === 14) {\n    // Formatar como CNPJ: XX.XXX.XXX/0001-XX\n    cpfCnpjFormatado = cpfCnpj.replace(/(\\d{2})(\\d{3})(\\d{3})(\\d{4})(\\d{2})/, '$1.$2.$3/$4-$5');\n} else {\n    // Formato inválido\n    cpfCnpjFormatado = \"Formato inválido\";\n}\n\n// Resultado final formatado\nconst resultado = {\n    telefone: telefone,\n    cpfCnpj: cpfCnpjFormatado,\n    fee: fee !== null ? fee.toFixed(2) : null\n};\n\n// Retornar o resultado como um array de objetos conforme esperado pelo n8n\nreturn [resultado];"
+      },
+      "id": "551bc271-b7d6-46e9-b89d-c76e260019b8",
+      "name": "formata_telefone",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        2960,
+        3500
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "e100c197-69ab-4cd6-ba95-a19dc25a2532",
+      "name": "nao_existe2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3380,
+        3500
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"telefone\"] }}",
+              "value2": "={{ $node[\"formata_telefone\"].json[\"telefone\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "14662f07-85e0-4979-b066-e2e2b15d9223",
+      "name": "telefone_preenchido1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3760,
+        3520
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "77c9f4ba-7e66-4412-9e0b-1ba89101a879",
+      "name": "id_lead3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        4160,
+        3520
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"name\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"email\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"formata_telefone\"].json[\"telefone\"] }}"
+            },
+            {
+              "column": "cpf_cnpj",
+              "value": "={{ $node[\"formata_telefone\"].json[\"cpfCnpj\"] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].runIndex >= 0 ? $node[\"cadastrar_contato\"].json[\"id\"] : '' }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "23c74571-a185-4391-9e73-5c8402f0be31",
+      "name": "atualiza_dados_tel_empresa1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3940,
+        3600
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"name\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"email\"] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].runIndex >= 0 ? $node[\"cadastrar_contato\"].json[\"id\"] : '' }}"
+            },
+            {
+              "column": "cpf_cnpj",
+              "value": "={{ $node[\"formata_telefone\"].json[\"cpfCnpj\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "7e10db9a-6777-4a0b-862c-8efe5c497f12",
+      "name": "atualiza_dados1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3940,
+        3420
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_lead",
+              "value": "={{ $node[\"insere_dados\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "a1fc5497-5190-40f5-b057-c2ba8b66402f",
+      "name": "id_lead2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        3880,
+        3260
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "conversions",
+          "mode": "list",
+          "cachedResultName": "conversions"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "transaction_id",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"id\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "490867a2-f3b0-4533-9751-8f183d9cfa18",
+      "name": "pesquisa_venda",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6600,
+        3800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_venda\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "c480af6a-a7d7-4236-995a-06560f6d7f46",
+      "name": "nao_existe1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        6780,
+        3800
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "conversions",
+          "mode": "list",
+          "cachedResultName": "conversions"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "transaction_id",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"id\"] }}"
+            },
+            {
+              "column": "value",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"netValue\"] }}"
+            },
+            {
+              "column": "gateway_comission",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"value\"] -  $node[\"Asaas\"].json[\"body\"][\"payment\"][\"netValue\"] }}"
+            },
+            {
+              "column": "currency",
+              "value": "=BRL"
+            },
+            {
+              "column": "payment_method",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"billingType\"].replace('BOLETO','Boleto Bancário').replace('CREDIT_CARD','Cartão de Crédito').replace('DEBIT_CARD','Cartão de Débito').replace('UNDEFINED','Escolha do Cliente').replace('TRANSFER','Transferência Bancária').replace('DEPOSIT','Depósito Bancário') }}"
+            },
+            {
+              "column": "trans_status",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"status\"].replace('RECEIVED','Compra Aprovada').replace('PENDING','Pendente').replace('REQUESTED','Solicitada').replace('DONE','Realizada') }}"
+            },
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"id_lead2\"].runIndex >= 0 ? $node[\"insere_dados\"].json[\"data\"][\"insertId\"] : ($node[\"id_lead3\"].runIndex >= 0 ? $node[\"pesquisa_lead2\"].json[\"id_lead\"] : '') }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "04c1191b-ee15-42bd-ac0e-548e5c6dfaa8",
+      "name": "insert_data_vendas",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6960,
+        3680
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_conversion",
+              "value": "={{ $node[\"insert_data_vendas\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "df3dec20-ccca-4d70-8c6c-0e8d27624a93",
+      "name": "id_conversion",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        7180,
+        3680
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_conversion",
+              "value": "={{ $node[\"pesquisa_venda\"].json[\"id_conversion\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "96566129-edb7-4692-865b-edaef40eaa00",
+      "name": "id_conversion1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        7180,
+        3880
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "conversions",
+          "mode": "list",
+          "cachedResultName": "conversions"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_conversion",
+              "value": "={{ $json[\"id_conversion\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "dfb1148c-e035-45f2-995f-0972229d7d99",
+      "name": "pesquisa_venda1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        7360,
+        3780
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{$now.toFormat('yyyy-MM-dd')}}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "b0824110-47c8-4175-a849-a3146010c824",
+      "name": "pesquisa_data_data_lake",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        7560,
+        3780
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{$now.toFormat('yyyy-MM-dd')}}"
+            },
+            {
+              "column": "qtd_vendas",
+              "value": "=1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "f212a4ae-d269-4081-aef8-e1b9775b67d8",
+      "name": "insert_data_data_lake",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        8340,
+        3280
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_data_data_lake\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "38a7425a-7206-4a7b-8683-74e9ca28448c",
+      "name": "nao_encontrou_registro_hj_data_lake",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        7740,
+        3780
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas",
+              "value": "={{ parseInt($node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas\"] === undefined || $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas\"] === null ? 0 : $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas\"]) + 1\n}}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "caaec8f5-9fe9-413f-8a2d-c3255435590f",
+      "name": "update_data_data_lake1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        8380,
+        4040
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "577c4e9b-649f-45fd-9292-f02e7dbe89da",
+      "name": "lead_ja_existia2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        8140,
+        3360
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{$now.toFormat('yyyy-MM-dd')}}"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "=1"
+            },
+            {
+              "column": "qtd_vendas",
+              "value": "1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "9aad2d4a-3804-4181-ba3d-913cbf9280c8",
+      "name": "insert_data_data_lake3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        8340,
+        3440
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "809c7951-dd7f-45d6-9fe5-3adee8088c9c",
+      "name": "lead_ja_existia3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        8180,
+        4160
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_vendas",
+              "value": "={{ parseInt($node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas\"] === undefined || $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas\"] === null ? 0 : $node[\"pesquisa_data_data_lake\"].json[\"qtd_vendas\"]) + 1\n}}"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "={{ ($node[\"pesquisa_data_data_lake\"].json[\"qtd_leads\"] === null ? 0 : $node[\"pesquisa_data_data_lake\"].json[\"qtd_leads\"])  + 1 }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "2d0d2988-05f8-46e3-b007-296183b38961",
+      "name": "update_data_data_lake3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        8380,
+        4240
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "96d5a3ef-61f8-4c4e-8d25-0cbde1ded15e",
+      "name": "lead_ja_existia",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        8120,
+        3800
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{$now.toFormat('yyyy-MM-dd')}}"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "=1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "41650ac3-2e55-4a75-b93d-ca7812e63c89",
+      "name": "insert_data_data_lake4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        8320,
+        3880
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "2fea184f-f843-439a-93ad-e8d45bab361f",
+      "name": "nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        8320,
+        3680
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "3dd9d9c8-3d13-441e-973d-654dbdf2af53",
+      "name": "lead_ja_existia4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        8160,
+        4580
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_leads",
+              "value": "={{ parseInt($node[\"pesquisa_data_data_lake\"].json[\"qtd_leads\"] === undefined || $node[\"pesquisa_data_data_lake\"].json[\"qtd_leads\"] === null ? 0 : $node[\"pesquisa_data_data_lake\"].json[\"qtd_leads\"]) + 1\n}}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "ba9626db-921c-4258-8b6a-0e3c1cf753e7",
+      "name": "update_data_data_lake4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        8360,
+        4660
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "1e5072a9-f55a-4b79-af45-678d4d2d8252",
+      "name": "nada1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        8360,
+        4460
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_venda\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "a7f6d3e4-3e00-4434-8e26-703e4eed6a5f",
+      "name": "nao_existe_conversion",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        7940,
+        3660
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_venda\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "74b9c318-c24b-4a8a-9c5a-7a6ece666b96",
+      "name": "nao_existe_conversion1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        7940,
+        4120
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"telefone\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "7814910b-2f98-429b-be43-06404657ad97",
+      "name": "telefone_preenchido",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3580,
+        3660
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"name\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"formata_telefone\"].json[\"telefone\"] }}"
+            },
+            {
+              "column": "cpf_cnpj",
+              "value": "={{ $node[\"formata_telefone\"].json[\"cpfCnpj\"] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].runIndex >= 0 ? $node[\"cadastrar_contato\"].json[\"id\"] : '' }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "ad694595-a5d0-4b82-b511-2ffd6c420961",
+      "name": "atualiza_dados_tel_normal",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3940,
+        3780
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "conversions",
+          "mode": "list",
+          "cachedResultName": "conversions"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_conversion",
+        "valueToMatchOn": "={{ $node[\"pesquisa_venda\"].json[\"id_conversion\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "transaction_id",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"id\"] }}"
+            },
+            {
+              "column": "value",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"netValue\"] }}"
+            },
+            {
+              "column": "gateway_comission",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"value\"] -  $node[\"Asaas\"].json[\"body\"][\"payment\"][\"netValue\"] }}"
+            },
+            {
+              "column": "currency",
+              "value": "=BRL"
+            },
+            {
+              "column": "payment_method",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"billingType\"].replace('BOLETO','Boleto Bancário').replace('CREDIT_CARD','Cartão de Crédito').replace('DEBIT_CARD','Cartão de Débito').replace('UNDEFINED','Escolha do Cliente').replace('TRANSFER','Transferência Bancária').replace('DEPOSIT','Depósito Bancário') }}"
+            },
+            {
+              "column": "trans_status",
+              "value": "={{ $node[\"Asaas\"].json[\"body\"][\"payment\"][\"status\"].replace('RECEIVED','Compra Aprovada').replace('PENDING','Pendente').replace('REQUESTED','Solicitada').replace('DONE','Realizada') }}"
+            },
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"id_lead2\"].runIndex >= 0 ? $node[\"insere_dados\"].json[\"data\"][\"insertId\"] : ($node[\"id_lead3\"].runIndex >= 0 ? $node[\"pesquisa_lead2\"].json[\"id_lead\"] : '') }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "1a62996a-6593-4a54-bf2a-3a6ddc814f9b",
+      "name": "update_data_vendas",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6960,
+        3880
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "chamada-asaas-portus",
+        "options": {}
+      },
+      "id": "78451855-954b-41ad-b50f-87f185d2d953",
+      "name": "Asaas",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        680,
+        3520
+      ],
+      "webhookId": "c621dc60-35a2-4db2-b768-ad21ae601a4c"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"name\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"formata_telefone\"].json[\"telefone\"] }}"
+            },
+            {
+              "column": "cpf_cnpj",
+              "value": "={{ $node[\"formata_telefone\"].json[\"cpfCnpj\"] }}"
+            },
+            {
+              "column": "id_botconversa",
+              "value": "={{ $node[\"cadastrar_contato\"].runIndex >= 0 ? $node[\"cadastrar_contato\"].json[\"id\"] : '' }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "4c602c50-b599-41a7-9fa1-2fc3ab36aa02",
+      "name": "insere_dados",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3700,
+        3260
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"email\"] || '-----------------------' }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"formata_telefone\"].json[\"telefone\"] || '-----------------------'}}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"formata_telefone\"].json[\"telefone\"] || '-----------------------' }}"
+            },
+            {
+              "column": "cpf_cnpj",
+              "value": "={{ $node[\"formata_telefone\"].json[\"cpfCnpj\"] || '-----------------------' }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"email\"] || '-----------------------' }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "bf490095-d05e-41c1-a690-278b41868edf",
+      "name": "pesquisa_lead2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3180,
+        3500
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "requestMethod": "POST",
+        "url": "=https://backend.botconversa.com.br/api/v1/webhook/subscriber/",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "phone",
+              "value": "=+{{ $node[\"formata_telefone\"].json[\"telefone\"] }}"
+            },
+            {
+              "name": "first_name",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"name\"].split(' ')[0] }}"
+            },
+            {
+              "name": "last_name",
+              "value": "={{ $node[\"Busca Cliente no Asaas\"].json[\"name\"].split(\" \").slice(1).join(\" \") }}."
+            }
+          ]
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "API-KEY",
+              "value": "={{ $node[\"Dados do Evento\"].json[\"API-KEY\"] }}"
+            }
+          ]
+        }
+      },
+      "name": "cadastrar_contato",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        3000,
+        3300
+      ],
+      "id": "a730334a-96bc-4868-a931-4645c5e0822f",
+      "disabled": true,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_cliente_omie",
+              "value": "={{ $node[\"add_cliente_omie\"].json[\"codigo_cliente_omie\"] }}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"Dados do Evento\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "66f4a030-1300-43a5-b93f-5ddae98b3489",
+      "name": "atualiza_lead",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5180,
+        4580
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"id_cliente_omie\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "3a191278-9480-48e3-9a57-31305de05a10",
+      "name": "existe_id_omie",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        4460,
+        4240
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"Dados do Evento\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b6d27e9c-fd99-4549-b560-54727888ac2a",
+      "name": "atualiza_lead1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5160,
+        4180
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"conta_corrente_omie\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "d62df8b5-0dd0-4e09-bf21-603f53e6113f",
+      "name": "existe_cc_omie",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        4920,
+        4080
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0ee6cb68-81ee-4a70-b2ce-dd124f352d9f",
+      "name": "atualiza_lead2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5160,
+        4000
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/contacorrente/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"ListarContasCorrentes\",\n    \"app_key\": \"{{ $json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n    \"pagina\": 1,\n  \"registros_por_pagina\": 100,\n  \"apenas_importado_api\": \"N\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "dfe1c2bf-8df2-41e0-93cb-bdbdcade90b2",
+      "name": "consulta_cc",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2820,
+        3300
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"LancarPagamento\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": 1764616579,\n  \"observacao\": \"Baixa de documento realizada via API.\",\n  \"codigo_conta_corrente\": 1745966686,\n  \"data\": \"21/06/2024\",\n  \"valor\": 10000\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "a8014d7a-7f5c-4524-9525-1c47670aa3fa",
+      "name": "add_conta_a_pagar_omie4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        3180,
+        3300
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"UpsertContaPagar\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n    \"codigo_lancamento_integracao\": \"N8N\",\n  \"codigo_cliente_fornecedor\": 1764616555,\n  \"data_vencimento\": \"29/06/2024\",\n  \"valor_documento\": 10000,\n  \"codigo_categoria\": \"2.16.99\",\n  \"data_previsao\": \"21/06/2024\",\n  \"id_conta_corrente\": 1745966686,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "e2af3177-77fb-4dd6-89d7-05d8fb84dbcb",
+      "name": "add_conta_a_pagar_omie5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2640,
+        3300
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"ListarContasPagar\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n   \"pagina\": 1,\n  \"registros_por_pagina\": 100,\n  \"apenas_importado_api\": \"N\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "801413ef-6e2d-4243-8361-dc1958fdf8e9",
+      "name": "add_conta_a_pagar_omie6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2460,
+        3300
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaPagar\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"id\"] }}\",\n  \"codigo_cliente_fornecedor\": {{ $node[\"pesquisa_lead2\"].json[\"id_cliente_omie\"] }},\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Bruto do Pagamento\"] }},\n  \"codigo_categoria\": \"2.08.01\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"id_conta_corrente\": {{ parseInt($node[\"pesquisa_lead2\"].json[\"conta_corrente_omie\"]) }},\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "ed246f88-4d92-4f2d-9c5a-0348489adb45",
+      "name": "add_conta_a_pagar_omie8",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2260,
+        3300
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Dados do Evento\"].json[\"Evento\"] }}",
+              "value2": "Tranferência Feita"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "afc0d935-dbdf-4843-b4e2-6b1d8a954d21",
+      "name": "debito",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        4060,
+        3260
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaPagar\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"ID do Evento\"] }}\",\n  \"codigo_cliente_fornecedor\": 1750424781,\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"codigo_categoria\": \"2.09.02\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"observacao\": \"{{ $node[\"Dados do Evento\"].json[\"descricao\"].replace('.','').replace(/[^\\d]/g, '') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "c0b1f6c1-3343-4303-96c3-59f969fd4a3f",
+      "name": "add_conta_a_pagar_omie7",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5340,
+        3320
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_cliente_omie",
+              "value": "={{ $node[\"add_cliente_omie2\"].json[\"codigo_cliente_omie\"] }}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"Dados do Evento\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "69bec51b-69f0-4982-9752-f46fd3d2a829",
+      "name": "atualiza_lead4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5140,
+        3320
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"id_cliente_omie\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "0fe0542f-0441-4672-ab2b-0b447bbbc956",
+      "name": "existe_id_omie1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        4580,
+        3000
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"Dados do Evento\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0fa34044-eb70-4210-92cc-9ac83118d0ea",
+      "name": "atualiza_lead5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5140,
+        2960
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"conta_corrente_omie\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "a345f651-5b51-4151-a575-9a5e05fea447",
+      "name": "existe_cc_omie1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        4860,
+        2860
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3ae9071c-ac3f-44dc-81ca-4d3ee41069fb",
+      "name": "atualiza_lead6",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5140,
+        2780
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaPagar\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"ID do Evento\"] }}\",\n  \"codigo_cliente_fornecedor\": 1750424781,\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"codigo_categoria\": \"2.09.02\",\n  \"observacao\": \"{{ $node[\"Dados do Evento\"].json[\"descricao\"].replace('.','').replace(/[^\\d]/g, '') }}\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "50bc5838-57e0-4d0a-8ee4-3d5b97048404",
+      "name": "add_conta_a_pagar_omie9",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5320,
+        2960
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaPagar\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"ID do Evento\"] }}\",\n  \"codigo_cliente_fornecedor\": 1750424781,\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"codigo_categoria\": \"2.09.02\",\n  \"observacao\": \"{{ $node[\"Dados do Evento\"].json[\"descricao\"].replace('.','').replace(/[^\\d]/g, '') }}\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "9878d2a5-c167-407b-92a5-31c8697fd060",
+      "name": "add_conta_a_pagar_omie10",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5320,
+        2780
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"id_lead2\"].json[\"id_lead \"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_cliente_omie",
+              "value": "={{ $node[\"add_cliente_omie3\"].json[\"codigo_cliente_omie\"] }}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"Dados do Evento\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "166865b6-8bf0-4e38-b996-b30d947b6b23",
+      "name": "atualiza_lead7",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5140,
+        2600
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaPagar\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"ID do Evento\"] }}\",\n  \"codigo_cliente_fornecedor\": 1750424781,\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"codigo_categoria\": \"2.09.02\",\n  \"observacao\": \"{{ $node[\"Dados do Evento\"].json[\"descricao\"].replace('.','').replace(/[^\\d]/g, '') }}\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "babcb6db-2806-413d-9ae8-bdd18fe3d69a",
+      "name": "add_conta_a_pagar_omie11",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5320,
+        2600
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/contacorrente/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"call\": \"ListarContasCorrentes\",\n  \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n  \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n  \"param\": [\n    {\n       \"pagina\": 1,\n  \"registros_por_pagina\": 100,\n  \"apenas_importado_api\": \"N\"\n        }\n      ]\n    }\n ",
+        "options": {}
+      },
+      "id": "25fd62e9-eb9d-470e-99d2-9551171ef6d1",
+      "name": "contas_correntes",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2080,
+        3300
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Dados do Evento\"].json[\"Evento\"] }}",
+              "value2": "Tranferência Feita"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "e1de0b0c-0f19-4099-be06-ad796a7a2125",
+      "name": "debito1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        4320,
+        3600
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contareceber/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"LancarRecebimento\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento\": {{ $node[\"dados_omie\"].json[\"codigo_lancamento_omie\"] }},\n  \"codigo_lancamento_integracao\": \"{{ $node[\"dados_omie\"].json[\"codigo_lancamento_integracao\"] }}\",\n  \"codigo_baixa\": \"\",\n  \"codigo_conta_corrente\": \"1745966235\",\n  \"valor\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"desconto\": 0,\n  \"juros\": 0,\n  \"multa\": 0,\n  \"data\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"observacao\": \"Baixa de documento realizada via API.\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "0e6e37e8-3024-44b5-94c7-f1b8c2abde2d",
+      "name": "baixa_conta_a_receber_omie",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5800,
+        4000
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_cliente_omie",
+              "value": "={{ $node[\"add_cliente_omie\"].json[\"error\"][\"message\"].match(/Id \\[([0-9]+)\\]/)[1] }}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"Dados do Evento\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "74f74f46-7113-44ac-b40f-22aa23d18b0b",
+      "name": "atualiza_lead8",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5180,
+        4380
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"Dados do Evento\"].json[\"Evento\"] }}",
+              "value2": "Cobrança Recebida"
+            },
+            {
+              "value1": "={{ $node[\"Dados do Evento\"].json[\"Evento\"] }}",
+              "value2": "Cobrança Antecipada"
+            },
+            {
+              "value1": "={{ $node[\"Dados do Evento\"].json[\"Evento\"] }}",
+              "value2": "Tranferência Feita"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "f722a5f5-d09f-4086-8d8e-156fbf8ff706",
+      "name": "Credito_ou_debito",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2720,
+        3520
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contareceber/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaReceber\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"id\"] }}\",\n  \"codigo_cliente_fornecedor\": {{ $node[\"add_cliente_omie\"].json[\"error\"][\"message\"].match(/Id \\[([0-9]+)\\]/)[1] }},\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"codigo_categoria\": \"\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "edc99a22-ee4d-493b-b41e-f0a27d6fe293",
+      "name": "add_conta_a_receber_omie12",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5340,
+        4380
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contareceber/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaReceber\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"id\"] }}\",\n  \"codigo_cliente_fornecedor\": {{ $node[\"add_cliente_omie\"].json[\"codigo_cliente_omie\"] }},\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"codigo_categoria\": \"\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "84c4e0bd-6b22-492d-845f-331969aaac19",
+      "name": "add_conta_a_receber_omie",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5340,
+        4580
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contareceber/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaReceber\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"id\"] }}\",\n  \"codigo_cliente_fornecedor\": {{ $node[\"pesquisa_lead2\"].json[\"id_cliente_omie\"] }},\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"codigo_categoria\": \"\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "20e093b6-54d9-41b5-a8cb-fe4b1fa05d7a",
+      "name": "add_conta_a_receber_omie1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5340,
+        4180
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contareceber/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaReceber\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"id\"] }}\",\n  \"codigo_cliente_fornecedor\": {{ $node[\"add_cliente_omie1\"].json[\"codigo_cliente_omie\"] }},\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"codigo_categoria\": \"\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "c715113a-ae30-4639-a342-7c21d270bfbb",
+      "name": "add_conta_a_receber_omie3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5340,
+        3760
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "fa6fc966-f98e-487f-a7ab-bdfbac7ea569",
+              "leftValue": "={{ $node[\"add_cliente_omie1\"].json[\"error\"][\"message\"] }}",
+              "rightValue": "500",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "d52472a2-b977-4d74-8315-ebfa14cb7c49",
+      "name": "nao_existe3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        4960,
+        3660
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"id_lead2\"].json[\"id_lead \"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_cliente_omie",
+              "value": "={{ $node[\"add_cliente_omie1\"].json[\"error\"][\"message\"].match(/Id \\[([0-9]+)\\]/)[1] }}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"Dados do Evento\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "06c3f344-eeb9-45d6-90e5-6e07471f82bd",
+      "name": "atualiza_lead9",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5180,
+        3560
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contareceber/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaReceber\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"id\"] }}\",\n  \"codigo_cliente_fornecedor\": {{ $node[\"add_cliente_omie1\"].json[\"error\"][\"message\"].match(/Id \\[([0-9]+)\\]/)[1] }},\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"codigo_categoria\": \"\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "087b25c5-16c9-419e-a72f-325648fcb4e2",
+      "name": "add_conta_a_receber_omie4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5340,
+        3560
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "fa6fc966-f98e-487f-a7ab-bdfbac7ea569",
+              "leftValue": "={{ $node[\"add_cliente_omie2\"].json[\"error\"][\"message\"] }}",
+              "rightValue": "500",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "0835899f-2698-40f0-8624-27da8746fff9",
+      "name": "nao_existe4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        4920,
+        3220
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaPagar\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"ID do Evento\"] }}\",\n  \"codigo_cliente_fornecedor\": 1750424781,\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"codigo_categoria\": \"2.09.02\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"observacao\": \"{{ $node[\"Dados do Evento\"].json[\"descricao\"].replace('.','').replace(/[^\\d]/g, '') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "ee00f8e8-1d8f-4078-902b-f3c49d50ff49",
+      "name": "add_conta_a_pagar_omie",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5340,
+        3160
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_cliente_omie",
+              "value": "={{ $node[\"add_cliente_omie2\"].json[\"error\"][\"message\"].match(/Id \\[([0-9]+)\\]/)[1] }}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"Dados do Evento\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6bae735f-2abd-4ae5-be57-e2228ebbe876",
+      "name": "atualiza_lead10",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5140,
+        3160
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "fa6fc966-f98e-487f-a7ab-bdfbac7ea569",
+              "leftValue": "={{ $node[\"add_cliente_omie3\"].json[\"error\"][\"message\"] }}",
+              "rightValue": "500",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "3ac58c27-2ce1-4a96-ab0c-2da4c9fe1403",
+      "name": "nao_existe5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        4880,
+        2500
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaPagar\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"ID do Evento\"] }}\",\n  \"codigo_cliente_fornecedor\": 1750424781,\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"codigo_categoria\": \"2.09.02\",\n  \"observacao\": \"{{ $node[\"Dados do Evento\"].json[\"descricao\"].replace('.','').replace(/[^\\d]/g, '') }}\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "508f6ce2-6e0a-4fbe-9afb-7f4057023312",
+      "name": "add_conta_a_pagar_omie12",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5320,
+        2420
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"id_lead2\"].json[\"id_lead \"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_cliente_omie",
+              "value": "={{ $node[\"add_cliente_omie3\"].json[\"error\"][\"message\"].match(/Id \\[([0-9]+)\\]/)[1] }}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"Dados do Evento\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "459a9810-1b2c-4739-bdd8-1095d9919972",
+      "name": "atualiza_lead11",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5140,
+        2420
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"LancarPagamento\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento\": {{ $json[\"codigo_lancamento_omie\"] }},\n  \"codigo_lancamento_integracao\": \"{{ $json[\"codigo_lancamento_integracao\"] }}\",\n  \"codigo_baixa_integracao\": \"\",\n  \"codigo_conta_corrente\": \"1745966235\",\n  \"valor\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"desconto\": 0,\n  \"juros\": 0,\n  \"multa\": 0,\n  \"data\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"observacao\": \"Baixa de documento realizada via API.\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "da38d32c-9d23-415c-83a6-497362792d8e",
+      "name": "baixa_conta_a_pagar_omie1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5620,
+        2860
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/clientes/#IncluirCliente",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"call\": \"IncluirCliente\",\n  \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n  \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n  \"param\": [\n    {\n      \"codigo_cliente_integracao\": \"{{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}\",\n      \"email\": \"{{ $node[\"Dados do Evento\"].json[\"email\"] }}\",\n      \"razao_social\": \"{{ $node[\"Dados do Evento\"].json[\"name\"] }}\",\n      \"nome_fantasia\": \"{{ $node[\"Dados do Evento\"].json[\"name\"] }}\",\n      \"cnpj_cpf\": \"{{ $node[\"formata_telefone\"].json[\"cpfCnpj\"] }}\",\n      \"telefone1_ddd\": \"{{ $node[\"formata_telefone\"].json[\"telefone\"].slice(2, 4) }}\",\n      \"telefone1_numero\": \"{{ $node[\"formata_telefone\"].json[\"telefone\"].slice(4) }}\",\n      \"endereco\": \"{{ $node[\"Dados do Evento\"].json[\"address\"].slice(0,60) }}\",\n      \"estado\": \"{{ $node[\"Dados do Evento\"].json[\"state\"].slice(0,2) }}\",\n      \"cidade\": \"\",\n      \"cep\": \"{{ $node[\"Dados do Evento\"].json[\"postalCode\"] }}\",\n      \"observacao\": \"Cidade: {{ $node[\"Dados do Evento\"].json[\"cityName\"] }}\",\n      \"tags\": \"\",\n      \"obs_detalhadas\":\"\",\n      \"importado_api\": \"S\",\n      \"dadosBancarios\": [\n        {\n          \"codigo_banco\": \"461\",\n          \"agencia\": \"\",\n          \"conta_corrente\": \"\",\n          \"doc_titular\": \"{{ $node[\"formata_telefone\"].json[\"cpfCnpj\"] }}\",\n          \"nome_titular\": \"{{ $node[\"Dados do Evento\"].json[\"name\"] }}\"\n        }\n      ]\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "1f3cf41f-3b52-475e-8b17-02d1b2c75ebb",
+      "name": "add_cliente_omie",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        4740,
+        4500
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/clientes/#IncluirCliente",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"call\": \"IncluirCliente\",\n  \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n  \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n  \"param\": [\n    {\n      \"codigo_cliente_integracao\": \"{{ $node[\"insere_dados\"].json[\"data\"][\"insertId\"] }}\",\n      \"email\": \"{{ $node[\"Dados do Evento\"].json[\"email\"] }}\",\n      \"razao_social\": \"{{ $node[\"Dados do Evento\"].json[\"name\"] }}\",\n      \"nome_fantasia\": \"{{ $node[\"Dados do Evento\"].json[\"name\"] }}\",\n      \"cnpj_cpf\": \"{{ $node[\"formata_telefone\"].json[\"cpfCnpj\"] }}\",\n      \"telefone1_ddd\": \"{{ $node[\"formata_telefone\"].json[\"telefone\"].slice(2, 4) }}\",\n      \"telefone1_numero\": \"{{ $node[\"formata_telefone\"].json[\"telefone\"].slice(4) }}\",\n      \"endereco\": \"{{ $node[\"Dados do Evento\"].json[\"address\"].slice(0,60) }}\",\n      \"estado\": \"{{ $node[\"Dados do Evento\"].json[\"state\"].slice(0,2) }}\",\n      \"cidade\": \"\",\n      \"cep\": \"{{ $node[\"Dados do Evento\"].json[\"postalCode\"] }}\",\n      \"observacao\": \"Cidade: {{ $node[\"Dados do Evento\"].json[\"cityName\"] }}\",\n      \"tags\": \"\",\n      \"obs_detalhadas\":\"\",\n      \"importado_api\": \"S\",\n      \"dadosBancarios\": [\n        {\n          \"codigo_banco\": \"461\",\n          \"agencia\": \"\",\n          \"conta_corrente\": \"\",\n          \"doc_titular\": \"{{ $node[\"formata_telefone\"].json[\"cpfCnpj\"] }}\",\n          \"nome_titular\": \"{{ $node[\"Dados do Evento\"].json[\"name\"] }}\"\n        }\n      ]\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "a9473581-99b0-49d9-86e4-6c66a7e3cb67",
+      "name": "add_cliente_omie1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        4800,
+        3660
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/clientes/#IncluirCliente",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"call\": \"IncluirCliente\",\n  \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n  \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n  \"param\": [\n    {\n      \"codigo_cliente_integracao\": \"123\",\n      \"email\": \"{{ $node[\"Dados do Evento\"].json[\"email\"] }}\",\n      \"razao_social\": \"ASAAS GESTAO FINANCEIRA - 19.540.550/0001-21\",\n      \"nome_fantasia\": \"ASAAS GESTAO FINANCEIRA\",\n      \"cnpj_cpf\": \"19.540.550/0001-21\",\n      \"telefone1_ddd\": \"{{ $node[\"formata_telefone\"].json[\"telefone\"].slice(2, 4) }}\",\n      \"telefone1_numero\": \"{{ $node[\"formata_telefone\"].json[\"telefone\"].slice(4) }}\",\n      \"endereco\": \"{{ $node[\"Dados do Evento\"].json[\"address\"].slice(0,60) }}\",\n      \"estado\": \"{{ $node[\"Dados do Evento\"].json[\"state\"].slice(0,2) }}\",\n      \"cidade\": \"\",\n      \"cep\": \"{{ $node[\"Dados do Evento\"].json[\"postalCode\"] }}\",\n      \"observacao\": \"Cidade: {{ $node[\"Dados do Evento\"].json[\"cityName\"] }}\",\n      \"tags\": \"\",\n      \"obs_detalhadas\":\"\",\n      \"importado_api\": \"S\",\n      \"dadosBancarios\": [\n        {\n          \"codigo_banco\": \"461\",\n          \"agencia\": \"\",\n          \"conta_corrente\": \"\",\n          \"doc_titular\": \"{{ $node[\"formata_telefone\"].json[\"cpfCnpj\"] }}\",\n          \"nome_titular\": \"{{ $node[\"Dados do Evento\"].json[\"name\"] }}\"\n        }\n      ]\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "206c089f-d125-4bf1-89ee-1a18109086ed",
+      "name": "add_cliente_omie2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        4740,
+        3220
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/clientes/#IncluirCliente",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"call\": \"IncluirCliente\",\n  \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n  \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n  \"param\": [\n    {\n      \"codigo_cliente_integracao\": \"123\",\n      \"email\": \"{{ $node[\"Dados do Evento\"].json[\"email\"] }}\",\n      \"razao_social\": \"ASAAS GESTAO FINANCEIRA - 19.540.550/0001-21\",\n      \"nome_fantasia\": \"ASAAS GESTAO FINANCEIRA\",\n      \"cnpj_cpf\": \"19.540.550/0001-21\",\n      \"telefone1_ddd\": \"{{ $node[\"formata_telefone\"].json[\"telefone\"].slice(2, 4) }}\",\n      \"telefone1_numero\": \"{{ $node[\"formata_telefone\"].json[\"telefone\"].slice(4) }}\",\n      \"endereco\": \"{{ $node[\"Dados do Evento\"].json[\"address\"].slice(0,60) }}\",\n      \"estado\": \"{{ $node[\"Dados do Evento\"].json[\"state\"].slice(0,2) }}\",\n      \"cidade\": \"\",\n      \"cep\": \"{{ $node[\"Dados do Evento\"].json[\"postalCode\"] }}\",\n      \"observacao\": \"Cidade: {{ $node[\"Dados do Evento\"].json[\"cityName\"] }}\",\n      \"tags\": \"\",\n      \"obs_detalhadas\":\"\",\n      \"importado_api\": \"S\",\n      \"dadosBancarios\": [\n        {\n          \"codigo_banco\": \"461\",\n          \"agencia\": \"\",\n          \"conta_corrente\": \"\",\n          \"doc_titular\": \"{{ $node[\"formata_telefone\"].json[\"cpfCnpj\"] }}\",\n          \"nome_titular\": \"{{ $node[\"Dados do Evento\"].json[\"name\"] }}\"\n        }\n      ]\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "b4a5bd08-3f83-426f-a49e-65da5c5f3872",
+      "name": "add_cliente_omie3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        4700,
+        2500
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "39cad933-4ca4-422c-aca5-cf433c0aece6",
+              "name": "codigo_lancamento_integracao",
+              "value": "={{ $json[\"codigo_lancamento_integracao\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "3fbb65d9-5f01-4e2c-b5b3-739b8843c70e",
+              "name": "codigo_lancamento_omie",
+              "value": "={{ $json[\"codigo_lancamento_omie\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "84618b09-57ba-4e43-b9dd-c878f3e357d2",
+              "name": "codigo_cliente_omie",
+              "value": "={{ $node[\"add_conta_a_receber_omie\"].runIndex >= 0 ? $node[\"add_cliente_omie\"].json[\"codigo_cliente_omie\"] : ($node[\"add_conta_a_receber_omie12\"].runIndex >= 0 ? $node[\"add_cliente_omie\"].json[\"error\"][\"message\"].match(/Id \\[([0-9]+)\\]/)[1] : ($node[\"add_conta_a_receber_omie4\"].runIndex >= 0 ? $node[\"add_cliente_omie1\"].json[\"error\"][\"message\"].match(/Id \\[([0-9]+)\\]/)[1] : ($node[\"add_conta_a_receber_omie3\"].runIndex >= 0 ? $node[\"add_cliente_omie1\"].json[\"codigo_cliente_omie\"] : $node[\"pesquisa_lead2\"].json[\"id_cliente_omie\"] )))}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "36857178-6d63-4459-9572-91d4281b517f",
+      "name": "dados_omie",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        5620,
+        4000
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"LancarPagamento\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento\": {{ $json[\"codigo_lancamento_omie\"] }},\n  \"codigo_lancamento_integracao\": \"{{ $json[\"codigo_lancamento_integracao\"] }}\",\n  \"codigo_baixa_integracao\": \"\",\n  \"codigo_conta_corrente\": \"1745966235\",\n  \"valor\": {{ $node[\"formata_telefone\"].json[\"fee\"] }},\n  \"desconto\": 0,\n  \"juros\": 0,\n  \"multa\": 0,\n  \"data\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"observacao\": \"Baixa de documento realizada via API.\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "24617bc5-9963-48e4-9860-bb9e8da8aa81",
+      "name": "baixa_conta_a_pagar_omie",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        6380,
+        4120
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "fa6fc966-f98e-487f-a7ab-bdfbac7ea569",
+              "leftValue": "={{ $node[\"add_cliente_omie\"].json[\"error\"][\"message\"] }}",
+              "rightValue": "500",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e87a02cc-4f46-4767-804d-8d404c797afc",
+      "name": "existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        4920,
+        4500
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contareceber/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaReceber\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"id\"] }}\",\n  \"codigo_cliente_fornecedor\": {{ $node[\"pesquisa_lead2\"].json[\"id_cliente_omie\"] }},\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"Dados do Evento\"].json[\"Valor Líquido do Pagamento\"] }},\n  \"codigo_categoria\": \"\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "5d1a89c1-c476-4ada-aaae-82d848ca1d0b",
+      "name": "add_conta_a_receber_omie2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        5340,
+        4000
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/financas/contapagar/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaPagar\",\n    \"app_key\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"Dados do Evento\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"codigo_lancamento_integracao\": \"{{ $node[\"Dados do Evento\"].json[\"ID do Evento\"] }}\",\n  \"codigo_cliente_fornecedor\": 1750424781,\n  \"data_vencimento\": \"{{ $node[\"Dados do Evento\"].json[\"Data de Vencimento\"] }}\",\n  \"valor_documento\": {{ $node[\"formata_telefone\"].json[\"fee\"] }},\n  \"codigo_categoria\": \"2.09.02\",\n  \"data_previsao\": \"{{ $now.toFormat('dd/MM/yyyy') }}\",\n  \"id_conta_corrente\": 1745966235,\n  \"observacao\": \"{{ $node[\"Dados do Evento\"].json[\"descricao\"].replace('.','').replace(/[^\\d]/g, '') }}\",\n  \"status_titulo\": \"1\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "9ab02b8e-071d-4e0c-a42b-1fdea579c66b",
+      "name": "add_conta_a_pagar_omie13",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        6180,
+        4120
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "20d74ff9-5d3a-49a8-bbc1-aec045c6cdd1",
+              "leftValue": "={{ String($node[\"formata_telefone\"].json[\"fee\"])}}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "500f7ac9-ffd9-46bb-8279-ac00a22bc7ff",
+              "leftValue": "={{ String($node[\"formata_telefone\"].json[\"fee\"]) }}",
+              "rightValue": "0.00",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "6058efe1-7242-4c87-a767-b3dd0da3b244",
+      "name": "nao_houve_taxa1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        5980,
+        4000
+      ]
+    }
+  ],
+  "pinData": {
+    "Asaas": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "Java/1.8.0_282",
+            "content-length": "1363",
+            "accept": "application/json",
+            "accept-encoding": "gzip",
+            "cache-control": "no-cache",
+            "content-type": "application/json",
+            "pragma": "no-cache",
+            "traceparent": "00-66b436fb0000000024c1dad9aaabb064-7cf332b7b0574769-00",
+            "tracestate": "dd=s:0;p:3fb0d7062908e79e;t.tid:66b436fb00000000",
+            "x-datadog-parent-id": "9003595844562667369",
+            "x-datadog-sampling-priority": "0",
+            "x-datadog-tags": "_dd.p.tid=66b436fb00000000",
+            "x-datadog-trace-id": "2648638684276699236",
+            "x-forwarded-for": "52.67.12.206",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "52.67.12.206"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "id": "evt_d26e303b238e509335ac9ba210e51b0f&700936613",
+            "event": "PAYMENT_RECEIVED",
+            "dateCreated": "2024-08-08 00:09:47",
+            "payment": {
+              "object": "payment",
+              "id": "pay_5fmluik0xhn3ot58",
+              "dateCreated": "2024-06-07",
+              "customer": "cus_000085931708",
+              "subscription": "sub_6g0ceiortg9l1sbw",
+              "paymentLink": null,
+              "value": 5000,
+              "netValue": 4850.01,
+              "originalValue": null,
+              "interestValue": null,
+              "description": "Cobrança referente ao Portus Partner Start. \n",
+              "billingType": "CREDIT_CARD",
+              "confirmedDate": "2024-07-07",
+              "creditCard": {
+                "creditCardNumber": "2591",
+                "creditCardBrand": "VISA"
+              },
+              "pixTransaction": null,
+              "status": "RECEIVED",
+              "dueDate": "2024-07-07",
+              "originalDueDate": "2024-07-07",
+              "paymentDate": "2024-08-08",
+              "clientPaymentDate": "2024-07-07",
+              "installmentNumber": null,
+              "invoiceUrl": "https://www.asaas.com/i/5fmluik0xhn3ot58",
+              "invoiceNumber": "407335129",
+              "externalReference": null,
+              "deleted": false,
+              "anticipated": false,
+              "anticipable": false,
+              "creditDate": "2024-08-08",
+              "estimatedCreditDate": "2024-08-08",
+              "transactionReceiptUrl": "https://www.asaas.com/comprovantes/2040485073707238",
+              "nossoNumero": null,
+              "bankSlipUrl": null,
+              "lastInvoiceViewedDate": null,
+              "lastBankSlipViewedDate": null,
+              "discount": {
+                "value": 0,
+                "limitDate": null,
+                "dueDateLimitDays": 0,
+                "type": "PERCENTAGE"
+              },
+              "fine": {
+                "value": 10,
+                "type": "PERCENTAGE"
+              },
+              "interest": {
+                "value": 1,
+                "type": "PERCENTAGE"
+              },
+              "postalService": false,
+              "custody": null,
+              "refunds": null
+            }
+          }
+        }
+      }
+    ],
+    "consulta_cc": [
+      {
+        "json": {
+          "pagina": 1,
+          "total_de_paginas": 1,
+          "registros": 13,
+          "total_de_registros": 13,
+          "ListarContasCorrentes": [
+            {
+              "bloqueado": "N",
+              "bol_instr1": "Sr. Caixa, receber até 10 dias após o vencimento.",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "999",
+              "data_alt": "14/06/2024",
+              "data_inc": "10/05/2024",
+              "descricao": "Caixinha",
+              "hora_alt": "16:12:37",
+              "hora_inc": "18:26:50",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1743800544,
+              "nao_fluxo": "S",
+              "nao_resumo": "S",
+              "pdv_categoria": "1.01.03",
+              "pdv_enviar": "S",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CX",
+              "tipo_conta_corrente": "CX",
+              "user_alt": "P000820536",
+              "user_inc": "P000564645"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "995",
+              "data_alt": "14/06/2024",
+              "data_inc": "16/05/2024",
+              "descricao": "ASAAS",
+              "hora_alt": "11:40:47",
+              "hora_inc": "14:39:14",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1745966235,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "observacao": "54393,55 - 31/12/2023",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_data": "31/12/2023",
+              "saldo_inicial": 54393.55,
+              "tipo": "CV",
+              "tipo_conta_corrente": "CV",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "077",
+              "data_alt": "14/06/2024",
+              "data_inc": "16/05/2024",
+              "descricao": "Banco Inter",
+              "hora_alt": "11:40:56",
+              "hora_inc": "14:40:27",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1745966686,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "observacao": "384.162,31 - 31/12/2023",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_data": "31/12/2023",
+              "saldo_inicial": 384162.31,
+              "tipo": "CC",
+              "tipo_conta_corrente": "CC",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "077",
+              "data_alt": "14/06/2024",
+              "data_inc": "16/05/2024",
+              "descricao": "Banco Inter - CDB",
+              "hora_alt": "16:12:23",
+              "hora_inc": "14:41:36",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1745967352,
+              "nao_fluxo": "S",
+              "nao_resumo": "S",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_data": "31/12/2023",
+              "saldo_inicial": 10000,
+              "tipo": "CA",
+              "tipo_conta_corrente": "CA",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "985",
+              "data_alt": "14/06/2024",
+              "data_inc": "29/05/2024",
+              "descricao": "Banco Inter - Cartão de Crédito",
+              "hora_alt": "16:12:29",
+              "hora_inc": "09:41:17",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1750670517,
+              "nao_fluxo": "S",
+              "nao_resumo": "S",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_data": "01/01/2024",
+              "saldo_inicial": 0,
+              "tipo": "CR",
+              "tipo_conta_corrente": "CR",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "985",
+              "data_alt": "30/05/2024",
+              "data_inc": "30/05/2024",
+              "descricao": "Visa Infinity Kelly Eleto",
+              "hora_alt": "17:51:00",
+              "hora_inc": "17:50:42",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1751266478,
+              "nao_fluxo": "S",
+              "nao_resumo": "S",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CR",
+              "tipo_conta_corrente": "CR",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "949",
+              "data_alt": "04/06/2024",
+              "data_inc": "04/06/2024",
+              "descricao": "Payoneer",
+              "hora_alt": "09:40:30",
+              "hora_inc": "09:40:12",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1752927053,
+              "nao_fluxo": "S",
+              "nao_resumo": "S",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CV",
+              "tipo_conta_corrente": "CV",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "A33",
+              "data_alt": "14/06/2024",
+              "data_inc": "05/06/2024",
+              "descricao": "Greenn",
+              "hora_alt": "16:11:51",
+              "hora_inc": "13:43:01",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1753663402,
+              "nao_fluxo": "S",
+              "nao_resumo": "S",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_data": "31/12/2023",
+              "saldo_inicial": 3995.01,
+              "tipo": "CV",
+              "tipo_conta_corrente": "CV",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cCodCCInt": "156",
+              "cobr_sn": "N",
+              "codigo_banco": "999",
+              "data_alt": "18/06/2024",
+              "data_inc": "18/06/2024",
+              "descricao": "Caixinha",
+              "hora_alt": "17:44:29",
+              "hora_inc": "17:44:29",
+              "importado_api": "S",
+              "inativo": "N",
+              "nCodCC": 1760342392,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CX",
+              "tipo_conta_corrente": "CX",
+              "user_alt": "WEBSERVICE",
+              "user_inc": "WEBSERVICE"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cCodCCInt": "1760452818",
+              "cobr_sn": "N",
+              "codigo_banco": "999",
+              "data_alt": "18/06/2024",
+              "data_inc": "18/06/2024",
+              "descricao": "Conta-corrente",
+              "hora_alt": "20:27:34",
+              "hora_inc": "20:27:34",
+              "importado_api": "S",
+              "inativo": "N",
+              "nCodCC": 1760455148,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CX",
+              "tipo_conta_corrente": "CX",
+              "user_alt": "WEBSERVICE",
+              "user_inc": "WEBSERVICE"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cCodCCInt": "103",
+              "cobr_sn": "N",
+              "codigo_banco": "999",
+              "data_alt": "19/06/2024",
+              "data_inc": "19/06/2024",
+              "descricao": "Conta-corrente",
+              "hora_alt": "14:50:42",
+              "hora_inc": "14:50:42",
+              "importado_api": "S",
+              "inativo": "N",
+              "nCodCC": 1760795572,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CX",
+              "tipo_conta_corrente": "CX",
+              "user_alt": "WEBSERVICE",
+              "user_inc": "WEBSERVICE"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cCodCCInt": "196",
+              "cobr_sn": "N",
+              "codigo_banco": "999",
+              "data_alt": "20/06/2024",
+              "data_inc": "20/06/2024",
+              "descricao": "Conta-corrente",
+              "hora_alt": "11:00:40",
+              "hora_inc": "11:00:40",
+              "importado_api": "S",
+              "inativo": "N",
+              "nCodCC": 1763330485,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CX",
+              "tipo_conta_corrente": "CX",
+              "user_alt": "WEBSERVICE",
+              "user_inc": "WEBSERVICE"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "S",
+              "codigo_agencia": "0001",
+              "codigo_banco": "450",
+              "data_alt": "31/05/2024",
+              "data_inc": "31/05/2024",
+              "descricao": "Omie.CASH",
+              "hora_alt": "17:38:20",
+              "hora_inc": "17:37:57",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1743800638,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "numero_conta_corrente": "4977667466-1",
+              "observacao": "Incluída automaticamente para a integração com o Omie.CASH.",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "per_juros": 1,
+              "per_multa": 2,
+              "pix_sn": "S",
+              "saldo_data": "31/05/2024",
+              "saldo_inicial": 0,
+              "tipo": "CC",
+              "tipo_conta_corrente": "CC",
+              "user_alt": "WEBSERVICE",
+              "user_inc": "WEBSERVICE"
+            }
+          ]
+        }
+      }
+    ],
+    "contas_correntes": [
+      {
+        "json": {
+          "pagina": 1,
+          "total_de_paginas": 1,
+          "registros": 13,
+          "total_de_registros": 13,
+          "ListarContasCorrentes": [
+            {
+              "bloqueado": "N",
+              "bol_instr1": "Sr. Caixa, receber até 10 dias após o vencimento.",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "999",
+              "data_alt": "14/06/2024",
+              "data_inc": "10/05/2024",
+              "descricao": "Caixinha",
+              "hora_alt": "16:12:37",
+              "hora_inc": "18:26:50",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1743800544,
+              "nao_fluxo": "S",
+              "nao_resumo": "S",
+              "pdv_categoria": "1.01.03",
+              "pdv_enviar": "S",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CX",
+              "tipo_conta_corrente": "CX",
+              "user_alt": "P000820536",
+              "user_inc": "P000564645"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "995",
+              "data_alt": "14/06/2024",
+              "data_inc": "16/05/2024",
+              "descricao": "ASAAS",
+              "hora_alt": "11:40:47",
+              "hora_inc": "14:39:14",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1745966235,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "observacao": "54393,55 - 31/12/2023",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_data": "31/12/2023",
+              "saldo_inicial": 54393.55,
+              "tipo": "CV",
+              "tipo_conta_corrente": "CV",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "077",
+              "data_alt": "14/06/2024",
+              "data_inc": "16/05/2024",
+              "descricao": "Banco Inter",
+              "hora_alt": "11:40:56",
+              "hora_inc": "14:40:27",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1745966686,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "observacao": "384.162,31 - 31/12/2023",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_data": "31/12/2023",
+              "saldo_inicial": 384162.31,
+              "tipo": "CC",
+              "tipo_conta_corrente": "CC",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "077",
+              "data_alt": "14/06/2024",
+              "data_inc": "16/05/2024",
+              "descricao": "Banco Inter - CDB",
+              "hora_alt": "16:12:23",
+              "hora_inc": "14:41:36",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1745967352,
+              "nao_fluxo": "S",
+              "nao_resumo": "S",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_data": "31/12/2023",
+              "saldo_inicial": 10000,
+              "tipo": "CA",
+              "tipo_conta_corrente": "CA",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "985",
+              "data_alt": "14/06/2024",
+              "data_inc": "29/05/2024",
+              "descricao": "Banco Inter - Cartão de Crédito",
+              "hora_alt": "16:12:29",
+              "hora_inc": "09:41:17",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1750670517,
+              "nao_fluxo": "S",
+              "nao_resumo": "S",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_data": "01/01/2024",
+              "saldo_inicial": 0,
+              "tipo": "CR",
+              "tipo_conta_corrente": "CR",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "985",
+              "data_alt": "30/05/2024",
+              "data_inc": "30/05/2024",
+              "descricao": "Visa Infinity Kelly Eleto",
+              "hora_alt": "17:51:00",
+              "hora_inc": "17:50:42",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1751266478,
+              "nao_fluxo": "S",
+              "nao_resumo": "S",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CR",
+              "tipo_conta_corrente": "CR",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "949",
+              "data_alt": "04/06/2024",
+              "data_inc": "04/06/2024",
+              "descricao": "Payoneer",
+              "hora_alt": "09:40:30",
+              "hora_inc": "09:40:12",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1752927053,
+              "nao_fluxo": "S",
+              "nao_resumo": "S",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CV",
+              "tipo_conta_corrente": "CV",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "N",
+              "codigo_banco": "A33",
+              "data_alt": "14/06/2024",
+              "data_inc": "05/06/2024",
+              "descricao": "Greenn",
+              "hora_alt": "16:11:51",
+              "hora_inc": "13:43:01",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1753663402,
+              "nao_fluxo": "S",
+              "nao_resumo": "S",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_data": "31/12/2023",
+              "saldo_inicial": 3995.01,
+              "tipo": "CV",
+              "tipo_conta_corrente": "CV",
+              "user_alt": "P000820536",
+              "user_inc": "P000820536"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cCodCCInt": "156",
+              "cobr_sn": "N",
+              "codigo_banco": "999",
+              "data_alt": "18/06/2024",
+              "data_inc": "18/06/2024",
+              "descricao": "Caixinha",
+              "hora_alt": "17:44:29",
+              "hora_inc": "17:44:29",
+              "importado_api": "S",
+              "inativo": "N",
+              "nCodCC": 1760342392,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CX",
+              "tipo_conta_corrente": "CX",
+              "user_alt": "WEBSERVICE",
+              "user_inc": "WEBSERVICE"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cCodCCInt": "1760452818",
+              "cobr_sn": "N",
+              "codigo_banco": "999",
+              "data_alt": "18/06/2024",
+              "data_inc": "18/06/2024",
+              "descricao": "Conta-corrente",
+              "hora_alt": "20:27:34",
+              "hora_inc": "20:27:34",
+              "importado_api": "S",
+              "inativo": "N",
+              "nCodCC": 1760455148,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CX",
+              "tipo_conta_corrente": "CX",
+              "user_alt": "WEBSERVICE",
+              "user_inc": "WEBSERVICE"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cCodCCInt": "103",
+              "cobr_sn": "N",
+              "codigo_banco": "999",
+              "data_alt": "19/06/2024",
+              "data_inc": "19/06/2024",
+              "descricao": "Conta-corrente",
+              "hora_alt": "14:50:42",
+              "hora_inc": "14:50:42",
+              "importado_api": "S",
+              "inativo": "N",
+              "nCodCC": 1760795572,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CX",
+              "tipo_conta_corrente": "CX",
+              "user_alt": "WEBSERVICE",
+              "user_inc": "WEBSERVICE"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cCodCCInt": "196",
+              "cobr_sn": "N",
+              "codigo_banco": "999",
+              "data_alt": "20/06/2024",
+              "data_inc": "20/06/2024",
+              "descricao": "Conta-corrente",
+              "hora_alt": "11:00:40",
+              "hora_inc": "11:00:40",
+              "importado_api": "S",
+              "inativo": "N",
+              "nCodCC": 1763330485,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "pix_sn": "N",
+              "saldo_inicial": 0,
+              "tipo": "CX",
+              "tipo_conta_corrente": "CX",
+              "user_alt": "WEBSERVICE",
+              "user_inc": "WEBSERVICE"
+            },
+            {
+              "bloqueado": "N",
+              "bol_sn": "N",
+              "cobr_sn": "S",
+              "codigo_agencia": "0001",
+              "codigo_banco": "450",
+              "data_alt": "31/05/2024",
+              "data_inc": "31/05/2024",
+              "descricao": "Omie.CASH",
+              "hora_alt": "17:38:20",
+              "hora_inc": "17:37:57",
+              "importado_api": "N",
+              "inativo": "N",
+              "nCodCC": 1743800638,
+              "nao_fluxo": "N",
+              "nao_resumo": "N",
+              "numero_conta_corrente": "4977667466-1",
+              "observacao": "Incluída automaticamente para a integração com o Omie.CASH.",
+              "pdv_enviar": "N",
+              "pdv_sincr_analitica": "N",
+              "per_juros": 1,
+              "per_multa": 2,
+              "pix_sn": "S",
+              "saldo_data": "31/05/2024",
+              "saldo_inicial": 0,
+              "tipo": "CC",
+              "tipo_conta_corrente": "CC",
+              "user_alt": "WEBSERVICE",
+              "user_inc": "WEBSERVICE"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-08-08T13:33:11.522Z",
+  "versionId": "c2a3b4cc-ae00-4e7c-bde2-6a112459a659"
+}
