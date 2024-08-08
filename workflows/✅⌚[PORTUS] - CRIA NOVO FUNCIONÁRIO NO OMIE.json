@@ -1,0 +1,1314 @@
+{
+  "active": true,
+  "connections": {
+    "nao_existe2": {
+      "main": [
+        [
+          {
+            "node": "insere_dados",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "telefone_preenchido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_preenchido1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_tel_empresa1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_lead3": {
+      "main": [
+        [
+          {
+            "node": "add_funcionario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_tel_empresa1": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados1": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_lead2": {
+      "main": [
+        [
+          {
+            "node": "add_funcionario1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_preenchido": {
+      "main": [
+        [
+          {
+            "node": "telefone_preenchido1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_tel_normal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_tel_normal": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_dados": {
+      "main": [
+        [
+          {
+            "node": "id_lead2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nova_venda_realizada_pipefy": {
+      "main": [
+        [
+          {
+            "node": "tratamento_de_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tratamento_de_dados": {
+      "main": [
+        [
+          {
+            "node": "dados_validados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_bancos": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead2": {
+      "main": [
+        [
+          {
+            "node": "nao_existe2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_funcionario": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_funcionario1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-06-17T17:46:32.467Z",
+  "id": "OHSn2bCN7TfWOr4G",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "✅⌚[PORTUS] - CRIA NOVO FUNCIONÁRIO NO OMIE",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"id_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_cliente_omie",
+              "value": "={{ $node[\"add_funcionario1\"].json[\"codigo_cliente_omie\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "05dac84b-f571-4462-83e4-b76baedcbe0f",
+      "name": "atualiza_lead3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3080,
+        740
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "06191343-ccb1-440f-9c3a-2d4dd8300047",
+      "name": "nao_existe2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -3980,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"telefone\"] }}",
+              "value2": "={{ $node[\"dados_validados\"].json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "4e1528a6-e633-4ae1-88e6-b664defb2e04",
+      "name": "telefone_preenchido1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -3600,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "195fba12-fcdb-4b32-980f-5d640483ce2f",
+      "name": "id_lead3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -3200,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"dados_validados\"].json[\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados_validados\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"dados_validados\"].json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "cpf_cnpj",
+              "value": "={{ $node[\"dados_validados\"].json[\"cpf\"] ? $node[\"dados_validados\"].json[\"cpf\"] : $node[\"dados_validados\"].json[\"cnpj\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"dados_validados\"].json[\"Nome do Cliente\"].split(' ').slice(1).join(\" \") }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "4b078911-717c-4439-a8ec-25dd1584301c",
+      "name": "atualiza_dados_tel_empresa1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3420,
+        1080
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"dados_validados\"].json[\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados_validados\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "cpf_cnpj",
+              "value": "={{ $node[\"dados_validados\"].json[\"cpf\"] ? $node[\"dados_validados\"].json[\"cpf\"] : $node[\"dados_validados\"].json[\"cnpj\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"dados_validados\"].json[\"Nome do Cliente\"].split(' ').slice(1).join(\" \") }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "9852ac36-f807-4ed7-947a-05e497026506",
+      "name": "atualiza_dados1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3420,
+        900
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_lead",
+              "value": "={{ $node[\"insere_dados\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "811709ad-bb61-4bc7-a627-6f93afa7527b",
+      "name": "id_lead2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -3480,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"telefone\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "c00e1ba5-0610-4272-ad4b-d338ac04860f",
+      "name": "telefone_preenchido",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -3780,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"dados_validados\"].json[\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados_validados\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"dados_validados\"].json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "cpf_cnpj",
+              "value": "={{ $node[\"dados_validados\"].json[\"cpf\"] ? $node[\"dados_validados\"].json[\"cpf\"] : $node[\"dados_validados\"].json[\"cnpj\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"dados_validados\"].json[\"Nome do Cliente\"].split(' ').slice(1).join(\" \") }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "77e3a1f8-6d63-4a01-bb6d-b424cfa59853",
+      "name": "atualiza_dados_tel_normal",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3420,
+        1260
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"dados_validados\"].json[\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"dados_validados\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"dados_validados\"].json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "cpf_cnpj",
+              "value": "={{ $node[\"dados_validados\"].json[\"cpf\"] ? $node[\"dados_validados\"].json[\"cpf\"] : $node[\"dados_validados\"].json[\"cnpj\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"dados_validados\"].json[\"Nome do Cliente\"].split(' ').slice(1).join(\" \") }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "dd5fd538-1116-4319-bd59-0d3ec67272e5",
+      "name": "insere_dados",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3660,
+        740
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_cliente_omie",
+              "value": "={{ $node[\"add_funcionario\"].json[\"codigo_cliente_omie\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "00811c40-1fa8-4c74-b78e-dc2ddbbc6c8a",
+      "name": "atualiza_lead",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2800,
+        1000
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "entrou-na-fase-de-contrato-pipefy",
+        "options": {}
+      },
+      "id": "fba34be5-a0bb-4c84-8f93-b6da89a72939",
+      "name": "nova_venda_realizada_pipefy",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        -4740,
+        980
+      ],
+      "webhookId": "154626d8-2e2f-4d07-aec6-80f185b72d6d"
+    },
+    {
+      "parameters": {
+        "jsCode": "function validarCPF(cpf) {\n    cpf = cpf.replace(/[^\\d]+/g, ''); // Remove caracteres não numéricos\n\n    if (cpf.length !== 11) return false;\n\n    // Elimina CPFs com todos os dígitos iguais\n    if (/^(\\d)\\1+$/.test(cpf)) return false;\n\n    // Validação do primeiro dígito verificador\n    let soma = 0;\n    for (let i = 0; i < 9; i++) {\n        soma += parseInt(cpf.charAt(i)) * (10 - i);\n    }\n    let resto = 11 - (soma % 11);\n    let digito1 = (resto === 10 || resto === 11) ? 0 : resto;\n    if (digito1 !== parseInt(cpf.charAt(9))) return false;\n\n    // Validação do segundo dígito verificador\n    soma = 0;\n    for (let i = 0; i < 10; i++) {\n        soma += parseInt(cpf.charAt(i)) * (11 - i);\n    }\n    resto = 11 - (soma % 11);\n    let digito2 = (resto === 10 || resto === 11) ? 0 : resto;\n    if (digito2 !== parseInt(cpf.charAt(10))) return false;\n\n    return true;\n}\n\nfunction validarCNPJ(cnpj) {\n    cnpj = cnpj.replace(/[^\\d]+/g, ''); // Remove caracteres não numéricos\n\n    if (cnpj.length !== 14) return false;\n\n    // Elimina CNPJs com todos os dígitos iguais\n    if (/^(\\d)\\1+$/.test(cnpj)) return false;\n\n    let tamanho = cnpj.length - 2;\n    let numeros = cnpj.substring(0, tamanho);\n    let digitos = cnpj.substring(tamanho);\n    let soma = 0;\n    let pos = tamanho - 7;\n    \n    for (let i = tamanho; i >= 1; i--) {\n        soma += numeros.charAt(tamanho - i) * pos--;\n        if (pos < 2) pos = 9;\n    }\n\n    let resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);\n    if (resultado !== parseInt(digitos.charAt(0))) return false;\n\n    tamanho += 1;\n    numeros = cnpj.substring(0, tamanho);\n    soma = 0;\n    pos = tamanho - 7;\n\n    for (let i = tamanho; i >= 1; i--) {\n        soma += numeros.charAt(tamanho - i) * pos--;\n        if (pos < 2) pos = 9;\n    }\n\n    resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);\n    if (resultado !== parseInt(digitos.charAt(1))) return false;\n\n    return true;\n}\n\nfunction identificarTipoChavePix(chavePix) {\n    // Verificar se a chave PIX está vazia\n    if (!chavePix || chavePix.trim() === '') {\n        return {\n            tipo_chave: '',\n            chave: ''\n        };\n    }\n\n    let tipoChave = '';\n\n    // Remover todos os espaços e caracteres não alfanuméricos da chave PIX para evitar problemas de validação\n    chavePix = chavePix.replace(/\\s+/g, '').toLowerCase();\n\n    // Verificar se é telefone brasileiro (11 dígitos começando com DDD)\n    const regexTelefoneBR = /^(\\d{2})9\\d{8}$/;\n    if (regexTelefoneBR.test(chavePix)) {\n        tipoChave = 'Telefone';\n    }\n\n    // Verificar se é CPF válido (apenas números com 11 dígitos ou formatado)\n    const regexCPF = /^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$|^\\d{11}$/;\n    if (regexCPF.test(chavePix)) {\n        const cpfNumerico = chavePix.replace(/[^\\d]+/g, '');\n        if (validarCPF(cpfNumerico)) {\n            tipoChave = 'CPF';\n        }\n    }\n\n    // Verificar se é CNPJ (14 dígitos ou formatado)\n    const regexCNPJ = /^\\d{2}\\.\\d{3}\\.\\d{3}\\/\\d{4}-\\d{2}$|^\\d{14}$/;\n    if (regexCNPJ.test(chavePix)) {\n        const cnpjNumerico = chavePix.replace(/[^\\d]+/g, '');\n        if (validarCNPJ(cnpjNumerico)) {\n            tipoChave = 'CNPJ';\n        }\n    }\n\n    // Verificar se é telefone internacional (começa com + e tem de 13 a 15 caracteres)\n    const regexTelefoneIntl = /^\\+\\d{1,3}\\d{10,11}$/;\n    if (regexTelefoneIntl.test(chavePix) && tipoChave === '') {\n        tipoChave = 'Telefone';\n    }\n\n    // Verificar se é e-mail\n    const regexEmail = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n    if (regexEmail.test(chavePix)) {\n        tipoChave = 'Email';\n    }\n\n    // Verificar se é chave aleatória (32 caracteres alfanuméricos)\n    const regexAleatoria = /^[0-9a-fA-F]{32}$/;\n    if (regexAleatoria.test(chavePix)) {\n        tipoChave = 'Chave Aleatória';\n    }\n\n    return {\n        tipo_chave: tipoChave,\n        chave: chavePix\n    };\n}\n\n//Formatar telefone\nfunction formatarTelefone(telefone) {\n  const telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\n  let ddi;\n  let ddd;\n  let telefoneFormatado;\n\n  // Verificar se o telefone começa com \"55\" antes de formatá-lo\n  if (telefoneLimpo.startsWith('55')) {\n    ddi = telefoneLimpo.slice(0, 2);\n    ddd = telefoneLimpo.slice(2, 4);\n    if (parseInt(ddd, 10) > 28) {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n    } else {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n    }\n  } else {\n    ddi = '55';\n    ddd = telefoneLimpo.slice(0, 2);\n    if (parseInt(ddd, 10) > 28) {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n    } else {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n    }\n  }\n\n  return telefoneFormatado;\n}\n\n\n// Função para formatação de nomes\nfunction formatarNome(nome) {\n  if (!nome) {\n    return '';\n  }\n\n  const palavras = nome.trim().split(/\\s+/);\n\n  const palavrasMinusculas = ['de', 'dos', 'da', 'e', 'do', 'das', 'di', 'du', 'o', 'a', 'u'];\n\n  for (let i = 0; i < palavras.length; i++) {\n    const palavraAtual = palavras[i].toLowerCase();\n    if (i === 0 || i === palavras.length - 1 || !palavrasMinusculas.includes(palavraAtual)) {\n      palavras[i] = palavraAtual.charAt(0).toUpperCase() + palavraAtual.slice(1);\n    } else {\n      palavras[i] = palavraAtual;\n    }\n  }\n\n  return palavras.join(\" \");\n}\n\nconst nome = formatarNome($node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"nome_completo\"]) || '';\nconst email = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"email\"] ? $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"email\"].toLowerCase() : '';\nconst isEmailValid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email) || '';\nconst telefone = formatarTelefone($node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"contato\"]) || '';\nconst data_criacao = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"data_criacao\"] || '';\nconst fase_atual = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"fase_atual\"] || '';\nconst id_card = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"id\"] || '';\nconst etiquetas = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"etiquetas\"] || '';\nconst titulo_card = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"titulo\"] || '';\nconst responsavel = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"responsavel\"] || '';\nconst origem = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"origem\"] || '';\nconst cnpj = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"cnpj\"] || '';\nconst razao_social = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"razao_social\"] || '';\nconst nome_fantasia = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"nome_fantasia\"] || '';\nconst endereco_completo = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"endereco_completo\"] || '';\nconst cargo = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"cargo\"] || '';\nconst solicitante_da_vaga = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"solicitante_da_vaga\"] || '';\nconst pessoas_na_empresa = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"qntd_pessoas_empresa\"] || '';\nconst precisa_ter_acesso = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"precisa_ter_acesso\"] || '';\nconst conhece_a_portus = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"conhece_a_portus\"] || '';\nconst como_soube_da_portus = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"como_soube_da_portus\"] || '';\nconst nome_empresa = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"nome_empresa\"] || '';\nconst motivo_da_contratacao = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"fatuuramento_2023\"] || $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"motivo_da_contratacao\"] ||'';\nconst faturamento_mensal = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"faturamento_mensal\"] || '';\nconst substituido = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"substituido\"] || '';\nconst tem_produto_servico = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"tem_produto_servico\"] || '';\nconst profissional_almejado = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"profissional_almejado\"] || '';\nconst vaga_aberta = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"vaga_aberta\"] || '';\nconst tipo_contrato = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"tipo_contrato\"] || '';\nconst valor_contrato = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"valor_contrato\"] || $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"valor_contrato1\"] || '';\nconst forma_pagamento = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"forma_pagamento\"] || '';\nconst formacao = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"formacao\"] || '';\nconst desafio_com_gestao_de_pessoas = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"desafio_com_gestao_de_pessoas\"] || '';\nconst infos_sobre_a_vaga = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"infos_sobre_a_vaga\"] || '';\nconst parceiro = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"parceiro\"] || '';\nconst cep = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"cep\"] || '';\nconst cidade = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"cidade\"] || '';\nconst estado = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"estado\"] || '';\nconst rg = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"rg\"] || '';\nconst codigo_banco = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"codigo_banco\"] || '';\nconst tipo_conta_corrente = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"tipo_conta_corrente\"] || '';\nconst descricao = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"descricao\"] || '';\nconst cpf = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"cpf\"] || '';\nconst informacoes_sobre_a_vaga = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"informacoes_sobre_a_vaga\"] || '';\nconst valor_total = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"valor_total\"] || '';\nconst salario_negociado = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"salario_negociado\"] || '';\nconst data_inicio = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"data_inicio\"] || '';\n\nconst nascimento = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"nascimento\"] || '';\nconst estado_civil = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"estado_civil\"] || '';\nconst tem_filhos = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"tem_filhos\"] || '';\nconst quantos_filhos_e_idades = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"quantos_filhos_e_idades\"] || '';\nconst escolaridade = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"escolaridade\"] || '';\nconst documento_identificacao = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"documento_identificacao\"] || '';\nconst banco = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"banco\"] || '';\nconst agencia = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"agencia\"] || '';\nconst conta_com_digito = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"conta_com_digito\"] || '';\nconst chave_px_pj = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"chave_px_pj\"] || '';\nconst tipo_chave = identificarTipoChavePix(chave_px_pj);\nconst data_inicio_colaborador = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"data_inicio_colaborador\"] || '';\nconst responsavel_integracao = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"responsavel_integracao\"] || '';\nconst descricao_atividades = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"descricao_atividades\"] || '';\nconst formato_contratacao = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"formato_contratacao\"] || '';\nconst chave_telefone = formatarTelefone(chave_px_pj)\n\nreturn {\n\"Nome do Cliente\": nome,\n\"E-mail do Cliente\": email,\nisEmailValid,\n\"Telefone do Cliente - Formato Z-API\": telefone,\n\"Telefone do Cliente - Formato BC\": telefone ? '+' + telefone : '',\ndata_criacao,\nfase_atual,\nid_card,\netiquetas,\ntitulo_card,\nresponsavel,\norigem,\ncnpj,\nrazao_social,\nnome_fantasia,\nendereco_completo,\ncargo,\nsolicitante_da_vaga,\npessoas_na_empresa,\ncargo,\nprecisa_ter_acesso,\nconhece_a_portus,\ncomo_soube_da_portus,\nnome_empresa,\nmotivo_da_contratacao,\nfaturamento_mensal,\nsubstituido,\ntem_produto_servico,\nprofissional_almejado,\nvaga_aberta,\ntipo_contrato,\nvalor_contrato,\nforma_pagamento,\nformacao,\ndesafio_com_gestao_de_pessoas,\ninfos_sobre_a_vaga,\nparceiro,\ncep,\ncidade,\nestado,\nrg,\ncodigo_banco,\ntipo_conta_corrente,\ndescricao,\ncpf,\ninformacoes_sobre_a_vaga,\nvalor_total,\nsalario_negociado,\ndata_inicio,\nnascimento,\nestado_civil,\ntem_filhos,\nquantos_filhos_e_idades,\nescolaridade,\ndocumento_identificacao,\nbanco,\nagencia,\nconta_com_digito,\nchave_px_pj,\ndata_inicio_colaborador,\nresponsavel_integracao,\ndescricao_atividades,\nformato_contratacao,\ntipo_chave,\nchave_telefone: chave_telefone ? '+' + chave_telefone : ''\n}"
+      },
+      "id": "b13f631b-a7bf-416c-a282-63904ca8161d",
+      "name": "tratamento_de_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -4540,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "21294ed5-73f8-497a-bdc5-3c118fc2b41f",
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Nome do Cliente\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4f54db94-1c36-4666-a211-14b8fba5eeae",
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"E-mail do Cliente\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "50a774c2-de32-41e4-bead-27dfc443ffc4",
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Telefone do Cliente - Formato Z-API\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "ff86f2d1-ca37-4e41-826a-ba394b6063ea",
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Telefone do Cliente - Formato BC\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "ad7a738f-3d34-40e0-9226-5ba20f4a74ba",
+              "name": "data_inicio_colaborador",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"data_inicio_colaborador\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "dca4f95d-e443-4574-b153-8daff3044d5c",
+              "name": "chave_px_pj",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"chave_px_pj\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d5c8bfc7-f722-4371-a40f-2f9ed65e6db5",
+              "name": "id_card",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"id_card\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a9429536-bc5f-475a-9a15-29caf6c5f3d3",
+              "name": "etiquetas",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"etiquetas\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "b9b49611-8644-4668-8fac-4b316d174c73",
+              "name": "titulo_card",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"titulo_card\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "3a0f72bb-6a5f-4095-88b6-b0f0fc6a4212",
+              "name": "responsavel",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"responsavel\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "8ef1db27-4036-4222-afec-795dd0e27c9d",
+              "name": "conta_com_digito",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"conta_com_digito\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "40b4c8e1-d3df-4259-ba81-015d3978a0c0",
+              "name": "cnpj",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"cnpj\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "17444e80-7891-4f12-8d9e-f38f06b23bea",
+              "name": "razao_social",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"razao_social\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f497639d-9847-4ad7-868e-0a7be0f65d01",
+              "name": "endereco",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"endereco_completo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "1d163929-165f-41a6-9646-a6d5fbdd6fc7",
+              "name": "solicitante_da_vaga",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"solicitante_da_vaga\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "23224821-2447-44e9-96ef-939768e83f24",
+              "name": "cargo",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"cargo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "3afc9290-c16c-4f18-acde-107d7dad6b95",
+              "name": "pessoas_no_time",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"pessoas_no_time\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f4599128-21b1-4bbc-9913-685b5c81bd90",
+              "name": "precisa_ter_acesso",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"precisa_ter_acesso\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a8b2f757-a465-41a7-a8a2-92c8e8270fdb",
+              "name": "tipo_de_servico",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"tipo_de_servico\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4bd0c624-29bd-459d-9124-c323e8354357",
+              "name": "responsavel_integracao",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"responsavel_integracao\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d6e62c2d-14c1-4e39-a789-3db695dc2737",
+              "name": "como_soube_da_portus",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"como_soube_da_portus\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "64e73be8-bb4a-4962-ad0f-1acffeb11049",
+              "name": "nome_empresa",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"nome_empresa\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "47ef40b4-f9ae-4c9d-b83f-bd6fdb6ffbd9",
+              "name": "motivo_da_contratacao",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"motivo_da_contratacao\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "13730f1f-743d-4ea7-9a0b-e4c5aaebabc7",
+              "name": "substituido",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"substituido\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d2e4e74d-0e99-416b-bbf1-de7e6060e517",
+              "name": "formacao",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"formacao\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a049b80c-7910-41a9-8d0b-efbc94ad31e2",
+              "name": "descricao_atividades",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"descricao_atividades\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a9341455-88f5-49af-bcd7-07dddaf99819",
+              "name": "cep",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"cep\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "8cb7de1a-0874-4310-89b6-999d69371a59",
+              "name": "vaga_aberta",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"vaga_aberta\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "83259c67-ebe3-4b10-b887-b2678c30f8ba",
+              "name": "tipo_contrato",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"tipo_contrato\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "42f9eaad-436f-44ac-9137-e9eb9825a975",
+              "name": "formato_contratacao",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"formato_contratacao\"]  }}",
+              "type": "string"
+            },
+            {
+              "id": "23ce79b4-fadc-4ac2-ba7d-9fd54ceac0df",
+              "name": "forma_pagamento",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"forma_pagamento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "acb6b968-c929-49f3-bd76-12c016a3d752",
+              "name": "cidade",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"cidade\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f03a8581-6758-4e63-884c-fcd491e9f36d",
+              "name": "estado",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"estado\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "5a1c5e07-c761-40ad-b552-d2bd9b965390",
+              "name": "infos_sobre_a_vaga",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"infos_sobre_a_vaga\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "3bf0184d-9e9c-4f16-8638-7480375333f0",
+              "name": "rg",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"rg\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9ba08edf-eab6-4def-b274-6d55b9611eef",
+              "name": "celula",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"celula\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9fb09334-fe7d-41d0-b487-1481806a5ae2",
+              "name": "funil",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"funil\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "cf9633eb-b744-41e8-9479-a718113f2b68",
+              "name": "id_lead_database",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"id_lead_database\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "b422d415-700b-4672-ad2a-fe87c13a89da",
+              "name": "cpf",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"cpf\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "aa379d3e-74f6-4a53-b797-fce048441c99",
+              "name": "utm_medium",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "6eb26478-47cb-4225-9c20-c069f8acda08",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "21a31b00-cba5-455f-8d6b-e418ffe1f3c3",
+              "name": "utm_content",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "8f6618bc-4328-4b06-8530-08c44afef0fa",
+              "name": "salario_negociado",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"salario_negociado\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866844b6-dfae-4f2f-8679-2c0d52a466f4",
+              "name": "OMIE_APP_SECRET",
+              "value": "b639126e175094af1c6f9af953d3153a",
+              "type": "string"
+            },
+            {
+              "id": "ff9f5a87-a1b9-434d-be09-ea00421f99de",
+              "name": "OMIE_APP_KEY",
+              "value": "4486352513643",
+              "type": "string"
+            },
+            {
+              "id": "dd3211c8-0d1f-4c73-a133-e8a7c8c3eb97",
+              "name": "data_inicial",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"data_inicio\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "31a7e35d-59aa-4574-aa34-56535172a120",
+              "name": "nascimento",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"nascimento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "09bcb29f-235d-4c12-afc7-b90bde464151",
+              "name": "valor_total",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"valor_total\"] ? $node[\"tratamento_de_dados\"].json[\"valor_total\"] : 1 }}",
+              "type": "number"
+            },
+            {
+              "id": "2f92895f-91f6-4149-abe2-58f422c9e0a7",
+              "name": "estado_civil",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"estado_civil\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "5fda14b3-dc9f-4b00-a21d-52e0300ebde4",
+              "name": "tem_filhos",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"tem_filhos\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "56cf51dc-5b49-4406-bb25-473291626fff",
+              "name": "quantos_filhos_e_idades",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"quantos_filhos_e_idades\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d3302861-24ca-497a-9210-e8cf22109378",
+              "name": "descricao",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"descricao\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "5b34215e-392b-40d1-8dbe-48a74e5771ce",
+              "name": "escolaridade",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"escolaridade\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "63a4924f-6a2e-4981-bb89-2874efb99547",
+              "name": "nome_banco",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"banco\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "26c7d1ae-f1ec-4683-ac3f-0908e08acc82",
+              "name": "descricao_cc",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"descricao_cc\"] ? $node[\"tratamento_de_dados\"].json[\"descricao_cc\"] : 'Conta-corrente' }}",
+              "type": "string"
+            },
+            {
+              "id": "99f5a57d-d2a4-4119-b365-7751154b2ffe",
+              "name": "documento_identificacao",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"documento_identificacao\"]}}",
+              "type": "string"
+            },
+            {
+              "id": "04fbae92-e572-4a24-bcce-53392a17205f",
+              "name": "nome_fantasia",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"nome_fantasia\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "130e51f6-7655-4bb8-9ede-8d2d2fdb5e86",
+              "name": "agencia",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"agencia\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "15d82f3b-42ee-400d-9624-fec2f1d58568",
+              "name": "tipo_chave",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"tipo_chave\"][\"tipo_chave\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "0abdbceb-fec4-44d8-9098-ae310be96aa3",
+              "name": "chave_telefone",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"chave_telefone\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "51994ab3-71d2-467c-925e-a3f6d95d7bef",
+      "name": "dados_validados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        -4340,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"E-mail do Cliente\"] || '-----------------------'}}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Telefone do Cliente - Formato Z-API\"] || '-----------------------'}}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Telefone do Cliente - Formato Z-API\"] || '-----------------------'}}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"E-mail do Cliente\"] || '-----------------------'}}"
+            },
+            {
+              "column": "cpf_cnpj",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"cnpj\"] || '-----------------------' }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "60370286-3c72-4266-9dac-0a369930463e",
+      "name": "pesquisa_lead2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4160,
+        980
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://brasilapi.com.br/api/banks/v1",
+        "options": {}
+      },
+      "id": "98477061-3b64-4a9d-90d4-eac9a83e4da6",
+      "name": "busca_bancos",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -3640,
+        540
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Input: $node[\"tratamento_de_dados\"].json[\"banco\"]\n// Este é o nome do banco que você deseja encontrar\n\n// Lista de bancos\nconst bancos = [\n  {\n    \"ispb\": \"00000000\",\n    \"name\": \"BCO DO BRASIL S.A.\",\n    \"code\": 1,\n    \"fullName\": \"Banco do Brasil S.A.\"\n  },\n  {\n    \"ispb\": \"00000208\",\n    \"name\": \"BRB - BCO DE BRASILIA S.A.\",\n    \"code\": 70,\n    \"fullName\": \"BRB - BANCO DE BRASILIA S.A.\"\n  },\n  {\n    \"ispb\": \"00038121\",\n    \"name\": \"Selic\",\n    \"code\": null,\n    \"fullName\": \"Banco Central do Brasil - Selic\"\n  },\n  {\n    \"ispb\": \"00038166\",\n    \"name\": \"Bacen\",\n    \"code\": null,\n    \"fullName\": \"Banco Central do Brasil\"\n  },\n  {\n    \"ispb\": \"00122327\",\n    \"name\": \"SANTINVEST S.A. - CFI\",\n    \"code\": 539,\n    \"fullName\": \"SANTINVEST S.A. - CREDITO, FINANCIAMENTO E INVESTIMENTOS\"\n  },\n  {\n    \"ispb\": \"00204963\",\n    \"name\": \"CCR SEARA\",\n    \"code\": 430,\n    \"fullName\": \"COOPERATIVA DE CREDITO RURAL SEARA - CREDISEARA\"\n  },\n  {\n    \"ispb\": \"00250699\",\n    \"name\": \"AGK CC S.A.\",\n    \"code\": 272,\n    \"fullName\": \"AGK CORRETORA DE CAMBIO S.A.\"\n  },\n  {\n    \"ispb\": \"00315557\",\n    \"name\": \"CONF NAC COOP CENTRAIS UNICRED\",\n    \"code\": 136,\n    \"fullName\": \"CONFEDERAÇÃO NACIONAL DAS COOPERATIVAS CENTRAIS UNICRED LTDA. - UNICRED DO BRASI\"\n  },\n  {\n    \"ispb\": \"00329598\",\n    \"name\": \"ÍNDIGO INVESTIMENTOS DTVM LTDA.\",\n    \"code\": 407,\n    \"fullName\": \"ÍNDIGO INVESTIMENTOS DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIÁRIOS LTDA.\"\n  },\n  {\n    \"ispb\": \"00360305\",\n    \"name\": \"CAIXA ECONOMICA FEDERAL\",\n    \"code\": 104,\n    \"fullName\": \"CAIXA ECONOMICA FEDERAL\"\n  }\n];\n\n// Nome do banco a ser encontrado (input)\nconst nomeBanco = $node[\"tratamento_de_dados\"].json[\"banco\"].toLowerCase();\n\n// Busca pelo código do banco\nlet codigoBanco = '';\nfor (const banco of bancos) {\n    if (banco.name.toLowerCase().includes(nomeBanco)) {\n        codigoBanco = banco.code !== null ? banco.code.toString() : '';\n        break;\n    }\n}\n\n// Retorna o código do banco encontrado ou vazio se não encontrado\nreturn {\n    codigoBanco: codigoBanco\n};\n"
+      },
+      "id": "d7c504cf-0502-49fe-8710-8d8524e2626c",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -3460,
+        540
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/clientetag/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"call\": \"IncluirTags\",\n  \"app_key\": \"{{$node[\"dados_validados\"].json[\"OMIE_APP_KEY\"]}}\",\n  \"app_secret\": \"{{$node[\"dados_validados\"].json[\"OMIE_APP_SECRET\"]}}\",\n  \"param\": [\n    {\n      \"nCodCliente\": 1764803287,\n      \"cCodIntCliente\": \"216\",\n      \"tags\": {\n        \"tag\": \"Funcionário\"\n      }\n    }\n  ]\n}\n",
+        "options": {}
+      },
+      "id": "8677db49-fdc4-40bb-8bc3-08c193bee166",
+      "name": "tag",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -3300,
+        540
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/clientes/#IncluirCliente",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"call\": \"IncluirCliente\",\n  \"app_key\": \"{{ $node['dados_validados'].json['OMIE_APP_KEY'] }}\",\n  \"app_secret\": \"{{ $node['dados_validados'].json['OMIE_APP_SECRET'] }}\",\n  \"param\": [\n    {\n      \"codigo_cliente_integracao\": \"{{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}\",\n      \"email\": \"{{ $node['dados_validados'].json['E-mail do Cliente'] }}\",\n      \"razao_social\": \"{{ $node['dados_validados'].json['razao_social'] }}\",\n      \"nome_fantasia\": \"{{ $node['dados_validados'].json['Nome do Cliente'] }}\",\n      \"cnpj_cpf\": \"{{ $node['dados_validados'].json['cpf'] ? $node['dados_validados'].json['cpf'] : $node['dados_validados'].json['cnpj'] }}\",\n      \"telefone1_ddd\": \"{{ $node['dados_validados'].json['Telefone do Cliente - Formato Z-API'].slice(2, 4) }}\",\n      \"telefone1_numero\": \"{{ $node['dados_validados'].json['Telefone do Cliente - Formato Z-API'].slice(4) }}\",\n      \"endereco\": \"{{ $node['dados_validados'].json['endereco'].slice(0,60) }}\",\n      \"estado\": \"{{ $node['dados_validados'].json['estado'] }}\",\n      \"cidade\": \"{{ $node['dados_validados'].json['cidade'] }}\",\n      \"cep\": \"{{ $node['dados_validados'].json['cep'] }}\",\n      \"observacao\": \"{{ $node['dados_validados'].json['cargo'] }}\",\n      \"tags\": \"1743800548\",\n      \"obs_detalhadas\":\"{{ $node['dados_validados'].json['endereco'].slice(0,100) }}\",\n      \"importado_api\": \"S\",\n      \"dadosBancarios\": [\n        {\n          \"codigo_banco\": \"\",\n          \"agencia\": \"{{ $node['dados_validados'].json['agencia'] }}\",\n          \"conta_corrente\": \"{{ $node['dados_validados'].json['conta_com_digito'] }}\",\n          \"doc_titular\": \"{{ $node['dados_validados'].json['cpf'] }}\",\n          \"nome_titular\": \"{{ $node['dados_validados'].json['Nome do Cliente'] }}\",\n          \"cChavePix\": \"{{ $node[\"dados_validados\"].json[\"tipo_chave\"] === 'Telefone' ? $node[\"dados_validados\"].json[\"chave_telefone\"] : $node['dados_validados'].json['chave_px_pj'] }}\"\n        }\n      ]\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "76c983eb-713c-4bf6-80df-40686dbc7b65",
+      "name": "add_funcionario",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -3000,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/clientes/#IncluirCliente",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"call\": \"IncluirCliente\",\n  \"app_key\": \"{{ $node['dados_validados'].json['OMIE_APP_KEY'] }}\",\n  \"app_secret\": \"{{ $node['dados_validados'].json['OMIE_APP_SECRET'] }}\",\n  \"param\": [\n    {\n      \"codigo_cliente_integracao\": \"{{ $node[\"id_lead2\"].json[\"id_lead\"] }}\",\n      \"email\": \"{{ $node['dados_validados'].json['E-mail do Cliente'] }}\",\n      \"razao_social\": \"{{ $node['dados_validados'].json['razao_social'] }}\",\n      \"nome_fantasia\": \"{{ $node['dados_validados'].json['Nome do Cliente'] }}\",\n      \"cnpj_cpf\": \"{{ $node['dados_validados'].json['cpf'] ? $node['dados_validados'].json['cpf'] : $node['dados_validados'].json['cnpj'] }}\",\n      \"telefone1_ddd\": \"{{ $node['dados_validados'].json['Telefone do Cliente - Formato Z-API'].slice(2, 4) }}\",\n      \"telefone1_numero\": \"{{ $node['dados_validados'].json['Telefone do Cliente - Formato Z-API'].slice(4) }}\",\n      \"endereco\": \"{{ $node['dados_validados'].json['endereco'].slice(0,60) }}\",\n      \"estado\": \"{{ $node['dados_validados'].json['estado'] }}\",\n      \"cidade\": \"{{ $node['dados_validados'].json['cidade'] }}\",\n      \"cep\": \"{{ $node['dados_validados'].json['cep'] }}\",\n      \"observacao\": \"{{ $node['dados_validados'].json['cargo'] }}\",\n      \"tags\": \"1743800548\",\n      \"obs_detalhadas\":\"{{ $node['dados_validados'].json['endereco'].slice(0,100) }}\",\n      \"importado_api\": \"S\",\n      \"dadosBancarios\": [\n        {\n          \"codigo_banco\": \"\",\n          \"agencia\": \"{{ $node['dados_validados'].json['agencia'] }}\",\n          \"conta_corrente\": \"{{ $node['dados_validados'].json['conta_com_digito'] }}\",\n          \"doc_titular\": \"{{ $node['dados_validados'].json['cpf'] }}\",\n          \"nome_titular\": \"{{ $node['dados_validados'].json['Nome do Cliente'] }}\",\n          \"cChavePix\": \"{{ $node[\"dados_validados\"].json[\"tipo_chave\"] === 'Telefone' ? $node[\"dados_validados\"].json[\"chave_telefone\"] : $node['dados_validados'].json['chave_px_pj'] }}\"\n        }\n      ]\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "cf2db771-c35c-469b-9423-1d4d1dedf699",
+      "name": "add_funcionario1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -3260,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/clientes/#IncluirCliente",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"call\": \"IncluirCliente\",\n  \"app_key\": \"{{ $node['dados_validados'].json['OMIE_APP_KEY'] }}\",\n  \"app_secret\": \"{{ $node['dados_validados'].json['OMIE_APP_SECRET'] }}\",\n  \"param\": [\n    {\n      \"codigo_cliente_integracao\": \"{{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}\",\n      \"email\": \"{{ $node['dados_validados'].json['E-mail do Cliente'] }}\",\n      \"razao_social\": \"{{ $node['dados_validados'].json['razao_social'] }}\",\n      \"nome_fantasia\": \"{{ $node['dados_validados'].json['Nome do Cliente'] }}\",\n      \"cnpj_cpf\": \"{{ $node['dados_validados'].json['cpf'] ? $node['dados_validados'].json['cpf'] : $node['dados_validados'].json['cnpj'] }}\",\n      \"telefone1_ddd\": \"{{ $node['dados_validados'].json['Telefone do Cliente - Formato Z-API'].slice(2, 4) }}\",\n      \"telefone1_numero\": \"{{ $node['dados_validados'].json['Telefone do Cliente - Formato Z-API'].slice(4) }}\",\n      \"endereco\": \"{{ $node['dados_validados'].json['endereco'].slice(0,60) }}\",\n      \"estado\": \"{{ $node['dados_validados'].json['estado'] }}\",\n      \"cidade\": \"{{ $node['dados_validados'].json['cidade'] }}\",\n      \"cep\": \"{{ $node['dados_validados'].json['cep'] }}\",\n      \"observacao\": \"{{ $node['dados_validados'].json['cargo'] }}\",\n      \"tags\": \"1743800548\",\n      \"obs_detalhadas\":\"{{ $node['dados_validados'].json['endereco'].slice(0,100) }}\",\n      \"importado_api\": \"S\",\n      \"dadosBancarios\": [\n        {\n          \"codigo_banco\": \"\",\n          \"agencia\": \"{{ $node['dados_validados'].json['agencia'] }}\",\n          \"conta_corrente\": \"{{ $node['dados_validados'].json['conta_com_digito'] }}\",\n          \"doc_titular\": \"{{ $node['dados_validados'].json['cpf'] }}\",\n          \"nome_titular\": \"{{ $node['dados_validados'].json['Nome do Cliente'] }}\",\n          \"cChavePix\": \"{{ $node['dados_validados'].json['chave_px_pj'] }}\"\n        }\n      ]\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "fe826cf8-554f-41e5-9423-c7af7076f060",
+      "name": "add_funcionario2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -3120,
+        540
+      ]
+    }
+  ],
+  "pinData": {
+    "nova_venda_realizada_pipefy": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "Pipefy-UserAgent",
+            "content-length": "1478",
+            "accept": "application/json",
+            "content-type": "application/json",
+            "elastic-apm-traceparent": "00-fedc1e59c8c82279159ea7d2a848c968-022d0d9724cda69d-01",
+            "traceparent": "00-fedc1e59c8c82279159ea7d2a848c968-022d0d9724cda69d-01",
+            "tracestate": "es=s:0.1",
+            "x-forwarded-for": "129.80.157.176",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "129.80.157.176",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "titulo": "Coordenador de marketing",
+            "id": "942172274",
+            "etiquetas": "",
+            "solicitante_da_vaga": "Bruno Rodrigues",
+            "motivo_da_contratacao": "Aumento de Quadro",
+            "cargo": "Coordenador de marketing",
+            "substituido": "",
+            "precisa_ter_acesso": "ATS\nNotion\nPipefy\nClick-up\nCanva\nDrive\nDiscord\nMind Meister",
+            "informacoes_sobre_a_vaga": "Remuneração fixa",
+            "nome": "Ingrid Alves",
+            "data_inicio": "2024-06-11",
+            "salario_negociado": "8000.0",
+            "contato": "+55 11 99788-6374",
+            "responsavel": "Bruno Rodrigues",
+            "nome_completo": "Ingrid Alves de Souza",
+            "nascimento": "1996-12-30",
+            "endereco_completo": "R CLAUDIO APARECIDO OLIVEIRA, 132 - Jardim Roberto / Osasco",
+            "cep": "",
+            "cidade": "",
+            "estado": "",
+            "estado_civil": "Solteiro(a)",
+            "tem_filhos": "Não",
+            "quantos_filhos_e_idades": "",
+            "escolaridade": "",
+            "formacao": "",
+            "cpf": "449.154.648-73",
+            "rg": "523692237",
+            "documento_identificacao": "https://app.pipefy.com/storage/v1/signed/uploads/26c5adcf-a4df-48e3-af80-c673ffa599aa/RG.pdf?expires_on=1719020190&signature=%2B4n70EZbXKWAYZ2AbJWScMuAGMI2aNt%2Fo9SUxojlgfo%3D",
+            "cnpj": "39.797.473/0001-05",
+            "razao_social": "INGRID ALVES DE SOUZA 4491546487",
+            "banco": "260 - Nubank",
+            "agencia": "0001",
+            "conta_com_digito": "60028200-8",
+            "chave_px_pj": "11997886374",
+            "data_inicio_colaborador": "2024-06-11",
+            "responsavel_integracao": "",
+            "descricao_atividades": "",
+            "formato_contratacao": ""
+          }
+        }
+      }
+    ],
+    "tag": [
+      {
+        "json": {
+          "nCodCliente": 1764803287,
+          "cCodIntCliente": "216",
+          "cCodStatus": "0",
+          "cDesStatus": "Tag(s) adicionadas com sucesso!",
+          "tagsLista": [
+            {
+              "nCodTag": 1743800548,
+              "tag": "Funcionário"
+            }
+          ]
+        }
+      }
+    ],
+    "add_funcionario2": [
+      {
+        "json": {
+          "codigo_cliente_omie": 1764803287,
+          "codigo_cliente_integracao": "216",
+          "codigo_status": "0",
+          "descricao_status": "Cliente cadastrado com sucesso!"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-06-22T02:06:41.175Z",
+  "versionId": "d79f535e-337c-4088-99c2-dfd7e220afa7"
+}
