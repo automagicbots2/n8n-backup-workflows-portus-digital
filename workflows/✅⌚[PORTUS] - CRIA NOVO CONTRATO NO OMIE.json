@@ -1,0 +1,1719 @@
+{
+  "active": true,
+  "connections": {
+    "nova_venda_realizada_pipefy": {
+      "main": [
+        [
+          {
+            "node": "tratamento_de_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tratamento_de_dados": {
+      "main": [
+        [
+          {
+            "node": "dados_validados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe": {
+      "main": [
+        [
+          {
+            "node": "insere_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "existe_id_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_utm_lead1": {
+      "main": [
+        [
+          {
+            "node": "add_cliente_omie1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_dados1": {
+      "main": [
+        [
+          {
+            "node": "insert_data_utm_lead1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_id_omie": {
+      "main": [
+        [
+          {
+            "node": "existe_cc_omie",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_cliente_omie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_contrato1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_cc_omie": {
+      "main": [
+        [
+          {
+            "node": "add_contrato2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_contrato1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_contrato2": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_contrato3": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_cliente_omie": {
+      "main": [
+        [
+          {
+            "node": "nao_existe1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe1": {
+      "main": [
+        [
+          {
+            "node": "add_contrato4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_contrato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_contrato": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe2": {
+      "main": [
+        [
+          {
+            "node": "add_contrato5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_contrato3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_contrato4": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead": {
+      "main": [
+        [
+          {
+            "node": "nao_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_cliente_omie1": {
+      "main": [
+        [
+          {
+            "node": "nao_existe2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_contrato5": {
+      "main": [
+        [
+          {
+            "node": "atualiza_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-06-17T17:45:29.862Z",
+  "id": "7PQXWh08Fm4PuYaW",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "✅⌚[PORTUS] - CRIA NOVO CONTRATO NO OMIE",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "nova-venda-realizada-pipefy",
+        "options": {}
+      },
+      "id": "bca1935b-236e-4e9d-8eba-18bcd05d1a85",
+      "name": "nova_venda_realizada_pipefy",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        -580,
+        940
+      ],
+      "webhookId": "154626d8-2e2f-4d07-aec6-80f185b72d6d"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Formatar número Internacional\nfunction formatarTelefone(telefone) {\n  if (!telefone) {\n    return '';\n  }\n\n  const telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\n  let ddi;\n  let ddd;\n  let telefoneFormatado;\n\n  // Verificar se o telefone começa com \"55\" antes de formatá-lo\n  if (telefoneLimpo.startsWith('55')) {\n    ddi = telefoneLimpo.slice(0, 2);\n    ddd = telefoneLimpo.slice(2, 4);\n    if (parseInt(ddd, 10) > 28) {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n    } else {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n    }\n  } else {\n    // Se o DDI for diferente de 55, manter o número como está\n    telefoneFormatado = telefoneLimpo;\n  }\n\n  return telefoneFormatado;\n}\n\n// Função para formatação de nomes\nfunction formatarNome(nome) {\n  if (!nome) {\n    return '';\n  }\n\n  const palavras = nome.trim().split(/\\s+/);\n\n  const palavrasMinusculas = ['de', 'dos', 'da', 'e', 'do', 'das', 'di', 'du', 'o', 'a', 'u'];\n\n  for (let i = 0; i < palavras.length; i++) {\n    const palavraAtual = palavras[i].toLowerCase();\n    if (i === 0 || i === palavras.length - 1 || !palavrasMinusculas.includes(palavraAtual)) {\n      palavras[i] = palavraAtual.charAt(0).toUpperCase() + palavraAtual.slice(1);\n    } else {\n      palavras[i] = palavraAtual;\n    }\n  }\n\n  return palavras.join(\" \");\n}\n\n// Pegar a variável de entrada que contém o endereço\nconst endereco = extrairEstadoCidadeCep($node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"endereco_fiscal\"]) || '';\n\n// Função para extrair estado, cidade e CEP de um endereço\nfunction extrairEstadoCidadeCep(endereco) {\n  if (!endereco) {\n    return {\n      estado: \"\",\n      cidade: \"\",\n      cep: \"\"\n    };\n  }\n\n  // Definir expressões regulares para capturar estado, cidade e CEP\n  const estadoRegex = /(?:\\b[A-Z]{2}\\b\\s*(?=[-,/]))/; // Regex para capturar sigla de estado\n  const cidadeRegex = /-\\s*([^-,/]+?)\\s*(?=[-/]|[A-Z]{2}\\s+)/; // Regex para capturar nome da cidade\n  const cepRegex = /(?:CEP:\\s*|CEP\\s+)?(\\d{2}\\.?\\d{3}-?\\d{3})|(\\d{8})/; // Regex para capturar CEP\n\n  // Inicializar variáveis para armazenar os resultados\n  let estado = \"\";\n  let cidade = \"\";\n  let cep = \"\";\n\n  // Extrair o estado\n  const estadoMatch = endereco.match(estadoRegex);\n  if (estadoMatch) {\n    estado = estadoMatch[0].trim();\n    // Mapear a sigla do estado para o nome completo\n    estado = mapearSiglaEstado(estado);\n  }\n\n  // Extrair a cidade\n  const cidadeMatch = endereco.match(cidadeRegex);\n  if (cidadeMatch) {\n    // Ajuste para tratar variações na cidade\n    cidade = normalizarNomeCidade(cidadeMatch[1].trim());\n  }\n\n  // Extrair o CEP\n  const cepMatch = endereco.match(cepRegex);\n  if (cepMatch) {\n    cep = cepMatch[1] || cepMatch[2] || '';\n    // Formatar CEP para o formato XXXXX-XXX se não tiver separadores\n    if (/^\\d{8}$/.test(cep)) {\n      cep = cep.replace(/^(\\d{5})(\\d{3})$/, '$1-$2');\n    }\n  }\n\n  // Retornar os resultados\n  return {\n    estado,\n    cidade,\n    cep\n  };\n}\n\n// Função auxiliar para mapear sigla do estado para o nome completo\nfunction mapearSiglaEstado(sigla) {\n  const estados = {\n        AC: \"AC\",\n    AL: \"AL\",\n    AP: \"AP\",\n    AM: \"AM\",\n    BA: \"BA\",\n    CE: \"CE\",\n    DF: \"DF\",\n    ES: \"ES\",\n    GO: \"GO\",\n    MA: \"MA\",\n    MT: \"MT\",\n    MS: \"MS\",\n    MG: \"MG\",\n    PA: \"PA\",\n    PB: \"PB\",\n    PR: \"PR\",\n    PE: \"PE\",\n    PI: \"PI\",\n    RJ: \"RJ\",\n    RN: \"RN\",\n    RS: \"RS\",\n    RO: \"RO\",\n    RR: \"RR\",\n    SC: \"SC\",\n    SP: \"SP\",\n    SE: \"SE\",\n    TO: \"TO\"\n    // Adicione mais estados conforme necessário\n  };\n\n  return estados[sigla.toUpperCase()] || sigla.toUpperCase(); // Retorna a sigla do estado em maiúsculas ou a sigla original se não encontrada\n}\n\n// Função auxiliar para normalizar o nome da cidade\nfunction normalizarNomeCidade(cidade) {\n  // Exemplos de normalizações adicionais podem ser adicionados conforme necessário\n  const normalizacoes = {\n    RECI: \"Recife\",\n    RECIFEPE: \"Recife\",\n    // Adicione mais normalizações conforme necessário\n  };\n\n  return normalizacoes[cidade.toUpperCase()] || cidade; // Retorna a cidade normalizada ou a original se não encontrada\n}\n\n\nconst nome = formatarNome($node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"nome\"]) || '';\nconst email = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"email\"].toLowerCase() || '';\nconst isEmailValid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email) || '';\nconst telefone = formatarTelefone($node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"phone\"]) || '';\nconst data_criacao = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"data_criacao\"] || '';\nconst fase_atual = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"fase_atual\"] || '';\nconst id_card = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"id_card\"] || '';\nconst etiquetas = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"etiquetas\"] || '';\nconst titulo_card = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"titulo_card\"] || '';\nconst responsavel = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"responsavel\"] || '';\nconst origem = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"origem\"] || '';\nconst cnpj = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"cpf-cnpj\"] || '';\nconst razao_social = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"razao_social\"] || '';\nconst nome_fantasia = $json[\"body\"][\"nome_fantasia\"] || '';\nconst modelo_de_negocio = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"modelo_de_negocio\"] || '';\nconst cargo = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"cargo\"] || '';\nconst pessoas_no_time = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"qntd_pessoas_time\"] || '';\nconst pessoas_na_empresa = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"qntd_pessoas_empresa\"] || '';\nconst tipo_de_servico = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"tipo_de_servico\"] || '';\nconst conhece_a_portus = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"conhece_a_portus\"] || '';\nconst como_soube_da_portus = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"como_soube_da_portus\"] || '';\nconst nome_empresa = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"nome_empresa\"] || '';\nconst faturamento_2023 = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"fatuuramento_2023\"] || $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"faturamento_2023\"] ||'';\nconst faturamento_mensal = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"faturamento_mensal\"] || '';\nconst meta_2024 = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"meta_2024\"] || '';\nconst tem_produto_servico = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"tem_produto_servico\"] || '';\nconst profissional_almejado = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"profissional_almejado\"] || '';\nconst vaga_aberta = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"vaga_aberta\"] || '';\nconst tipo_contrato = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"tipo_contrato\"] || '';\nconst valor_contrato = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"valor_contrato\"] || $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"valor_contrato1\"] || '';\nconst forma_pagamento = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"forma_pagamento\"] || '';\nconst garantia = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"garantia\"] || '';\nconst desafio_com_gestao_de_pessoas = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"desafio_com_gestao_de_pessoas\"] || '';\nconst infos_sobre_a_vaga = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"infos_sobre_a_vaga\"] || '';\nconst parceiro = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"parceiro\"] || '';\nconst celula = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"celula\"] || '';\nconst funil = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"funil\"] || '';\nconst id_lead_database = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"id_lead_database\"] || '';\nconst descricao_cc = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"descricao_cc\"] || '';\nconst codigo_banco = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"codigo_banco\"] || '';\nconst tipo_conta_corrente = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"tipo_conta_corrente\"] || '';\nconst descricao = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"descricao\"] || '';\nconst cidade_prestacao_servico = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"cidade_prestacao_servico\"] || '';\nconst valor_unitario = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"valor_unitario\"] || '';\nconst valor_total = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"valor_total\"] || '';\nconst data_final = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"data_final\"] || '';\nconst data_inicial = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"data_inicial\"] || '';\n\nconst utm_source = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"utm_source\"] || '';\nconst utm_medium = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"utm_medium\"] || '';\nconst utm_campaign = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"utm_campaign\"] || '';\nconst utm_content = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"utm_content\"] || '';\nconst utm_term = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"utm_term\"] || ''\nconst endereco_completo = $node[\"nova_venda_realizada_pipefy\"].json[\"body\"][\"endereco_fiscal\"] || '';\n\nreturn {\n\"Nome do Cliente\": nome,\n\"E-mail do Cliente\": email,\nisEmailValid,\n\"Telefone do Cliente - Formato Z-API\": telefone,\n\"Telefone do Cliente - Formato BC\": telefone ? '+' + telefone : '',\ndata_criacao,\nfase_atual,\nid_card,\netiquetas,\ntitulo_card,\nresponsavel,\norigem,\ncnpj,\nrazao_social,\nnome_fantasia,\nendereco_completo,\nmodelo_de_negocio,\ncargo,\npessoas_no_time,\npessoas_na_empresa,\nmodelo_de_negocio,\ntipo_de_servico,\nconhece_a_portus,\ncomo_soube_da_portus,\nnome_empresa,\nfaturamento_2023,\nfaturamento_mensal,\nmeta_2024,\ntem_produto_servico,\nprofissional_almejado,\nvaga_aberta,\ntipo_contrato,\nvalor_contrato,\nforma_pagamento,\ngarantia,\ndesafio_com_gestao_de_pessoas,\ninfos_sobre_a_vaga,\nparceiro,\ncelula,\nfunil,\nid_lead_database,\ndescricao_cc,\ncodigo_banco,\ntipo_conta_corrente,\ndescricao,\ncidade_prestacao_servico,\nvalor_unitario,\nvalor_total,\ndata_final,\ndata_inicial,\nutm_source,\nutm_medium,\nutm_campaign,\nutm_content,\nutm_term,\nendereco\n}"
+      },
+      "id": "4ab835c6-537c-4da2-b6df-19ad55a5b4c8",
+      "name": "tratamento_de_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -380,
+        940
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "4119a4b3-e22c-4f31-a3e0-09dfb113c279",
+      "name": "nao_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        200,
+        940
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads_2_utms",
+          "mode": "list",
+          "cachedResultName": "leads_2_utms"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"insere_dados1\"].json[\"data\"][\"insertId\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"funil\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"origem\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "queryBatching": "single",
+          "detailedOutput": true
+        }
+      },
+      "id": "6df1626e-d0e3-4013-b921-34209c0e72f0",
+      "name": "insert_data_utm_lead1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        560,
+        720
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Nome do Cliente\"].split(\" \").slice(1).join(\" \") }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "cpf_cnpj",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"cnpj\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "69ded0f7-ee47-400a-8d06-137bda86337e",
+      "name": "insere_dados1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        380,
+        720
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/clientes/#ListarClientes",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"ListarClientes\",\n    \"app_key\": \"{{ $json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n            \"pagina\": 1,\n            \"registros_por_pagina\": 50,\n            \"apenas_importado_api\": \"N\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "3777aa46-3512-40bb-9408-275200bc64ca",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -80,
+        1320
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/clientes/#ConsultarCliente",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"ConsultarCliente\",\n    \"app_key\": \"{{ $node[\"dados_validados\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"dados_validados\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n             \"codigo_cliente_omie\": 1760324693,\n  \"codigo_cliente_integracao\": \"\"\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "e89b4d97-d3e8-4646-bc7b-be953f899267",
+      "name": "HTTP Request3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        100,
+        1320
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/contacorrente/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaCorrente\",\n    \"app_key\": \"{{ $node[\"dados_validados\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"dados_validados\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"cCodCCInt\": \"{{ $node[\"add_cliente_omie\"].json[\"codigo_cliente_integracao\"] }}\",\n  \"tipo_conta_corrente\": \"{{ $node[\"dados_validados\"].json[\"tipo_conta_corrente\"] }}\",\n  \"codigo_banco\": \"{{ $node[\"dados_validados\"].json[\"codigo_banco\"] }}\",\n  \"descricao\": \"{{ $node[\"dados_validados\"].json[\"descricao_cc\"] }}\",\n  \"saldo_inicial\": {{ $node[\"dados_validados\"].json[\"saldo_inicial\"] }}\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "b398ebe8-49ab-42f4-bd7a-cc63e4249271",
+      "name": "add_conta_corrente",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        960,
+        1380
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_cliente_omie\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "9c001ba8-9c3d-4889-ab7d-7332e9c9efe3",
+      "name": "existe_id_omie",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        380,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/servicos/contrato/#IncluirContrato",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContrato\",\n    \"app_key\": \"{{ $node['dados_validados'].json['OMIE_APP_KEY'] }}\",\n    \"app_secret\": \"{{ $node['dados_validados'].json['OMIE_APP_SECRET'] }}\",\n    \"param\": [\n        {\n    \"cabecalho\": {\n    \"cCodIntCtr\": \"{{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}\",\n    \"cCodSit\": \"10\",\n    \"cNumCtr\": \"2020/01001\",\n    \"cTipoFat\": \"01\",\n    \"dVigFinal\": \"{{ $node[\"dados_validados\"].json[\"data_final\"] }}\",\n    \"dVigInicial\": \"{{ $node[\"dados_validados\"].json[\"data_inicial\"] }}\",\n    \"nCodCli\": {{ $node[\"pesquisa_lead\"].json[\"id_cliente_omie\"] }},\n    \"nDiaFat\": 30,\n    \"nValTotMes\": 3302\n  },\n  \"departamentos\": [],\n  \"emailCliente\": {\n    \"cEnviarBoleto\": \"\",\n    \"cEnviarLinkNfse\": \"\",\n    \"cEnviarRecibo\": \"\",\n    \"cUtilizarEmails\": \"\"\n  },\n  \"infAdic\": {\n    \"cCidPrestServ\": \"{{ $node[\"dados_validados\"].json[\"cidade_prestacao_servico\"] }}\",\n    \"cCodART\": \"\",\n    \"cCodCateg\": \"1.01.02\",\n    \"cCodObra\": \"\",\n    \"cContato\": \"\",\n    \"cDadosAdicNF\": \"\",\n    \"nCodCC\": {{ $node[\"dados_validados\"].json[\"nCodCC\"] }},\n    \"nCodProj\": 0,\n    \"nCodVend\": 0\n  },\n  \"itensContrato\": [\n    {\n      \"itemCabecalho\": {\n        \"codIntItem\": \"1\",\n        \"cCodCategItem\": \"\",\n        \"cNaoGerarFinanceiro\": \"N\",\n        \"codLC116\": \"3.05\",\n        \"codNBS\": \"\",\n        \"codServMunic\": \"01292\",\n        \"codServico\": 0,\n        \"natOperacao\": \"01\",\n        \"quant\": 1,\n        \"seq\": 1,\n        \"valorDed\": 0,\n        \"valorTotal\": {{ $node[\"dados_validados\"].json[\"valor_total\"] }},\n        \"valorUnit\": {{ $node[\"dados_validados\"].json[\"valor_unitario\"] }}\n      },\n      \"itemDescrServ\": {\n        \"descrCompleta\": \"{{ $node[\"dados_validados\"].json[\"tipo_de_servico\"] ? $node[\"dados_validados\"].json[\"tipo_de_servico\"] : 'Serviços prestados' }}\"\n      },\n      \"itemImpostos\": {\n        \"aliqCOFINS\": 0,\n        \"aliqCSLL\": 0,\n        \"aliqINSS\": 0,\n        \"aliqIR\": 0,\n        \"aliqISS\": 5,\n        \"aliqPIS\": 0,\n        \"redBaseINSS\": 0,\n        \"retCOFINS\": \"\",\n        \"retCSLL\": \"\",\n        \"retINSS\": \"\",\n        \"retIR\": \"\",\n        \"retISS\": \"N\",\n        \"retPIS\": \"\",\n        \"valorCOFINS\": 0,\n        \"valorCSLL\": 0,\n        \"valorINSS\": 0,\n        \"valorIR\": 0,\n        \"valorISS\": 0,\n        \"valorPIS\": 0\n      },\n      \"itemLeiTranspImp\": {\n        \"aliMunicipal\": 0,\n        \"aliqEstadual\": 0,\n        \"aliqFederal\": 0,\n        \"chave\": \"\",\n        \"fonte\": \"\"\n      }\n    },\n    {\n      \"itemCabecalho\": {\n        \"codIntItem\": \"2\",\n        \"cCodCategItem\": \"\",\n        \"cNaoGerarFinanceiro\": \"N\",\n        \"codLC116\": \"17.01\",\n        \"codNBS\": \"\",\n        \"codServMunic\": \"0162-8/99\",\n        \"codServico\": {{ $node[\"dados_validados\"].json[\"codServico\"] }},\n        \"natOperacao\": \"01\",\n        \"quant\": 1,\n        \"seq\": 2,\n        \"valorDed\": 0,\n        \"valorTotal\": {{ $node[\"dados_validados\"].json[\"valor_total\"] }},\n        \"valorUnit\": {{ $node[\"dados_validados\"].json[\"valor_unitario\"] }}\n      },\n      \"itemDescrServ\": {\n        \"descrCompleta\": \"{{ $node[\"dados_validados\"].json[\"descricao\"] }}\"\n      },\n      \"itemImpostos\": {\n        \"aliqCOFINS\": 0,\n        \"aliqCSLL\": 0,\n        \"aliqINSS\": 0,\n        \"aliqIR\": 0,\n        \"aliqISS\": 3,\n        \"aliqPIS\": 0,\n        \"redBaseINSS\": 0,\n        \"retCOFINS\": \"\",\n        \"retCSLL\": \"\",\n        \"retINSS\": \"\",\n        \"retIR\": \"\",\n        \"retISS\": \"N\",\n        \"retPIS\": \"\",\n        \"valorCOFINS\": 0,\n        \"valorCSLL\": 0,\n        \"valorINSS\": 0,\n        \"valorIR\": 0,\n        \"valorISS\": 9,\n        \"valorPIS\": 0\n      },\n      \"itemLeiTranspImp\": {\n        \"aliMunicipal\": 0,\n        \"aliqEstadual\": 0,\n        \"aliqFederal\": 0,\n        \"chave\": \"\",\n        \"fonte\": \"\"\n      }\n    }\n  ],\n  \"observacoes\": {\n    \"cObsContrato\": \"\"\n  },\n  \"vencTextos\": {\n    \"cAdContrato\": \"N\",\n    \"cAdPeriodo\": \"N\",\n    \"cAdVenc\": \" \",\n    \"cAntecipar\": \"\",\n    \"cCodPerRef\": \"001\",\n    \"cDiaFim\": 0,\n    \"cDiaIni\": 0,\n    \"cPostergar\": \"\",\n    \"cProxMes\": \"\",\n    \"cTpVenc\": \"001\",\n    \"nDiaFixo\": 0,\n    \"nDias\": 5\n            }\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "c382c7fd-2aa0-4652-90e8-c504ece86f1f",
+      "name": "add_contrato1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1000,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/contacorrente/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaCorrente\",\n    \"app_key\": \"{{ $node[\"dados_validados\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"dados_validados\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"cCodCCInt\": \"{{ $node[\"pesquisa_lead\"].json[\"id_cliente_omie\"] }}\",\n  \"tipo_conta_corrente\": \"{{ $node[\"dados_validados\"].json[\"tipo_conta_corrente\"] }}\",\n  \"codigo_banco\": \"{{ $node[\"dados_validados\"].json[\"codigo_banco\"] }}\",\n  \"descricao\": \"{{ $node[\"dados_validados\"].json[\"descricao_cc\"] }}\",\n  \"saldo_inicial\": {{ $node[\"dados_validados\"].json[\"saldo_inicial\"] }}\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "dcaffd84-1707-4799-866f-d8441f13922d",
+      "name": "add_conta_corrente1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        800,
+        980
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_contrato_omie",
+              "value": "={{ $node[\"add_contrato1\"].json[\"nCodCtr\"] }}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"dados_validados\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e19c6aaa-0a6e-49d5-8eb3-f059439eacc8",
+      "name": "atualiza_lead1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1180,
+        980
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"conta_corrente_omie\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "5df5a9c1-9fe5-4f49-9d74-cd2d8cc8fb5e",
+      "name": "existe_cc_omie",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        580,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/servicos/contrato/#IncluirContrato",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContrato\",\n    \"app_key\": \"{{ $node['dados_validados'].json['OMIE_APP_KEY'] }}\",\n    \"app_secret\": \"{{ $node['dados_validados'].json['OMIE_APP_SECRET'] }}\",\n    \"param\": [\n        {\n    \"cabecalho\": {\n    \"cCodIntCtr\": \"{{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}\",\n    \"cCodSit\": \"10\",\n    \"cNumCtr\": \"2020/01001\",\n    \"cTipoFat\": \"01\",\n    \"dVigFinal\": \"{{ $node[\"dados_validados\"].json[\"data_final\"] }}\",\n    \"dVigInicial\": \"{{ $node[\"dados_validados\"].json[\"data_inicial\"] }}\",\n    \"nCodCli\": {{ $node[\"pesquisa_lead\"].json[\"id_cliente_omie\"] }},\n    \"nDiaFat\": 30,\n    \"nValTotMes\": 0\n  },\n  \"departamentos\": [],\n  \"emailCliente\": {\n    \"cEnviarBoleto\": \"\",\n    \"cEnviarLinkNfse\": \"\",\n    \"cEnviarRecibo\": \"\",\n    \"cUtilizarEmails\": \"\"\n  },\n  \"infAdic\": {\n    \"cCidPrestServ\": \"{{ $node[\"dados_validados\"].json[\"cidade_prestacao_servico\"] }}\",\n    \"cCodART\": \"\",\n    \"cCodCateg\": \"1.01.02\",\n    \"cCodObra\": \"\",\n    \"cContato\": \"\",\n    \"cDadosAdicNF\": \"\",\n    \"nCodCC\": {{ $node[\"dados_validados\"].json[\"nCodCC\"] }},\n    \"nCodProj\": 0,\n    \"nCodVend\": 0\n  },\n  \"itensContrato\": [\n    {\n      \"itemCabecalho\": {\n        \"codIntItem\": \"1\",\n        \"cCodCategItem\": \"\",\n        \"cNaoGerarFinanceiro\": \"N\",\n        \"codLC116\": \"3.05\",\n        \"codNBS\": \"\",\n        \"codServMunic\": \"0162-8/99\",\n        \"codServico\": {{ $node[\"dados_validados\"].json[\"codServico\"] }},\n        \"natOperacao\": \"01\",\n        \"quant\": 1,\n        \"seq\": 1,\n        \"valorDed\": 0,\n        \"valorTotal\": {{ $node[\"dados_validados\"].json[\"valor_total\"] }},\n        \"valorUnit\": {{ $node[\"dados_validados\"].json[\"valor_unitario\"] }}\n      },\n      \"itemDescrServ\": {\n        \"descrCompleta\": \"Serviços prestados\"\n      },\n      \"itemImpostos\": {\n        \"aliqCOFINS\": 0,\n        \"aliqCSLL\": 0,\n        \"aliqINSS\": 0,\n        \"aliqIR\": 0,\n        \"aliqISS\": 5,\n        \"aliqPIS\": 0,\n        \"redBaseINSS\": 0,\n        \"retCOFINS\": \"\",\n        \"retCSLL\": \"\",\n        \"retINSS\": \"\",\n        \"retIR\": \"\",\n        \"retISS\": \"N\",\n        \"retPIS\": \"\",\n        \"valorCOFINS\": 0,\n        \"valorCSLL\": 0,\n        \"valorINSS\": 0,\n        \"valorIR\": 0,\n        \"valorISS\": 150.1,\n        \"valorPIS\": 0\n      },\n      \"itemLeiTranspImp\": {\n        \"aliMunicipal\": 0,\n        \"aliqEstadual\": 0,\n        \"aliqFederal\": 0,\n        \"chave\": \"\",\n        \"fonte\": \"\"\n      }\n    },\n    {\n      \"itemCabecalho\": {\n        \"codIntItem\": \"2\",\n        \"cCodCategItem\": \"\",\n        \"cNaoGerarFinanceiro\": \"N\",\n        \"codLC116\": \"17.01\",\n        \"codNBS\": \"\",\n        \"codServMunic\": \"01292\",\n        \"codServico\": 0,\n        \"natOperacao\": \"01\",\n        \"quant\": 1,\n        \"seq\": 2,\n        \"valorDed\": 0,\n        \"valorTotal\": {{ $node[\"dados_validados\"].json[\"valor_total\"] }},\n        \"valorUnit\": {{ $node[\"dados_validados\"].json[\"valor_unitario\"] }}\n      },\n      \"itemDescrServ\": {\n        \"descrCompleta\": \"{{ $node[\"dados_validados\"].json[\"tipo_de_servico\"] ? $node[\"dados_validados\"].json[\"tipo_de_servico\"] : 'Serviços prestados' }}\"\n      },\n      \"itemImpostos\": {\n        \"aliqCOFINS\": 0,\n        \"aliqCSLL\": 0,\n        \"aliqINSS\": 0,\n        \"aliqIR\": 0,\n        \"aliqISS\": 3,\n        \"aliqPIS\": 0,\n        \"redBaseINSS\": 0,\n        \"retCOFINS\": \"\",\n        \"retCSLL\": \"\",\n        \"retINSS\": \"\",\n        \"retIR\": \"\",\n        \"retISS\": \"N\",\n        \"retPIS\": \"\",\n        \"valorCOFINS\": 0,\n        \"valorCSLL\": 0,\n        \"valorINSS\": 0,\n        \"valorIR\": 0,\n        \"valorISS\": 0,\n        \"valorPIS\": 0\n      },\n      \"itemLeiTranspImp\": {\n        \"aliMunicipal\": 0,\n        \"aliqEstadual\": 0,\n        \"aliqFederal\": 0,\n        \"chave\": \"\",\n        \"fonte\": \"\"\n      }\n    }\n  ],\n  \"observacoes\": {\n    \"cObsContrato\": \"\"\n  },\n  \"vencTextos\": {\n    \"cAdContrato\": \"N\",\n    \"cAdPeriodo\": \"N\",\n    \"cAdVenc\": \" \",\n    \"cAntecipar\": \"\",\n    \"cCodPerRef\": \"001\",\n    \"cDiaFim\": 0,\n    \"cDiaIni\": 0,\n    \"cPostergar\": \"\",\n    \"cProxMes\": \"\",\n    \"cTpVenc\": \"001\",\n    \"nDiaFixo\": 0,\n    \"nDias\": 5\n            }\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "6410f38a-0e34-4f87-b255-72eb5a851baf",
+      "name": "add_contrato2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        800,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_contrato_omie",
+              "value": "={{ $node[\"add_contrato2\"].json[\"nCodCtr\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5307899a-d367-4800-9084-d982dbbef205",
+      "name": "atualiza_lead2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        980,
+        780
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/servicos/contrato/#IncluirContrato",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContrato\",\n    \"app_key\": \"{{ $node['dados_validados'].json['OMIE_APP_KEY'] }}\",\n    \"app_secret\": \"{{ $node['dados_validados'].json['OMIE_APP_SECRET'] }}\",\n    \"param\": [\n        {\n    \"cabecalho\": {\n    \"cCodIntCtr\": \"{{ $node[\"add_cliente_omie1\"].json[\"codigo_cliente_integracao\"] }}\",\n    \"cCodSit\": \"10\",\n    \"cNumCtr\": \"2020/01001\",\n    \"cTipoFat\": \"01\",\n    \"dVigFinal\": \"{{ $node[\"dados_validados\"].json[\"data_final\"] }}\",\n    \"dVigInicial\": \"{{ $node[\"dados_validados\"].json[\"data_inicial\"] }}\",\n    \"nCodCli\": {{ $node[\"add_cliente_omie1\"].json[\"codigo_cliente_omie\"] }},\n    \"nDiaFat\": 30,\n    \"nValTotMes\": 0\n  },\n  \"departamentos\": [],\n  \"emailCliente\": {\n    \"cEnviarBoleto\": \"\",\n    \"cEnviarLinkNfse\": \"\",\n    \"cEnviarRecibo\": \"\",\n    \"cUtilizarEmails\": \"\"\n  },\n  \"infAdic\": {\n    \"cCidPrestServ\": \"{{ $node[\"dados_validados\"].json[\"cidade_prestacao_servico\"] }}\",\n    \"cCodART\": \"\",\n    \"cCodCateg\": \"1.01.02\",\n    \"cCodObra\": \"\",\n    \"cContato\": \"\",\n    \"cDadosAdicNF\": \"\",\n    \"nCodCC\": {{ $node[\"dados_validados\"].json[\"nCodCC\"] }},\n    \"nCodProj\": 0,\n    \"nCodVend\": 0\n  },\n  \"itensContrato\": [\n    {\n      \"itemCabecalho\": {\n        \"codIntItem\": \"1\",\n        \"cCodCategItem\": \"\",\n        \"cNaoGerarFinanceiro\": \"N\",\n        \"codLC116\": \"3.05\",\n        \"codNBS\": \"\",\n        \"codServMunic\": \"01292\",\n        \"codServico\": 0,\n        \"natOperacao\": \"01\",\n        \"quant\": 1,\n        \"seq\": 1,\n        \"valorDed\": 0,\n        \"valorTotal\": {{ $node[\"dados_validados\"].json[\"valor_total\"] }},\n        \"valorUnit\": {{ $node[\"dados_validados\"].json[\"valor_unitario\"] }}\n      },\n      \"itemDescrServ\": {\n        \"descrCompleta\": \"{{ $node[\"dados_validados\"].json[\"tipo_de_servico\"] ? $node[\"dados_validados\"].json[\"tipo_de_servico\"] : 'Serviços prestados' }}\"\n      },\n      \"itemImpostos\": {\n        \"aliqCOFINS\": 0,\n        \"aliqCSLL\": 0,\n        \"aliqINSS\": 0,\n        \"aliqIR\": 0,\n        \"aliqISS\": 5,\n        \"aliqPIS\": 0,\n        \"redBaseINSS\": 0,\n        \"retCOFINS\": \"\",\n        \"retCSLL\": \"\",\n        \"retINSS\": \"\",\n        \"retIR\": \"\",\n        \"retISS\": \"N\",\n        \"retPIS\": \"\",\n        \"valorCOFINS\": 0,\n        \"valorCSLL\": 0,\n        \"valorINSS\": 0,\n        \"valorIR\": 0,\n        \"valorISS\": 0,\n        \"valorPIS\": 0\n      },\n      \"itemLeiTranspImp\": {\n        \"aliMunicipal\": 0,\n        \"aliqEstadual\": 0,\n        \"aliqFederal\": 0,\n        \"chave\": \"\",\n        \"fonte\": \"\"\n      }\n    },\n    {\n      \"itemCabecalho\": {\n        \"codIntItem\": \"2\",\n        \"cCodCategItem\": \"\",\n        \"cNaoGerarFinanceiro\": \"N\",\n        \"codLC116\": \"17.01\",\n        \"codNBS\": \"\",\n        \"codServMunic\": \"0162-8/99\",\n        \"codServico\": {{ $node[\"dados_validados\"].json[\"codServico\"] }},\n        \"natOperacao\": \"01\",\n        \"quant\": 1,\n        \"seq\": 2,\n        \"valorDed\": 0,\n        \"valorTotal\": {{ $node[\"dados_validados\"].json[\"valor_total\"] }},\n        \"valorUnit\": {{ $node[\"dados_validados\"].json[\"valor_unitario\"] }}\n      },\n      \"itemDescrServ\": {\n        \"descrCompleta\": \"{{ $node[\"dados_validados\"].json[\"tipo_de_servico\"] ? $node[\"dados_validados\"].json[\"tipo_de_servico\"] : 'Serviços prestados' }}\"\n      },\n      \"itemImpostos\": {\n        \"aliqCOFINS\": 0,\n        \"aliqCSLL\": 0,\n        \"aliqINSS\": 0,\n        \"aliqIR\": 0,\n        \"aliqISS\": 3,\n        \"aliqPIS\": 0,\n        \"redBaseINSS\": 0,\n        \"retCOFINS\": \"\",\n        \"retCSLL\": \"\",\n        \"retINSS\": \"\",\n        \"retIR\": \"\",\n        \"retISS\": \"N\",\n        \"retPIS\": \"\",\n        \"valorCOFINS\": 0,\n        \"valorCSLL\": 0,\n        \"valorINSS\": 0,\n        \"valorIR\": 0,\n        \"valorISS\": 9,\n        \"valorPIS\": 0\n      },\n      \"itemLeiTranspImp\": {\n        \"aliMunicipal\": 0,\n        \"aliqEstadual\": 0,\n        \"aliqFederal\": 0,\n        \"chave\": \"\",\n        \"fonte\": \"\"\n      }\n    }\n  ],\n  \"observacoes\": {\n    \"cObsContrato\": \"\"\n  },\n  \"vencTextos\": {\n    \"cAdContrato\": \"N\",\n    \"cAdPeriodo\": \"N\",\n    \"cAdVenc\": \" \",\n    \"cAntecipar\": \"\",\n    \"cCodPerRef\": \"001\",\n    \"cDiaFim\": 0,\n    \"cDiaIni\": 0,\n    \"cPostergar\": \"\",\n    \"cProxMes\": \"\",\n    \"cTpVenc\": \"001\",\n    \"nDiaFixo\": 0,\n    \"nDias\": 5\n            }\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "eed3fc26-ef71-4f87-90e9-7ad59c73b65f",
+      "name": "add_contrato3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/contacorrente/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContaCorrente\",\n    \"app_key\": \"{{ $node[\"dados_validados\"].json[\"OMIE_APP_KEY\"] }}\",\n    \"app_secret\": \"{{ $node[\"dados_validados\"].json[\"OMIE_APP_SECRET\"] }}\",\n    \"param\": [\n        {\n  \"cCodCCInt\": \"{{ $node[\"add_cliente_omie1\"].json[\"codigo_cliente_integracao\"] }}\",\n  \"tipo_conta_corrente\": \"{{ $node[\"dados_validados\"].json[\"tipo_conta_corrente\"] }}\",\n  \"codigo_banco\": \"{{ $node[\"dados_validados\"].json[\"codigo_banco\"] }}\",\n  \"descricao\": \"{{ $node[\"dados_validados\"].json[\"descricao_cc\"] }}\",\n  \"saldo_inicial\": {{ $node[\"dados_validados\"].json[\"saldo_inicial\"] }}\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "bc2e70b1-25fc-4d31-92ed-57730307d6b1",
+      "name": "add_conta_corrente2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        980,
+        600
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "{\n    \"call\": \"IncluirContrato\",  // Nome da chamada API para incluir um contrato\n    \"app_key\": \"{{ $node['dados_validados'].json['OMIE_APP_KEY'] }}\",  // Chave do aplicativo Omie\n    \"app_secret\": \"{{ $node['dados_validados'].json['OMIE_APP_SECRET'] }}\",  // Segredo do aplicativo Omie\n    \"param\": [\n        {\n            \"cabecalho\": {\n                \"cCodIntCtr\": \"019289Tb2\",  // Código interno do contrato\n                \"cCodSit\": \"10\",  // Código da situação do contrato\n                \"cNumCtr\": \"2020/01001\",  // Número do contrato\n                \"cTipoFat\": \"01\",  // Tipo de faturamento do contrato\n                \"dVigFinal\": \"30/03/2022\",  // Data de vigência final do contrato\n                \"dVigInicial\": \"29/03/2020\",  // Data de vigência inicial do contrato\n                \"nCodCli\": 2370765,  // Código do cliente\n                \"nDiaFat\": 30,  // Dia de faturamento\n                \"nValTotMes\": 3302  // Valor total mensal do contrato\n            },\n            \"departamentos\": [],  // Lista de departamentos associados ao contrato (vazio neste caso)\n            \"emailCliente\": {\n                \"cEnviarBoleto\": \"\",  // Enviar boleto (sim/não)\n                \"cEnviarLinkNfse\": \"\",  // Enviar link da NFS-e (sim/não)\n                \"cEnviarRecibo\": \"\",  // Enviar recibo (sim/não)\n                \"cUtilizarEmails\": \"\"  // Utilizar e-mails para comunicação (sim/não)\n            },\n            \"infAdic\": {\n                \"cCidPrestServ\": \"PETROPOLIS (RJ)\",  // Cidade de prestação de serviço\n                \"cCodART\": \"\",  // Código ART\n                \"cCodCateg\": \"1.01.02\",  // Código de categoria\n                \"cCodObra\": \"\",  // Código da obra\n                \"cContato\": \"\",  // Contato\n                \"cDadosAdicNF\": \"\",  // Dados adicionais da nota fiscal\n                \"nCodCC\": 1208238,  // Código do centro de custo\n                \"nCodProj\": 0,  // Código do projeto\n                \"nCodVend\": 0  // Código do vendedor\n            },\n            \"itensContrato\": [\n                {\n                    \"itemCabecalho\": {\n                        \"codIntItem\": \"1\",  // Código interno do item\n                        \"cCodCategItem\": \"\",  // Código de categoria do item\n                        \"cNaoGerarFinanceiro\": \"N\",  // Não gerar financeiro (sim/não)\n                        \"codLC116\": \"3.05\",  // Código LC116\n                        \"codNBS\": \"\",  // Código NBS\n                        \"codServMunic\": \"01292\",  // Código do serviço municipal\n                        \"codServico\": 0,  // Código do serviço\n                        \"natOperacao\": \"01\",  // Natureza da operação\n                        \"quant\": 1,  // Quantidade\n                        \"seq\": 1,  // Sequência do item\n                        \"valorDed\": 0,  // Valor deduzido\n                        \"valorTotal\": 3002,  // Valor total do item\n                        \"valorUnit\": 3002  // Valor unitário do item\n                    },\n                    \"itemDescrServ\": {\n                        \"descrCompleta\": \"Serviços prestados\"  // Descrição completa do serviço\n                    },\n                    \"itemImpostos\": {\n                        \"aliqCOFINS\": 0,  // Alíquota de COFINS\n                        \"aliqCSLL\": 0,  // Alíquota de CSLL\n                        \"aliqINSS\": 0,  // Alíquota de INSS\n                        \"aliqIR\": 0,  // Alíquota de IR\n                        \"aliqISS\": 5,  // Alíquota de ISS\n                        \"aliqPIS\": 0,  // Alíquota de PIS\n                        \"redBaseINSS\": 0,  // Redução da base de INSS\n                        \"retCOFINS\": \"\",  // Retenção de COFINS\n                        \"retCSLL\": \"\",  // Retenção de CSLL\n                        \"retINSS\": \"\",  // Retenção de INSS\n                        \"retIR\": \"\",  // Retenção de IR\n                        \"retISS\": \"N\",  // Retenção de ISS (sim/não)\n                        \"retPIS\": \"\",  // Retenção de PIS\n                        \"valorCOFINS\": 0,  // Valor de COFINS\n                        \"valorCSLL\": 0,  // Valor de CSLL\n                        \"valorINSS\": 0,  // Valor de INSS\n                        \"valorIR\": 0,  // Valor de IR\n                        \"valorISS\": 150.1,  // Valor de ISS\n                        \"valorPIS\": 0  // Valor de PIS\n                    },\n                    \"itemLeiTranspImp\": {\n                        \"aliMunicipal\": 0,  // Alíquota municipal\n                        \"aliqEstadual\": 0,  // Alíquota estadual\n                        \"aliqFederal\": 0,  // Alíquota federal\n                        \"chave\": \"\",  // Chave para transporte de imposto\n                        \"fonte\": \"\"  // Fonte para transporte de imposto\n                    }\n                },\n                {\n                    \"itemCabecalho\": {\n                        \"codIntItem\": \"2\",  // Código interno do item\n                        \"cCodCategItem\": \"\",  // Código de categoria do item\n                        \"cNaoGerarFinanceiro\": \"N\",  // Não gerar financeiro (sim/não)\n                        \"codLC116\": \"17.01\",  // Código LC116\n                        \"codNBS\": \"\",  // Código NBS\n                        \"codServMunic\": \"0162-8/99\",  // Código do serviço municipal\n                        \"codServico\": 3412648,  // Código do serviço\n                        \"natOperacao\": \"01\",  // Natureza da operação\n                        \"quant\": 1,  // Quantidade\n                        \"seq\": 2,  // Sequência do item\n                        \"valorDed\": 0,  // Valor deduzido\n                        \"valorTotal\": 300,  // Valor total do item\n                        \"valorUnit\": 300  // Valor unitário do item\n                    },\n                    \"itemDescrServ\": {\n                        \"descrCompleta\": \"Homologação de processo contábil\"  // Descrição completa do serviço\n                    },\n                    \"itemImpostos\": {\n                        \"aliqCOFINS\": 0,  // Alíquota de COFINS\n                        \"aliqCSLL\": 0,  // Alíquota de CSLL\n                        \"aliqINSS\": 0,  // Alíquota de INSS\n                        \"aliqIR\": 0,  // Alíquota de IR\n                        \"aliqISS\": 3,  // Alíquota de ISS\n                        \"aliqPIS\": 0,  // Alíquota de PIS\n                        \"redBaseINSS\": 0,  // Redução da base de INSS\n                        \"retCOFINS\": \"\",  // Retenção de COFINS\n                        \"retCSLL\": \"\",  // Retenção de CSLL\n                        \"retINSS\": \"\",  // Retenção de INSS\n                        \"retIR\": \"\",  // Retenção de IR\n                        \"retISS\": \"N\",  // Retenção de ISS (sim/não)\n                        \"retPIS\": \"\",  // Retenção de PIS\n                        \"valorCOFINS\": 0,  // Valor de COFINS\n                        \"valorCSLL\": 0,  // Valor de CSLL\n                        \"valorINSS\": 0,  // Valor de INSS\n                        \"valorIR\": 0,  // Valor de IR\n                        \"valorISS\": 9,  // Valor de ISS\n                        \"valorPIS\": 0  // Valor de PIS\n                    },\n                    \"itemLeiTranspImp\": {\n                        \"aliMunicipal\": 0,  // Alíquota municipal\n                        \"aliqEstadual\": 0,  // Alíquota estadual\n                        \"aliqFederal\": 0,  // Alíquota federal\n                        \"chave\": \"\",  // Chave para transporte de imposto\n                        \"fonte\": \"\"  // Fonte para transporte de imposto\n                    }\n                }\n            ],\n            \"observacoes\": {\n                \"cObsContrato\": \"\"  // Observações do contrato\n            },\n            \"vencTextos\": {\n                \"cAdContrato\": \"N\",  // Adicionar contrato (sim/não)\n                \"cAdPeriodo\": \"N\",  // Adicionar período (sim/não)\n                \"cAdVenc\": \" \",  // Adicionar vencimento\n                \"cAntecipar\": \"\",  // Antecipar (sim/não)\n                \"cCodPerRef\": \"001\",  // Código do período de referência\n                \"cDiaFim\": 0,  // Dia de fim do período\n                \"cDiaIni\": 0,  // Dia de início do período\n                \"cDescrPeriodo\": \"Mensalidade\",  // Descrição do período\n                \"cManter\": \"\",  // Manter (sim/não)\n                \"cRepVenc\": \"M\"  // Repetir vencimento (mensal)\n            }\n        }\n    ]\n}\n",
+        "height": 2922,
+        "width": 867.2203975280445,
+        "color": 6
+      },
+      "id": "b1bc8699-97d2-4ad6-8f5e-dd737ee833fa",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -600,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "fa6fc966-f98e-487f-a7ab-bdfbac7ea569",
+              "leftValue": "={{ $node[\"add_cliente_omie\"].json[\"error\"][\"message\"] }}",
+              "rightValue": "500",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "c375dbb3-6bfb-4313-beb0-da57a7fd4c61",
+      "name": "nao_existe1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1160,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/clientes/#IncluirCliente",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"call\": \"IncluirCliente\",\n  \"app_key\": \"{{ $node['dados_validados'].json['OMIE_APP_KEY'] }}\",\n  \"app_secret\": \"{{ $node['dados_validados'].json['OMIE_APP_SECRET'] }}\",\n  \"param\": [\n    {\n      \"codigo_cliente_integracao\": \"{{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}\",\n      \"email\": \"{{ $node['dados_validados'].json['E-mail do Cliente'] }}\",\n      \"razao_social\": \"{{ $node['dados_validados'].json['razao_social'] }}\",\n      \"nome_fantasia\": \"{{ $node['dados_validados'].json['nome_fantasia'] === '' || $node['dados_validados'].json['nome_fantasia'] === null || $node['dados_validados'].json['nome_fantasia'] === undefined ? $node['dados_validados'].json['E-mail do Cliente'] : $node['dados_validados'].json['nome_fantasia'] }}\",\n      \"cnpj_cpf\": \"{{ $node['dados_validados'].json['cpf'] ? $node['dados_validados'].json['cpf'] : $node['dados_validados'].json['cnpj'] }}\",\n      \"telefone1_ddd\": \"{{ $node['dados_validados'].json['Telefone do Cliente - Formato Z-API'].slice(2, 4) }}\",\n      \"telefone1_numero\": \"{{ $node['dados_validados'].json['Telefone do Cliente - Formato Z-API'].slice(4) }}\",\n      \"endereco\": \"{{ $node['dados_validados'].json['endereco'].slice(0,60) }}\",\n      \"estado\": \"{{ $node['dados_validados'].json['estado'].slice(0,2) }}\",\n      \"cidade\": \"\",\n      \"cep\": \"{{ $node['dados_validados'].json['cep'] }}\",\n      \"observacao\": \"{{ $node['dados_validados'].json['cargo'] }}\",\n      \"tags\": \"\",\n      \"obs_detalhadas\":\"{{ $node['dados_validados'].json['endereco'].slice(0,100) }}\",\n      \"importado_api\": \"S\",\n      \"dadosBancarios\": [\n        {\n          \"codigo_banco\": \"\",\n          \"agencia\": \"{{ $node['dados_validados'].json['agencia'] }}\",\n          \"conta_corrente\": \"{{ $node['dados_validados'].json['conta_com_digito'] }}\",\n          \"doc_titular\": \"{{ $node['dados_validados'].json['cpf'] ? $node['dados_validados'].json['cpf'] : $node['dados_validados'].json['cnpj'] }}\",\n          \"nome_titular\": \"{{ $node['dados_validados'].json['Nome do Cliente'] }}\",\n          \"cChavePix\": \"{{ $node[\"dados_validados\"].json[\"tipo_chave\"] === 'Telefone' ? $node[\"dados_validados\"].json[\"chave_telefone\"] : $node['dados_validados'].json['chave_px_pj'] }}\"\n        }\n      ]\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "c9b281e3-7267-485d-8d14-37b7645a8403",
+      "name": "add_cliente_omie",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        780,
+        1380
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/servicos/contrato/#IncluirContrato",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContrato\",\n    \"app_key\": \"{{ $node['dados_validados'].json['OMIE_APP_KEY'] }}\",\n    \"app_secret\": \"{{ $node['dados_validados'].json['OMIE_APP_SECRET'] }}\",\n    \"param\": [\n        {\n    \"cabecalho\": {\n    \"cCodIntCtr\": \"{{ $node[\"add_cliente_omie\"].json[\"codigo_cliente_integracao\"] }}\",\n    \"cCodSit\": \"10\",\n    \"cNumCtr\": \"2020/01001\",\n    \"cTipoFat\": \"01\",\n    \"dVigFinal\": \"{{ $node[\"dados_validados\"].json[\"data_final\"] }}\",\n    \"dVigInicial\": \"{{ $node[\"dados_validados\"].json[\"data_inicial\"] }}\",\n    \"nCodCli\": {{ $node[\"add_cliente_omie\"].json[\"codigo_cliente_omie\"] }},\n    \"nDiaFat\": 30,\n    \"nValTotMes\": 3302\n  },\n  \"departamentos\": [],\n  \"emailCliente\": {\n    \"cEnviarBoleto\": \"\",\n    \"cEnviarLinkNfse\": \"\",\n    \"cEnviarRecibo\": \"\",\n    \"cUtilizarEmails\": \"\"\n  },\n  \"infAdic\": {\n    \"cCidPrestServ\": \"{{ $node[\"dados_validados\"].json[\"cidade_prestacao_servico\"] }}\",\n    \"cCodART\": \"\",\n    \"cCodCateg\": \"1.01.02\",\n    \"cCodObra\": \"\",\n    \"cContato\": \"\",\n    \"cDadosAdicNF\": \"\",\n    \"nCodCC\": {{ $node[\"dados_validados\"].json[\"nCodCC\"] }},\n    \"nCodProj\": 0,\n    \"nCodVend\": 0\n  },\n  \"itensContrato\": [\n    {\n      \"itemCabecalho\": {\n        \"codIntItem\": \"1\",\n        \"cCodCategItem\": \"\",\n        \"cNaoGerarFinanceiro\": \"N\",\n        \"codLC116\": \"3.05\",\n        \"codNBS\": \"\",\n        \"codServMunic\": \"01292\",\n        \"codServico\": 0,\n        \"natOperacao\": \"01\",\n        \"quant\": 1,\n        \"seq\": 1,\n        \"valorDed\": 0,\n        \"valorTotal\": {{ $node[\"dados_validados\"].json[\"valor_total\"] }},\n        \"valorUnit\": {{ $node[\"dados_validados\"].json[\"valor_unitario\"] }}\n      },\n      \"itemDescrServ\": {\n        \"descrCompleta\": \"{{ $node[\"dados_validados\"].json[\"tipo_de_servico\"] ? $node[\"dados_validados\"].json[\"tipo_de_servico\"] : 'Serviços prestados' }}\"\n      },\n      \"itemImpostos\": {\n        \"aliqCOFINS\": 0,\n        \"aliqCSLL\": 0,\n        \"aliqINSS\": 0,\n        \"aliqIR\": 0,\n        \"aliqISS\": 5,\n        \"aliqPIS\": 0,\n        \"redBaseINSS\": 0,\n        \"retCOFINS\": \"\",\n        \"retCSLL\": \"\",\n        \"retINSS\": \"\",\n        \"retIR\": \"\",\n        \"retISS\": \"N\",\n        \"retPIS\": \"\",\n        \"valorCOFINS\": 0,\n        \"valorCSLL\": 0,\n        \"valorINSS\": 0,\n        \"valorIR\": 0,\n        \"valorISS\": 0,\n        \"valorPIS\": 0\n      },\n      \"itemLeiTranspImp\": {\n        \"aliMunicipal\": 0,\n        \"aliqEstadual\": 0,\n        \"aliqFederal\": 0,\n        \"chave\": \"\",\n        \"fonte\": \"\"\n      }\n    },\n    {\n      \"itemCabecalho\": {\n        \"codIntItem\": \"2\",\n        \"cCodCategItem\": \"\",\n        \"cNaoGerarFinanceiro\": \"N\",\n        \"codLC116\": \"17.01\",\n        \"codNBS\": \"\",\n        \"codServMunic\": \"0162-8/99\",\n        \"codServico\": {{ $node[\"dados_validados\"].json[\"codServico\"] }},\n        \"natOperacao\": \"01\",\n        \"quant\": 1,\n        \"seq\": 2,\n        \"valorDed\": 0,\n        \"valorTotal\": {{ $node[\"dados_validados\"].json[\"valor_total\"] }},\n        \"valorUnit\": {{ $node[\"dados_validados\"].json[\"valor_unitario\"] }}\n      },\n      \"itemDescrServ\": {\n        \"descrCompleta\": \"{{ $node[\"dados_validados\"].json[\"descricao\"] }}\"\n      },\n      \"itemImpostos\": {\n        \"aliqCOFINS\": 0,\n        \"aliqCSLL\": 0,\n        \"aliqINSS\": 0,\n        \"aliqIR\": 0,\n        \"aliqISS\": 3,\n        \"aliqPIS\": 0,\n        \"redBaseINSS\": 0,\n        \"retCOFINS\": \"\",\n        \"retCSLL\": \"\",\n        \"retINSS\": \"\",\n        \"retIR\": \"\",\n        \"retISS\": \"N\",\n        \"retPIS\": \"\",\n        \"valorCOFINS\": 0,\n        \"valorCSLL\": 0,\n        \"valorINSS\": 0,\n        \"valorIR\": 0,\n        \"valorISS\": 9,\n        \"valorPIS\": 0\n      },\n      \"itemLeiTranspImp\": {\n        \"aliMunicipal\": 0,\n        \"aliqEstadual\": 0,\n        \"aliqFederal\": 0,\n        \"chave\": \"\",\n        \"fonte\": \"\"\n      }\n    }\n  ],\n  \"observacoes\": {\n    \"cObsContrato\": \"\"\n  },\n  \"vencTextos\": {\n    \"cAdContrato\": \"N\",\n    \"cAdPeriodo\": \"N\",\n    \"cAdVenc\": \" \",\n    \"cAntecipar\": \"\",\n    \"cCodPerRef\": \"001\",\n    \"cDiaFim\": 0,\n    \"cDiaIni\": 0,\n    \"cPostergar\": \"\",\n    \"cProxMes\": \"\",\n    \"cTpVenc\": \"001\",\n    \"nDiaFixo\": 0,\n    \"nDias\": 5\n            }\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "8d834c7e-c705-4c64-9cb3-c814714b6e19",
+      "name": "add_contrato",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "fa6fc966-f98e-487f-a7ab-bdfbac7ea569",
+              "leftValue": "={{ $node[\"add_cliente_omie1\"].json[\"error\"][\"message\"] }}",
+              "rightValue": "500",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "db8d9a56-1958-42bd-842b-d4e90c1bed18",
+      "name": "nao_existe2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1160,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/servicos/contrato/#IncluirContrato",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContrato\",\n    \"app_key\": \"{{ $node['dados_validados'].json['OMIE_APP_KEY'] }}\",\n    \"app_secret\": \"{{ $node['dados_validados'].json['OMIE_APP_SECRET'] }}\",\n    \"param\": [\n        {\n    \"cabecalho\": {\n    \"cCodIntCtr\": \"{{ $node[\"add_cliente_omie\"].json[\"error\"][\"message\"].match(/Código de Integração \\[([0-9]+)\\]/) ? $node[\"add_cliente_omie\"].json[\"error\"][\"message\"].match(/Código de Integração \\[([0-9]+)\\]/)[1] : ($node[\"add_cliente_omie\"].json[\"error\"][\"message\"].match(/nCod \\[([0-9]+)\\]/) ? $node[\"add_cliente_omie\"].json[\"error\"][\"message\"].match(/nCod \\[([0-9]+)\\]/)[1] : '') }}\",\n    \"cCodSit\": \"10\",\n    \"cNumCtr\": \"2020/01001\",\n    \"cTipoFat\": \"01\",\n    \"dVigFinal\": \"{{ $node[\"dados_validados\"].json[\"data_final\"] }}\",\n    \"dVigInicial\": \"{{ $node[\"dados_validados\"].json[\"data_inicial\"] }}\",\n    \"nCodCli\": {{ $node[\"add_cliente_omie\"].json[\"error\"][\"message\"].match(/Código de Integração \\[([0-9]+)\\]/) ? $node[\"add_cliente_omie\"].json[\"error\"][\"message\"].match(/Código de Integração \\[([0-9]+)\\]/)[1] : ($node[\"add_cliente_omie\"].json[\"error\"][\"message\"].match(/nCod \\[([0-9]+)\\]/) ? $node[\"add_cliente_omie\"].json[\"error\"][\"message\"].match(/nCod \\[([0-9]+)\\]/)[1] : '') }},\n    \"nDiaFat\": 30,\n    \"nValTotMes\": 3302\n  },\n  \"departamentos\": [],\n  \"emailCliente\": {\n    \"cEnviarBoleto\": \"\",\n    \"cEnviarLinkNfse\": \"\",\n    \"cEnviarRecibo\": \"\",\n    \"cUtilizarEmails\": \"\"\n  },\n  \"infAdic\": {\n    \"cCidPrestServ\": \"{{ $node[\"dados_validados\"].json[\"cidade_prestacao_servico\"] }}\",\n    \"cCodART\": \"\",\n    \"cCodCateg\": \"1.01.02\",\n    \"cCodObra\": \"\",\n    \"cContato\": \"\",\n    \"cDadosAdicNF\": \"\",\n    \"nCodCC\": {{ $node[\"dados_validados\"].json[\"nCodCC\"] }},\n    \"nCodProj\": 0,\n    \"nCodVend\": 0\n  },\n  \"itensContrato\": [\n    {\n      \"itemCabecalho\": {\n        \"codIntItem\": \"1\",\n        \"cCodCategItem\": \"\",\n        \"cNaoGerarFinanceiro\": \"N\",\n        \"codLC116\": \"3.05\",\n        \"codNBS\": \"\",\n        \"codServMunic\": \"01292\",\n        \"codServico\": 0,\n        \"natOperacao\": \"01\",\n        \"quant\": 1,\n        \"seq\": 1,\n        \"valorDed\": 0,\n        \"valorTotal\": {{ $node[\"dados_validados\"].json[\"valor_total\"] }},\n        \"valorUnit\": {{ $node[\"dados_validados\"].json[\"valor_unitario\"] }}\n      },\n      \"itemDescrServ\": {\n        \"descrCompleta\": \"{{ $node[\"dados_validados\"].json[\"tipo_de_servico\"] ? $node[\"dados_validados\"].json[\"tipo_de_servico\"] : 'Serviços prestados' }}\"\n      },\n      \"itemImpostos\": {\n        \"aliqCOFINS\": 0,\n        \"aliqCSLL\": 0,\n        \"aliqINSS\": 0,\n        \"aliqIR\": 0,\n        \"aliqISS\": 5,\n        \"aliqPIS\": 0,\n        \"redBaseINSS\": 0,\n        \"retCOFINS\": \"\",\n        \"retCSLL\": \"\",\n        \"retINSS\": \"\",\n        \"retIR\": \"\",\n        \"retISS\": \"N\",\n        \"retPIS\": \"\",\n        \"valorCOFINS\": 0,\n        \"valorCSLL\": 0,\n        \"valorINSS\": 0,\n        \"valorIR\": 0,\n        \"valorISS\": 0,\n        \"valorPIS\": 0\n      },\n      \"itemLeiTranspImp\": {\n        \"aliMunicipal\": 0,\n        \"aliqEstadual\": 0,\n        \"aliqFederal\": 0,\n        \"chave\": \"\",\n        \"fonte\": \"\"\n      }\n    },\n    {\n      \"itemCabecalho\": {\n        \"codIntItem\": \"2\",\n        \"cCodCategItem\": \"\",\n        \"cNaoGerarFinanceiro\": \"N\",\n        \"codLC116\": \"17.01\",\n        \"codNBS\": \"\",\n        \"codServMunic\": \"0162-8/99\",\n        \"codServico\": {{ $node[\"dados_validados\"].json[\"codServico\"] }},\n        \"natOperacao\": \"01\",\n        \"quant\": 1,\n        \"seq\": 2,\n        \"valorDed\": 0,\n        \"valorTotal\": {{ $node[\"dados_validados\"].json[\"valor_total\"] }},\n        \"valorUnit\": {{ $node[\"dados_validados\"].json[\"valor_unitario\"] }}\n      },\n      \"itemDescrServ\": {\n        \"descrCompleta\": \"{{ $node[\"dados_validados\"].json[\"descricao\"] }}\"\n      },\n      \"itemImpostos\": {\n        \"aliqCOFINS\": 0,\n        \"aliqCSLL\": 0,\n        \"aliqINSS\": 0,\n        \"aliqIR\": 0,\n        \"aliqISS\": 3,\n        \"aliqPIS\": 0,\n        \"redBaseINSS\": 0,\n        \"retCOFINS\": \"\",\n        \"retCSLL\": \"\",\n        \"retINSS\": \"\",\n        \"retIR\": \"\",\n        \"retISS\": \"N\",\n        \"retPIS\": \"\",\n        \"valorCOFINS\": 0,\n        \"valorCSLL\": 0,\n        \"valorINSS\": 0,\n        \"valorIR\": 0,\n        \"valorISS\": 9,\n        \"valorPIS\": 0\n      },\n      \"itemLeiTranspImp\": {\n        \"aliMunicipal\": 0,\n        \"aliqEstadual\": 0,\n        \"aliqFederal\": 0,\n        \"chave\": \"\",\n        \"fonte\": \"\"\n      }\n    }\n  ],\n  \"observacoes\": {\n    \"cObsContrato\": \"\"\n  },\n  \"vencTextos\": {\n    \"cAdContrato\": \"N\",\n    \"cAdPeriodo\": \"N\",\n    \"cAdVenc\": \" \",\n    \"cAntecipar\": \"\",\n    \"cCodPerRef\": \"001\",\n    \"cDiaFim\": 0,\n    \"cDiaIni\": 0,\n    \"cPostergar\": \"\",\n    \"cProxMes\": \"\",\n    \"cTpVenc\": \"001\",\n    \"nDiaFixo\": 0,\n    \"nDias\": 5\n            }\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "75fb662b-18e8-4b81-a91e-d7753dbb95b3",
+      "name": "add_contrato4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"E-mail do Cliente\"] || '-----------------------'}}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Telefone do Cliente - Formato Z-API\"] || '-----------------------'}}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Telefone do Cliente - Formato Z-API\"] || '-----------------------'}}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"E-mail do Cliente\"] || '-----------------------'}}"
+            },
+            {
+              "column": "cpf_cnpj",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"cnpj\"] || '-----------------------' }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "07cd24c7-5707-4338-9c50-e2ce71973251",
+      "name": "pesquisa_lead",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        20,
+        940
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/geral/clientes/#IncluirCliente",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"call\": \"IncluirCliente\",\n  \"app_key\": \"{{ $node['dados_validados'].json['OMIE_APP_KEY'] }}\",\n  \"app_secret\": \"{{ $node['dados_validados'].json['OMIE_APP_SECRET'] }}\",\n  \"param\": [\n    {\n      \"codigo_cliente_integracao\": \"{{ $node[\"insere_dados1\"].json[\"data\"][\"insertId\"] }}\",\n      \"email\": \"{{ $node['dados_validados'].json['E-mail do Cliente'] }}\",\n      \"razao_social\": \"{{ $node['dados_validados'].json['razao_social'] }}\",\n      \"nome_fantasia\": \"{{ $node['dados_validados'].json['nome_fantasia'] === '' || $node['dados_validados'].json['nome_fantasia'] === null || $node['dados_validados'].json['nome_fantasia'] === undefined ? $node['dados_validados'].json['E-mail do Cliente'] : $node['dados_validados'].json['nome_fantasia'] }}\",\n      \"cnpj_cpf\": \"{{ $node['dados_validados'].json['cpf'] ? $node['dados_validados'].json['cpf'] : $node['dados_validados'].json['cnpj'] }}\",\n      \"telefone1_ddd\": \"{{ $node['dados_validados'].json['Telefone do Cliente - Formato Z-API'].slice(2, 4) }}\",\n      \"telefone1_numero\": \"{{ $node['dados_validados'].json['Telefone do Cliente - Formato Z-API'].slice(4) }}\",\n      \"endereco\": \"{{ $node['dados_validados'].json['endereco'].slice(0,60) }}\",\n      \"estado\": \"{{ $node['dados_validados'].json['estado'] }}\",\n      \"cidade\": \"\",\n      \"cep\": \"{{ $node['dados_validados'].json['cep'] }}\",\n      \"observacao\": \"{{ $node['dados_validados'].json['cargo'] }}\",\n      \"tags\": \"\",\n      \"obs_detalhadas\":\"{{ $node['dados_validados'].json['endereco'].slice(0,100) }}\",\n      \"importado_api\": \"S\",\n      \"dadosBancarios\": [\n        {\n          \"codigo_banco\": \"\",\n          \"agencia\": \"{{ $node['dados_validados'].json['agencia'] }}\",\n          \"conta_corrente\": \"{{ $node['dados_validados'].json['conta_com_digito'] }}\",\n          \"doc_titular\": \"{{ $node['dados_validados'].json['cpf'] ? $node['dados_validados'].json['cpf'] : $node['dados_validados'].json['cnpj'] }}\",\n          \"nome_titular\": \"{{ $node['dados_validados'].json['Nome do Cliente'] }}\",\n          \"cChavePix\": \"{{ $node[\"dados_validados\"].json[\"tipo_chave\"] === 'Telefone' ? $node[\"dados_validados\"].json[\"chave_telefone\"] : $node['dados_validados'].json['chave_px_pj'] }}\"\n        }\n      ]\n    }\n  ]\n}",
+        "options": {}
+      },
+      "id": "f6d77c7f-2866-4751-ab67-30551e585c2f",
+      "name": "add_cliente_omie1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        780,
+        600
+      ],
+      "retryOnFail": false,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"insere_dados1\"].json[\"data\"][\"insertId\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_cliente_omie",
+              "value": "={{ $node[\"add_contrato5\"].runIndex <= 0 ? $node[\"add_cliente_omie1\"].json[\"error\"][\"message\"].match(/Id \\[([0-9]+)\\]/)[1] : $node[\"add_cliente_omie3\"].json[\"codigo_cliente_integracao\"]}}"
+            },
+            {
+              "column": "id_contrato_omie",
+              "value": "={{ $json[\"nCodCtr\"] }}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"dados_validados\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "456c1661-5639-451b-8e55-103f81987e44",
+      "name": "atualiza_lead3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1680,
+        640
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"dados_validados\"].json[\"id_banco_dados\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "update_time",
+              "value": "={{$now.toFormat('yyyy-MM-dd HH:mm ss')}}"
+            },
+            {
+              "column": "id_cliente_omie",
+              "value": "={{ $node[\"add_contrato4\"].runIndex <= 0 ? $node[\"add_cliente_omie\"].json[\"error\"][\"message\"].match(/Id \\[([0-9]+)\\]/)[1] : $node[\"add_cliente_omie\"].json[\"codigo_cliente_integracao\"]}}"
+            },
+            {
+              "column": "id_contrato_omie",
+              "value": "={{ $json[\"nCodCtr\"] }}"
+            },
+            {
+              "column": "conta_corrente_omie",
+              "value": "={{ $node[\"dados_validados\"].json[\"nCodCC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "53578832-82f7-4c11-b4ef-c618f1ff9d82",
+      "name": "atualiza_lead",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1640,
+        1360
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "DS41BflHYyPSAI7U",
+          "name": "[MySQL] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://app.omie.com.br/api/v1/servicos/contrato/#IncluirContrato",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"call\": \"IncluirContrato\",\n    \"app_key\": \"{{ $node['dados_validados'].json['OMIE_APP_KEY'] }}\",\n    \"app_secret\": \"{{ $node['dados_validados'].json['OMIE_APP_SECRET'] }}\",\n    \"param\": [\n        {\n    \"cabecalho\": {\n    \"cCodIntCtr\": \"{{ $node[\"add_cliente_omie1\"].json[\"error\"][\"message\"].match(/Id \\[([0-9]+)\\]/)[1] }}\",\n    \"cCodSit\": \"10\",\n    \"cNumCtr\": \"2020/01001\",\n    \"cTipoFat\": \"01\",\n    \"dVigFinal\": \"{{ $node[\"dados_validados\"].json[\"data_final\"] }}\",\n    \"dVigInicial\": \"{{ $node[\"dados_validados\"].json[\"data_inicial\"] }}\",\n    \"nCodCli\": {{ $node[\"add_cliente_omie1\"].json[\"error\"][\"message\"].match(/Id \\[([0-9]+)\\]/)[1] }},\n    \"nDiaFat\": 30,\n    \"nValTotMes\": 0\n  },\n  \"departamentos\": [],\n  \"emailCliente\": {\n    \"cEnviarBoleto\": \"\",\n    \"cEnviarLinkNfse\": \"\",\n    \"cEnviarRecibo\": \"\",\n    \"cUtilizarEmails\": \"\"\n  },\n  \"infAdic\": {\n    \"cCidPrestServ\": \"{{ $node[\"dados_validados\"].json[\"cidade_prestacao_servico\"] }}\",\n    \"cCodART\": \"\",\n    \"cCodCateg\": \"1.01.02\",\n    \"cCodObra\": \"\",\n    \"cContato\": \"\",\n    \"cDadosAdicNF\": \"\",\n    \"nCodCC\": {{ $node[\"dados_validados\"].json[\"nCodCC\"] }},\n    \"nCodProj\": 0,\n    \"nCodVend\": 0\n  },\n  \"itensContrato\": [\n    {\n      \"itemCabecalho\": {\n        \"codIntItem\": \"1\",\n        \"cCodCategItem\": \"\",\n        \"cNaoGerarFinanceiro\": \"N\",\n        \"codLC116\": \"3.05\",\n        \"codNBS\": \"\",\n        \"codServMunic\": \"01292\",\n        \"codServico\": 0,\n        \"natOperacao\": \"01\",\n        \"quant\": 1,\n        \"seq\": 1,\n        \"valorDed\": 0,\n        \"valorTotal\": {{ $node[\"dados_validados\"].json[\"valor_total\"] }},\n        \"valorUnit\": {{ $node[\"dados_validados\"].json[\"valor_unitario\"] }}\n      },\n      \"itemDescrServ\": {\n        \"descrCompleta\": \"{{ $node[\"dados_validados\"].json[\"tipo_de_servico\"] ? $node[\"dados_validados\"].json[\"tipo_de_servico\"] : 'Serviços prestados' }}\"\n      },\n      \"itemImpostos\": {\n        \"aliqCOFINS\": 0,\n        \"aliqCSLL\": 0,\n        \"aliqINSS\": 0,\n        \"aliqIR\": 0,\n        \"aliqISS\": 5,\n        \"aliqPIS\": 0,\n        \"redBaseINSS\": 0,\n        \"retCOFINS\": \"\",\n        \"retCSLL\": \"\",\n        \"retINSS\": \"\",\n        \"retIR\": \"\",\n        \"retISS\": \"N\",\n        \"retPIS\": \"\",\n        \"valorCOFINS\": 0,\n        \"valorCSLL\": 0,\n        \"valorINSS\": 0,\n        \"valorIR\": 0,\n        \"valorISS\": 0,\n        \"valorPIS\": 0\n      },\n      \"itemLeiTranspImp\": {\n        \"aliMunicipal\": 0,\n        \"aliqEstadual\": 0,\n        \"aliqFederal\": 0,\n        \"chave\": \"\",\n        \"fonte\": \"\"\n      }\n    },\n    {\n      \"itemCabecalho\": {\n        \"codIntItem\": \"2\",\n        \"cCodCategItem\": \"\",\n        \"cNaoGerarFinanceiro\": \"N\",\n        \"codLC116\": \"17.01\",\n        \"codNBS\": \"\",\n        \"codServMunic\": \"0162-8/99\",\n        \"codServico\": {{ $node[\"dados_validados\"].json[\"codServico\"] }},\n        \"natOperacao\": \"01\",\n        \"quant\": 1,\n        \"seq\": 2,\n        \"valorDed\": 0,\n        \"valorTotal\": {{ $node[\"dados_validados\"].json[\"valor_total\"] }},\n        \"valorUnit\": {{ $node[\"dados_validados\"].json[\"valor_unitario\"] }}\n      },\n      \"itemDescrServ\": {\n        \"descrCompleta\": \"{{ $node[\"dados_validados\"].json[\"tipo_de_servico\"] ? $node[\"dados_validados\"].json[\"tipo_de_servico\"] : 'Serviços prestados' }}\"\n      },\n      \"itemImpostos\": {\n        \"aliqCOFINS\": 0,\n        \"aliqCSLL\": 0,\n        \"aliqINSS\": 0,\n        \"aliqIR\": 0,\n        \"aliqISS\": 3,\n        \"aliqPIS\": 0,\n        \"redBaseINSS\": 0,\n        \"retCOFINS\": \"\",\n        \"retCSLL\": \"\",\n        \"retINSS\": \"\",\n        \"retIR\": \"\",\n        \"retISS\": \"N\",\n        \"retPIS\": \"\",\n        \"valorCOFINS\": 0,\n        \"valorCSLL\": 0,\n        \"valorINSS\": 0,\n        \"valorIR\": 0,\n        \"valorISS\": 9,\n        \"valorPIS\": 0\n      },\n      \"itemLeiTranspImp\": {\n        \"aliMunicipal\": 0,\n        \"aliqEstadual\": 0,\n        \"aliqFederal\": 0,\n        \"chave\": \"\",\n        \"fonte\": \"\"\n      }\n    }\n  ],\n  \"observacoes\": {\n    \"cObsContrato\": \"\"\n  },\n  \"vencTextos\": {\n    \"cAdContrato\": \"N\",\n    \"cAdPeriodo\": \"N\",\n    \"cAdVenc\": \" \",\n    \"cAntecipar\": \"\",\n    \"cCodPerRef\": \"001\",\n    \"cDiaFim\": 0,\n    \"cDiaIni\": 0,\n    \"cPostergar\": \"\",\n    \"cProxMes\": \"\",\n    \"cTpVenc\": \"001\",\n    \"nDiaFixo\": 0,\n    \"nDias\": 5\n            }\n        }\n    ]\n}",
+        "options": {}
+      },
+      "id": "31153914-3c36-40a4-8220-b93fdbf52528",
+      "name": "add_contrato5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "21294ed5-73f8-497a-bdc5-3c118fc2b41f",
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Nome do Cliente\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4f54db94-1c36-4666-a211-14b8fba5eeae",
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"E-mail do Cliente\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "50a774c2-de32-41e4-bead-27dfc443ffc4",
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Telefone do Cliente - Formato Z-API\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "ff86f2d1-ca37-4e41-826a-ba394b6063ea",
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"Telefone do Cliente - Formato BC\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "ad7a738f-3d34-40e0-9226-5ba20f4a74ba",
+              "name": "data_criacao",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"data_criacao\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "dca4f95d-e443-4574-b153-8daff3044d5c",
+              "name": "fase_atual",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"fase_atual\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d5c8bfc7-f722-4371-a40f-2f9ed65e6db5",
+              "name": "id_card",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"id_card\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a9429536-bc5f-475a-9a15-29caf6c5f3d3",
+              "name": "etiquetas",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"etiquetas\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "b9b49611-8644-4668-8fac-4b316d174c73",
+              "name": "titulo_card",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"titulo_card\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "3a0f72bb-6a5f-4095-88b6-b0f0fc6a4212",
+              "name": "responsavel",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"responsavel\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "8ef1db27-4036-4222-afec-795dd0e27c9d",
+              "name": "origem",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"origem\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "40b4c8e1-d3df-4259-ba81-015d3978a0c0",
+              "name": "cnpj",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"cnpj\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "17444e80-7891-4f12-8d9e-f38f06b23bea",
+              "name": "razao_social",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"razao_social\"] ? $node[\"tratamento_de_dados\"].json[\"razao_social\"] : 'razao_social'}}",
+              "type": "string"
+            },
+            {
+              "id": "f497639d-9847-4ad7-868e-0a7be0f65d01",
+              "name": "endereco",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"endereco_completo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "1d163929-165f-41a6-9646-a6d5fbdd6fc7",
+              "name": "modelo_de_negocio",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"modelo_de_negocio\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "23224821-2447-44e9-96ef-939768e83f24",
+              "name": "cargo",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"cargo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "3afc9290-c16c-4f18-acde-107d7dad6b95",
+              "name": "pessoas_no_time",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"pessoas_no_time\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f4599128-21b1-4bbc-9913-685b5c81bd90",
+              "name": "pessoas_na_empresa",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"pessoas_na_empresa\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a8b2f757-a465-41a7-a8a2-92c8e8270fdb",
+              "name": "tipo_de_servico",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"tipo_de_servico\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4bd0c624-29bd-459d-9124-c323e8354357",
+              "name": "conhece_a_portus",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"conhece_a_portus\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d6e62c2d-14c1-4e39-a789-3db695dc2737",
+              "name": "como_soube_da_portus",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"como_soube_da_portus\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "64e73be8-bb4a-4962-ad0f-1acffeb11049",
+              "name": "nome_empresa",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"nome_empresa\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "47ef40b4-f9ae-4c9d-b83f-bd6fdb6ffbd9",
+              "name": "faturamento_2023",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"faturamento_2023\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "13730f1f-743d-4ea7-9a0b-e4c5aaebabc7",
+              "name": "faturamento_mensal",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"faturamento_mensal\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "d2e4e74d-0e99-416b-bbf1-de7e6060e517",
+              "name": "meta_2024",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"meta_2024\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a049b80c-7910-41a9-8d0b-efbc94ad31e2",
+              "name": "tem_produto_servico",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"tem_produto_servico\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a9341455-88f5-49af-bcd7-07dddaf99819",
+              "name": "profissional_almejado",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"profissional_almejado\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "8cb7de1a-0874-4310-89b6-999d69371a59",
+              "name": "vaga_aberta",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"vaga_aberta\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "83259c67-ebe3-4b10-b887-b2678c30f8ba",
+              "name": "tipo_contrato",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"tipo_contrato\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "42f9eaad-436f-44ac-9137-e9eb9825a975",
+              "name": "valor_contrato",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"valor_contrato\"] ? $node[\"tratamento_de_dados\"].json[\"valor_contrato\"] : 1 }}",
+              "type": "number"
+            },
+            {
+              "id": "23ce79b4-fadc-4ac2-ba7d-9fd54ceac0df",
+              "name": "forma_pagamento",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"forma_pagamento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "acb6b968-c929-49f3-bd76-12c016a3d752",
+              "name": "garantia",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"garantia\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f03a8581-6758-4e63-884c-fcd491e9f36d",
+              "name": "desafio_com_gestao_de_pessoas",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"desafio_com_gestao_de_pessoas\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "5a1c5e07-c761-40ad-b552-d2bd9b965390",
+              "name": "infos_sobre_a_vaga",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"infos_sobre_a_vaga\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "3bf0184d-9e9c-4f16-8638-7480375333f0",
+              "name": "parceiro",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"parceiro\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9ba08edf-eab6-4def-b274-6d55b9611eef",
+              "name": "celula",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"celula\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9fb09334-fe7d-41d0-b487-1481806a5ae2",
+              "name": "funil",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"funil\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "cf9633eb-b744-41e8-9479-a718113f2b68",
+              "name": "id_lead_database",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"id_lead_database\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "b422d415-700b-4672-ad2a-fe87c13a89da",
+              "name": "utm_source",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "aa379d3e-74f6-4a53-b797-fce048441c99",
+              "name": "utm_medium",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "6eb26478-47cb-4225-9c20-c069f8acda08",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "21a31b00-cba5-455f-8d6b-e418ffe1f3c3",
+              "name": "utm_content",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "8f6618bc-4328-4b06-8530-08c44afef0fa",
+              "name": "utm_term",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "866844b6-dfae-4f2f-8679-2c0d52a466f4",
+              "name": "OMIE_APP_SECRET",
+              "value": "b639126e175094af1c6f9af953d3153a",
+              "type": "string"
+            },
+            {
+              "id": "ff9f5a87-a1b9-434d-be09-ea00421f99de",
+              "name": "OMIE_APP_KEY",
+              "value": "4486352513643",
+              "type": "string"
+            },
+            {
+              "id": "dd3211c8-0d1f-4c73-a133-e8a7c8c3eb97",
+              "name": "data_inicial",
+              "value": "={{ $now.toFormat('dd/MM/yyyy') }}",
+              "type": "string"
+            },
+            {
+              "id": "31a7e35d-59aa-4574-aa34-56535172a120",
+              "name": "data_final",
+              "value": "={{ (new Date(new Date().setDate(new Date().getDate() + 90))).toLocaleDateString('pt-BR') }}",
+              "type": "string"
+            },
+            {
+              "id": "09bcb29f-235d-4c12-afc7-b90bde464151",
+              "name": "valor_total",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"valor_contrato\"] === 0 ||  $node[\"tratamento_de_dados\"].json[\"valor_contrato\"] === '0.0' ? '1' : $node[\"tratamento_de_dados\"].json[\"valor_contrato\"] }}",
+              "type": "number"
+            },
+            {
+              "id": "2f92895f-91f6-4149-abe2-58f422c9e0a7",
+              "name": "valor_unitario",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"valor_contrato\"] === 0 ||  $node[\"tratamento_de_dados\"].json[\"valor_contrato\"] === '0.0' ? '1' : $node[\"tratamento_de_dados\"].json[\"valor_contrato\"] }}",
+              "type": "number"
+            },
+            {
+              "id": "5fda14b3-dc9f-4b00-a21d-52e0300ebde4",
+              "name": "cidade_prestacao_servico",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"cidade_prestacao_servico\"] ? $node[\"tratamento_de_dados\"].json[\"cidade_prestacao_servico\"] : 'PETROPOLIS (RJ)' }}",
+              "type": "string"
+            },
+            {
+              "id": "56cf51dc-5b49-4406-bb25-473291626fff",
+              "name": "id_banco_dados",
+              "value": "=",
+              "type": "string"
+            },
+            {
+              "id": "d3302861-24ca-497a-9210-e8cf22109378",
+              "name": "descricao",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"descricao\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "5b34215e-392b-40d1-8dbe-48a74e5771ce",
+              "name": "tipo_conta_corrente",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"tipo_conta_corrente\"] ? $node[\"tratamento_de_dados\"].json[\"tipo_conta_corrente\"] : 'CC' }}",
+              "type": "string"
+            },
+            {
+              "id": "63a4924f-6a2e-4981-bb89-2874efb99547",
+              "name": "codigo_banco",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"codigo_banco\"] ? $node[\"tratamento_de_dados\"].json[\"codigo_banco\"] : `077` }}",
+              "type": "string"
+            },
+            {
+              "id": "26c7d1ae-f1ec-4683-ac3f-0908e08acc82",
+              "name": "descricao_cc",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"descricao_cc\"] ? $node[\"tratamento_de_dados\"].json[\"descricao_cc\"] : 'Banco Inter' }}",
+              "type": "string"
+            },
+            {
+              "id": "99f5a57d-d2a4-4119-b365-7751154b2ffe",
+              "name": "saldo_inicial",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"saldo_inicial\"] ? parseInt($node[\"tratamento_de_dados\"].json[\"saldo_inicial\"]) : 0 }}",
+              "type": "number"
+            },
+            {
+              "id": "04fbae92-e572-4a24-bcce-53392a17205f",
+              "name": "nome_fantasia",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"nome_fantasia\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "804685e0-1929-418e-815c-cc9fb960c46d",
+              "name": "codServico",
+              "value": "5208153175",
+              "type": "string"
+            },
+            {
+              "id": "7cd864fb-b2e7-4484-afde-6e172998f184",
+              "name": "nCodCC",
+              "value": 1745966686,
+              "type": "number"
+            },
+            {
+              "id": "3f504a86-a3ac-4ecc-9bae-530e7506a8d4",
+              "name": "estado",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"endereco\"][\"estado\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "543873a2-0b45-4649-895c-7b4896021b69",
+              "name": "cidade",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"endereco\"][\"cidade\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "5ab1e1cb-6d64-4416-9a7b-9c4cb3f99951",
+              "name": "cep",
+              "value": "={{ $node[\"tratamento_de_dados\"].json[\"endereco\"][\"cep\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "240c4cbc-7e4d-4943-ac03-beb187cabcf7",
+      "name": "dados_validados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        -180,
+        940
+      ]
+    }
+  ],
+  "pinData": {
+    "nova_venda_realizada_pipefy": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "Pipefy-UserAgent",
+            "content-length": "1243",
+            "accept": "application/json",
+            "content-type": "application/json",
+            "elastic-apm-traceparent": "00-6c3a84346f443d7df42833faa8b7ff8d-048e9cf3441714e7-00",
+            "traceparent": "00-6c3a84346f443d7df42833faa8b7ff8d-048e9cf3441714e7-00",
+            "tracestate": "es=s:0.0",
+            "x-forwarded-for": "129.80.157.176",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "129.80.157.176",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "criado_em": "2024-06-28T19:02:04Z",
+            "fase_atual": "VENDA REALIZADA",
+            "id_card": "951613610",
+            "etiquetas": "",
+            "title": "Daniela Lopes de Almeida Leal",
+            "responsavel": "Raquel Moura ",
+            "origem": "",
+            "cpf-cnpj": "",
+            "razao_social": "",
+            "endereco_fiscal": "",
+            "modelo_de_negocio": "",
+            "nome": "Daniela E Carla",
+            "email": "",
+            "phone": "+55 21 99636-6258",
+            "cargo_do_lead": "",
+            "qntd_pessoas_time": "",
+            "qntd_pessoas_empresa": "",
+            "modelo_negocio": "",
+            "tipo_servico": "",
+            "conhece_a_portus": "",
+            "como_soube_da_portus": "",
+            "nome_empresa": "daniela@sowprodutoradigital.com.br",
+            "faturamento_2023": "",
+            "faturamento_mensal": "",
+            "meta_2024": "",
+            "tem_produto_servico": "",
+            "profissional_almejado": "",
+            "vaga_aberta": "",
+            "tipo_contrato": "",
+            "valor_contrato": "",
+            "valor_contrato1": "60000.0",
+            "forma_pagamento": "",
+            "garantia": "Garantia vide Contrato Partner",
+            "desafio_com_gestao_de_pessoas": "",
+            "infos_sobre_a_vaga": "",
+            "parceiro": "",
+            "celula": "",
+            "funil": "",
+            "id_lead_database": "",
+            "utm_source": "",
+            "utm_medium": "",
+            "utm_campaign": "",
+            "utm_content": "",
+            "utm_term": "",
+            "nome_fantasia": "",
+            "descricao_cc": "",
+            "codigo_banco": "",
+            "tipo_conta_corrente": "",
+            "descricao": "",
+            "cidade_prestacao_servico": "",
+            "valor_unitario": "",
+            "valor_total": "",
+            "data_final": "",
+            "data_inicial": ""
+          }
+        }
+      }
+    ],
+    "HTTP Request3": [
+      {
+        "json": {
+          "codigo_cliente_omie": 1760324693,
+          "codigo_cliente_integracao": "156",
+          "razao_social": "Teste1",
+          "cnpj_cpf": "",
+          "nome_fantasia": "Teste1",
+          "telefone1_ddd": "",
+          "telefone1_numero": "",
+          "contato": "",
+          "endereco": "",
+          "endereco_numero": "",
+          "bairro": "",
+          "complemento": "",
+          "estado": "",
+          "cidade": "",
+          "cep": "",
+          "codigo_pais": "1058",
+          "separar_endereco": "",
+          "pesquisar_cep": "",
+          "telefone2_ddd": "",
+          "telefone2_numero": "",
+          "fax_ddd": "",
+          "fax_numero": "",
+          "email": "teste12@gmail.com",
+          "homepage": "",
+          "inscricao_estadual": "",
+          "inscricao_municipal": "",
+          "inscricao_suframa": "",
+          "optante_simples_nacional": "",
+          "tipo_atividade": "",
+          "cnae": "",
+          "produtor_rural": "",
+          "contribuinte": "",
+          "observacao": "",
+          "obs_detalhadas": "",
+          "recomendacao_atraso": "",
+          "tags": [],
+          "pessoa_fisica": "N",
+          "exterior": "N",
+          "logradouro": "",
+          "importado_api": "",
+          "bloqueado": "N",
+          "cidade_ibge": "",
+          "valor_limite_credito": 0,
+          "bloquear_faturamento": "N",
+          "recomendacoes": {
+            "gerar_boletos": "N"
+          },
+          "enderecoEntrega": {},
+          "nif": "",
+          "documento_exterior": "",
+          "inativo": "N",
+          "dadosBancarios": {
+            "agencia": "",
+            "cChavePix": "",
+            "codigo_banco": "",
+            "conta_corrente": "",
+            "doc_titular": "",
+            "nome_titular": "",
+            "transf_padrao": "N"
+          },
+          "caracteristicas": [],
+          "enviar_anexos": "",
+          "info": {
+            "cImpAPI": "S",
+            "dAlt": "18/06/2024",
+            "dInc": "18/06/2024",
+            "hAlt": "17:05:04",
+            "hInc": "17:05:04",
+            "uAlt": "WEBSERVICE",
+            "uInc": "WEBSERVICE"
+          },
+          "bloquear_exclusao": "N"
+        }
+      }
+    ],
+    "tratamento_de_dados": [
+      {
+        "json": {
+          "Nome do Cliente": "Michelle",
+          "E-mail do Cliente": "michelle@latelierdessucreries.fr",
+          "isEmailValid": true,
+          "Telefone do Cliente - Formato Z-API": "33650012573",
+          "Telefone do Cliente - Formato BC": "+33650012573",
+          "data_criacao": "",
+          "fase_atual": "VENDA REALIZADA",
+          "id_card": "947187097",
+          "etiquetas": "CONTRATO ENVIADO",
+          "titulo_card": "",
+          "responsavel": "Letícia Campos, Raquel Moura ",
+          "origem": "Instagram",
+          "cnpj": "98.765.139/0001-20",
+          "razao_social": "L’Atelier des Sucreries",
+          "nome_fantasia": "L’Atelier des Sucreries",
+          "endereco_completo": "229 Rue Saint Honoré 75001, Paris/FR, 75001",
+          "modelo_de_negocio": "Empresa de Educação",
+          "cargo": "",
+          "pessoas_no_time": "03",
+          "pessoas_na_empresa": "",
+          "tipo_de_servico": "",
+          "conhece_a_portus": "",
+          "como_soube_da_portus": "Instagram",
+          "nome_empresa": "michellecczs@gmail.com",
+          "faturamento_2023": "",
+          "faturamento_mensal": "",
+          "meta_2024": "",
+          "tem_produto_servico": "",
+          "profissional_almejado": "",
+          "vaga_aberta": "",
+          "tipo_contrato": "",
+          "valor_contrato": "60000.0",
+          "forma_pagamento": "",
+          "garantia": "Garantia vide Contrato Partner",
+          "desafio_com_gestao_de_pessoas": "Minha empresa  é na França e meu conteúdo é todo em francês. \nMeu desafio hoje é encontrar profissionais capacitados para trabalhar com essa língua. ",
+          "infos_sobre_a_vaga": "",
+          "parceiro": "",
+          "celula": "",
+          "funil": "",
+          "id_lead_database": "",
+          "descricao_cc": "",
+          "codigo_banco": "",
+          "tipo_conta_corrente": "",
+          "descricao": "",
+          "cidade_prestacao_servico": "",
+          "valor_unitario": "",
+          "valor_total": "",
+          "data_final": "",
+          "data_inicial": "",
+          "utm_source": "",
+          "utm_medium": "",
+          "utm_campaign": "",
+          "utm_content": "",
+          "utm_term": "",
+          "endereco": {
+            "estado": "",
+            "cidade": "",
+            "cep": ""
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveExecutionProgress": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveManualExecutions": true
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-07-10T01:10:19.789Z",
+  "versionId": "d7c938d0-4421-4c39-ada6-387ce00e8fb7"
+}
