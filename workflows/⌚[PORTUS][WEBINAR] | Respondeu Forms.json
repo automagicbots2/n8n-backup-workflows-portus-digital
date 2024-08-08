@@ -1,0 +1,2304 @@
+{
+  "active": true,
+  "connections": {
+    "forms_trafego": {
+      "main": [
+        [
+          {
+            "node": "dados_validados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados": {
+      "main": [
+        [
+          {
+            "node": "busca_telefone_na_planilha",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "forms_organico": {
+      "main": [
+        [
+          {
+            "node": "dados_validados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados": {
+      "main": [
+        [
+          {
+            "node": "dados_validados2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados2": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "formata_dados",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "3s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3s": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_telefone_na_planilha": {
+      "main": [
+        [
+          {
+            "node": "existe_telefone_na_planilha",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_telefone_na_planilha": {
+      "main": [
+        [
+          {
+            "node": "espera_3s1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "espera_3s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "espera_3s": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "espera_3s1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-05-10T17:32:04.371Z",
+  "id": "gISLELWW70ebT6Al",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[PORTUS][WEBINAR] | Respondeu Forms",
+  "nodes": [
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Seu DDD + WhatsApp\"].replaceAll(' ','') }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "=+{{ $json[\"body\"][\"respondent\"][\"answers\"][\"Seu DDD + WhatsApp\"].replaceAll(' ','') }}"
+            },
+            {
+              "name": "Já conhecia a Kelly Eleto?",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Já conhecia a Kelly Eleto?\"] }}"
+            },
+            {
+              "name": "O que fez você se inscrever",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"O que fez você se inscrever para a sala secreta de estruturação de time? Fale um pouco sobre como você espera que isso te ajude nesse momento.\"] }}"
+            },
+            {
+              "name": "Faz parte de algum mastermind ou mentoria?",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Faz parte de algum mastermind ou mentoria? Se sim, qual?\"] }}"
+            },
+            {
+              "name": "Você é dono de um negócio digital",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Você é dono de um negócio digital?\"] }}"
+            },
+            {
+              "name": "Qual é o seu modelo de negócio",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Qual é o seu modelo de negócio?\"] }}"
+            },
+            {
+              "name": "Quantas pessoas trabalham na sua empresa?",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Quantas pessoas trabalham na sua empresa?\"] }}"
+            },
+            {
+              "name": "estrutura de time",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Fale um pouquinho sobre como é a sua estrutura de time...\"] }}"
+            },
+            {
+              "name": "E o que te deixa mais insatisfeito com esse time hoje?",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"E o que te deixa mais insatisfeito com esse time hoje?\"] }}"
+            },
+            {
+              "name": "preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Hoje você está preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?\"] }}"
+            },
+            {
+              "name": "faturamento nos últimos 12 meses",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Quanto seu negócio faturou aproximadamente nos últimos 12 meses?\"] }}"
+            },
+            {
+              "name": "meta de faturamento",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"E qual é a sua meta de faturamento para 2024?\"] }}"
+            },
+            {
+              "name": "principal dificuldade",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Quando a gente fala em contratação e estruturação de equipe, qual tem sido a sua principal dificuldade?\"] }}"
+            },
+            {
+              "name": "vagas abertas",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Você está com vagas abertas para contratar agora?\"] }}"
+            },
+            {
+              "name": "Posso (re)estruturar sua equipe",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"A Kelly pode (re)estruturar sua equipe ao vivo na sala secreta?\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"respondent_utms\"][\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"respondent_utms\"][\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"respondent_utms\"][\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"respondent_utms\"][\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"respondent_utms\"][\"utm_term\"] }}"
+            },
+            {
+              "name": "data_resposta_type",
+              "value": "={{$now.toFormat('dd/MM/yyyy HH:mm')}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c96543ac-a45c-479b-84e1-f51bac53bcf1",
+      "name": "dados_validados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        280,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "respondeu-forms-trafego",
+        "options": {}
+      },
+      "id": "b9af0e8c-39e3-4ef2-add5-fbeca88f17fa",
+      "name": "forms_trafego",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        60,
+        460
+      ],
+      "webhookId": "ffcc40f4-7675-4a5c-8f34-e370c6c9c96a"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1O8y09-lnDCyCaOyXycg4n4cdOKmFvVK1O6jzcsnKPF0",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 520149888,
+          "mode": "list",
+          "cachedResultName": "Trafego",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1O8y09-lnDCyCaOyXycg4n4cdOKmFvVK1O6jzcsnKPF0/edit#gid=520149888"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "WhatsApp": "={{ $json[\"Telefone do Cliente - Formato BC\"] }}",
+            "Já conhecia a Kelly Eleto?": "={{ $json[\"Já conhecia a Kelly Eleto?\"] }}",
+            "O que fez você se inscrever": "={{ $json[\"O que fez você se inscrever\"] }}",
+            "Faz parte de algum mastermind ou mentoria?": "={{ $json[\"Faz parte de algum mastermind ou mentoria?\"] }}",
+            "Você é dono de um negócio digital?": "={{ $json[\"Você é dono de um negócio digital\"] }}",
+            "Qual é o seu modelo de negócio?": "={{ $json[\"Qual é o seu modelo de negócio\"] }}",
+            "Quantos funcionarios": "={{ $json[\"Quantas pessoas trabalham na sua empresa?\"] }}",
+            "estrutura do time": "={{ $json[\"estrutura de time\"] }}",
+            "E o que te deixa mais insatisfeito com esse time hoje?": "={{ $json[\"E o que te deixa mais insatisfeito com esse time hoje?\"] }}",
+            "preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?": "={{ $json[\"preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?\"] }}",
+            "faturamento nos últimos 12 meses": "={{ $json[\"faturamento nos últimos 12 meses\"] }}",
+            "meta de faturamento para 2024": "={{ $json[\"meta de faturamento\"] }}",
+            "principal dificuldade": "={{ $json[\"principal dificuldade\"] }}",
+            "vagas em abertas": "={{ $json[\"vagas abertas\"] }}",
+            "Posso (re)estruturar sua equipe": "={{ $json[\"Posso (re)estruturar sua equipe\"] }}"
+          },
+          "matchingColumns": [
+            "WhatsApp"
+          ],
+          "schema": [
+            {
+              "id": "Data de entrada",
+              "displayName": "Data de entrada",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Nome",
+              "displayName": "Nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "WhatsApp",
+              "displayName": "WhatsApp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "E-mail",
+              "displayName": "E-mail",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "instagram",
+              "displayName": "instagram",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Já conhecia a Kelly Eleto?",
+              "displayName": "Já conhecia a Kelly Eleto?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "O que fez você se inscrever",
+              "displayName": "O que fez você se inscrever",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Faz parte de algum mastermind ou mentoria?",
+              "displayName": "Faz parte de algum mastermind ou mentoria?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Você é dono de um negócio digital?",
+              "displayName": "Você é dono de um negócio digital?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Qual é o seu modelo de negócio?",
+              "displayName": "Qual é o seu modelo de negócio?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Quantos funcionarios",
+              "displayName": "Quantos funcionarios",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "estrutura do time",
+              "displayName": "estrutura do time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "E o que te deixa mais insatisfeito com esse time hoje?",
+              "displayName": "E o que te deixa mais insatisfeito com esse time hoje?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?",
+              "displayName": "preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "faturamento nos últimos 12 meses",
+              "displayName": "faturamento nos últimos 12 meses",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "meta de faturamento para 2024",
+              "displayName": "meta de faturamento para 2024",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "principal dificuldade",
+              "displayName": "principal dificuldade",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "vagas em abertas",
+              "displayName": "vagas em abertas",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Posso (re)estruturar sua equipe",
+              "displayName": "Posso (re)estruturar sua equipe",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c7331ac9-e342-405e-b0f5-ff970de1f037",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.3,
+      "position": [
+        1120,
+        480
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "6haYpAmOsZXFxR68",
+          "name": "[Google Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Seu DDD + WhatsApp\"].replaceAll(' ','') }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "=+{{ $json[\"body\"][\"respondent\"][\"answers\"][\"Seu DDD + WhatsApp\"].replaceAll(' ','') }}"
+            },
+            {
+              "name": "O que fez você se inscrever",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"O que fez você se inscrever para a sala secreta de estruturação de time? Fale um pouco sobre como você espera que isso te ajude nesse momento.\"] }}"
+            },
+            {
+              "name": "Faz parte de algum mastermind ou mentoria?",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Faz parte de algum mastermind ou mentoria? Se sim, qual?\"] }}"
+            },
+            {
+              "name": "Você é dono de um negócio digital",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Você é dono de um negócio digital?\"] }}"
+            },
+            {
+              "name": "Qual é o seu modelo de negócio",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Qual é o seu modelo de negócio?\"] }}"
+            },
+            {
+              "name": "Quantas pessoas trabalham na sua empresa?",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Quantas pessoas trabalham na sua empresa?\"] }}"
+            },
+            {
+              "name": "estrutura de time",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Fale um pouquinho sobre como é a sua estrutura de time...\"] }}"
+            },
+            {
+              "name": "E o que te deixa mais insatisfeito com esse time hoje?",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"E o que te deixa mais insatisfeito com esse time hoje?\"] }}"
+            },
+            {
+              "name": "preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Hoje você está preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?\"] }}"
+            },
+            {
+              "name": "faturamento nos últimos 12 meses",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Quanto seu negócio faturou aproximadamente nos últimos 12 meses?\"] }}"
+            },
+            {
+              "name": "meta de faturamento",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"E qual é a sua meta de faturamento para 2024?\"] }}"
+            },
+            {
+              "name": "principal dificuldade",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Quando a gente fala em contratação e estruturação de equipe, qual tem sido a sua principal dificuldade?\"] }}"
+            },
+            {
+              "name": "vagas abertas",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Você está com vagas abertas para contratar agora?\"] }}"
+            },
+            {
+              "name": "Posso (re)estruturar sua equipe",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Posso (re)estruturar sua equipe ao vivo na sala secreta?\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"respondent_utms\"][\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"respondent_utms\"][\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"respondent_utms\"][\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"respondent_utms\"][\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"respondent_utms\"][\"utm_term\"] }}"
+            },
+            {
+              "name": "data_resposta_type",
+              "value": "={{$now.toFormat('dd/MM/yyyy HH:mm')}}"
+            },
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Seu nome\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Seu melhor e-mail\"] }}"
+            },
+            {
+              "name": "Instagram",
+              "value": "={{ $json[\"body\"][\"respondent\"][\"answers\"][\"Qual o @ do seu Instagram\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "276aab05-ec0e-4bf5-be5e-a2d1a4b3a898",
+      "name": "dados_validados1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        280,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1O8y09-lnDCyCaOyXycg4n4cdOKmFvVK1O6jzcsnKPF0",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Organico",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1O8y09-lnDCyCaOyXycg4n4cdOKmFvVK1O6jzcsnKPF0/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "WhatsApp": "={{ $json[\"Telefone do Cliente - Formato BC\"] }}",
+            "Data de entrada": "={{ $json[\"data_resposta_type\"].slice (0,10) }}",
+            "Origem": "={{ $node[\"forms_organico\"].json[\"body\"][\"form\"][\"form_name\"].replace('[Captura - Orgânico] [F.WB [PORTUS] - MAI| 24] Sala secreta: Escala com Time','Portus').replace('[Captura - Orgânico Kelly] [F.WB [PORTUS] - MAI| 24] Sala secreta: Escala com Time','Kelly').replace('[Captura - Orgânico Bruno R.] [F.WB [PORTUS] - MAI| 24] Sala secreta: Escala com Time','Bruno')  }}",
+            "Nome": "={{ $json[\"Nome do Cliente\"] }}",
+            "E-mail": "={{ $json[\"E-mail do Cliente\"] }}",
+            "instagram": "={{ $json[\"Instagram\"] }}",
+            "O que fez você se inscrever": "={{ $json[\"O que fez você se inscrever\"] }}",
+            "Faz parte de algum mastermind ou mentoria?": "={{ $json[\"Faz parte de algum mastermind ou mentoria?\"] }}",
+            "Você é dono de um negócio digital?": "={{ $json[\"Você é dono de um negócio digital\"] }}",
+            "Qual é o seu modelo de negócio?": "={{ $json[\"Qual é o seu modelo de negócio\"] }}",
+            "Quantos funcionarios": "={{ $json[\"Quantas pessoas trabalham na sua empresa?\"] }}",
+            "estrutura do time": "={{ $json[\"estrutura de time\"] }}",
+            "E o que te deixa mais insatisfeito com esse time hoje?": "={{ $json[\"E o que te deixa mais insatisfeito com esse time hoje?\"] }}",
+            "preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?": "={{ $json[\"preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?\"] }}",
+            "faturamento nos últimos 12 meses": "={{ $json[\"faturamento nos últimos 12 meses\"] }}",
+            "meta de faturamento para 2024": "={{ $json[\"meta de faturamento\"] }}",
+            "principal dificuldade": "={{ $json[\"principal dificuldade\"] }}",
+            "vagas em abertas": "={{ $json[\"vagas abertas\"] }}",
+            "Posso (re)estruturar sua equipe": "={{ $json[\"Posso (re)estruturar sua equipe\"] }}"
+          },
+          "matchingColumns": [
+            "WhatsApp"
+          ],
+          "schema": [
+            {
+              "id": "Data de entrada",
+              "displayName": "Data de entrada",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Origem",
+              "displayName": "Origem",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Nome",
+              "displayName": "Nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "WhatsApp",
+              "displayName": "WhatsApp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "E-mail",
+              "displayName": "E-mail",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "instagram",
+              "displayName": "instagram",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "O que fez você se inscrever",
+              "displayName": "O que fez você se inscrever",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Faz parte de algum mastermind ou mentoria?",
+              "displayName": "Faz parte de algum mastermind ou mentoria?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Você é dono de um negócio digital?",
+              "displayName": "Você é dono de um negócio digital?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Qual é o seu modelo de negócio?",
+              "displayName": "Qual é o seu modelo de negócio?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Quantos funcionarios",
+              "displayName": "Quantos funcionarios",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "estrutura do time",
+              "displayName": "estrutura do time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "E o que te deixa mais insatisfeito com esse time hoje?",
+              "displayName": "E o que te deixa mais insatisfeito com esse time hoje?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?",
+              "displayName": "preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "faturamento nos últimos 12 meses",
+              "displayName": "faturamento nos últimos 12 meses",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "meta de faturamento para 2024",
+              "displayName": "meta de faturamento para 2024",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "principal dificuldade",
+              "displayName": "principal dificuldade",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "vagas em abertas",
+              "displayName": "vagas em abertas",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Posso (re)estruturar sua equipe",
+              "displayName": "Posso (re)estruturar sua equipe",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6a825976-3540-4d2d-8ebc-81559734b2d1",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.3,
+      "position": [
+        500,
+        660
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "6haYpAmOsZXFxR68",
+          "name": "[Google Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "respondeu-forms-organico",
+        "options": {}
+      },
+      "id": "b20e45c2-c25b-4384-9022-60d6e254987b",
+      "name": "forms_organico",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        60,
+        660
+      ],
+      "webhookId": "ffcc40f4-7675-4a5c-8f34-e370c6c9c96a"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extrair informações do input\nconst inputData = items[0].json;\nconst respostas = inputData.body;\n\n// Função para obter a data atual menos 15 dias no formato brasileiro (dia/mês/ano)\nfunction getDataMenos15Dias() {\n  const dataAtual = new Date();\n  dataAtual.setDate(dataAtual.getDate() - 15);\n  const dia = dataAtual.getDate().toString().padStart(2, '0');\n  const mes = (dataAtual.getMonth() + 1).toString().padStart(2, '0'); // +1 porque o mês começa em 0\n  const ano = dataAtual.getFullYear();\n  return `${ano}-${mes}-${dia}`;\n}\n\n// Função para formatação de usernames do Instagram/site\nfunction formatarInstagram(input) {\n  if (input) {\n    // Verificar se é um site\n    const siteRegex = /^(http|https):\\/\\/(.*)\\.(.*)$/;\n    if (siteRegex.test(input)) {\n      // Se for um site, retornar o input sem formatação\n      return input;\n    } else {\n      // Remover espaços em branco extras e o símbolo \"@\"\n      const usernameSemEspacosOuArroba = input.trim().replace(/@/g, '');\n\n      // Converter para minúsculas\n      const usernameFormatado = usernameSemEspacosOuArroba.toLowerCase();\n\n      return usernameFormatado;\n    }\n  }\n  return '';\n}\n\n\nfunction formatarTelefone(telefone) {\n  const telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\n  let ddi;\n  let ddd;\n  let telefoneFormatado;\n\n  // Verificar se o telefone começa com \"55\" antes de formatá-lo\n  if (telefoneLimpo.startsWith('55')) {\n    ddi = telefoneLimpo.slice(0, 2);\n    ddd = telefoneLimpo.slice(2, 4);\n    if (parseInt(ddd, 10) > 28) {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n    } else {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n    }\n  } else {\n    ddi = '55';\n    ddd = telefoneLimpo.slice(0, 2);\n    if (parseInt(ddd, 10) > 28) {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n    } else {\n      telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n    }\n  }\n\n  return telefoneFormatado;\n}\n\n// Função para extrair as UTMs do objeto JSON\nfunction extractUTMs(json) {\n  const utmParams = {};\n\n  function searchUTMs(obj) {\n    for (const key in obj) {\n      if (key.startsWith('utm_')) {\n        utmParams[key] = obj[key];\n      } else if (typeof obj[key] === 'object') {\n        searchUTMs(obj[key]);\n      }\n    }\n  }\n\n  searchUTMs(json);\n\n  return utmParams;\n}\n\n// Extrair as UTMs do objeto JSON de entrada\nconst utms = extractUTMs(inputData);\n\n// UTMS\nconst utmContent = utms.utm_content || '';\nconst utmSource = utms.utm_source || '';\nconst utmCampaign = utms.utm_campaign || '';\nconst utmMedium = utms.utm_medium || '';\nconst utmTerm = utms.utm_term || '';\n\n// Função para formatação de emails\nfunction formatarEmail(email) {\n  // Remover espaços em branco extras\n  const emailSemEspacos = email.trim();\n\n  // Converter para minúsculas\n  const emailFormatado = emailSemEspacos.toLowerCase();\n\n  return emailFormatado;\n}\n\n// Função para formatação de nomes\nfunction formatarNome(nome) {\n  if (nome) {\n    const palavras = nome.trim().split(/\\s+/);\n\n    const palavrasMinusculas = ['de', 'dos', 'da', 'e', 'do', 'das', 'di', 'du', 'o', 'a', 'u'];\n\n    for (let i = 0; i < palavras.length; i++) {\n      const palavraAtual = palavras[i].toLowerCase();\n      if (i === 0 || i === palavras.length - 1 || !palavrasMinusculas.includes(palavraAtual)) {\n        palavras[i] = palavraAtual.charAt(0).toUpperCase() + palavraAtual.slice(1);\n      } else {\n        palavras[i] = palavraAtual;\n      }\n    }\n\n    return palavras.join(\" \");\n  }\n  return '';\n}\n\n// Data da aplicação em milissefundos\nconst dataAtualEmMilissegundos = new Date().getTime();\n\n// Data atual\nconst dataAtual = new Date();\n\n// Função para adicionar um zero à esquerda se o número for menor que 10\nfunction adicionarZero(numero) {\n  if (numero < 10) {\n    return '0' + numero;\n  }\n  return numero;\n}\n\n// INFORMAÇÕES PESSOAIS\nconst nome = formatarNome( $node[\"forms_organico\"].json[\"body\"][\"respondent\"][\"answers\"][\"Seu nome\"]) || \"\";\nconst telefone = formatarTelefone( $node[\"forms_organico\"].json[\"body\"][\"respondent\"][\"answers\"][\"Seu DDD + WhatsApp\"]) || '';\nconst instagram = formatarInstagram($node[\"forms_organico\"].json[\"body\"][\"respondent\"][\"answers\"][\"Qual o @ do seu Instagram\"] ) || '';\nconst email = formatarEmail( $node[\"forms_organico\"].json[\"body\"][\"respondent\"][\"answers\"][\"Seu melhor e-mail\"]) || \"\";\nconst form_id = $node[\"forms_organico\"].json[\"body\"][\"form\"][\"form_name\"] || '';\nconst dono_de_negocio = $node[\"forms_organico\"].json[\"Você é dono de um negócio digital?\"];\nconst qtd_funcionarios =  $node[\"forms_organico\"].json[\"body\"][\"respondent\"][\"answers\"][\"Quantas pessoas trabalham na sua empresa?\"] ;\n\n// Verificação de qualificação\nlet qualificado = true;\n\nconst donoNegocio = $node[\"forms_organico\"].json[\"Você é dono de um negócio digital?\"];\nconst qtdFuncionarios = $node[\"forms_organico\"].json[\"body\"][\"respondent\"][\"answers\"][\"Quantas pessoas trabalham na sua empresa?\"];\n\nif (donoNegocio === \"Não sou dono nem decisor\" || qtdFuncionarios === \"Ainda não tenho um negócio, nem pensava em contratar\") {\n  qualificado = false;\n}\n// Montar o objeto de output\nconst output = {\n \"Nome do Cliente\": nome,\n \"E-mail do Cliente\": email,\n \"Telefone do Cliente - Formato BC\": '+' + telefone,\n \"Telefone do Cliente - Formato Z-API\": telefone,\n  instagram,\n  parceiro: 'Kelly Eleto Webinario',\n  utm_content: utmContent,\n  utm_source: utmSource,\n  utm_campaign: utmCampaign,\n  utm_medium: utmMedium,\n  utm_term: utmTerm,\n  data_ultima_quinzena: getDataMenos15Dias(),\n  data_aplicacao_milessegundos: dataAtualEmMilissegundos,\n  data_aplicacao: $node[\"dados_validados1\"].json[\"data_resposta_type\"] ,\n  form_id,\n    qualificacao: qualificado ? \"Qualificado\" : \"Desqualificado\"\n};\n\nreturn [output];"
+      },
+      "id": "4336987d-889a-48a9-aa04-461082963575",
+      "name": "formata_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        680,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "webnar p2",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "38050bc9-d9e4-4f93-8c16-632a4fe0ab51",
+      "name": "entra_na_fila1",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        660
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "UNsBZpoYhAtf5Api",
+          "name": "[RabbitMQ] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"formata_dados\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"formata_dados\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "={{ $node[\"formata_dados\"].json[\"Telefone do Cliente - Formato BC\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"formata_dados\"].json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "name": "Instagram",
+              "value": "={{ $node[\"formata_dados\"].json[\"instagram\"]}}"
+            },
+            {
+              "name": "pergunta0",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta0\"] }}"
+            },
+            {
+              "name": "pergunta1",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta1\"] }}"
+            },
+            {
+              "name": "pergunta2",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta2\"] }}"
+            },
+            {
+              "name": "pergunta3",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta3\"] }}"
+            },
+            {
+              "name": "pergunta4",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta4\"] }}"
+            },
+            {
+              "name": "pergunta5",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta5\"] }}"
+            },
+            {
+              "name": "pergunta6",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta6\"] }}"
+            },
+            {
+              "name": "pergunta7",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta7\"] }}"
+            },
+            {
+              "name": "pergunta8",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta8\"] }}"
+            },
+            {
+              "name": "pergunta9",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta9\"] }}"
+            },
+            {
+              "name": "pergunta10",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta10\"] }}"
+            },
+            {
+              "name": "pergunta11",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta11\"] }}"
+            },
+            {
+              "name": "pergunta12",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta12\"] }}"
+            },
+            {
+              "name": "pergunta13",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta13\"] }}"
+            },
+            {
+              "name": "pergunta14",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta14\"] }}"
+            },
+            {
+              "name": "pergunta15",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta15\"] }}"
+            },
+            {
+              "name": "pergunta16",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta16\"] }}"
+            },
+            {
+              "name": "pergunta17",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta17\"] }}"
+            },
+            {
+              "name": "pergunta18",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta18\"] }}"
+            },
+            {
+              "name": "pergunta19",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta19\"] }}"
+            },
+            {
+              "name": "pergunta20",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta20\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "data_resposta_type",
+              "value": "={{$now.toFormat('dd/MM/yyyy HH:mm')}}"
+            },
+            {
+              "name": "data_ultima_quinzena",
+              "value": "={{ $node[\"formata_dados\"].json[\"data_ultima_quinzena\"] }}"
+            },
+            {
+              "name": "id_fluxo_nao_agendou_10_min",
+              "value": "3065086"
+            },
+            {
+              "name": "id_fluxo_nao_agendou_10_min_desqualificados"
+            },
+            {
+              "name": "API-KEY",
+              "value": "46dacadf-10d0-47db-a81d-69263aca1959"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_bot_conversa",
+              "value": "1776703"
+            },
+            {
+              "name": "id_campo_utm_source_bot_conversa",
+              "value": "1780336"
+            },
+            {
+              "name": "id_campo_utm_campaign_bot_conversa",
+              "value": "1780335"
+            },
+            {
+              "name": "id_campo_utm_term_bot_conversa",
+              "value": "1780334"
+            },
+            {
+              "name": "id_campo_utm_medium_bot_conversa",
+              "value": "1780337"
+            },
+            {
+              "name": "id_campo_utm_content_bot_conversa",
+              "value": "1780338"
+            },
+            {
+              "name": "id_campo_utm_fun_bot_conversa",
+              "value": "1780345"
+            },
+            {
+              "name": "id_campo_utm_var_bot_conversa",
+              "value": "1780344"
+            },
+            {
+              "name": "id_campo_instagram_bot_conversa",
+              "value": "1776705"
+            },
+            {
+              "name": "id_campo_emailse_bot_conversa",
+              "value": "1780340"
+            },
+            {
+              "name": "id_campo_id_lead_crm_bot_conversa",
+              "value": "1780343"
+            },
+            {
+              "name": "id_campo_data_resposta_type_bot_conversa",
+              "value": "1789193"
+            },
+            {
+              "name": "id_tag_desqualificado_bot_conversa",
+              "value": "6979786"
+            },
+            {
+              "name": "id_tag_qualificado_bot_conversa",
+              "value": "7005347"
+            },
+            {
+              "name": "id_campo_pergunta0_bot_conversa",
+              "value": "1654521"
+            },
+            {
+              "name": "id_campo_pergunta1_bot_conversa",
+              "value": "1654523"
+            },
+            {
+              "name": "id_campo_pergunta2_bot_conversa",
+              "value": "1654886"
+            },
+            {
+              "name": "id_campo_pergunta3_bot_conversa",
+              "value": "1654541"
+            },
+            {
+              "name": "id_campo_pergunta4_bot_conversa",
+              "value": "1689038"
+            },
+            {
+              "name": "id_campo_pergunta5_bot_conversa",
+              "value": "1772554"
+            },
+            {
+              "name": "id_campo_pergunta6_bot_conversa",
+              "value": "1772555"
+            },
+            {
+              "name": "id_campo_pergunta7_bot_conversa",
+              "value": "1782967"
+            },
+            {
+              "name": "id_campo_pergunta8_bot_conversa",
+              "value": "1814217"
+            },
+            {
+              "name": "id_campo_pergunta9_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta10_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta11_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta12_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta13_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta14_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta15_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta16_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta17_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta18_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta19_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta20_bot_conversa"
+            },
+            {
+              "name": "id_status_preencheu_aplicacao_crm",
+              "value": "bbf14072-e675-4a28-915a-ede90e9d31fa"
+            },
+            {
+              "name": "id_campo_email_crm",
+              "value": "43a14a28-119a-4e43-a0a1-58bc64e739a2"
+            },
+            {
+              "name": "id_campo_telefone_crm",
+              "value": "4f5b17cc-999f-4779-8a66-155632cf59b4"
+            },
+            {
+              "name": "id_campo_link_do_instagram_crm",
+              "value": "4d4434db-7404-4ca3-8586-88aacbe0069f"
+            },
+            {
+              "name": "id_campo_utm_source_crm",
+              "value": "94fb2c13-bbd0-48a1-89f5-85ef2f537c11"
+            },
+            {
+              "name": "id_campo_utm_campaign_crm",
+              "value": "e545d10b-616e-450d-aef6-d8e65b0944a3"
+            },
+            {
+              "name": "id_campo_utm_term_crm",
+              "value": "21c541c6-2224-4d82-91da-825808a1edea"
+            },
+            {
+              "name": "id_campo_utm_medium_crm",
+              "value": "d65c4dd8-d243-4416-8349-2d7f341b3bcf"
+            },
+            {
+              "name": "id_campo_utm_content_crm",
+              "value": "1198c9d0-f4ee-4b1d-a24c-b6df7303ebf2"
+            },
+            {
+              "name": "id_campo_utm_fun_crm",
+              "value": "2e435a89-b633-4100-a0b5-6810746db2c4"
+            },
+            {
+              "name": "id_campo_utm_var_crm",
+              "value": "58dc2672-4c26-4b0b-ad81-8dcc82de45e0"
+            },
+            {
+              "name": "id_campo_pergunta0_crm",
+              "value": "38f71e36-b8c8-42a4-aab3-0eede967e3ec"
+            },
+            {
+              "name": "id_campo_pergunta1_crm",
+              "value": "cfdc19bd-7efe-48e2-8b83-ee721b0bf56c"
+            },
+            {
+              "name": "id_campo_pergunta2_crm",
+              "value": "9f7b4da0-1df8-45cc-8d19-3dc13b3c6120"
+            },
+            {
+              "name": "id_campo_pergunta3_crm",
+              "value": "ce42f281-0ad4-491b-b918-25754365f2fb"
+            },
+            {
+              "name": "id_campo_pergunta4_crm",
+              "value": "04fc4778-f22a-4343-8217-03257f178662"
+            },
+            {
+              "name": "id_campo_pergunta5_crm"
+            },
+            {
+              "name": "id_campo_pergunta6_crm"
+            },
+            {
+              "name": "id_campo_pergunta7_crm"
+            },
+            {
+              "name": "id_campo_pergunta8_crm",
+              "value": "6d05cee0-28f8-474c-84cd-35e76468094c"
+            },
+            {
+              "name": "id_campo_pergunta9_crm"
+            },
+            {
+              "name": "id_campo_pergunta10_crm"
+            },
+            {
+              "name": "id_campo_pergunta11_crm"
+            },
+            {
+              "name": "id_campo_pergunta12_crm"
+            },
+            {
+              "name": "id_campo_pergunta13_crm"
+            },
+            {
+              "name": "id_campo_pergunta14_crm"
+            },
+            {
+              "name": "id_campo_pergunta15_crm"
+            },
+            {
+              "name": "id_campo_pergunta16_crm"
+            },
+            {
+              "name": "id_campo_pergunta17_crm"
+            },
+            {
+              "name": "id_campo_pergunta18_crm"
+            },
+            {
+              "name": "id_campo_pergunta19_crm"
+            },
+            {
+              "name": "id_campo_pergunta20_crm"
+            },
+            {
+              "name": "id_stage_desqualificado_crm",
+              "value": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3"
+            },
+            {
+              "name": "id_pipeline_downsell_crm"
+            },
+            {
+              "name": "valor_produto_principal_em_centavos"
+            },
+            {
+              "name": "valor_produto_downsell_em_centavos"
+            },
+            {
+              "name": "url_api_activecampaign"
+            },
+            {
+              "name": "id_sdr"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_crm",
+              "value": "d23569b0-b471-45e0-a1e9-840a6711d052"
+            },
+            {
+              "name": "id_campo_crm_origem",
+              "value": "ba2292d8-b72b-48b1-b2b6-159456a98d63"
+            },
+            {
+              "name": "funil",
+              "value": "={{ $node[\"formata_dados\"].json[\"pergunta5\"].replace('Call de Sessão Estrategica','sessao-estrategica').replace('Funil Webnar','aplicacao-direta') }}"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "v1"
+            },
+            {
+              "name": "id_campo_id_botconversa_crm",
+              "value": "f19516e0-1a4a-4b3d-b68e-68c2ae4acc59"
+            },
+            {
+              "name": "status_sessao_estrategica_crm",
+              "value": "a5eebcc6-1646-4e44-a1ae-0e034bd825ef"
+            },
+            {
+              "name": "id_campo_qualificado_crm",
+              "value": "b1bdbadf-406b-4272-ae97-18b3c214005b"
+            },
+            {
+              "name": "id_campo_desqualificado_crm",
+              "value": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3"
+            },
+            {
+              "name": "id_pipeline_crm",
+              "value": "947abb00-968d-4e1b-a6b9-c0887cbfd4b9"
+            },
+            {
+              "name": "id_ending_typeform"
+            },
+            {
+              "name": "id_campo_iddealac_bot_conversa"
+            },
+            {
+              "name": "id_campo_idleadac_bot_conversa"
+            },
+            {
+              "name": "id_campo_status_do_lead_crm",
+              "value": "20bc36eb-9d21-4aaa-b6f1-3c85bafa63ec"
+            },
+            {
+              "name": "id_campo_status_do_lead_qualificado_crm",
+              "value": "b1bdbadf-406b-4272-ae97-18b3c214005b"
+            },
+            {
+              "name": "id_campo_status_do_lead_desqualificado_crm",
+              "value": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3"
+            },
+            {
+              "name": "id_campo_modelo_da_call_crm",
+              "value": "1ecc802b-e2b3-4769-bc7a-9e1517c2278f"
+            },
+            {
+              "name": "id_campo_modelo_da_call_sessao_estrategica_crm",
+              "value": "36a55391-29e3-4168-9caf-67ac756b79f8"
+            },
+            {
+              "name": "id_campo_modelo_da_call_aplicacao_direta_crm",
+              "value": "5883faf4-ebef-4b10-976a-0f88f4c25331"
+            },
+            {
+              "name": "id_campo_funil_sessao_estrategica_crm",
+              "value": "5661918f-e847-4e0e-b9fc-ca7f62ed0a67"
+            },
+            {
+              "name": "id_campo_funil_aplicacao_direta_crm",
+              "value": "1be63c76-92ea-4be1-a028-5301b1c9fa4e"
+            },
+            {
+              "name": "id_campo_produto_mentoria_escala_ sem_caos_crm",
+              "value": "fbd2bb16-6676-43bd-9938-fca73139fede"
+            },
+            {
+              "name": "id_campo_produto_implementacao_escala_ sem_caos_crm",
+              "value": "49b06aaf-209a-4a2c-84e0-65a6e135ab12"
+            },
+            {
+              "name": "qualificacao",
+              "value": "={{ $node[\"formata_dados\"].json[\"qualificacao\"] }}"
+            },
+            {
+              "name": "etapa_pre_desqualificados_crm",
+              "value": "77544d86-43b7-4cf6-bc87-ea059abbd7a5"
+            },
+            {
+              "name": "etapa_pre_qualificados_crm",
+              "value": "2c64ca7b-3988-4ce5-9163-be272209072b"
+            },
+            {
+              "name": "id_campo_id_bc_crm",
+              "value": "f19516e0-1a4a-4b3d-b68e-68c2ae4acc59"
+            },
+            {
+              "name": "id_campo_data_da_aplicacao_crm",
+              "value": "00ad74e6-783f-4153-8bfd-9bf9a5b39857"
+            },
+            {
+              "name": "id_campo_data_da_aplicacao_bot_conversa",
+              "value": "1814725"
+            },
+            {
+              "name": "id_campo_nome_completo_crm",
+              "value": "1c438058-b654-4a19-9ea3-438bc2f5a078"
+            },
+            {
+              "name": "data_resposta_type_milesegundos",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "name": "id_campo_status_sessao_ou_aplicacao_crm",
+              "value": "a5eebcc6-1646-4e44-a1ae-0e034bd825ef"
+            },
+            {
+              "name": "id_campo_status_aplicacao_realizada_crm",
+              "value": "bbf14072-e675-4a28-915a-ede90e9d31fa"
+            },
+            {
+              "name": "id_fluxo_popular_campos",
+              "value": "3317483"
+            },
+            {
+              "name": "parceiro",
+              "value": "={{ $node[\"formata_dados\"].json[\"parceiro\"] }}"
+            },
+            {
+              "name": "origem",
+              "value": "={{ $node[\"formata_dados\"].json[\"origem\"] }}"
+            },
+            {
+              "name": "funil",
+              "value": "={{ $node[\"formata_dados\"].json[\"funil\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{ $node[\"formata_dados\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "form_id",
+              "value": "={{ $node[\"formata_dados\"].json[\"form_id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "28b8135d-7dfe-4771-9f4c-cb735e88cbf6",
+      "name": "dados_validados2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        900,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 3
+      },
+      "id": "f226f147-7c81-490d-830c-ca328ee713a8",
+      "name": "3s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        680,
+        840
+      ],
+      "webhookId": "5df490bf-83d3-4d5b-bb41-05c239bcc25f"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1rgg2JBWZZ7ZRuXwyDZJky8RmfgKxOVlFDz5ECq4SpQU",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rgg2JBWZZ7ZRuXwyDZJky8RmfgKxOVlFDz5ECq4SpQU/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "telefone": "={{ $node[\"dados_validados1\"].json[\"Telefone do Cliente - Formato BC\"] }}"
+          },
+          "matchingColumns": [
+            "telefone"
+          ],
+          "schema": [
+            {
+              "id": "telefone",
+              "displayName": "telefone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d993807b-9a48-47ab-9538-34f8e002e0f2",
+      "name": "Google Sheets2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.3,
+      "position": [
+        900,
+        840
+      ],
+      "alwaysOutputData": false,
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "6haYpAmOsZXFxR68",
+          "name": "[Google Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1O8y09-lnDCyCaOyXycg4n4cdOKmFvVK1O6jzcsnKPF0",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1264475429,
+          "mode": "list",
+          "cachedResultName": "WhatsApp",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1O8y09-lnDCyCaOyXycg4n4cdOKmFvVK1O6jzcsnKPF0/edit#gid=1264475429"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "WhatsApp",
+              "lookupValue": "={{ $json[\"Telefone do Cliente - Formato BC\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "74b8c085-72b7-4bd5-89a2-cba6ea7182d8",
+      "name": "busca_telefone_na_planilha",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [
+        500,
+        460
+      ],
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+      "maxTries": 5,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "6haYpAmOsZXFxR68",
+          "name": "[Google Sheets] - Automagic Bots"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"busca_telefone_na_planilha\"].json[\"row_number\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "95bf3c3f-e0a9-4ba4-ba63-eac32c55c5c2",
+      "name": "existe_telefone_na_planilha",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        680,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 3,
+        "unit": "seconds"
+      },
+      "id": "c702440a-7759-436c-af3a-6a5ca25e2c19",
+      "name": "espera_3s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        900,
+        480
+      ],
+      "webhookId": "2ae5dd76-babf-4fde-83f7-c76e1ad63d1b"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1O8y09-lnDCyCaOyXycg4n4cdOKmFvVK1O6jzcsnKPF0",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1264475429,
+          "mode": "list",
+          "cachedResultName": "WhatsApp",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1O8y09-lnDCyCaOyXycg4n4cdOKmFvVK1O6jzcsnKPF0/edit#gid=1264475429"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "WhatsApp": "={{ $node[\"dados_validados\"].json[\"Telefone do Cliente - Formato BC\"] }}",
+            "Já conhecia a Kelly Eleto?": "={{ $node[\"dados_validados\"].json[\"Já conhecia a Kelly Eleto?\"] }}",
+            "O que fez você se inscrever": "={{ $node[\"dados_validados\"].json[\"O que fez você se inscrever\"] }}",
+            "Faz parte de algum mastermind ou mentoria?": "={{ $node[\"dados_validados\"].json[\"Faz parte de algum mastermind ou mentoria?\"] }}",
+            "Você é dono de um negócio digital?": "={{ $node[\"dados_validados\"].json[\"Você é dono de um negócio digital\"] }}",
+            "Qual é o seu modelo de negócio?": "={{ $node[\"dados_validados\"].json[\"Qual é o seu modelo de negócio\"] }}",
+            "Quantos funcionarios": "={{ $node[\"dados_validados\"].json[\"Quantas pessoas trabalham na sua empresa?\"] }}",
+            "estrutura do time": "={{ $node[\"dados_validados\"].json[\"estrutura de time\"] }}",
+            "E o que te deixa mais insatisfeito com esse time hoje?": "={{ $node[\"dados_validados\"].json[\"E o que te deixa mais insatisfeito com esse time hoje?\"] }}",
+            "preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?": "={{ $node[\"dados_validados\"].json[\"preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?\"] }}",
+            "faturamento nos últimos 12 meses": "={{ $node[\"dados_validados\"].json[\"faturamento nos últimos 12 meses\"] }}",
+            "meta de faturamento para 2024": "={{ $node[\"dados_validados\"].json[\"meta de faturamento\"] }}",
+            "principal dificuldade": "={{ $node[\"dados_validados\"].json[\"principal dificuldade\"] }}",
+            "vagas em abertas": "={{ $node[\"dados_validados\"].json[\"vagas abertas\"] }}",
+            "Posso (re)estruturar sua equipe": "={{ $node[\"dados_validados\"].json[\"Posso (re)estruturar sua equipe\"] }}"
+          },
+          "matchingColumns": [
+            "WhatsApp"
+          ],
+          "schema": [
+            {
+              "id": "Data de entrada",
+              "displayName": "Data de entrada",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Origem",
+              "displayName": "Origem",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Nome",
+              "displayName": "Nome",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "WhatsApp",
+              "displayName": "WhatsApp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "E-mail",
+              "displayName": "E-mail",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "instagram",
+              "displayName": "instagram",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Já conhecia a Kelly Eleto?",
+              "displayName": "Já conhecia a Kelly Eleto?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "O que fez você se inscrever",
+              "displayName": "O que fez você se inscrever",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Faz parte de algum mastermind ou mentoria?",
+              "displayName": "Faz parte de algum mastermind ou mentoria?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Você é dono de um negócio digital?",
+              "displayName": "Você é dono de um negócio digital?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Qual é o seu modelo de negócio?",
+              "displayName": "Qual é o seu modelo de negócio?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Quantos funcionarios",
+              "displayName": "Quantos funcionarios",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "estrutura do time",
+              "displayName": "estrutura do time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "E o que te deixa mais insatisfeito com esse time hoje?",
+              "displayName": "E o que te deixa mais insatisfeito com esse time hoje?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?",
+              "displayName": "preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "faturamento nos últimos 12 meses",
+              "displayName": "faturamento nos últimos 12 meses",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "meta de faturamento para 2024",
+              "displayName": "meta de faturamento para 2024",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "principal dificuldade",
+              "displayName": "principal dificuldade",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "vagas em abertas",
+              "displayName": "vagas em abertas",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Posso (re)estruturar sua equipe",
+              "displayName": "Posso (re)estruturar sua equipe",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "420cf6c9-668d-4dc0-bd24-8377448ff6b9",
+      "name": "Google Sheets3",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.3,
+      "position": [
+        1120,
+        320
+      ],
+      "alwaysOutputData": false,
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "6haYpAmOsZXFxR68",
+          "name": "[Google Sheets] - Automagic Bots"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 3,
+        "unit": "seconds"
+      },
+      "id": "adde7b2d-5900-40df-b3f4-f6cd58f28d54",
+      "name": "espera_3s1",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        900,
+        320
+      ],
+      "webhookId": "2ae5dd76-babf-4fde-83f7-c76e1ad63d1b"
+    }
+  ],
+  "pinData": {
+    "forms_trafego": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "GuzzleHttp/7",
+            "content-length": "4325",
+            "content-type": "application/json",
+            "x-forwarded-for": "3.227.253.214",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "3.227.253.214",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "form": {
+              "form_name": "[Mapeamento] [F.WB [PORTUS] - MAI| 24] Sala secreta: Escala com Time",
+              "form_id": "iYIWQfMG"
+            },
+            "respondent": {
+              "status": "completed",
+              "date": "2024-05-10 17:39:01",
+              "score": null,
+              "respondent_id": "d27411c5-360f-4e2d-b2b2-9dbcb6896f09",
+              "answers": {
+                "Seu DDD + WhatsApp": "55 62981196678",
+                "Já conhecia a Kelly Eleto?": "Acabei de conhecer através do anúncio",
+                "O que fez você se inscrever para a sala secreta de estruturação de time? Fale um pouco sobre como você espera que isso te ajude nesse momento.": "teste",
+                "Faz parte de algum mastermind ou mentoria? Se sim, qual?": "teste",
+                "Você é dono de um negócio digital?": "Sim",
+                "Qual é o seu modelo de negócio?": "Prestação de serviços",
+                "Quantas pessoas trabalham na sua empresa?": "1 a 5 pessoas",
+                "Fale um pouquinho sobre como é a sua estrutura de time...": "teste",
+                "E o que te deixa mais insatisfeito com esse time hoje?": "teste",
+                "Hoje você está preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?": "teste",
+                "Quanto seu negócio faturou aproximadamente nos últimos 12 meses?": "Entre 500K e 1M",
+                "E qual é a sua meta de faturamento para 2024?": "teste",
+                "Quando a gente fala em contratação e estruturação de equipe, qual tem sido a sua principal dificuldade?": "teste",
+                "Você está com vagas abertas para contratar agora?": "Estou com uma vaga aberta",
+                "A Kelly pode (re)estruturar sua equipe ao vivo na sala secreta?": "Sim, 100% liberado"
+              },
+              "raw_answers": [
+                {
+                  "question": {
+                    "question_title": "Seu DDD + WhatsApp",
+                    "question_id": "c9aa3cb15425",
+                    "question_type": "phone"
+                  },
+                  "answer": {
+                    "country": "55",
+                    "phone": "62981196678"
+                  }
+                },
+                {
+                  "question": {
+                    "question_title": "Já conhecia a Kelly Eleto?",
+                    "question_id": "x5wasi9xpu4",
+                    "question_type": "select"
+                  },
+                  "answer": "Acabei de conhecer através do anúncio"
+                },
+                {
+                  "question": {
+                    "question_title": "O que fez você se inscrever para a sala secreta de estruturação de time? Fale um pouco sobre como você espera que isso te ajude nesse momento.",
+                    "question_id": "xvcnpuezr19e",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Faz parte de algum mastermind ou mentoria? Se sim, qual?",
+                    "question_id": "x5og03frcx9d",
+                    "question_type": "text"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Você é dono de um negócio digital?",
+                    "question_id": "xnoctey0bj4l",
+                    "question_type": "select"
+                  },
+                  "answer": "Sim"
+                },
+                {
+                  "question": {
+                    "question_title": "Qual é o seu modelo de negócio?",
+                    "question_id": "x6rgx7i4jup9",
+                    "question_type": "select"
+                  },
+                  "answer": "Prestação de serviços"
+                },
+                {
+                  "question": {
+                    "question_title": "Quantas pessoas trabalham na sua empresa?",
+                    "question_id": "x9d1gu2ko6ee",
+                    "question_type": "select"
+                  },
+                  "answer": "1 a 5 pessoas"
+                },
+                {
+                  "question": {
+                    "question_title": "Fale um pouquinho sobre como é a sua estrutura de time...",
+                    "question_id": "xll79kjf1v5a",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "E o que te deixa mais insatisfeito com esse time hoje?",
+                    "question_id": "xb3snkp05d0h",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Hoje você está preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?",
+                    "question_id": "xfpjro507zg5",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Quanto seu negócio faturou aproximadamente nos últimos 12 meses?",
+                    "question_id": "xzm16s37rqhj",
+                    "question_type": "select"
+                  },
+                  "answer": "Entre 500K e 1M"
+                },
+                {
+                  "question": {
+                    "question_title": "E qual é a sua meta de faturamento para 2024?",
+                    "question_id": "x1wk90btcj44",
+                    "question_type": "text"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Quando a gente fala em contratação e estruturação de equipe, qual tem sido a sua principal dificuldade?",
+                    "question_id": "xzzz2wyba4ok",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Você está com vagas abertas para contratar agora?",
+                    "question_id": "xl5j8p0n4ob",
+                    "question_type": "select"
+                  },
+                  "answer": "Estou com uma vaga aberta"
+                },
+                {
+                  "question": {
+                    "question_title": "A Kelly pode (re)estruturar sua equipe ao vivo na sala secreta?",
+                    "question_id": "xzy92qt1qyn",
+                    "question_type": "select"
+                  },
+                  "answer": "Sim, 100% liberado"
+                }
+              ],
+              "respondent_utms": null
+            }
+          }
+        }
+      }
+    ],
+    "forms_organico": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "GuzzleHttp/7",
+            "content-length": "4629",
+            "content-type": "application/json",
+            "x-forwarded-for": "3.227.253.214",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "3.227.253.214",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "form": {
+              "form_name": "[Captura - Orgânico] [F.WB [PORTUS] - MAI| 24] Sala secreta: Escala com Time",
+              "form_id": "xuFftEYX"
+            },
+            "respondent": {
+              "status": "completed",
+              "date": "2024-05-10 18:18:43",
+              "score": 4,
+              "respondent_id": "47ea7f4e-ce79-4969-b1bb-4255cf26d043",
+              "answers": {
+                "Seu nome": "Mateus Diniz",
+                "Seu DDD + WhatsApp": "55 62981196678",
+                "Seu melhor e-mail": "mateusdiniz@automagicbots.com.br",
+                "Qual o @ do seu Instagram": "prmateusdiniz",
+                "O que fez você se inscrever para a sala secreta de estruturação de time? Fale um pouco sobre como você espera que isso te ajude nesse momento.": "testando",
+                "Faz parte de algum mastermind ou mentoria? Se sim, qual?": "teste",
+                "Você é dono de um negócio digital?": "Não sou o dono, mas sou um dos decisores",
+                "Qual é o seu modelo de negócio?": "Tecnologia",
+                "Quantas pessoas trabalham na sua empresa?": "6 a 15 pessoas",
+                "Fale um pouquinho sobre como é a sua estrutura de time...": "teste",
+                "E o que te deixa mais insatisfeito com esse time hoje?": "teste",
+                "Hoje você está preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?": "teste",
+                "Quanto seu negócio faturou aproximadamente nos últimos 12 meses?": "Entre 3 e 5M",
+                "E qual é a sua meta de faturamento para 2024?": "teste",
+                "Quando a gente fala em contratação e estruturação de equipe, qual tem sido a sua principal dificuldade?": "teste",
+                "Você está com vagas abertas para contratar agora?": "Estou com uma vaga aberta",
+                "Posso (re)estruturar sua equipe ao vivo na sala secreta?": "Sim, 100% liberado"
+              },
+              "raw_answers": [
+                {
+                  "question": {
+                    "question_title": "Seu nome",
+                    "question_id": "xmz5s8c7anmn",
+                    "question_type": "name"
+                  },
+                  "answer": "Mateus Diniz"
+                },
+                {
+                  "question": {
+                    "question_title": "Seu DDD + WhatsApp",
+                    "question_id": "c9aa3cb15425",
+                    "question_type": "phone"
+                  },
+                  "answer": {
+                    "country": "55",
+                    "phone": "62981196678"
+                  }
+                },
+                {
+                  "question": {
+                    "question_title": "Seu melhor e-mail",
+                    "question_id": "xzkh00ybj0rr",
+                    "question_type": "email"
+                  },
+                  "answer": "mateusdiniz@automagicbots.com.br"
+                },
+                {
+                  "question": {
+                    "question_title": "Qual o @ do seu Instagram",
+                    "question_id": "xev6bhg6cw0f",
+                    "question_type": "text"
+                  },
+                  "answer": "prmateusdiniz"
+                },
+                {
+                  "question": {
+                    "question_title": "O que fez você se inscrever para a sala secreta de estruturação de time? Fale um pouco sobre como você espera que isso te ajude nesse momento.",
+                    "question_id": "xvcnpuezr19e",
+                    "question_type": "textarea"
+                  },
+                  "answer": "testando"
+                },
+                {
+                  "question": {
+                    "question_title": "Faz parte de algum mastermind ou mentoria? Se sim, qual?",
+                    "question_id": "x5og03frcx9d",
+                    "question_type": "text"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Você é dono de um negócio digital?",
+                    "question_id": "xnoctey0bj4l",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Não sou o dono, mas sou um dos decisores"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Qual é o seu modelo de negócio?",
+                    "question_id": "x6rgx7i4jup9",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Tecnologia"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Quantas pessoas trabalham na sua empresa?",
+                    "question_id": "x9d1gu2ko6ee",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "6 a 15 pessoas"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Fale um pouquinho sobre como é a sua estrutura de time...",
+                    "question_id": "xll79kjf1v5a",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "E o que te deixa mais insatisfeito com esse time hoje?",
+                    "question_id": "xb3snkp05d0h",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Hoje você está preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?",
+                    "question_id": "xfpjro507zg5",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Quanto seu negócio faturou aproximadamente nos últimos 12 meses?",
+                    "question_id": "xzm16s37rqhj",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Entre 3 e 5M"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "E qual é a sua meta de faturamento para 2024?",
+                    "question_id": "x1wk90btcj44",
+                    "question_type": "text"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Quando a gente fala em contratação e estruturação de equipe, qual tem sido a sua principal dificuldade?",
+                    "question_id": "xzzz2wyba4ok",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Você está com vagas abertas para contratar agora?",
+                    "question_id": "xl5j8p0n4ob",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Estou com uma vaga aberta"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Posso (re)estruturar sua equipe ao vivo na sala secreta?",
+                    "question_id": "xzy92qt1qyn",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Sim, 100% liberado"
+                  ]
+                }
+              ],
+              "respondent_utms": null
+            }
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-05-10T01:47:04.005Z",
+      "updatedAt": "2024-05-10T01:47:04.005Z",
+      "id": "n8TvkiIIDKme6cPt",
+      "name": "[WEBINAR]"
+    }
+  ],
+  "triggerCount": 2,
+  "updatedAt": "2024-05-17T20:03:26.936Z",
+  "versionId": "b13e104f-7552-4f53-a09d-53ae557c4503"
+}
