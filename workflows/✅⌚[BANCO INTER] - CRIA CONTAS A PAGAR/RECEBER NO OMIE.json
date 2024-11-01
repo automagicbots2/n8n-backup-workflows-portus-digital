@@ -5711,6 +5711,16 @@
           ]
         }
       }
+    ],
+    "getNewToken": [
+      {
+        "json": {
+          "access_token": "4576a2e1-b53c-4e4e-939a-16d1c9dea96d",
+          "token_type": "Bearer",
+          "scope": "extrato.read boleto-cobranca.read boleto-cobranca.write pagamento-boleto.read cob.write cob.read cobv.write cobv.read pix.write pix.read webhook.read webhook.write payloadlocation.write payloadlocation.read webhook-banking.write webhook-banking.read",
+          "expires_in": 3600
+        }
+      }
     ]
   },
   "settings": {
@@ -5725,6 +5735,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-10-31T13:46:41.118Z",
-  "versionId": "da66f3f8-bcf3-460e-9d69-16278d3dce0f"
+  "updatedAt": "2024-10-31T15:12:16.895Z",
+  "versionId": "2b53b20a-2729-47dd-a2ca-dc07fb06cc42"
 }
