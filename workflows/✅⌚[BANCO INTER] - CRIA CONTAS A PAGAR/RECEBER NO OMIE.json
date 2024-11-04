@@ -922,12 +922,17 @@
       "main": [
         [
           {
+            "node": "getNewToken2",
+            "type": "main",
+            "index": 0
+          },
+          {
             "node": "consultar_cobranca_imediata_pix",
             "type": "main",
             "index": 0
           },
           {
-            "node": "getNewToken2",
+            "node": "GetPagamentos1",
             "type": "main",
             "index": 0
           }
@@ -3897,25 +3902,25 @@
             {
               "id": "5e989121-e816-4e51-aedf-38c6b570496d",
               "name": "client_id",
-              "value": "2f8c99ed-8466-4821-88dc-056786b03d44",
+              "value": "={{ $node[\"GetToken\"].json[\"client_id\"] }}",
               "type": "string"
             },
             {
               "id": "e2940eab-c73e-4130-9004-737db451e1d3",
               "name": "client_secret",
-              "value": "1261ced9-4f3e-4c81-b48d-3f2caeed5730",
+              "value": "={{ $node[\"GetToken\"].json[\"client_secret\"] }}",
               "type": "string"
             },
             {
               "id": "0175eec8-cd44-4a09-99d3-d9bd0aca9a34",
               "name": "scope",
-              "value": "extrato.read boleto-cobranca.read boleto-cobranca.write pagamento-boleto.write pagamento-boleto.read pagamento-darf.write cob.write cob.read cobv.write cobv.read pix.write pix.read webhook.read webhook.write payloadlocation.write payloadlocation.read pagamento-pix.write pagamento-pix.read webhook-banking.write webhook-banking.read",
+              "value": "={{ $node[\"GetToken\"].json[\"scope\"] }}",
               "type": "string"
             },
             {
               "id": "b013f962-4c27-4fa4-8461-71d93ce384e4",
               "name": "grant_type",
-              "value": "client_credentials",
+              "value": "={{ $node[\"GetToken\"].json[\"grant_type\"] }}",
               "type": "string"
             }
           ]
@@ -3934,7 +3939,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://bancointer.automagicbots.com.br/oauth/v2/token",
+        "url": "=https://bancointer.automagicbots.com.br/oauth/v2/token?scope={{ $node[\"GetToken\"].json[\"scope\"] }}",
         "sendBody": true,
         "contentType": "form-urlencoded",
         "bodyParameters": {
@@ -3950,10 +3955,6 @@
             {
               "name": "grant_type",
               "value": "={{ $node[\"dados1\"].json[\"grant_type\"] }}"
-            },
-            {
-              "name": "scope",
-              "value": "={{ $node[\"dados1\"].json[\"scope\"] }}"
             }
           ]
         },
@@ -4075,6 +4076,15 @@
     {
       "parameters": {
         "url": "https://bancointer.automagicbots.com.br/cobranca/v2/boletos?dataFinal=2024-07-04&dataInicial=2024-07-01",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "scope",
+              "value": "oob"
+            }
+          ]
+        },
         "sendHeaders": true,
         "headerParameters": {
           "parameters": [
@@ -4384,7 +4394,7 @@
     },
     {
       "parameters": {
-        "url": "https://bancointer.automagicbots.com.br/cobranca/v2/boletos/webhook/callbacks",
+        "url": "=https://bancointer.automagicbots.com.br/cobranca/v2/boletos/webhook/callbacks",
         "sendQuery": true,
         "queryParameters": {
           "parameters": [
@@ -4395,6 +4405,10 @@
             {
               "name": "dataHoraFim",
               "value": "2024-10-31T00:00Z"
+            },
+            {
+              "name": "scope",
+              "value": "oob"
             }
           ]
         },
@@ -4870,6 +4884,10 @@
             {
               "name": "filtrarDataPor",
               "value": "PAGAMENTO"
+            },
+            {
+              "name": "scope",
+              "value": "oob"
             }
           ]
         },
@@ -4878,7 +4896,7 @@
           "parameters": [
             {
               "name": "Authorization",
-              "value": "=Bearer {{ $node[\"dados\"].json[\"token\"] }}"
+              "value": "=Bearer {{ $node[\"dados1\"].json[\"token\"] }}"
             }
           ]
         },
@@ -4983,6 +5001,82 @@
       "position": [
         2500,
         2580
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://bancointer.automagicbots.com.br/banking/v2/pix/56072ebf-fb76-4b74-9f7b-6aec9e16db0c",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "escopos necessários"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $node[\"dados1\"].json[\"token\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "allowUnauthorizedCerts": true
+        }
+      },
+      "id": "56116be1-2e5d-4d41-b87d-8b23b8dd49d3",
+      "name": "consultar_cobranca_imediata_pix2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2160,
+        3000
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bancointer.automagicbots.com.br/oauth/v2/token",
+        "sendBody": true,
+        "contentType": "form-urlencoded",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "client_id",
+              "value": "={{ $node[\"dados1\"].json[\"client_id\"] }}"
+            },
+            {
+              "name": "client_secret",
+              "value": "={{ $node[\"dados1\"].json[\"client_secret\"] }}"
+            },
+            {
+              "name": "grant_type",
+              "value": "={{ $node[\"dados1\"].json[\"grant_type\"] }}"
+            },
+            {
+              "name": "scope",
+              "value": "={{ $node[\"dados1\"].json[\"scope\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "allowUnauthorizedCerts": true,
+          "redirect": {
+            "redirect": {}
+          }
+        }
+      },
+      "id": "8c7e039f-427d-46b6-9777-48a272f9b39d",
+      "name": "getNewToken3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2940,
+        2920
       ]
     }
   ],
@@ -5711,16 +5805,6 @@
           ]
         }
       }
-    ],
-    "getNewToken": [
-      {
-        "json": {
-          "access_token": "4576a2e1-b53c-4e4e-939a-16d1c9dea96d",
-          "token_type": "Bearer",
-          "scope": "extrato.read boleto-cobranca.read boleto-cobranca.write pagamento-boleto.read cob.write cob.read cobv.write cobv.read pix.write pix.read webhook.read webhook.write payloadlocation.write payloadlocation.read webhook-banking.write webhook-banking.read",
-          "expires_in": 3600
-        }
-      }
     ]
   },
   "settings": {
@@ -5735,6 +5819,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-10-31T15:12:16.895Z",
-  "versionId": "2b53b20a-2729-47dd-a2ca-dc07fb06cc42"
+  "updatedAt": "2024-11-04T14:56:49.434Z",
+  "versionId": "8bb555a4-7d16-41ba-ae2a-6544c6aa0be5"
 }
