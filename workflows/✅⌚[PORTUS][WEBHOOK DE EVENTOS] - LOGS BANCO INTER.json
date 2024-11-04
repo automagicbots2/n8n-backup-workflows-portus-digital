@@ -1,0 +1,43 @@
+{
+  "active": true,
+  "connections": {},
+  "createdAt": "2024-11-04T13:27:22.467Z",
+  "id": "r1HbjSf2itRHmQ44",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "✅⌚[PORTUS][WEBHOOK DE EVENTOS] - LOGS BANCO INTER",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "logs-bi",
+        "options": {}
+      },
+      "id": "4e87bf5e-0aa1-420d-bdd1-1a19cd233979",
+      "name": "WebhookN8N",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        880,
+        360
+      ],
+      "webhookId": "eb06a977-7b7b-4391-a3ff-82c6c4092930"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-11-04T13:31:06.785Z",
+  "versionId": "4844d8ba-3fad-48b2-9951-ccf2ae51e53e"
+}
