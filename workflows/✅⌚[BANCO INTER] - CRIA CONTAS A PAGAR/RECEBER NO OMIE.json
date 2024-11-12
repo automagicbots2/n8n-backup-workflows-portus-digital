@@ -3969,7 +3969,7 @@
             },
             {
               "name": "scope",
-              "value": "extrato.read boleto-cobranca.read boleto-cobranca.write pagamento-boleto.read cob.write cob.read cobv.write cobv.read pix.write pix.read webhook.read webhook.write payloadlocation.write payloadlocation.read webhook-banking.write webhook-banking.read"
+              "value": "={{ $node[\"GetToken\"].json[\"scope\"] }}"
             }
           ]
         },
@@ -5834,6 +5834,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-11-11T12:26:09.904Z",
-  "versionId": "34d60fbf-a65d-4282-a77c-e3be82b02772"
+  "updatedAt": "2024-11-12T13:11:56.649Z",
+  "versionId": "302c8072-ffa3-4b50-94d8-284601fe857e"
 }
