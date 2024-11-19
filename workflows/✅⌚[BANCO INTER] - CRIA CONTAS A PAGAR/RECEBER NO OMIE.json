@@ -12,39 +12,6 @@
         ]
       ]
     },
-    "Formata Data de Vencimento": {
-      "main": [
-        [
-          {
-            "node": "Formata Data de Vencimento Original",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Formata Data de Vencimento Original": {
-      "main": [
-        [
-          {
-            "node": "Dados do Evento",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Formata Data de Criacao": {
-      "main": [
-        [
-          {
-            "node": "Formata Data de Vencimento",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "formata_telefone": {
       "main": [
         [
@@ -930,11 +897,6 @@
             "node": "consultar_cobranca_imediata_pix",
             "type": "main",
             "index": 0
-          },
-          {
-            "node": "GetPagamentos1",
-            "type": "main",
-            "index": 0
           }
         ]
       ]
@@ -1009,7 +971,7 @@
       "main": [
         [
           {
-            "node": "Formata Data de Criacao",
+            "node": "Dados do Evento",
             "type": "main",
             "index": 0
           }
@@ -1054,6 +1016,17 @@
         [
           {
             "node": "consultar_cobranca_imediata_pix1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dados do Evento": {
+      "main": [
+        [
+          {
+            "node": "Credito_ou_debito",
             "type": "main",
             "index": 0
           }
@@ -1115,40 +1088,6 @@
     },
     {
       "parameters": {
-        "value": "={{ $node[\"banco_inter\"].json[\"body\"][\"0\"][\"dataHoraMovimento\"] }}",
-        "dataPropertyName": "Data de Vencimento Formatada",
-        "custom": true,
-        "toFormat": "DD/MM/YYYY",
-        "options": {}
-      },
-      "id": "8dfbbb45-160e-4657-af91-1bb512f0db50",
-      "name": "Formata Data de Vencimento",
-      "type": "n8n-nodes-base.dateTime",
-      "typeVersion": 1,
-      "position": [
-        2100,
-        3520
-      ]
-    },
-    {
-      "parameters": {
-        "value": "={{ $node[\"banco_inter\"].json[\"body\"][\"payment\"][\"originalDueDate\"] }}",
-        "dataPropertyName": "Data de Vencimento Original Formatada",
-        "custom": true,
-        "toFormat": "DD/MM/YYYY",
-        "options": {}
-      },
-      "id": "78e317f6-5a54-41ac-9086-bc4ad10d973b",
-      "name": "Formata Data de Vencimento Original",
-      "type": "n8n-nodes-base.dateTime",
-      "typeVersion": 1,
-      "position": [
-        2300,
-        3520
-      ]
-    },
-    {
-      "parameters": {
         "values": {
           "string": [
             {
@@ -1161,7 +1100,7 @@
             },
             {
               "name": "Data do Evento",
-              "value": "={{ $node[\"Formata Data de Criacao\"].json[\"Data de Criacao Formatada\"] }}"
+              "value": "={{ \n  DateTime.fromISO($node[\"banco_inter\"].json[\"body\"][\"0\"][\"dataHoraMovimento\"])\n    .toFormat('dd/MM/yyyy HH:mm') \n}}"
             },
             {
               "name": "ID do Cliente",
@@ -1185,7 +1124,7 @@
             },
             {
               "name": "Data de Vencimento",
-              "value": "={{ $node[\"Formata Data de Vencimento\"].json[\"Data de Vencimento Formatada\"] }}"
+              "value": "={{ $json[\"Data de Vencimento Formatada\"] }}"
             },
             {
               "name": "Status",
@@ -1197,7 +1136,7 @@
             },
             {
               "name": "Data do Pagamento",
-              "value": "={{ $json[\"Data do Pagamento Formatada\"] }}"
+              "value": "={{ \n  DateTime.fromISO($node[\"banco_inter\"].json[\"body\"][\"0\"][\"dataHoraMovimento\"])\n    .toFormat('dd/MM/yyyy HH:mm') \n}}"
             },
             {
               "name": "Numero da Parcela",
@@ -1213,11 +1152,11 @@
             },
             {
               "name": "Data de Credito",
-              "value": "={{ $json[\"Data de Credito Formatada\"] }}"
+              "value": "={{ \n  DateTime.fromISO($node[\"banco_inter\"].json[\"body\"][\"0\"][\"dataHoraMovimento\"])\n    .toFormat('dd/MM/yyyy HH:mm') \n}}"
             },
             {
               "name": "Data de Credito Estimada",
-              "value": "={{ $json[\"Data de Credito Estimada Formatada\"] }}"
+              "value": "={{ \n  DateTime.fromISO($node[\"banco_inter\"].json[\"body\"][\"0\"][\"dataHoraMovimento\"])\n    .toFormat('dd/MM/yyyy HH:mm') \n}}"
             },
             {
               "name": "Nosso Numero",
@@ -1229,11 +1168,11 @@
             },
             {
               "name": "Data da Ultima Visualizacao da Fatura",
-              "value": "={{ json[\"Data de Ultima Visualizacao da Fatura Formatada\"] }}"
+              "value": "={{ $json[\"Data de Ultima Visualizacao da Fatura Formatada\"] }}"
             },
             {
               "name": "Data da Ultima Visualizacao do Boleto",
-              "value": "={{ $json[\"Data da Ultima Visualizacao do Boleto Formatada\"] }}"
+              "value": "={{ $node[\"banco_inter\"].json[\"Data da Ultima Visualizacao do Boleto Formatada\"] }}"
             },
             {
               "name": "Valor do Desconto",
@@ -1253,7 +1192,7 @@
             },
             {
               "name": "Telefone",
-              "value": "={{ $json[\"mobilePhone\"] }}"
+              "value": "={{ $node[\"banco_inter\"].json[\"mobilePhone\"] }}"
             },
             {
               "name": "API-KEY"
@@ -1329,23 +1268,6 @@
       "typeVersion": 1,
       "position": [
         2500,
-        3520
-      ]
-    },
-    {
-      "parameters": {
-        "value": "={{ $json[\"body\"][\"0\"][\"dataHoraMovimento\"] }}",
-        "dataPropertyName": "Data de Criacao Formatada",
-        "custom": true,
-        "toFormat": "DD/MM/YYYY",
-        "options": {}
-      },
-      "id": "eb268007-90bc-4baa-8878-75b01b367609",
-      "name": "Formata Data de Criacao",
-      "type": "n8n-nodes-base.dateTime",
-      "typeVersion": 1,
-      "position": [
-        1920,
         3520
       ]
     },
@@ -2474,8 +2396,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 2,
       "position": [
-        2940,
-        3300
+        3320,
+        4000
       ],
       "id": "d4b536e0-b411-4f24-90d5-d5516a80f340",
       "disabled": true,
@@ -2667,8 +2589,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2760,
-        3300
+        3140,
+        4000
       ],
       "disabled": true
     },
@@ -2695,8 +2617,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        3120,
-        3300
+        3500,
+        4000
       ],
       "disabled": true
     },
@@ -2723,8 +2645,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2580,
-        3300
+        2960,
+        4000
       ],
       "disabled": true
     },
@@ -2751,8 +2673,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2400,
-        3300
+        2780,
+        4000
       ],
       "disabled": true
     },
@@ -2779,8 +2701,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2200,
-        3300
+        2580,
+        4000
       ],
       "disabled": true
     },
@@ -3144,8 +3066,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2020,
-        3300
+        2400,
+        4000
       ],
       "disabled": true
     },
@@ -4278,7 +4200,7 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1.1,
       "position": [
-        1740,
+        2320,
         3520
       ],
       "webhookId": "80c50ab2-693e-45bb-95c2-51a62e5ea1b5"
@@ -5015,7 +4937,7 @@
       "typeVersion": 4.1,
       "position": [
         2500,
-        2580
+        2520
       ]
     },
     {
@@ -5047,8 +4969,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        2160,
-        3000
+        2280,
+        2940
       ],
       "onError": "continueRegularOutput"
     },
@@ -5787,35 +5709,35 @@
         "json": {
           "headers": {
             "host": "n8nwebhookportus.automagicbots.com.br",
-            "user-agent": "Java-http-client/11.0.23",
-            "content-length": "378",
+            "user-agent": "Java-http-client/11.0.24",
+            "content-length": "392",
             "content-type": "application/json",
-            "x-chave-idempotencia": "ea016949-73a0-4795-baa4-a4973d878856",
+            "x-chave-idempotencia": "c8cb613b-e3fa-47f3-8732-094252ec57ea",
             "x-conta-corrente": "91099005",
-            "x-forwarded-for": "147.161.128.194",
+            "x-forwarded-for": "136.226.62.99",
             "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
             "x-forwarded-server": "d71ef73d891d",
-            "x-real-ip": "147.161.128.194",
+            "x-real-ip": "136.226.62.99",
             "accept-encoding": "gzip"
           },
           "params": {},
           "query": {},
           "body": [
             {
-              "codigoSolicitacao": "eda548ed-dfde-49dd-a6fb-c259369c20a9",
-              "chave": "kellyeleto@gmail.com",
-              "dataHoraMovimento": "2024-07-19T20:54:55.893",
-              "dataHoraSolicitacao": "2024-07-19T20:54:55.893",
-              "endToEnd": "E00416968202407192354lN7WCpbS5E4",
+              "codigoSolicitacao": "fade97e3-c35c-49f8-89f5-034e6f0eb4ce",
+              "chave": "05a3c8c9-9620-4cea-8749-ff0334e62473",
+              "dataHoraMovimento": "2024-11-04T20:13:59.943Z",
+              "dataHoraSolicitacao": "2024-11-04T20:13:59.897Z",
+              "endToEnd": "E00416968202411042013Kkru7btVidM",
               "recebedor": {
-                "cpfCnpj": "***518356**",
-                "nome": "KELLY CRISTINA DUARTE ELETO"
+                "cpfCnpj": "38407715000136",
+                "nome": "Portus Digital LTDA"
               },
               "status": "EFETIVADO",
               "tipoMovimentacao": "PAGAMENTO",
-              "valor": "30000.0"
+              "valor": "100000.0"
             }
           ]
         }
@@ -5834,6 +5756,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-11-12T13:11:56.649Z",
-  "versionId": "302c8072-ffa3-4b50-94d8-284601fe857e"
+  "updatedAt": "2024-11-18T18:42:33.510Z",
+  "versionId": "62cbf4c4-5a3d-4767-803f-a0e4ddc2457c"
 }
