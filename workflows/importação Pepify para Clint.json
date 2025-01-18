@@ -1,0 +1,298 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Replace Me1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cria_ou_atualiza_contato_na_clint11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_ou_atualiza_contato_na_clint11": {
+      "main": [
+        [
+          {
+            "node": "cria_ou_atualiza_contato_na_clint8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_ou_atualiza_contato_na_clint8": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-18T00:33:40.448Z",
+  "id": "nVKnjLSafGR5sG8M",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "importação Pepify para Clint",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "4a10d056-a003-46c4-98e1-c4e77a168f2e",
+      "name": "When clicking ‘Test workflow’",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -140,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "fbde7877-9f3e-4275-986a-15b72c7874b8",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        300,
+        540
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "a3eeba61-b995-4f1e-aeb0-49b32c4303f1",
+      "name": "Replace Me1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        520,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/87a48977-d460-48e9-bab2-bdcbd9a51868",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Email\"] }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Nome do Lead\"] }} - {{ $node[\"Loop Over Items\"].json[\"Cliente\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Whatsapp do Lead\"].replace(/[\\s-]+/g, \"\") }}"
+            },
+            {
+              "name": "cargo",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Cargo do Lead\"] }}"
+            },
+            {
+              "name": "experiencia",
+              "value": "={{ $node[\"Code\"].json[\"Experiência com concursos\"] }}"
+            },
+            {
+              "name": "prepara_prova",
+              "value": "={{ $node[\"Code\"].json[\"Preparação para provas\"] }}"
+            },
+            {
+              "name": "qual_prova",
+              "value": "={{ $node[\"Code\"].json[\"Provas que pretende fazer\"] }}"
+            },
+            {
+              "name": "qual_banca",
+              "value": "={{ $node[\"Code\"].json[\"Banca da prova\"] }}"
+            },
+            {
+              "name": "redacao",
+              "value": "={{ $node[\"Code\"].json[\"Terá redação na prova?\"] }}"
+            },
+            {
+              "name": "dificuldade",
+              "value": "={{ $node[\"Code\"].json[\"Dificuldade para estudar\"] }}"
+            },
+            {
+              "name": "trabalha",
+              "value": "={{ $node[\"Code\"].json[\"Trabalho\"] }}"
+            },
+            {
+              "name": "faturamento",
+              "value": "={{ $node[\"Code\"].json[\"Salário atual\"] }}"
+            },
+            {
+              "name": "faturamento_sonhos",
+              "value": "={{ $node[\"Code\"].json[\"Salário dos sonhos\"] }}"
+            },
+            {
+              "name": "profissao",
+              "value": "={{ $node[\"Code\"].json[\"Profissão atual\"] }}"
+            },
+            {
+              "name": "portugues",
+              "value": "={{ $node[\"Code\"].json[\"Importância de Português e Redação\"] }}"
+            },
+            {
+              "name": "Prioridade",
+              "value": "={{ $node[\"Code\"].json[\"Prioridade de aprender Português e Redação\"] }}"
+            },
+            {
+              "name": "Estudo",
+              "value": "={{ $node[\"Code\"].json[\"Estudo online\"] }}"
+            },
+            {
+              "name": "Cursos",
+              "value": "={{ $node[\"Code\"].json[\"Cursos online anteriores\"] }}"
+            },
+            {
+              "name": "conhecimento",
+              "value": "={{ $node[\"Code\"].json[\"Nível de conhecimento em Português e Redação\"] }}"
+            },
+            {
+              "name": "apos_curso",
+              "value": "={{ $node[\"Code\"].json[\"Expectativa após o curso\"] }}"
+            },
+            {
+              "name": "duvidas",
+              "value": "={{ $node[\"Code\"].json[\"Dúvidas sobre Português e Redação\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c5f7aac5-d7dd-416b-adee-ca829fe3d6d5",
+      "name": "cria_ou_atualiza_contato_na_clint8",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        740,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/96f7bb0d-de0e-4b72-b602-2a5d1fc3d5ef",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $json[\"Email\"] }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $json[\"Cliente\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $json[\"Celular\"] }}"
+            },
+            {
+              "name": "cpf/cnpj",
+              "value": "={{ $json[\"CPF\"] }}"
+            },
+            {
+              "name": "produto",
+              "value": "={{ $json[\"Produto\"] }}"
+            },
+            {
+              "name": "Plataforma",
+              "value": "Kiwify"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9ebaa5b2-a03d-41a4-8a8d-8311a4deb7aa",
+      "name": "cria_ou_atualiza_contato_na_clint11",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        540,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1WaYtPqLWgEvVSL_-EclfGysa3PWdw30NMzAjFJJBiYU",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1966397131,
+          "mode": "list",
+          "cachedResultName": "Report (1)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1WaYtPqLWgEvVSL_-EclfGysa3PWdw30NMzAjFJJBiYU/edit#gid=1966397131"
+        },
+        "options": {}
+      },
+      "id": "b5dc1e19-2c94-4499-9a9d-137b0f5b1569",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.3,
+      "position": [
+        80,
+        540
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ZaWeoW3t9GWDnGXA",
+          "name": "[Google Sheets] - AutomagicBots Auth"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-18T01:44:59.784Z",
+  "versionId": "39934ef9-37c4-4b63-b1c4-52437aba5aab"
+}
