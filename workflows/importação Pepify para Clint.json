@@ -130,72 +130,88 @@
               "value": "={{ $node[\"Loop Over Items\"].json[\"Cargo do Lead\"] }}"
             },
             {
-              "name": "experiencia",
-              "value": "={{ $node[\"Code\"].json[\"Experiência com concursos\"] }}"
+              "name": "comentario",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Último comentário\"] }}"
             },
             {
-              "name": "prepara_prova",
-              "value": "={{ $node[\"Code\"].json[\"Preparação para provas\"] }}"
+              "name": "closer",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Closer Responsável\"] }}"
             },
             {
-              "name": "qual_prova",
-              "value": "={{ $node[\"Code\"].json[\"Provas que pretende fazer\"] }}"
+              "name": "time",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Quantas pessoas tem no time atual?\"] }}"
             },
             {
-              "name": "qual_banca",
-              "value": "={{ $node[\"Code\"].json[\"Banca da prova\"] }}"
-            },
-            {
-              "name": "redacao",
-              "value": "={{ $node[\"Code\"].json[\"Terá redação na prova?\"] }}"
-            },
-            {
-              "name": "dificuldade",
-              "value": "={{ $node[\"Code\"].json[\"Dificuldade para estudar\"] }}"
-            },
-            {
-              "name": "trabalha",
-              "value": "={{ $node[\"Code\"].json[\"Trabalho\"] }}"
+              "name": "pessoas_trabalham",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Quantas pessoas trabalham na sua empresa?\"] }}"
             },
             {
               "name": "faturamento",
-              "value": "={{ $node[\"Code\"].json[\"Salário atual\"] }}"
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Qual é o seu faturamento MENSAL em média?\"] }}"
             },
             {
-              "name": "faturamento_sonhos",
-              "value": "={{ $node[\"Code\"].json[\"Salário dos sonhos\"] }}"
+              "name": "tipo",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Qual tipo de serviço deseja contratar?\"] }}"
             },
             {
-              "name": "profissao",
-              "value": "={{ $node[\"Code\"].json[\"Profissão atual\"] }}"
+              "name": "conhece",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Já conhece a Portüs Digital? \"] }}"
             },
             {
-              "name": "portugues",
-              "value": "={{ $node[\"Code\"].json[\"Importância de Português e Redação\"] }}"
+              "name": "Contrato",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Tipo de Contrato\"] }}"
             },
             {
-              "name": "Prioridade",
-              "value": "={{ $node[\"Code\"].json[\"Prioridade de aprender Português e Redação\"] }}"
+              "name": "ValorContrato",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Valor do contrato\"] }}"
             },
             {
-              "name": "Estudo",
-              "value": "={{ $node[\"Code\"].json[\"Estudo online\"] }}"
+              "name": "pagamento",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Forma de pagamento\"] }}"
             },
             {
-              "name": "Cursos",
-              "value": "={{ $node[\"Code\"].json[\"Cursos online anteriores\"] }}"
+              "name": "Garantia",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Garantia\"] }}"
             },
             {
-              "name": "conhecimento",
-              "value": "={{ $node[\"Code\"].json[\"Nível de conhecimento em Português e Redação\"] }}"
+              "name": "modelo",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Descreva seu modelo de negócio aqui\"] }}"
             },
             {
-              "name": "apos_curso",
-              "value": "={{ $node[\"Code\"].json[\"Expectativa após o curso\"] }}"
+              "name": "Valor",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Valor do Contrato Negociado\"] }}"
             },
             {
-              "name": "duvidas",
-              "value": "={{ $node[\"Code\"].json[\"Dúvidas sobre Português e Redação\"] }}"
+              "name": "PagamentoEstipulada",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Forma de Pagamento Estipulada\"] }}"
+            },
+            {
+              "name": "Vagas",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Quantidade de Vagas Solicitadas\"] }}"
+            },
+            {
+              "name": "Executive",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Essa é uma Vaga Executive?\"] }}"
+            },
+            {
+              "name": "Prazo",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Prazo de Garantia\"] }}"
+            },
+            {
+              "name": "TipodeCliente",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Tipo de Cliente\"] }}"
+            },
+            {
+              "name": "Orçamento",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Orçamento do Cliente para as Vagas\"] }}"
+            },
+            {
+              "name": "etapa",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Fase atual\"] }}"
+            },
+            {
+              "name": "status",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Fase atual\"] === 'VENDA REALIZADA' ? 'Ganho' : 'Aberto' }}"
             }
           ]
         },
@@ -213,7 +229,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/96f7bb0d-de0e-4b72-b602-2a5d1fc3d5ef",
+        "url": "https://functions-api.clint.digital/endpoints/integration/webhook/80cf8c3b-6a07-4c85-9679-0e13782fcd7f",
         "sendBody": true,
         "bodyParameters": {
           "parameters": [
@@ -223,23 +239,27 @@
             },
             {
               "name": "nome",
-              "value": "={{ $json[\"Cliente\"] }}"
+              "value": "={{ $json[\"Nome do Lead\"] }}"
             },
             {
               "name": "telefone",
-              "value": "={{ $json[\"Celular\"] }}"
+              "value": "={{ $json[\"Whatsapp do Lead\"].replace(/[\\s-]/g, \"\") }}"
             },
             {
-              "name": "cpf/cnpj",
-              "value": "={{ $json[\"CPF\"] }}"
+              "name": "nome_da_empresa",
+              "value": "={{ $json[\"Cliente\"] }}"
             },
             {
-              "name": "produto",
-              "value": "={{ $json[\"Produto\"] }}"
+              "name": "cargo",
+              "value": "={{ $json[\"Cargo do Lead\"] }}"
             },
             {
-              "name": "Plataforma",
-              "value": "Kiwify"
+              "name": "origem_do_contato",
+              "value": "={{ $json[\"Origem\"] }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $json[\"Instagram\"] }}"
             }
           ]
         },
@@ -293,6 +313,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-01-18T01:44:59.784Z",
-  "versionId": "39934ef9-37c4-4b63-b1c4-52437aba5aab"
+  "updatedAt": "2025-01-21T14:50:17.519Z",
+  "versionId": "e1b6e223-7556-4052-84c8-babd33e0708b"
 }
