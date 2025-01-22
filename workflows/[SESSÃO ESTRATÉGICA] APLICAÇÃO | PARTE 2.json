@@ -1939,7 +1939,8 @@
           "id": "iBDDqEWUrrzxfz28",
           "name": "PORTUS"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -1964,7 +1965,8 @@
           "id": "iBDDqEWUrrzxfz28",
           "name": "PORTUS"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -2009,7 +2011,8 @@
           "id": "iBDDqEWUrrzxfz28",
           "name": "PORTUS"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -6123,32 +6126,32 @@
       {
         "json": {
           "fields": {
-            "consumerTag": "amq.ctag-NJi_gDjkBDGEjLDaWfg6wQ",
-            "deliveryTag": 1,
+            "consumerTag": "amq.ctag-DYH85Ak6N9aqjnVZiHOLRg",
+            "deliveryTag": 3,
             "redelivered": false,
             "exchange": "",
             "routingKey": "aplicacao - p2"
           },
           "properties": {
             "headers": {
-              "x-delivery-count": 313245
+              "x-delivery-count": 7
             }
           },
           "content": {
-            "Nome do Cliente": "Teste1",
-            "E-mail do Cliente": "Teste12@gmail.com",
-            "Telefone do Cliente - Formato BC": "+557192594557",
-            "Telefone do Cliente - Formato Z-API": "557192594557",
-            "Instagram": "teste11",
-            "pergunta0": "Tse Cel",
-            "pergunta1": "Sim",
-            "pergunta2": "Abaixo de 1M",
-            "pergunta3": "8 milhões",
-            "pergunta4": "⁠1 a 5 pessoas",
-            "pergunta5": "Outro",
-            "pergunta6": "Preciso de alguém para ajudar na criação de conteúdo e marketing",
+            "Nome do Cliente": "Mateus Diniz (automagicbots)",
+            "E-mail do Cliente": "mateusdiniz@automagicbots.com.br",
+            "Telefone do Cliente - Formato BC": "+556281196678",
+            "Telefone do Cliente - Formato Z-API": "556281196678",
+            "Instagram": "prmateusdiniz",
+            "pergunta0": "",
+            "pergunta1": "",
+            "pergunta2": "",
+            "pergunta3": "",
+            "pergunta4": "",
+            "pergunta5": "",
+            "pergunta6": "",
             "pergunta7": "",
-            "pergunta8": "",
+            "pergunta8": "Ainda não, mas sinto que preciso de gente e abrirei em breve.",
             "pergunta9": "",
             "pergunta10": "",
             "pergunta11": "",
@@ -6166,8 +6169,8 @@
             "utm_campaign": "",
             "utm_medium": "",
             "utm_term": "",
-            "data_resposta_type": "07/06/2024 22:48",
-            "data_ultima_quinzena": "2024-05-23",
+            "data_resposta_type": "21/01/2025 16:02",
+            "data_ultima_quinzena": "2025-01-06",
             "id_fluxo_nao_agendou_10_min": "3065086",
             "id_fluxo_nao_agendou_10_min_desqualificados": "",
             "API-KEY": "46dacadf-10d0-47db-a81d-69263aca1959",
@@ -6273,13 +6276,14 @@
             "id_campo_data_da_aplicacao_crm": "00ad74e6-783f-4153-8bfd-9bf9a5b39857",
             "id_campo_data_da_aplicacao_bot_conversa": "1814725",
             "id_campo_nome_completo_crm": "1c438058-b654-4a19-9ea3-438bc2f5a078",
-            "data_resposta_type_milesegundos": "08/06/2024 01:48",
+            "data_resposta_type_milesegundos": "21/01/2025 19:02",
             "id_campo_status_sessao_ou_aplicacao_crm": "a5eebcc6-1646-4e44-a1ae-0e034bd825ef",
             "id_campo_status_aplicacao_realizada_crm": "bbf14072-e675-4a28-915a-ede90e9d31fa",
             "id_fluxo_popular_campos": "3317483",
-            "parceiro": "SE-Escala",
+            "parceiro": "Sessão Estratégica",
             "origem": "",
-            "celula": ""
+            "celula": "",
+            "utm_var": "parceiro-henrique-marinho"
           }
         }
       }
@@ -7467,6 +7471,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-07-03T17:59:01.100Z",
-  "versionId": "178a1e08-3343-482b-b786-d1c15efd2701"
+  "updatedAt": "2025-01-21T19:50:29.062Z",
+  "versionId": "9c4487d6-106f-469f-8dcc-2b73712fa940"
 }
