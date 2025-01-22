@@ -207,11 +207,15 @@
             },
             {
               "name": "etapa",
-              "value": "={{ $node[\"Loop Over Items\"].json[\"Fase atual\"] }}"
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Fase atual\"].replace ('PROSPECÇÃO','PRIMEIRO CONTATO').replace ('QUALIFICAÇÃO','CONECTADO') }}"
             },
             {
-              "name": "status",
-              "value": "={{ $node[\"Loop Over Items\"].json[\"Fase atual\"] === 'VENDA REALIZADA' ? 'Ganho' : 'Aberto' }}"
+              "name": "comoficou",
+              "value": "={{ $node[\"Loop Over Items\"].json[Object.keys($node[\"Loop Over Items\"].json).find(key => key.includes(\"Como ficou sabendo da Portus?\"))] || \"\" }}"
+            },
+            {
+              "name": "modelonegocio",
+              "value": "={{ $node[\"Loop Over Items\"].json[Object.keys($node[\"Loop Over Items\"].json).find(key => key.includes(\"Qual é o seu modelo de negócio aqui no digital?\"))] || \"\" }}"
             }
           ]
         },
@@ -313,6 +317,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-01-21T14:50:17.519Z",
-  "versionId": "e1b6e223-7556-4052-84c8-babd33e0708b"
+  "updatedAt": "2025-01-21T20:38:08.991Z",
+  "versionId": "fa7d4a62-2e17-4d9d-8e5c-32277af4937a"
 }
