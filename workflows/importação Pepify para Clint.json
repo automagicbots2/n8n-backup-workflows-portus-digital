@@ -119,7 +119,7 @@
             },
             {
               "name": "nome",
-              "value": "={{ $node[\"Loop Over Items\"].json[\"Nome do Lead\"] }} - {{ $node[\"Loop Over Items\"].json[\"Cliente\"] }}"
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Nome do Lead\"] }} - {{ $node[\"Loop Over Items\"].json[\"Título\"] }}"
             },
             {
               "name": "telefone",
@@ -207,7 +207,7 @@
             },
             {
               "name": "etapa",
-              "value": "={{ $node[\"Loop Over Items\"].json[\"Fase atual\"].replace ('PROSPECÇÃO','PRIMEIRO CONTATO').replace ('QUALIFICAÇÃO','CONECTADO') }}"
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Fase atual\"].replace ('NOVO LEAD','BASE').replace ('QUALIFICAÇÃO','CONEXÃO').replace ('NO SHOW','FOLLOW-UP').replace ('OFERTA / REUNIÃO','FOLLOW-UP').replace ('ENVIO DE CONTRATO','CONTRATO E PAGAMENTO').replace ('CONTATO FUTURO','PERDIDOS') }}"
             },
             {
               "name": "comoficou",
@@ -216,6 +216,10 @@
             {
               "name": "modelonegocio",
               "value": "={{ $node[\"Loop Over Items\"].json[Object.keys($node[\"Loop Over Items\"].json).find(key => key.includes(\"Qual é o seu modelo de negócio aqui no digital?\"))] || \"\" }}"
+            },
+            {
+              "name": "tags",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"tags\"] }}"
             }
           ]
         },
@@ -239,11 +243,11 @@
           "parameters": [
             {
               "name": "email",
-              "value": "={{ $json[\"Email\"] }}"
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Email\"] }}"
             },
             {
               "name": "nome",
-              "value": "={{ $json[\"Nome do Lead\"] }}"
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Nome do Lead\"] }}"
             },
             {
               "name": "telefone",
@@ -251,19 +255,19 @@
             },
             {
               "name": "nome_da_empresa",
-              "value": "={{ $json[\"Cliente\"] }}"
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Título\"] }}"
             },
             {
               "name": "cargo",
-              "value": "={{ $json[\"Cargo do Lead\"] }}"
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Cargo do Lead\"] }}"
             },
             {
               "name": "origem_do_contato",
-              "value": "={{ $json[\"Origem\"] }}"
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Origem\"] }}"
             },
             {
               "name": "instagram",
-              "value": "={{ $json[\"Instagram\"] }}"
+              "value": "={{ $node[\"Loop Over Items\"].json[\"Instagram\"] }}"
             }
           ]
         },
@@ -317,6 +321,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-01-21T20:38:08.991Z",
-  "versionId": "fa7d4a62-2e17-4d9d-8e5c-32277af4937a"
+  "updatedAt": "2025-01-23T18:32:38.730Z",
+  "versionId": "ed0960a7-9cca-4ddd-aa6d-ea29106e23a4"
 }
