@@ -22,6 +22,181 @@
           }
         ]
       ]
+    },
+    "dados_pipefy": {
+      "main": [
+        [
+          {
+            "node": "cria_tabela",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_cards_via_email": {
+      "main": [
+        [
+          {
+            "node": "existe_no_pipe_comercial",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_no_pipe_comercial": {
+      "main": [
+        [
+          {
+            "node": "nao_e_ganho",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cc1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "up>1fld1": {
+      "main": [
+        [
+          {
+            "node": "move_to_other_level_first_contact1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cc1": {
+      "main": [
+        [
+          {
+            "node": "get_cards_via_email1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_cards_via_email1": {
+      "main": [
+        [
+          {
+            "node": "update_checkbox",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "move_to_other_level_first_contact1": {
+      "main": [
+        [
+          {
+            "node": "update_checkbox2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "card": {
+      "main": [
+        [
+          {
+            "node": "up>1fld1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_tabela": {
+      "main": [
+        [
+          {
+            "node": "id_db",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_db": {
+      "main": [
+        [
+          {
+            "node": "update_title_table",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_title_table": {
+      "main": [
+        [
+          {
+            "node": "get_cards_via_email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_e_ganho": {
+      "main": [
+        [
+          {
+            "node": "cc1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "card",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "parceiro_clint_ou_henrique": {
+      "main": [
+        [
+          {
+            "node": "add_tag4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_tag3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_checkbox": {
+      "main": [
+        [
+          {
+            "node": "parceiro_clint_ou_henrique",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2025-01-27T20:37:44.420Z",
@@ -130,6 +305,679 @@
         1200
       ],
       "webhookId": "2a54f7b2-f74a-44a0-bceb-a879feeb9516"
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "id_pipe_comercial",
+              "stringValue": "302838347"
+            },
+            {
+              "name": "id_fase_pre_qualificados"
+            },
+            {
+              "name": "id_fase_pre_desqualificados"
+            },
+            {
+              "name": "id_database_aplicacoes",
+              "stringValue": "304286560"
+            },
+            {
+              "name": "id_tag_manychat",
+              "stringValue": "311412362"
+            },
+            {
+              "name": "id_tag_parceria_henrique",
+              "stringValue": "311486631"
+            },
+            {
+              "name": "id_tag_parceria_clint",
+              "stringValue": "311486632"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0c997250-3b19-42b4-b882-65a9a29d39b8",
+      "name": "dados_pipefy",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        1220,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=query {\n  findCards(pipeId: {{ $node[\"dados_pipefy\"].json[\"id_pipe_comercial\"] }}, search: {fieldId: \"email\", fieldValue: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"}) {\n    edges {\n      node {\n        fields {\n          date_value\n          datetime_value\n          filled_at\n          float_value\n          indexName\n          name\n          native_value\n          report_value\n          updated_at\n          value\n        }\n        title\n        done\n        id\n        updated_at\n        assignees {\n          name\n          email\n        }\n        attachments {\n          url\n          path\n        }\n        current_phase {\n          name\n        }\n        pipe {\n          name\n        }\n      }\n    }\n  }\n}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "cf837368-2e95-4851-a1f1-4dbd12f6411e",
+      "name": "get_cards_via_email",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1940,
+        1200
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "fad7c009-7961-477a-a86c-0e7be8094a0c",
+              "leftValue": "={{ $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"fields\"][\"0\"][\"filled_at\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "96bb553a-8c34-4a6f-8504-99e64010bb20",
+      "name": "existe_no_pipe_comercial",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2140,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  updateFieldsValues(input: {\n    nodeId: {{ $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] }},\n    values: [\n      {fieldId: \"nome_do_lead\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\"},\n      {fieldId: \"email\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"},\n      {fieldId: \"whatsapp_do_lead\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato BC\"] }}\"},\n      {fieldId: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}\"},\n      {fieldId: \"empresa\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"] }}\"},\n      {fieldId: \"voc_s_j_t_m_um_produto_servi_o_validado\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta1\"] }}\"},\n      {fieldId: \"qual_foi_o_seu_faturamento_em_2023\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta2\"] }}\"},\n      {fieldId: \"qual_a_meta_de_faturamento_anual_para_2024\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta3\"] }}\"},\n      {fieldId: \"quantas_pessoas_trabalham_na_sua_empresa\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta4\"] }}\"},\n      {fieldId: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta5\"] }}\"},\n      {fieldId: \"qual_profissional_voc_est_procurando\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta6\"] }}\"},\n      {fieldId: \"parceiro\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"parceiro\"] }}\"},\n      {fieldId: \"id_do_lead_no_database_de_aplica_es\", value: \"{{ $node[\"id_db\"].json[\"id_do_lead_database\"] }}\"},\n      {fieldId: \"voc_est_com_alguma_vaga_aberta_agora\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta8\"]}}\"},\n      {fieldId: \"respons_vel\", value: \"303175486\"}\n   ]\n }) {\n  clientMutationId\n }\n}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "ab874f3b-7e72-4123-8ce4-0dbbee60b620",
+      "name": "up>1fld1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2840,
+        1040
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  createCard(input: {\n    pipe_id: {{ $node[\"dados_pipefy\"].json[\"id_pipe_comercial\"] }}\n    title: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\"\n    assignee_ids: [303175486]\n    fields_attributes: [\n      {field_id: \"nome_do_lead\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\"},\n      {field_id: \"email\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"},\n      {field_id: \"whatsapp_do_lead\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato BC\"] }}\"},\n      {field_id: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}\"},\n      {field_id: \"empresa\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"] }}\"},\n      {field_id: \"voc_s_j_t_m_um_produto_servi_o_validado\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta1\"] }}\"},\n      {field_id: \"qual_foi_o_seu_faturamento_em_2023\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta2\"] }}\"},\n      {field_id: \"qual_a_meta_de_faturamento_anual_para_2024\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta3\"] }}\"},\n      {field_id: \"quantas_pessoas_trabalham_na_sua_empresa\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta4\"] }}\"},\n      {field_id: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta5\"] }}\"},\n      {field_id: \"qual_profissional_voc_est_procurando\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta6\"] }}\"},\n      {field_id: \"parceiro\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"parceiro\"] }}\"},\n      {field_id: \"funil\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"funil\"] }}\"},\n      {field_id: \"c_lula\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"celula\"] }}\"},\n      {field_id: \"origem\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"origem\"] }}\"},\n      {field_id: \"voc_est_com_alguma_vaga_aberta_agora\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta8\"] }}\"},\n      {field_id: \"respons_vel\", field_value: \"303175486\"}\n    ]\n  }) {\n    clientMutationId\n    card {\n      pipe {\n        id\n      }\n      assignees {\n        id\n      }\n    }\n  }\n}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "64e76255-7486-4bbd-aa41-0f4a666ba48e",
+      "name": "cc1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2660,
+        1220
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=query {\n  findCards(pipeId: {{ $node[\"dados_pipefy\"].json[\"id_pipe_comercial\"] }}, search: {fieldId: \"email\", fieldValue: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"}) {\n    edges {\n      node {\n        fields {\n          date_value\n          datetime_value\n          filled_at\n          float_value\n          indexName\n          name\n          native_value\n          report_value\n          updated_at\n          value\n        }\n        title\n        done\n        id\n        updated_at\n        assignees {\n          name\n          email\n        }\n        attachments {\n          url\n          path\n        }\n        current_phase {\n          name\n        }\n        pipe {\n          name\n        }\n      }\n    }\n  }\n}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "51a6a11a-9834-45bf-b408-401aae7a129e",
+      "name": "get_cards_via_email1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2840,
+        1220
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  moveCardToPhase(input: {\n    card_id: {{ $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] }}\n    destination_phase_id: 321485752\n}) {\n  clientMutationId\n }\n}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "609d68ce-b1eb-46a6-9a69-945846757db9",
+      "name": "move_to_other_level_first_contact1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        3020,
+        1040
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5403ed8f-ccf2-4241-a363-c13e761c74e1",
+              "name": "id_deal",
+              "value": "={{ $json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "09d1aafa-c5f4-4945-89b6-66f814b97d5a",
+      "name": "card",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        2660,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  updateCardField(input: {\n    card_id: {{ $node[\"up>1fld1\"].runIndex >= 0 ? $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : ($node[\"cc1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : '') }}\n    field_id: \"tags\"\n    new_value: {{ $node[\"chega_da_fila\"].json[\"content\"][\"parceiro\"].replace('Sessão Estratégica','311141379').replace('Manychat','311412362').replace('SE-Escala','311464525').replace('SE-High Ticket','311464526') }}\n  }) {\n    clientMutationId\n    success\n  }\n}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f08ac19f-6bec-4d14-b0de-6c959ce54506",
+      "name": "add_tag3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        3700,
+        1220
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  createTableRecord(\n    input: {\n      table_id: \"{{ $node[\"dados_pipefy\"].json[\"id_database_aplicacoes\"] }}\"\n      title: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n      fields_attributes: [\n        { field_id: \"nome_do_lead\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\" },\n        { field_id: \"data_da_aplica_o\", field_value: \"{{$now.toFormat('dd/MM/yyyy HH:mm')}}\" },\n        { field_id: \"telefone_do_lead\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato BC\"] }}\" },\n        { field_id: \"e_mail\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\" },\n        { field_id: \"instagram\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}\" },\n        { field_id: \"cargo_do_lead\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"] }}\" },\n        { field_id: \"quantas_pessoas_trabalham_na_sua_empresa\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta1\"] }}\" },\n        { field_id: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta2\"] }}\" },\n        { field_id: \"nome_da_empresa\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta3\"] }}\" },\n        { field_id: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta4\"] }}\" },\n        { field_id: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital_1\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta5\"] }}\" },\n        { field_id: \"qual_profissional_voc_est_procurando_se_ainda_n_o_tem_certeza_descreva_a_fun_o_que_precisa_ser_realizada\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta6\"] }}\" },\n        { field_id: \"parceiro\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"parceiro\"] }}\" },\n        { field_id: \"c_lula\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"celula\"] }}\" },\n        { field_id: \"funil\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"funil\"] }}\" },\n        { field_id: \"origem\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"origem\"] }}\" },\n        { field_id: \"utm_source\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}\" },\n        { field_id: \"utm_content\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}\" },\n        { field_id: \"utm_term\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}\" },\n        { field_id: \"utm_medium\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}\" },\n        { field_id: \"utm_campaign\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}\" }\n      ]\n    }\n  ) {\n    table_record {\n      id\n      title\n      due_date\n      record_fields {\n        name\n        value\n      }\n    }\n  }\n}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d1df36fc-d40b-410d-9643-e0e1289873bb",
+      "name": "cria_tabela",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1400,
+        1200
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "04e2400e-e101-46b8-911d-969ccb68e6e4",
+              "name": "id_do_lead_database",
+              "value": "={{ $node[\"update_nome\"].runIndex >= 0 ? $node[\"busca_tabela_no_database\"].json[\"data\"][\"table_records\"][\"edges\"][\"0\"][\"node\"][\"id\"] : $node[\"cria_tabela\"].json[\"data\"][\"createTableRecord\"][\"table_record\"][\"id\"]}}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "include": "selected",
+        "options": {}
+      },
+      "id": "39467ce4-d0c2-42e0-a6dd-f5554fca4bb6",
+      "name": "id_db",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1580,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  updateTableRecord(\n    input: {\n      id: \"{{ $node[\"id_db\"].json[\"id_do_lead_database\"] }}\"\n      title: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\"\n      due_date: \"{{new Date(new Date().getTime() - 3 * 60 * 60 * 1000).toISOString().slice(0, -1) + \"-03:00\"}}\"\n    }\n  ) {\n    table_record {\n      id\n      title\n      due_date\n      record_fields {\n        name\n        value\n      }\n    }\n  }\n}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5728408d-544e-42b8-ac4a-c74f570147af",
+      "name": "update_title_table",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1760,
+        1200
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "fad7c009-7961-477a-a86c-0e7be8094a0c",
+              "leftValue": "={{ $json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"current_phase\"][\"name\"] }}",
+              "rightValue": "VENDA REALIZADA",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "e44d786b-0356-4422-ad8e-a07d43c922d8",
+              "leftValue": "={{ $json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"current_phase\"][\"name\"] }}",
+              "rightValue": "CONTRATO ENVIADO",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "82a6fd4f-af91-4dc7-bc08-9e8eef0aaca2",
+      "name": "nao_e_ganho",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2380,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "1db22dcb-67c4-4678-bff1-67ffc342cc3c",
+              "leftValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"parceiro\"].toLowerCase().includes('clint') || $node[\"chega_da_fila\"].json[\"content\"][\"parceiro\"].toLowerCase().includes('henrique') }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "0b2975fa-c35c-413b-9b81-bd62a7ef0ff5",
+      "name": "parceiro_clint_ou_henrique",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        3440,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  updateCardField(input: {\n    card_id: {{ $node[\"up>1fld1\"].runIndex >= 0 ? $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : ($node[\"cc1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : '') }}\n    field_id: \"tags\"\n    new_value: {{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"].includes('clint') ? $node[\"dados_pipefy\"].json[\"id_tag_parceria_clint\"] : $node[\"dados_pipefy\"].json[\"id_tag_parceria_henrique\"]}}\n  }) {\n    clientMutationId\n    success\n  }\n}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bd09760a-04cd-4fbd-bb2c-74fef3a04fea",
+      "name": "add_tag4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        3700,
+        1020
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  updateCardField(input: {card_id: {{ $node[\"up>1fld1\"].runIndex >= 0 ? $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : ($node[\"cc1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : '') }}, field_id: \"j_conhece_a_port_s_digital\", new_value: [\"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"].toLowerCase().includes('não'.toLowerCase()) ? ('Não') : $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"].toLowerCase().includes('sim','yes','yeah') ? ('Sim') : ''}}\"]}) {\n    card {\n      title\n    }\n  }\n}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "79cf7fce-ed6d-4f2a-8cc9-327a08f1a4ca",
+      "name": "update_checkbox2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        3220,
+        1040
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  updateCardField(input: {card_id: {{ $node[\"up>1fld1\"].runIndex >= 0 ? $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : ($node[\"cc1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : '') }}, field_id: \"j_conhece_a_port_s_digital\", new_value: [\"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"].toLowerCase().includes('não'.toLowerCase()) ? ('Não') : $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"].toLowerCase().includes('sim','yes','yeah') ? ('Sim') : ''}}\"]}) {\n    card {\n      title\n    }\n  }\n}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "93b45dd2-5659-4b9e-aa74-90b03ede11bc",
+      "name": "update_checkbox",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        3060,
+        1220
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
     }
   ],
   "pinData": {
@@ -214,6 +1062,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-01-28T20:26:30.559Z",
-  "versionId": "c8ead4d6-519e-4ce6-b8e6-a5feb9bc979b"
+  "updatedAt": "2025-01-30T01:22:36.422Z",
+  "versionId": "fe04e4ad-0b1e-4dd7-9627-38274cff7ff5"
 }
