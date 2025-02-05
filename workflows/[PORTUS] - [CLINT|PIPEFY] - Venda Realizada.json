@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "formata_dados": {
       "main": [
@@ -199,11 +199,9 @@
       ]
     }
   },
-  "createdAt": "2025-01-27T20:37:44.420Z",
-  "id": "7SxYvVSTpRkUJuhR",
-  "meta": {
-    "templateCredsSetupCompleted": true
-  },
+  "createdAt": "2025-02-04T17:45:32.568Z",
+  "id": "WqGZDA720Ghofw6M",
+  "meta": null,
   "name": "[PORTUS] - [CLINT|PIPEFY] - Venda Realizada",
   "nodes": [
     {
@@ -385,7 +383,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -465,7 +463,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -512,7 +510,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -553,7 +551,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -594,7 +592,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -658,7 +656,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -699,7 +697,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -765,7 +763,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -880,7 +878,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -927,7 +925,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -974,94 +972,23 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
     }
   ],
-  "pinData": {
-    "venda_clint": [
-      {
-        "json": {
-          "headers": {
-            "host": "n8nwebhookportus.automagicbots.com.br",
-            "user-agent": "axios/1.7.9",
-            "content-length": "1097",
-            "accept": "application/json, text/plain, */*",
-            "accept-encoding": "gzip, compress, deflate, br",
-            "content-type": "application/json",
-            "traceparent": "00-6797f18e000000004cf3c85a6e1879aa-0e37497249214c92-00",
-            "tracestate": "dd=t.tid:6797f18e00000000;t.dm:-3;s:-1;p:0e37497249214c92",
-            "x-datadog-parent-id": "1024368195452095634",
-            "x-datadog-sampling-priority": "-1",
-            "x-datadog-tags": "_dd.p.tid=6797f18e00000000",
-            "x-datadog-trace-id": "5544995856942922154",
-            "x-forwarded-for": "52.200.254.28",
-            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
-            "x-forwarded-port": "443",
-            "x-forwarded-proto": "https",
-            "x-forwarded-server": "d71ef73d891d",
-            "x-real-ip": "52.200.254.28"
-          },
-          "params": {},
-          "query": {},
-          "body": {
-            "contact_name": "Pedro Marandino - UVEPOM",
-            "contact_email": "pedromarandino@gmail.com",
-            "contact_phone": "+5521975097696",
-            "deal_stage": "VENDA REALIZADA",
-            "deal_user": "",
-            "deal_status": "OPEN",
-            "contact_doc": "",
-            "contact_role": "",
-            "contact_remuneracao": "",
-            "contact_momento_atual": "",
-            "contact_nome_da_empresa": "UVEPOM",
-            "contact_instagram": "",
-            "contact_origem_do_contato": "",
-            "organization_employees": "",
-            "organization_category": "",
-            "organization_resumo_sobre_a_empre": "",
-            "deal_produto": "",
-            "deal_origem": "",
-            "deal_garantia": "",
-            "deal_tipo_de_contrato": "Retainer",
-            "deal_valor_do_contrato": "",
-            "deal_este_e_um_grupo_be": "",
-            "deal_faz_parte_de_grupo": "",
-            "deal_faturamento_mensal": "",
-            "deal_forma_de_pagamento": "",
-            "deal_ja_conhece_a_portu": "",
-            "deal_qual_e_o_seu_model": "",
-            "deal_quantas_pessoas_te": "",
-            "deal_quantidade_de_vagas": 1,
-            "deal_momento_atual": "",
-            "deal_tipo_de_cliente": "Especialista Iniciante",
-            "deal_orcamento_do_cliente": "6.000,00",
-            "deal_qual_tipo_de_servico": "",
-            "deal_💬_como_ficou_sabend": "",
-            "deal_voce_esta_com_alguma": "",
-            "deal_funil": "",
-            "deal_essa_e_uma_vaga_exec": "NÃO",
-            "deal_prazo_de_garantia": "90 dias"
-          }
-        }
-      }
-    ]
-  },
+  "pinData": null,
   "settings": {
-    "executionOrder": "v1",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": false,
     "saveDataErrorExecution": "all",
     "saveDataSuccessExecution": "all",
-    "saveExecutionProgress": true,
-    "saveManualExecutions": true,
-    "callerPolicy": "workflowsFromSameOwner",
-    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+    "errorWorkflow": "B5ErT6ObkzMJxzKU"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-02-04T20:29:29.575Z",
-  "versionId": "fe04e4ad-0b1e-4dd7-9627-38274cff7ff5"
+  "updatedAt": "2025-02-04T20:28:27.377Z",
+  "versionId": "fa6b47fc-bdc1-4525-928c-dcd78c11ffe9"
 }
