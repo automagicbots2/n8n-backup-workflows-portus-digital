@@ -1,0 +1,1969 @@
+{
+  "active": false,
+  "connections": {
+    "primeiro_fluxo": {
+      "main": [
+        [
+          {
+            "node": "substituicoes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "outros_fluxos": {
+      "main": [
+        [
+          {
+            "node": "_substituicoes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_templates": {
+      "main": [
+        [
+          {
+            "node": "e_primeiro_fluxo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "gatilho": {
+      "main": [
+        [
+          {
+            "node": "variaveis_aqui",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "substituicoes": {
+      "main": [
+        [
+          {
+            "node": "organiza",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "_substituicoes": {
+      "main": [
+        [
+          {
+            "node": "_organiza",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "organiza": {
+      "main": [
+        [
+          {
+            "node": "cria_workflows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "_organiza": {
+      "main": [
+        [
+          {
+            "node": "_cria_workflows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_workflows": {
+      "main": [
+        [
+          {
+            "node": "loop1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "_cria_workflows": {
+      "main": [
+        [
+          {
+            "node": "loop2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "variaveis_aqui": {
+      "main": [
+        [
+          {
+            "node": "busca_templates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "loop1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "primeiro_fluxo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "loop2": {
+      "main": [
+        [],
+        [
+          {
+            "node": "outros_fluxos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_importar": {
+      "main": [
+        [],
+        [
+          {
+            "node": "e_primeiro_fluxo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_deletar_se_contem_estes_termos": {
+      "main": [
+        [],
+        [
+          {
+            "node": "loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "loop": {
+      "main": [
+        [],
+        [
+          {
+            "node": "deleta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "deleta": {
+      "main": [
+        [
+          {
+            "node": "loop",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_workflows": {
+      "main": [
+        [
+          {
+            "node": "nao_deletar_se_contem_estes_termos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "e_primeiro_fluxo": {
+      "main": [
+        [
+          {
+            "node": "loop1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "e_parte_unica",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "e_parte_unica": {
+      "main": [
+        [
+          {
+            "node": "loop3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "loop2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "primeiro_fluxo1": {
+      "main": [
+        [
+          {
+            "node": "substituicoes1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "substituicoes1": {
+      "main": [
+        [
+          {
+            "node": "organiza1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "organiza1": {
+      "main": [
+        [
+          {
+            "node": "cria_workflows1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_workflows1": {
+      "main": [
+        [
+          {
+            "node": "loop3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "loop3": {
+      "main": [
+        [],
+        [
+          {
+            "node": "primeiro_fluxo1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-02-04T17:42:58.454Z",
+  "id": "fQdy7VmhRQ3fRCRZ",
+  "meta": null,
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 📤 UPLOAD WORKFLOWS 📤\n\n\n\n\n## IMPORTANTE:\n\n- No node \"busca_templates\" basta digitar o nome da TAG(idêntico) existente nos Workflows que deseja puxar para o N8N2 ( Ex: [TEMPLATES] );\n- As credenciais no novo N8N precisam ser previamente criadas (Ex: [RabbitMQ] - Xtráfego, ou seja, [Ferramenta] - Nome do Cliente), você precisará setar o id das credenciais no set abaixo;\n- As informações vazias no node \"variaveis_aqui\", serão desconsideradas, logo não haverá problemas se algum(s) ficar(s) em branco;\n- Você deverá adotar um padrão único para o nome do cliente (Credenciais, nome dos workflows, etc) [Ex: XTráfego] Você então deverá usar sempre XTráfego.",
+        "height": 733.0552922296943,
+        "width": 2335.331330861432
+      },
+      "id": "2321406e-bc3b-4368-8bec-6e4d3c57f0ce",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "e4f274a0-47c3-4681-9f20-63638e4d879d",
+      "name": "primeiro_fluxo",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1580,
+        80
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "2f7bb16d-f166-46e8-9bd5-639ea62c5f6f",
+      "name": "outros_fluxos",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "filters": {},
+        "requestOptions": {}
+      },
+      "id": "1709b031-ba26-4b02-bf9f-5b54236631de",
+      "name": "busca_templates",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        440,
+        380
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "V5BGRQWoUYNJWlBL",
+          "name": "[N8N] - Portus Automagic"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "85a45b09-0ba0-462d-b69a-7d56ee4fd792",
+      "name": "gatilho",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        40,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Mapeamento dos parâmetros e seus valores correspondentes, apontando diretamente para as variáveis\nconst parameterMapping = {\n\"API-KEY\": \"api_key_bot_conversa\",\n\"id_fluxo_nao_aplicou_10_min\": \"id_fluxo_nao_aplicou_10_min\",\n\"fluxo_nao_aplicou_10_min\": \"id_fluxo_nao_aplicou_10_min\",\n\"id_fluxo_nag\": \"id_fluxo_nag\",\n\"fluxo_nag\": \"id_fluxo_nag\",\n\"id_fluxo_nao_agendou_10_min\": \"id_fluxo_nao_agendou_10_min\",\n\"fluxo_nao_agendou_10_min\": \"id_fluxo_nao_agendou_10_min\",\n\"id_fluxo_nao_agendou_10_min_desqualificados\": \"id_fluxo_nao_agendou_10_min_desqualificados\",\n\"fluxo_nao_agendou_10_min_desqualificados\": \"id_fluxo_nao_agendou_10_min_desqualificados\",\n\"id_fluxo_de_confirmacao_de_agendamento\": \"id_fluxo_de_confirmacao_de_agendamento\",\n\"fluxo_de_confirmacao_de_agendamento\": \"id_fluxo_de_confirmacao_de_agendamento\",\n\"id_fluxo_de_cancelamento\": \"id_fluxo_de_cancelamento\",\n\"fluxo_de_cancelamento\": \"id_fluxo_de_cancelamento\",\n\"fluxo_de_confirmacao_de_cancelamento\":\"id_fluxo_de_cancelamento\",\n\"id_fluxo_de_reagendamento\": \"id_fluxo_de_reagendamento\",\n\"fluxo_de_reagendamento\": \"id_fluxo_de_reagendamento\",\n\"id_do_campo_id_do_agendamento_bot_conversa\": \"id_do_campo_id_do_agendamento_bot_conversa\",\n\"id_tag_desqualificado_bot_conversa\": \"id_tag_desqualificado_bot_conversa\",\n\"id_tag_qualificado_bot_conversa\": \"id_tag_qualificado_bot_conversa\",\n\"id_do_campo_link_da_reuniao_bot_conversa\": \"id_do_campo_link_da_reuniao_bot_conversa\",\n\"id_campo_utm_medium_bot_conversa\": \"id_campo_utm_medium_bot_conversa\",\n\"id_do_campo_dia_da_semana_do_agendamento_bot_conversa\": \"id_do_campo_dia_da_semana_do_agendamento_bot_conversa\",\n\"id_do_campo_data_do_agendamento_bot_conversa\": \"id_do_campo_data_do_agendamento_bot_conversa\",\n\"id_do_workflow_de_erro_aqui\": \"id_do_workflow_de_erro_aqui\",\n\"id_campo_id_banco_de_dados_bot_conversa\": \"id_campo_id_banco_de_dados_bot_conversa\",\n\"id_campo_utm_source_bot_conversa\": \"id_campo_utm_source_bot_conversa\",\n\"id_campo_utm_campaign_bot_conversa\": \"id_campo_utm_campaign_bot_conversa\",\n\"id_campo_utm_term_bot_conversa\": \"id_campo_utm_term_bot_conversa\",\n\"id_campo_utm_content_bot_conversa\": \"id_campo_utm_content_bot_conversa\",\n\"id_campo_utm_fun_bot_conversa\": \"id_campo_utm_fun_bot_conversa\",\n\"id_campo_utm_var_bot_conversa\": \"id_campo_utm_var_bot_conversa\",\n\"id_campo_instagram_bot_conversa\": \"id_campo_instagram_bot_conversa\",\n\"id_campo_emailse_bot_conversa\": \"id_campo_emailse_bot_conversa\",\n\"id_campo_id_lead_crm_bot_conversa\": \"id_campo_id_lead_crm_bot_conversa\",\n\"id_campo_data_resposta_type_bot_conversa\": \"id_campo_data_resposta_type_bot_conversa\",\n\"id_tag_desqualificado_bot_conversa\": \"id_tag_desqualificado_bot_conversa\",\n\"id_tag_qualificado_bot_conversa\": \"id_tag_qualificado_bot_conversa\",\n\"id_campo_iddealac_bot_conversa\": \"id_campo_iddealac_bot_conversa\",\n\"id_campo_idleadac_bot_conversa\": \"id_campo_idleadac_bot_conversa\",\n\"id_campo_pergunta0_bot_conversa\": \"id_campo_pergunta0_bot_conversa\",\n\"id_campo_pergunta1_bot_conversa\": \"id_campo_pergunta1_bot_conversa\",\n\"id_campo_pergunta2_bot_conversa\": \"id_campo_pergunta2_bot_conversa\",\n\"id_campo_pergunta3_bot_conversa\": \"id_campo_pergunta3_bot_conversa\",\n\"id_campo_pergunta4_bot_conversa\": \"id_campo_pergunta4_bot_conversa\",\n\"id_campo_pergunta5_bot_conversa\": \"id_campo_pergunta5_bot_conversa\",\n\"id_campo_pergunta6_bot_conversa\": \"id_campo_pergunta6_bot_conversa\",\n\"id_campo_pergunta7_bot_conversa\": \"id_campo_pergunta7_bot_conversa\",\n\"id_campo_pergunta8_bot_conversa\": \"id_campo_pergunta8_bot_conversa\",\n\"id_campo_pergunta9_bot_conversa\": \"id_campo_pergunta9_bot_conversa\",\n\"id_campo_pergunta10_bot_conversa\": \"id_campo_pergunta10_bot_conversa\",\n\"id_campo_pergunta11_bot_conversa\": \"id_campo_pergunta11_bot_conversa\",\n\"id_campo_pergunta12_bot_conversa\": \"id_campo_pergunta12_bot_conversa\",\n\"id_campo_pergunta13_bot_conversa\": \"id_campo_pergunta13_bot_conversa\",\n\"id_campo_pergunta14_bot_conversa\": \"id_campo_pergunta14_bot_conversa\",\n\"id_campo_pergunta15_bot_conversa\": \"id_campo_pergunta15_bot_conversa\",\n\"id_campo_pergunta16_bot_conversa\": \"id_campo_pergunta16_bot_conversa\",\n\"id_campo_pergunta17_bot_conversa\": \"id_campo_pergunta17_bot_conversa\",\n\"id_campo_pergunta18_bot_conversa\": \"id_campo_pergunta18_bot_conversa\",\n\"id_campo_pergunta19_bot_conversa\": \"id_campo_pergunta19_bot_conversa\",\n\"id_campo_pergunta20_bot_conversa\": \"id_campo_pergunta20_bot_conversa\",\n\"id_campo_status_do_lead_crm\": \"id_campo_status_do_lead_crm\",\n\"id_campo_email_crm\": \"id_campo_email_crm\",\n\"id_campo_telefone_crm\": \"id_campo_telefone_crm\",\n\"id_campo_instagram_crm\": \"id_campo_instagram_crm\",\n\"id_campo_utm_source_crm\": \"id_campo_utm_source_crm\",\n\"id_campo_utm_campaign_crm\": \"id_campo_utm_campaign_crm\",\n\"id_campo_utm_term_crm\": \"id_campo_utm_term_crm\",\n\"id_campo_utm_medium_crm\": \"id_campo_utm_medium_crm\",\n\"id_campo_utm_content_crm\": \"id_campo_utm_content_crm\",\n\"id_campo_utm_fun_crm\": \"id_campo_utm_fun_crm\",\n\"id_campo_utm_var_crm\": \"id_campo_utm_var_crm\",\n\"id_campo_pergunta0_crm\": \"id_campo_pergunta0_crm\",\n\"id_campo_pergunta1_crm\": \"id_campo_pergunta1_crm\",\n\"id_campo_pergunta2_crm\": \"id_campo_pergunta2_crm\",\n\"id_campo_pergunta3_crm\": \"id_campo_pergunta3_crm\",\n\"id_campo_pergunta4_crm\": \"id_campo_pergunta4_crm\",\n\"id_campo_pergunta5_crm\": \"id_campo_pergunta5_crm\",\n\"id_campo_pergunta6_crm\": \"id_campo_pergunta6_crm\",\n\"id_campo_pergunta7_crm\": \"id_campo_pergunta7_crm\",\n\"id_campo_pergunta8_crm\": \"id_campo_pergunta8_crm\",\n\"id_campo_pergunta9_crm\": \"id_campo_pergunta9_crm\",\n\"id_campo_pergunta10_crm\": \"id_campo_pergunta10_crm\",\n\"id_campo_pergunta11_crm\": \"id_campo_pergunta11_crm\",\n\"id_campo_pergunta12_crm\": \"id_campo_pergunta12_crm\",\n\"id_campo_pergunta13_crm\": \"id_campo_pergunta13_crm\",\n\"id_campo_pergunta14_crm\": \"id_campo_pergunta14_crm\",\n\"id_campo_pergunta15_crm\": \"id_campo_pergunta15_crm\",\n\"id_campo_pergunta16_crm\": \"id_campo_pergunta16_crm\",\n\"id_campo_pergunta17_crm\": \"id_campo_pergunta17_crm\",\n\"id_campo_pergunta18_crm\": \"id_campo_pergunta18_crm\",\n\"id_campo_pergunta19_crm\": \"id_campo_pergunta19_crm\",\n\"id_campo_pergunta20_crm\": \"id_campo_pergunta20_crm\",\n\"id_campo_status_do_lead_crm\": \"id_campo_status_do_lead_crm\",\n\"id_campo_status_do_lead_qualificado_crm\": \"id_campo_status_do_lead_qualificado_crm\",\n\"id_campo_status_do_lead_desqualificado_crm\": \"id_campo_status_do_lead_desqualificado_crm\",\n\"id_pipeline_crm\": \"id_pipeline_crm\",\n\"id_campo_status_do_lead_crm\": \"id_campo_status_do_lead_crm\",\n\"id_campo_status_do_lead_qualificado_crm\": \"id_campo_status_do_lead_qualificado_crm\",\n\"id_campo_status_do_lead_desqualificado_crm\": \"id_campo_status_do_lead_desqualificado_crm\",\n\"id_campo_id_bc_crm\": \"id_campo_id_bc_crm\",\n\"id_campo_data_da_aplicacao_crm\": \"id_campo_data_da_aplicacao_crm\",\n\"id_campo_data_da_aplicacao_bot_conversa\": \"id_campo_data_da_aplicacao_bot_conversa\",\n\"id_do_campo_id_do_agendamento_bot_conversa\": \"id_do_campo_id_do_agendamento_bot_conversa\",\n\"id_do_campo_link_da_reuniao_bot_conversa\": \"id_do_campo_link_da_reuniao_bot_conversa\",\n\"id_do_campo_dia_da_semana_do_agendamento_bot_conversa\": \"id_do_campo_dia_da_semana_do_agendamento_bot_conversa\",\n\"id_do_campo_data_do_agendamento_bot_conversa\": \"id_do_campo_data_do_agendamento_bot_conversa\",\n\"id_do_campo_horario_agendado_bot_conversa\": \"id_do_campo_horario_agendado_bot_conversa\",\n\"id_do_campo_id_banco_de_dados_bot_conversa\": \"id_do_campo_id_banco_de_dados_bot_conversa\",\n\"id_do_campo_idleadac_bot_conversa\": \"id_do_campo_idleadac_bot_conversa\",\n\"id_do_campo_iddealac_bot_conversa\": \"id_do_campo_iddealac_bot_conversa\",\n\"id_campo_id_banco_de_dados_crm\": \"id_campo_id_banco_de_dados_crm\",\n\"valor_produto_principal_em_centavos_crm\": \"valor_produto_principal_em_centavos_crm\",\n\"id_stage_agendou_reuniao_crm\": \"id_stage_agendou_reuniao_crm\",\n\"id_pipeline_se_crm\": \"id_pipeline_se_crm\",\n\"id_campo_link_de_cancelamento_crm\": \"id_campo_link_de_cancelamento_crm\",\n\"id_campo_link_de_reagendamento_crm\": \"id_campo_link_de_reagendamento_crm\",\n\"id_campo_id_do_cliente_crm\": \"id_campo_id_do_cliente_crm\",\n\"id_campo_dia_semana_agendamento_crm\": \"id_campo_dia_semana_agendamento_crm\",\n\"id_campo_data_de_inicio_crm\": \"id_campo_data_de_inicio_crm\",    \"id_campo_data_e_hora_de_inicio_crm\": \"id_campo_data_e_hora_de_inicio_crm\",    \"id_campo_data_e_hora_de_termino_crm\": \"id_campo_data_e_hora_de_termino_crm\",\n\"id_campo_data_de_termino_crm\": \"id_campo_data_de_termino_crm\",\n\"id_campo_email_do_responsavel_crm\": \"id_campo_email_do_responsavel_crm\",\n\"id_campo_data_do_agendamento_crm\": \"id_campo_data_do_agendamento_crm\",\n\"id_campo_link_da_reuniao_crm\": \"id_campo_link_da_reuniao_crm\",\n\"id_campo_tipo_de_evento_crm\": \"id_campo_tipo_de_evento_crm\",\n\"id_campo_id_do_evento_crm\": \"id_campo_id_do_evento_crm\",\n\"id_campo_utm_fun_crm\": \"id_campo_utm_fun_crm\",\n\"id_campo_utm_var_crm\": \"id_campo_utm_var_crm\",\n\"url_api_activecampaign\": \"url_api_activecampaign\",\n\"id_task_reuniao_crm\": \"id_task_reuniao_crm\",\n\"id_do_campo_id_do_cliente_bot_conversa\": \"id_do_campo_id_do_cliente_bot_conversa\",\n\"id_campo_idcrm_bot_conversa\": \"id_campo_idcrm_bot_conversa\",\n\"id_campo_id_do_cliente\": \"id_do_campo_inviteeid_bot_conversa\",\n\"id_do_campo_inviteeid_bot_conversa\": \"id_do_campo_inviteeid_bot_conversa\",\n\"flow_de_lembrete_diario_se\": \"flow_de_lembrete_diario_se\",\n\"flow_de_lembrete_diario_app\": \"flow_de_lembrete_diario_app\",\n\"flow_de_lembrete_na_hora_da_call_se\": \"flow_de_lembrete_na_hora_da_call_se\",\n\"flow_de_lembrete_na_hora_da_call_app\": \"flow_de_lembrete_na_hora_da_call_app\",\n\"flow_de_lembrete_e_amanha_se\": \"flow_de_lembrete_e_amanha_se\",\n\"flow_de_lembrete_e_amanha_app\": \"flow_de_lembrete_e_amanha_app\",\n\"flow_de_lembrete_1_hora_antes_da_call_se\": \"flow_de_lembrete_1_hora_antes_da_call_se\",\n\"flow_de_lembrete_1_hora_antes_da_call_app\": \"flow_de_lembrete_1_hora_antes_da_call_app\"\n    // Adicione outros parâmetros conforme necessário\n};\n\n// Obtenha as variáveis do nó 'variaveis_aqui'\nconst variaveis = $node[\"variaveis_aqui\"].json;\n\n// Função para substituir os parâmetros de um nó\nfunction substituirParametros(node) {\n    if (!node.parameters || !node.parameters.values || !node.parameters.values.string) {\n        return;\n    }\n    \n    node.parameters.values.string.forEach(param => {\n        const paramName = param.name;\n        const mappedKey = parameterMapping[paramName];\n        if (mappedKey && variaveis[mappedKey]) {\n            param.value = variaveis[mappedKey];\n        }\n    });\n}\n\n// Substituir parâmetros e credenciais em todos os nós do fluxo\nconst nodes = $node[\"primeiro_fluxo\"].json[\"nodes\"];\nnodes.forEach(node => {\n    if (node.credentials) {\n        Object.values(node.credentials).forEach(credential => {\n            const serviceName = credential.name.split(\"] - \")[0].slice(1);\n            const serviceKey = serviceName.toLowerCase().replace(/\\s/g, \"_\");\n            const credentialId = variaveis[`id_credencial_${serviceKey}`];\n            const credentialName = `[${serviceName}] - ${variaveis[\"nome_do_cliente_aqui (Ex: Fulano de Tal)\"]}`;\n            credential.id = credentialId;\n            credential.name = credentialName;\n        });\n    }\n\n    substituirParametros(node);\n});\n\nreturn [{ json: { nodes: nodes } }];"
+      },
+      "id": "eea828f0-9930-4584-8cc0-4153621f003a",
+      "name": "substituicoes",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1780,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Mapeamento dos parâmetros e seus valores correspondentes, apontando diretamente para as variáveis\nconst parameterMapping = {\n\"id_do_workflow_de_erro_aqui\": \"id_do_workflow_de_erro_aqui\",\n    // Adicione outros parâmetros conforme necessário\n};\n\n// Obtenha as variáveis do nó 'variaveis_aqui'\nconst variaveis = $node[\"variaveis_aqui\"].json;\n\n// Função para substituir os parâmetros de um nó\nfunction substituirParametros(node) {\n    if (!node.parameters || !node.parameters.values || !node.parameters.values.string) {\n        return;\n    }\n    \n    node.parameters.values.string.forEach(param => {\n        const paramName = param.name;\n        const mappedKey = parameterMapping[paramName];\n        if (mappedKey && variaveis[mappedKey]) {\n            param.value = variaveis[mappedKey];\n        }\n    });\n}\n\n// Substituir parâmetros e credenciais em todos os nós do fluxo\nconst nodes = $node[\"outros_fluxos\"].json[\"nodes\"];\nnodes.forEach(node => {\n    if (node.credentials) {\n        Object.values(node.credentials).forEach(credential => {\n            const serviceName = credential.name.split(\"] - \")[0].slice(1);\n            const serviceKey = serviceName.toLowerCase().replace(/\\s/g, \"_\");\n            const credentialId = variaveis[`id_credencial_${serviceKey}`];\n            const credentialName = `[${serviceName}] - ${variaveis[\"nome_do_cliente_aqui (Ex: Fulano de Tal)\"]}`;\n            credential.id = credentialId;\n            credential.name = credentialName;\n        });\n    }\n\n    substituirParametros(node);\n});\n\nreturn [{ json: { nodes: nodes } }];"
+      },
+      "id": "e0cc1860-3b3b-40d7-8b49-17bca093878c",
+      "name": "_substituicoes",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1820,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "={{ $node[\"primeiro_fluxo\"].json.name.replace('PAULA ARDANZA', $node[\"variaveis_aqui\"].json[\"nome_do_cliente_aqui (Ex: Fulano de Tal)\"]) }}"
+            },
+            {
+              "name": "=nodes",
+              "value": "={{ $json.nodes }}"
+            },
+            {
+              "name": "connections",
+              "value": "={{ $node[\"primeiro_fluxo\"].json.connections }}"
+            },
+            {
+              "name": "settings.saveDataErrorExecution",
+              "value": "=all"
+            },
+            {
+              "name": "staticData.lastId",
+              "value": "1"
+            },
+            {
+              "name": "settings.saveDataSuccessExecution",
+              "value": "=all"
+            },
+            {
+              "name": "settings.errorWorkflow",
+              "value": "={{ $node[\"variaveis_aqui\"].json[\"id_do_workflow_de_erro_aqui\"] }}"
+            }
+          ],
+          "boolean": [
+            {
+              "name": "settings.saveExecutionProgress",
+              "value": true
+            },
+            {
+              "name": "settings.saveManualExecutions"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bed1e026-18c1-4587-807d-de9ec52cdf86",
+      "name": "organiza",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        1980,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "={{ $node[\"outros_fluxos\"].json.name.replace('PAULA ARDANZA', $node[\"variaveis_aqui\"].json[\"nome_do_cliente_aqui (Ex: Fulano de Tal)\"]).replace('PAULO LACERDA ', $node[\"variaveis_aqui\"].json[\"nome_do_cliente_aqui (Ex: Fulano de Tal)\"]).replace(' PAULO LACERDA', $node[\"variaveis_aqui\"].json[\"nome_do_cliente_aqui (Ex: Fulano de Tal)\"]) }}"
+            },
+            {
+              "name": "=nodes",
+              "value": "={{ $json.nodes }}"
+            },
+            {
+              "name": "connections",
+              "value": "={{ $node[\"outros_fluxos\"].json.connections }}"
+            },
+            {
+              "name": "settings.saveDataErrorExecution",
+              "value": "=none"
+            },
+            {
+              "name": "staticData.lastId",
+              "value": "1"
+            },
+            {
+              "name": "settings.saveDataSuccessExecution",
+              "value": "=none"
+            },
+            {
+              "name": "settings.errorWorkflow",
+              "value": "={{ $node[\"variaveis_aqui\"].json[\"id_do_workflow_de_erro_aqui\"] }}"
+            }
+          ],
+          "boolean": [
+            {
+              "name": "settings.saveExecutionProgress"
+            },
+            {
+              "name": "settings.saveManualExecutions"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0338f3dd-447d-4800-92a9-dc6c043e00ee",
+      "name": "_organiza",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "workflowObject": "={ \"name\": \"{{ JSON.stringify($json[\"name\"]).replaceAll('\"','') }}\", \"nodes\": {{ JSON.stringify($json[\"nodes\"]) }}, \"connections\": {{ JSON.stringify($json[\"connections\"]) }}, \"settings\": {{ JSON.stringify($json[\"settings\"]) }}}",
+        "requestOptions": {}
+      },
+      "id": "185a1697-ae08-44b7-b7b9-b70eefaf131c",
+      "name": "cria_workflows",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        2180,
+        80
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "NlLaZ6gZX3RMZhmX",
+          "name": "[n8n] - Portus Digital"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "workflowObject": "={ \"name\": \"{{ JSON.stringify($json[\"name\"]).replaceAll('\"','') }}\", \"nodes\": {{ JSON.stringify($json[\"nodes\"]) }}, \"connections\": {{ JSON.stringify($json[\"connections\"]) }}, \"settings\": {{ JSON.stringify($json[\"settings\"]) }}}",
+        "requestOptions": {}
+      },
+      "id": "ca5c0f42-3d35-4e7e-a66d-50ef69de2b7a",
+      "name": "_cria_workflows",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        2180,
+        560
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "NlLaZ6gZX3RMZhmX",
+          "name": "[n8n] - Portus Digital"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "83672b8e-d768-459c-a890-f441f73f88eb",
+              "name": "nome_do_cliente_aqui (Ex: Fulano de Tal)",
+              "value": "PORTUS",
+              "type": "string"
+            },
+            {
+              "id": "be23d7bd-8464-4b04-8624-fe7e506872c8",
+              "name": "id_credencial_git_hub",
+              "value": "dKXtb1x70bJLa9xx",
+              "type": "string"
+            },
+            {
+              "id": "d16587d9-7282-4fd7-bca4-6718d0bcfd0e",
+              "name": "id_credencial_rabbit_mq",
+              "value": "quc6gfdQpKCDLaHX",
+              "type": "string"
+            },
+            {
+              "id": "c0e39656-dcce-430f-a6ab-52be8e96ebb3",
+              "name": "id_credencial_n8n",
+              "value": "NlLaZ6gZX3RMZhmX",
+              "type": "string"
+            },
+            {
+              "id": "c0e39656-dcce-430f-a6ab-52be8ekjlbb3",
+              "name": "id_credencial_clickup",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "ef9280d0-0cec-44d6-92ca-f407a289ae82",
+              "name": "id_credencial_google_docs",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "195344da-28e7-4cc0-8057-e7695d95b71b",
+              "name": "id_credencial_google_drive",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "0f3dac7f-4eb3-41e5-b6ce-9536d99b07b5",
+              "name": "id_credencial_google_sheets_principal",
+              "value": "PTisU6jVH6GN1bDQ",
+              "type": "string"
+            },
+            {
+              "id": "e31372c8-8c6a-43e4-95dc-ccdc176b7222",
+              "name": "id_credencial_mysql",
+              "value": "hjxCwlzjBFkdT0gG",
+              "type": "string"
+            },
+            {
+              "id": "8bdaa4c9-5a33-4fc6-9f05-3f3b03a02e08",
+              "name": "id_credencial_calendly",
+              "value": "njiWYWZH6BxrNQkg",
+              "type": "string"
+            },
+            {
+              "id": "8bdaa4c9-5a33-4fc6-9f05-3f3b03krd588",
+              "name": "id_credencial_active_campaign",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "9d6a6e84-2e62-46ee-b5c3-b573da665ba2",
+              "name": "api_key_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "c3514baa-41b2-435e-8a51-52059d7a9934",
+              "name": "id_fluxo_nao_aplicou_10_min",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "5a2a15e1-17b1-47bd-b8c8-8c969442928f",
+              "name": "id_fluxo_nao_agendou_10_min",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "b314561d-f8ba-4dcf-a028-b76369c96971",
+              "name": "id_fluxo_nao_agendou_10_min_desqualificados",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "4da5d41b-9089-4e49-9f74-5c2b343d9e26",
+              "name": "id_fluxo_de_confirmacao_de_agendamento",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "c9f2bbb4-e5d3-4b64-b67a-9e1889995612",
+              "name": "id_fluxo_de_cancelamento",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "0046147e-a51d-4790-b1d9-43e492ba3c63",
+              "name": "id_fluxo_de_reagendamento",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "3ca035bc-2c77-45e7-a0da-4b14f179ebb1",
+              "name": "id_do_campo_id_do_agendamento_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "abb42fac-615f-4937-b98a-34aecee6d5f6",
+              "name": "id_do_campo_link_da_reuniao_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "8964ba0a-7d01-4ada-ab33-bfdfbf85d3ad",
+              "name": "id_do_campo_dia_da_semana_do_agendamento_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "4f057648-5fa1-49d1-9c3c-fc352efc08b1",
+              "name": "id_do_campo_data_do_agendamento_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "58a47a7d-0a49-47fd-836b-7aa2f5dbcf58",
+              "name": "id_do_workflow_de_erro_aqui",
+              "value": "B5ErT6ObkzMJxzKU",
+              "type": "string"
+            },
+            {
+              "id": "c6b3f3c5-6ab3-41e1-85be-13c0266042b9",
+              "name": "id_campo_id_banco_de_dados_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "c1dacb95-8b7b-4747-b0f9-5e8467268693",
+              "name": "id_campo_utm_source_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "ce0b2236-6eb0-4dd3-9594-5686dbf8ea8c",
+              "name": "id_campo_utm_campaign_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "18d7a950-fd21-4eab-846c-69bb064f8c13",
+              "name": "id_campo_utm_term_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "32b42c23-7378-4e82-bd3c-fe468aeedf4f",
+              "name": "id_campo_utm_medium_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "0ba531d0-3ed5-468e-b501-85d71118d8fd",
+              "name": "id_campo_utm_content_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "95656bf2-9857-45ad-a87a-d33bc2314a79",
+              "name": "id_campo_utm_fun_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "ad70bd74-9674-4943-890c-ac1c12d1a598",
+              "name": "id_campo_utm_var_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "dcdb71b8-6994-4389-873a-a0b593eb3df5",
+              "name": "id_campo_instagram_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "02d0bc9f-2d6d-4148-95fc-90f1277b2417",
+              "name": "id_campo_emailse_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "97911bee-c47d-4262-a07f-0f1bc61f7378",
+              "name": "id_campo_id_lead_crm_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "c98d3fc0-0c53-4613-9c06-7171026b2d56",
+              "name": "id_tag_desqualificado_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "6d3fab01-09b5-4f93-bdc4-9bb6d57a7803",
+              "name": "id_tag_qualificado_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "cce7bd0c-b831-4c87-9704-801719ff5c52",
+              "name": "id_campo_iddealac_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "9321ef39-36ee-4a06-92df-75d4f4555613",
+              "name": "id_campo_idleadac_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "f3819fda-f0cd-4f61-9541-91f1cc1099ea",
+              "name": "id_campo_pergunta0_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "b4325c8c-789a-4ec7-bea6-4a437279c22c",
+              "name": "id_campo_pergunta1_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "8b79a237-83ce-4d42-ba01-a94bff980b2b",
+              "name": "id_campo_pergunta2_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "b5fbca5e-3c37-465a-b284-42223e6d3139",
+              "name": "id_campo_pergunta3_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "eae8fa0d-bec0-46cc-951a-57168780bf50",
+              "name": "id_campo_pergunta4_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "9ad6fa36-dd79-467a-b75f-db317c687a4e",
+              "name": "id_campo_pergunta5_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "f3b9be0c-12bc-49b3-a7f2-cab984a74ded",
+              "name": "id_campo_pergunta6_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "01d8bc02-cbba-4820-af10-1bcdfa112162",
+              "name": "id_campo_pergunta7_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "43962f27-7422-445f-8b8e-06700a502b96",
+              "name": "id_campo_pergunta8_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "3e324133-1583-4eb6-88f6-aa6a57cdee26",
+              "name": "id_campo_pergunta9_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "a5a98415-5df7-4dd2-bbc8-952ed5b31c0a",
+              "name": "id_campo_pergunta10_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "180ead3a-9706-4179-9066-5ef468d5c31b",
+              "name": "id_campo_pergunta11_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "140f95df-1697-4b71-9b48-740ff2041361",
+              "name": "id_campo_pergunta12_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "c99e1e7e-6574-4577-8e11-c9fbf51b5f2e",
+              "name": "id_campo_pergunta13_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "83e5b83e-c9e5-4985-adf3-63425197d240",
+              "name": "id_campo_pergunta14_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "2a81f604-7e47-4d95-8d0e-b9854e6b8ef8",
+              "name": "id_campo_pergunta15_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "06e4cccf-84f7-4c42-a327-ae311de450f5",
+              "name": "id_campo_pergunta16_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "83876974-8727-4298-ae45-d8366f093408",
+              "name": "id_campo_pergunta17_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "91f6cab1-fefe-4aca-9b06-393825d315b4",
+              "name": "id_campo_pergunta18_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "9910be5e-9855-49a4-8dc6-e4cc8f0c5b47",
+              "name": "id_campo_pergunta19_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "56a5a5a0-656b-4735-98dc-bb5d48ed8450",
+              "name": "id_campo_pergunta20_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "b65a358b-f623-4055-9a81-0ad4c53e6a06",
+              "name": "id_campo_status_do_lead_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "e1003241-5ece-49c0-b751-d67d592b6727",
+              "name": "id_campo_email_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "46ea5de2-1aac-41b0-96d6-2d1482a0ab13",
+              "name": "id_campo_telefone_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "58842d44-313e-4916-ba28-e079e1c4b154",
+              "name": "id_campo_instagram_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "f8de292e-4494-42b7-91e9-eb2f8b28a59a",
+              "name": "id_campo_utm_source_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "941f345a-b6b5-40d2-8b5a-7eb54728ba55",
+              "name": "id_campo_utm_campaign_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "61f00308-81d9-43c1-b55a-92cc66446d83",
+              "name": "id_campo_utm_term_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "32ff0097-a85c-4975-ad81-26e628c3b3b3",
+              "name": "id_campo_utm_medium_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "68042da1-df64-4fe8-b778-4c9e4a12620b",
+              "name": "id_campo_utm_content_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "f0a51d73-9be8-4fe2-8ae6-d2fd5e463e62",
+              "name": "id_campo_utm_fun_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "d951dd9e-0356-4b8c-a84a-d65afd5d5293",
+              "name": "id_campo_utm_var_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "52b02367-13bf-4dc0-8e05-15232219e7f9",
+              "name": "id_campo_pergunta0_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "122fb05c-a268-4d70-81bc-f58c7e7d3be1",
+              "name": "id_campo_pergunta1_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "cc701f9d-4c46-47f1-999b-d44cd52b8606",
+              "name": "id_campo_pergunta2_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "e46dff51-a83a-453a-9be5-991542de2ccf",
+              "name": "id_campo_pergunta3_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "d9a45dcd-b571-4e73-aaf0-2e8976e76b45",
+              "name": "id_campo_pergunta4_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "f53cd7ae-0ec2-4674-940f-ed633a2dbca4",
+              "name": "id_campo_pergunta5_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "1a34242f-71c5-4baf-ad8c-d8a480e6a463",
+              "name": "id_campo_pergunta6_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "1f70590e-0a1c-4636-9bd2-33dcdae172f5",
+              "name": "id_campo_pergunta7_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "59594c0e-050b-4e9a-b0d7-1bdd527704f7",
+              "name": "id_campo_pergunta8_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "ca1470ce-fbd4-4d75-8a6f-a7434eb4099a",
+              "name": "id_campo_pergunta9_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "b47c1c6e-80ea-4886-b8a4-2df90a4edd97",
+              "name": "id_campo_pergunta10_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "14f157f4-1804-4631-b8bb-d5b5876f764b",
+              "name": "id_campo_pergunta11_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "340aa9ec-36c5-4d1b-ab5b-c7b4b421e7f7",
+              "name": "id_campo_pergunta12_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "39759677-4c41-48b1-a59f-aed39ea4bf3a",
+              "name": "id_campo_pergunta13_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "0c167266-fa72-4467-b1c5-e80801a9c597",
+              "name": "id_campo_pergunta14_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "f2225476-b164-4967-8b9e-eba42f688297",
+              "name": "id_campo_pergunta15_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "774ba5a6-4c22-425d-a46f-0a5e03eedf3f",
+              "name": "id_campo_pergunta16_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "5f96d481-fcba-42be-b755-caec2a301159",
+              "name": "id_campo_pergunta17_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "76924d01-6900-4b50-b68d-58b63035c608",
+              "name": "id_campo_pergunta18_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "8872bdda-08b0-48ba-bf40-cc3f91d400fe",
+              "name": "id_campo_pergunta19crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "8a922eb8-47c2-41eb-b480-a97325a44c2b",
+              "name": "id_campo_pergunta20_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "17b79d7b-a041-42db-b314-d0e88a5821ff",
+              "name": "id_campo_status_do_lead_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "5a96d40b-5aa2-42d8-9308-3c11c9c14186",
+              "name": "id_campo_status_do_lead_qualificado_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "fd04a1c6-6ae1-4285-ac64-6902d2457bad",
+              "name": "id_campo_status_do_lead_desqualificado_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "26edcad6-832e-45ee-8266-69803cd19705",
+              "name": "id_pipeline_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "1534e464-429f-44e6-a37e-b9236349b8c6",
+              "name": "id_ending_typeform",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "ea3800c4-f6a1-4db3-8f54-759eca2d3773",
+              "name": "id_campo_status_do_lead_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "554c9ec6-dc3f-488a-b2c9-da10a4554a6f",
+              "name": "id_campo_status_do_lead_qualificado_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "f2f1bd25-7a8f-48a4-a437-35aff8ba6056",
+              "name": "id_campo_status_do_lead_desqualificado_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "0ab4021d-42d5-415b-9de4-f37646e4c283",
+              "name": "id_campo_id_bc_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "e8035099-08b2-4994-af6a-f08aee5dfeaa",
+              "name": "id_campo_data_da_aplicacao_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "af3b5ad5-8048-4b08-8ecc-da46a1a00674",
+              "name": "id_campo_data_da_aplicacao_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "4926cdfc-a8db-4c68-a7a2-1e7d2a6ab1b7",
+              "name": "id_do_campo_id_do_agendamento_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "3cd02f87-384a-4533-b2b6-ebf610bfca4b",
+              "name": "id_do_campo_link_da_reuniao_bot_conversa",
+              "value": "2370600",
+              "type": "string"
+            },
+            {
+              "id": "8a44acd5-68be-4f5b-97f5-fb01a40c4679",
+              "name": "id_do_campo_dia_da_semana_do_agendamento_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "64c269bd-14b2-462a-8376-9ddf2721ba3c",
+              "name": "id_do_campo_data_do_agendamento_bot_conversa",
+              "value": "2371397",
+              "type": "string"
+            },
+            {
+              "id": "7b143ea2-2504-4433-bd64-9bfe79653c06",
+              "name": "id_do_campo_horario_agendado_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "b5481d91-5d27-48c1-98c6-45ed6f19d5df",
+              "name": "id_do_campo_id_banco_de_dados_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "f0f19ac4-ead2-457a-8c15-ec0d997896c0",
+              "name": "id_campo_id_banco_de_dados_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "94bca8e0-c544-4283-8b7d-9ea2831ceae5",
+              "name": "valor_produto_principal_em_centavos_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "80085518-a966-4952-9fdf-75d1f66ca9f5",
+              "name": "id_stage_agendou_reuniao_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "44bcb59a-a83d-407f-a407-a88c9f544068",
+              "name": "id_pipeline_se_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "d7a7174e-c33e-4fd5-bced-c0f5fd60a632",
+              "name": "id_campo_link_de_cancelamento_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "2e3dc446-7008-49f8-bd81-9d1bba158a2d",
+              "name": "id_campo_link_de_reagendamento_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "c4e92cde-8dea-47ce-8d3b-53817eb17c94",
+              "name": "id_campo_id_do_cliente_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "c90785fc-c55b-4ca2-872c-51c5d14a7460",
+              "name": "id_campo_dia_semana_agendamento_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "5345fc36-434a-45df-b0ba-bfcdd3597a13",
+              "name": "id_campo_data_de_inicio_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "60d08e28-8ea8-43cd-8bf9-b9a758bf5dd1",
+              "name": "id_campo_data_e_hora_de_inicio_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "ca2cf679-2b24-40ba-b5a7-54a0ac76a24f",
+              "name": "id_campo_data_e_hora_de_termino_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "2e291090-e284-4ae1-aff8-4397c6a20199",
+              "name": "id_campo_data_de_termino_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "8b749bce-06bd-408b-a649-e3a817f49b6c",
+              "name": "id_campo_email_do_responsavel_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "85ef9c5d-8572-4c32-aeb5-305bc8349096",
+              "name": "id_campo_data_do_agendamento_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "dba18e60-4fa7-4de3-8146-b28fa5ca8c1c",
+              "name": "id_campo_link_da_reuniao_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "4e3a8053-51bc-4f33-bc52-994fd0b43fc9",
+              "name": "id_campo_tipo_de_evento_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "c2ef1837-8904-4ede-92c3-7e0a3bb4d530",
+              "name": "id_campo_id_do_evento_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "5a5686ff-451d-4b95-aedd-8a0087c45dae",
+              "name": "id_campo_utm_fun_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "39ca91a7-7eec-4f76-ae86-afbe41813fe6",
+              "name": "id_campo_utm_var_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "5cd2bab8-c7e1-4456-94e6-2d5c5f0b9b2d",
+              "name": "url_api_activecampaign",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "d4b39883-4db5-431d-9698-d88442e7ae44",
+              "name": "id_task_reuniao_crm",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "ccdcf495-87fc-47af-bdde-ff7d765130ea",
+              "name": "id_do_campo_id_do_cliente_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "73996efb-76cc-4e11-8a61-84aa034bd948",
+              "name": "id_campo_idcrm_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "cbe25783-7124-418f-b44d-b4e70793f106",
+              "name": "id_do_campo_inviteeid_bot_conversa",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "66a1384e-83f7-4476-a906-4b0ed5c28c95",
+              "name": "flow_de_lembrete_diario_se",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "873ba6e5-486c-4542-9614-ae9760ab8c4e",
+              "name": "flow_de_lembrete_diario_app",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "274558f4-79d0-49ee-badb-18d60e797437",
+              "name": "flow_de_lembrete_na_hora_da_call_se",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "12054da7-7b98-4188-87e1-6da11df26862",
+              "name": "flow_de_lembrete_na_hora_da_call_app",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "c1cf45e5-0a21-4cc9-a886-5a9ca5f68948",
+              "name": "flow_de_lembrete_e_amanha_se",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "84c0a9c3-157c-4ebc-9b2c-f0e002d37924",
+              "name": "flow_de_lembrete_e_amanha_app",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "4dc43703-3246-417a-9136-763ef37c3539",
+              "name": "flow_de_lembrete_1_hora_antes_da_call_se",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "fa96c03b-0430-4a54-86bf-34f80c75e2d4",
+              "name": "flow_de_lembrete_1_hora_antes_da_call_app",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "746f6de4-19ce-4ca3-acdc-d83af8da9d75",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "514ccd20-7b41-40eb-b7b6-438f02e2de88",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "24958ed2-825a-4c11-82ac-2a499f5b21be",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "d67cde7f-4ca2-4ef3-a4a1-340c4efa1835",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "9df113f6-0530-4cf8-aaec-efa4fa3cb509",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "22fa2260-5dd2-4de7-8991-011b75d8a530",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "1215f3b3-4ef2-405a-aee4-7f32a373dba1",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "da071075-bfd5-48b1-b320-63c2bc77e151",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "15853ea2-8bd6-42c0-801a-dfb248a1c99f",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "5f733092-a419-4142-87aa-b25099ac2199",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "7299542c-1f58-4682-9790-d8f9f6919909",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "3e134ddb-575f-4ea0-9199-0ebdfb24c3ff",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "4b7aa476-eb87-4c16-a7e6-00ab45d425fe",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "eda7ed3c-20f9-4166-ba62-6ff89b006387",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "04a07646-481d-45c5-9e9c-c7f3985502a2",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "e3fb6bbe-a95d-4b5c-9ad6-498c3c447c7d",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "0dca41d3-491e-49bf-a8ad-b822d05dab3a",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "52515c08-5da1-42d4-a42b-de5b293f7750",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "91ebc047-5858-473e-a683-ad280b90a115",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "747d547a-4147-4f1b-9390-d4121e89e6f1",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "cfbdab9a-64f0-498d-9309-50780786d6d8",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "9fdab9d7-3549-467d-b0be-c911b526bfaf",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "f18a175e-f1c1-4744-a234-20253c20ef04",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "7662c374-6249-4232-9e35-1b81037c0b87",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "4f79ab90-0f26-4f59-b8d3-71b03df08702",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "f219cb07-09e0-46b0-8185-d84390485b1a",
+              "name": "",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "id": "e4ac6bf4-701b-481b-935c-712327877fc7",
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "include": "selected",
+        "options": {}
+      },
+      "id": "f45fbb23-f218-4f85-a410-4c952eac0167",
+      "name": "variaveis_aqui",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        240,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "dd8d63eb-17ed-4e51-ab1e-a8a847ef4dd7",
+      "name": "loop1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1320,
+        20
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "bdad14fc-4858-452b-8b7d-1919dafc3957",
+      "name": "loop2",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1360,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "63f822a1-02c1-407a-9096-fba1c32c44c7",
+              "leftValue": "={{ $json[\"name\"] }}",
+              "rightValue": "Aviso de Erro no Discord",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "7924e2fe-3e69-427a-b3be-31445e8149e7",
+      "name": "nao_importar",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        660,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## DELETA WORKFLOWS",
+        "height": 445.8565700847765,
+        "width": 1148.0137053482315
+      },
+      "id": "fdc1832d-39b7-45bb-804f-91e91236b3c7",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        20,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "c1d089f0-7cd0-4e17-bd33-478dd8ece2e4",
+              "leftValue": "={{ $json[\"name\"] }}",
+              "rightValue": "(JSN123) -",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "4d1aa734-eda9-4a20-aefe-e6f6f13923c5",
+              "leftValue": "={{ $json[\"name\"] }}",
+              "rightValue": "[AUTOMAGIC BOTS] | IMPORTAÇÃO DE WORKFLOWS (COM SUBSTITUIÇÕES)",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "580d5f67-ca5c-4f44-9ea2-b7362fcfac74",
+              "leftValue": "={{ $json[\"name\"] }}",
+              "rightValue": "⚙️ Aviso de Erro no Discord",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "88e0d723-8caf-4f22-bf2e-65d27de21ca4",
+      "name": "nao_deletar_se_contem_estes_termos",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        400,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "b204699f-6278-4578-b971-2f460bb6002d",
+      "name": "loop",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        620,
+        940
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "workflowId": {
+          "__rl": true,
+          "value": "={{ $json[\"id\"] }}",
+          "mode": "id"
+        },
+        "requestOptions": {}
+      },
+      "id": "b0fdce2b-7fb8-4055-a267-a8e6284a860d",
+      "name": "deleta",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        860,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "filters": {},
+        "requestOptions": {}
+      },
+      "id": "5e13352d-2b48-43cc-9490-525ad9d22d67",
+      "name": "busca_workflows",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        220,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "a4a38a5f-2258-47f2-a584-e40ffddfd7c3",
+              "leftValue": "={{ $json.name }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "f3be91f5-4a2f-47b8-8f19-794cadee5d50",
+              "leftValue": "={{ $json.name.toLowerCase() }}",
+              "rightValue": "parte 1",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "7710ff05-712f-4e37-b547-7c90d24d2751",
+              "leftValue": "={{ $json.name.toLowerCase() }}",
+              "rightValue": "p1",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "fba338e9-3a16-4da1-9672-e0ed72d02a27",
+      "name": "e_primeiro_fluxo",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        860,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "58c0417a-8b81-4a92-88e6-20fccff14f40",
+              "leftValue": "={{ $json[\"name\"].toLowerCase() }}",
+              "rightValue": "2",
+              "operator": {
+                "type": "string",
+                "operation": "notContains"
+              }
+            },
+            {
+              "id": "56c4bcc3-3c58-48d6-88c2-991cf76c3559",
+              "leftValue": "={{ $json[\"name\"].toLowerCase() }}",
+              "rightValue": "3",
+              "operator": {
+                "type": "string",
+                "operation": "notContains"
+              }
+            },
+            {
+              "id": "005e1f5e-0eb2-43b2-a304-9e8950f96e74",
+              "leftValue": "={{ $json[\"name\"].toLowerCase() }}",
+              "rightValue": "4",
+              "operator": {
+                "type": "string",
+                "operation": "notContains"
+              }
+            },
+            {
+              "id": "e70895b0-7c60-4adf-9288-dc36c9f8d642",
+              "leftValue": "={{ $json[\"name\"].toLowerCase() }}",
+              "rightValue": "5",
+              "operator": {
+                "type": "string",
+                "operation": "notContains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "fca9e743-1f51-4467-8fb7-ff19d4ef06a3",
+      "name": "e_parte_unica",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        400
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "99dc217f-e377-4162-ace8-25efe6641da4",
+      "name": "primeiro_fluxo1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1600,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Mapeamento dos parâmetros e seus valores correspondentes, apontando diretamente para as variáveis\nconst parameterMapping = {\n\"API-KEY\": \"api_key_bot_conversa\",\n\"id_fluxo_nao_aplicou_10_min\": \"id_fluxo_nao_aplicou_10_min\",\n\"fluxo_nao_aplicou_10_min\": \"id_fluxo_nao_aplicou_10_min\",\n\"id_fluxo_nag\": \"id_fluxo_nag\",\n\"fluxo_nag\": \"id_fluxo_nag\",\n\"id_fluxo_nao_agendou_10_min\": \"id_fluxo_nao_agendou_10_min\",\n\"fluxo_nao_agendou_10_min\": \"id_fluxo_nao_agendou_10_min\",\n\"id_fluxo_nao_agendou_10_min_desqualificados\": \"id_fluxo_nao_agendou_10_min_desqualificados\",\n\"fluxo_nao_agendou_10_min_desqualificados\": \"id_fluxo_nao_agendou_10_min_desqualificados\",\n\"id_fluxo_de_confirmacao_de_agendamento\": \"id_fluxo_de_confirmacao_de_agendamento\",\n\"fluxo_de_confirmacao_de_agendamento\": \"id_fluxo_de_confirmacao_de_agendamento\",\n\"id_fluxo_de_cancelamento\": \"id_fluxo_de_cancelamento\",\n\"fluxo_de_cancelamento\": \"id_fluxo_de_cancelamento\",\n\"fluxo_de_confirmacao_de_cancelamento\":\"id_fluxo_de_cancelamento\",\n\"id_fluxo_de_reagendamento\": \"id_fluxo_de_reagendamento\",\n\"fluxo_de_reagendamento\": \"id_fluxo_de_reagendamento\",\n\"id_do_campo_id_do_agendamento_bot_conversa\": \"id_do_campo_id_do_agendamento_bot_conversa\",\n\"id_tag_desqualificado_bot_conversa\": \"id_tag_desqualificado_bot_conversa\",\n\"id_tag_qualificado_bot_conversa\": \"id_tag_qualificado_bot_conversa\",\n\"id_do_campo_link_da_reuniao_bot_conversa\": \"id_do_campo_link_da_reuniao_bot_conversa\",\n\"id_campo_utm_medium_bot_conversa\": \"id_campo_utm_medium_bot_conversa\",\n\"id_do_campo_dia_da_semana_do_agendamento_bot_conversa\": \"id_do_campo_dia_da_semana_do_agendamento_bot_conversa\",\n\"id_do_campo_data_do_agendamento_bot_conversa\": \"id_do_campo_data_do_agendamento_bot_conversa\",\n\"id_do_workflow_de_erro_aqui\": \"id_do_workflow_de_erro_aqui\",\n\"id_campo_id_banco_de_dados_bot_conversa\": \"id_campo_id_banco_de_dados_bot_conversa\",\n\"id_campo_utm_source_bot_conversa\": \"id_campo_utm_source_bot_conversa\",\n\"id_campo_utm_campaign_bot_conversa\": \"id_campo_utm_campaign_bot_conversa\",\n\"id_campo_utm_term_bot_conversa\": \"id_campo_utm_term_bot_conversa\",\n\"id_campo_utm_content_bot_conversa\": \"id_campo_utm_content_bot_conversa\",\n\"id_campo_utm_fun_bot_conversa\": \"id_campo_utm_fun_bot_conversa\",\n\"id_campo_utm_var_bot_conversa\": \"id_campo_utm_var_bot_conversa\",\n\"id_campo_instagram_bot_conversa\": \"id_campo_instagram_bot_conversa\",\n\"id_campo_emailse_bot_conversa\": \"id_campo_emailse_bot_conversa\",\n\"id_campo_id_lead_crm_bot_conversa\": \"id_campo_id_lead_crm_bot_conversa\",\n\"id_campo_data_resposta_type_bot_conversa\": \"id_campo_data_resposta_type_bot_conversa\",\n\"id_tag_desqualificado_bot_conversa\": \"id_tag_desqualificado_bot_conversa\",\n\"id_tag_qualificado_bot_conversa\": \"id_tag_qualificado_bot_conversa\",\n\"id_campo_iddealac_bot_conversa\": \"id_campo_iddealac_bot_conversa\",\n\"id_campo_idleadac_bot_conversa\": \"id_campo_idleadac_bot_conversa\",\n\"id_campo_pergunta0_bot_conversa\": \"id_campo_pergunta0_bot_conversa\",\n\"id_campo_pergunta1_bot_conversa\": \"id_campo_pergunta1_bot_conversa\",\n\"id_campo_pergunta2_bot_conversa\": \"id_campo_pergunta2_bot_conversa\",\n\"id_campo_pergunta3_bot_conversa\": \"id_campo_pergunta3_bot_conversa\",\n\"id_campo_pergunta4_bot_conversa\": \"id_campo_pergunta4_bot_conversa\",\n\"id_campo_pergunta5_bot_conversa\": \"id_campo_pergunta5_bot_conversa\",\n\"id_campo_pergunta6_bot_conversa\": \"id_campo_pergunta6_bot_conversa\",\n\"id_campo_pergunta7_bot_conversa\": \"id_campo_pergunta7_bot_conversa\",\n\"id_campo_pergunta8_bot_conversa\": \"id_campo_pergunta8_bot_conversa\",\n\"id_campo_pergunta9_bot_conversa\": \"id_campo_pergunta9_bot_conversa\",\n\"id_campo_pergunta10_bot_conversa\": \"id_campo_pergunta10_bot_conversa\",\n\"id_campo_pergunta11_bot_conversa\": \"id_campo_pergunta11_bot_conversa\",\n\"id_campo_pergunta12_bot_conversa\": \"id_campo_pergunta12_bot_conversa\",\n\"id_campo_pergunta13_bot_conversa\": \"id_campo_pergunta13_bot_conversa\",\n\"id_campo_pergunta14_bot_conversa\": \"id_campo_pergunta14_bot_conversa\",\n\"id_campo_pergunta15_bot_conversa\": \"id_campo_pergunta15_bot_conversa\",\n\"id_campo_pergunta16_bot_conversa\": \"id_campo_pergunta16_bot_conversa\",\n\"id_campo_pergunta17_bot_conversa\": \"id_campo_pergunta17_bot_conversa\",\n\"id_campo_pergunta18_bot_conversa\": \"id_campo_pergunta18_bot_conversa\",\n\"id_campo_pergunta19_bot_conversa\": \"id_campo_pergunta19_bot_conversa\",\n\"id_campo_pergunta20_bot_conversa\": \"id_campo_pergunta20_bot_conversa\",\n\"id_campo_status_do_lead_crm\": \"id_campo_status_do_lead_crm\",\n\"id_campo_email_crm\": \"id_campo_email_crm\",\n\"id_campo_telefone_crm\": \"id_campo_telefone_crm\",\n\"id_campo_instagram_crm\": \"id_campo_instagram_crm\",\n\"id_campo_utm_source_crm\": \"id_campo_utm_source_crm\",\n\"id_campo_utm_campaign_crm\": \"id_campo_utm_campaign_crm\",\n\"id_campo_utm_term_crm\": \"id_campo_utm_term_crm\",\n\"id_campo_utm_medium_crm\": \"id_campo_utm_medium_crm\",\n\"id_campo_utm_content_crm\": \"id_campo_utm_content_crm\",\n\"id_campo_utm_fun_crm\": \"id_campo_utm_fun_crm\",\n\"id_campo_utm_var_crm\": \"id_campo_utm_var_crm\",\n\"id_campo_pergunta0_crm\": \"id_campo_pergunta0_crm\",\n\"id_campo_pergunta1_crm\": \"id_campo_pergunta1_crm\",\n\"id_campo_pergunta2_crm\": \"id_campo_pergunta2_crm\",\n\"id_campo_pergunta3_crm\": \"id_campo_pergunta3_crm\",\n\"id_campo_pergunta4_crm\": \"id_campo_pergunta4_crm\",\n\"id_campo_pergunta5_crm\": \"id_campo_pergunta5_crm\",\n\"id_campo_pergunta6_crm\": \"id_campo_pergunta6_crm\",\n\"id_campo_pergunta7_crm\": \"id_campo_pergunta7_crm\",\n\"id_campo_pergunta8_crm\": \"id_campo_pergunta8_crm\",\n\"id_campo_pergunta9_crm\": \"id_campo_pergunta9_crm\",\n\"id_campo_pergunta10_crm\": \"id_campo_pergunta10_crm\",\n\"id_campo_pergunta11_crm\": \"id_campo_pergunta11_crm\",\n\"id_campo_pergunta12_crm\": \"id_campo_pergunta12_crm\",\n\"id_campo_pergunta13_crm\": \"id_campo_pergunta13_crm\",\n\"id_campo_pergunta14_crm\": \"id_campo_pergunta14_crm\",\n\"id_campo_pergunta15_crm\": \"id_campo_pergunta15_crm\",\n\"id_campo_pergunta16_crm\": \"id_campo_pergunta16_crm\",\n\"id_campo_pergunta17_crm\": \"id_campo_pergunta17_crm\",\n\"id_campo_pergunta18_crm\": \"id_campo_pergunta18_crm\",\n\"id_campo_pergunta19_crm\": \"id_campo_pergunta19_crm\",\n\"id_campo_pergunta20_crm\": \"id_campo_pergunta20_crm\",\n\"id_campo_status_do_lead_crm\": \"id_campo_status_do_lead_crm\",\n\"id_campo_status_do_lead_qualificado_crm\": \"id_campo_status_do_lead_qualificado_crm\",\n\"id_campo_status_do_lead_desqualificado_crm\": \"id_campo_status_do_lead_desqualificado_crm\",\n\"id_pipeline_crm\": \"id_pipeline_crm\",\n\"id_campo_status_do_lead_crm\": \"id_campo_status_do_lead_crm\",\n\"id_campo_status_do_lead_qualificado_crm\": \"id_campo_status_do_lead_qualificado_crm\",\n\"id_campo_status_do_lead_desqualificado_crm\": \"id_campo_status_do_lead_desqualificado_crm\",\n\"id_campo_id_bc_crm\": \"id_campo_id_bc_crm\",\n\"id_campo_data_da_aplicacao_crm\": \"id_campo_data_da_aplicacao_crm\",\n\"id_campo_data_da_aplicacao_bot_conversa\": \"id_campo_data_da_aplicacao_bot_conversa\",\n\"id_do_campo_id_do_agendamento_bot_conversa\": \"id_do_campo_id_do_agendamento_bot_conversa\",\n\"id_do_campo_link_da_reuniao_bot_conversa\": \"id_do_campo_link_da_reuniao_bot_conversa\",\n\"id_do_campo_dia_da_semana_do_agendamento_bot_conversa\": \"id_do_campo_dia_da_semana_do_agendamento_bot_conversa\",\n\"id_do_campo_data_do_agendamento_bot_conversa\": \"id_do_campo_data_do_agendamento_bot_conversa\",\n\"id_do_campo_horario_agendado_bot_conversa\": \"id_do_campo_horario_agendado_bot_conversa\",\n\"id_do_campo_id_banco_de_dados_bot_conversa\": \"id_do_campo_id_banco_de_dados_bot_conversa\",\n\"id_do_campo_idleadac_bot_conversa\": \"id_do_campo_idleadac_bot_conversa\",\n\"id_do_campo_iddealac_bot_conversa\": \"id_do_campo_iddealac_bot_conversa\",\n\"id_campo_id_banco_de_dados_crm\": \"id_campo_id_banco_de_dados_crm\",\n\"valor_produto_principal_em_centavos_crm\": \"valor_produto_principal_em_centavos_crm\",\n\"id_stage_agendou_reuniao_crm\": \"id_stage_agendou_reuniao_crm\",\n\"id_pipeline_se_crm\": \"id_pipeline_se_crm\",\n\"id_campo_link_de_cancelamento_crm\": \"id_campo_link_de_cancelamento_crm\",\n\"id_campo_link_de_reagendamento_crm\": \"id_campo_link_de_reagendamento_crm\",\n\"id_campo_id_do_cliente_crm\": \"id_campo_id_do_cliente_crm\",\n\"id_campo_dia_semana_agendamento_crm\": \"id_campo_dia_semana_agendamento_crm\",\n\"id_campo_data_de_inicio_crm\": \"id_campo_data_de_inicio_crm\",    \"id_campo_data_e_hora_de_inicio_crm\": \"id_campo_data_e_hora_de_inicio_crm\",    \"id_campo_data_e_hora_de_termino_crm\": \"id_campo_data_e_hora_de_termino_crm\",\n\"id_campo_data_de_termino_crm\": \"id_campo_data_de_termino_crm\",\n\"id_campo_email_do_responsavel_crm\": \"id_campo_email_do_responsavel_crm\",\n\"id_campo_data_do_agendamento_crm\": \"id_campo_data_do_agendamento_crm\",\n\"id_campo_link_da_reuniao_crm\": \"id_campo_link_da_reuniao_crm\",\n\"id_campo_tipo_de_evento_crm\": \"id_campo_tipo_de_evento_crm\",\n\"id_campo_id_do_evento_crm\": \"id_campo_id_do_evento_crm\",\n\"id_campo_utm_fun_crm\": \"id_campo_utm_fun_crm\",\n\"id_campo_utm_var_crm\": \"id_campo_utm_var_crm\",\n\"url_api_activecampaign\": \"url_api_activecampaign\",\n\"id_task_reuniao_crm\": \"id_task_reuniao_crm\",\n\"id_do_campo_id_do_cliente_bot_conversa\": \"id_do_campo_id_do_cliente_bot_conversa\",\n\"id_campo_idcrm_bot_conversa\": \"id_campo_idcrm_bot_conversa\",\n\"id_campo_id_do_cliente\": \"id_do_campo_inviteeid_bot_conversa\",\n\"id_do_campo_inviteeid_bot_conversa\": \"id_do_campo_inviteeid_bot_conversa\",\n\"flow_de_lembrete_diario_se\": \"flow_de_lembrete_diario_se\",\n\"flow_de_lembrete_diario_app\": \"flow_de_lembrete_diario_app\",\n\"flow_de_lembrete_na_hora_da_call_se\": \"flow_de_lembrete_na_hora_da_call_se\",\n\"flow_de_lembrete_na_hora_da_call_app\": \"flow_de_lembrete_na_hora_da_call_app\",\n\"flow_de_lembrete_e_amanha_se\": \"flow_de_lembrete_e_amanha_se\",\n\"flow_de_lembrete_e_amanha_app\": \"flow_de_lembrete_e_amanha_app\",\n\"flow_de_lembrete_1_hora_antes_da_call_se\": \"flow_de_lembrete_1_hora_antes_da_call_se\",\n\"flow_de_lembrete_1_hora_antes_da_call_app\": \"flow_de_lembrete_1_hora_antes_da_call_app\"\n    // Adicione outros parâmetros conforme necessário\n};\n\n// Obtenha as variáveis do nó 'variaveis_aqui'\nconst variaveis = $node[\"variaveis_aqui\"].json;\n\n// Função para substituir os parâmetros de um nó\nfunction substituirParametros(node) {\n    if (!node.parameters || !node.parameters.values || !node.parameters.values.string) {\n        return;\n    }\n    \n    node.parameters.values.string.forEach(param => {\n        const paramName = param.name;\n        const mappedKey = parameterMapping[paramName];\n        if (mappedKey && variaveis[mappedKey]) {\n            param.value = variaveis[mappedKey];\n        }\n    });\n}\n\n// Substituir parâmetros e credenciais em todos os nós do fluxo\nconst nodes = $node[\"primeiro_fluxo1\"].json[\"nodes\"];\nnodes.forEach(node => {\n    if (node.credentials) {\n        Object.values(node.credentials).forEach(credential => {\n            const serviceName = credential.name.split(\"] - \")[0].slice(1);\n            const serviceKey = serviceName.toLowerCase().replace(/\\s/g, \"_\");\n            const credentialId = variaveis[`id_credencial_${serviceKey}`];\n            const credentialName = `[${serviceName}] - ${variaveis[\"nome_do_cliente_aqui (Ex: Fulano de Tal)\"]}`;\n            credential.id = credentialId;\n            credential.name = credentialName;\n        });\n    }\n\n    substituirParametros(node);\n});\n\nreturn [{ json: { nodes: nodes } }];"
+      },
+      "id": "b163734b-123d-4166-b50c-717a9040e263",
+      "name": "substituicoes1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1800,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "={{ $node[\"primeiro_fluxo1\"].json.name.replace('PAULA ARDANZA', $node[\"variaveis_aqui\"].json[\"nome_do_cliente_aqui (Ex: Fulano de Tal)\"]) }}"
+            },
+            {
+              "name": "=nodes",
+              "value": "={{ $json.nodes }}"
+            },
+            {
+              "name": "connections",
+              "value": "={{ $node[\"primeiro_fluxo1\"].json.connections }}"
+            },
+            {
+              "name": "settings.saveDataErrorExecution",
+              "value": "=all"
+            },
+            {
+              "name": "staticData.lastId",
+              "value": "1"
+            },
+            {
+              "name": "settings.saveDataSuccessExecution",
+              "value": "=all"
+            },
+            {
+              "name": "settings.errorWorkflow",
+              "value": "={{ $node[\"variaveis_aqui\"].json[\"id_do_workflow_de_erro_aqui\"] }}"
+            }
+          ],
+          "boolean": [
+            {
+              "name": "settings.saveExecutionProgress",
+              "value": true
+            },
+            {
+              "name": "settings.saveManualExecutions"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "df68093e-f170-428c-8b23-6c346f8351f5",
+      "name": "organiza1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "workflowObject": "={ \"name\": \"{{ JSON.stringify($json[\"name\"]).replaceAll('\"','') }}\", \"nodes\": {{ JSON.stringify($json[\"nodes\"]) }}, \"connections\": {{ JSON.stringify($json[\"connections\"]) }}, \"settings\": {{ JSON.stringify($json[\"settings\"]) }}}",
+        "requestOptions": {}
+      },
+      "id": "0a94be17-6ee8-4e34-88e9-43f1da475e2a",
+      "name": "cria_workflows1",
+      "type": "n8n-nodes-base.n8n",
+      "typeVersion": 1,
+      "position": [
+        2200,
+        340
+      ],
+      "credentials": {
+        "n8nApi": {
+          "id": "NlLaZ6gZX3RMZhmX",
+          "name": "[n8n] - Portus Digital"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "77f2c3fc-80a6-4b31-a4cc-e0c1c59b360d",
+      "name": "loop3",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1340,
+        260
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-02-04T17:42:58.454Z",
+  "versionId": "438a18c8-8582-4584-8e46-b0ab92b10eb2"
+}
