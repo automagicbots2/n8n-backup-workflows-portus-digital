@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "formata_dados": {
       "main": [
@@ -35,9 +35,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:31.083Z",
-  "id": "dDtcSRdCC7DhHD4P",
-  "meta": null,
+  "createdAt": "2024-03-11T12:53:00.682Z",
+  "id": "2QgBh9bliCT0j1ry",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "[SESSÃO ESTRATÉGICA] OPT-IN | PARTE 1",
   "nodes": [
     {
@@ -279,7 +281,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "quc6gfdQpKCDLaHX",
+          "id": "UNsBZpoYhAtf5Api",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -870,17 +872,313 @@
       ]
     }
   ],
-  "pinData": null,
+  "pinData": {
+    "id_etapas": [
+      {
+        "json": {
+          "data": {
+            "pipe": {
+              "phases": [
+                {
+                  "id": "321485752",
+                  "name": "NOVO LEAD"
+                },
+                {
+                  "id": "317628280",
+                  "name": "PRIMEIRO CONTATO"
+                },
+                {
+                  "id": "317628283",
+                  "name": "CONECTADO"
+                },
+                {
+                  "id": "319617945",
+                  "name": "OFERTA / REUNIÃO"
+                },
+                {
+                  "id": "319618284",
+                  "name": "FOLLOW-UP"
+                },
+                {
+                  "id": "322398971",
+                  "name": "CONTRATO ENVIADO"
+                },
+                {
+                  "id": "317720323",
+                  "name": "VENDA REALIZADA"
+                },
+                {
+                  "id": "317762640",
+                  "name": "PERDIDOS"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "get_users": [
+      {
+        "json": {
+          "data": {
+            "organization": {
+              "id": "300890854",
+              "name": "Portus Digital",
+              "members": [
+                {
+                  "role_name": "admin",
+                  "user": {
+                    "id": "302129244",
+                    "email": "kelly@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "super_admin",
+                  "user": {
+                    "id": "302206469",
+                    "email": "igor@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "admin",
+                  "user": {
+                    "id": "302208885",
+                    "email": "bruno@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "admin",
+                  "user": {
+                    "id": "302214410",
+                    "email": "laila@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302214458",
+                    "email": "thais@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "admin",
+                  "user": {
+                    "id": "302237700",
+                    "email": "lucas.lacerda@pipefy.com"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302270341",
+                    "email": "gabriela@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302277865",
+                    "email": "karen@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302284256",
+                    "email": "mariele@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302333602",
+                    "email": "juliana@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302413323",
+                    "email": "giovana@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "super_admin",
+                  "user": {
+                    "id": "302597257",
+                    "email": "marcos@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302677437",
+                    "email": "financeiro@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303149971",
+                    "email": "vitor@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303175486",
+                    "email": "leticia@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303180119",
+                    "email": "raquel@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303206080",
+                    "email": "romulo@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303239849",
+                    "email": "beatriz@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304041444",
+                    "email": "jessica.barbara@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304193055",
+                    "email": "stephanie@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304242346",
+                    "email": "acessos@automagicbots.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304308054",
+                    "email": "luiza@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304329483",
+                    "email": "marcelo.eleto@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304398254",
+                    "email": "anna@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304398255",
+                    "email": "jessicadomingues@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304403404",
+                    "email": "ivan@portusdigital.com.br"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "aplicacao_realizada": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "WordPress/6.5.2; https://se.portusdigital.com.br",
+            "content-length": "894",
+            "accept": "*/*",
+            "accept-encoding": "deflate, gzip",
+            "content-type": "application/x-www-form-urlencoded",
+            "x-forwarded-for": "66.206.11.114",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "66.206.11.114"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "Seu primeiro nome": "Helton Rodrigues",
+            "Seu DDD+WhatsApp": "83998539693",
+            "Seu melhor e-mail": "contato@heltonrodrigues.com.br",
+            "Informe o @ do seu Instagram": "@heltonrdgs",
+            "Você está com alguma vaga aberta para contratar agora?": "Estou com uma vaga aberta.",
+            "utm_source": "",
+            "utm_content": "",
+            "utm_campaign": "",
+            "utm_term": "",
+            "utm_medium": "",
+            "parceiro": "Sessão Estratégica",
+            "celula": "marketing",
+            "funil": "sessao estrategica",
+            "origem": "bio instagram",
+            "Date": "Maio 7, 2024",
+            "Time": "2:35 pm",
+            "Page URL": "https://se.portusdigital.com.br/sessao-estrategica/?celula=marketing&funil=sessao%20estrategica&origem=bio%20instagram",
+            "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0",
+            "Remote IP": "2804:2b5c:e089:dd01:f4f0:4a20:72a3:8338",
+            "Powered by": "Elementor",
+            "form_id": "604031c",
+            "form_name": "Formulário"
+          }
+        }
+      }
+    ]
+  },
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": false,
+    "executionOrder": "v1",
     "saveDataErrorExecution": "all",
     "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
   },
   "staticData": null,
-  "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2025-02-04T17:45:31.083Z",
-  "versionId": "3c0f4c5f-380b-4a76-9353-a8aeab0f04e8"
+  "tags": [
+    {
+      "createdAt": "2024-03-14T13:33:33.882Z",
+      "updatedAt": "2024-03-14T13:33:33.882Z",
+      "id": "faI7RrAwjmyqxwGa",
+      "name": "[NAG]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-05-20T14:52:34.629Z",
+  "versionId": "7723d521-ffd5-43d9-a048-69536cf5109b"
 }
