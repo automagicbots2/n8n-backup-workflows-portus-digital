@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "formata_dados": {
       "main": [
@@ -25,14 +25,38 @@
     },
     "dados_pipefy": {
       "main": [
-        []
+        [
+          {
+            "node": "cria_tabela",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "get_cards_via_email": {
       "main": [
         [
           {
-            "node": "existe_no_pipe_operação",
+            "node": "existe_no_pipe_comercial",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_no_pipe_comercial": {
+      "main": [
+        [
+          {
+            "node": "nao_e_ganho",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cc1",
             "type": "main",
             "index": 0
           }
@@ -173,73 +197,13 @@
           }
         ]
       ]
-    },
-    "dados": {
-      "main": [
-        [
-          {
-            "node": "dados_pipefy",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "existe_no_pipe_operação": {
-      "main": [
-        [
-          {
-            "node": "nao_e_ganho",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "cc1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "get_cards_via_email2": {
-      "main": [
-        [
-          {
-            "node": "existe_no_pipe_comercial",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "existe_no_pipe_comercial": {
-      "main": [
-        [
-          {
-            "node": "card1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "card1": {
-      "main": [
-        [
-          {
-            "node": "cc1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
     }
   },
-  "createdAt": "2025-02-04T17:45:32.568Z",
-  "id": "WqGZDA720Ghofw6M",
-  "meta": null,
+  "createdAt": "2025-01-27T20:37:44.420Z",
+  "id": "7SxYvVSTpRkUJuhR",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "[PORTUS] - [CLINT|PIPEFY] - Venda Realizada",
   "nodes": [
     {
@@ -347,8 +311,8 @@
         "fields": {
           "values": [
             {
-              "name": "id_pipe_operacao",
-              "stringValue": "302840048"
+              "name": "id_pipe_comercial",
+              "stringValue": "302838347"
             },
             {
               "name": "id_fase_pre_qualificados"
@@ -381,7 +345,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.2,
       "position": [
-        1200,
+        1220,
         1200
       ]
     },
@@ -405,7 +369,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "=query {\n  findCards(pipeId: {{ $node[\"dados_pipefy\"].json[\"id_pipe_operacao\"] }}, search: {fieldId: \"email\", fieldValue: \"{{ $node[\"formata_dados\"].json[\"contact_email\"] }}\"}) {\n    edges {\n      node {\n        fields {\n          date_value\n          datetime_value\n          filled_at\n          float_value\n          indexName\n          name\n          native_value\n          report_value\n          updated_at\n          value\n        }\n        title\n        done\n        id\n        updated_at\n        assignees {\n          name\n          email\n        }\n        attachments {\n          url\n          path\n        }\n        current_phase {\n          name\n        }\n        pipe {\n          name\n        }\n      }\n    }\n  }\n}"
+              "value": "=query {\n  findCards(pipeId: {{ $node[\"dados_pipefy\"].json[\"id_pipe_comercial\"] }}, search: {fieldId: \"email\", fieldValue: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"}) {\n    edges {\n      node {\n        fields {\n          date_value\n          datetime_value\n          filled_at\n          float_value\n          indexName\n          name\n          native_value\n          report_value\n          updated_at\n          value\n        }\n        title\n        done\n        id\n        updated_at\n        assignees {\n          name\n          email\n        }\n        attachments {\n          url\n          path\n        }\n        current_phase {\n          name\n        }\n        pipe {\n          name\n        }\n      }\n    }\n  }\n}"
             }
           ]
         },
@@ -421,10 +385,43 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "fad7c009-7961-477a-a86c-0e7be8094a0c",
+              "leftValue": "={{ $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"fields\"][\"0\"][\"filled_at\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "96bb553a-8c34-4a6f-8504-99e64010bb20",
+      "name": "existe_no_pipe_comercial",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2140,
+        1200
+      ]
     },
     {
       "parameters": {
@@ -446,7 +443,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "=mutation {\n  updateFieldsValues(input: {\n    nodeId: {{ $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] }},\n    values: [\n      {fieldId: \"nome_do_lead\", value: \"{{ $node[\"formata_dados\"].json[\"contact_name\"] }}\"},\n      {fieldId: \"email\", value: \"{{ $node[\"formata_dados\"].json[\"contact_email\"] }}\"},\n      {fieldId: \"whatsapp_do_lead\", value: \"{{ $node[\"formata_dados\"].json[\"contact_phone\"] }}\"},\n      {fieldId: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_sites_eou_redes_soci\"] }}\"},\n      {fieldId: \"empresa\", value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"contact_nome_da_empresa\"] }}\"},\n      {fieldId: \"voc_s_j_t_m_um_produto_servi_o_validado\", value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_voces_ja_tem_um_prod\"] }}\"},\n      {fieldId: \"qual_foi_o_seu_faturamento_em_2023\", value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_qual_foi_o_seu_fatur\"] }}\"},\n      {fieldId: \"qual_a_meta_de_faturamento_anual_para_2024\", value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_qual_e_a_meta_de_fat\"] }}\"},\n      {fieldId: \"quantas_pessoas_trabalham_na_sua_empresa\", value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_quantas_pessoas_te\"] }}\"},\n      {fieldId: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital\", value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_qual_e_o_seu_model\"] }}\"},\n      {fieldId: \"qual_profissional_voc_est_procurando\", value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_nome_da_vaga\"] }}\"},\n      {fieldId: \"parceiro\", value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_parceiro\"] }}\"},\n      {fieldId: \"id_do_lead_no_database_de_aplica_es\", value: \"{{ $node[\"id_db\"].json[\"id_do_lead_database\"] }}\"},\n      {fieldId: \"voc_est_com_alguma_vaga_aberta_agora\", value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_voce_esta_com_alguma\"] }}\"},\n      {fieldId: \"respons_vel\", value: \"303175486\"}\n   ]\n }) {\n  clientMutationId\n }\n}"
+              "value": "=mutation {\n  updateFieldsValues(input: {\n    nodeId: {{ $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] }},\n    values: [\n      {fieldId: \"nome_do_lead\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\"},\n      {fieldId: \"email\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"},\n      {fieldId: \"whatsapp_do_lead\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato BC\"] }}\"},\n      {fieldId: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}\"},\n      {fieldId: \"empresa\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"] }}\"},\n      {fieldId: \"voc_s_j_t_m_um_produto_servi_o_validado\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta1\"] }}\"},\n      {fieldId: \"qual_foi_o_seu_faturamento_em_2023\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta2\"] }}\"},\n      {fieldId: \"qual_a_meta_de_faturamento_anual_para_2024\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta3\"] }}\"},\n      {fieldId: \"quantas_pessoas_trabalham_na_sua_empresa\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta4\"] }}\"},\n      {fieldId: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta5\"] }}\"},\n      {fieldId: \"qual_profissional_voc_est_procurando\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta6\"] }}\"},\n      {fieldId: \"parceiro\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"parceiro\"] }}\"},\n      {fieldId: \"id_do_lead_no_database_de_aplica_es\", value: \"{{ $node[\"id_db\"].json[\"id_do_lead_database\"] }}\"},\n      {fieldId: \"voc_est_com_alguma_vaga_aberta_agora\", value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta8\"]}}\"},\n      {fieldId: \"respons_vel\", value: \"303175486\"}\n   ]\n }) {\n  clientMutationId\n }\n}"
             }
           ]
         },
@@ -468,7 +465,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -493,7 +490,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "=mutation {\n  createCard(input: {\n    pipe_id: {{ $node[\"dados_pipefy\"].json[\"id_pipe_operacao\"] }}\n    title: \"{{ $node[\"formata_dados\"].json[\"contact_name\"] }}\"\n    fields_attributes: [\n      {field_id: \"card_cliente\", field_value: \"{{ $node[\"update_title_table\"].json[\"data\"][\"updateTableRecord\"][\"table_record\"][\"id\"] }}\"},\n      {field_id: \"nome_do_representante_p_blico\", field_value: \"{{ $node[\"formata_dados\"].json[\"contact_name\"] }}\"},\n      {field_id: \"email\", field_value: \"{{ $node[\"formata_dados\"].json[\"contact_email\"] }}\"},\n      {field_id: \"whatsapp_do_ponto_de_contato\", field_value: \"{{ $node[\"formata_dados\"].json[\"contact_phone\"].replace(/\\s+/g, \"\").replace(/\\+/g, \"\") }}\"},\n      {field_id: \"nome_do_ponto_de_contato\", field_value: \"{{ $node[\"formata_dados\"].json[\"contact_name\"] }}\"},\n      {field_id: \"empresa\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"contact_nome_da_empresa\"] || \".\" }}\"},\n      {field_id: \"valor_do_contrato\", field_value: \"{{ $node[\"formata_dados\"].json[\"deal_valor_do_contrato\"] || \".\" }}\"},\n      {field_id: \"forma_de_pagamento\", field_value: \"{{ $node[\"formata_dados\"].json[\"deal_forma_de_pagamento\"] || \".\" }}\"},\n      {field_id: \"garantia\", field_value: \"{{ $node[\"formata_dados\"].json[\"deal_garantia\"] || \".\" }}\"},\n      {field_id: \"nome_da_vaga\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_nome_da_vaga\"] || \".\" }}\"},\n      {field_id: \"or_amento_do_cliente_para_a_vaga\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_orcamento_do_cliente\"] || \".\" }}\"},\n      {field_id: \"tipo_de_cliente\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_tipo_de_cliente\"] }}\"},\n      {field_id: \"tipo_de_contrato\", field_value: \"{{ $node[\"formata_dados\"].json[\"deal_tipo_de_contrato\"] || \".\" }}\"},\n      {field_id: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_sites_eou_redes_soci\"] || \".\" }}\"},\n      {field_id: \"respons_vel\", field_value: \"303175486\"}\n    ]\n  }) {\n    clientMutationId\n    card {\n      pipe {\n        id\n      }\n      assignees {\n        id\n      }\n    }\n  }\n}\n"
+              "value": "=mutation {\n  createCard(input: {\n    pipe_id: {{ $node[\"dados_pipefy\"].json[\"id_pipe_comercial\"] }}\n    title: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\"\n    assignee_ids: [303175486]\n    fields_attributes: [\n      {field_id: \"nome_do_lead\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\"},\n      {field_id: \"email\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"},\n      {field_id: \"whatsapp_do_lead\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato BC\"] }}\"},\n      {field_id: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}\"},\n      {field_id: \"empresa\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"] }}\"},\n      {field_id: \"voc_s_j_t_m_um_produto_servi_o_validado\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta1\"] }}\"},\n      {field_id: \"qual_foi_o_seu_faturamento_em_2023\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta2\"] }}\"},\n      {field_id: \"qual_a_meta_de_faturamento_anual_para_2024\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta3\"] }}\"},\n      {field_id: \"quantas_pessoas_trabalham_na_sua_empresa\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta4\"] }}\"},\n      {field_id: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta5\"] }}\"},\n      {field_id: \"qual_profissional_voc_est_procurando\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta6\"] }}\"},\n      {field_id: \"parceiro\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"parceiro\"] }}\"},\n      {field_id: \"funil\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"funil\"] }}\"},\n      {field_id: \"c_lula\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"celula\"] }}\"},\n      {field_id: \"origem\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"origem\"] }}\"},\n      {field_id: \"voc_est_com_alguma_vaga_aberta_agora\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta8\"] }}\"},\n      {field_id: \"respons_vel\", field_value: \"303175486\"}\n    ]\n  }) {\n    clientMutationId\n    card {\n      pipe {\n        id\n      }\n      assignees {\n        id\n      }\n    }\n  }\n}"
             }
           ]
         },
@@ -515,7 +512,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -540,7 +537,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "=query {\n  findCards(pipeId: {{ $node[\"dados_pipefy\"].json[\"id_pipe_operacao\"] }}, search: {fieldId: \"email\", fieldValue: \"{{ $node[\"formata_dados\"].json[\"contact_email\"] }}\"}) {\n    edges {\n      node {\n        fields {\n          date_value\n          datetime_value\n          filled_at\n          float_value\n          indexName\n          name\n          native_value\n          report_value\n          updated_at\n          value\n        }\n        title\n        done\n        id\n        updated_at\n        assignees {\n          name\n          email\n        }\n        attachments {\n          url\n          path\n        }\n        current_phase {\n          name\n        }\n        pipe {\n          name\n        }\n      }\n    }\n  }\n}"
+              "value": "=query {\n  findCards(pipeId: {{ $node[\"dados_pipefy\"].json[\"id_pipe_comercial\"] }}, search: {fieldId: \"email\", fieldValue: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"}) {\n    edges {\n      node {\n        fields {\n          date_value\n          datetime_value\n          filled_at\n          float_value\n          indexName\n          name\n          native_value\n          report_value\n          updated_at\n          value\n        }\n        title\n        done\n        id\n        updated_at\n        assignees {\n          name\n          email\n        }\n        attachments {\n          url\n          path\n        }\n        current_phase {\n          name\n        }\n        pipe {\n          name\n        }\n      }\n    }\n  }\n}"
             }
           ]
         },
@@ -556,7 +553,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -597,7 +594,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -645,7 +642,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "=mutation {\n  updateCardField(input: {\n    card_id: {{ $node[\"up>1fld1\"].runIndex >= 0 ? $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : ($node[\"cc1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : '') }}\n    field_id: \"tags\"\n    new_value: {{ $node[\"formata_dados\"].json[\"deal_parceiro\"].replace('Sessão Estratégica','311141379').replace('Manychat','311412362').replace('SE-Escala','311464525').replace('SE-High Ticket','311464526') }}\n  }) {\n    clientMutationId\n    success\n  }\n}"
+              "value": "=mutation {\n  updateCardField(input: {\n    card_id: {{ $node[\"up>1fld1\"].runIndex >= 0 ? $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : ($node[\"cc1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : '') }}\n    field_id: \"tags\"\n    new_value: {{ $node[\"chega_da_fila\"].json[\"content\"][\"parceiro\"].replace('Sessão Estratégica','311141379').replace('Manychat','311412362').replace('SE-Escala','311464525').replace('SE-High Ticket','311464526') }}\n  }) {\n    clientMutationId\n    success\n  }\n}"
             }
           ]
         },
@@ -657,11 +654,11 @@
       "typeVersion": 4.1,
       "position": [
         3700,
-        1320
+        1220
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -686,7 +683,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "=mutation {\n  createTableRecord(\n    input: {\n      table_id: \"{{ $node[\"dados_pipefy\"].json[\"id_database_aplicacoes\"] }}\"\n      title: \"{{ $node[\"formata_dados\"].json[\"contact_email\"] }}\"\n      fields_attributes: [\n        { field_id: \"nome_do_lead\", field_value: \"{{ $node[\"formata_dados\"].json[\"contact_name\"] }}\" },\n        { field_id: \"data_da_aplica_o\", field_value: \"{{$now.toFormat('dd/MM/yyyy HH:mm')}}\" },\n        { field_id: \"telefone_do_lead\", field_value: \"{{ $node[\"formata_dados\"].json[\"contact_phone\"].replace(/\\s+/g, \"\").replace(/\\+/g, \"\") }}\" },\n        { field_id: \"e_mail\", field_value: \"{{ $node[\"formata_dados\"].json[\"contact_email\"] }}\" },\n        { field_id: \"instagram\", field_value: \"{{ $node[\"formata_dados\"].json[\"contact_instagram\"] }}\" },\n        { field_id: \"cargo_do_lead\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"contact_role\"] }}\" },\n        { field_id: \"quantas_pessoas_trabalham_na_sua_empresa\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_quantas_pessoas_te\"] }}\" },\n        { field_id: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_qual_e_o_seu_model\"] }}\" },\n        { field_id: \"nome_da_empresa\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"contact_nome_da_empresa\"] }}\" },\n        { field_id: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_sites_eou_redes_soci\"] }}\" },\n        { field_id: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital_1\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_qual_e_o_seu_model\"] }}\" },\n        { field_id: \"qual_profissional_voc_est_procurando_se_ainda_n_o_tem_certeza_descreva_a_fun_o_que_precisa_ser_realizada\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_nome_da_vaga\"] }}\" },\n        { field_id: \"parceiro\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_parceiro\"] }}\" },\n        { field_id: \"c_lula\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_celula\"] }}\" },\n        { field_id: \"funil\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_funil\"] }}\" },\n        { field_id: \"origem\", field_value: \"{{ $node[\"venda_clint\"].json[\"body\"][\"deal_origem\"] }}\" }\n      ]\n    }\n  ) {\n    table_record {\n      id\n      title\n      due_date\n      record_fields {\n        name\n        value\n      }\n    }\n  }\n}"
+              "value": "=mutation {\n  createTableRecord(\n    input: {\n      table_id: \"{{ $node[\"dados_pipefy\"].json[\"id_database_aplicacoes\"] }}\"\n      title: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n      fields_attributes: [\n        { field_id: \"nome_do_lead\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\" },\n        { field_id: \"data_da_aplica_o\", field_value: \"{{$now.toFormat('dd/MM/yyyy HH:mm')}}\" },\n        { field_id: \"telefone_do_lead\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato BC\"] }}\" },\n        { field_id: \"e_mail\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\" },\n        { field_id: \"instagram\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}\" },\n        { field_id: \"cargo_do_lead\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"] }}\" },\n        { field_id: \"quantas_pessoas_trabalham_na_sua_empresa\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta1\"] }}\" },\n        { field_id: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta2\"] }}\" },\n        { field_id: \"nome_da_empresa\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta3\"] }}\" },\n        { field_id: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta4\"] }}\" },\n        { field_id: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital_1\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta5\"] }}\" },\n        { field_id: \"qual_profissional_voc_est_procurando_se_ainda_n_o_tem_certeza_descreva_a_fun_o_que_precisa_ser_realizada\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta6\"] }}\" },\n        { field_id: \"parceiro\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"parceiro\"] }}\" },\n        { field_id: \"c_lula\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"celula\"] }}\" },\n        { field_id: \"funil\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"funil\"] }}\" },\n        { field_id: \"origem\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"origem\"] }}\" },\n        { field_id: \"utm_source\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}\" },\n        { field_id: \"utm_content\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}\" },\n        { field_id: \"utm_term\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}\" },\n        { field_id: \"utm_medium\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}\" },\n        { field_id: \"utm_campaign\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}\" }\n      ]\n    }\n  ) {\n    table_record {\n      id\n      title\n      due_date\n      record_fields {\n        name\n        value\n      }\n    }\n  }\n}"
             }
           ]
         },
@@ -702,7 +699,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -714,7 +711,7 @@
             {
               "id": "04e2400e-e101-46b8-911d-969ccb68e6e4",
               "name": "id_do_lead_database",
-              "value": "={{  $node[\"cria_tabela\"].json[\"data\"][\"createTableRecord\"][\"table_record\"][\"id\"]}}",
+              "value": "={{ $node[\"update_nome\"].runIndex >= 0 ? $node[\"busca_tabela_no_database\"].json[\"data\"][\"table_records\"][\"edges\"][\"0\"][\"node\"][\"id\"] : $node[\"cria_tabela\"].json[\"data\"][\"createTableRecord\"][\"table_record\"][\"id\"]}}",
               "type": "string"
             }
           ]
@@ -752,7 +749,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "=mutation {\n  updateTableRecord(\n    input: {\n      id: \"{{ $node[\"id_db\"].json[\"id_do_lead_database\"] }}\"\n      title: \"{{ $node[\"formata_dados\"].json[\"contact_name\"] }}\"\n      due_date: \"{{new Date(new Date().getTime() - 3 * 60 * 60 * 1000).toISOString().slice(0, -1) + \"-03:00\"}}\"\n    }\n  ) {\n    table_record {\n      id\n      title\n      due_date\n      record_fields {\n        name\n        value\n      }\n    }\n  }\n}"
+              "value": "=mutation {\n  updateTableRecord(\n    input: {\n      id: \"{{ $node[\"id_db\"].json[\"id_do_lead_database\"] }}\"\n      title: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\"\n      due_date: \"{{new Date(new Date().getTime() - 3 * 60 * 60 * 1000).toISOString().slice(0, -1) + \"-03:00\"}}\"\n    }\n  ) {\n    table_record {\n      id\n      title\n      due_date\n      record_fields {\n        name\n        value\n      }\n    }\n  }\n}"
             }
           ]
         },
@@ -768,7 +765,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -820,13 +817,12 @@
           "options": {
             "caseSensitive": true,
             "leftValue": "",
-            "typeValidation": "strict",
-            "version": 1
+            "typeValidation": "strict"
           },
           "conditions": [
             {
               "id": "1db22dcb-67c4-4678-bff1-67ffc342cc3c",
-              "leftValue": "={{ $node[\"formata_dados\"].json[\"deal_parceiro\"].toLowerCase().includes('clint') || $node[\"formata_dados\"].json[\"deal_parceiro\"].toLowerCase().includes('henrique') }}",
+              "leftValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"parceiro\"].toLowerCase().includes('clint') || $node[\"chega_da_fila\"].json[\"content\"][\"parceiro\"].toLowerCase().includes('henrique') }}",
               "rightValue": "",
               "operator": {
                 "type": "boolean",
@@ -845,7 +841,7 @@
       "typeVersion": 2,
       "position": [
         3440,
-        1220
+        1120
       ]
     },
     {
@@ -868,7 +864,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "=mutation {\n  updateCardField(input: {\n    card_id: {{ $node[\"up>1fld1\"].runIndex >= 0 ? $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : ($node[\"cc1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : '') }}\n    field_id: \"tags\"\n    new_value: {{ $node[\"formata_dados\"].json[\"deal_parceiro\"].includes('clint') ? $node[\"dados_pipefy\"].json[\"id_tag_parceria_clint\"] : $node[\"dados_pipefy\"].json[\"id_tag_parceria_henrique\"]}}\n  }) {\n    clientMutationId\n    success\n  }\n}"
+              "value": "=mutation {\n  updateCardField(input: {\n    card_id: {{ $node[\"up>1fld1\"].runIndex >= 0 ? $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : ($node[\"cc1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : '') }}\n    field_id: \"tags\"\n    new_value: {{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_var\"].includes('clint') ? $node[\"dados_pipefy\"].json[\"id_tag_parceria_clint\"] : $node[\"dados_pipefy\"].json[\"id_tag_parceria_henrique\"]}}\n  }) {\n    clientMutationId\n    success\n  }\n}"
             }
           ]
         },
@@ -880,11 +876,11 @@
       "typeVersion": 4.1,
       "position": [
         3700,
-        1120
+        1020
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -909,7 +905,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "=mutation {\n  updateCardField(input: {card_id: {{ $node[\"up>1fld1\"].runIndex >= 0 ? $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : ($node[\"cc1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : '') }}, field_id: \"j_conhece_a_port_s_digital\", new_value: [\"{{ $node[\"formata_dados\"].json[\"deal_ja_conhece_a_portu\"].toLowerCase().includes('não'.toLowerCase()) ? ('Não') : $node[\"formata_dados\"].json[\"deal_ja_conhece_a_portu\"].toLowerCase().includes('sim','yes','yeah') ? ('Sim') : ''}}\"]}) {\n    card {\n      title\n    }\n  }\n}"
+              "value": "=mutation {\n  updateCardField(input: {card_id: {{ $node[\"up>1fld1\"].runIndex >= 0 ? $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : ($node[\"cc1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : '') }}, field_id: \"j_conhece_a_port_s_digital\", new_value: [\"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"].toLowerCase().includes('não'.toLowerCase()) ? ('Não') : $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"].toLowerCase().includes('sim','yes','yeah') ? ('Sim') : ''}}\"]}) {\n    card {\n      title\n    }\n  }\n}"
             }
           ]
         },
@@ -931,7 +927,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -956,7 +952,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "=mutation {\n  updateCardField(input: {card_id: {{ $node[\"up>1fld1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : ($node[\"cc1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : '') }}, field_id: \"j_conhece_a_port_s_digital\", new_value: [\"{{ $node[\"formata_dados\"].json[\"deal_ja_conhece_a_portu\"].toLowerCase().includes('não'.toLowerCase()) ? ('Não') : $node[\"formata_dados\"].json[\"deal_ja_conhece_a_portu\"].toLowerCase().includes('sim','yes','yeah') ? ('Sim') : ''}}\"]}) {\n    card {\n      title\n    }\n  }\n}"
+              "value": "=mutation {\n  updateCardField(input: {card_id: {{ $node[\"up>1fld1\"].runIndex >= 0 ? $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : ($node[\"cc1\"].runIndex >= 0 ? $node[\"get_cards_via_email1\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] : '') }}, field_id: \"j_conhece_a_port_s_digital\", new_value: [\"{{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"].toLowerCase().includes('não'.toLowerCase()) ? ('Não') : $node[\"chega_da_fila\"].json[\"content\"][\"pergunta0\"].toLowerCase().includes('sim','yes','yeah') ? ('Sim') : ''}}\"]}) {\n    card {\n      title\n    }\n  }\n}"
             }
           ]
         },
@@ -978,142 +974,10 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 1
-          },
-          "conditions": [
-            {
-              "id": "fad7c009-7961-477a-a86c-0e7be8094a0c",
-              "leftValue": "={{ $node[\"get_cards_via_email\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"fields\"][\"0\"][\"filled_at\"] }}",
-              "rightValue": "",
-              "operator": {
-                "type": "string",
-                "operation": "exists",
-                "singleValue": true
-              }
-            }
-          ],
-          "combinator": "and"
-        },
-        "options": {}
-      },
-      "id": "96bb553a-8c34-4a6f-8504-99e64010bb20",
-      "name": "existe_no_pipe_operação",
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2,
-      "position": [
-        2140,
-        1200
-      ]
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 1
-          },
-          "conditions": [
-            {
-              "id": "fad7c009-7961-477a-a86c-0e7be8094a0c",
-              "leftValue": "={{ $node[\"get_cards_via_email2\"].json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"fields\"][\"0\"][\"filled_at\"] }}",
-              "rightValue": "",
-              "operator": {
-                "type": "string",
-                "operation": "exists",
-                "singleValue": true
-              }
-            }
-          ],
-          "combinator": "and"
-        },
-        "options": {}
-      },
-      "id": "3b7768d5-6de9-48e8-8825-331c82230a72",
-      "name": "existe_no_pipe_comercial",
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2,
-      "position": [
-        2500,
-        1560
-      ]
-    },
-    {
-      "parameters": {
-        "method": "POST",
-        "url": "https://api.pipefy.com/graphql",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "accept",
-              "value": "application/json"
-            }
-          ]
-        },
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "query",
-              "value": "=query {\n  findCards(pipeId: 302838347, search: {fieldId: \"email\", fieldValue: \"{{ $node[\"formata_dados\"].json[\"contact_email\"] }}\"}) {\n    edges {\n      node {\n        fields {\n          date_value\n          datetime_value\n          filled_at\n          float_value\n          indexName\n          name\n          native_value\n          report_value\n          updated_at\n          value\n        }\n        title\n        done\n        id\n        updated_at\n        assignees {\n          name\n          email\n        }\n        attachments {\n          url\n          path\n        }\n        current_phase {\n          name\n        }\n        pipe {\n          name\n        }\n      }\n    }\n  }\n}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "5c5dfb3c-705c-410f-b835-879691cbbe2e",
-      "name": "get_cards_via_email2",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.1,
-      "position": [
-        2300,
-        1560
-      ],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
-          "name": "[PIPEFY] - Portus"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "5403ed8f-ccf2-4241-a363-c13e761c74e1",
-              "name": "id_deal",
-              "value": "={{ $json[\"data\"][\"findCards\"][\"edges\"][\"0\"][\"node\"][\"id\"] }}",
-              "type": "string"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "5255cd25-a46e-4975-bc9f-ee0d7bf6981a",
-      "name": "card1",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.3,
-      "position": [
-        2460,
-        1360
-      ]
     }
   ],
   "pinData": {
@@ -1121,31 +985,31 @@
       {
         "json": {
           "headers": {
-            "host": "webhooks.portusdigital.com.br",
+            "host": "n8nwebhookportus.automagicbots.com.br",
             "user-agent": "axios/1.7.9",
-            "content-length": "1346",
+            "content-length": "1097",
             "accept": "application/json, text/plain, */*",
             "accept-encoding": "gzip, compress, deflate, br",
             "content-type": "application/json",
-            "traceparent": "00-67a3afb6000000007e0d76c69a08ac5b-68dcc8d64c1129db-00",
-            "tracestate": "dd=t.tid:67a3afb600000000;t.dm:-3;s:-1;p:68dcc8d64c1129db",
-            "x-datadog-parent-id": "7556135097545599451",
+            "traceparent": "00-6797f18e000000004cf3c85a6e1879aa-0e37497249214c92-00",
+            "tracestate": "dd=t.tid:6797f18e00000000;t.dm:-3;s:-1;p:0e37497249214c92",
+            "x-datadog-parent-id": "1024368195452095634",
             "x-datadog-sampling-priority": "-1",
-            "x-datadog-tags": "_dd.p.tid=67a3afb600000000",
-            "x-datadog-trace-id": "9083046618836020315",
+            "x-datadog-tags": "_dd.p.tid=6797f18e00000000",
+            "x-datadog-trace-id": "5544995856942922154",
             "x-forwarded-for": "52.200.254.28",
-            "x-forwarded-host": "webhooks.portusdigital.com.br",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "6ace3109ce53",
+            "x-forwarded-server": "d71ef73d891d",
             "x-real-ip": "52.200.254.28"
           },
           "params": {},
           "query": {},
           "body": {
-            "contact_name": "Mateus Diniz - AUTOMAGIC BOTS",
-            "contact_email": "mateusdiniz@automagicbots.com.br",
-            "contact_phone": "+5562981196678",
+            "contact_name": "Pedro Marandino - UVEPOM",
+            "contact_email": "pedromarandino@gmail.com",
+            "contact_phone": "+5521975097696",
             "deal_stage": "VENDA REALIZADA",
             "deal_user": "",
             "deal_status": "OPEN",
@@ -1153,7 +1017,7 @@
             "contact_role": "",
             "contact_remuneracao": "",
             "contact_momento_atual": "",
-            "contact_nome_da_empresa": "AUTOMAGIC BOTS",
+            "contact_nome_da_empresa": "UVEPOM",
             "contact_instagram": "",
             "contact_origem_do_contato": "",
             "organization_employees": "",
@@ -1161,52 +1025,43 @@
             "organization_resumo_sobre_a_empre": "",
             "deal_produto": "",
             "deal_origem": "",
-            "deal_garantia": "60 dias",
+            "deal_garantia": "",
             "deal_tipo_de_contrato": "Retainer",
-            "deal_valor_do_contrato": 6000,
+            "deal_valor_do_contrato": "",
             "deal_este_e_um_grupo_be": "",
             "deal_faz_parte_de_grupo": "",
             "deal_faturamento_mensal": "",
-            "deal_forma_de_pagamento": "Valor Total à Vista - Pix/Débito",
+            "deal_forma_de_pagamento": "",
             "deal_ja_conhece_a_portu": "",
             "deal_qual_e_o_seu_model": "",
             "deal_quantas_pessoas_te": "",
-            "deal_quantidade_de_vagas": "",
+            "deal_quantidade_de_vagas": 1,
             "deal_momento_atual": "",
-            "deal_tipo_de_cliente": "",
-            "deal_orcamento_do_cliente": "",
-            "deal_qual_tipo_de_servico": "Recrutamento e Seleção",
+            "deal_tipo_de_cliente": "Especialista Iniciante",
+            "deal_orcamento_do_cliente": "6.000,00",
+            "deal_qual_tipo_de_servico": "",
             "deal_💬_como_ficou_sabend": "",
-            "deal_voce_esta_com_alguma": "Sim",
-            "deal_funil": "sessao-estrategica",
-            "deal_essa_e_uma_vaga_exec": "",
-            "deal_prazo_de_garantia": "60 dias",
-            "deal_sites_eou_redes_soci": "",
-            "deal_nome_da_vaga": "",
-            "deal_parceiro": "",
-            "deal_celula": "",
-            "deal_voces_ja_tem_um_prod": "",
-            "deal_qual_foi_o_seu_fatur": "",
-            "deal_qual_e_a_meta_de_fat": ""
-          },
-          "webhookUrl": "https://webhooks.portusdigital.com.br/webhook/venda_clint",
-          "executionMode": "production"
+            "deal_voce_esta_com_alguma": "",
+            "deal_funil": "",
+            "deal_essa_e_uma_vaga_exec": "NÃO",
+            "deal_prazo_de_garantia": "90 dias"
+          }
         }
       }
     ]
   },
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": true,
+    "executionOrder": "v1",
     "saveDataErrorExecution": "all",
     "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
     "callerPolicy": "workflowsFromSameOwner",
-    "executionOrder": "v0"
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-02-06T00:00:00.345Z",
-  "versionId": "7ca51381-39cb-4f63-aeb7-f4e5fb47cfde"
+  "updatedAt": "2025-02-04T20:29:29.575Z",
+  "versionId": "fe04e4ad-0b1e-4dd7-9627-38274cff7ff5"
 }
