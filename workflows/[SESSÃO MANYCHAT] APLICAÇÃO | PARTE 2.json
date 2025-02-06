@@ -715,9 +715,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:33.580Z",
-  "id": "6gyIylwTa5CdHVjk",
-  "meta": null,
+  "createdAt": "2024-05-24T14:12:59.347Z",
+  "id": "tvvUggikei6FJCWy",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "[SESSÃO MANYCHAT] APLICAÇÃO | PARTE 2",
   "nodes": [
     {
@@ -747,7 +749,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "quc6gfdQpKCDLaHX",
+          "id": "UNsBZpoYhAtf5Api",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -897,7 +899,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -977,7 +979,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -1024,7 +1026,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -1102,7 +1104,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -1143,7 +1145,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -1184,7 +1186,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -1225,7 +1227,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -1266,7 +1268,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -1529,7 +1531,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -1681,7 +1683,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -1728,7 +1730,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -1769,7 +1771,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -1816,7 +1818,8 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "name": "[PIPEFY] - PORTUS"
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
         }
       },
       "disabled": true
@@ -1863,7 +1866,8 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "name": "[PIPEFY] - PORTUS"
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
         }
       },
       "disabled": true
@@ -1910,7 +1914,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -1931,7 +1935,8 @@
       ],
       "credentials": {
         "activeCampaignApi": {
-          "name": "[ORTUS] - PORTUS"
+          "id": "iBDDqEWUrrzxfz28",
+          "name": "PORTUS"
         }
       },
       "disabled": true
@@ -1956,7 +1961,8 @@
       ],
       "credentials": {
         "activeCampaignApi": {
-          "name": "[ORTUS] - PORTUS"
+          "id": "iBDDqEWUrrzxfz28",
+          "name": "PORTUS"
         }
       },
       "disabled": true
@@ -2001,7 +2007,8 @@
       ],
       "credentials": {
         "activeCampaignApi": {
-          "name": "[ORTUS] - PORTUS"
+          "id": "iBDDqEWUrrzxfz28",
+          "name": "PORTUS"
         }
       },
       "disabled": true
@@ -2042,7 +2049,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -2083,7 +2090,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -2124,7 +2131,8 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "name": "[PIPEFY] - PORTUS"
+          "id": "ZrEMMiehYrEAsQ7Z",
+          "name": "[PIPEFY] - Portus"
         }
       },
       "disabled": true
@@ -2165,7 +2173,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -2343,7 +2351,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -2420,7 +2428,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2485,7 +2493,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2545,7 +2553,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2575,7 +2583,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "quc6gfdQpKCDLaHX",
+          "id": "UNsBZpoYhAtf5Api",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -2644,7 +2652,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2729,7 +2737,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2789,7 +2797,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2819,7 +2827,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "quc6gfdQpKCDLaHX",
+          "id": "UNsBZpoYhAtf5Api",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -2877,7 +2885,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "quc6gfdQpKCDLaHX",
+          "id": "UNsBZpoYhAtf5Api",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -4310,7 +4318,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4351,7 +4359,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4425,7 +4433,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4466,7 +4474,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4507,7 +4515,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4548,7 +4556,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4589,7 +4597,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4630,7 +4638,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4671,7 +4679,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4712,7 +4720,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4753,7 +4761,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4794,7 +4802,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4835,7 +4843,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4876,7 +4884,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4917,7 +4925,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4958,7 +4966,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4999,7 +5007,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -5040,7 +5048,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -5081,7 +5089,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -5147,7 +5155,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "7F0hUjKvKkREj86b",
+          "id": "ZrEMMiehYrEAsQ7Z",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -5946,17 +5954,962 @@
       ]
     }
   ],
-  "pinData": null,
+  "pinData": {
+    "chega_da_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag-9WXrvXjzMgY1X_MeGOJ9IQ",
+            "deliveryTag": 1,
+            "redelivered": false,
+            "exchange": "",
+            "routingKey": "aplicacao - p2"
+          },
+          "properties": {},
+          "content": {
+            "Nome do Cliente": "Jailson Testes",
+            "E-mail do Cliente": "jailsontestesbot@gmail.com",
+            "Telefone do Cliente - Formato BC": "+557192594557",
+            "Telefone do Cliente - Formato Z-API": "557192594557",
+            "Instagram": "testedeautomacoes",
+            "pergunta0": "AutomagicBots",
+            "pergunta1": "Sim",
+            "pergunta2": "Acima de 20M",
+            "pergunta3": "40M",
+            "pergunta4": "+15 pessoas",
+            "pergunta5": "Tecnologia",
+            "pergunta6": "Teste",
+            "pergunta7": "",
+            "pergunta8": "",
+            "pergunta9": "",
+            "pergunta10": "",
+            "pergunta11": "",
+            "pergunta12": "",
+            "pergunta13": "",
+            "pergunta14": "",
+            "pergunta15": "",
+            "pergunta16": "",
+            "pergunta17": "",
+            "pergunta18": "",
+            "pergunta19": "",
+            "pergunta20": "",
+            "utm_content": "cont",
+            "utm_source": "source",
+            "utm_campaign": "camp",
+            "utm_medium": "medium",
+            "utm_term": "term",
+            "data_resposta_type": "07/05/2024 12:39",
+            "data_ultima_quinzena": "2024-04-22",
+            "id_fluxo_nao_agendou_10_min": "3065086",
+            "id_fluxo_nao_agendou_10_min_desqualificados": "",
+            "API-KEY": "46dacadf-10d0-47db-a81d-69263aca1959",
+            "id_campo_id_banco_de_dados_bot_conversa": "1776703",
+            "id_campo_utm_source_bot_conversa": "1780336",
+            "id_campo_utm_campaign_bot_conversa": "1780335",
+            "id_campo_utm_term_bot_conversa": "1780334",
+            "id_campo_utm_medium_bot_conversa": "1780337",
+            "id_campo_utm_content_bot_conversa": "1780338",
+            "id_campo_utm_fun_bot_conversa": "1780345",
+            "id_campo_utm_var_bot_conversa": "1780344",
+            "id_campo_instagram_bot_conversa": "1776705",
+            "id_campo_emailse_bot_conversa": "1780340",
+            "id_campo_id_lead_crm_bot_conversa": "1780343",
+            "id_campo_data_resposta_type_bot_conversa": "1789193",
+            "id_tag_desqualificado_bot_conversa": "6979786",
+            "id_tag_qualificado_bot_conversa": "7005347",
+            "id_campo_pergunta0_bot_conversa": "1654521",
+            "id_campo_pergunta1_bot_conversa": "1654523",
+            "id_campo_pergunta2_bot_conversa": "1654886",
+            "id_campo_pergunta3_bot_conversa": "1654541",
+            "id_campo_pergunta4_bot_conversa": "1689038",
+            "id_campo_pergunta5_bot_conversa": "1772554",
+            "id_campo_pergunta6_bot_conversa": "1772555",
+            "id_campo_pergunta7_bot_conversa": "1782967",
+            "id_campo_pergunta8_bot_conversa": "1814217",
+            "id_campo_pergunta9_bot_conversa": "",
+            "id_campo_pergunta10_bot_conversa": "",
+            "id_campo_pergunta11_bot_conversa": "",
+            "id_campo_pergunta12_bot_conversa": "",
+            "id_campo_pergunta13_bot_conversa": "",
+            "id_campo_pergunta14_bot_conversa": "",
+            "id_campo_pergunta15_bot_conversa": "",
+            "id_campo_pergunta16_bot_conversa": "",
+            "id_campo_pergunta17_bot_conversa": "",
+            "id_campo_pergunta18_bot_conversa": "",
+            "id_campo_pergunta19_bot_conversa": "",
+            "id_campo_pergunta20_bot_conversa": "",
+            "id_status_preencheu_aplicacao_crm": "bbf14072-e675-4a28-915a-ede90e9d31fa",
+            "id_campo_email_crm": "43a14a28-119a-4e43-a0a1-58bc64e739a2",
+            "id_campo_telefone_crm": "4f5b17cc-999f-4779-8a66-155632cf59b4",
+            "id_campo_link_do_instagram_crm": "4d4434db-7404-4ca3-8586-88aacbe0069f",
+            "id_campo_utm_source_crm": "94fb2c13-bbd0-48a1-89f5-85ef2f537c11",
+            "id_campo_utm_campaign_crm": "e545d10b-616e-450d-aef6-d8e65b0944a3",
+            "id_campo_utm_term_crm": "21c541c6-2224-4d82-91da-825808a1edea",
+            "id_campo_utm_medium_crm": "d65c4dd8-d243-4416-8349-2d7f341b3bcf",
+            "id_campo_utm_content_crm": "1198c9d0-f4ee-4b1d-a24c-b6df7303ebf2",
+            "id_campo_utm_fun_crm": "2e435a89-b633-4100-a0b5-6810746db2c4",
+            "id_campo_utm_var_crm": "58dc2672-4c26-4b0b-ad81-8dcc82de45e0",
+            "id_campo_pergunta0_crm": "38f71e36-b8c8-42a4-aab3-0eede967e3ec",
+            "id_campo_pergunta1_crm": "cfdc19bd-7efe-48e2-8b83-ee721b0bf56c",
+            "id_campo_pergunta2_crm": "9f7b4da0-1df8-45cc-8d19-3dc13b3c6120",
+            "id_campo_pergunta3_crm": "ce42f281-0ad4-491b-b918-25754365f2fb",
+            "id_campo_pergunta4_crm": "04fc4778-f22a-4343-8217-03257f178662",
+            "id_campo_pergunta5_crm": "",
+            "id_campo_pergunta6_crm": "",
+            "id_campo_pergunta7_crm": "",
+            "id_campo_pergunta8_crm": "6d05cee0-28f8-474c-84cd-35e76468094c",
+            "id_campo_pergunta9_crm": "",
+            "id_campo_pergunta10_crm": "",
+            "id_campo_pergunta11_crm": "",
+            "id_campo_pergunta12_crm": "",
+            "id_campo_pergunta13_crm": "",
+            "id_campo_pergunta14_crm": "",
+            "id_campo_pergunta15_crm": "",
+            "id_campo_pergunta16_crm": "",
+            "id_campo_pergunta17_crm": "",
+            "id_campo_pergunta18_crm": "",
+            "id_campo_pergunta19_crm": "",
+            "id_campo_pergunta20_crm": "",
+            "id_stage_desqualificado_crm": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3",
+            "id_pipeline_downsell_crm": "",
+            "valor_produto_principal_em_centavos": "",
+            "valor_produto_downsell_em_centavos": "",
+            "url_api_activecampaign": "",
+            "id_sdr": "",
+            "id_campo_id_banco_de_dados_crm": "d23569b0-b471-45e0-a1e9-840a6711d052",
+            "id_campo_crm_origem": "ba2292d8-b72b-48b1-b2b6-159456a98d63",
+            "funil": "sessao estrategica",
+            "variacao_do_funil": "v1",
+            "id_campo_id_botconversa_crm": "f19516e0-1a4a-4b3d-b68e-68c2ae4acc59",
+            "status_sessao_estrategica_crm": "a5eebcc6-1646-4e44-a1ae-0e034bd825ef",
+            "id_campo_qualificado_crm": "b1bdbadf-406b-4272-ae97-18b3c214005b",
+            "id_campo_desqualificado_crm": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3",
+            "id_pipeline_crm": "947abb00-968d-4e1b-a6b9-c0887cbfd4b9",
+            "id_ending_typeform": "",
+            "id_campo_iddealac_bot_conversa": "",
+            "id_campo_idleadac_bot_conversa": "",
+            "id_campo_status_do_lead_crm": "20bc36eb-9d21-4aaa-b6f1-3c85bafa63ec",
+            "id_campo_status_do_lead_qualificado_crm": "b1bdbadf-406b-4272-ae97-18b3c214005b",
+            "id_campo_status_do_lead_desqualificado_crm": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3",
+            "id_campo_modelo_da_call_crm": "1ecc802b-e2b3-4769-bc7a-9e1517c2278f",
+            "id_campo_modelo_da_call_sessao_estrategica_crm": "36a55391-29e3-4168-9caf-67ac756b79f8",
+            "id_campo_modelo_da_call_aplicacao_direta_crm": "5883faf4-ebef-4b10-976a-0f88f4c25331",
+            "id_campo_funil_sessao_estrategica_crm": "5661918f-e847-4e0e-b9fc-ca7f62ed0a67",
+            "id_campo_funil_aplicacao_direta_crm": "1be63c76-92ea-4be1-a028-5301b1c9fa4e",
+            "id_campo_produto_mentoria_escala_ sem_caos_crm": "fbd2bb16-6676-43bd-9938-fca73139fede",
+            "id_campo_produto_implementacao_escala_ sem_caos_crm": "49b06aaf-209a-4a2c-84e0-65a6e135ab12",
+            "qualificacao": "",
+            "etapa_pre_desqualificados_crm": "77544d86-43b7-4cf6-bc87-ea059abbd7a5",
+            "etapa_pre_qualificados_crm": "2c64ca7b-3988-4ce5-9163-be272209072b",
+            "id_campo_id_bc_crm": "f19516e0-1a4a-4b3d-b68e-68c2ae4acc59",
+            "id_campo_data_da_aplicacao_crm": "00ad74e6-783f-4153-8bfd-9bf9a5b39857",
+            "id_campo_data_da_aplicacao_bot_conversa": "1814725",
+            "id_campo_nome_completo_crm": "1c438058-b654-4a19-9ea3-438bc2f5a078",
+            "data_resposta_type_milesegundos": "07/05/2024 15:27",
+            "id_campo_status_sessao_ou_aplicacao_crm": "a5eebcc6-1646-4e44-a1ae-0e034bd825ef",
+            "id_campo_status_aplicacao_realizada_crm": "bbf14072-e675-4a28-915a-ede90e9d31fa",
+            "id_fluxo_popular_campos": "3317483",
+            "parceiro": "Sessão Estratégica",
+            "origem": "bio instagram",
+            "celula": "marketing"
+          }
+        }
+      }
+    ],
+    "get_me": [
+      {
+        "json": {
+          "data": {
+            "me": {
+              "id": "302186720",
+              "name": "Paulo  Lacerda",
+              "username": "atendimento-paulolacerda",
+              "email": "atendimento@paulolacerda.com.br",
+              "avatarUrl": "https://app.pipefy.com/storage/v1/signed/avatar/store/user/302186720/avatar/small-8db0f9ff5889a94e04cf73a898721a4d.png?expires_on=1707433229&signature=k4Xysji8z113KZe1p3xRC70Amt7pTMwaUByFWvPurEw%3D",
+              "created_at": "2022-10-22 12:26:24 -0300",
+              "locale": "pt-BR",
+              "timeZone": "America/Sao_Paulo"
+            }
+          }
+        }
+      }
+    ],
+    "cc": [
+      {
+        "json": {
+          "data": {
+            "createCard": {
+              "clientMutationId": null
+            }
+          }
+        }
+      }
+    ],
+    "up1f": [
+      {
+        "json": {
+          "data": {
+            "updateCardField": {
+              "clientMutationId": null
+            }
+          }
+        }
+      }
+    ],
+    "up>1fld": [
+      {
+        "json": {
+          "data": {
+            "updateFieldsValues": {
+              "clientMutationId": null
+            }
+          }
+        }
+      }
+    ],
+    "del_crd": [
+      {
+        "json": {
+          "data": {
+            "deleteCard": {
+              "clientMutationId": null
+            }
+          }
+        }
+      }
+    ],
+    "criar_field_numa_etapa": [
+      {
+        "json": {
+          "data": {
+            "deleteCard": {
+              "clientMutationId": null
+            }
+          }
+        }
+      }
+    ],
+    "move_to_other_level": [
+      {
+        "json": {
+          "data": {
+            "moveCardToPhase": {
+              "clientMutationId": null
+            }
+          }
+        }
+      }
+    ],
+    "criar_field_numa_etapa1": [
+      {
+        "json": {
+          "data": {
+            "deleteCard": {
+              "clientMutationId": null
+            }
+          }
+        }
+      }
+    ],
+    "get_id_user": [
+      {
+        "json": {
+          "data": {
+            "card": {
+              "assignees": [
+                {
+                  "id": "303175486",
+                  "name": "Letícia Campos"
+                },
+                {
+                  "id": "303180119",
+                  "name": "Raquel Moura "
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "get_etapas_de_um_pipe": [
+      {
+        "json": {
+          "data": {
+            "pipe": {
+              "phases": [
+                {
+                  "id": "321485752",
+                  "name": "NOVO LEAD"
+                },
+                {
+                  "id": "317628280",
+                  "name": "PRIMEIRO CONTATO"
+                },
+                {
+                  "id": "317628283",
+                  "name": "CONECTADO"
+                },
+                {
+                  "id": "319617945",
+                  "name": "OFERTA / REUNIÃO"
+                },
+                {
+                  "id": "319618284",
+                  "name": "FOLLOW-UP"
+                },
+                {
+                  "id": "322398971",
+                  "name": "CONTRATO ENVIADO"
+                },
+                {
+                  "id": "317720323",
+                  "name": "VENDA REALIZADA"
+                },
+                {
+                  "id": "317762640",
+                  "name": "PERDIDOS"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "get_cards_de_uma_etapas": [
+      {
+        "json": {
+          "data": {
+            "phase": {
+              "cards": {
+                "edges": [
+                  {
+                    "node": {
+                      "age": 5367087,
+                      "id": "856478680",
+                      "title": "Fabiano Carvalho"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 5185303,
+                      "id": "857468755",
+                      "title": "Flávia Carvalho"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 4558432,
+                      "id": "861567771",
+                      "title": "Camila Kurdian"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 2508400,
+                      "id": "876275745",
+                      "title": "Angela Rodrigues"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 2414349,
+                      "id": "877065252",
+                      "title": "Lídia"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 2028819,
+                      "id": "879884477",
+                      "title": "Lilian Cidreira"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 1952722,
+                      "id": "880643457",
+                      "title": "Petrik Valtingojer"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 1950368,
+                      "id": "880664161",
+                      "title": "Zau Spínola"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 1879963,
+                      "id": "881241225",
+                      "title": "Bruno Marchi"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 1733385,
+                      "id": "882315471",
+                      "title": "Pedro Oliveira Marques"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 1440582,
+                      "id": "884147813",
+                      "title": "Bruna Coimbra"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 1275301,
+                      "id": "885546894",
+                      "title": "Mayra Brito Haas"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 1265955,
+                      "id": "885611458",
+                      "title": "Marina Zinn"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 866918,
+                      "id": "887553170",
+                      "title": "Ana Carolina"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 786537,
+                      "id": "888087897",
+                      "title": "Guilherme Santos"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 617293,
+                      "id": "889296598",
+                      "title": "Verônica / Henry Santos"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 499035,
+                      "id": "890311763",
+                      "title": "Ademir Garcia"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 438667,
+                      "id": "890559106",
+                      "title": "Junior Zanardi"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 426965,
+                      "id": "890600594",
+                      "title": "Michelle Tamura"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 265487,
+                      "id": "891110766",
+                      "title": "Fernanda Freitas"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 249728,
+                      "id": "891275024",
+                      "title": "Camila"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 245556,
+                      "id": "891321205",
+                      "title": "Boaz Oliveira"
+                    }
+                  },
+                  {
+                    "node": {
+                      "age": 77380,
+                      "id": "892569027",
+                      "title": "Leonardo Castiglio"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    ],
+    "get_cards_via_id_unico": [
+      {
+        "json": {
+          "data": {
+            "card": {
+              "title": "Leonardo Castiglio",
+              "id": "892569027",
+              "uuid": "275400c1-0733-47d1-a355-898055dfbfc2",
+              "updated_at": "2024-03-14T15:01:33Z"
+            }
+          }
+        }
+      }
+    ],
+    "get_id_fields_por_card": [
+      {
+        "json": {
+          "data": {
+            "pipe": {
+              "start_form_fields": [
+                {
+                  "id": "respons_vel",
+                  "label": "Responsável",
+                  "required": true,
+                  "type": "assignee_select",
+                  "options": []
+                },
+                {
+                  "id": "closer_respons_vel",
+                  "label": "Closer Responsável",
+                  "required": false,
+                  "type": "assignee_select",
+                  "options": []
+                },
+                {
+                  "id": "cliente",
+                  "label": "Cliente",
+                  "required": false,
+                  "type": "connector",
+                  "options": []
+                },
+                {
+                  "id": "contatos",
+                  "label": "Contato",
+                  "required": false,
+                  "type": "connector",
+                  "options": []
+                },
+                {
+                  "id": "nome_do_representante_p_blico",
+                  "label": "Nome do Representante Público",
+                  "required": false,
+                  "type": "short_text",
+                  "options": []
+                },
+                {
+                  "id": "nome_da_vaga",
+                  "label": "Nome da vaga",
+                  "required": false,
+                  "type": "short_text",
+                  "options": []
+                },
+                {
+                  "id": "nome_do_lead",
+                  "label": "Nome do Lead",
+                  "required": false,
+                  "type": "short_text",
+                  "options": []
+                },
+                {
+                  "id": "email",
+                  "label": "Email",
+                  "required": false,
+                  "type": "email",
+                  "options": []
+                },
+                {
+                  "id": "whatsapp_do_lead",
+                  "label": "Whatsapp do Lead",
+                  "required": false,
+                  "type": "phone",
+                  "options": []
+                },
+                {
+                  "id": "cargo_do_lead",
+                  "label": "Cargo do Lead",
+                  "required": false,
+                  "type": "short_text",
+                  "options": []
+                },
+                {
+                  "id": "quantas_pessoas_tem_no_time_atual",
+                  "label": "Quantas pessoas tem no time atual?",
+                  "required": false,
+                  "type": "number",
+                  "options": []
+                },
+                {
+                  "id": "quantas_pessoas_trabalham_na_sua_empresa",
+                  "label": "Quantas pessoas trabalham na sua empresa?",
+                  "required": false,
+                  "type": "short_text",
+                  "options": []
+                },
+                {
+                  "id": "qual_o_seu_modelo_de_neg_cio_aqui_no_digital",
+                  "label": "Qual é o seu modelo de negócio aqui no digital?",
+                  "required": false,
+                  "type": "short_text",
+                  "options": []
+                },
+                {
+                  "id": "qual_tipo_de_servi_o_deseja_contratar",
+                  "label": "Qual tipo de serviço deseja contratar?",
+                  "required": false,
+                  "type": "select",
+                  "options": [
+                    "Consultoria de Estruturação de Times",
+                    "Recrutamento e Seleção",
+                    "Ambos"
+                  ]
+                },
+                {
+                  "id": "j_conhece_a_port_s_digital",
+                  "label": "Já conhece a Portüs Digital? ",
+                  "required": false,
+                  "type": "select",
+                  "options": [
+                    "Sim",
+                    "Não",
+                    "Não conheço",
+                    "Já ouvi falar",
+                    "Conheço bem"
+                  ]
+                },
+                {
+                  "id": "como_ficou_sabendo_da_portus",
+                  "label": "💬 Como ficou sabendo da Portus?",
+                  "required": false,
+                  "type": "select",
+                  "options": [
+                    "Indicação",
+                    "Instagram",
+                    "Linkedin",
+                    "Google",
+                    "Outros",
+                    "ARENA",
+                    "Instagram da Kelly",
+                    "Evento"
+                  ]
+                },
+                {
+                  "id": "qual_foi_o_evento",
+                  "label": "Qual foi o Evento?",
+                  "required": false,
+                  "type": "short_text",
+                  "options": []
+                },
+                {
+                  "id": "de_quem_foi_a_indica_o",
+                  "label": "De quem foi a Indicação?",
+                  "required": false,
+                  "type": "short_text",
+                  "options": []
+                },
+                {
+                  "id": "empresa",
+                  "label": "Nome da Empresa",
+                  "required": false,
+                  "type": "short_text",
+                  "options": []
+                },
+                {
+                  "id": "sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar",
+                  "label": "Sites e/ou redes sociais da empresa ou projetos em que o candidato atuará",
+                  "required": false,
+                  "type": "short_text",
+                  "options": []
+                },
+                {
+                  "id": "qual_foi_o_seu_faturamento_em_2023",
+                  "label": "Qual foi o seu faturamento em 2023?",
+                  "required": false,
+                  "type": "select",
+                  "options": [
+                    "Abaixo de 1M",
+                    "Entre 1 e 3M",
+                    "Entre 3 e 5M",
+                    "Entre 5 e 10M",
+                    "Entre 10 e 20M",
+                    "Acima de 20M"
+                  ]
+                },
+                {
+                  "id": "qual_a_meta_de_faturamento_anual_para_2024",
+                  "label": "Qual é a meta de faturamento anual para 2024?",
+                  "required": false,
+                  "type": "short_text",
+                  "options": []
+                },
+                {
+                  "id": "voc_s_j_t_m_um_produto_servi_o_validado",
+                  "label": "Vocês já têm um produto/serviço validado?",
+                  "required": false,
+                  "type": "select",
+                  "options": [
+                    "Sim",
+                    "Não"
+                  ]
+                },
+                {
+                  "id": "qual_profissional_voc_est_procurando",
+                  "label": "Qual profissional você está procurando?",
+                  "required": false,
+                  "type": "long_text",
+                  "options": []
+                },
+                {
+                  "id": "voc_est_com_alguma_vaga_aberta_agora",
+                  "label": "Você está com alguma vaga aberta AGORA?",
+                  "required": false,
+                  "type": "select",
+                  "options": [
+                    "Estou com uma vaga aberta.",
+                    "Estou com MAIS de uma vaga aberta, inclusive.",
+                    "Não estou com vagas abertas e não pretendo contratar agora.",
+                    "Ainda não, mas sinto que preciso de gente e abrirei em breve."
+                  ]
+                },
+                {
+                  "id": "tipo_de_contrato",
+                  "label": "Tipo de Contrato",
+                  "required": false,
+                  "type": "radio_horizontal",
+                  "options": [
+                    "Retainer",
+                    "Taxa de Sucesso",
+                    "Certificação",
+                    "Estruturação",
+                    "Especial",
+                    "Partner Start",
+                    "Partner Pro",
+                    "RPO"
+                  ]
+                },
+                {
+                  "id": "valor_da_vaga",
+                  "label": "Valor do contrato",
+                  "required": false,
+                  "type": "currency",
+                  "options": []
+                },
+                {
+                  "id": "copy_of_garantia",
+                  "label": "Forma de pagamento",
+                  "required": false,
+                  "type": "select",
+                  "options": [
+                    "Taxa de Abertura + Diferença",
+                    "Pagamento 50% entrada + 50% finalização",
+                    "Parcelado em 3x",
+                    "Parcelado em 6x",
+                    "Parcelado em 12x",
+                    "Valor Total à Vista - Pix/Débito",
+                    "Valor Total à Vista - Cartão de Crédito"
+                  ]
+                },
+                {
+                  "id": "garantia",
+                  "label": "Garantia",
+                  "required": false,
+                  "type": "select",
+                  "options": [
+                    "30 dias",
+                    "45 dias",
+                    "60 dias",
+                    "90 dias",
+                    "6 meses",
+                    "12 meses"
+                  ]
+                },
+                {
+                  "id": "explique_um_pouco_sobre_o_seu_desafio_com_a_gest_o_de_pessoas",
+                  "label": "Explique um pouco sobre o seu desafio com a Gestão de Pessoas",
+                  "required": false,
+                  "type": "long_text",
+                  "options": []
+                },
+                {
+                  "id": "outras_observa_es_sobre_a_vaga",
+                  "label": "Informações importantes relacionadas a vaga",
+                  "required": false,
+                  "type": "long_text",
+                  "options": []
+                },
+                {
+                  "id": "parceiro",
+                  "label": "Parceiro",
+                  "required": false,
+                  "type": "short_text",
+                  "options": []
+                },
+                {
+                  "id": "anexo",
+                  "label": "Anexo",
+                  "required": false,
+                  "type": "attachment",
+                  "options": []
+                },
+                {
+                  "id": "motivo_de_perda_move_para_perdidos",
+                  "label": "MOTIVO DE PERDA (MOVE PARA PERDIDOS)",
+                  "required": false,
+                  "type": "radio_vertical",
+                  "options": [
+                    "Ausência de Resposta",
+                    "Não Precisa mais da Vaga",
+                    "Não Aderiu ao Valor da Proposta",
+                    "Recusa por Objeção a Cláusulas Contratuais",
+                    "Fora do ICP",
+                    "Outros (DEIXAR MOTIVO NOS COMENTÁRIOS)"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "get_tags_por_pipe": [
+      {
+        "json": {
+          "data": {
+            "pipe": {
+              "labels": [
+                {
+                  "id": "307948012",
+                  "color": "#FF0000",
+                  "name": "QUENTE🔥"
+                },
+                {
+                  "id": "309586372",
+                  "color": "#A5EBFE",
+                  "name": "FRIO"
+                },
+                {
+                  "id": "309586382",
+                  "color": "#FFE886",
+                  "name": "MORNO"
+                },
+                {
+                  "id": "309660221",
+                  "color": "#009C15",
+                  "name": "RECOMPRA"
+                },
+                {
+                  "id": "309824743",
+                  "color": "#000000",
+                  "name": "NO SHOW"
+                },
+                {
+                  "id": "309841288",
+                  "color": "#F13046",
+                  "name": "CONTRATO ENVIADO"
+                },
+                {
+                  "id": "309841303",
+                  "color": "#32E694",
+                  "name": "CONTRATO ASSINADO"
+                },
+                {
+                  "id": "309841309",
+                  "color": "#000000",
+                  "name": "PENDENTE CONTRATO"
+                },
+                {
+                  "id": "309855370",
+                  "color": "#A01D6B",
+                  "name": "DIFICULDADE DE CONTATO"
+                },
+                {
+                  "id": "309894347",
+                  "color": "#382999",
+                  "name": "PAGAMENTO DE ENTRADA"
+                },
+                {
+                  "id": "309962848",
+                  "color": "#24B734",
+                  "name": "Imersão High Ticket"
+                },
+                {
+                  "id": "310085580",
+                  "color": "#F62B90",
+                  "name": "CONTATO FUTURO"
+                },
+                {
+                  "id": "310421292",
+                  "color": "#DC90E2",
+                  "name": "Influência Brazil"
+                },
+                {
+                  "id": "311078625",
+                  "color": "#7F5BF9",
+                  "name": "PENDENTE DE AGENDAMENTO"
+                },
+                {
+                  "id": "311141379",
+                  "color": "#1197AA",
+                  "name": "Funil SE"
+                },
+                {
+                  "id": "311211266",
+                  "color": "#26BF40",
+                  "name": "MQL"
+                },
+                {
+                  "id": "311211267",
+                  "color": "#4D400D",
+                  "name": "SQL"
+                },
+                {
+                  "id": "311211268",
+                  "color": "#5A5564",
+                  "name": "Não qualificado"
+                },
+                {
+                  "id": "311261201",
+                  "color": "#52488A",
+                  "name": "Imersão Escala Sem Fórmula"
+                },
+                {
+                  "id": "311363721",
+                  "color": "#5DF34E",
+                  "name": "NF EMITIDA"
+                },
+                {
+                  "id": "311378114",
+                  "color": "#D0021B",
+                  "name": "WEBINÁRIO"
+                }
+              ],
+              "name": "Comercial"
+            }
+          }
+        }
+      }
+    ]
+  },
   "settings": {
-    "saveExecutionProgress": false,
+    "executionOrder": "v1",
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
     "saveManualExecutions": false,
-    "saveDataErrorExecution": "none",
-    "saveDataSuccessExecution": "none",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-02-04T20:37:26.868Z",
-  "versionId": "bb239a83-24e2-4765-ba31-505fcf33b8ce"
+  "updatedAt": "2025-01-24T18:02:48.982Z",
+  "versionId": "0a592337-b17d-4df4-851c-0f405d573e26"
 }
