@@ -1,0 +1,330 @@
+{
+  "active": true,
+  "connections": {
+    "fluxo_chamado": {
+      "main": [
+        [
+          {
+            "node": "executa_procedure",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "executa_procedure": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "user_nao_existe": {
+      "main": [
+        [
+          {
+            "node": "insert_user",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_user": {
+      "main": [
+        [
+          {
+            "node": "executa_procedure1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "executa_procedure1": {
+      "main": [
+        [
+          {
+            "node": "Limit1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "user_nao_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-02-06T13:43:09.423Z",
+  "id": "AkRUOi4f5OFlFqDW",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[Portus][Banco de Dados] - Cria ou Atualiza User",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "cria-atualiza-user",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -900,
+        120
+      ],
+      "id": "6bdbedbd-ad72-4786-a6b0-312c13a4f34e",
+      "name": "fluxo_chamado",
+      "webhookId": "480e1e30-05c3-4aba-9470-4421b90f0da2"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "CALL busca_usuario( {{ $node[\"fluxo_chamado\"].json[\"body\"][\"email\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"email\"] + `'` : 'NULL' }}, {{ $node[\"fluxo_chamado\"].json[\"body\"][\"instagram\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"instagram\"] + `'` : 'NULL' }}, {{ $node[\"fluxo_chamado\"].json[\"body\"][\"telefone\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"telefone\"] + `'` : 'NULL' }}, {{ $node[\"fluxo_chamado\"].json[\"body\"][\"cnpj\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"cnpj\"] + `'` : 'NULL' }}, {{ $node[\"fluxo_chamado\"].json[\"body\"][\"cpf\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"cpf\"] + `'` : 'NULL' }}, {{ $node[\"fluxo_chamado\"].json[\"body\"][\"nome\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"nome\"] + `'` : 'NULL' }}, {{ $node[\"fluxo_chamado\"].json[\"body\"][\"sobrenome\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"sobrenome\"] + `'` : 'NULL' }});\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        -680,
+        120
+      ],
+      "id": "414c3d56-6589-4712-bf92-cd60ca17c9b2",
+      "name": "executa_procedure",
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8f3b4801-935d-4e6e-8512-3063eb024185",
+              "leftValue": "={{ $json[0].mensagem }}",
+              "rightValue": "Usuário não encontrado",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -280,
+        120
+      ],
+      "id": "523d4a99-534c-4841-9003-56f989a59c3a",
+      "name": "user_nao_existe"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data_de_entrada",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"nome\"] || NULL }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"sobrenome\"] || NULL }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"email\"] || NULL }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"telefone\"] || NULL }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"instagram\"] || NULL }}"
+            },
+            {
+              "column": "cpf",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"cpf\"] || NULL }}"
+            },
+            {
+              "column": "cnpj",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"cnpj\"] || NULL }}"
+            },
+            {
+              "column": "status_atividade",
+              "value": "Y"
+            },
+            {
+              "column": "data_atualizacao",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "detailedOutput": true
+        }
+      },
+      "id": "a47b019a-799a-4ad6-b1c7-82934b8da323",
+      "name": "insert_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        0,
+        0
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "CALL busca_usuario( {{ $node[\"fluxo_chamado\"].json[\"body\"][\"email\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"email\"] + `'` : 'NULL' }}, {{ $node[\"fluxo_chamado\"].json[\"body\"][\"instagram\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"instagram\"] + `'` : 'NULL' }}, {{ $node[\"fluxo_chamado\"].json[\"body\"][\"telefone\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"telefone\"] + `'` : 'NULL' }}, {{ $node[\"fluxo_chamado\"].json[\"body\"][\"cnpj\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"cnpj\"] + `'` : 'NULL' }}, {{ $node[\"fluxo_chamado\"].json[\"body\"][\"cpf\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"cpf\"] + `'` : 'NULL' }}, {{ $node[\"fluxo_chamado\"].json[\"body\"][\"nome\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"nome\"] + `'` : 'NULL' }}, {{ $node[\"fluxo_chamado\"].json[\"body\"][\"sobrenome\"] ? `'` + $node[\"fluxo_chamado\"].json[\"body\"][\"sobrenome\"] + `'` : 'NULL' }});\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        200,
+        0
+      ],
+      "id": "6883e1fc-a680-43a7-abf1-c4ed1033309d",
+      "name": "executa_procedure1",
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        120
+      ],
+      "id": "5e2a3f83-32be-4c61-a846-4867b19d3825",
+      "name": "Limit"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        400,
+        0
+      ],
+      "id": "a3ee8813-6a82-4efc-b92c-472020458d39",
+      "name": "Limit1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        0,
+        240
+      ],
+      "id": "3131c2f5-26b2-4e01-ad51-7a776473be4d",
+      "name": "No Operation, do nothing"
+    }
+  ],
+  "pinData": {
+    "fluxo_chamado": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n2webhookautomagicbots.automagicbots.com.br",
+            "user-agent": "axios/1.7.4",
+            "content-length": "169",
+            "accept": "application/json,text/html,application/xhtml+xml,application/xml,text/*;q=0.9, image/*;q=0.8, */*;q=0.7",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "content-type": "application/json",
+            "x-forwarded-for": "172.18.0.1",
+            "x-forwarded-host": "n8n2webhookautomagicbots.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "40f84ef31161",
+            "x-real-ip": "172.18.0.1"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "nome": "João",
+            "sobrenome": "Victor de Carrera",
+            "email": "joaovictor_carrera@hotmail.com",
+            "telefone": "556599016556",
+            "instagram": "amaraldas_automacoes",
+            "cpf": "",
+            "cnpj": ""
+          },
+          "webhookUrl": "https://n8n2webhookautomagicbots.automagicbots.com.br/webhook/cria-atualiza-user",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-02-06T13:54:49.823Z",
+  "versionId": "4a09f6a0-444a-4d58-8051-96bbb8d88940"
+}
