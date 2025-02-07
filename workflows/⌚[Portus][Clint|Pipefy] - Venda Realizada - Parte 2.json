@@ -14,7 +14,13 @@
     },
     "cria_atualiza_user": {
       "main": [
-        []
+        [
+          {
+            "node": "existe_no_pipefy",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "chega_da_fila": {
@@ -22,6 +28,18 @@
         [
           {
             "node": "pesquisa_variavel_n8n_fluxo_users",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_no_pipefy": {
+      "main": [
+        [],
+        [
+          {
+            "node": "cc1",
             "type": "main",
             "index": 0
           }
@@ -150,6 +168,87 @@
           "name": "[RabbitMQ] - Portus"
         }
       }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e2b8e15d-6a40-45db-b5c3-af30777ce544",
+              "leftValue": "={{ $node[\"cria_atualiza_user\"].json[\"id_pipefy\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        60,
+        -100
+      ],
+      "id": "7eea1333-0f4a-4c7b-b79d-52f06565e58e",
+      "name": "existe_no_pipefy"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  createCard(input: {\n    pipe_id: {{ $node[\"chega_da_fila\"].json[\"content\"][\"id_pipe_operacao\"] }}\n    title: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] + ($node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] ? \" \" + $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] : \"\") }}\"\n    assignee_ids: [302413323, 305131963]\n    fields_attributes: [\n    ]\n  }) {\n    clientMutationId\n    card {\n      pipe {\n        id\n      }\n      assignees {\n        id\n      }\n    }\n  }\n}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "ead7056e-6dde-42e7-96fe-f0b5d23cb876",
+      "name": "cc1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        280,
+        20
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "7F0hUjKvKkREj86b",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
     }
   ],
   "pinData": {
@@ -157,7 +256,7 @@
       {
         "json": {
           "fields": {
-            "consumerTag": "amq.ctag-sUWVXERt5Y1h6kFb9XUmvA",
+            "consumerTag": "amq.ctag-I1DmZ4pQsPqy6IpvvnBD3w",
             "deliveryTag": 1,
             "redelivered": false,
             "exchange": "",
@@ -168,13 +267,14 @@
           },
           "content": {
             "nome": "Mateus",
-            "sobrenome": "Diniz - Automagic Bots",
+            "sobrenome": "Diniz",
             "email": "mateusdiniz@automagicbots.com.br",
             "telefone": "556281196678",
             "id_funil": null,
             "instagram": "",
             "id_forms": "1",
-            "tipo_forms": "Onboarding"
+            "tipo_forms": "Onboarding",
+            "id_pipe_operacao": "302840048"
           }
         }
       }
@@ -192,6 +292,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-02-06T14:34:00.094Z",
-  "versionId": "ba310b17-8521-4fbe-91f4-87052bf792ce"
+  "updatedAt": "2025-02-07T07:01:21.257Z",
+  "versionId": "2eb93081-3596-4bbf-be79-ebe8657a96ab"
 }
