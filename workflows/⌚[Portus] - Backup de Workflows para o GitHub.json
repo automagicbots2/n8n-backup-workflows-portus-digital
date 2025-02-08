@@ -175,9 +175,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:32.626Z",
-  "id": "37e8RqssLO3U2uC2",
-  "meta": null,
+  "createdAt": "2024-08-08T20:16:03.704Z",
+  "id": "TJ6ZrHPsOv6gald2",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "⌚[Portus] - Backup de Workflows para o GitHub",
   "nodes": [
     {
@@ -213,7 +215,7 @@
       "alwaysOutputData": true,
       "credentials": {
         "githubOAuth2Api": {
-          "id": "dKXtb1x70bJLa9xx",
+          "id": "fI8GsdLCcwXZ72Fn",
           "name": "[GitHub] - Portus Digital"
         }
       },
@@ -302,7 +304,7 @@
       "typeVersion": 1,
       "credentials": {
         "githubOAuth2Api": {
-          "id": "dKXtb1x70bJLa9xx",
+          "id": "fI8GsdLCcwXZ72Fn",
           "name": "[GitHub] - Portus Digital"
         }
       }
@@ -327,7 +329,7 @@
       "typeVersion": 1,
       "credentials": {
         "githubOAuth2Api": {
-          "id": "dKXtb1x70bJLa9xx",
+          "id": "fI8GsdLCcwXZ72Fn",
           "name": "[GitHub] - Portus Digital"
         }
       }
@@ -454,8 +456,8 @@
       "typeVersion": 1,
       "credentials": {
         "n8nApi": {
-          "id": "NlLaZ6gZX3RMZhmX",
-          "name": "[n8n] - Portus Digital"
+          "id": "o0ikSKi8I47KL8yi",
+          "name": "[N8N] - Portus Digital"
         }
       }
     },
@@ -484,17 +486,16 @@
       "typeVersion": 2
     }
   ],
-  "pinData": null,
+  "pinData": {},
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": false,
-    "saveDataErrorExecution": "all",
-    "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-02-04T20:38:36.062Z",
-  "versionId": "06953e40-4eff-4d26-9b0f-b3f7b2a2b200"
+  "updatedAt": "2024-08-08T20:19:50.683Z",
+  "versionId": "4b750e7f-8873-44d5-a0ee-c61d8d107fc6"
 }
