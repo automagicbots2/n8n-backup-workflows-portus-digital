@@ -13,49 +13,47 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:32.439Z",
-  "id": "mKIVAmjjlR8KNTYw",
-  "meta": null,
+  "createdAt": "2025-02-04T17:37:16.587Z",
+  "id": "B5ErT6ObkzMJxzKU",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "⚙️ Aviso de Erro no Discord",
   "nodes": [
     {
       "parameters": {},
-      "id": "2e605d22-9428-4e94-8194-a54f43dfbb94",
+      "id": "595ec15d-638f-4fc0-955e-a872e7c4e721",
       "name": "Error Trigger",
       "type": "n8n-nodes-base.errorTrigger",
       "typeVersion": 1,
       "position": [
-        180,
-        120
+        140,
+        -80
       ]
     },
     {
       "parameters": {
         "webhookUri": "https://discord.com/api/webhooks/1327342713888178176/F6VjC83THfIemEVxo_22VN-_reCyT3NZmaU1wASXw1fLrzMm44TUVQCKDLtlv63jQF7h",
-        "text": "=🚨 **Workflow com erro no N8N da Portus**\n\nO Workflow **{{ $json[\"workflow\"][\"name\"] }}**, do **ID {{ $json[\"workflow\"][\"id\"] }}**, acabou de apresentar um erro.\n\nAssim que puder, dê uma conferida e ajuste o erro apresentado.",
+        "text": "=🚨 **Workflow com erro no N8N da Portus Externo**\n\nO Workflow **{{ $json[\"workflow\"][\"name\"] }}**, do **ID {{ $json[\"workflow\"][\"id\"] }}**, acabou de apresentar um erro.\n\nAssim que puder, dê uma conferida e ajuste o erro apresentado.",
         "options": {}
       },
-      "id": "8aa374eb-c730-408f-9636-2faab1307fe0",
+      "id": "84a4122c-8804-47e2-8337-6637635b2ee9",
       "name": "Discord",
       "type": "n8n-nodes-base.discord",
       "typeVersion": 1,
       "position": [
-        400,
-        120
+        360,
+        -80
       ]
     }
   ],
-  "pinData": null,
+  "pinData": {},
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": false,
-    "saveDataErrorExecution": "all",
-    "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "executionOrder": "v1"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-02-04T17:45:32.439Z",
-  "versionId": "4fb80070-3d91-46e8-a881-1d1fdb64eba8"
+  "updatedAt": "2025-02-04T17:37:44.103Z",
+  "versionId": "7910a0eb-30ca-438f-a925-760f79f2ba42"
 }
