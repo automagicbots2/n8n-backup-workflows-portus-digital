@@ -291,11 +291,9 @@
       ]
     }
   },
-  "createdAt": "2024-05-20T13:14:15.787Z",
-  "id": "BFO70PsmuBHdTdRe",
-  "meta": {
-    "templateCredsSetupCompleted": true
-  },
+  "createdAt": "2025-02-04T17:45:31.547Z",
+  "id": "ZVznBDkPRX92FPBH",
+  "meta": null,
   "name": "[Evolution] - Disparo em massa - 20/05 10hrs",
   "nodes": [
     {
@@ -324,7 +322,7 @@
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "6haYpAmOsZXFxR68",
+          "id": "PTisU6jVH6GN1bDQ",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
@@ -520,7 +518,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -554,7 +552,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -582,7 +580,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -619,7 +617,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -865,7 +863,7 @@
       ],
       "credentials": {
         "whatsAppApi": {
-          "id": "jvqZJXjWJXwpV03j",
+          "id": "jITu8EfE4LVCf9Tz",
           "name": "[API Oficial WhatsApp] - Portus"
         }
       }
@@ -886,7 +884,7 @@
       ],
       "credentials": {
         "whatsAppApi": {
-          "id": "jvqZJXjWJXwpV03j",
+          "id": "jITu8EfE4LVCf9Tz",
           "name": "[API Oficial WhatsApp] - Portus"
         }
       },
@@ -1013,20 +1011,17 @@
       "typeVersion": 4
     }
   ],
-  "pinData": {},
+  "pinData": null,
   "settings": {
-    "executionOrder": "v1",
-    "saveManualExecutions": true,
-    "callerPolicy": "workflowsFromSameOwner",
-    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+    "saveExecutionProgress": true,
+    "saveManualExecutions": false,
+    "saveDataErrorExecution": "all",
+    "saveDataSuccessExecution": "all",
+    "errorWorkflow": "B5ErT6ObkzMJxzKU"
   },
-  "staticData": {
-    "node:12hrs": {
-      "recurrencyRules": []
-    }
-  },
+  "staticData": null,
   "tags": [],
-  "triggerCount": 1,
-  "updatedAt": "2024-05-20T16:39:53.161Z",
-  "versionId": "7ef119fa-2cf3-4577-94ae-ef8d2cf227fd"
+  "triggerCount": 0,
+  "updatedAt": "2025-02-04T17:45:31.547Z",
+  "versionId": "dcbb2ff1-1b11-4816-a34a-66ae5ef92c8f"
 }
