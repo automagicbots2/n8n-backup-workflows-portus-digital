@@ -159,7 +159,7 @@
       "type": "n8n-nodes-base.rabbitmqTrigger",
       "typeVersion": 1,
       "position": [
-        -660,
+        -600,
         -100
       ],
       "credentials": {
@@ -256,7 +256,7 @@
       {
         "json": {
           "fields": {
-            "consumerTag": "amq.ctag-I1DmZ4pQsPqy6IpvvnBD3w",
+            "consumerTag": "amq.ctag-Z3h1JROO1tHQV477E_KyQA",
             "deliveryTag": 1,
             "redelivered": false,
             "exchange": "",
@@ -267,7 +267,7 @@
           },
           "content": {
             "nome": "Mateus",
-            "sobrenome": "Diniz",
+            "sobrenome": "Diniz - Automagic Bots",
             "email": "mateusdiniz@automagicbots.com.br",
             "telefone": "556281196678",
             "id_funil": null,
@@ -292,6 +292,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-02-07T07:01:21.257Z",
-  "versionId": "2eb93081-3596-4bbf-be79-ebe8657a96ab"
+  "updatedAt": "2025-02-14T19:58:51.304Z",
+  "versionId": "6a1750ad-6270-416b-944d-90e141be179a"
 }
