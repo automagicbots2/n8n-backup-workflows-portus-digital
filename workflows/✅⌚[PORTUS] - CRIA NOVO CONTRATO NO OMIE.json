@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "nova_venda_realizada_pipefy": {
       "main": [
@@ -246,11 +246,9 @@
       ]
     }
   },
-  "createdAt": "2024-06-17T17:45:29.862Z",
-  "id": "7PQXWh08Fm4PuYaW",
-  "meta": {
-    "templateCredsSetupCompleted": true
-  },
+  "createdAt": "2025-02-04T17:45:32.256Z",
+  "id": "xcuk3ibeyhHtVyc5",
+  "meta": null,
   "name": "✅⌚[PORTUS] - CRIA NOVO CONTRATO NO OMIE",
   "nodes": [
     {
@@ -362,7 +360,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -418,7 +416,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -613,7 +611,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -692,7 +690,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -936,7 +934,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1014,7 +1012,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1063,7 +1061,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1476,244 +1474,17 @@
       ]
     }
   ],
-  "pinData": {
-    "nova_venda_realizada_pipefy": [
-      {
-        "json": {
-          "headers": {
-            "host": "n8nwebhookportus.automagicbots.com.br",
-            "user-agent": "Pipefy-UserAgent",
-            "content-length": "1243",
-            "accept": "application/json",
-            "content-type": "application/json",
-            "elastic-apm-traceparent": "00-6c3a84346f443d7df42833faa8b7ff8d-048e9cf3441714e7-00",
-            "traceparent": "00-6c3a84346f443d7df42833faa8b7ff8d-048e9cf3441714e7-00",
-            "tracestate": "es=s:0.0",
-            "x-forwarded-for": "129.80.157.176",
-            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
-            "x-forwarded-port": "443",
-            "x-forwarded-proto": "https",
-            "x-forwarded-server": "d71ef73d891d",
-            "x-real-ip": "129.80.157.176",
-            "accept-encoding": "gzip"
-          },
-          "params": {},
-          "query": {},
-          "body": {
-            "criado_em": "2024-06-28T19:02:04Z",
-            "fase_atual": "VENDA REALIZADA",
-            "id_card": "951613610",
-            "etiquetas": "",
-            "title": "Daniela Lopes de Almeida Leal",
-            "responsavel": "Raquel Moura ",
-            "origem": "",
-            "cpf-cnpj": "",
-            "razao_social": "",
-            "endereco_fiscal": "",
-            "modelo_de_negocio": "",
-            "nome": "Daniela E Carla",
-            "email": "",
-            "phone": "+55 21 99636-6258",
-            "cargo_do_lead": "",
-            "qntd_pessoas_time": "",
-            "qntd_pessoas_empresa": "",
-            "modelo_negocio": "",
-            "tipo_servico": "",
-            "conhece_a_portus": "",
-            "como_soube_da_portus": "",
-            "nome_empresa": "daniela@sowprodutoradigital.com.br",
-            "faturamento_2023": "",
-            "faturamento_mensal": "",
-            "meta_2024": "",
-            "tem_produto_servico": "",
-            "profissional_almejado": "",
-            "vaga_aberta": "",
-            "tipo_contrato": "",
-            "valor_contrato": "",
-            "valor_contrato1": "60000.0",
-            "forma_pagamento": "",
-            "garantia": "Garantia vide Contrato Partner",
-            "desafio_com_gestao_de_pessoas": "",
-            "infos_sobre_a_vaga": "",
-            "parceiro": "",
-            "celula": "",
-            "funil": "",
-            "id_lead_database": "",
-            "utm_source": "",
-            "utm_medium": "",
-            "utm_campaign": "",
-            "utm_content": "",
-            "utm_term": "",
-            "nome_fantasia": "",
-            "descricao_cc": "",
-            "codigo_banco": "",
-            "tipo_conta_corrente": "",
-            "descricao": "",
-            "cidade_prestacao_servico": "",
-            "valor_unitario": "",
-            "valor_total": "",
-            "data_final": "",
-            "data_inicial": ""
-          }
-        }
-      }
-    ],
-    "HTTP Request3": [
-      {
-        "json": {
-          "codigo_cliente_omie": 1760324693,
-          "codigo_cliente_integracao": "156",
-          "razao_social": "Teste1",
-          "cnpj_cpf": "",
-          "nome_fantasia": "Teste1",
-          "telefone1_ddd": "",
-          "telefone1_numero": "",
-          "contato": "",
-          "endereco": "",
-          "endereco_numero": "",
-          "bairro": "",
-          "complemento": "",
-          "estado": "",
-          "cidade": "",
-          "cep": "",
-          "codigo_pais": "1058",
-          "separar_endereco": "",
-          "pesquisar_cep": "",
-          "telefone2_ddd": "",
-          "telefone2_numero": "",
-          "fax_ddd": "",
-          "fax_numero": "",
-          "email": "teste12@gmail.com",
-          "homepage": "",
-          "inscricao_estadual": "",
-          "inscricao_municipal": "",
-          "inscricao_suframa": "",
-          "optante_simples_nacional": "",
-          "tipo_atividade": "",
-          "cnae": "",
-          "produtor_rural": "",
-          "contribuinte": "",
-          "observacao": "",
-          "obs_detalhadas": "",
-          "recomendacao_atraso": "",
-          "tags": [],
-          "pessoa_fisica": "N",
-          "exterior": "N",
-          "logradouro": "",
-          "importado_api": "",
-          "bloqueado": "N",
-          "cidade_ibge": "",
-          "valor_limite_credito": 0,
-          "bloquear_faturamento": "N",
-          "recomendacoes": {
-            "gerar_boletos": "N"
-          },
-          "enderecoEntrega": {},
-          "nif": "",
-          "documento_exterior": "",
-          "inativo": "N",
-          "dadosBancarios": {
-            "agencia": "",
-            "cChavePix": "",
-            "codigo_banco": "",
-            "conta_corrente": "",
-            "doc_titular": "",
-            "nome_titular": "",
-            "transf_padrao": "N"
-          },
-          "caracteristicas": [],
-          "enviar_anexos": "",
-          "info": {
-            "cImpAPI": "S",
-            "dAlt": "18/06/2024",
-            "dInc": "18/06/2024",
-            "hAlt": "17:05:04",
-            "hInc": "17:05:04",
-            "uAlt": "WEBSERVICE",
-            "uInc": "WEBSERVICE"
-          },
-          "bloquear_exclusao": "N"
-        }
-      }
-    ],
-    "tratamento_de_dados": [
-      {
-        "json": {
-          "Nome do Cliente": "Michelle",
-          "E-mail do Cliente": "michelle@latelierdessucreries.fr",
-          "isEmailValid": true,
-          "Telefone do Cliente - Formato Z-API": "33650012573",
-          "Telefone do Cliente - Formato BC": "+33650012573",
-          "data_criacao": "",
-          "fase_atual": "VENDA REALIZADA",
-          "id_card": "947187097",
-          "etiquetas": "CONTRATO ENVIADO",
-          "titulo_card": "",
-          "responsavel": "Letícia Campos, Raquel Moura ",
-          "origem": "Instagram",
-          "cnpj": "98.765.139/0001-20",
-          "razao_social": "L’Atelier des Sucreries",
-          "nome_fantasia": "L’Atelier des Sucreries",
-          "endereco_completo": "229 Rue Saint Honoré 75001, Paris/FR, 75001",
-          "modelo_de_negocio": "Empresa de Educação",
-          "cargo": "",
-          "pessoas_no_time": "03",
-          "pessoas_na_empresa": "",
-          "tipo_de_servico": "",
-          "conhece_a_portus": "",
-          "como_soube_da_portus": "Instagram",
-          "nome_empresa": "michellecczs@gmail.com",
-          "faturamento_2023": "",
-          "faturamento_mensal": "",
-          "meta_2024": "",
-          "tem_produto_servico": "",
-          "profissional_almejado": "",
-          "vaga_aberta": "",
-          "tipo_contrato": "",
-          "valor_contrato": "60000.0",
-          "forma_pagamento": "",
-          "garantia": "Garantia vide Contrato Partner",
-          "desafio_com_gestao_de_pessoas": "Minha empresa  é na França e meu conteúdo é todo em francês. \nMeu desafio hoje é encontrar profissionais capacitados para trabalhar com essa língua. ",
-          "infos_sobre_a_vaga": "",
-          "parceiro": "",
-          "celula": "",
-          "funil": "",
-          "id_lead_database": "",
-          "descricao_cc": "",
-          "codigo_banco": "",
-          "tipo_conta_corrente": "",
-          "descricao": "",
-          "cidade_prestacao_servico": "",
-          "valor_unitario": "",
-          "valor_total": "",
-          "data_final": "",
-          "data_inicial": "",
-          "utm_source": "",
-          "utm_medium": "",
-          "utm_campaign": "",
-          "utm_content": "",
-          "utm_term": "",
-          "endereco": {
-            "estado": "",
-            "cidade": "",
-            "cep": ""
-          }
-        }
-      }
-    ]
-  },
+  "pinData": null,
   "settings": {
-    "executionOrder": "v1",
     "saveExecutionProgress": true,
-    "callerPolicy": "workflowsFromSameOwner",
-    "errorWorkflow": "p3FaRDkYc5EoM9KR",
+    "saveManualExecutions": false,
     "saveDataErrorExecution": "all",
     "saveDataSuccessExecution": "all",
-    "saveManualExecutions": true
+    "errorWorkflow": "B5ErT6ObkzMJxzKU"
   },
   "staticData": null,
   "tags": [],
-  "triggerCount": 1,
-  "updatedAt": "2024-07-10T01:10:19.789Z",
-  "versionId": "d7c938d0-4421-4c39-ada6-387ce00e8fb7"
+  "triggerCount": 0,
+  "updatedAt": "2025-02-04T17:45:32.256Z",
+  "versionId": "f1ccd214-c2d4-4429-b8e4-95ed631e90ba"
 }
