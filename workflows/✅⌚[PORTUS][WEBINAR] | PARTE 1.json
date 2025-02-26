@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "formata_dados": {
       "main": [
@@ -102,11 +102,9 @@
       ]
     }
   },
-  "createdAt": "2024-05-10T01:44:46.568Z",
-  "id": "DIo5WGrb2mZ2VHUB",
-  "meta": {
-    "templateCredsSetupCompleted": true
-  },
+  "createdAt": "2025-02-04T17:45:30.928Z",
+  "id": "NeNCPSYi4Oq8cVVE",
+  "meta": null,
   "name": "✅⌚[PORTUS][WEBINAR] | PARTE 1",
   "nodes": [
     {
@@ -348,7 +346,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "UNsBZpoYhAtf5Api",
+          "id": "quc6gfdQpKCDLaHX",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -1166,7 +1164,7 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "6haYpAmOsZXFxR68",
+          "id": "PTisU6jVH6GN1bDQ",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
@@ -1431,7 +1429,7 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "6haYpAmOsZXFxR68",
+          "id": "PTisU6jVH6GN1bDQ",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
@@ -1502,7 +1500,7 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "6haYpAmOsZXFxR68",
+          "id": "PTisU6jVH6GN1bDQ",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
@@ -1573,317 +1571,23 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "6haYpAmOsZXFxR68",
+          "id": "PTisU6jVH6GN1bDQ",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
     }
   ],
-  "pinData": {
-    "id_etapas": [
-      {
-        "json": {
-          "data": {
-            "pipe": {
-              "phases": [
-                {
-                  "id": "321485752",
-                  "name": "NOVO LEAD"
-                },
-                {
-                  "id": "317628280",
-                  "name": "PRIMEIRO CONTATO"
-                },
-                {
-                  "id": "317628283",
-                  "name": "CONECTADO"
-                },
-                {
-                  "id": "319617945",
-                  "name": "OFERTA / REUNIÃO"
-                },
-                {
-                  "id": "319618284",
-                  "name": "FOLLOW-UP"
-                },
-                {
-                  "id": "322398971",
-                  "name": "CONTRATO ENVIADO"
-                },
-                {
-                  "id": "317720323",
-                  "name": "VENDA REALIZADA"
-                },
-                {
-                  "id": "317762640",
-                  "name": "PERDIDOS"
-                }
-              ]
-            }
-          }
-        }
-      }
-    ],
-    "get_users": [
-      {
-        "json": {
-          "data": {
-            "organization": {
-              "id": "300890854",
-              "name": "Portus Digital",
-              "members": [
-                {
-                  "role_name": "admin",
-                  "user": {
-                    "id": "302129244",
-                    "email": "kelly@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "super_admin",
-                  "user": {
-                    "id": "302206469",
-                    "email": "igor@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "admin",
-                  "user": {
-                    "id": "302208885",
-                    "email": "bruno@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "admin",
-                  "user": {
-                    "id": "302214410",
-                    "email": "laila@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "302214458",
-                    "email": "thais@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "admin",
-                  "user": {
-                    "id": "302237700",
-                    "email": "lucas.lacerda@pipefy.com"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "302270341",
-                    "email": "gabriela@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "302277865",
-                    "email": "karen@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "302284256",
-                    "email": "mariele@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "302333602",
-                    "email": "juliana@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "302413323",
-                    "email": "giovana@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "super_admin",
-                  "user": {
-                    "id": "302597257",
-                    "email": "marcos@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "302677437",
-                    "email": "financeiro@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "303149971",
-                    "email": "vitor@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "303175486",
-                    "email": "leticia@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "303180119",
-                    "email": "raquel@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "303206080",
-                    "email": "romulo@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "303239849",
-                    "email": "beatriz@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "304041444",
-                    "email": "jessica.barbara@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "304193055",
-                    "email": "stephanie@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "304242346",
-                    "email": "acessos@automagicbots.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "304308054",
-                    "email": "luiza@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "304329483",
-                    "email": "marcelo.eleto@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "304398254",
-                    "email": "anna@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "304398255",
-                    "email": "jessicadomingues@portusdigital.com.br"
-                  }
-                },
-                {
-                  "role_name": "normal",
-                  "user": {
-                    "id": "304403404",
-                    "email": "ivan@portusdigital.com.br"
-                  }
-                }
-              ]
-            }
-          }
-        }
-      }
-    ],
-    "aplicacao_realizada": [
-      {
-        "json": {
-          "headers": {
-            "host": "n8nwebhookportus.automagicbots.com.br",
-            "user-agent": "WordPress/6.5.3; https://se.portusdigital.com.br",
-            "content-length": "1191",
-            "accept": "*/*",
-            "accept-encoding": "deflate, gzip",
-            "content-type": "application/x-www-form-urlencoded",
-            "x-forwarded-for": "66.206.11.114",
-            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
-            "x-forwarded-port": "443",
-            "x-forwarded-proto": "https",
-            "x-forwarded-server": "d71ef73d891d",
-            "x-real-ip": "66.206.11.114"
-          },
-          "params": {},
-          "query": {},
-          "body": {
-            "Seu primeiro nome": "Karol Macedo",
-            "Seu DDD+WhatsApp": "+5531985149744",
-            "Seu melhor e-mail": "karollmacedo93@gmail.com",
-            "Informe o seu instagram": "@karolrmacedo",
-            "parceiro": "Henrique Carvalho",
-            "celula": "",
-            "origem": "",
-            "utm_source": "WhatsApp",
-            "utm_medium": "lista",
-            "utm_campaign": "comercial",
-            "utm_content": "",
-            "utm_term": "",
-            "Date": "Maio 20, 2024",
-            "Time": "5:42 pm",
-            "Page URL": "https://se.portusdigital.com.br/f-wb-portus-01/?utm_source=facebookads&utm_medium=2.02_Usu%C3%A1rios-dos-Pagamentos-do-Facebook&utm_campaign=EDND+%7C+CAPTACAO+%7C+CADASTRO+%7C+AUTO+%7C+FRIO&utm_content=AD05&utm_id=120210003214470616&utm_term=120210003512690616&fbclid=PAAaZbNr_xfU8XdgWZUR-7Q_jZQvX6C-AYhGqdmBCxfKHY1E0SJudkYonniGQ_aem_AekJ92BqNdJTnxh7IvSJ8IsIJSh8NlJDc7CoEkZt3zru7eyOVn2MrYhB6Dj1kS2fas7x3OaZ69ELWWrm-8ojrUXs",
-            "User Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/21E236 Instagram 331.1.3.29.90 (iPhone14,5; iOS 17_4_1; pt_BR; pt; scale=3.00; 1170x2532; 599297333)",
-            "Remote IP": "2804:5c:4eb1:8600:6c62:9d8a:4261:ea84",
-            "Powered by": "Elementor",
-            "form_id": "604031c",
-            "form_name": "Formulário"
-          }
-        }
-      }
-    ]
-  },
+  "pinData": null,
   "settings": {
-    "executionOrder": "v1",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": false,
     "saveDataErrorExecution": "all",
     "saveDataSuccessExecution": "all",
-    "saveExecutionProgress": true,
-    "saveManualExecutions": true,
-    "callerPolicy": "workflowsFromSameOwner",
-    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+    "errorWorkflow": "B5ErT6ObkzMJxzKU"
   },
   "staticData": null,
-  "tags": [
-    {
-      "createdAt": "2024-05-10T01:47:04.005Z",
-      "updatedAt": "2024-05-10T01:47:04.005Z",
-      "id": "n8TvkiIIDKme6cPt",
-      "name": "[WEBINAR]"
-    }
-  ],
-  "triggerCount": 1,
-  "updatedAt": "2024-05-20T17:58:13.578Z",
-  "versionId": "0dbaed92-4c21-4111-a758-42b660831073"
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-02-04T17:45:30.928Z",
+  "versionId": "b24e36ea-ceac-4ade-a894-2c3411372f64"
 }
