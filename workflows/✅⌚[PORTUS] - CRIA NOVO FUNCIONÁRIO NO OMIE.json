@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "nao_existe2": {
       "main": [
@@ -199,9 +199,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:31.887Z",
-  "id": "rmZEua3gWbLq0FxM",
-  "meta": null,
+  "createdAt": "2024-06-17T17:46:32.467Z",
+  "id": "OHSn2bCN7TfWOr4G",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "✅⌚[PORTUS] - CRIA NOVO FUNCIONÁRIO NO OMIE",
   "nodes": [
     {
@@ -240,7 +242,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -356,7 +358,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -407,7 +409,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -505,7 +507,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -557,7 +559,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -598,7 +600,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1058,7 +1060,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1202,17 +1204,111 @@
       ]
     }
   ],
-  "pinData": null,
+  "pinData": {
+    "nova_venda_realizada_pipefy": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "Pipefy-UserAgent",
+            "content-length": "1478",
+            "accept": "application/json",
+            "content-type": "application/json",
+            "elastic-apm-traceparent": "00-fedc1e59c8c82279159ea7d2a848c968-022d0d9724cda69d-01",
+            "traceparent": "00-fedc1e59c8c82279159ea7d2a848c968-022d0d9724cda69d-01",
+            "tracestate": "es=s:0.1",
+            "x-forwarded-for": "129.80.157.176",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "129.80.157.176",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "titulo": "Coordenador de marketing",
+            "id": "942172274",
+            "etiquetas": "",
+            "solicitante_da_vaga": "Bruno Rodrigues",
+            "motivo_da_contratacao": "Aumento de Quadro",
+            "cargo": "Coordenador de marketing",
+            "substituido": "",
+            "precisa_ter_acesso": "ATS\nNotion\nPipefy\nClick-up\nCanva\nDrive\nDiscord\nMind Meister",
+            "informacoes_sobre_a_vaga": "Remuneração fixa",
+            "nome": "Ingrid Alves",
+            "data_inicio": "2024-06-11",
+            "salario_negociado": "8000.0",
+            "contato": "+55 11 99788-6374",
+            "responsavel": "Bruno Rodrigues",
+            "nome_completo": "Ingrid Alves de Souza",
+            "nascimento": "1996-12-30",
+            "endereco_completo": "R CLAUDIO APARECIDO OLIVEIRA, 132 - Jardim Roberto / Osasco",
+            "cep": "",
+            "cidade": "",
+            "estado": "",
+            "estado_civil": "Solteiro(a)",
+            "tem_filhos": "Não",
+            "quantos_filhos_e_idades": "",
+            "escolaridade": "",
+            "formacao": "",
+            "cpf": "449.154.648-73",
+            "rg": "523692237",
+            "documento_identificacao": "https://app.pipefy.com/storage/v1/signed/uploads/26c5adcf-a4df-48e3-af80-c673ffa599aa/RG.pdf?expires_on=1719020190&signature=%2B4n70EZbXKWAYZ2AbJWScMuAGMI2aNt%2Fo9SUxojlgfo%3D",
+            "cnpj": "39.797.473/0001-05",
+            "razao_social": "INGRID ALVES DE SOUZA 4491546487",
+            "banco": "260 - Nubank",
+            "agencia": "0001",
+            "conta_com_digito": "60028200-8",
+            "chave_px_pj": "11997886374",
+            "data_inicio_colaborador": "2024-06-11",
+            "responsavel_integracao": "",
+            "descricao_atividades": "",
+            "formato_contratacao": ""
+          }
+        }
+      }
+    ],
+    "tag": [
+      {
+        "json": {
+          "nCodCliente": 1764803287,
+          "cCodIntCliente": "216",
+          "cCodStatus": "0",
+          "cDesStatus": "Tag(s) adicionadas com sucesso!",
+          "tagsLista": [
+            {
+              "nCodTag": 1743800548,
+              "tag": "Funcionário"
+            }
+          ]
+        }
+      }
+    ],
+    "add_funcionario2": [
+      {
+        "json": {
+          "codigo_cliente_omie": 1764803287,
+          "codigo_cliente_integracao": "216",
+          "codigo_status": "0",
+          "descricao_status": "Cliente cadastrado com sucesso!"
+        }
+      }
+    ]
+  },
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": false,
+    "executionOrder": "v1",
     "saveDataErrorExecution": "all",
     "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
   },
   "staticData": null,
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2025-02-04T17:45:31.887Z",
-  "versionId": "656e5a3b-830c-46f3-b008-0a8ef2aea598"
+  "triggerCount": 1,
+  "updatedAt": "2024-06-22T02:06:41.175Z",
+  "versionId": "d79f535e-337c-4088-99c2-dfd7e220afa7"
 }
