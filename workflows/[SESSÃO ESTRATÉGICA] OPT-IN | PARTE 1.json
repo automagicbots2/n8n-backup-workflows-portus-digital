@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "formata_dados": {
       "main": [
@@ -33,11 +33,112 @@
           }
         ]
       ]
+    },
+    "formata_dados1": {
+      "main": [
+        [
+          {
+            "node": "dados_validados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "para-empresas": {
+      "main": [
+        [
+          {
+            "node": "formata_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados1": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados2": {
+      "main": [
+        [
+          {
+            "node": "dados_validados2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "para-empresas1": {
+      "main": [
+        [
+          {
+            "node": "formata_dados2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados2": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados3": {
+      "main": [
+        [
+          {
+            "node": "dados_validados3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "para-empresas-google": {
+      "main": [
+        [
+          {
+            "node": "formata_dados3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados3": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
-  "createdAt": "2025-02-04T17:45:31.083Z",
-  "id": "dDtcSRdCC7DhHD4P",
-  "meta": null,
+  "createdAt": "2024-03-11T12:53:00.682Z",
+  "id": "2QgBh9bliCT0j1ry",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "[SESSÃO ESTRATÉGICA] OPT-IN | PARTE 1",
   "nodes": [
     {
@@ -62,7 +163,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "={\n  table(id:\"302852685\"){\n    table_fields{\n      id\n      label\n    }\n  }\n}"
+              "value": "={\n  table(id:\"302838347\"){\n    table_fields{\n      id\n      label\n    }\n  }\n}"
             }
           ]
         },
@@ -274,12 +375,12 @@
       "type": "n8n-nodes-base.rabbitmq",
       "typeVersion": 1,
       "position": [
-        540,
-        460
+        560,
+        560
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "quc6gfdQpKCDLaHX",
+          "id": "UNsBZpoYhAtf5Api",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -868,19 +969,2246 @@
         -180,
         -140
       ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extrair informações do input\nconst inputData = items[0].json;\nconst respostas = inputData.body || {};\n\n// Função para obter a data atual menos 15 dias no formato brasileiro (YYYY-MM-DD)\nfunction getDataMenos15Dias() {\n  const dataAtual = new Date();\n  dataAtual.setDate(dataAtual.getDate() - 15);\n  const dia = dataAtual.getDate().toString().padStart(2, '0');\n  const mes = (dataAtual.getMonth() + 1).toString().padStart(2, '0');\n  const ano = dataAtual.getFullYear();\n  return `${ano}-${mes}-${dia}`;\n}\n\n// Função para formatar telefone corretamente\nfunction formatarTelefone(telefone) {\n  if (!telefone) return \"\";\n  const telefoneLimpo = telefone.replace(/\\D/g, '');\n  let ddi = '55';\n  let ddd = telefoneLimpo.slice(0, 2);\n  let numero = telefoneLimpo.slice(2);\n\n  if (numero.length === 8) {\n    numero = `9${numero}`; // Adiciona o 9 caso o número tenha 8 dígitos\n  }\n  \n  return `${ddi}${ddd}${numero}`;\n}\n\n// Função para formatar email corretamente\nfunction formatarEmail(email) {\n  return email ? email.trim().toLowerCase() : \"\";\n}\n\n// Função para formatação de nomes\nfunction formatarNome(nome) {\n  if (!nome) return \"\";\n  return nome.replace(/\\b\\w/g, char => char.toUpperCase()).trim();\n}\n\n// Função para formatar datas do formulário\nfunction formatarData(data, hora) {\n  if (!data || !hora) return \"\";\n  \n  const meses = {\n    \"janeiro\": \"01\", \"fevereiro\": \"02\", \"março\": \"03\", \"abril\": \"04\", \n    \"maio\": \"05\", \"junho\": \"06\", \"julho\": \"07\", \"agosto\": \"08\", \n    \"setembro\": \"09\", \"outubro\": \"10\", \"novembro\": \"11\", \"dezembro\": \"12\"\n  };\n\n  const [mesNome, dia, ano] = data.split(\" \");\n  const mes = meses[mesNome.toLowerCase()] || \"00\";\n  const diaFormatado = dia.replace(\",\", \"\").padStart(2, \"0\");\n  return `${ano}-${mes}-${diaFormatado} ${hora}`;\n}\n\n// Extrair e formatar os dados corretamente\nconst nome = formatarNome(respostas[\"* 👤 Qual seu nome?\"]) || \"\";\nconst telefone = formatarTelefone(respostas[\"* 📱Qual seu Whatsapp?\"]) || \"\";\nconst email = formatarEmail(respostas[\"* Qual é o seu e-mail?\"]) || \"\";\nconst cargo = respostas[\"* 👤 Qual é o seu cargo?\"] || \"\";\nconst empresa = respostas[\"* 🏢 Digite o nome da sua empresa\"] || \"\";\nconst modeloNegocio = respostas[\"💬 Descreva seu modelo de negócio aqui:\"] || \"\";\nconst qtdFuncionarios = respostas[\"🏢 Quantas pessoas trabalham na empresa?\"] || \"\";\nconst siteEmpresa = respostas[\"🏢 Sites e/ou redes sociais da empresa\"] || \"\";\nconst comoConheceu = respostas[\"* 💬 Como você ficou sabendo da Portus?\"] || \"\";\nconst dataAplicacao = formatarData(respostas[\"Date\"], respostas[\"Time\"]) || \"\";\nconst form_id = respostas[\"form_id\"] || \"\";\n\n// Extrair as UTMs do objeto JSON de entrada\nfunction extractUTMs(json) {\n  const utmParams = {};\n  Object.keys(json).forEach(key => {\n    if (key.startsWith(\"utm_\")) {\n      utmParams[key] = json[key] || \"\";\n    }\n  });\n  return utmParams;\n}\n\nconst utms = extractUTMs(respostas);\n\n// Montar o objeto de output\nconst output = {\n  \"Nome do Cliente\": nome,\n  \"E-mail do Cliente\": email,\n  \"Telefone do Cliente - Formato BC\": `+${telefone}`,\n  \"Telefone do Cliente - Formato Z-API\": telefone,\n  \"Cargo\": cargo,\n  \"Empresa\": empresa,\n  \"Modelo de Negócio\": modeloNegocio,\n  \"Número de Funcionários\": qtdFuncionarios,\n  \"Site/Redes Sociais\": siteEmpresa,\n  \"Como Conheceu a Portus\": comoConheceu,\n  \"Data Aplicação\": dataAplicacao,\n  \"data_ultima_quinzena\": getDataMenos15Dias(),\n  \"form_id\": form_id,\n  ...utms\n};\n\n// Retornar o resultado corretamente no formato esperado pelo n8n\nreturn [{ json: output }];\n"
+      },
+      "id": "801b6854-6192-43d2-bdb6-3f18c3a283e4",
+      "name": "formata_dados1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        80,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"formata_dados1\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "=Telefone do Cliente - Formato BC",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Telefone do Cliente - Formato BC\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "name": "Instagram",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Site/Redes Sociais\"] }}"
+            },
+            {
+              "name": "pergunta0",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta0\"] }}"
+            },
+            {
+              "name": "pergunta1",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta1\"] }}"
+            },
+            {
+              "name": "pergunta2",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta2\"] }}"
+            },
+            {
+              "name": "pergunta3",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta3\"] }}"
+            },
+            {
+              "name": "pergunta4",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Número de Funcionários\"] }}"
+            },
+            {
+              "name": "pergunta5",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta5\"] }}"
+            },
+            {
+              "name": "pergunta6",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta6\"] }}"
+            },
+            {
+              "name": "pergunta7",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta7\"] }}"
+            },
+            {
+              "name": "pergunta8",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta8\"] }}"
+            },
+            {
+              "name": "pergunta9",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta9\"] }}"
+            },
+            {
+              "name": "pergunta10",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta10\"] }}"
+            },
+            {
+              "name": "pergunta11",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta11\"] }}"
+            },
+            {
+              "name": "pergunta12",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta12\"] }}"
+            },
+            {
+              "name": "pergunta13",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta13\"] }}"
+            },
+            {
+              "name": "pergunta14",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta14\"] }}"
+            },
+            {
+              "name": "pergunta15",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta15\"] }}"
+            },
+            {
+              "name": "pergunta16",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta16\"] }}"
+            },
+            {
+              "name": "pergunta17",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Como Conheceu a Portus\"] }}"
+            },
+            {
+              "name": "pergunta18",
+              "value": "={{ $node[\"formata_dados1\"].json[\"pergunta18\"] }}"
+            },
+            {
+              "name": "pergunta19",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Empresa\"] }}"
+            },
+            {
+              "name": "pergunta20",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Cargo\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "data_resposta_type",
+              "value": "={{$now.toFormat('dd/MM/yyyy HH:mm')}}"
+            },
+            {
+              "name": "data_ultima_quinzena",
+              "value": "={{ $node[\"formata_dados1\"].json[\"data_ultima_quinzena\"] }}"
+            },
+            {
+              "name": "id_fluxo_nao_agendou_10_min",
+              "value": "3065086"
+            },
+            {
+              "name": "id_fluxo_nao_agendou_10_min_desqualificados"
+            },
+            {
+              "name": "API-KEY",
+              "value": "46dacadf-10d0-47db-a81d-69263aca1959"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_bot_conversa",
+              "value": "1776703"
+            },
+            {
+              "name": "id_campo_utm_source_bot_conversa",
+              "value": "1780336"
+            },
+            {
+              "name": "id_campo_utm_campaign_bot_conversa",
+              "value": "1780335"
+            },
+            {
+              "name": "id_campo_utm_term_bot_conversa",
+              "value": "1780334"
+            },
+            {
+              "name": "id_campo_utm_medium_bot_conversa",
+              "value": "1780337"
+            },
+            {
+              "name": "id_campo_utm_content_bot_conversa",
+              "value": "1780338"
+            },
+            {
+              "name": "id_campo_utm_fun_bot_conversa",
+              "value": "1780345"
+            },
+            {
+              "name": "id_campo_utm_var_bot_conversa",
+              "value": "1780344"
+            },
+            {
+              "name": "id_campo_instagram_bot_conversa",
+              "value": "1776705"
+            },
+            {
+              "name": "id_campo_emailse_bot_conversa",
+              "value": "1780340"
+            },
+            {
+              "name": "id_campo_id_lead_crm_bot_conversa",
+              "value": "1780343"
+            },
+            {
+              "name": "id_campo_data_resposta_type_bot_conversa",
+              "value": "1789193"
+            },
+            {
+              "name": "id_tag_desqualificado_bot_conversa",
+              "value": "6979786"
+            },
+            {
+              "name": "id_tag_qualificado_bot_conversa",
+              "value": "7005347"
+            },
+            {
+              "name": "id_campo_pergunta0_bot_conversa",
+              "value": "1654521"
+            },
+            {
+              "name": "id_campo_pergunta1_bot_conversa",
+              "value": "1654523"
+            },
+            {
+              "name": "id_campo_pergunta2_bot_conversa",
+              "value": "1654886"
+            },
+            {
+              "name": "id_campo_pergunta3_bot_conversa",
+              "value": "1654541"
+            },
+            {
+              "name": "id_campo_pergunta4_bot_conversa",
+              "value": "1689038"
+            },
+            {
+              "name": "id_campo_pergunta5_bot_conversa",
+              "value": "1772554"
+            },
+            {
+              "name": "id_campo_pergunta6_bot_conversa",
+              "value": "1772555"
+            },
+            {
+              "name": "id_campo_pergunta7_bot_conversa",
+              "value": "1782967"
+            },
+            {
+              "name": "id_campo_pergunta8_bot_conversa",
+              "value": "1814217"
+            },
+            {
+              "name": "id_campo_pergunta9_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta10_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta11_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta12_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta13_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta14_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta15_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta16_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta17_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta18_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta19_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta20_bot_conversa"
+            },
+            {
+              "name": "id_status_preencheu_aplicacao_crm",
+              "value": "bbf14072-e675-4a28-915a-ede90e9d31fa"
+            },
+            {
+              "name": "id_campo_email_crm",
+              "value": "43a14a28-119a-4e43-a0a1-58bc64e739a2"
+            },
+            {
+              "name": "id_campo_telefone_crm",
+              "value": "4f5b17cc-999f-4779-8a66-155632cf59b4"
+            },
+            {
+              "name": "id_campo_link_do_instagram_crm",
+              "value": "4d4434db-7404-4ca3-8586-88aacbe0069f"
+            },
+            {
+              "name": "id_campo_utm_source_crm",
+              "value": "94fb2c13-bbd0-48a1-89f5-85ef2f537c11"
+            },
+            {
+              "name": "id_campo_utm_campaign_crm",
+              "value": "e545d10b-616e-450d-aef6-d8e65b0944a3"
+            },
+            {
+              "name": "id_campo_utm_term_crm",
+              "value": "21c541c6-2224-4d82-91da-825808a1edea"
+            },
+            {
+              "name": "id_campo_utm_medium_crm",
+              "value": "d65c4dd8-d243-4416-8349-2d7f341b3bcf"
+            },
+            {
+              "name": "id_campo_utm_content_crm",
+              "value": "1198c9d0-f4ee-4b1d-a24c-b6df7303ebf2"
+            },
+            {
+              "name": "id_campo_utm_fun_crm",
+              "value": "2e435a89-b633-4100-a0b5-6810746db2c4"
+            },
+            {
+              "name": "id_campo_utm_var_crm",
+              "value": "58dc2672-4c26-4b0b-ad81-8dcc82de45e0"
+            },
+            {
+              "name": "id_campo_pergunta0_crm",
+              "value": "38f71e36-b8c8-42a4-aab3-0eede967e3ec"
+            },
+            {
+              "name": "id_campo_pergunta1_crm",
+              "value": "cfdc19bd-7efe-48e2-8b83-ee721b0bf56c"
+            },
+            {
+              "name": "id_campo_pergunta2_crm",
+              "value": "9f7b4da0-1df8-45cc-8d19-3dc13b3c6120"
+            },
+            {
+              "name": "id_campo_pergunta3_crm",
+              "value": "ce42f281-0ad4-491b-b918-25754365f2fb"
+            },
+            {
+              "name": "id_campo_pergunta4_crm",
+              "value": "04fc4778-f22a-4343-8217-03257f178662"
+            },
+            {
+              "name": "id_campo_pergunta5_crm"
+            },
+            {
+              "name": "id_campo_pergunta6_crm"
+            },
+            {
+              "name": "id_campo_pergunta7_crm"
+            },
+            {
+              "name": "id_campo_pergunta8_crm",
+              "value": "6d05cee0-28f8-474c-84cd-35e76468094c"
+            },
+            {
+              "name": "id_campo_pergunta9_crm"
+            },
+            {
+              "name": "id_campo_pergunta10_crm"
+            },
+            {
+              "name": "id_campo_pergunta11_crm"
+            },
+            {
+              "name": "id_campo_pergunta12_crm"
+            },
+            {
+              "name": "id_campo_pergunta13_crm"
+            },
+            {
+              "name": "id_campo_pergunta14_crm"
+            },
+            {
+              "name": "id_campo_pergunta15_crm"
+            },
+            {
+              "name": "id_campo_pergunta16_crm"
+            },
+            {
+              "name": "id_campo_pergunta17_crm"
+            },
+            {
+              "name": "id_campo_pergunta18_crm"
+            },
+            {
+              "name": "id_campo_pergunta19_crm"
+            },
+            {
+              "name": "id_campo_pergunta20_crm"
+            },
+            {
+              "name": "id_stage_desqualificado_crm",
+              "value": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3"
+            },
+            {
+              "name": "id_pipeline_downsell_crm"
+            },
+            {
+              "name": "valor_produto_principal_em_centavos"
+            },
+            {
+              "name": "valor_produto_downsell_em_centavos"
+            },
+            {
+              "name": "url_api_activecampaign"
+            },
+            {
+              "name": "id_sdr"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_crm",
+              "value": "d23569b0-b471-45e0-a1e9-840a6711d052"
+            },
+            {
+              "name": "id_campo_crm_origem",
+              "value": "ba2292d8-b72b-48b1-b2b6-159456a98d63"
+            },
+            {
+              "name": "funil",
+              "value": "=Para Empresas"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "v1"
+            },
+            {
+              "name": "id_campo_id_botconversa_crm",
+              "value": "f19516e0-1a4a-4b3d-b68e-68c2ae4acc59"
+            },
+            {
+              "name": "status_sessao_estrategica_crm",
+              "value": "a5eebcc6-1646-4e44-a1ae-0e034bd825ef"
+            },
+            {
+              "name": "id_campo_qualificado_crm",
+              "value": "b1bdbadf-406b-4272-ae97-18b3c214005b"
+            },
+            {
+              "name": "id_campo_desqualificado_crm",
+              "value": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3"
+            },
+            {
+              "name": "id_pipeline_crm",
+              "value": "947abb00-968d-4e1b-a6b9-c0887cbfd4b9"
+            },
+            {
+              "name": "id_ending_typeform"
+            },
+            {
+              "name": "id_campo_iddealac_bot_conversa"
+            },
+            {
+              "name": "id_campo_idleadac_bot_conversa"
+            },
+            {
+              "name": "id_campo_status_do_lead_crm",
+              "value": "20bc36eb-9d21-4aaa-b6f1-3c85bafa63ec"
+            },
+            {
+              "name": "id_campo_status_do_lead_qualificado_crm",
+              "value": "b1bdbadf-406b-4272-ae97-18b3c214005b"
+            },
+            {
+              "name": "id_campo_status_do_lead_desqualificado_crm",
+              "value": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3"
+            },
+            {
+              "name": "id_campo_modelo_da_call_crm",
+              "value": "1ecc802b-e2b3-4769-bc7a-9e1517c2278f"
+            },
+            {
+              "name": "id_campo_modelo_da_call_sessao_estrategica_crm",
+              "value": "36a55391-29e3-4168-9caf-67ac756b79f8"
+            },
+            {
+              "name": "id_campo_modelo_da_call_aplicacao_direta_crm",
+              "value": "5883faf4-ebef-4b10-976a-0f88f4c25331"
+            },
+            {
+              "name": "id_campo_funil_sessao_estrategica_crm",
+              "value": "5661918f-e847-4e0e-b9fc-ca7f62ed0a67"
+            },
+            {
+              "name": "id_campo_funil_aplicacao_direta_crm",
+              "value": "1be63c76-92ea-4be1-a028-5301b1c9fa4e"
+            },
+            {
+              "name": "id_campo_produto_mentoria_escala_ sem_caos_crm",
+              "value": "fbd2bb16-6676-43bd-9938-fca73139fede"
+            },
+            {
+              "name": "id_campo_produto_implementacao_escala_ sem_caos_crm",
+              "value": "49b06aaf-209a-4a2c-84e0-65a6e135ab12"
+            },
+            {
+              "name": "qualificacao",
+              "value": "={{ $node[\"formata_dados1\"].json[\"qualificacao\"] }}"
+            },
+            {
+              "name": "etapa_pre_desqualificados_crm",
+              "value": "77544d86-43b7-4cf6-bc87-ea059abbd7a5"
+            },
+            {
+              "name": "etapa_pre_qualificados_crm",
+              "value": "2c64ca7b-3988-4ce5-9163-be272209072b"
+            },
+            {
+              "name": "id_campo_id_bc_crm",
+              "value": "f19516e0-1a4a-4b3d-b68e-68c2ae4acc59"
+            },
+            {
+              "name": "id_campo_data_da_aplicacao_crm",
+              "value": "00ad74e6-783f-4153-8bfd-9bf9a5b39857"
+            },
+            {
+              "name": "id_campo_data_da_aplicacao_bot_conversa",
+              "value": "1814725"
+            },
+            {
+              "name": "id_campo_nome_completo_crm",
+              "value": "1c438058-b654-4a19-9ea3-438bc2f5a078"
+            },
+            {
+              "name": "data_resposta_type_milesegundos",
+              "value": "={{ $node[\"formata_dados1\"].json[\"data_aplicacao\"] }}"
+            },
+            {
+              "name": "id_campo_status_sessao_ou_aplicacao_crm",
+              "value": "a5eebcc6-1646-4e44-a1ae-0e034bd825ef"
+            },
+            {
+              "name": "id_campo_status_aplicacao_realizada_crm",
+              "value": "bbf14072-e675-4a28-915a-ede90e9d31fa"
+            },
+            {
+              "name": "id_fluxo_popular_campos",
+              "value": "3317483"
+            },
+            {
+              "name": "parceiro",
+              "value": "=Trafego"
+            },
+            {
+              "name": "origem",
+              "value": "=https://portusdigital.com.br/paraempresas-meta-2/ "
+            },
+            {
+              "name": "funil",
+              "value": "={{ $node[\"formata_dados1\"].json[\"funil\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{ $node[\"formata_dados1\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "form_id",
+              "value": "={{ $node[\"formata_dados1\"].json[\"form_id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "cd1f1d17-8a7e-48ae-a999-5c451ddf58dd",
+      "name": "dados_validados1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        300,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "para-empresas",
+        "options": {}
+      },
+      "id": "475f224b-b553-48a6-8f2e-f24473e58d42",
+      "name": "para-empresas",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        -160,
+        680
+      ],
+      "webhookId": "eddefdcb-2b0d-4c11-a48a-e2b34fbf5a18"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extrair informações do input\nconst inputData = items[0].json;\nconst respostas = inputData.body || {};\n\n// Função para obter a data atual menos 15 dias no formato brasileiro (YYYY-MM-DD)\nfunction getDataMenos15Dias() {\n  const dataAtual = new Date();\n  dataAtual.setDate(dataAtual.getDate() - 15);\n  const dia = dataAtual.getDate().toString().padStart(2, '0');\n  const mes = (dataAtual.getMonth() + 1).toString().padStart(2, '0');\n  const ano = dataAtual.getFullYear();\n  return `${ano}-${mes}-${dia}`;\n}\n\n// Função para formatar telefone corretamente\nfunction formatarTelefone(telefone) {\n  if (!telefone) return \"\";\n  const telefoneLimpo = telefone.replace(/\\D/g, '');\n  let ddi = '55';\n  let ddd = telefoneLimpo.slice(0, 2);\n  let numero = telefoneLimpo.slice(2);\n\n  if (numero.length === 8) {\n    numero = `9${numero}`; // Adiciona o 9 caso o número tenha 8 dígitos\n  }\n  \n  return `${ddi}${ddd}${numero}`;\n}\n\n// Função para formatar email corretamente\nfunction formatarEmail(email) {\n  return email ? email.trim().toLowerCase() : \"\";\n}\n\n// Função para formatação de nomes\nfunction formatarNome(nome) {\n  if (!nome) return \"\";\n  return nome.replace(/\\b\\w/g, char => char.toUpperCase()).trim();\n}\n\n// Função para formatar datas do formulário\nfunction formatarData(data, hora) {\n  if (!data || !hora) return \"\";\n  \n  const meses = {\n    \"janeiro\": \"01\", \"fevereiro\": \"02\", \"março\": \"03\", \"abril\": \"04\", \n    \"maio\": \"05\", \"junho\": \"06\", \"julho\": \"07\", \"agosto\": \"08\", \n    \"setembro\": \"09\", \"outubro\": \"10\", \"novembro\": \"11\", \"dezembro\": \"12\"\n  };\n\n  const [mesNome, dia, ano] = data.split(\" \");\n  const mes = meses[mesNome.toLowerCase()] || \"00\";\n  const diaFormatado = dia.replace(\",\", \"\").padStart(2, \"0\");\n  return `${ano}-${mes}-${diaFormatado} ${hora}`;\n}\n\n// Extrair e formatar os dados corretamente\nconst nome = formatarNome(respostas[\"* 👤 Qual seu nome?\"]) || \"\";\nconst telefone = formatarTelefone(respostas[\"* 📱Qual seu Whatsapp?\"]) || \"\";\nconst email = formatarEmail(respostas[\"* Qual é o seu e-mail?\"]) || \"\";\nconst cargo = respostas[\"* 👤 Qual é o seu cargo?\"] || \"\";\nconst empresa = respostas[\"* 🏢 Digite o nome da sua empresa\"] || \"\";\nconst modeloNegocio = respostas[\"💬 Descreva seu modelo de negócio aqui:\"] || \"\";\nconst qtdFuncionarios = respostas[\"🏢 Quantas pessoas trabalham na empresa?\"] || \"\";\nconst siteEmpresa = respostas[\"🏢 Sites e/ou redes sociais da empresa\"] || \"\";\nconst comoConheceu = respostas[\"* 💬 Como você ficou sabendo da Portus?\"] || \"\";\nconst dataAplicacao = formatarData(respostas[\"Date\"], respostas[\"Time\"]) || \"\";\nconst form_id = respostas[\"form_id\"] || \"\";\n\n// Extrair as UTMs do objeto JSON de entrada\nfunction extractUTMs(json) {\n  const utmParams = {};\n  Object.keys(json).forEach(key => {\n    if (key.startsWith(\"utm_\")) {\n      utmParams[key] = json[key] || \"\";\n    }\n  });\n  return utmParams;\n}\n\nconst utms = extractUTMs(respostas);\n\n// Montar o objeto de output\nconst output = {\n  \"Nome do Cliente\": nome,\n  \"E-mail do Cliente\": email,\n  \"Telefone do Cliente - Formato BC\": `+${telefone}`,\n  \"Telefone do Cliente - Formato Z-API\": telefone,\n  \"Cargo\": cargo,\n  \"Empresa\": empresa,\n  \"Modelo de Negócio\": modeloNegocio,\n  \"Número de Funcionários\": qtdFuncionarios,\n  \"Site/Redes Sociais\": siteEmpresa,\n  \"Como Conheceu a Portus\": comoConheceu,\n  \"Data Aplicação\": dataAplicacao,\n  \"data_ultima_quinzena\": getDataMenos15Dias(),\n  \"form_id\": form_id,\n  ...utms\n};\n\n// Retornar o resultado corretamente no formato esperado pelo n8n\nreturn [{ json: output }];\n"
+      },
+      "id": "77440cf7-87c8-47a1-9865-7117dc2cce0a",
+      "name": "formata_dados2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        80,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"formata_dados2\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "=Telefone do Cliente - Formato BC",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Telefone do Cliente - Formato BC\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "name": "Instagram",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Site/Redes Sociais\"] }}"
+            },
+            {
+              "name": "pergunta0",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta0\"] }}"
+            },
+            {
+              "name": "pergunta1",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta1\"] }}"
+            },
+            {
+              "name": "pergunta2",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta2\"] }}"
+            },
+            {
+              "name": "pergunta3",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta3\"] }}"
+            },
+            {
+              "name": "pergunta4",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Número de Funcionários\"] }}"
+            },
+            {
+              "name": "pergunta5",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta5\"] }}"
+            },
+            {
+              "name": "pergunta6",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta6\"] }}"
+            },
+            {
+              "name": "pergunta7",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta7\"] }}"
+            },
+            {
+              "name": "pergunta8",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta8\"] }}"
+            },
+            {
+              "name": "pergunta9",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta9\"] }}"
+            },
+            {
+              "name": "pergunta10",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta10\"] }}"
+            },
+            {
+              "name": "pergunta11",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta11\"] }}"
+            },
+            {
+              "name": "pergunta12",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta12\"] }}"
+            },
+            {
+              "name": "pergunta13",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta13\"] }}"
+            },
+            {
+              "name": "pergunta14",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta14\"] }}"
+            },
+            {
+              "name": "pergunta15",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta15\"] }}"
+            },
+            {
+              "name": "pergunta16",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta16\"] }}"
+            },
+            {
+              "name": "pergunta17",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Como Conheceu a Portus\"] }}"
+            },
+            {
+              "name": "pergunta18",
+              "value": "={{ $node[\"formata_dados2\"].json[\"pergunta18\"] }}"
+            },
+            {
+              "name": "pergunta19",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Empresa\"] }}"
+            },
+            {
+              "name": "pergunta20",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Cargo\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados2\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados2\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados2\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados2\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados2\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "data_resposta_type",
+              "value": "={{$now.toFormat('dd/MM/yyyy HH:mm')}}"
+            },
+            {
+              "name": "data_ultima_quinzena",
+              "value": "={{ $node[\"formata_dados2\"].json[\"data_ultima_quinzena\"] }}"
+            },
+            {
+              "name": "id_fluxo_nao_agendou_10_min",
+              "value": "3065086"
+            },
+            {
+              "name": "id_fluxo_nao_agendou_10_min_desqualificados"
+            },
+            {
+              "name": "API-KEY",
+              "value": "46dacadf-10d0-47db-a81d-69263aca1959"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_bot_conversa",
+              "value": "1776703"
+            },
+            {
+              "name": "id_campo_utm_source_bot_conversa",
+              "value": "1780336"
+            },
+            {
+              "name": "id_campo_utm_campaign_bot_conversa",
+              "value": "1780335"
+            },
+            {
+              "name": "id_campo_utm_term_bot_conversa",
+              "value": "1780334"
+            },
+            {
+              "name": "id_campo_utm_medium_bot_conversa",
+              "value": "1780337"
+            },
+            {
+              "name": "id_campo_utm_content_bot_conversa",
+              "value": "1780338"
+            },
+            {
+              "name": "id_campo_utm_fun_bot_conversa",
+              "value": "1780345"
+            },
+            {
+              "name": "id_campo_utm_var_bot_conversa",
+              "value": "1780344"
+            },
+            {
+              "name": "id_campo_instagram_bot_conversa",
+              "value": "1776705"
+            },
+            {
+              "name": "id_campo_emailse_bot_conversa",
+              "value": "1780340"
+            },
+            {
+              "name": "id_campo_id_lead_crm_bot_conversa",
+              "value": "1780343"
+            },
+            {
+              "name": "id_campo_data_resposta_type_bot_conversa",
+              "value": "1789193"
+            },
+            {
+              "name": "id_tag_desqualificado_bot_conversa",
+              "value": "6979786"
+            },
+            {
+              "name": "id_tag_qualificado_bot_conversa",
+              "value": "7005347"
+            },
+            {
+              "name": "id_campo_pergunta0_bot_conversa",
+              "value": "1654521"
+            },
+            {
+              "name": "id_campo_pergunta1_bot_conversa",
+              "value": "1654523"
+            },
+            {
+              "name": "id_campo_pergunta2_bot_conversa",
+              "value": "1654886"
+            },
+            {
+              "name": "id_campo_pergunta3_bot_conversa",
+              "value": "1654541"
+            },
+            {
+              "name": "id_campo_pergunta4_bot_conversa",
+              "value": "1689038"
+            },
+            {
+              "name": "id_campo_pergunta5_bot_conversa",
+              "value": "1772554"
+            },
+            {
+              "name": "id_campo_pergunta6_bot_conversa",
+              "value": "1772555"
+            },
+            {
+              "name": "id_campo_pergunta7_bot_conversa",
+              "value": "1782967"
+            },
+            {
+              "name": "id_campo_pergunta8_bot_conversa",
+              "value": "1814217"
+            },
+            {
+              "name": "id_campo_pergunta9_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta10_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta11_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta12_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta13_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta14_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta15_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta16_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta17_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta18_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta19_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta20_bot_conversa"
+            },
+            {
+              "name": "id_status_preencheu_aplicacao_crm",
+              "value": "bbf14072-e675-4a28-915a-ede90e9d31fa"
+            },
+            {
+              "name": "id_campo_email_crm",
+              "value": "43a14a28-119a-4e43-a0a1-58bc64e739a2"
+            },
+            {
+              "name": "id_campo_telefone_crm",
+              "value": "4f5b17cc-999f-4779-8a66-155632cf59b4"
+            },
+            {
+              "name": "id_campo_link_do_instagram_crm",
+              "value": "4d4434db-7404-4ca3-8586-88aacbe0069f"
+            },
+            {
+              "name": "id_campo_utm_source_crm",
+              "value": "94fb2c13-bbd0-48a1-89f5-85ef2f537c11"
+            },
+            {
+              "name": "id_campo_utm_campaign_crm",
+              "value": "e545d10b-616e-450d-aef6-d8e65b0944a3"
+            },
+            {
+              "name": "id_campo_utm_term_crm",
+              "value": "21c541c6-2224-4d82-91da-825808a1edea"
+            },
+            {
+              "name": "id_campo_utm_medium_crm",
+              "value": "d65c4dd8-d243-4416-8349-2d7f341b3bcf"
+            },
+            {
+              "name": "id_campo_utm_content_crm",
+              "value": "1198c9d0-f4ee-4b1d-a24c-b6df7303ebf2"
+            },
+            {
+              "name": "id_campo_utm_fun_crm",
+              "value": "2e435a89-b633-4100-a0b5-6810746db2c4"
+            },
+            {
+              "name": "id_campo_utm_var_crm",
+              "value": "58dc2672-4c26-4b0b-ad81-8dcc82de45e0"
+            },
+            {
+              "name": "id_campo_pergunta0_crm",
+              "value": "38f71e36-b8c8-42a4-aab3-0eede967e3ec"
+            },
+            {
+              "name": "id_campo_pergunta1_crm",
+              "value": "cfdc19bd-7efe-48e2-8b83-ee721b0bf56c"
+            },
+            {
+              "name": "id_campo_pergunta2_crm",
+              "value": "9f7b4da0-1df8-45cc-8d19-3dc13b3c6120"
+            },
+            {
+              "name": "id_campo_pergunta3_crm",
+              "value": "ce42f281-0ad4-491b-b918-25754365f2fb"
+            },
+            {
+              "name": "id_campo_pergunta4_crm",
+              "value": "04fc4778-f22a-4343-8217-03257f178662"
+            },
+            {
+              "name": "id_campo_pergunta5_crm"
+            },
+            {
+              "name": "id_campo_pergunta6_crm"
+            },
+            {
+              "name": "id_campo_pergunta7_crm"
+            },
+            {
+              "name": "id_campo_pergunta8_crm",
+              "value": "6d05cee0-28f8-474c-84cd-35e76468094c"
+            },
+            {
+              "name": "id_campo_pergunta9_crm"
+            },
+            {
+              "name": "id_campo_pergunta10_crm"
+            },
+            {
+              "name": "id_campo_pergunta11_crm"
+            },
+            {
+              "name": "id_campo_pergunta12_crm"
+            },
+            {
+              "name": "id_campo_pergunta13_crm"
+            },
+            {
+              "name": "id_campo_pergunta14_crm"
+            },
+            {
+              "name": "id_campo_pergunta15_crm"
+            },
+            {
+              "name": "id_campo_pergunta16_crm"
+            },
+            {
+              "name": "id_campo_pergunta17_crm"
+            },
+            {
+              "name": "id_campo_pergunta18_crm"
+            },
+            {
+              "name": "id_campo_pergunta19_crm"
+            },
+            {
+              "name": "id_campo_pergunta20_crm"
+            },
+            {
+              "name": "id_stage_desqualificado_crm",
+              "value": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3"
+            },
+            {
+              "name": "id_pipeline_downsell_crm"
+            },
+            {
+              "name": "valor_produto_principal_em_centavos"
+            },
+            {
+              "name": "valor_produto_downsell_em_centavos"
+            },
+            {
+              "name": "url_api_activecampaign"
+            },
+            {
+              "name": "id_sdr"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_crm",
+              "value": "d23569b0-b471-45e0-a1e9-840a6711d052"
+            },
+            {
+              "name": "id_campo_crm_origem",
+              "value": "ba2292d8-b72b-48b1-b2b6-159456a98d63"
+            },
+            {
+              "name": "funil",
+              "value": "=Para Empresas"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "v1"
+            },
+            {
+              "name": "id_campo_id_botconversa_crm",
+              "value": "f19516e0-1a4a-4b3d-b68e-68c2ae4acc59"
+            },
+            {
+              "name": "status_sessao_estrategica_crm",
+              "value": "a5eebcc6-1646-4e44-a1ae-0e034bd825ef"
+            },
+            {
+              "name": "id_campo_qualificado_crm",
+              "value": "b1bdbadf-406b-4272-ae97-18b3c214005b"
+            },
+            {
+              "name": "id_campo_desqualificado_crm",
+              "value": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3"
+            },
+            {
+              "name": "id_pipeline_crm",
+              "value": "947abb00-968d-4e1b-a6b9-c0887cbfd4b9"
+            },
+            {
+              "name": "id_ending_typeform"
+            },
+            {
+              "name": "id_campo_iddealac_bot_conversa"
+            },
+            {
+              "name": "id_campo_idleadac_bot_conversa"
+            },
+            {
+              "name": "id_campo_status_do_lead_crm",
+              "value": "20bc36eb-9d21-4aaa-b6f1-3c85bafa63ec"
+            },
+            {
+              "name": "id_campo_status_do_lead_qualificado_crm",
+              "value": "b1bdbadf-406b-4272-ae97-18b3c214005b"
+            },
+            {
+              "name": "id_campo_status_do_lead_desqualificado_crm",
+              "value": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3"
+            },
+            {
+              "name": "id_campo_modelo_da_call_crm",
+              "value": "1ecc802b-e2b3-4769-bc7a-9e1517c2278f"
+            },
+            {
+              "name": "id_campo_modelo_da_call_sessao_estrategica_crm",
+              "value": "36a55391-29e3-4168-9caf-67ac756b79f8"
+            },
+            {
+              "name": "id_campo_modelo_da_call_aplicacao_direta_crm",
+              "value": "5883faf4-ebef-4b10-976a-0f88f4c25331"
+            },
+            {
+              "name": "id_campo_funil_sessao_estrategica_crm",
+              "value": "5661918f-e847-4e0e-b9fc-ca7f62ed0a67"
+            },
+            {
+              "name": "id_campo_funil_aplicacao_direta_crm",
+              "value": "1be63c76-92ea-4be1-a028-5301b1c9fa4e"
+            },
+            {
+              "name": "id_campo_produto_mentoria_escala_ sem_caos_crm",
+              "value": "fbd2bb16-6676-43bd-9938-fca73139fede"
+            },
+            {
+              "name": "id_campo_produto_implementacao_escala_ sem_caos_crm",
+              "value": "49b06aaf-209a-4a2c-84e0-65a6e135ab12"
+            },
+            {
+              "name": "qualificacao",
+              "value": "={{ $node[\"formata_dados2\"].json[\"qualificacao\"] }}"
+            },
+            {
+              "name": "etapa_pre_desqualificados_crm",
+              "value": "77544d86-43b7-4cf6-bc87-ea059abbd7a5"
+            },
+            {
+              "name": "etapa_pre_qualificados_crm",
+              "value": "2c64ca7b-3988-4ce5-9163-be272209072b"
+            },
+            {
+              "name": "id_campo_id_bc_crm",
+              "value": "f19516e0-1a4a-4b3d-b68e-68c2ae4acc59"
+            },
+            {
+              "name": "id_campo_data_da_aplicacao_crm",
+              "value": "00ad74e6-783f-4153-8bfd-9bf9a5b39857"
+            },
+            {
+              "name": "id_campo_data_da_aplicacao_bot_conversa",
+              "value": "1814725"
+            },
+            {
+              "name": "id_campo_nome_completo_crm",
+              "value": "1c438058-b654-4a19-9ea3-438bc2f5a078"
+            },
+            {
+              "name": "data_resposta_type_milesegundos",
+              "value": "={{ $node[\"formata_dados2\"].json[\"data_aplicacao\"] }}"
+            },
+            {
+              "name": "id_campo_status_sessao_ou_aplicacao_crm",
+              "value": "a5eebcc6-1646-4e44-a1ae-0e034bd825ef"
+            },
+            {
+              "name": "id_campo_status_aplicacao_realizada_crm",
+              "value": "bbf14072-e675-4a28-915a-ede90e9d31fa"
+            },
+            {
+              "name": "id_fluxo_popular_campos",
+              "value": "3317483"
+            },
+            {
+              "name": "parceiro",
+              "value": "=RH CONNECTION"
+            },
+            {
+              "name": "origem",
+              "value": "=https://portusdigital.com.br/paraempresas-meta-2/ "
+            },
+            {
+              "name": "funil",
+              "value": "={{ $node[\"formata_dados2\"].json[\"funil\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{ $node[\"formata_dados2\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "form_id",
+              "value": "={{ $node[\"formata_dados2\"].json[\"form_id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0159e5e8-f9b3-456f-a50c-8c1a4bb445e8",
+      "name": "dados_validados2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        300,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lp-para-empresas",
+        "options": {}
+      },
+      "id": "b23c96b8-fdd9-488d-9595-4581af2a2b3b",
+      "name": "para-empresas1",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        -160,
+        840
+      ],
+      "webhookId": "eddefdcb-2b0d-4c11-a48a-e2b34fbf5a18"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extrair informações do input\nconst inputData = items[0].json;\nconst respostas = inputData.body || {};\n\n// Função para obter a data atual menos 15 dias no formato brasileiro (YYYY-MM-DD)\nfunction getDataMenos15Dias() {\n  const dataAtual = new Date();\n  dataAtual.setDate(dataAtual.getDate() - 15);\n  const dia = dataAtual.getDate().toString().padStart(2, '0');\n  const mes = (dataAtual.getMonth() + 1).toString().padStart(2, '0');\n  const ano = dataAtual.getFullYear();\n  return `${ano}-${mes}-${dia}`;\n}\n\n// Função para formatar telefone corretamente\nfunction formatarTelefone(telefone) {\n  if (!telefone) return \"\";\n  const telefoneLimpo = telefone.replace(/\\D/g, '');\n  let ddi = '55';\n  let ddd = telefoneLimpo.slice(0, 2);\n  let numero = telefoneLimpo.slice(2);\n\n  if (numero.length === 8) {\n    numero = `9${numero}`; // Adiciona o 9 caso o número tenha 8 dígitos\n  }\n  \n  return `${ddi}${ddd}${numero}`;\n}\n\n// Função para formatar email corretamente\nfunction formatarEmail(email) {\n  return email ? email.trim().toLowerCase() : \"\";\n}\n\n// Função para formatação de nomes\nfunction formatarNome(nome) {\n  if (!nome) return \"\";\n  return nome.replace(/\\b\\w/g, char => char.toUpperCase()).trim();\n}\n\n// Função para formatar datas do formulário\nfunction formatarData(data, hora) {\n  if (!data || !hora) return \"\";\n  \n  const meses = {\n    \"janeiro\": \"01\", \"fevereiro\": \"02\", \"março\": \"03\", \"abril\": \"04\", \n    \"maio\": \"05\", \"junho\": \"06\", \"julho\": \"07\", \"agosto\": \"08\", \n    \"setembro\": \"09\", \"outubro\": \"10\", \"novembro\": \"11\", \"dezembro\": \"12\"\n  };\n\n  const [mesNome, dia, ano] = data.split(\" \");\n  const mes = meses[mesNome.toLowerCase()] || \"00\";\n  const diaFormatado = dia.replace(\",\", \"\").padStart(2, \"0\");\n  return `${ano}-${mes}-${diaFormatado} ${hora}`;\n}\n\n// Extrair e formatar os dados corretamente\nconst nome = formatarNome(respostas[\"* 👤 Qual seu nome?\"]) || \"\";\nconst telefone = formatarTelefone(respostas[\"* 📱Qual seu Whatsapp?\"]) || \"\";\nconst email = formatarEmail(respostas[\"* Qual é o seu e-mail?\"]) || \"\";\nconst cargo = respostas[\"* 👤 Qual é o seu cargo?\"] || \"\";\nconst empresa = respostas[\"* 🏢 Digite o nome da sua empresa\"] || \"\";\nconst modeloNegocio = respostas[\"💬 Descreva seu modelo de negócio aqui:\"] || \"\";\nconst qtdFuncionarios = respostas[\"🏢 Quantas pessoas trabalham na empresa?\"] || \"\";\nconst siteEmpresa = respostas[\"🏢 Sites e/ou redes sociais da empresa\"] || \"\";\nconst comoConheceu = respostas[\"* 💬 Como você ficou sabendo da Portus?\"] || \"\";\nconst dataAplicacao = formatarData(respostas[\"Date\"], respostas[\"Time\"]) || \"\";\nconst form_id = respostas[\"form_id\"] || \"\";\n\n// Extrair as UTMs do objeto JSON de entrada\nfunction extractUTMs(json) {\n  const utmParams = {};\n  Object.keys(json).forEach(key => {\n    if (key.startsWith(\"utm_\")) {\n      utmParams[key] = json[key] || \"\";\n    }\n  });\n  return utmParams;\n}\n\nconst utms = extractUTMs(respostas);\n\n// Montar o objeto de output\nconst output = {\n  \"Nome do Cliente\": nome,\n  \"E-mail do Cliente\": email,\n  \"Telefone do Cliente - Formato BC\": `+${telefone}`,\n  \"Telefone do Cliente - Formato Z-API\": telefone,\n  \"Cargo\": cargo,\n  \"Empresa\": empresa,\n  \"Modelo de Negócio\": modeloNegocio,\n  \"Número de Funcionários\": qtdFuncionarios,\n  \"Site/Redes Sociais\": siteEmpresa,\n  \"Como Conheceu a Portus\": comoConheceu,\n  \"Data Aplicação\": dataAplicacao,\n  \"data_ultima_quinzena\": getDataMenos15Dias(),\n  \"form_id\": form_id,\n  ...utms\n};\n\n// Retornar o resultado corretamente no formato esperado pelo n8n\nreturn [{ json: output }];\n"
+      },
+      "id": "d4a826e4-4cd7-4303-aef7-43a0183f25ab",
+      "name": "formata_dados3",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        80,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"formata_dados3\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"formata_dados3\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "=Telefone do Cliente - Formato BC",
+              "value": "={{ $node[\"formata_dados3\"].json[\"Telefone do Cliente - Formato BC\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"formata_dados3\"].json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "name": "Instagram",
+              "value": "={{ $node[\"formata_dados3\"].json[\"Site/Redes Sociais\"] }}"
+            },
+            {
+              "name": "pergunta0",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta0\"] }}"
+            },
+            {
+              "name": "pergunta1",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta1\"] }}"
+            },
+            {
+              "name": "pergunta2",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta2\"] }}"
+            },
+            {
+              "name": "pergunta3",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta3\"] }}"
+            },
+            {
+              "name": "pergunta4",
+              "value": "={{ $node[\"formata_dados3\"].json[\"Número de Funcionários\"] }}"
+            },
+            {
+              "name": "pergunta5",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta5\"] }}"
+            },
+            {
+              "name": "pergunta6",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta6\"] }}"
+            },
+            {
+              "name": "pergunta7",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta7\"] }}"
+            },
+            {
+              "name": "pergunta8",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta8\"] }}"
+            },
+            {
+              "name": "pergunta9",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta9\"] }}"
+            },
+            {
+              "name": "pergunta10",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta10\"] }}"
+            },
+            {
+              "name": "pergunta11",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta11\"] }}"
+            },
+            {
+              "name": "pergunta12",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta12\"] }}"
+            },
+            {
+              "name": "pergunta13",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta13\"] }}"
+            },
+            {
+              "name": "pergunta14",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta14\"] }}"
+            },
+            {
+              "name": "pergunta15",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta15\"] }}"
+            },
+            {
+              "name": "pergunta16",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta16\"] }}"
+            },
+            {
+              "name": "pergunta17",
+              "value": "={{ $node[\"formata_dados3\"].json[\"Como Conheceu a Portus\"] }}"
+            },
+            {
+              "name": "pergunta18",
+              "value": "={{ $node[\"formata_dados3\"].json[\"pergunta18\"] }}"
+            },
+            {
+              "name": "pergunta19",
+              "value": "={{ $node[\"formata_dados3\"].json[\"Empresa\"] }}"
+            },
+            {
+              "name": "pergunta20",
+              "value": "={{ $node[\"formata_dados3\"].json[\"Cargo\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados3\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados3\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados3\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados3\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados3\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "data_resposta_type",
+              "value": "={{$now.toFormat('dd/MM/yyyy HH:mm')}}"
+            },
+            {
+              "name": "data_ultima_quinzena",
+              "value": "={{ $node[\"formata_dados3\"].json[\"data_ultima_quinzena\"] }}"
+            },
+            {
+              "name": "id_fluxo_nao_agendou_10_min",
+              "value": "3065086"
+            },
+            {
+              "name": "id_fluxo_nao_agendou_10_min_desqualificados"
+            },
+            {
+              "name": "API-KEY",
+              "value": "46dacadf-10d0-47db-a81d-69263aca1959"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_bot_conversa",
+              "value": "1776703"
+            },
+            {
+              "name": "id_campo_utm_source_bot_conversa",
+              "value": "1780336"
+            },
+            {
+              "name": "id_campo_utm_campaign_bot_conversa",
+              "value": "1780335"
+            },
+            {
+              "name": "id_campo_utm_term_bot_conversa",
+              "value": "1780334"
+            },
+            {
+              "name": "id_campo_utm_medium_bot_conversa",
+              "value": "1780337"
+            },
+            {
+              "name": "id_campo_utm_content_bot_conversa",
+              "value": "1780338"
+            },
+            {
+              "name": "id_campo_utm_fun_bot_conversa",
+              "value": "1780345"
+            },
+            {
+              "name": "id_campo_utm_var_bot_conversa",
+              "value": "1780344"
+            },
+            {
+              "name": "id_campo_instagram_bot_conversa",
+              "value": "1776705"
+            },
+            {
+              "name": "id_campo_emailse_bot_conversa",
+              "value": "1780340"
+            },
+            {
+              "name": "id_campo_id_lead_crm_bot_conversa",
+              "value": "1780343"
+            },
+            {
+              "name": "id_campo_data_resposta_type_bot_conversa",
+              "value": "1789193"
+            },
+            {
+              "name": "id_tag_desqualificado_bot_conversa",
+              "value": "6979786"
+            },
+            {
+              "name": "id_tag_qualificado_bot_conversa",
+              "value": "7005347"
+            },
+            {
+              "name": "id_campo_pergunta0_bot_conversa",
+              "value": "1654521"
+            },
+            {
+              "name": "id_campo_pergunta1_bot_conversa",
+              "value": "1654523"
+            },
+            {
+              "name": "id_campo_pergunta2_bot_conversa",
+              "value": "1654886"
+            },
+            {
+              "name": "id_campo_pergunta3_bot_conversa",
+              "value": "1654541"
+            },
+            {
+              "name": "id_campo_pergunta4_bot_conversa",
+              "value": "1689038"
+            },
+            {
+              "name": "id_campo_pergunta5_bot_conversa",
+              "value": "1772554"
+            },
+            {
+              "name": "id_campo_pergunta6_bot_conversa",
+              "value": "1772555"
+            },
+            {
+              "name": "id_campo_pergunta7_bot_conversa",
+              "value": "1782967"
+            },
+            {
+              "name": "id_campo_pergunta8_bot_conversa",
+              "value": "1814217"
+            },
+            {
+              "name": "id_campo_pergunta9_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta10_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta11_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta12_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta13_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta14_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta15_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta16_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta17_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta18_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta19_bot_conversa"
+            },
+            {
+              "name": "id_campo_pergunta20_bot_conversa"
+            },
+            {
+              "name": "id_status_preencheu_aplicacao_crm",
+              "value": "bbf14072-e675-4a28-915a-ede90e9d31fa"
+            },
+            {
+              "name": "id_campo_email_crm",
+              "value": "43a14a28-119a-4e43-a0a1-58bc64e739a2"
+            },
+            {
+              "name": "id_campo_telefone_crm",
+              "value": "4f5b17cc-999f-4779-8a66-155632cf59b4"
+            },
+            {
+              "name": "id_campo_link_do_instagram_crm",
+              "value": "4d4434db-7404-4ca3-8586-88aacbe0069f"
+            },
+            {
+              "name": "id_campo_utm_source_crm",
+              "value": "94fb2c13-bbd0-48a1-89f5-85ef2f537c11"
+            },
+            {
+              "name": "id_campo_utm_campaign_crm",
+              "value": "e545d10b-616e-450d-aef6-d8e65b0944a3"
+            },
+            {
+              "name": "id_campo_utm_term_crm",
+              "value": "21c541c6-2224-4d82-91da-825808a1edea"
+            },
+            {
+              "name": "id_campo_utm_medium_crm",
+              "value": "d65c4dd8-d243-4416-8349-2d7f341b3bcf"
+            },
+            {
+              "name": "id_campo_utm_content_crm",
+              "value": "1198c9d0-f4ee-4b1d-a24c-b6df7303ebf2"
+            },
+            {
+              "name": "id_campo_utm_fun_crm",
+              "value": "2e435a89-b633-4100-a0b5-6810746db2c4"
+            },
+            {
+              "name": "id_campo_utm_var_crm",
+              "value": "58dc2672-4c26-4b0b-ad81-8dcc82de45e0"
+            },
+            {
+              "name": "id_campo_pergunta0_crm",
+              "value": "38f71e36-b8c8-42a4-aab3-0eede967e3ec"
+            },
+            {
+              "name": "id_campo_pergunta1_crm",
+              "value": "cfdc19bd-7efe-48e2-8b83-ee721b0bf56c"
+            },
+            {
+              "name": "id_campo_pergunta2_crm",
+              "value": "9f7b4da0-1df8-45cc-8d19-3dc13b3c6120"
+            },
+            {
+              "name": "id_campo_pergunta3_crm",
+              "value": "ce42f281-0ad4-491b-b918-25754365f2fb"
+            },
+            {
+              "name": "id_campo_pergunta4_crm",
+              "value": "04fc4778-f22a-4343-8217-03257f178662"
+            },
+            {
+              "name": "id_campo_pergunta5_crm"
+            },
+            {
+              "name": "id_campo_pergunta6_crm"
+            },
+            {
+              "name": "id_campo_pergunta7_crm"
+            },
+            {
+              "name": "id_campo_pergunta8_crm",
+              "value": "6d05cee0-28f8-474c-84cd-35e76468094c"
+            },
+            {
+              "name": "id_campo_pergunta9_crm"
+            },
+            {
+              "name": "id_campo_pergunta10_crm"
+            },
+            {
+              "name": "id_campo_pergunta11_crm"
+            },
+            {
+              "name": "id_campo_pergunta12_crm"
+            },
+            {
+              "name": "id_campo_pergunta13_crm"
+            },
+            {
+              "name": "id_campo_pergunta14_crm"
+            },
+            {
+              "name": "id_campo_pergunta15_crm"
+            },
+            {
+              "name": "id_campo_pergunta16_crm"
+            },
+            {
+              "name": "id_campo_pergunta17_crm"
+            },
+            {
+              "name": "id_campo_pergunta18_crm"
+            },
+            {
+              "name": "id_campo_pergunta19_crm"
+            },
+            {
+              "name": "id_campo_pergunta20_crm"
+            },
+            {
+              "name": "id_stage_desqualificado_crm",
+              "value": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3"
+            },
+            {
+              "name": "id_pipeline_downsell_crm"
+            },
+            {
+              "name": "valor_produto_principal_em_centavos"
+            },
+            {
+              "name": "valor_produto_downsell_em_centavos"
+            },
+            {
+              "name": "url_api_activecampaign"
+            },
+            {
+              "name": "id_sdr"
+            },
+            {
+              "name": "id_campo_id_banco_de_dados_crm",
+              "value": "d23569b0-b471-45e0-a1e9-840a6711d052"
+            },
+            {
+              "name": "id_campo_crm_origem",
+              "value": "ba2292d8-b72b-48b1-b2b6-159456a98d63"
+            },
+            {
+              "name": "funil",
+              "value": "=Para Empresas"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "v1"
+            },
+            {
+              "name": "id_campo_id_botconversa_crm",
+              "value": "f19516e0-1a4a-4b3d-b68e-68c2ae4acc59"
+            },
+            {
+              "name": "status_sessao_estrategica_crm",
+              "value": "a5eebcc6-1646-4e44-a1ae-0e034bd825ef"
+            },
+            {
+              "name": "id_campo_qualificado_crm",
+              "value": "b1bdbadf-406b-4272-ae97-18b3c214005b"
+            },
+            {
+              "name": "id_campo_desqualificado_crm",
+              "value": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3"
+            },
+            {
+              "name": "id_pipeline_crm",
+              "value": "947abb00-968d-4e1b-a6b9-c0887cbfd4b9"
+            },
+            {
+              "name": "id_ending_typeform"
+            },
+            {
+              "name": "id_campo_iddealac_bot_conversa"
+            },
+            {
+              "name": "id_campo_idleadac_bot_conversa"
+            },
+            {
+              "name": "id_campo_status_do_lead_crm",
+              "value": "20bc36eb-9d21-4aaa-b6f1-3c85bafa63ec"
+            },
+            {
+              "name": "id_campo_status_do_lead_qualificado_crm",
+              "value": "b1bdbadf-406b-4272-ae97-18b3c214005b"
+            },
+            {
+              "name": "id_campo_status_do_lead_desqualificado_crm",
+              "value": "0174e3df-8ec5-4f30-bbe7-027d3a839ed3"
+            },
+            {
+              "name": "id_campo_modelo_da_call_crm",
+              "value": "1ecc802b-e2b3-4769-bc7a-9e1517c2278f"
+            },
+            {
+              "name": "id_campo_modelo_da_call_sessao_estrategica_crm",
+              "value": "36a55391-29e3-4168-9caf-67ac756b79f8"
+            },
+            {
+              "name": "id_campo_modelo_da_call_aplicacao_direta_crm",
+              "value": "5883faf4-ebef-4b10-976a-0f88f4c25331"
+            },
+            {
+              "name": "id_campo_funil_sessao_estrategica_crm",
+              "value": "5661918f-e847-4e0e-b9fc-ca7f62ed0a67"
+            },
+            {
+              "name": "id_campo_funil_aplicacao_direta_crm",
+              "value": "1be63c76-92ea-4be1-a028-5301b1c9fa4e"
+            },
+            {
+              "name": "id_campo_produto_mentoria_escala_ sem_caos_crm",
+              "value": "fbd2bb16-6676-43bd-9938-fca73139fede"
+            },
+            {
+              "name": "id_campo_produto_implementacao_escala_ sem_caos_crm",
+              "value": "49b06aaf-209a-4a2c-84e0-65a6e135ab12"
+            },
+            {
+              "name": "qualificacao",
+              "value": "={{ $node[\"formata_dados3\"].json[\"qualificacao\"] }}"
+            },
+            {
+              "name": "etapa_pre_desqualificados_crm",
+              "value": "77544d86-43b7-4cf6-bc87-ea059abbd7a5"
+            },
+            {
+              "name": "etapa_pre_qualificados_crm",
+              "value": "2c64ca7b-3988-4ce5-9163-be272209072b"
+            },
+            {
+              "name": "id_campo_id_bc_crm",
+              "value": "f19516e0-1a4a-4b3d-b68e-68c2ae4acc59"
+            },
+            {
+              "name": "id_campo_data_da_aplicacao_crm",
+              "value": "00ad74e6-783f-4153-8bfd-9bf9a5b39857"
+            },
+            {
+              "name": "id_campo_data_da_aplicacao_bot_conversa",
+              "value": "1814725"
+            },
+            {
+              "name": "id_campo_nome_completo_crm",
+              "value": "1c438058-b654-4a19-9ea3-438bc2f5a078"
+            },
+            {
+              "name": "data_resposta_type_milesegundos",
+              "value": "={{ $node[\"formata_dados3\"].json[\"data_aplicacao\"] }}"
+            },
+            {
+              "name": "id_campo_status_sessao_ou_aplicacao_crm",
+              "value": "a5eebcc6-1646-4e44-a1ae-0e034bd825ef"
+            },
+            {
+              "name": "id_campo_status_aplicacao_realizada_crm",
+              "value": "bbf14072-e675-4a28-915a-ede90e9d31fa"
+            },
+            {
+              "name": "id_fluxo_popular_campos",
+              "value": "3317483"
+            },
+            {
+              "name": "parceiro",
+              "value": "=GOOGLE ADS"
+            },
+            {
+              "name": "origem",
+              "value": "=https://portusdigital.com.br/paraempresa-gform/"
+            },
+            {
+              "name": "funil",
+              "value": "={{ $node[\"formata_dados3\"].json[\"funil\"] }}"
+            },
+            {
+              "name": "celula",
+              "value": "={{ $node[\"formata_dados3\"].json[\"celula\"] }}"
+            },
+            {
+              "name": "form_id",
+              "value": "={{ $node[\"formata_dados3\"].json[\"form_id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9a749ab7-a04b-4657-a1a2-92505818371c",
+      "name": "dados_validados3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        300,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "para-empresas-google",
+        "options": {}
+      },
+      "id": "9ef5483d-de20-46c9-9e36-11b4b94cb8b1",
+      "name": "para-empresas-google",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        -160,
+        1020
+      ],
+      "webhookId": "eddefdcb-2b0d-4c11-a48a-e2b34fbf5a18"
     }
   ],
-  "pinData": {},
+  "pinData": {
+    "id_etapas": [
+      {
+        "json": {
+          "data": {
+            "pipe": {
+              "phases": [
+                {
+                  "id": "321485752",
+                  "name": "NOVO LEAD"
+                },
+                {
+                  "id": "317628280",
+                  "name": "PRIMEIRO CONTATO"
+                },
+                {
+                  "id": "317628283",
+                  "name": "CONECTADO"
+                },
+                {
+                  "id": "319617945",
+                  "name": "OFERTA / REUNIÃO"
+                },
+                {
+                  "id": "319618284",
+                  "name": "FOLLOW-UP"
+                },
+                {
+                  "id": "322398971",
+                  "name": "CONTRATO ENVIADO"
+                },
+                {
+                  "id": "317720323",
+                  "name": "VENDA REALIZADA"
+                },
+                {
+                  "id": "317762640",
+                  "name": "PERDIDOS"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "get_users": [
+      {
+        "json": {
+          "data": {
+            "organization": {
+              "id": "300890854",
+              "name": "Portus Digital",
+              "members": [
+                {
+                  "role_name": "admin",
+                  "user": {
+                    "id": "302129244",
+                    "email": "kelly@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "super_admin",
+                  "user": {
+                    "id": "302206469",
+                    "email": "igor@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "admin",
+                  "user": {
+                    "id": "302208885",
+                    "email": "bruno@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "admin",
+                  "user": {
+                    "id": "302214410",
+                    "email": "laila@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302214458",
+                    "email": "thais@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "admin",
+                  "user": {
+                    "id": "302237700",
+                    "email": "lucas.lacerda@pipefy.com"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302270341",
+                    "email": "gabriela@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302277865",
+                    "email": "karen@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302284256",
+                    "email": "mariele@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302333602",
+                    "email": "juliana@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302413323",
+                    "email": "giovana@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "super_admin",
+                  "user": {
+                    "id": "302597257",
+                    "email": "marcos@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302677437",
+                    "email": "financeiro@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303149971",
+                    "email": "vitor@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303175486",
+                    "email": "leticia@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303180119",
+                    "email": "raquel@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303206080",
+                    "email": "romulo@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303239849",
+                    "email": "beatriz@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304041444",
+                    "email": "jessica.barbara@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304193055",
+                    "email": "stephanie@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304242346",
+                    "email": "acessos@automagicbots.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304308054",
+                    "email": "luiza@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304329483",
+                    "email": "marcelo.eleto@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304398254",
+                    "email": "anna@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304398255",
+                    "email": "jessicadomingues@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304403404",
+                    "email": "ivan@portusdigital.com.br"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "aplicacao_realizada": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "WordPress/6.7.1; https://se.portusdigital.com.br",
+            "content-length": "1426",
+            "accept": "*/*",
+            "accept-encoding": "deflate, gzip",
+            "content-type": "application/x-www-form-urlencoded",
+            "x-forwarded-for": "66.206.11.114",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "66.206.11.114"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "No Label field_990af99": "",
+            "Seu primeiro nome": "testehp321321",
+            "Seu DDD+WhatsApp": "499881292931312",
+            "Seu melhor e-mail": "testehp321321321@gmail.com",
+            "Qual é o nome da sua empresa?": "psdsad",
+            "Informe o site e/ou suas redes sociais pessoais ou da sua empresa.": "tesdsada",
+            "No Label field_e0bc23e": "",
+            "Já conhece a Portüs Digital?": "Já ouvi falar",
+            "Qual é o seu cargo?": "SADADSA",
+            "Vocês já têm um produto/serviço validado?": "Sim",
+            "Qual foi o seu faturamento em 2024?": "Abaixo de 1M",
+            "Qual é a meta de faturamento para 2025?": "SDADASDA",
+            "No Label field_8f233e2": "",
+            "Quantas pessoas trabalham na sua empresa?": "321321",
+            "Você está com alguma vaga aberta AGORA?": "Estou com MAIS de uma vaga aberta, inclusive.",
+            "Qual profissional você está procurando? Se ainda não tem certeza, compartilhe conosco, de forma breve, qual função ou problema você precisa resolver.": "DSADSADSAD",
+            "utm_source": "",
+            "utm_content": "",
+            "utm_campaign": "",
+            "utm_term": "",
+            "utm_medium": "",
+            "parceiro": "Sessão Estratégica",
+            "celula": "",
+            "funil": "",
+            "origem": "",
+            "Date": "Fevereiro 6, 2025",
+            "Time": "2:35 am",
+            "Page URL": "https://se.portusdigital.com.br/sessao-estrategica/?gtm_debug=1738809279598",
+            "User Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+            "Remote IP": "177.75.132.11",
+            "Powered by": "Elementor",
+            "form_id": "604031c",
+            "form_name": "Formulário"
+          }
+        }
+      }
+    ],
+    "para-empresas": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "WordPress/6.7.2; https://portusdigital.com.br",
+            "content-length": "982",
+            "accept": "*/*",
+            "accept-encoding": "deflate, gzip",
+            "content-type": "application/x-www-form-urlencoded",
+            "x-forwarded-for": "66.206.11.114",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "66.206.11.114"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "* 💬 Como você ficou sabendo da Portus?": "Outros",
+            "* 🏢 Digite o nome da sua empresa": "Automagic Bots",
+            "🏢 Sites e/ou redes sociais da empresa": "www.automagicbots.com.br",
+            "🏢 Quantas pessoas trabalham na empresa?": "5",
+            "💬 Descreva seu modelo de negócio aqui:": "Agência de Automações",
+            "* 👤 Qual seu nome?": "Mateus",
+            "* 👤 Qual é o seu cargo?": "Gestor de Automações Pleno",
+            "* Qual é o seu e-mail?": "mateusdiniz@automagicbots.com.br",
+            "* 📱Qual seu Whatsapp?": "62981196678",
+            "Date": "fevereiro 12, 2025",
+            "Time": "6:06 pm",
+            "Page URL": "https://portusdigital.com.br/paraempresa-metaform/",
+            "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+            "Remote IP": "2804:d57:5007:9200:9104:c08f:5379:946e",
+            "Powered by": "Elementor",
+            "form_id": "3ab1e50",
+            "form_name": "New Form (Pipefy) 2502"
+          }
+        }
+      }
+    ],
+    "para-empresas1": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "WordPress/6.7.2; https://portusdigital.com.br",
+            "content-length": "948",
+            "accept": "*/*",
+            "accept-encoding": "deflate, gzip",
+            "content-type": "application/x-www-form-urlencoded",
+            "x-forwarded-for": "66.206.11.114",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "66.206.11.114"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "* 💬 Como você ficou sabendo da Portus?": "Outros",
+            "* 🏢 Digite o nome da sua empresa": "Automagic Bots",
+            "🏢 Sites e/ou redes sociais da empresa": "www.automagicbots.com.br",
+            "🏢 Quantas pessoas trabalham na empresa?": "5",
+            "💬 Descreva seu modelo de negócio aqui:": "teste",
+            "* 👤 Qual seu nome?": "Mateus",
+            "* 👤 Qual é o seu cargo?": "Gestor de Automações Pleno",
+            "* Qual é o seu e-mail?": "mateusdiniz@automagicbots.com.br",
+            "* 📱Qual seu Whatsapp?": "62981196678",
+            "Date": "fevereiro 18, 2025",
+            "Time": "10:32 pm",
+            "Page URL": "https://portusdigital.com.br/lp-metaform-rhc/",
+            "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+            "Remote IP": "2804:4d80:821d:db00:e4bb:c417:512a:4ff5",
+            "Powered by": "Elementor",
+            "form_id": "3ab1e50",
+            "form_name": "New Form (Pipefy) 2502"
+          }
+        }
+      }
+    ],
+    "para-empresas-google": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "WordPress/6.7.2; https://portusdigital.com.br",
+            "content-length": "1062",
+            "accept": "*/*",
+            "accept-encoding": "deflate, gzip",
+            "content-type": "application/x-www-form-urlencoded",
+            "x-forwarded-for": "66.206.11.114",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "66.206.11.114"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "* 💬 Como você ficou sabendo da Portus?": "Google",
+            "* 🏢 Digite o nome da sua empresa": "Automagic Bots",
+            "🏢 Sites e/ou redes sociais da empresa": "www.automagicbots.com.br",
+            "🏢 Quantas pessoas trabalham na empresa?": "5",
+            "💬 Descreva seu modelo de negócio aqui:": "Agencia de Automações",
+            "* 👤 Qual seu nome?": "Mateus",
+            "* 👤 Qual é o seu cargo?": "Gestor de Automações Pleno",
+            "* Qual é o seu e-mail?": "mateusdiniz@automagicbots.com.br",
+            "* 📱Qual seu Whatsapp?": "62981196678",
+            "Date": "fevereiro 26, 2025",
+            "Time": "2:10 pm",
+            "Page URL": "https://portusdigital.com.br/paraempresa-gform/?utm_source=teste&utm_medium=automagic&utm_campaign=bots&utm_term=aovivo",
+            "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+            "Remote IP": "2804:d57:4d09:b200:5510:ff34:2abe:1471",
+            "Powered by": "Elementor",
+            "form_id": "3ab1e50",
+            "form_name": "New Form (Pipefy) 2502"
+          }
+        }
+      }
+    ]
+  },
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": false,
+    "executionOrder": "v1",
     "saveDataErrorExecution": "all",
     "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
   },
   "staticData": null,
-  "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2025-02-15T22:41:55.655Z",
-  "versionId": "2bc033aa-8627-4adf-a413-8e304ea330ad"
+  "tags": [
+    {
+      "createdAt": "2024-03-14T13:33:33.882Z",
+      "updatedAt": "2024-03-14T13:33:33.882Z",
+      "id": "faI7RrAwjmyqxwGa",
+      "name": "[NAG]"
+    }
+  ],
+  "triggerCount": 4,
+  "updatedAt": "2025-02-26T14:16:19.687Z",
+  "versionId": "1c2cc21e-d9e8-4a1f-9ee8-a2c4e547426d"
 }
