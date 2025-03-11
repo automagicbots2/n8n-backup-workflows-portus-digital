@@ -1,9 +1,11 @@
 {
-  "active": false,
+  "active": true,
   "connections": {},
-  "createdAt": "2025-02-04T17:45:32.321Z",
-  "id": "YhUAteM5dVjb4Dio",
-  "meta": null,
+  "createdAt": "2024-11-04T13:27:22.467Z",
+  "id": "r1HbjSf2itRHmQ44",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "✅⌚[PORTUS][WEBHOOK DE EVENTOS] - LOGS BANCO INTER",
   "nodes": [
     {
@@ -23,17 +25,19 @@
       "webhookId": "eb06a977-7b7b-4391-a3ff-82c6c4092930"
     }
   ],
-  "pinData": null,
+  "pinData": {},
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": false,
+    "executionOrder": "v1",
     "saveDataErrorExecution": "all",
     "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
   },
   "staticData": null,
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2025-02-04T17:45:32.321Z",
-  "versionId": "6d737e83-388d-4c2e-a9a7-02b253c1166d"
+  "triggerCount": 1,
+  "updatedAt": "2024-11-04T13:31:06.785Z",
+  "versionId": "4844d8ba-3fad-48b2-9951-ccf2ae51e53e"
 }
