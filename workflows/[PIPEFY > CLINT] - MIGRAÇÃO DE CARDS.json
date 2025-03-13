@@ -394,9 +394,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:32.390Z",
-  "id": "dHDBmWtl4wCkveZu",
-  "meta": null,
+  "createdAt": "2024-07-10T13:43:43.604Z",
+  "id": "JjFpfwaNRismWxg5",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "[PIPEFY > CLINT] - MIGRAÇÃO DE CARDS",
   "nodes": [
     {
@@ -647,8 +649,8 @@
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
-          "name": "[Google Sheets] - Automagic Bots"
+          "id": "ZaWeoW3t9GWDnGXA",
+          "name": "[Google Sheets] - AutomagicBots Auth"
         }
       }
     },
@@ -753,7 +755,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1117,7 +1119,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2086,17 +2088,13 @@
       ]
     }
   ],
-  "pinData": null,
+  "pinData": {},
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": false,
-    "saveDataErrorExecution": "all",
-    "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "executionOrder": "v1"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-02-04T17:45:32.390Z",
-  "versionId": "2c419cb5-541e-4d0f-a946-a636500bef42"
+  "updatedAt": "2024-07-11T17:46:25.287Z",
+  "versionId": "04c81cd3-a46a-42ee-84c3-c80b8711c95b"
 }
