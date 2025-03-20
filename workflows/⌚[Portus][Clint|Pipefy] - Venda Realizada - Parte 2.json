@@ -36,7 +36,13 @@
     },
     "existe_no_pipefy_db": {
       "main": [
-        [],
+        [
+          {
+            "node": "cria_card",
+            "type": "main",
+            "index": 0
+          }
+        ],
         [
           {
             "node": "pesquisa_email",
@@ -48,7 +54,13 @@
     },
     "registro_encontrado": {
       "main": [
-        [],
+        [
+          {
+            "node": "cria_card",
+            "type": "main",
+            "index": 0
+          }
+        ],
         [
           {
             "node": "pesquisa_telefone",
@@ -71,7 +83,13 @@
     },
     "registro_encontrado1": {
       "main": [
-        [],
+        [
+          {
+            "node": "cria_card",
+            "type": "main",
+            "index": 0
+          }
+        ],
         [
           {
             "node": "cria_registro",
@@ -97,6 +115,33 @@
         [
           {
             "node": "registro_encontrado1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_registro1": {
+      "main": [
+        []
+      ]
+    },
+    "cria_registro": {
+      "main": [
+        [
+          {
+            "node": "cria_card",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_card": {
+      "main": [
+        [
+          {
+            "node": "atualiza_ids_user",
             "type": "main",
             "index": 0
           }
@@ -175,11 +220,11 @@
             },
             {
               "name": "cpf",
-              "value": "={{ $node[\"chega_da_fila\"].json[\"cpf\"] || \"\" }}"
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"cpf\"] || \"\" }}"
             },
             {
               "name": "cnpj",
-              "value": "={{ $node[\"chega_da_fila\"].json[\"cnpj\"] || \"\" }}"
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"cnpj\"] || \"\" }}"
             }
           ]
         },
@@ -216,7 +261,7 @@
       "type": "n8n-nodes-base.rabbitmqTrigger",
       "typeVersion": 1,
       "position": [
-        -480,
+        -500,
         -100
       ],
       "credentials": {
@@ -330,7 +375,7 @@
     },
     {
       "parameters": {
-        "jsCode": "function formatarTelefone(telefone) {\n    // Remove todos os caracteres que não sejam números\n    let telefoneLimpo = telefone.replace(/\\D/g, \"\");\n\n    // Verifica se o telefone começa com \"55\" (código do Brasil)\n    if (!telefoneLimpo.startsWith(\"55\")) {\n        return { telefone_formatado: \"Número inválido\" };\n    }\n\n    // Remove o \"55\" para trabalhar apenas com DDD + número\n    telefoneLimpo = telefoneLimpo.slice(2);\n\n    // Extrai DDD (2 primeiros dígitos) e número (restante)\n    const ddd = telefoneLimpo.slice(0, 2);\n    let numero = telefoneLimpo.slice(2);\n\n    // Garante que o número tenha 9 dígitos, adicionando \"9\" se necessário\n    if (numero.length === 8) {\n        numero = \"9\" + numero;\n    }\n\n    // Se o número final não tiver 9 dígitos, retorna inválido\n    if (numero.length !== 9) {\n        return { telefone_formatado: \"Número inválido\" };\n    }\n\n    // Formata para \"+55 DDD 98765-4321\"\n    const telefoneFormatado = `+55 ${ddd} ${numero.slice(0, 5)}-${numero.slice(5)}`;\n\n    return { telefone_formatado: telefoneFormatado };\n}\n\n// Obtém o telefone do JSON do n8n\nconst telefoneOriginal = $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] || \"\";\n\n// Formata o telefone e retorna como array de objetos para o n8n\nreturn [{ json: formatarTelefone(telefoneOriginal) }];\n"
+        "jsCode": "function formatarTelefone(telefone) {\n    // Remove todos os caracteres que não sejam números\n    let telefoneLimpo = telefone.replace(/\\D/g, \"\");\n\n    // Verifica se o telefone começa com \"55\" (código do Brasil)\n    if (!telefoneLimpo.startsWith(\"55\")) {\n        return \"Número inválido\";\n    }\n\n    // Remove o \"55\" para trabalhar apenas com DDD + número\n    telefoneLimpo = telefoneLimpo.slice(2);\n\n    // Extrai DDD (2 primeiros dígitos) e número (restante)\n    const ddd = telefoneLimpo.slice(0, 2);\n    let numero = telefoneLimpo.slice(2);\n\n    // Garante que o número tenha 9 dígitos, adicionando \"9\" se necessário\n    if (numero.length === 8) {\n        numero = \"9\" + numero;\n    }\n\n    // Se o número final não tiver 9 dígitos, retorna inválido\n    if (numero.length !== 9) {\n        return \"Número inválido\";\n    }\n\n    // Formata para \"+55 DDD 98765-4321\"\n    return `+55 ${ddd} ${numero.slice(0, 5)}-${numero.slice(5)}`;\n}\n\n// Obtém os números do JSON do n8n\nconst telefoneOriginal = $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] || \"\";\nconst telefoneOnboarding = $node[\"chega_da_fila\"].json[\"content\"][\"whatsapp_responsavel_onboarding\"] || \"\";\n\n// Retorna os números formatados com os nomes desejados\nreturn [{\n    json: {\n        telefoneFormatado: formatarTelefone(telefoneOriginal),\n        telefoneOnboardingFormatado: formatarTelefone(telefoneOnboarding)\n    }\n}];\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -408,7 +453,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "={\n  findRecords(tableId: \"302852685\", search: {fieldId: \"telefone\", fieldValue: \"{{ $node[\"Code\"].json[\"telefone_formatado\"] || \"\" }}\"}) {\n    edges {\n      node {\n        id\n        title\n      }\n    }\n  }\n}"
+              "value": "={\n  findRecords(tableId: \"302852685\", search: {fieldId: \"telefone\", fieldValue: \"{{ $node[\"Code\"].json[\"telefoneFormatado\"] || \"\" }}\"}) {\n    edges {\n      node {\n        id\n        title\n      }\n    }\n  }\n}"
             }
           ]
         },
@@ -455,7 +500,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "=mutation {\n  createTableRecord(\n    input: {\n      table_id: 302852685,\n      title: \"{{ $node['chega_da_fila'].json['content']['nome'] + ($node['chega_da_fila'].json['content']['sobrenome'] ? ' ' + $node['chega_da_fila'].json['content']['sobrenome'] : '') }}\",\n      fields_attributes: [\n        { field_id: \"email\", field_value: \"{{ $node['chega_da_fila'].json['content']['email'] || '' }}\" },\n        { field_id: \"telefone\", field_value: \"{{ $node['chega_da_fila'].json['content']['telefone'] || '' }}\" }\n      ]\n    }\n  ) {\n    table_record {\n      id\n    }\n  }\n}\n"
+              "value": "=mutation {\n  createTableRecord(\n    input: {\n      table_id: 302852685,\n      title: \"{{ $node['chega_da_fila'].json['content']['nome'] + ($node['chega_da_fila'].json['content']['sobrenome'] ? ' ' + $node['chega_da_fila'].json['content']['sobrenome'] : '') }}\",\n      fields_attributes: [\n        { field_id: \"email\", field_value: \"{{ $node['chega_da_fila'].json['content']['email'] || '' }}\" },\n        { field_id: \"telefone\", field_value: \"{{ $node[\"Code\"].json[\"telefoneFormatado\"] || '' }}\" },\n        { field_id: \"empresa\", field_value: \"{{ $node['chega_da_fila'].json['content']['nome_fantasia'] || '' }}\" },\n        { field_id: \"nome_do_cliente\", field_value: \"{{ $node['chega_da_fila'].json['content']['nome_resposavel_negociacao'] || '' }}\" },\n        { field_id: \"nome_do_representante_p_blico\", field_value: \"{{ $node['chega_da_fila'].json['content']['nome_representante_publico'] || '' }}\" },\n        { field_id: \"nome_do_respons_vel_pela_assinatura_do_contrato\", field_value: \"{{ $node['chega_da_fila'].json['content']['nome_responsavel_contrato'] || '' }}\" },\n        { field_id: \"nome_do_ponto_de_contato\", field_value: \"{{ $node['chega_da_fila'].json['content']['nome_responsavel_onboarding'] || '' }}\" },\n        { field_id: \"telefone_do_ponto_de_contato\", field_value: \"{{ $node[\"Code\"].json[\"telefoneOnboardingFormatado\"] || '' }}\" },\n        { field_id: \"endere_o\", field_value: \"{{ $node['chega_da_fila'].json['content']['endereco_fiscal'] || '' }}\" },\n        { field_id: \"raz_o_social\", field_value: \"{{ $node['chega_da_fila'].json['content']['razao_social'] || '' }}\" },\n        { field_id: \"cnpj\", field_value: \"{{ $node['chega_da_fila'].json['content']['cnpj'] || '' }}\" },\n        { field_id: \"origem\", field_value: \"{{ $node['chega_da_fila'].json['content']['origem'] || '' }}\" },\n        { field_id: \"canal\", field_value: \"{{ $node['chega_da_fila'].json['content']['detalhamento_origem'] || '' }}\" },\n        { field_id: \"categoria_do_cliente\", field_value: \"{{ $node['chega_da_fila'].json['content']['categoria_cliente'] || '' }}\" }\n      ]\n    }\n  ) {\n    table_record {\n      id\n    }\n  }\n}\n"
             }
           ]
         },
@@ -481,6 +526,146 @@
           "name": "[PIPEFY] - Portus"
         }
       }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={\n  pipe(id: 302840048) {\n    start_form_fields {\n      id\n      label\n    }\n  }\n}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "d87c23df-0cdc-4559-a4aa-0a8d59be165f",
+      "name": "cria_registro1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -480,
+        -460
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "7F0hUjKvKkREj86b",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  createCard(input: {\n    pipe_id: 302840048,\n    title: \"{{ $node['chega_da_fila'].json['content']['nome'] + ($node['chega_da_fila'].json['content']['sobrenome'] ? ' ' + $node['chega_da_fila'].json['content']['sobrenome'] : '') }} | {{ $node['chega_da_fila'].json['content']['nome_fantasia'] || \"\" }}\",\n    fields_attributes:[\n      {field_id: \"respons_vel\", field_value: \"302214458\"},\n      {field_id: \"nome_do_representante_p_blico\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_representante_publico\"] || \"\" }}\"},\n      {field_id: \"card_cliente\", field_value: \"{{ $node[\"cria_registro\"].runIndex >= 0 ? $node[\"cria_registro\"].json[\"body\"][\"data\"][\"createTableRecord\"][\"table_record\"][\"id\"] \n          : $node[\"pesquisa_telefone\"].runIndex >= 0 \n            ? $node[\"pesquisa_telefone\"].json[\"body\"][\"data\"][\"findRecords\"][\"edges\"][\"0\"][\"node\"][\"id\"] : $node[\"pesquisa_email\"].runIndex >= 0 \n            ? $node[\"pesquisa_email\"].json[\"body\"][\"data\"][\"findRecords\"][\"edges\"][\"0\"][\"node\"][\"id\"] : $node[\"cria_atualiza_user\"].runIndex >= 0 \n            ? $node[\"cria_atualiza_user\"].json[\"id_pipefy_db\"] : null }}\"},\n      {field_id: \"nome_do_ponto_de_contato\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_responsavel_onboarding\"] || \"\" }}\"},\n      {field_id: \"whatsapp_do_ponto_de_contato\", field_value: \"{{ $node[\"Code\"].json[\"telefoneOnboardingFormatado\"] || \"\" }}\"},\n      {field_id: \"email\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] || \"\" }}\"},\n      {field_id: \"nome_do_contato\", field_value: \"{{ $node['chega_da_fila'].json['content']['nome'] + ($node['chega_da_fila'].json['content']['sobrenome'] ? ' ' + $node['chega_da_fila'].json['content']['sobrenome'] : '') }}\"},\n      {field_id: \"empresa\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_fantasia\"] || \"\" }}\"},\n      {field_id: \"tipo_de_contrato\", field_value: \"Partner Pro\"},\n      {field_id: \"endere_o\", field_value: \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"endereco_fiscal\"] || \"\" }}\"}\n    ]}\n  ) {\n    card {\n      id\n    }\n  }\n}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "1cb2ebda-c9e5-4e8e-b9c8-dabb6489e13d",
+      "name": "cria_card",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1820,
+        -100
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "7F0hUjKvKkREj86b",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_pipefy_db",
+              "value": "={{ $node[\"cria_registro\"].runIndex >= 0 ? $node[\"cria_registro\"].json[\"body\"][\"data\"][\"createTableRecord\"][\"table_record\"][\"id\"]            : $node[\"pesquisa_telefone\"].runIndex >= 0              ? $node[\"pesquisa_telefone\"].json[\"body\"][\"data\"][\"findRecords\"][\"edges\"][\"0\"][\"node\"][\"id\"] : $node[\"pesquisa_email\"].runIndex >= 0              ? $node[\"pesquisa_email\"].json[\"body\"][\"data\"][\"findRecords\"][\"edges\"][\"0\"][\"node\"][\"id\"] : $node[\"cria_atualiza_user\"].runIndex >= 0              ? $node[\"cria_atualiza_user\"].json[\"id_pipefy_db\"] : null }}"
+            },
+            {
+              "column": "id_pipefy_pipe",
+              "value": "={{ $node[\"cria_card\"].json[\"body\"][\"data\"][\"createCard\"][\"card\"][\"id\"] }}"
+            },
+            {
+              "column": "data_atualizacao",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f35d4e50-e7ba-4be7-b4bc-fbd535774817",
+      "name": "atualiza_ids_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        2080,
+        -100
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
     }
   ],
   "pinData": {
@@ -488,7 +673,7 @@
       {
         "json": {
           "fields": {
-            "consumerTag": "amq.ctag-Z3h1JROO1tHQV477E_KyQA",
+            "consumerTag": "amq.ctag-obPFWSi3JCuYXickyUG_pg",
             "deliveryTag": 1,
             "redelivered": false,
             "exchange": "",
@@ -499,14 +684,26 @@
           },
           "content": {
             "nome": "Mateus",
-            "sobrenome": "Diniz - Automagic Bots",
-            "email": "mateusdiniz@automagicbots.com.br",
+            "sobrenome": "",
+            "email": "mateusdiniza@automagicbots.com.br",
             "telefone": "556281196678",
             "id_funil": null,
             "instagram": "",
             "id_forms": "1",
             "tipo_forms": "Onboarding",
-            "id_pipe_operacao": "302840048"
+            "id_pipe_operacao": "302840048",
+            "nome_fantasia": "Automagic bots",
+            "nome_resposavel_negociacao": "Mateus",
+            "nome_representante_publico": "Gabriel Amaral",
+            "nome_responsavel_contrato": "Amaral",
+            "nome_responsavel_onboarding": "Gabriel",
+            "whatsapp_responsavel_onboarding": "553185711260",
+            "endereco_fiscal": "RUa Julio bento cardoso",
+            "razao_social": "Automagic Bots LTDA",
+            "cnpj": "45.157.482/0001-26",
+            "origem": "Tráfego Pago",
+            "detalhamento_origem": "Anuncio",
+            "categoria_cliente": "Estrela"
           }
         }
       }
@@ -524,6 +721,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-02-15T22:37:05.960Z",
-  "versionId": "db067757-b953-4a11-9b4b-5252b8d4d6f8"
+  "updatedAt": "2025-03-20T00:43:06.040Z",
+  "versionId": "2d5e0a9d-030c-4f80-a857-f3ae248094d2"
 }
