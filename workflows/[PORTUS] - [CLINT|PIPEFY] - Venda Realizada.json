@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "formata_dados": {
       "main": [
@@ -1062,6 +1062,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-02-04T20:29:29.575Z",
-  "versionId": "fe04e4ad-0b1e-4dd7-9627-38274cff7ff5"
+  "updatedAt": "2025-03-19T19:08:26.678Z",
+  "versionId": "a015182e-da0a-46bd-bed2-3097aec0cb54"
 }
