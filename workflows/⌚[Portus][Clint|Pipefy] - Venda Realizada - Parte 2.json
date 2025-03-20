@@ -70,17 +70,6 @@
         ]
       ]
     },
-    "Code": {
-      "main": [
-        [
-          {
-            "node": "pesquisa_variavel_n8n_fluxo_users",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "registro_encontrado1": {
       "main": [
         [
@@ -93,6 +82,17 @@
         [
           {
             "node": "cria_registro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_variavel_n8n_fluxo_users",
             "type": "main",
             "index": 0
           }
@@ -119,11 +119,6 @@
             "index": 0
           }
         ]
-      ]
-    },
-    "cria_registro1": {
-      "main": [
-        []
       ]
     },
     "cria_registro": {
@@ -176,13 +171,13 @@
         "combineConditions": "OR",
         "options": {}
       },
-      "id": "0dc386d6-ec15-4f47-9eff-c43f7444a80e",
+      "id": "f3042fd8-2d3c-46bf-9522-a69097ea20b8",
       "name": "pesquisa_variavel_n8n_fluxo_users",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.4,
       "position": [
-        -60,
-        -100
+        1180,
+        -380
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -233,10 +228,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        160,
-        -100
+        1400,
+        -380
       ],
-      "id": "d47ff70e-87d1-43e8-b79a-a62fa59287d6",
+      "id": "c18973a6-2878-4505-9eac-6a90ebf8603f",
       "name": "cria_atualiza_user"
     },
     {
@@ -256,13 +251,13 @@
           "parallelMessages": 80
         }
       },
-      "id": "bcff4033-7081-4e53-8fb3-f9fc72b9d9e3",
+      "id": "60cc5eec-5c8c-4363-9347-bf06775f3098",
       "name": "chega_da_fila",
       "type": "n8n-nodes-base.rabbitmqTrigger",
       "typeVersion": 1,
       "position": [
-        -500,
-        -100
+        740,
+        -380
       ],
       "credentials": {
         "rabbitmq": {
@@ -299,10 +294,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        380,
-        -100
+        1620,
+        -380
       ],
-      "id": "7eea1333-0f4a-4c7b-b79d-52f06565e58e",
+      "id": "5bcd061b-f911-4036-8952-e4cc726d1f13",
       "name": "existe_no_pipefy_db"
     },
     {
@@ -333,10 +328,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        840,
-        20
+        2080,
+        -260
       ],
-      "id": "9d6c571b-86b7-481c-bb98-c82f422fcbfb",
+      "id": "47ec45d4-7af4-4615-883c-1089e3f6f7f6",
       "name": "registro_encontrado"
     },
     {
@@ -367,10 +362,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        1300,
-        100
+        2540,
+        -180
       ],
-      "id": "995e0101-d434-4cc4-b09c-917e0679128b",
+      "id": "2f08c465-dfee-483a-93be-ebbc8202830d",
       "name": "registro_encontrado1"
     },
     {
@@ -380,10 +375,10 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -280,
-        -100
+        960,
+        -380
       ],
-      "id": "79a4b138-84c8-4920-8f69-62e294f3e0df",
+      "id": "84b3cce6-b557-4c70-ae5e-d318d1edfed1",
       "name": "Code"
     },
     {
@@ -418,13 +413,13 @@
           }
         }
       },
-      "id": "ead7056e-6dde-42e7-96fe-f0b5d23cb876",
+      "id": "fe9dc359-2461-4dd9-b2d0-f0d4a92eab15",
       "name": "pesquisa_email",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        620,
-        20
+        1860,
+        -260
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -465,13 +460,13 @@
           }
         }
       },
-      "id": "476bd451-bab6-4e0a-8427-b527cecf3054",
+      "id": "1bd7149e-a909-4854-bd46-39e470196d09",
       "name": "pesquisa_telefone",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        1080,
-        100
+        2320,
+        -180
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -512,13 +507,13 @@
           }
         }
       },
-      "id": "37da15a9-9eda-48df-b393-37f8a44b4982",
+      "id": "b41f2f81-c771-4b23-960f-c8ea6fce9583",
       "name": "cria_registro",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        1560,
-        180
+        2800,
+        -100
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -559,13 +554,13 @@
           }
         }
       },
-      "id": "d87c23df-0cdc-4559-a4aa-0a8d59be165f",
+      "id": "2be47441-5f97-4f59-b86e-a54cdd6a0920",
       "name": "cria_registro1",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        -480,
-        -460
+        760,
+        -740
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -606,13 +601,13 @@
           }
         }
       },
-      "id": "1cb2ebda-c9e5-4e8e-b9c8-dabb6489e13d",
+      "id": "7ea8d0b4-91b2-4ceb-88c5-ed64719e8690",
       "name": "cria_card",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        1820,
-        -100
+        3060,
+        -380
       ],
       "credentials": {
         "httpHeaderAuth": {
@@ -651,13 +646,13 @@
         },
         "options": {}
       },
-      "id": "f35d4e50-e7ba-4be7-b4bc-fbd535774817",
+      "id": "d4cf1adf-d2f5-43c5-857e-ecea19ee3c23",
       "name": "atualiza_ids_user",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.4,
       "position": [
-        2080,
-        -100
+        3320,
+        -380
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -721,6 +716,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-03-20T00:43:06.040Z",
-  "versionId": "2d5e0a9d-030c-4f80-a857-f3ae248094d2"
+  "updatedAt": "2025-03-20T13:06:23.840Z",
+  "versionId": "2f00efdc-a76d-4757-9bfe-89e3b8d9f98a"
 }
