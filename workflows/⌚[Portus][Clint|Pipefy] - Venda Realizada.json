@@ -66,14 +66,14 @@
   "nodes": [
     {
       "parameters": {
-        "jsCode": "const fullNameAnswer = $node[\"venda_clint\"].json[\"body\"][\"contact_name\"] || \"\";\nconst emailAnswer = $node[\"venda_clint\"].json[\"body\"][\"contact_email\"] || \"\";\nconst telefoneClienteOriginal = $node[\"venda_clint\"].json[\"body\"][\"contact_phone\"] || \"\";\nconst instagramAnswer = $node[\"venda_clint\"].json[\"body\"][\"contact_instagram\"] || \"\";\n\nfunction formatCPF(cpf) {\n    const cpfLimpo = cpf.replace(/\\D/g, \"\");\n    if (cpfLimpo.length === 11) {\n        return `${cpfLimpo.slice(0, 3)}.${cpfLimpo.slice(3, 6)}.${cpfLimpo.slice(6, 9)}-${cpfLimpo.slice(9, 11)}`;\n    }\n    return cpf;\n}\n\nfunction formatCNPJ(cnpj) {\n    const cnpjLimpo = cnpj.replace(/\\D/g, \"\");\n    if (cnpjLimpo.length === 14) {\n        return `${cnpjLimpo.slice(0, 2)}.${cnpjLimpo.slice(2, 5)}.${cnpjLimpo.slice(5, 8)}/${cnpjLimpo.slice(8, 12)}-${cnpjLimpo.slice(12, 14)}`;\n    }\n    return cnpj;\n}\n\nfunction isCPFOrCNPJ(cpfCnpj) {\n    const cleaned = cpfCnpj.replace(/\\D/g, \"\"); // Remove caracteres não numéricos\n    if (cleaned.length === 11) {\n        return \"CPF\"; // É um CPF\n    } else if (cleaned.length === 14) {\n        return \"CNPJ\"; // É um CNPJ\n    }\n    return null; // Valor inválido\n}\n\n// Modifique o formato conforme o tipo\nconst cpfCnpj = $node[\"venda_clint\"].json[\"body\"][\"contact_doc\"] || \"\";\nlet cpf = \"\";\nlet cnpj = \"\";\n\nif (isCPFOrCNPJ(cpfCnpj) === \"CPF\") {\n    cpf = formatCPF(cpfCnpj);\n} else if (isCPFOrCNPJ(cpfCnpj) === \"CNPJ\") {\n    cnpj = formatCNPJ(cpfCnpj);\n}\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    let fullname = lname ? `${fname} ${lname}` : fname;\n\n    return { fname, lname, fullname };\n}\n\nfunction formatEmail(email) {\n    return email.toLowerCase().trim();\n}\n\nfunction formatInstagram(instagram) {\n    return instagram.toLowerCase().replace(/^@/, \"\");\n}\n\nlet telefoneFinal = \"\";\n\nif (telefoneClienteOriginal) {\n    const telefoneLimpo = telefoneClienteOriginal.replace(/\\D/g, \"\");\n\n    let DDI = '';\n    let DDD = '';\n    let numero = '';\n\n    if (telefoneLimpo.length > 11) {\n        DDI = telefoneLimpo.slice(0, 2);\n        DDD = telefoneLimpo.slice(2, 4);\n        numero = telefoneLimpo.slice(4);\n    } else if (telefoneLimpo.length === 11) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else if (telefoneLimpo.length === 10) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else {\n        telefoneFinal = telefoneLimpo;\n    }\n\n    if (DDD && numero) {\n        if (parseInt(DDD) > 28) {\n            if (numero.length === 9 && numero.startsWith(\"9\")) {\n                numero = numero.slice(1);\n            }\n        } else {\n            if (numero.length === 8) {\n                numero = `9${numero}`;\n            }\n        }\n    }\n\n    if (DDI && DDD && numero) {\n        telefoneFinal = `${DDI}${DDD}${numero}`;\n    }\n}\n\nconst formattedNames = capitalizeName(fullNameAnswer);\nconst formattedEmail = formatEmail(emailAnswer);\nconst formattedInstagram = formatInstagram(instagramAnswer);\nconst form_id = \"123123\"\nconst form_name = \"Venda Realizada Clint\"\n\nconst result = {\n    ...formattedNames,\n    email: formattedEmail,\n    whatsapp: telefoneFinal,\n    instagram: formattedInstagram,\n    cpf: cpf,\n    cnpj: cnpj,\n    form_id: form_id,\n    form_name: form_name\n};\n\nreturn [{ json: result }];\n"
+        "jsCode": "const fullNameAnswer = $node[\"venda_clint\"].json[\"body\"][\"contact_name\"] || \"\";\nconst emailAnswer = $node[\"venda_clint\"].json[\"body\"][\"contact_email\"] || \"\";\nconst telefoneClienteOriginal = $node[\"venda_clint\"].json[\"body\"][\"contact_phone\"] || \"\";\nconst instagramAnswer = $node[\"venda_clint\"].json[\"body\"][\"contact_instagram\"] || \"\";\nconst nome_fantasia = $node[\"venda_clint\"].json[\"body\"][\"organization_nome_fantasia\"] || \"\";\nconst nome_resposavel_negociacao = $node[\"venda_clint\"].json[\"body\"][\"deal_nome_do_responsavel_1\"] || \"\";\nconst nome_representante_publico = $node[\"venda_clint\"].json[\"body\"][\"deal_nome_do_representant\"] || \"\";\nconst nome_responsavel_contrato = $node[\"venda_clint\"].json[\"body\"][\"deal_nome_do_responsavel_2\"] || \"\";\nconst nome_responsavel_onboarding = $node[\"venda_clint\"].json[\"body\"][\"deal_nome_do_ponto_de_con\"] || \"\";\nconst whatsapp_responsavel_onboarding = $node[\"venda_clint\"].json[\"body\"][\"deal_whatsapp_ponto_de_co\"] || \"\";\nconst endereco_fiscal = $node[\"venda_clint\"].json[\"body\"][\"organization_endereco_fiscal\"] || \"\";\nconst razao_social = $node[\"venda_clint\"].json[\"body\"][\"organization_razao_social\"] || \"\";\nconst origem = $node[\"venda_clint\"].json[\"body\"][\"deal_origem\"] || \"\";\nconst detalhamento_origem = $node[\"venda_clint\"].json[\"body\"][\"deal_detalhamento_da_orig\"] || \"\";\nconst categoria_cliente = $node[\"venda_clint\"].json[\"body\"][\"deal_categoria_do_cliente\"] || \"\";\n\nfunction formatCPF(cpf) {\n    const cpfLimpo = cpf.replace(/\\D/g, \"\");\n    if (cpfLimpo.length === 11) {\n        return `${cpfLimpo.slice(0, 3)}.${cpfLimpo.slice(3, 6)}.${cpfLimpo.slice(6, 9)}-${cpfLimpo.slice(9, 11)}`;\n    }\n    return cpf;\n}\n\nfunction formatCNPJ(cnpj) {\n    const cnpjLimpo = cnpj.replace(/\\D/g, \"\");\n    if (cnpjLimpo.length === 14) {\n        return `${cnpjLimpo.slice(0, 2)}.${cnpjLimpo.slice(2, 5)}.${cnpjLimpo.slice(5, 8)}/${cnpjLimpo.slice(8, 12)}-${cnpjLimpo.slice(12, 14)}`;\n    }\n    return cnpj;\n}\n\nfunction isCPFOrCNPJ(cpfCnpj) {\n    const cleaned = cpfCnpj.replace(/\\D/g, \"\"); // Remove caracteres não numéricos\n    if (cleaned.length === 11) {\n        return \"CPF\"; // É um CPF\n    } else if (cleaned.length === 14) {\n        return \"CNPJ\"; // É um CNPJ\n    }\n    return null; // Valor inválido\n}\n\n// Modifique o formato conforme o tipo\nconst cpfCnpj = $node[\"venda_clint\"].json[\"body\"][\"organization_cnpj\"] || \"\";\nlet cpf = \"\";\nlet cnpj = \"\";\n\nif (isCPFOrCNPJ(cpfCnpj) === \"CPF\") {\n    cpf = formatCPF(cpfCnpj);\n} else if (isCPFOrCNPJ(cpfCnpj) === \"CNPJ\") {\n    cnpj = formatCNPJ(cpfCnpj);\n}\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    let fullname = lname ? `${fname} ${lname}` : fname;\n\n    return { fname, lname, fullname };\n}\n\nfunction formatEmail(email) {\n    return email.toLowerCase().trim();\n}\n\nfunction formatInstagram(instagram) {\n    return instagram.toLowerCase().replace(/^@/, \"\");\n}\n\nlet telefoneOnboardingFinal = \"\";\n\nif (whatsapp_responsavel_onboarding) {\n    const telefoneLimpo = whatsapp_responsavel_onboarding.replace(/\\D/g, \"\");\n\n    let DDI = '';\n    let DDD = '';\n    let numero = '';\n\n    if (telefoneLimpo.length > 11) {\n        DDI = telefoneLimpo.slice(0, 2);\n        DDD = telefoneLimpo.slice(2, 4);\n        numero = telefoneLimpo.slice(4);\n    } else if (telefoneLimpo.length === 11) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else if (telefoneLimpo.length === 10) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else {\n        telefoneOnboardingFinal = telefoneLimpo;\n    }\n\n    if (DDD && numero) {\n        if (parseInt(DDD) > 28) {\n            if (numero.length === 9 && numero.startsWith(\"9\")) {\n                numero = numero.slice(1);\n            }\n        } else {\n            if (numero.length === 8) {\n                numero = `9${numero}`;\n            }\n        }\n    }\n\n    if (DDI && DDD && numero) {\n        telefoneOnboardingFinal = `${DDI}${DDD}${numero}`;\n    }\n}\n\nlet telefoneFinal = \"\";\n\nif (telefoneClienteOriginal) {\n    const telefoneLimpo = telefoneClienteOriginal.replace(/\\D/g, \"\");\n\n    let DDI = '';\n    let DDD = '';\n    let numero = '';\n\n    if (telefoneLimpo.length > 11) {\n        DDI = telefoneLimpo.slice(0, 2);\n        DDD = telefoneLimpo.slice(2, 4);\n        numero = telefoneLimpo.slice(4);\n    } else if (telefoneLimpo.length === 11) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else if (telefoneLimpo.length === 10) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else {\n        telefoneFinal = telefoneLimpo;\n    }\n\n    if (DDD && numero) {\n        if (parseInt(DDD) > 28) {\n            if (numero.length === 9 && numero.startsWith(\"9\")) {\n                numero = numero.slice(1);\n            }\n        } else {\n            if (numero.length === 8) {\n                numero = `9${numero}`;\n            }\n        }\n    }\n\n    if (DDI && DDD && numero) {\n        telefoneFinal = `${DDI}${DDD}${numero}`;\n    }\n}\n\nconst formattedNames = capitalizeName(fullNameAnswer);\nconst formattedEmail = formatEmail(emailAnswer);\nconst formattedInstagram = formatInstagram(instagramAnswer);\nconst form_id = \"123123\"\nconst form_name = \"Venda Realizada Clint\"\n\nconst result = {\n    ...formattedNames,\n    email: formattedEmail,\n    whatsapp: telefoneFinal,\n    instagram: formattedInstagram,\n    cpf: cpf,\n    cnpj: cnpj,\n    form_id: form_id,\n    form_name: form_name,\n    nome_fantasia: nome_fantasia,\n    nome_resposavel_negociacao: nome_resposavel_negociacao,\n    nome_representante_publico: nome_representante_publico,\n    nome_responsavel_contrato: nome_responsavel_contrato,\n    nome_responsavel_onboarding: nome_responsavel_onboarding,\n    whatsapp_responsavel_onboarding: telefoneOnboardingFinal,\n    endereco_fiscal: endereco_fiscal,\n    razao_social: razao_social,\n    cnpj: cnpj,\n    origem: origem,\n    detalhamento_origem: detalhamento_origem,\n    categoria_cliente: categoria_cliente\n};\n\nreturn [{ json: result }];\n"
       },
       "id": "e8e36bd2-2f6b-4aac-8cd3-387044d934d5",
       "name": "formata_dados",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        840,
+        880,
         1200
       ]
     },
@@ -239,6 +239,78 @@
               "name": "id_pipe_operacao",
               "value": "302840048",
               "type": "string"
+            },
+            {
+              "id": "bc01ab95-30df-4501-bdbe-4b1b882e3212",
+              "name": "nome_fantasia",
+              "value": "={{ $node[\"formata_dados\"].json[\"nome_fantasia\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "3cb33cb7-f490-4568-9269-7e12edd424cb",
+              "name": "nome_resposavel_negociacao",
+              "value": "={{ $node[\"formata_dados\"].json[\"nome_resposavel_negociacao\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "770ab7ff-4126-42bb-940e-0062071d300e",
+              "name": "nome_representante_publico",
+              "value": "={{ $node[\"formata_dados\"].json[\"nome_representante_publico\"]  || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "1645fff5-c470-433d-8731-45415d614002",
+              "name": "nome_responsavel_contrato",
+              "value": "={{ $node[\"formata_dados\"].json[\"nome_responsavel_contrato\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "c066e7f5-1134-47d1-b6a6-24ef6b35fff1",
+              "name": "nome_responsavel_onboarding",
+              "value": "={{ $node[\"formata_dados\"].json[\"nome_responsavel_onboarding\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "bf86d91a-7af8-4608-b34f-0d086deaead6",
+              "name": "whatsapp_responsavel_onboarding",
+              "value": "={{ $node[\"formata_dados\"].json[\"whatsapp_responsavel_onboarding\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "bf99801e-a5fa-48db-a7c1-a035086fa20c",
+              "name": "endereco_fiscal",
+              "value": "={{ $node[\"formata_dados\"].json[\"endereco_fiscal\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "7a069861-8274-4517-97f9-dd354b54c007",
+              "name": "razao_social",
+              "value": "={{ $node[\"formata_dados\"].json[\"razao_social\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "ba9b69c4-d5e2-458d-a38e-d1259397762e",
+              "name": "cnpj",
+              "value": "={{ $node[\"formata_dados\"].json[\"cnpj\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "20242fa2-6d7e-4991-9f2e-0342877333d2",
+              "name": "origem",
+              "value": "={{ $node[\"formata_dados\"].json[\"origem\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "33333c04-cde1-483a-a38a-7fc47aca3939",
+              "name": "detalhamento_origem",
+              "value": "={{ $node[\"formata_dados\"].json[\"detalhamento_origem\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "d94945c4-2db2-401c-8ea3-062c3ef8e39b",
+              "name": "categoria_cliente",
+              "value": "={{ $node[\"formata_dados\"].json[\"categoria_cliente\"] || \"\" }}",
+              "type": "string"
             }
           ]
         },
@@ -261,16 +333,16 @@
           "headers": {
             "host": "webhooks.portusdigital.com.br",
             "user-agent": "axios/1.7.9",
-            "content-length": "1346",
+            "content-length": "1811",
             "accept": "application/json, text/plain, */*",
             "accept-encoding": "gzip, compress, deflate, br",
             "content-type": "application/json",
-            "traceparent": "00-67a3afb6000000007e0d76c69a08ac5b-68dcc8d64c1129db-00",
-            "tracestate": "dd=t.tid:67a3afb600000000;t.dm:-3;s:-1;p:68dcc8d64c1129db",
-            "x-datadog-parent-id": "7556135097545599451",
+            "traceparent": "00-67db27e9000000000cf6579f6b3f8a2b-58e547675e00e71b-00",
+            "tracestate": "dd=t.tid:67db27e900000000;t.dm:-3;s:-1;p:58e547675e00e71b",
+            "x-datadog-parent-id": "6405604554288719643",
             "x-datadog-sampling-priority": "-1",
-            "x-datadog-tags": "_dd.p.tid=67a3afb600000000",
-            "x-datadog-trace-id": "9083046618836020315",
+            "x-datadog-tags": "_dd.p.tid=67db27e900000000",
+            "x-datadog-trace-id": "934030314936699435",
             "x-forwarded-for": "52.200.254.28",
             "x-forwarded-host": "webhooks.portusdigital.com.br",
             "x-forwarded-port": "443",
@@ -281,31 +353,31 @@
           "params": {},
           "query": {},
           "body": {
-            "contact_name": "Mateus Diniz - AUTOMAGIC BOTS",
+            "contact_name": "Mateus",
             "contact_email": "mateusdiniz@automagicbots.com.br",
             "contact_phone": "+5562981196678",
             "deal_stage": "VENDA REALIZADA",
             "deal_user": "",
             "deal_status": "OPEN",
             "contact_doc": "",
-            "contact_role": "",
+            "contact_role": "Gestor de Automações Pleno",
             "contact_remuneracao": "",
             "contact_momento_atual": "",
-            "contact_nome_da_empresa": "AUTOMAGIC BOTS",
+            "contact_nome_da_empresa": "Automagic Bots",
             "contact_instagram": "",
-            "contact_origem_do_contato": "",
+            "contact_origem_do_contato": "https://portusdigital.com.br/paraempresa-gform/",
             "organization_employees": "",
             "organization_category": "",
             "organization_resumo_sobre_a_empre": "",
             "deal_produto": "",
-            "deal_origem": "",
-            "deal_garantia": "60 dias",
-            "deal_tipo_de_contrato": "Retainer",
-            "deal_valor_do_contrato": 6000,
+            "deal_origem": "Google Ads",
+            "deal_garantia": "",
+            "deal_tipo_de_contrato": "",
+            "deal_valor_do_contrato": "",
             "deal_este_e_um_grupo_be": "",
             "deal_faz_parte_de_grupo": "",
             "deal_faturamento_mensal": "",
-            "deal_forma_de_pagamento": "Valor Total à Vista - Pix/Débito",
+            "deal_forma_de_pagamento": "",
             "deal_ja_conhece_a_portu": "",
             "deal_qual_e_o_seu_model": "",
             "deal_quantas_pessoas_te": "",
@@ -313,19 +385,31 @@
             "deal_momento_atual": "",
             "deal_tipo_de_cliente": "",
             "deal_orcamento_do_cliente": "",
-            "deal_qual_tipo_de_servico": "Recrutamento e Seleção",
+            "deal_qual_tipo_de_servico": "",
             "deal_💬_como_ficou_sabend": "",
-            "deal_voce_esta_com_alguma": "Sim",
-            "deal_funil": "sessao-estrategica",
+            "deal_voce_esta_com_alguma": "",
+            "deal_funil": "",
             "deal_essa_e_uma_vaga_exec": "",
-            "deal_prazo_de_garantia": "60 dias",
+            "deal_prazo_de_garantia": "",
             "deal_sites_eou_redes_soci": "",
             "deal_nome_da_vaga": "",
             "deal_parceiro": "",
             "deal_celula": "",
             "deal_voces_ja_tem_um_prod": "",
             "deal_qual_foi_o_seu_fatur": "",
-            "deal_qual_e_a_meta_de_fat": ""
+            "deal_qual_e_a_meta_de_fat": "",
+            "organization_nome_fantasia": "Automagic bots",
+            "deal_nome_do_responsavel_1": "Mateus",
+            "deal_nome_do_representant": "Gabriel Amaral",
+            "deal_nome_do_responsavel_2": "Amaral",
+            "deal_nome_do_ponto_de_con": "Gabriel",
+            "deal_whatsapp_ponto_de_co": "+5531985711260",
+            "organization_endereco_fiscal": "RUa Julio bento cardoso",
+            "organization_razao_social": "Automagic Bots LTDA",
+            "organization_cnpj": "45157482000126",
+            "deal_origin": "Comercial",
+            "deal_detalhamento_da_orig": "Anuncio",
+            "deal_categoria_do_cliente": "Agencia"
           },
           "webhookUrl": "https://webhooks.portusdigital.com.br/webhook/venda_clint",
           "executionMode": "production"
@@ -345,6 +429,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-02-14T19:54:43.415Z",
-  "versionId": "2881494a-b955-42ad-85d0-5c4e60c1234f"
+  "updatedAt": "2025-03-19T20:32:47.288Z",
+  "versionId": "5b739dc9-67ff-4921-8eaf-691d456fa9e1"
 }
