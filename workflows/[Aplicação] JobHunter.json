@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "Webhook": {
       "main": [
@@ -24,9 +24,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:31.990Z",
-  "id": "C99oxgU1yVcxqiHB",
-  "meta": null,
+  "createdAt": "2024-12-03T19:12:58.372Z",
+  "id": "oUSlABb7pxPJJNlD",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "[Aplicação] JobHunter",
   "nodes": [
     {
@@ -98,8 +100,8 @@
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
-          "name": "[Google Sheets] - Automagic Bots"
+          "id": "ZaWeoW3t9GWDnGXA",
+          "name": "[Google Sheets] - AutomagicBots Auth"
         }
       }
     },
@@ -121,17 +123,178 @@
       ]
     }
   ],
-  "pinData": null,
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "GuzzleHttp/7",
+            "content-length": "3396",
+            "content-type": "application/json",
+            "traceparent": "00-674f5ac100000000affb322ba8b61afa-0f814de41f87aaeb-01",
+            "tracestate": "dd=p:0f814de41f87aaeb;t.dm:-1",
+            "x-datadog-parent-id": "1117259824741460715",
+            "x-datadog-sampling-priority": "1",
+            "x-datadog-tags": "_dd.p.tid=674f5ac100000000,_dd.p.dm=-1",
+            "x-datadog-trace-id": "12680784338887252730",
+            "x-forwarded-for": "3.84.40.243",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "3.84.40.243",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "form": {
+              "form_name": "Aplicação JobHunter",
+              "form_id": "MwIktV23"
+            },
+            "respondent": {
+              "status": "completed",
+              "date": "2024-12-03 19:22:58",
+              "score": null,
+              "respondent_id": "d9106e73-816c-4433-b030-d4b91d99d73a",
+              "answers": {
+                "Esse modelo de programa faz sentido para você?": "Sim",
+                "Seu nome": "Teste",
+                "Seu e-mail": "teste@automagicbots.com.br",
+                "Seu whatsapp": "55 83998539693",
+                "Seu instagram": "heltonrdgs",
+                "Você já é um aluno de algum dos programas Portüs?": "Sim",
+                "Descreva de forma detalhada qual o seu momento atual.": "teste",
+                "Você já faz parte de grupos de mentoria e/ou formações? Se sim, quais?": "teste",
+                "Qual é a sua remuneração média mensal?": "Acima de R$ 20.000",
+                "Há quanto tempo você recebe a mesma remuneração?": "Mais de 3 anos",
+                "Porque você acredita que participar desse programa é a oportunidade ideal para você e para o crescimento da sua carreira no digital?": "teste",
+                "O investimento para participação do programa é de R$ 5.000,00 (à vista) podendo ser parcelado em 6x de R$ 1.000. Você tem capacidade de investir este valor agora em você e no crescimento da sua carreira?": "Sim"
+              },
+              "raw_answers": [
+                {
+                  "question": {
+                    "question_title": "Esse modelo de programa faz sentido para você?",
+                    "question_id": "x9bqlq66lqiw",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Sim"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Seu nome",
+                    "question_id": "40b19f45224c",
+                    "question_type": "name"
+                  },
+                  "answer": "Teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Seu e-mail",
+                    "question_id": "x0rj6ybn0vvrj",
+                    "question_type": "email"
+                  },
+                  "answer": "teste@automagicbots.com.br"
+                },
+                {
+                  "question": {
+                    "question_title": "Seu whatsapp",
+                    "question_id": "xkqmibu2a0ms",
+                    "question_type": "phone"
+                  },
+                  "answer": {
+                    "country": "55",
+                    "phone": "83998539693"
+                  }
+                },
+                {
+                  "question": {
+                    "question_title": "Seu instagram",
+                    "question_id": "x2rtlmptf6lt",
+                    "question_type": "text"
+                  },
+                  "answer": "heltonrdgs"
+                },
+                {
+                  "question": {
+                    "question_title": "Você já é um aluno de algum dos programas Portüs?",
+                    "question_id": "xdzueo4dgkkf",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Sim"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Descreva de forma detalhada qual o seu momento atual.",
+                    "question_id": "xhr7ebpt8t8q",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Você já faz parte de grupos de mentoria e/ou formações? Se sim, quais?",
+                    "question_id": "xduo81kd63nn",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Qual é a sua remuneração média mensal?",
+                    "question_id": "xiqrx8ou7oqc",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Acima de R$ 20.000"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Há quanto tempo você recebe a mesma remuneração?",
+                    "question_id": "xt8kd4yxw4pq",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Mais de 3 anos"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Porque você acredita que participar desse programa é a oportunidade ideal para você e para o crescimento da sua carreira no digital?",
+                    "question_id": "xgygh9bxcyln",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "O investimento para participação do programa é de R$ 5.000,00 (à vista) podendo ser parcelado em 6x de R$ 1.000. Você tem capacidade de investir este valor agora em você e no crescimento da sua carreira?",
+                    "question_id": "xfdw591dznvc",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Sim"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": false,
-    "saveDataErrorExecution": "all",
-    "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "executionOrder": "v1"
   },
   "staticData": null,
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2025-02-04T17:45:31.990Z",
-  "versionId": "26c90153-0ab3-442d-898e-aedc5bac1fe3"
+  "triggerCount": 1,
+  "updatedAt": "2024-12-03T19:34:49.572Z",
+  "versionId": "be91fc1a-6795-41c9-b025-51eaa89b4e8e"
 }
