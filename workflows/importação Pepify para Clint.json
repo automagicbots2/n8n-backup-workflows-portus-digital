@@ -64,9 +64,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:31.940Z",
-  "id": "8jXb7mVDfPv8iGdw",
-  "meta": null,
+  "createdAt": "2025-01-18T00:33:40.448Z",
+  "id": "nVKnjLSafGR5sG8M",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "importação Pepify para Clint",
   "nodes": [
     {
@@ -306,23 +308,19 @@
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
-          "name": "[Google Sheets] - Automagic Bots"
+          "id": "ZaWeoW3t9GWDnGXA",
+          "name": "[Google Sheets] - AutomagicBots Auth"
         }
       }
     }
   ],
-  "pinData": null,
+  "pinData": {},
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": false,
-    "saveDataErrorExecution": "all",
-    "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "executionOrder": "v1"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-02-04T17:45:31.940Z",
-  "versionId": "736906c6-414e-44e1-94ce-f96151836986"
+  "updatedAt": "2025-01-23T18:32:38.730Z",
+  "versionId": "ed0960a7-9cca-4ddd-aa6d-ea29106e23a4"
 }
