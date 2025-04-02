@@ -807,9 +807,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:33.725Z",
-  "id": "OZsIIXFwqNGIaEeG",
-  "meta": null,
+  "createdAt": "2024-04-30T17:16:56.147Z",
+  "id": "Aya5OrDKu3shPwnm",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "[SESSÃO ESTRATÉGICA] APLICAÇÃO | PARTE 3",
   "nodes": [
     {
@@ -962,7 +964,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1021,7 +1023,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1080,7 +1082,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1199,7 +1201,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1298,7 +1300,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1361,7 +1363,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1424,7 +1426,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1527,7 +1529,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1590,7 +1592,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1929,7 +1931,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1992,7 +1994,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2055,7 +2057,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2118,7 +2120,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2185,7 +2187,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2252,7 +2254,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2319,7 +2321,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2382,7 +2384,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2449,7 +2451,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2508,7 +2510,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2571,7 +2573,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2634,7 +2636,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2697,7 +2699,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2764,7 +2766,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2831,7 +2833,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2894,7 +2896,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2961,7 +2963,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3028,7 +3030,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3060,7 +3062,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "quc6gfdQpKCDLaHX",
+          "id": "UNsBZpoYhAtf5Api",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -3123,7 +3125,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "quc6gfdQpKCDLaHX",
+          "id": "UNsBZpoYhAtf5Api",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -3409,17 +3411,111 @@
       ]
     }
   ],
-  "pinData": null,
+  "pinData": {
+    "chega_da_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag-Mvbo4TPwYcEOL98Y7GI_qA",
+            "deliveryTag": 1,
+            "redelivered": false,
+            "exchange": "",
+            "routingKey": "Não Agendamentos - Sessão - Parte 3"
+          },
+          "properties": {},
+          "content": {
+            "verificacao_lead": false,
+            "Nome do Cliente": "Mateus Diniz (automagic Bots)",
+            "E-mail do Cliente": "mateusdiniz@automagicbots.com.br",
+            "Telefone do Cliente - Formato BC": "+556281196678",
+            "Telefone do Cliente - Formato Z-API": "556281196678",
+            "utm_content": "",
+            "utm_source": "",
+            "utm_campaign": "",
+            "utm_medium": "",
+            "utm_term": "",
+            "instagram": "prmateusdiniz",
+            "id_fluxo_nao_agendou_10_min": "3065086",
+            "API-KEY": "46dacadf-10d0-47db-a81d-69263aca1959",
+            "pergunta0": "Automagic Bots",
+            "pergunta1": "Sim",
+            "pergunta2": "Entre 5 e 10M",
+            "pergunta3": "10 Milhões",
+            "pergunta4": "⁠6 a 15 pessoas",
+            "pergunta5": "Prestação de serviços",
+            "pergunta6": "SDR",
+            "pergunta7": "",
+            "parceiro": "Sessão Estratégica",
+            "id_pipeline_ac": "",
+            "id_stage_preencheu_aplicacao": "",
+            "id_campo_utm_source_ac": "",
+            "id_campo_utm_campaign_ac": "",
+            "id_campo_utm_term_ac": "",
+            "id_campo_utm_medium_ac": "",
+            "id_campo_utm_content_ac": "",
+            "id_campo_utm_fun_ac": "",
+            "id_campo_utm_var_ac": "",
+            "id_campo_deal_momento_atual": "",
+            "id_campo_deal_principal_desafio": "",
+            "id_campo_deal_renda_mensal": "",
+            "id_campo_deal_instagram": "",
+            "id_stage_desqualificado": "",
+            "id_pipeline_downsell": "",
+            "valor_produto_principal_em_centavos": "",
+            "valor_produto_downsell_em_centavos": "",
+            "url_api_activecampaign": "",
+            "id_campo_deal_oportunidade": "",
+            "id_campo_deal_porque_voce": "",
+            "id_campo_deal_quando_iniciar": "",
+            "id_campo_deal_concorda_com_o_investimento": "",
+            "id_campo_deal_estrategias_de_vendas": "",
+            "id_campo_deal_conhece_a_mentoria": "",
+            "id_campo_deal_tem_socio": "",
+            "id_campo_deal_preferencia": "",
+            "id_campo_deal_aceita_6_meses": "",
+            "id_sdr": "",
+            "id_campo_deal_origem": "",
+            "id_ending_typeform": "",
+            "id_campo_deal_empreende_no_digital": "",
+            "id_campo_deal_e_terapeuta": "",
+            "id_campo_id_banco_de_dados_bot_conversa": "1776703",
+            "id_campo_id_banco_de_dados_ac": "",
+            "id_campo_iddealac_bot_conversa": "",
+            "id_campo_idleadac_bot_conversa": "",
+            "id_campo_utm_source_bot_conversa": "1780336",
+            "id_campo_utm_campaign_bot_conversa": "1780335",
+            "id_campo_utm_term_bot_conversa": "1780334",
+            "id_campo_utm_medium_bot_conversa": "1780337",
+            "id_campo_utm_content_bot_conversa": "1780338",
+            "id_campo_utm_fun_bot_conversa": "1780345",
+            "id_campo_utm_var_bot_conversa": "1780344",
+            "id_campo_instagram_bot_conversa": "1776705",
+            "funil": "Prestação de serviços",
+            "variacao_do_funil": "v1",
+            "data_ultima_quinzena": "2024-04-15",
+            "id_campo_emailse_bot_conversa": "1780340",
+            "id_tag_desqualificado_bot_conversa": "6979786",
+            "id_tag_qualificado_bot_conversa": "7005347",
+            "data_resposta_type": "30/04/2024 16:38",
+            "id_campo_data_resposta_type_bot_conversa": "1789193",
+            "qualificacao": "Qualificado",
+            "instagram_bd": "prmateusdiniz",
+            "telefone_bd": "556281196678",
+            "id_lead_bd": 42
+          }
+        }
+      }
+    ]
+  },
   "settings": {
-    "saveExecutionProgress": false,
-    "saveManualExecutions": false,
-    "saveDataErrorExecution": "none",
-    "saveDataSuccessExecution": "none",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-02-04T20:37:04.809Z",
-  "versionId": "b3a3c575-f16d-4c84-9aa2-e113513beaea"
+  "updatedAt": "2024-05-07T15:48:39.523Z",
+  "versionId": "69f50cf6-9c25-4ac8-9fae-070c2e90274d"
 }
