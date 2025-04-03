@@ -1047,11 +1047,9 @@
       ]
     }
   },
-  "createdAt": "2024-03-14T13:32:55.910Z",
-  "id": "wyYV5duvhx09x2Uf",
-  "meta": {
-    "templateCredsSetupCompleted": true
-  },
+  "createdAt": "2025-02-04T17:45:32.783Z",
+  "id": "kRaiOXxR7EzGyKil",
+  "meta": null,
   "name": "📅⌚[PORTUS][SE] - CALENDLY | PARTE 2",
   "nodes": [
     {
@@ -1139,7 +1137,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1244,7 +1242,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1422,7 +1420,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1477,7 +1475,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1528,7 +1526,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1583,7 +1581,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1638,7 +1636,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1697,7 +1695,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1756,7 +1754,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1855,7 +1853,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1910,7 +1908,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1969,7 +1967,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2050,7 +2048,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2087,7 +2085,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2147,7 +2145,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2212,7 +2210,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2276,7 +2274,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2352,7 +2350,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2390,7 +2388,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2489,7 +2487,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2568,7 +2566,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2633,7 +2631,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2714,7 +2712,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2805,7 +2803,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2880,7 +2878,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2927,7 +2925,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3006,7 +3004,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3070,7 +3068,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3117,7 +3115,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3191,7 +3189,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "UNsBZpoYhAtf5Api",
+          "id": "quc6gfdQpKCDLaHX",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -3353,7 +3351,7 @@
       "alwaysOutputData": true,
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3473,7 +3471,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -3553,7 +3551,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -3600,7 +3598,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -3641,7 +3639,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -3682,8 +3680,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
-          "name": "[PIPEFY] - Portus"
+          "name": "[PIPEFY] - PORTUS"
         }
       },
       "disabled": true
@@ -3724,8 +3721,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
-          "name": "[PIPEFY] - Portus"
+          "name": "[PIPEFY] - PORTUS"
         }
       },
       "disabled": true
@@ -3772,7 +3768,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -3819,7 +3815,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -3866,7 +3862,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -3901,7 +3897,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -4095,7 +4091,7 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "ZrEMMiehYrEAsQ7Z",
+          "id": "7F0hUjKvKkREj86b",
           "name": "[PIPEFY] - Portus"
         }
       }
@@ -4365,103 +4361,17 @@
       ]
     }
   ],
-  "pinData": {
-    "entra_na_fila": [
-      {
-        "json": {
-          "fields": {
-            "consumerTag": "amq.ctag-5knfVsiAnvUPUdEGAO-XqA",
-            "deliveryTag": 1,
-            "redelivered": false,
-            "exchange": "",
-            "routingKey": "Calendly - Sessão Estratégica"
-          },
-          "properties": {
-            "headers": {
-              "x-delivery-count": 882
-            }
-          },
-          "content": {
-            "Nome do Cliente": "Vinicius Souza",
-            "E-mail do Cliente": "vinicius@preditiva.ai",
-            "Telefone do Cliente - Formato BC": "5511974932385",
-            "Telefone do Cliente - Formato Z-API": "5511974932385",
-            "Tipo de Evento": "Reunião Estratégica Portüs",
-            "ID do Evento": "d2729d99-26b3-4b6a-92ed-044690e58b50",
-            "Responsável pelo Evento": "Marcelo Eleto",
-            "E-mail do Responsável": "marcelo.eleto@portusdigital.com.br",
-            "Data de Início": "31/05/2024 10:30",
-            "Data em que foi feito o Agendamento": "29/05/2024 18:26",
-            "Data de Término": "31/05/2024, 11:15",
-            "Dia da Semana de Início do Evento": "Sexta-feira",
-            "Link da Reunião": "https://calendly.com/events/d2729d99-26b3-4b6a-92ed-044690e58b50/google_meet",
-            "utm_source": null,
-            "utm_campaign": null,
-            "utm_term": null,
-            "utm_medium": null,
-            "utm_content": null,
-            "ID do Cliente": "46100a7a-b69b-47b7-90b5-7c0cd08d628f",
-            "id_do_campo_id_do_agendamento_bot_conversa": "",
-            "fluxo_de_confirmacao_de_agendamento": "",
-            "API-KEY": "",
-            "id_do_campo_link_da_reuniao_bot_conversa": "",
-            "id_do_campo_dia_da_semana_do_agendamento_bot_conversa": "",
-            "id_do_campo_data_do_agendamento_bot_conversa": "",
-            "id_do_campo_horario_agendado_bot_conversa": "",
-            "id_do_campo_id_banco_de_dados_bot_conversa": "",
-            "id_do_campo_idleadac_bot_conversa": "",
-            "id_do_campo_iddealac_bot_conversa": "",
-            "id_campo_id_banco_de_dados_ac": "",
-            "valor_produto_principal_em_centavos": "",
-            "id_stage_agendou_reuniao_ac": "",
-            "funil": "sessao_estrategica",
-            "variacao_do_funil": "v1",
-            "id_pipeline_se_ac": "",
-            "id_sdr": "marcelo.eleto@portusdigital.com.br",
-            "url_api_activecampaign": "",
-            "id_campo_link_de_cancelamento_ac": "",
-            "id_campo_link_de_reagendamento_ac": "",
-            "id_campo_id_do_cliente_ac": "",
-            "id_campo_dia_semana_agendamento_ac": "",
-            "id_campo_data_de_inicio_ac": "",
-            "id_campo_data_e_hora_de_inicio_ac": "",
-            "id_campo_data_e_hora_de_termino_ac": "",
-            "id_campo_data_de_termino_ac": "",
-            "id_campo_email_do_responsavel_ac": "",
-            "id_campo_data_do_agendamento_ac": "",
-            "id_campo_link_da_reuniao_ac": "",
-            "id_campo_tipo_de_evento_ac": "",
-            "id_campo_id_do_evento_ac": "",
-            "id_campo_utm_source_ac": "",
-            "id_campo_utm_campaign_ac": "",
-            "id_campo_utm_term_ac": "",
-            "id_campo_utm_medium_ac": "",
-            "id_campo_utm_content_ac": "",
-            "id_campo_utm_fun_ac": "",
-            "id_campo_utm_var_ac": "",
-            "id_do_campo_id_do_cliente_bot_conversa": "",
-            "id_task_reuniao_ac": ""
-          }
-        }
-      }
-    ]
-  },
+  "pinData": null,
   "settings": {
-    "executionOrder": "v1",
-    "saveManualExecutions": true,
-    "callerPolicy": "workflowsFromSameOwner",
-    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+    "saveExecutionProgress": false,
+    "saveManualExecutions": false,
+    "saveDataErrorExecution": "none",
+    "saveDataSuccessExecution": "none",
+    "errorWorkflow": "B5ErT6ObkzMJxzKU"
   },
   "staticData": null,
-  "tags": [
-    {
-      "createdAt": "2024-03-14T13:33:22.111Z",
-      "updatedAt": "2024-03-14T13:33:22.111Z",
-      "id": "NmSVhz84cYdYk5XP",
-      "name": "[Calendly]"
-    }
-  ],
+  "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-07-03T18:28:56.396Z",
-  "versionId": "52902013-dd06-42bc-a264-c45797a90a55"
+  "updatedAt": "2025-02-04T20:36:25.150Z",
+  "versionId": "21801673-7468-4151-aa68-ce64a12a5489"
 }
