@@ -340,11 +340,9 @@
       ]
     }
   },
-  "createdAt": "2024-04-30T18:40:05.788Z",
-  "id": "Z7xrL27dlurHIffD",
-  "meta": {
-    "templateCredsSetupCompleted": true
-  },
+  "createdAt": "2025-02-04T17:45:33.290Z",
+  "id": "dugp1gaG9rKzBiYM",
+  "meta": null,
   "name": "[SESSÃO ESTRATÉGICA] APLICAÇÃO | PARTE 4",
   "nodes": [
     {
@@ -374,7 +372,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "UNsBZpoYhAtf5Api",
+          "id": "quc6gfdQpKCDLaHX",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -451,7 +449,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -515,7 +513,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -583,7 +581,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -650,7 +648,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -687,7 +685,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -752,7 +750,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -820,7 +818,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -884,7 +882,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -951,7 +949,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -994,7 +992,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1037,7 +1035,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1080,7 +1078,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1123,7 +1121,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1233,7 +1231,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1317,7 +1315,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1382,7 +1380,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1480,7 +1478,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1544,86 +1542,23 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
     }
   ],
-  "pinData": {
-    "chega_da_fila": [
-      {
-        "json": {
-          "fields": {
-            "consumerTag": "amq.ctag-aljk3y9N4Hj-9JerLCYXqg",
-            "deliveryTag": 2,
-            "redelivered": false,
-            "exchange": "",
-            "routingKey": "Não Agendamentos - Sessão - Parte 4"
-          },
-          "properties": {
-            "headers": {
-              "x-delivery-count": 17376
-            }
-          },
-          "content": {
-            "verificacao_lead": false,
-            "Nome do Cliente": "Lucas",
-            "E-mail do Cliente": "lucaspaiva.md@gmail.com",
-            "Telefone do Cliente - Formato Z-API": "556193737930",
-            "Instagram": "lucas.paiva",
-            "id_lead_bd": 87,
-            "utm_source": "",
-            "utm_campaign": "",
-            "utm_term": "",
-            "utm_medium": "",
-            "utm_content": "",
-            "funil": "",
-            "variacao_do_funil": "v1",
-            "id_campo_id_banco_de_dados_ac": "",
-            "pergunta0": "Traction Sales",
-            "pergunta1": "Sim",
-            "pergunta2": "Abaixo de 1M",
-            "pergunta3": "1M",
-            "pergunta4": "⁠1 a 5 pessoas",
-            "pergunta5": "Prestação de serviços",
-            "pergunta6": "Gestor comercial",
-            "pergunta7": "",
-            "parceiro": "Sessão Estratégica",
-            "id_tag_desqualificado_bot_conversa": "6979786",
-            "id_campo_utm_var_bot_conversa": "1780344",
-            "id_campo_utm_fun_bot_conversa": "1780345",
-            "id_campo_utm_medium_bot_conversa": "1780337",
-            "id_campo_utm_source_bot_conversa": "1780336",
-            "id_campo_utm_campaign_bot_conversa": "1780335",
-            "id_campo_utm_term_bot_conversa": "1780334",
-            "id_campo_utm_content_bot_conversa": "1780338",
-            "id_campo_id_banco_de_dados_bot_conversa": "1776703",
-            "id_campo_iddealac_bot_conversa": "",
-            "id_campo_idleadac_bot_conversa": "",
-            "id_campo_emailse_bot_conversa": "1780340",
-            "url_api_activecampaign": "",
-            "qualificacao": "Qualificado",
-            "API-KEY": "46dacadf-10d0-47db-a81d-69263aca1959",
-            "id_ending_typeform": "",
-            "id_tag_qualificado_bot_conversa": "7005347",
-            "data_ultima_quinzena": "2024-04-30",
-            "origem": "",
-            "celula": ""
-          }
-        }
-      }
-    ]
-  },
+  "pinData": null,
   "settings": {
-    "executionOrder": "v1",
-    "saveManualExecutions": true,
-    "callerPolicy": "workflowsFromSameOwner",
-    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+    "saveExecutionProgress": false,
+    "saveManualExecutions": false,
+    "saveDataErrorExecution": "none",
+    "saveDataSuccessExecution": "none",
+    "errorWorkflow": "B5ErT6ObkzMJxzKU"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-05-16T17:18:56.040Z",
-  "versionId": "12935df2-357f-450f-9dcc-609a540e5771"
+  "updatedAt": "2025-02-04T20:38:05.171Z",
+  "versionId": "68518b99-0d23-4bf1-a284-56d85e8b36af"
 }
