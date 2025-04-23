@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "forms_trafego": {
       "main": [
@@ -146,9 +146,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:31.706Z",
-  "id": "xn89VeOfr2oZPxPq",
-  "meta": null,
+  "createdAt": "2024-05-10T17:32:04.371Z",
+  "id": "gISLELWW70ebT6Al",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "⌚[PORTUS][WEBINAR] | Respondeu Forms",
   "nodes": [
     {
@@ -501,7 +503,7 @@
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
+          "id": "6haYpAmOsZXFxR68",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
@@ -848,7 +850,7 @@
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
+          "id": "6haYpAmOsZXFxR68",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
@@ -907,7 +909,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "quc6gfdQpKCDLaHX",
+          "id": "UNsBZpoYhAtf5Api",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -1548,7 +1550,7 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
+          "id": "6haYpAmOsZXFxR68",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
@@ -1590,7 +1592,7 @@
       "maxTries": 5,
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
+          "id": "6haYpAmOsZXFxR68",
           "name": "[Google Sheets] - Automagic Bots"
         }
       },
@@ -1873,7 +1875,7 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
+          "id": "6haYpAmOsZXFxR68",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
@@ -1894,17 +1896,409 @@
       "webhookId": "2ae5dd76-babf-4fde-83f7-c76e1ad63d1b"
     }
   ],
-  "pinData": null,
+  "pinData": {
+    "forms_trafego": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "GuzzleHttp/7",
+            "content-length": "4325",
+            "content-type": "application/json",
+            "x-forwarded-for": "3.227.253.214",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "3.227.253.214",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "form": {
+              "form_name": "[Mapeamento] [F.WB [PORTUS] - MAI| 24] Sala secreta: Escala com Time",
+              "form_id": "iYIWQfMG"
+            },
+            "respondent": {
+              "status": "completed",
+              "date": "2024-05-10 17:39:01",
+              "score": null,
+              "respondent_id": "d27411c5-360f-4e2d-b2b2-9dbcb6896f09",
+              "answers": {
+                "Seu DDD + WhatsApp": "55 62981196678",
+                "Já conhecia a Kelly Eleto?": "Acabei de conhecer através do anúncio",
+                "O que fez você se inscrever para a sala secreta de estruturação de time? Fale um pouco sobre como você espera que isso te ajude nesse momento.": "teste",
+                "Faz parte de algum mastermind ou mentoria? Se sim, qual?": "teste",
+                "Você é dono de um negócio digital?": "Sim",
+                "Qual é o seu modelo de negócio?": "Prestação de serviços",
+                "Quantas pessoas trabalham na sua empresa?": "1 a 5 pessoas",
+                "Fale um pouquinho sobre como é a sua estrutura de time...": "teste",
+                "E o que te deixa mais insatisfeito com esse time hoje?": "teste",
+                "Hoje você está preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?": "teste",
+                "Quanto seu negócio faturou aproximadamente nos últimos 12 meses?": "Entre 500K e 1M",
+                "E qual é a sua meta de faturamento para 2024?": "teste",
+                "Quando a gente fala em contratação e estruturação de equipe, qual tem sido a sua principal dificuldade?": "teste",
+                "Você está com vagas abertas para contratar agora?": "Estou com uma vaga aberta",
+                "A Kelly pode (re)estruturar sua equipe ao vivo na sala secreta?": "Sim, 100% liberado"
+              },
+              "raw_answers": [
+                {
+                  "question": {
+                    "question_title": "Seu DDD + WhatsApp",
+                    "question_id": "c9aa3cb15425",
+                    "question_type": "phone"
+                  },
+                  "answer": {
+                    "country": "55",
+                    "phone": "62981196678"
+                  }
+                },
+                {
+                  "question": {
+                    "question_title": "Já conhecia a Kelly Eleto?",
+                    "question_id": "x5wasi9xpu4",
+                    "question_type": "select"
+                  },
+                  "answer": "Acabei de conhecer através do anúncio"
+                },
+                {
+                  "question": {
+                    "question_title": "O que fez você se inscrever para a sala secreta de estruturação de time? Fale um pouco sobre como você espera que isso te ajude nesse momento.",
+                    "question_id": "xvcnpuezr19e",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Faz parte de algum mastermind ou mentoria? Se sim, qual?",
+                    "question_id": "x5og03frcx9d",
+                    "question_type": "text"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Você é dono de um negócio digital?",
+                    "question_id": "xnoctey0bj4l",
+                    "question_type": "select"
+                  },
+                  "answer": "Sim"
+                },
+                {
+                  "question": {
+                    "question_title": "Qual é o seu modelo de negócio?",
+                    "question_id": "x6rgx7i4jup9",
+                    "question_type": "select"
+                  },
+                  "answer": "Prestação de serviços"
+                },
+                {
+                  "question": {
+                    "question_title": "Quantas pessoas trabalham na sua empresa?",
+                    "question_id": "x9d1gu2ko6ee",
+                    "question_type": "select"
+                  },
+                  "answer": "1 a 5 pessoas"
+                },
+                {
+                  "question": {
+                    "question_title": "Fale um pouquinho sobre como é a sua estrutura de time...",
+                    "question_id": "xll79kjf1v5a",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "E o que te deixa mais insatisfeito com esse time hoje?",
+                    "question_id": "xb3snkp05d0h",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Hoje você está preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?",
+                    "question_id": "xfpjro507zg5",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Quanto seu negócio faturou aproximadamente nos últimos 12 meses?",
+                    "question_id": "xzm16s37rqhj",
+                    "question_type": "select"
+                  },
+                  "answer": "Entre 500K e 1M"
+                },
+                {
+                  "question": {
+                    "question_title": "E qual é a sua meta de faturamento para 2024?",
+                    "question_id": "x1wk90btcj44",
+                    "question_type": "text"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Quando a gente fala em contratação e estruturação de equipe, qual tem sido a sua principal dificuldade?",
+                    "question_id": "xzzz2wyba4ok",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Você está com vagas abertas para contratar agora?",
+                    "question_id": "xl5j8p0n4ob",
+                    "question_type": "select"
+                  },
+                  "answer": "Estou com uma vaga aberta"
+                },
+                {
+                  "question": {
+                    "question_title": "A Kelly pode (re)estruturar sua equipe ao vivo na sala secreta?",
+                    "question_id": "xzy92qt1qyn",
+                    "question_type": "select"
+                  },
+                  "answer": "Sim, 100% liberado"
+                }
+              ],
+              "respondent_utms": null
+            }
+          }
+        }
+      }
+    ],
+    "forms_organico": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "GuzzleHttp/7",
+            "content-length": "4629",
+            "content-type": "application/json",
+            "x-forwarded-for": "3.227.253.214",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "3.227.253.214",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "form": {
+              "form_name": "[Captura - Orgânico] [F.WB [PORTUS] - MAI| 24] Sala secreta: Escala com Time",
+              "form_id": "xuFftEYX"
+            },
+            "respondent": {
+              "status": "completed",
+              "date": "2024-05-10 18:18:43",
+              "score": 4,
+              "respondent_id": "47ea7f4e-ce79-4969-b1bb-4255cf26d043",
+              "answers": {
+                "Seu nome": "Mateus Diniz",
+                "Seu DDD + WhatsApp": "55 62981196678",
+                "Seu melhor e-mail": "mateusdiniz@automagicbots.com.br",
+                "Qual o @ do seu Instagram": "prmateusdiniz",
+                "O que fez você se inscrever para a sala secreta de estruturação de time? Fale um pouco sobre como você espera que isso te ajude nesse momento.": "testando",
+                "Faz parte de algum mastermind ou mentoria? Se sim, qual?": "teste",
+                "Você é dono de um negócio digital?": "Não sou o dono, mas sou um dos decisores",
+                "Qual é o seu modelo de negócio?": "Tecnologia",
+                "Quantas pessoas trabalham na sua empresa?": "6 a 15 pessoas",
+                "Fale um pouquinho sobre como é a sua estrutura de time...": "teste",
+                "E o que te deixa mais insatisfeito com esse time hoje?": "teste",
+                "Hoje você está preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?": "teste",
+                "Quanto seu negócio faturou aproximadamente nos últimos 12 meses?": "Entre 3 e 5M",
+                "E qual é a sua meta de faturamento para 2024?": "teste",
+                "Quando a gente fala em contratação e estruturação de equipe, qual tem sido a sua principal dificuldade?": "teste",
+                "Você está com vagas abertas para contratar agora?": "Estou com uma vaga aberta",
+                "Posso (re)estruturar sua equipe ao vivo na sala secreta?": "Sim, 100% liberado"
+              },
+              "raw_answers": [
+                {
+                  "question": {
+                    "question_title": "Seu nome",
+                    "question_id": "xmz5s8c7anmn",
+                    "question_type": "name"
+                  },
+                  "answer": "Mateus Diniz"
+                },
+                {
+                  "question": {
+                    "question_title": "Seu DDD + WhatsApp",
+                    "question_id": "c9aa3cb15425",
+                    "question_type": "phone"
+                  },
+                  "answer": {
+                    "country": "55",
+                    "phone": "62981196678"
+                  }
+                },
+                {
+                  "question": {
+                    "question_title": "Seu melhor e-mail",
+                    "question_id": "xzkh00ybj0rr",
+                    "question_type": "email"
+                  },
+                  "answer": "mateusdiniz@automagicbots.com.br"
+                },
+                {
+                  "question": {
+                    "question_title": "Qual o @ do seu Instagram",
+                    "question_id": "xev6bhg6cw0f",
+                    "question_type": "text"
+                  },
+                  "answer": "prmateusdiniz"
+                },
+                {
+                  "question": {
+                    "question_title": "O que fez você se inscrever para a sala secreta de estruturação de time? Fale um pouco sobre como você espera que isso te ajude nesse momento.",
+                    "question_id": "xvcnpuezr19e",
+                    "question_type": "textarea"
+                  },
+                  "answer": "testando"
+                },
+                {
+                  "question": {
+                    "question_title": "Faz parte de algum mastermind ou mentoria? Se sim, qual?",
+                    "question_id": "x5og03frcx9d",
+                    "question_type": "text"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Você é dono de um negócio digital?",
+                    "question_id": "xnoctey0bj4l",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Não sou o dono, mas sou um dos decisores"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Qual é o seu modelo de negócio?",
+                    "question_id": "x6rgx7i4jup9",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Tecnologia"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Quantas pessoas trabalham na sua empresa?",
+                    "question_id": "x9d1gu2ko6ee",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "6 a 15 pessoas"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Fale um pouquinho sobre como é a sua estrutura de time...",
+                    "question_id": "xll79kjf1v5a",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "E o que te deixa mais insatisfeito com esse time hoje?",
+                    "question_id": "xb3snkp05d0h",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Hoje você está preso no operacional do seu negócio? O que sente que isso te custa no dia a dia?",
+                    "question_id": "xfpjro507zg5",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Quanto seu negócio faturou aproximadamente nos últimos 12 meses?",
+                    "question_id": "xzm16s37rqhj",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Entre 3 e 5M"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "E qual é a sua meta de faturamento para 2024?",
+                    "question_id": "x1wk90btcj44",
+                    "question_type": "text"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Quando a gente fala em contratação e estruturação de equipe, qual tem sido a sua principal dificuldade?",
+                    "question_id": "xzzz2wyba4ok",
+                    "question_type": "textarea"
+                  },
+                  "answer": "teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Você está com vagas abertas para contratar agora?",
+                    "question_id": "xl5j8p0n4ob",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Estou com uma vaga aberta"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Posso (re)estruturar sua equipe ao vivo na sala secreta?",
+                    "question_id": "xzy92qt1qyn",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Sim, 100% liberado"
+                  ]
+                }
+              ],
+              "respondent_utms": null
+            }
+          }
+        }
+      }
+    ]
+  },
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": false,
+    "executionOrder": "v1",
     "saveDataErrorExecution": "all",
     "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
   },
   "staticData": null,
-  "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2025-02-04T17:45:31.706Z",
-  "versionId": "a3f022c8-5ebc-478b-a65b-146e81489668"
+  "tags": [
+    {
+      "createdAt": "2024-05-10T01:47:04.005Z",
+      "updatedAt": "2024-05-10T01:47:04.005Z",
+      "id": "n8TvkiIIDKme6cPt",
+      "name": "[WEBINAR]"
+    }
+  ],
+  "triggerCount": 2,
+  "updatedAt": "2024-05-17T20:03:26.936Z",
+  "versionId": "b13e104f-7552-4f53-a09d-53ae557c4503"
 }
