@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "atualiza_lead3": {
       "main": [
@@ -1058,11 +1058,9 @@
       ]
     }
   },
-  "createdAt": "2024-06-17T17:49:23.086Z",
-  "id": "CPZPTqP44cMEWCR4",
-  "meta": {
-    "templateCredsSetupCompleted": true
-  },
+  "createdAt": "2025-02-04T17:45:32.096Z",
+  "id": "QN1ObZmBpVEhneUw",
+  "meta": null,
   "name": "✅⌚[PORTUS] - CRIA CONTAS A PAGAR/RECEBER NO OMIE",
   "nodes": [
     {
@@ -1105,7 +1103,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1463,8 +1461,8 @@
       ],
       "credentials": {
         "httpHeaderAuth": {
-          "id": "YQkRlKZeE69i12Az",
-          "name": "[Asaas] - Portus"
+          "id": "7F0hUjKvKkREj86b",
+          "name": "[PIPEFY] - Portus"
         }
       }
     },
@@ -1592,7 +1590,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1643,7 +1641,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1703,7 +1701,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1783,7 +1781,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1862,7 +1860,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1899,7 +1897,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1939,7 +1937,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1999,7 +1997,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2064,7 +2062,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2128,7 +2126,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2189,7 +2187,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2260,7 +2258,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2386,7 +2384,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2449,7 +2447,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2517,7 +2515,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2571,7 +2569,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2657,7 +2655,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2718,7 +2716,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -2775,7 +2773,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3008,7 +3006,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3069,7 +3067,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3126,7 +3124,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3225,7 +3223,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3373,7 +3371,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3587,7 +3585,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3718,7 +3716,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -3822,7 +3820,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -4159,797 +4157,17 @@
       ]
     }
   ],
-  "pinData": {
-    "Asaas": [
-      {
-        "json": {
-          "headers": {
-            "host": "n8nwebhookportus.automagicbots.com.br",
-            "user-agent": "Java/1.8.0_282",
-            "content-length": "1363",
-            "accept": "application/json",
-            "accept-encoding": "gzip",
-            "cache-control": "no-cache",
-            "content-type": "application/json",
-            "pragma": "no-cache",
-            "traceparent": "00-66b436fb0000000024c1dad9aaabb064-7cf332b7b0574769-00",
-            "tracestate": "dd=s:0;p:3fb0d7062908e79e;t.tid:66b436fb00000000",
-            "x-datadog-parent-id": "9003595844562667369",
-            "x-datadog-sampling-priority": "0",
-            "x-datadog-tags": "_dd.p.tid=66b436fb00000000",
-            "x-datadog-trace-id": "2648638684276699236",
-            "x-forwarded-for": "52.67.12.206",
-            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
-            "x-forwarded-port": "443",
-            "x-forwarded-proto": "https",
-            "x-forwarded-server": "d71ef73d891d",
-            "x-real-ip": "52.67.12.206"
-          },
-          "params": {},
-          "query": {},
-          "body": {
-            "id": "evt_d26e303b238e509335ac9ba210e51b0f&700936613",
-            "event": "PAYMENT_RECEIVED",
-            "dateCreated": "2024-08-08 00:09:47",
-            "payment": {
-              "object": "payment",
-              "id": "pay_5fmluik0xhn3ot58",
-              "dateCreated": "2024-06-07",
-              "customer": "cus_000085931708",
-              "subscription": "sub_6g0ceiortg9l1sbw",
-              "paymentLink": null,
-              "value": 5000,
-              "netValue": 4850.01,
-              "originalValue": null,
-              "interestValue": null,
-              "description": "Cobrança referente ao Portus Partner Start. \n",
-              "billingType": "CREDIT_CARD",
-              "confirmedDate": "2024-07-07",
-              "creditCard": {
-                "creditCardNumber": "2591",
-                "creditCardBrand": "VISA"
-              },
-              "pixTransaction": null,
-              "status": "RECEIVED",
-              "dueDate": "2024-07-07",
-              "originalDueDate": "2024-07-07",
-              "paymentDate": "2024-08-08",
-              "clientPaymentDate": "2024-07-07",
-              "installmentNumber": null,
-              "invoiceUrl": "https://www.asaas.com/i/5fmluik0xhn3ot58",
-              "invoiceNumber": "407335129",
-              "externalReference": null,
-              "deleted": false,
-              "anticipated": false,
-              "anticipable": false,
-              "creditDate": "2024-08-08",
-              "estimatedCreditDate": "2024-08-08",
-              "transactionReceiptUrl": "https://www.asaas.com/comprovantes/2040485073707238",
-              "nossoNumero": null,
-              "bankSlipUrl": null,
-              "lastInvoiceViewedDate": null,
-              "lastBankSlipViewedDate": null,
-              "discount": {
-                "value": 0,
-                "limitDate": null,
-                "dueDateLimitDays": 0,
-                "type": "PERCENTAGE"
-              },
-              "fine": {
-                "value": 10,
-                "type": "PERCENTAGE"
-              },
-              "interest": {
-                "value": 1,
-                "type": "PERCENTAGE"
-              },
-              "postalService": false,
-              "custody": null,
-              "refunds": null
-            }
-          }
-        }
-      }
-    ],
-    "consulta_cc": [
-      {
-        "json": {
-          "pagina": 1,
-          "total_de_paginas": 1,
-          "registros": 13,
-          "total_de_registros": 13,
-          "ListarContasCorrentes": [
-            {
-              "bloqueado": "N",
-              "bol_instr1": "Sr. Caixa, receber até 10 dias após o vencimento.",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "999",
-              "data_alt": "14/06/2024",
-              "data_inc": "10/05/2024",
-              "descricao": "Caixinha",
-              "hora_alt": "16:12:37",
-              "hora_inc": "18:26:50",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1743800544,
-              "nao_fluxo": "S",
-              "nao_resumo": "S",
-              "pdv_categoria": "1.01.03",
-              "pdv_enviar": "S",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CX",
-              "tipo_conta_corrente": "CX",
-              "user_alt": "P000820536",
-              "user_inc": "P000564645"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "995",
-              "data_alt": "14/06/2024",
-              "data_inc": "16/05/2024",
-              "descricao": "ASAAS",
-              "hora_alt": "11:40:47",
-              "hora_inc": "14:39:14",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1745966235,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "observacao": "54393,55 - 31/12/2023",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_data": "31/12/2023",
-              "saldo_inicial": 54393.55,
-              "tipo": "CV",
-              "tipo_conta_corrente": "CV",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "077",
-              "data_alt": "14/06/2024",
-              "data_inc": "16/05/2024",
-              "descricao": "Banco Inter",
-              "hora_alt": "11:40:56",
-              "hora_inc": "14:40:27",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1745966686,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "observacao": "384.162,31 - 31/12/2023",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_data": "31/12/2023",
-              "saldo_inicial": 384162.31,
-              "tipo": "CC",
-              "tipo_conta_corrente": "CC",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "077",
-              "data_alt": "14/06/2024",
-              "data_inc": "16/05/2024",
-              "descricao": "Banco Inter - CDB",
-              "hora_alt": "16:12:23",
-              "hora_inc": "14:41:36",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1745967352,
-              "nao_fluxo": "S",
-              "nao_resumo": "S",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_data": "31/12/2023",
-              "saldo_inicial": 10000,
-              "tipo": "CA",
-              "tipo_conta_corrente": "CA",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "985",
-              "data_alt": "14/06/2024",
-              "data_inc": "29/05/2024",
-              "descricao": "Banco Inter - Cartão de Crédito",
-              "hora_alt": "16:12:29",
-              "hora_inc": "09:41:17",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1750670517,
-              "nao_fluxo": "S",
-              "nao_resumo": "S",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_data": "01/01/2024",
-              "saldo_inicial": 0,
-              "tipo": "CR",
-              "tipo_conta_corrente": "CR",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "985",
-              "data_alt": "30/05/2024",
-              "data_inc": "30/05/2024",
-              "descricao": "Visa Infinity Kelly Eleto",
-              "hora_alt": "17:51:00",
-              "hora_inc": "17:50:42",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1751266478,
-              "nao_fluxo": "S",
-              "nao_resumo": "S",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CR",
-              "tipo_conta_corrente": "CR",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "949",
-              "data_alt": "04/06/2024",
-              "data_inc": "04/06/2024",
-              "descricao": "Payoneer",
-              "hora_alt": "09:40:30",
-              "hora_inc": "09:40:12",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1752927053,
-              "nao_fluxo": "S",
-              "nao_resumo": "S",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CV",
-              "tipo_conta_corrente": "CV",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "A33",
-              "data_alt": "14/06/2024",
-              "data_inc": "05/06/2024",
-              "descricao": "Greenn",
-              "hora_alt": "16:11:51",
-              "hora_inc": "13:43:01",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1753663402,
-              "nao_fluxo": "S",
-              "nao_resumo": "S",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_data": "31/12/2023",
-              "saldo_inicial": 3995.01,
-              "tipo": "CV",
-              "tipo_conta_corrente": "CV",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cCodCCInt": "156",
-              "cobr_sn": "N",
-              "codigo_banco": "999",
-              "data_alt": "18/06/2024",
-              "data_inc": "18/06/2024",
-              "descricao": "Caixinha",
-              "hora_alt": "17:44:29",
-              "hora_inc": "17:44:29",
-              "importado_api": "S",
-              "inativo": "N",
-              "nCodCC": 1760342392,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CX",
-              "tipo_conta_corrente": "CX",
-              "user_alt": "WEBSERVICE",
-              "user_inc": "WEBSERVICE"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cCodCCInt": "1760452818",
-              "cobr_sn": "N",
-              "codigo_banco": "999",
-              "data_alt": "18/06/2024",
-              "data_inc": "18/06/2024",
-              "descricao": "Conta-corrente",
-              "hora_alt": "20:27:34",
-              "hora_inc": "20:27:34",
-              "importado_api": "S",
-              "inativo": "N",
-              "nCodCC": 1760455148,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CX",
-              "tipo_conta_corrente": "CX",
-              "user_alt": "WEBSERVICE",
-              "user_inc": "WEBSERVICE"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cCodCCInt": "103",
-              "cobr_sn": "N",
-              "codigo_banco": "999",
-              "data_alt": "19/06/2024",
-              "data_inc": "19/06/2024",
-              "descricao": "Conta-corrente",
-              "hora_alt": "14:50:42",
-              "hora_inc": "14:50:42",
-              "importado_api": "S",
-              "inativo": "N",
-              "nCodCC": 1760795572,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CX",
-              "tipo_conta_corrente": "CX",
-              "user_alt": "WEBSERVICE",
-              "user_inc": "WEBSERVICE"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cCodCCInt": "196",
-              "cobr_sn": "N",
-              "codigo_banco": "999",
-              "data_alt": "20/06/2024",
-              "data_inc": "20/06/2024",
-              "descricao": "Conta-corrente",
-              "hora_alt": "11:00:40",
-              "hora_inc": "11:00:40",
-              "importado_api": "S",
-              "inativo": "N",
-              "nCodCC": 1763330485,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CX",
-              "tipo_conta_corrente": "CX",
-              "user_alt": "WEBSERVICE",
-              "user_inc": "WEBSERVICE"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "S",
-              "codigo_agencia": "0001",
-              "codigo_banco": "450",
-              "data_alt": "31/05/2024",
-              "data_inc": "31/05/2024",
-              "descricao": "Omie.CASH",
-              "hora_alt": "17:38:20",
-              "hora_inc": "17:37:57",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1743800638,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "numero_conta_corrente": "4977667466-1",
-              "observacao": "Incluída automaticamente para a integração com o Omie.CASH.",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "per_juros": 1,
-              "per_multa": 2,
-              "pix_sn": "S",
-              "saldo_data": "31/05/2024",
-              "saldo_inicial": 0,
-              "tipo": "CC",
-              "tipo_conta_corrente": "CC",
-              "user_alt": "WEBSERVICE",
-              "user_inc": "WEBSERVICE"
-            }
-          ]
-        }
-      }
-    ],
-    "contas_correntes": [
-      {
-        "json": {
-          "pagina": 1,
-          "total_de_paginas": 1,
-          "registros": 13,
-          "total_de_registros": 13,
-          "ListarContasCorrentes": [
-            {
-              "bloqueado": "N",
-              "bol_instr1": "Sr. Caixa, receber até 10 dias após o vencimento.",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "999",
-              "data_alt": "14/06/2024",
-              "data_inc": "10/05/2024",
-              "descricao": "Caixinha",
-              "hora_alt": "16:12:37",
-              "hora_inc": "18:26:50",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1743800544,
-              "nao_fluxo": "S",
-              "nao_resumo": "S",
-              "pdv_categoria": "1.01.03",
-              "pdv_enviar": "S",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CX",
-              "tipo_conta_corrente": "CX",
-              "user_alt": "P000820536",
-              "user_inc": "P000564645"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "995",
-              "data_alt": "14/06/2024",
-              "data_inc": "16/05/2024",
-              "descricao": "ASAAS",
-              "hora_alt": "11:40:47",
-              "hora_inc": "14:39:14",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1745966235,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "observacao": "54393,55 - 31/12/2023",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_data": "31/12/2023",
-              "saldo_inicial": 54393.55,
-              "tipo": "CV",
-              "tipo_conta_corrente": "CV",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "077",
-              "data_alt": "14/06/2024",
-              "data_inc": "16/05/2024",
-              "descricao": "Banco Inter",
-              "hora_alt": "11:40:56",
-              "hora_inc": "14:40:27",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1745966686,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "observacao": "384.162,31 - 31/12/2023",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_data": "31/12/2023",
-              "saldo_inicial": 384162.31,
-              "tipo": "CC",
-              "tipo_conta_corrente": "CC",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "077",
-              "data_alt": "14/06/2024",
-              "data_inc": "16/05/2024",
-              "descricao": "Banco Inter - CDB",
-              "hora_alt": "16:12:23",
-              "hora_inc": "14:41:36",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1745967352,
-              "nao_fluxo": "S",
-              "nao_resumo": "S",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_data": "31/12/2023",
-              "saldo_inicial": 10000,
-              "tipo": "CA",
-              "tipo_conta_corrente": "CA",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "985",
-              "data_alt": "14/06/2024",
-              "data_inc": "29/05/2024",
-              "descricao": "Banco Inter - Cartão de Crédito",
-              "hora_alt": "16:12:29",
-              "hora_inc": "09:41:17",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1750670517,
-              "nao_fluxo": "S",
-              "nao_resumo": "S",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_data": "01/01/2024",
-              "saldo_inicial": 0,
-              "tipo": "CR",
-              "tipo_conta_corrente": "CR",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "985",
-              "data_alt": "30/05/2024",
-              "data_inc": "30/05/2024",
-              "descricao": "Visa Infinity Kelly Eleto",
-              "hora_alt": "17:51:00",
-              "hora_inc": "17:50:42",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1751266478,
-              "nao_fluxo": "S",
-              "nao_resumo": "S",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CR",
-              "tipo_conta_corrente": "CR",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "949",
-              "data_alt": "04/06/2024",
-              "data_inc": "04/06/2024",
-              "descricao": "Payoneer",
-              "hora_alt": "09:40:30",
-              "hora_inc": "09:40:12",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1752927053,
-              "nao_fluxo": "S",
-              "nao_resumo": "S",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CV",
-              "tipo_conta_corrente": "CV",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "N",
-              "codigo_banco": "A33",
-              "data_alt": "14/06/2024",
-              "data_inc": "05/06/2024",
-              "descricao": "Greenn",
-              "hora_alt": "16:11:51",
-              "hora_inc": "13:43:01",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1753663402,
-              "nao_fluxo": "S",
-              "nao_resumo": "S",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_data": "31/12/2023",
-              "saldo_inicial": 3995.01,
-              "tipo": "CV",
-              "tipo_conta_corrente": "CV",
-              "user_alt": "P000820536",
-              "user_inc": "P000820536"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cCodCCInt": "156",
-              "cobr_sn": "N",
-              "codigo_banco": "999",
-              "data_alt": "18/06/2024",
-              "data_inc": "18/06/2024",
-              "descricao": "Caixinha",
-              "hora_alt": "17:44:29",
-              "hora_inc": "17:44:29",
-              "importado_api": "S",
-              "inativo": "N",
-              "nCodCC": 1760342392,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CX",
-              "tipo_conta_corrente": "CX",
-              "user_alt": "WEBSERVICE",
-              "user_inc": "WEBSERVICE"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cCodCCInt": "1760452818",
-              "cobr_sn": "N",
-              "codigo_banco": "999",
-              "data_alt": "18/06/2024",
-              "data_inc": "18/06/2024",
-              "descricao": "Conta-corrente",
-              "hora_alt": "20:27:34",
-              "hora_inc": "20:27:34",
-              "importado_api": "S",
-              "inativo": "N",
-              "nCodCC": 1760455148,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CX",
-              "tipo_conta_corrente": "CX",
-              "user_alt": "WEBSERVICE",
-              "user_inc": "WEBSERVICE"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cCodCCInt": "103",
-              "cobr_sn": "N",
-              "codigo_banco": "999",
-              "data_alt": "19/06/2024",
-              "data_inc": "19/06/2024",
-              "descricao": "Conta-corrente",
-              "hora_alt": "14:50:42",
-              "hora_inc": "14:50:42",
-              "importado_api": "S",
-              "inativo": "N",
-              "nCodCC": 1760795572,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CX",
-              "tipo_conta_corrente": "CX",
-              "user_alt": "WEBSERVICE",
-              "user_inc": "WEBSERVICE"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cCodCCInt": "196",
-              "cobr_sn": "N",
-              "codigo_banco": "999",
-              "data_alt": "20/06/2024",
-              "data_inc": "20/06/2024",
-              "descricao": "Conta-corrente",
-              "hora_alt": "11:00:40",
-              "hora_inc": "11:00:40",
-              "importado_api": "S",
-              "inativo": "N",
-              "nCodCC": 1763330485,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "pix_sn": "N",
-              "saldo_inicial": 0,
-              "tipo": "CX",
-              "tipo_conta_corrente": "CX",
-              "user_alt": "WEBSERVICE",
-              "user_inc": "WEBSERVICE"
-            },
-            {
-              "bloqueado": "N",
-              "bol_sn": "N",
-              "cobr_sn": "S",
-              "codigo_agencia": "0001",
-              "codigo_banco": "450",
-              "data_alt": "31/05/2024",
-              "data_inc": "31/05/2024",
-              "descricao": "Omie.CASH",
-              "hora_alt": "17:38:20",
-              "hora_inc": "17:37:57",
-              "importado_api": "N",
-              "inativo": "N",
-              "nCodCC": 1743800638,
-              "nao_fluxo": "N",
-              "nao_resumo": "N",
-              "numero_conta_corrente": "4977667466-1",
-              "observacao": "Incluída automaticamente para a integração com o Omie.CASH.",
-              "pdv_enviar": "N",
-              "pdv_sincr_analitica": "N",
-              "per_juros": 1,
-              "per_multa": 2,
-              "pix_sn": "S",
-              "saldo_data": "31/05/2024",
-              "saldo_inicial": 0,
-              "tipo": "CC",
-              "tipo_conta_corrente": "CC",
-              "user_alt": "WEBSERVICE",
-              "user_inc": "WEBSERVICE"
-            }
-          ]
-        }
-      }
-    ]
-  },
+  "pinData": null,
   "settings": {
-    "executionOrder": "v1",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": false,
     "saveDataErrorExecution": "all",
     "saveDataSuccessExecution": "all",
-    "saveExecutionProgress": true,
-    "saveManualExecutions": true,
-    "callerPolicy": "workflowsFromSameOwner",
-    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+    "errorWorkflow": "B5ErT6ObkzMJxzKU"
   },
   "staticData": null,
   "tags": [],
-  "triggerCount": 1,
-  "updatedAt": "2024-10-05T13:50:35.740Z",
-  "versionId": "25f61eb7-5f28-44f8-ac5b-260eb0961531"
+  "triggerCount": 0,
+  "updatedAt": "2025-02-04T17:45:32.096Z",
+  "versionId": "0ca74647-b71d-4bd8-b5ba-0fc2ac1992c4"
 }
