@@ -1,0 +1,3698 @@
+{
+  "active": true,
+  "connections": {
+    "chega_da_fila": {
+      "main": [
+        [
+          {
+            "node": "reprocessamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_variavel_n8n_fluxo_users": {
+      "main": [
+        [
+          {
+            "node": "cria_atualiza_user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_atualiza_user": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_etapa_funil",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_etapa_funil": {
+      "main": [
+        [
+          {
+            "node": "evento_checkout",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "evento_checkout": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_variavel_n8n_fluxo_produtos",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "evento_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_variavel_n8n_fluxo_produtos": {
+      "main": [
+        [
+          {
+            "node": "busca_produto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_produto": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_situacao_checkout",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "evento_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_situacao_checkout": {
+      "main": [
+        [
+          {
+            "node": "create_update_contact_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_contact_crm": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_create_update_contact_crm",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "create_update_deal_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_contact_crm1": {
+      "main": [
+        [
+          {
+            "node": "create_update_deal_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_contact_crm2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_create_update_contact_crm1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "create_update_deal_crm1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_create_update_contact_crm": {
+      "main": [
+        [
+          {
+            "node": "create_update_contact_crm1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_contact_crm3": {
+      "main": [
+        [
+          {
+            "node": "create_update_deal_crm1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_create_update_contact_crm1": {
+      "main": [
+        [
+          {
+            "node": "create_update_contact_crm3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_deal_crm": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_create_update_deal_crm",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_tag_contact_crm2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_contact_crm4": {
+      "main": [
+        [
+          {
+            "node": "add_tag_contact_crm2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_create_update_deal_crm": {
+      "main": [
+        [
+          {
+            "node": "create_update_contact_crm4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_deal_crm1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_create_update_deal_crm1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_tag_contact_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_create_update_deal_crm1": {
+      "main": [
+        [
+          {
+            "node": "create_update_deal_crm5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_cadastro_bd": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_add_cadastro_bd",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "create_update_contact_crm2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_add_cadastro_bd": {
+      "main": [
+        [
+          {
+            "node": "cria_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_cadastro": {
+      "main": [
+        [
+          {
+            "node": "create_update_contact_crm2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_contact_crm": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_add_tag_contact_crm",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_tag_deal_crm2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_contact_crm1": {
+      "main": [
+        [
+          {
+            "node": "add_tag_deal_crm2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_add_tag_contact_crm": {
+      "main": [
+        [
+          {
+            "node": "add_tag_contact_crm1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_contact_crm2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_add_tag_contact_crm1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_tag_deal_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_contact_crm3": {
+      "main": [
+        [
+          {
+            "node": "add_tag_deal_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_add_tag_contact_crm1": {
+      "main": [
+        [
+          {
+            "node": "add_tag_contact_crm3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_deal_crm": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_add_tag_deal_crm",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_customer_bd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_add_tag_deal_crm": {
+      "main": [
+        [
+          {
+            "node": "add_tag_deal_crm1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_deal_crm1": {
+      "main": [
+        [
+          {
+            "node": "add_customer_bd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_deal_crm2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_add_tag_deal_crm1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "create_update_manychat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_add_tag_deal_crm1": {
+      "main": [
+        [
+          {
+            "node": "add_tag_deal_crm3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_deal_crm3": {
+      "main": [
+        [
+          {
+            "node": "create_update_manychat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_deal_crm5": {
+      "main": [
+        [
+          {
+            "node": "add_tag_contact_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conversion_bd": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_add_conversion_bd",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_subscription_bd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_add_conversion_bd": {
+      "main": [
+        [
+          {
+            "node": "add_conversion_bd1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_conversion_bd1": {
+      "main": [
+        [
+          {
+            "node": "add_subscription_bd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_customer_bd": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_add_customer_bd",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_conversion_bd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_add_customer_bd": {
+      "main": [
+        [
+          {
+            "node": "add_customer_bd1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_customer_bd1": {
+      "main": [
+        [
+          {
+            "node": "add_conversion_bd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_subscription_bd": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_add_subscription_bd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_add_subscription_bd": {
+      "main": [
+        [
+          {
+            "node": "add_subscription_bd1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "send_flow_manychat": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_send_flow_manychat",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_forms_answers",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_send_flow_manychat": {
+      "main": [
+        [
+          {
+            "node": "send_flow_manychat1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "send_flow_manychat1": {
+      "main": [
+        [
+          {
+            "node": "insert_forms_answers",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "evento_agendamento": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_situacao_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_cadastro_bd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_contact_crm5": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_create_update_contact_crm2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "create_update_deal_crm2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_contact_crm6": {
+      "main": [
+        [
+          {
+            "node": "create_update_deal_crm2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_create_update_contact_crm2": {
+      "main": [
+        [
+          {
+            "node": "create_update_contact_crm6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_deal_crm2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_create_update_deal_crm2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_tag_contact_crm4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_contact_crm7": {
+      "main": [
+        [
+          {
+            "node": "add_tag_contact_crm4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_create_update_deal_crm2": {
+      "main": [
+        [
+          {
+            "node": "create_update_contact_crm7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_contact_crm4": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_add_tag_contact_crm2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_tag_deal_crm4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_contact_crm5": {
+      "main": [
+        [
+          {
+            "node": "add_tag_deal_crm4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_add_tag_contact_crm2": {
+      "main": [
+        [
+          {
+            "node": "add_tag_contact_crm5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_deal_crm4": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_add_tag_deal_crm2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "add_agendamento_bd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_add_tag_deal_crm2": {
+      "main": [
+        [
+          {
+            "node": "add_tag_deal_crm5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_tag_deal_crm5": {
+      "main": [
+        [
+          {
+            "node": "add_agendamento_bd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_situacao_agendamento": {
+      "main": [
+        [
+          {
+            "node": "create_update_contact_crm5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_agendamento_bd": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_add_agendamento_bd",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_add_agendamento_bd": {
+      "main": [
+        [
+          {
+            "node": "add_agendamento_bd1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_forms_answers": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_insert_forms_answers",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_insert_forms_answers": {
+      "main": [
+        [
+          {
+            "node": "insert_forms_answers1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_manychat": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_acao_create_update_manychat",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "send_flow_manychat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_acao_create_update_manychat": {
+      "main": [
+        [
+          {
+            "node": "create_update_manychat1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create_update_manychat1": {
+      "main": [
+        [
+          {
+            "node": "send_flow_manychat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "reprocessamento": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_variavel_n8n_fluxo_users",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-28T04:24:45.945Z",
+  "id": "qffmBmZGTzZppp0z",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[Portus][Banco de Dados] - Fila de Ações de Funis",
+  "nodes": [
+    {
+      "parameters": {
+        "queue": "Fila de Ações de Funis",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "acknowledge": "executionFinishesSuccessfully",
+          "jsonParseBody": "={{ true }}",
+          "parallelMessages": 1
+        }
+      },
+      "id": "3638e573-b066-4ac1-92db-11163fe5a070",
+      "name": "chega_da_fila",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2180,
+        1100
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "quc6gfdQpKCDLaHX",
+          "name": "[RabbitMQ] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "variaveis_globais_n8n",
+          "mode": "list",
+          "cachedResultName": "variaveis_globais_n8n"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome_variavel",
+              "value": "URL do Fluxo de Verificação de Users"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "c16adb96-b89b-4da5-b906-0ee7e0bf3abd",
+      "name": "pesquisa_variavel_n8n_fluxo_users",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        -1800,
+        1120
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_variavel_n8n_fluxo_users\"].json[\"valor_variavel\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] || \"\" }}"
+            },
+            {
+              "name": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] || \"\" }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] || \"\" }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] || \"\" }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] || \"\" }}"
+            },
+            {
+              "name": "cpf",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"cpf\"] || \"\" }}"
+            },
+            {
+              "name": "cnpj",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"cnpj\"] || \"\" }}"
+            },
+            {
+              "name": "sexo",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sexo\"] }}"
+            },
+            {
+              "name": "idade",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"idade\"] }}"
+            },
+            {
+              "name": "momento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"momento\"] }}"
+            },
+            {
+              "name": "tempo_contato",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tempo_contato\"] }}"
+            },
+            {
+              "name": "dificuldade",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"dificuldade\"] }}"
+            },
+            {
+              "name": "preocupacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"preocupacao\"] }}"
+            },
+            {
+              "name": "transformacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"transformacao\"] }}"
+            },
+            {
+              "name": "motivo_fit_mentoria",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"motivo_fit_mentoria\"] }}"
+            },
+            {
+              "name": "pergunta_cafezinho",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"pergunta_cafezinho\"] }}"
+            },
+            {
+              "name": "graduacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"graduacao\"] }}"
+            },
+            {
+              "name": "tipo_forms",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tipo_forms\"] }}"
+            },
+            {
+              "name": "id_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_funil\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1580,
+        1120
+      ],
+      "id": "ebba571f-eac4-406a-ab5f-90e0490c003b",
+      "name": "cria_atualiza_user"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "etapas_funil",
+          "mode": "list",
+          "cachedResultName": "etapas_funil"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_funil\"] }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tipo_forms\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4ddd8543-bd1a-476b-ab56-cefaaa81cd83",
+      "name": "pesquisa_etapa_funil",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        -1380,
+        1120
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e7b0e3df-3432-44b3-ad32-b20e0773aadd",
+              "leftValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tipo_forms\"] }}",
+              "rightValue": "Checkout",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1160,
+        1120
+      ],
+      "id": "4a5b113e-1458-444f-89aa-5516c5b91813",
+      "name": "evento_checkout"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "variaveis_globais_n8n",
+          "mode": "list",
+          "cachedResultName": "variaveis_globais_n8n"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome_variavel",
+              "value": "URL do Fluxo de Verificação de Produtos"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "37d3f562-14cf-4bf2-bae7-034d3c0a438c",
+      "name": "pesquisa_variavel_n8n_fluxo_produtos",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        -840,
+        0
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_variavel_n8n_fluxo_produtos\"].json[\"valor_variavel\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "product_id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"product_id\"] }}"
+            },
+            {
+              "name": "product_name",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"product_name\"] }}"
+            },
+            {
+              "name": "value",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"value\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -620,
+        0
+      ],
+      "id": "92aeda81-cb3d-4552-9346-04cd1811f70e",
+      "name": "busca_produto",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "situacoes_checkout",
+          "mode": "list",
+          "cachedResultName": "situacoes_checkout"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "column": "id_produto",
+              "value": "={{ $node[\"busca_produto\"].json[\"id\"] }}"
+            },
+            {
+              "column": "evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"trans_status\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fe3ada59-6202-4c10-9c8a-8485c280bc5e",
+      "name": "pesquisa_situacao_checkout",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        -360,
+        0
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_situacao_checkout\"].json[\"acoes\"] }}",
+              "rightValue": "create_update_contact_crm",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -100,
+        0
+      ],
+      "id": "ee8c4f66-c7aa-4cbc-acda-540de20e1e9b",
+      "name": "create_update_contact_crm"
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_create_update_contact_crm\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_funil\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "payload",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"] }}"
+            },
+            {
+              "name": "id_situacao_checkout",
+              "value": "={{ $node[\"pesquisa_situacao_checkout\"].json[\"id\"]  || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        340,
+        -160
+      ],
+      "id": "92826358-8be7-4c4c-b04f-ba2ee98d65ef",
+      "name": "create_update_contact_crm1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_etapa_funil\"].json[\"acoes\"] }}",
+              "rightValue": "create_update_contact_crm",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -280,
+        2520
+      ],
+      "id": "94e8fce7-c78d-46ae-a0ef-60003a556673",
+      "name": "create_update_contact_crm2"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "create_update_contact_crm"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "ca1fb745-a3a8-40c6-8c43-84c67a8dbad8",
+      "name": "pesquisa_acao_create_update_contact_crm",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        120,
+        -160
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_create_update_contact_crm1\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_funil\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "payload",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        2380
+      ],
+      "id": "9dc7e5e3-9902-472d-81cb-1e758ac66f11",
+      "name": "create_update_contact_crm3"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "create_update_contact_crm"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "a2afb0bb-fce3-4f4f-827c-319cc47416fb",
+      "name": "pesquisa_acao_create_update_contact_crm1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        -20,
+        2380
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_situacao_checkout\"].json[\"acoes\"] }}",
+              "rightValue": "create_update_deal_crm",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        120,
+        160
+      ],
+      "id": "1f677ff1-8aeb-497d-a772-616a245f6048",
+      "name": "create_update_deal_crm"
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_create_update_deal_crm\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_funil\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "payload",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"] }}"
+            },
+            {
+              "name": "id_situacao_checkout",
+              "value": "={{ $node[\"pesquisa_situacao_checkout\"].json[\"id\"]  || \"\" }}"
+            },
+            {
+              "name": "qualificacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"qualificacao\"]  || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        640,
+        60
+      ],
+      "id": "eead6ba8-1b11-453e-a354-3009bf3600e4",
+      "name": "create_update_contact_crm4"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "create_update_deal_crm"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "8724ffda-c2f2-4180-bda8-4cf82370705a",
+      "name": "pesquisa_acao_create_update_deal_crm",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        380,
+        60
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_etapa_funil\"].json[\"acoes\"] }}",
+              "rightValue": "create_update_deal_crm",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -40,
+        2680
+      ],
+      "id": "59f64037-0885-4a82-a18f-f674ad1931fc",
+      "name": "create_update_deal_crm1"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "create_update_deal_crm"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "88fbfd83-9dca-40e2-9d77-74cddb264ef4",
+      "name": "pesquisa_acao_create_update_deal_crm1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        240,
+        2580
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_etapa_funil\"].json[\"acoes\"] }}",
+              "rightValue": "add_cadastro_bd",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -540,
+        2320
+      ],
+      "id": "ce308370-a7b7-43a9-a83e-aa6d5347afc4",
+      "name": "add_cadastro_bd"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "add_cadastro_bd"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "cc813dac-b24c-4848-8a9f-e7891005d3a6",
+      "name": "pesquisa_acao_add_cadastro_bd",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        -260,
+        2180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_add_cadastro_bd\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_funil\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] || \"\" }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] || \"\" }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] || \"\" }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] || \"\" }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] || \"\" }}"
+            },
+            {
+              "name": "id_forms",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_forms\"] || \"\" }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] || \"\" }}"
+            },
+            {
+              "name": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] || \"\" }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] || \"\" }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] || \"\" }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] || \"\" }}"
+            },
+            {
+              "name": "graduacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"graduacao\"]  || \"\" }}"
+            },
+            {
+              "name": "areaAtuacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"areaAtuacao\"]  || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -40,
+        2180
+      ],
+      "id": "64b32a9f-4b60-4378-bd3a-361180e4ac99",
+      "name": "cria_cadastro"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_etapa_funil\"].json[\"acoes\"] }}",
+              "rightValue": "add_tag_contact_crm",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        160,
+        2860
+      ],
+      "id": "d305d60f-d0dd-48b4-8126-20d306cabe44",
+      "name": "add_tag_contact_crm"
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_add_tag_contact_crm\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        680,
+        2760
+      ],
+      "id": "70445d3e-4b2b-442a-b803-91992a2ea3c1",
+      "name": "add_tag_contact_crm1"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "add_tag_contact_crm"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "507126b9-def5-4530-b66f-29ef29d54d34",
+      "name": "pesquisa_acao_add_tag_contact_crm",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        440,
+        2760
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_situacao_checkout\"].json[\"acoes\"] }}",
+              "rightValue": "add_tag_contact_crm",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        300,
+        360
+      ],
+      "id": "4c7888b1-a495-4df9-b49c-dd2e1221bedb",
+      "name": "add_tag_contact_crm2"
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_add_tag_contact_crm1\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_situacao_checkout",
+              "value": "={{ $node[\"pesquisa_situacao_checkout\"].json[\"id\"]  || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        840,
+        260
+      ],
+      "id": "3910519d-a67b-4d14-a6df-50b84b047ebe",
+      "name": "add_tag_contact_crm3"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "add_tag_contact_crm"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "2c6fa4d9-878d-453c-86ae-326273d0e215",
+      "name": "pesquisa_acao_add_tag_contact_crm1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        580,
+        260
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_situacao_checkout\"].json[\"acoes\"] }}",
+              "rightValue": "add_tag_deal_crm",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        500,
+        520
+      ],
+      "id": "474f67f8-924c-4f1b-90e8-cf1c7374146a",
+      "name": "add_tag_deal_crm"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "add_tag_deal_crm"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "3dac0d28-60b8-4ebe-80cc-f2f6d350aedb",
+      "name": "pesquisa_acao_add_tag_deal_crm",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        780,
+        420
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_add_tag_deal_crm\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_situacao_checkout",
+              "value": "={{ $node[\"pesquisa_situacao_checkout\"].json[\"id\"]  || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1040,
+        420
+      ],
+      "id": "32789d23-5e7e-4b40-aa9f-c18e07fcae01",
+      "name": "add_tag_deal_crm1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_etapa_funil\"].json[\"acoes\"] }}",
+              "rightValue": "add_tag_deal_crm",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        340,
+        3100
+      ],
+      "id": "2adc854c-467d-41f8-ba2d-aebd0271176f",
+      "name": "add_tag_deal_crm2"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "add_tag_deal_crm"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "24d85f8f-686b-44f1-87fc-574f560de9db",
+      "name": "pesquisa_acao_add_tag_deal_crm1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        540,
+        2960
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_add_tag_deal_crm1\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        800,
+        2960
+      ],
+      "id": "08ffc619-5442-46d8-88ab-5adeaf2d23b2",
+      "name": "add_tag_deal_crm3"
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_create_update_deal_crm1\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_funil\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "payload",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"] }}"
+            },
+            {
+              "name": "qualificacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"qualificacao\"]  || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        460,
+        2580
+      ],
+      "id": "12b4c3a0-3833-4bb4-b831-57b9aef687ac",
+      "name": "create_update_deal_crm5"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_situacao_checkout\"].json[\"acoes\"] }}",
+              "rightValue": "add_conversion_bd",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        860,
+        880
+      ],
+      "id": "9a87640e-bf18-4187-83fc-6dc894858831",
+      "name": "add_conversion_bd"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "add_conversion_bd"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "5439da6e-53fe-46b2-8fd2-f3dcc45410ba",
+      "name": "pesquisa_acao_add_conversion_bd",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1080,
+        780
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_add_conversion_bd\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_transacao_checkout",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"transaction_id\"] || \"\" }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_cliente",
+              "value": "={{ $node[\"add_customer_bd1\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_funil\"] }}"
+            },
+            {
+              "name": "id_produto",
+              "value": "={{ $node[\"busca_produto\"].json[\"id\"] }}"
+            },
+            {
+              "name": "valor",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"value\"] || \"\" }}"
+            },
+            {
+              "name": "comissao_gateway",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"gateway_comission\"] || \"\" }}"
+            },
+            {
+              "name": "id_vendedor",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_vendedor\"] || \"\" }}"
+            },
+            {
+              "name": "moeda",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"currency\"] || \"\" }}"
+            },
+            {
+              "name": "forma_de_pagamento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"payment_method\"] || \"\" }}"
+            },
+            {
+              "name": "status_da_compra",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"trans_status\"] }}"
+            },
+            {
+              "name": "data_garantia",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"warranty_date\"] || \"\" }}"
+            },
+            {
+              "name": "data_conversao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"payment_date\"] || $node[\"chega_da_fila\"].json[\"content\"][\"event_date\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] || \"\" }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] || \"\" }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] || \"\" }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] || \"\" }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] || \"\" }}"
+            },
+            {
+              "name": "parcelas",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"installments\"] || \"\" }}"
+            },
+            {
+              "name": "oferta",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"offer_code\"] || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1340,
+        780
+      ],
+      "id": "c6800e75-ac38-4c7e-9483-5af48f18445c",
+      "name": "add_conversion_bd1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_situacao_checkout\"].json[\"acoes\"] }}",
+              "rightValue": "add_customer_bd",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        660,
+        680
+      ],
+      "id": "e3a105f5-cf84-43ce-b31c-c801f27f32f1",
+      "name": "add_customer_bd"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "add_customer_bd"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "8d0aaf75-7b2f-4c0a-97b2-1152baf67761",
+      "name": "pesquisa_acao_add_customer_bd",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        940,
+        580
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_add_customer_bd\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "data_conversao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"payment_date\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1200,
+        580
+      ],
+      "id": "ccbb97d8-d46f-45a2-9b3b-47b8adc0ada8",
+      "name": "add_customer_bd1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_situacao_checkout\"].json[\"acoes\"] }}",
+              "rightValue": "add_subscription_bd",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1080,
+        1040
+      ],
+      "id": "52abaab3-9c11-4fd2-9765-5cd73b48a661",
+      "name": "add_subscription_bd"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "add_subscription_bd"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "0e427771-527a-47e9-a4b2-711b1bac8261",
+      "name": "pesquisa_acao_add_subscription_bd",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1300,
+        940
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_add_subscription_bd\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_conversao",
+              "value": "={{ $node[\"add_conversion_bd1\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_produto",
+              "value": "={{ $node[\"busca_produto\"].json[\"id\"] }}"
+            },
+            {
+              "name": "data_conversao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"payment_date\"] }}"
+            },
+            {
+              "name": "data_expiracao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"recurrenceExpirationDate\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1560,
+        940
+      ],
+      "id": "41efa6ee-d176-4783-bb7c-870a9fac4ce8",
+      "name": "add_subscription_bd1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_etapa_funil\"].json[\"acoes\"] }}",
+              "rightValue": "send_flow_manychat",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        780,
+        3480
+      ],
+      "id": "c1e1a188-5c92-4483-a09b-8df66b9d3c65",
+      "name": "send_flow_manychat"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "send_flow_manychat"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "139df928-e3ae-495d-b484-dc30969d6aa9",
+      "name": "pesquisa_acao_send_flow_manychat",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1080,
+        3380
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_send_flow_manychat\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] || \"\" }}"
+            },
+            {
+              "name": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] || \"\" }}"
+            },
+            {
+              "name": "graduacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"graduacao\"] || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1320,
+        3380
+      ],
+      "id": "4f9e9598-8000-43ac-b4fe-1c018992a28f",
+      "name": "send_flow_manychat1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e7b0e3df-3432-44b3-ad32-b20e0773aadd",
+              "leftValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"tipo_forms\"] }}",
+              "rightValue": "Agendamento",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -940,
+        1280
+      ],
+      "id": "c8ff003f-860f-4c40-8b27-643efb5179d7",
+      "name": "evento_agendamento"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_situacao_agendamento\"].json[\"acoes\"] }}",
+              "rightValue": "create_update_contact_crm",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -500,
+        1280
+      ],
+      "id": "011db3cb-b8b5-442e-848c-66e986976567",
+      "name": "create_update_contact_crm5"
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_create_update_contact_crm2\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_funil\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "payload",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"] }}"
+            },
+            {
+              "name": "id_situacao_agendamento",
+              "value": "={{ $node[\"pesquisa_situacao_agendamento\"].json[\"id\"] || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -60,
+        1120
+      ],
+      "id": "2792f3ad-98c8-4f52-b540-1b39019737e3",
+      "name": "create_update_contact_crm6"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "create_update_contact_crm"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "f939ce8a-bee5-458d-b20b-56688f37ea3c",
+      "name": "pesquisa_acao_create_update_contact_crm2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        -280,
+        1120
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_situacao_agendamento\"].json[\"acoes\"] }}",
+              "rightValue": "create_update_deal_crm",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -280,
+        1440
+      ],
+      "id": "b87721fe-1144-4bc5-b0b8-de54109caf6a",
+      "name": "create_update_deal_crm2"
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_create_update_deal_crm2\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_funil\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "payload",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"] }}"
+            },
+            {
+              "name": "id_situacao_agendamento",
+              "value": "={{ $node[\"pesquisa_situacao_agendamento\"].json[\"id\"]  || \"\" }}"
+            },
+            {
+              "name": "qualificacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"qualificacao\"]  || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        1340
+      ],
+      "id": "96949264-4064-457e-94ea-6b6b632fe24b",
+      "name": "create_update_contact_crm7"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "create_update_deal_crm"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "400c10ca-5afc-4eb8-b9b7-4146bb4ab608",
+      "name": "pesquisa_acao_create_update_deal_crm2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        -20,
+        1340
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_situacao_agendamento\"].json[\"acoes\"] }}",
+              "rightValue": "add_tag_contact_crm",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -100,
+        1640
+      ],
+      "id": "572e8d32-7a12-4687-a3dc-25ee1fceb166",
+      "name": "add_tag_contact_crm4"
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_add_tag_contact_crm2\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_situacao_checkout",
+              "value": "={{ $node[\"pesquisa_situacao_checkout\"].json[\"id\"]  || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        440,
+        1540
+      ],
+      "id": "63f42f60-20fe-402b-930f-1ddbe4552c5f",
+      "name": "add_tag_contact_crm5"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "add_tag_contact_crm"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "e70a1193-eba0-4a15-9662-4ef7171e88ae",
+      "name": "pesquisa_acao_add_tag_contact_crm2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        180,
+        1540
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_situacao_agendamento\"].json[\"acoes\"] }}",
+              "rightValue": "add_tag_deal_crm",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        100,
+        1800
+      ],
+      "id": "a16fdd41-20b8-484a-94f3-97443d6ac592",
+      "name": "add_tag_deal_crm4"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "add_tag_deal_crm"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "acbee556-ed02-4f7e-aca2-4541e7f2f86f",
+      "name": "pesquisa_acao_add_tag_deal_crm2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        380,
+        1700
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_add_tag_deal_crm2\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_situacao_agendamento",
+              "value": "={{ $node[\"pesquisa_situacao_agendamento\"].json[\"id\"]  || \"\" }}"
+            },
+            {
+              "name": "nome_do_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"]  || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        640,
+        1700
+      ],
+      "id": "3baa748a-465d-4284-b826-5e38a70c73c2",
+      "name": "add_tag_deal_crm5"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "situacoes_agendamento",
+          "mode": "list",
+          "cachedResultName": "situacoes_agendamento"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "column": "evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8944fa7c-de7e-42c3-af4c-002382af0502",
+      "name": "pesquisa_situacao_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        -720,
+        1160
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_situacao_agendamento\"].json[\"acoes\"] }}",
+              "rightValue": "add_agendamento_bd",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        320,
+        2020
+      ],
+      "id": "1ce6ab5c-aa6e-4b1d-aee6-2b20065971da",
+      "name": "add_agendamento_bd"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "add_agendamento_bd"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "9db7859c-1ff5-4863-89d3-788a3f5d8eba",
+      "name": "pesquisa_acao_add_agendamento_bd",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        600,
+        1920
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_add_agendamento_bd\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_agendamento\"] }}"
+            },
+            {
+              "name": "id_cliente",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_cliente\"] || \"\" }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_responsavel",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email_responsavel\"] }}"
+            },
+            {
+              "name": "data_agendamento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_agendamento\"] }}"
+            },
+            {
+              "name": "status_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"evento\"].replace('Agendamento', 'Agendado').replace('Reagendamento', 'Reagendado').replace('Cancelamento', 'Cancelado') }}"
+            },
+            {
+              "name": "data_de_inicio",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_inicio\"].split(' ')[0] }}"
+            },
+            {
+              "name": "hora_de_inicio",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_inicio\"].split(' ')[1] }}"
+            },
+            {
+              "name": "hora_de_termino",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_termino\"].split(' ')[1] }}"
+            },
+            {
+              "name": "link_reuniao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"link_call\"] }}"
+            },
+            {
+              "name": "evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome_do_evento\"] }}"
+            },
+            {
+              "name": "dia_da_semana_evento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"dia_semana\"] }}"
+            },
+            {
+              "name": "data_cancelamento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_cancelamento\"] || \"\" }}"
+            },
+            {
+              "name": "motivo_cancelamento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"motivo_cancelamento\"] || \"\" }}"
+            },
+            {
+              "name": "id_agendamento_reagendado",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_agendamento_reagendado\"] || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        860,
+        1920
+      ],
+      "id": "704bcd20-4849-4a9e-b754-6454a08b9abc",
+      "name": "add_agendamento_bd1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_etapa_funil\"].json[\"acoes\"] }}",
+              "rightValue": "insert_forms_answers",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1000,
+        3680
+      ],
+      "id": "3b148d92-4944-4042-9f6a-6e3485213630",
+      "name": "insert_forms_answers"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "insert_forms_answers"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "fe302c0e-963f-48c1-bc74-f47163cdc3f5",
+      "name": "pesquisa_acao_insert_forms_answers",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1300,
+        3580
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_insert_forms_answers\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_forms",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_forms\"] }}"
+            },
+            {
+              "name": "payload",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1540,
+        3580
+      ],
+      "id": "89fa6b00-6e29-4ede-ad5d-a0c744667d6f",
+      "name": "insert_forms_answers1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bac74034-ee2c-4894-9c67-bca7764d3f3a",
+              "leftValue": "={{ $node[\"pesquisa_etapa_funil\"].json[\"acoes\"] }}",
+              "rightValue": "create_update_manychat",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        520,
+        3280
+      ],
+      "id": "c55ee1c0-75b8-4cf6-996f-937263aa46a8",
+      "name": "create_update_manychat"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "acoes_workflows",
+          "mode": "list",
+          "cachedResultName": "acoes_workflows"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "acao",
+              "value": "create_update_manychat"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "11047282-c807-43be-8c5a-f0453d5e093f",
+      "name": "pesquisa_acao_create_update_manychat",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        820,
+        3180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_acao_create_update_manychat\"].json[\"endpoint_workflow\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_etapa_funil",
+              "value": "={{ $node[\"pesquisa_etapa_funil\"].json[\"id\"] }}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] || \"\" }}"
+            },
+            {
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] || \"\" }}"
+            },
+            {
+              "name": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"sobrenome\"] || \"\" }}"
+            },
+            {
+              "name": "graduacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"graduacao\"] || \"\" }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] || \"\" }}"
+            },
+            {
+              "name": "payload",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1060,
+        3180
+      ],
+      "id": "46942a85-c8bc-4dee-b8b7-2c678f48c88e",
+      "name": "create_update_manychat1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "3f5780a9-c982-4778-a729-8c056a55e10b",
+              "leftValue": "={{ $json[\"fields\"][\"redelivered\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -2020,
+        1100
+      ],
+      "id": "caa1daa9-ad54-4142-a9e2-bb77b2bb648b",
+      "name": "reprocessamento"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -1820,
+        940
+      ],
+      "id": "a3a2d37c-cf2a-40d8-8cc0-08da90dd5a94",
+      "name": "No Operation, do nothing"
+    }
+  ],
+  "pinData": {
+    "chega_da_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag-a_dRsevL7MvypzxSnbpLnw",
+            "deliveryTag": 10,
+            "redelivered": false,
+            "exchange": "",
+            "routingKey": "Fila de Ações de Funis v2"
+          },
+          "properties": {
+            "headers": {}
+          },
+          "content": {
+            "nome": "Gabriel",
+            "sobrenome": "Amaral",
+            "email": "teste@automagicbots.com.br",
+            "telefone": "553185711260",
+            "instagram": "amaraldasautomacoes",
+            "data_aplicacao": "2025-04-17T18:32:49.138Z",
+            "id_forms": "23",
+            "id_ferramenta_forms": "67d49a531867617d1a6ed507",
+            "utm_source": "XXXXX",
+            "utm_campaign": "XXXXX",
+            "utm_term": "XXXXX",
+            "utm_medium": "XXXXX",
+            "utm_content": "XXXXX",
+            "sexo": "Masculino",
+            "idade": "28 a 33",
+            "momento": "Estou no internato",
+            "tempo_contato": "Menos de 1 mês",
+            "dificuldade": "Incerteza sobre quais tópicos priorizar, Conciliar os estudos e ter uma qualidade de vida, Manter a motivação ao longo do tempo",
+            "preocupacao": "Desperdiçar tempo e esforço sem obter resultados concretos., Perder oportunidades de crescimento profissional por falta de preparação., Não conseguir ser aprovado na residência que desejo.",
+            "transformacao": "Terei mais segurança para avançar na minha carreira médica., Vou finalmente estar no caminho certo para me especializar na área que mais amo., Sentirei que todo o meu esforço durante a faculdade valeu a pena.",
+            "motivo_fit_mentoria": "k",
+            "pergunta_cafezinho": "k",
+            "graduacao": "2025",
+            "tipo_forms": "Aplicação",
+            "qualificacao": "Qualificado",
+            "id_funil": "14",
+            "respostasFormulario": "Respostas formulário:\n\nQual seu Instagram?\namaraldasautomacoes\n\nQual o seu sexo?\nMasculino\n\nQual é a sua idade?\n28 a 33\n\nQual alternativa melhor define o seu momento?\nEstou no internato\n\nHá quanto tempo conhece o Thiago Rosa?\nMenos de 1 mês\n\nQual a sua maior dificuldade hoje na preparação para a prova de residência médica?\nIncerteza sobre quais tópicos priorizar, Conciliar os estudos e ter uma qualidade de vida, Manter a motivação ao longo do tempo\n\nAtualmente, qual sua maior preocupação ao se preparar para a prova de residência médica?\nDesperdiçar tempo e esforço sem obter resultados concretos., Perder oportunidades de crescimento profissional por falta de preparação., Não conseguir ser aprovado na residência que desejo.\n\nQuando você for aprovado(a) na residência dos sonhos, o que você acha que vai mudar na sua vida para melhor?\nTerei mais segurança para avançar na minha carreira médica., Vou finalmente estar no caminho certo para me especializar na área que mais amo., Sentirei que todo o meu esforço durante a faculdade valeu a pena.\n\nPor que você acredita que a mentoria O PLANO é a oportunidade ideal para você ser aprovado na residência médica dos seus sonhos?\nk\n\nSe você tivesse a oportunidade de tomar um cafezinho comigo e me perguntar qualquer coisa relacionada à preparação para Residência Médica, o que você me perguntaria?\nk",
+            "perguntas_respostas": {
+              "64b99fd0cd51bbb834034823": "Gabriel amaral",
+              "6002fe4fae71172059d4d9d0": "teste@automagicbots.com.br",
+              "64b2b8478450603b76de7e5a": "@amaraldasautomacoes",
+              "6560a20e34c3585d3fc1086f": "Masculino",
+              "66f3715364ca99367b723651": "28 a 33",
+              "66f3711e64ca99367b7235dd": "Estou no internato",
+              "66f3724364ca99367b7238c8": "Menos de 1 mês",
+              "66f372aa64ca99367b723ad8": "Incerteza sobre quais tópicos priorizar, Conciliar os estudos e ter uma qualidade de vida, Manter a motivação ao longo do tempo",
+              "66f3731c64ca99367b723b5d": "Desperdiçar tempo e esforço sem obter resultados concretos., Perder oportunidades de crescimento profissional por falta de preparação., Não conseguir ser aprovado na residência que desejo.",
+              "66f3737a64ca99367b723bcc": "Terei mais segurança para avançar na minha carreira médica., Vou finalmente estar no caminho certo para me especializar na área que mais amo., Sentirei que todo o meu esforço durante a faculdade valeu a pena.",
+              "6002fee5ae71172059d4d9f2": "k",
+              "66f373dc64ca99367b723c5f": "k",
+              "66f371bc64ca99367b7236f8": "2025",
+              "67a134829e45378191f2d644": "XXXXX",
+              "67a1351b9e45378191f2d64d": "XXXXX",
+              "67a135599e45378191f2d655": "XXXXX",
+              "67a1357c9e45378191f2d664": "XXXXX",
+              "67a135929e45378191f2d66c": "XXXXX"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "mKIVAmjjlR8KNTYw"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-04-28T04:27:50.448Z",
+  "versionId": "631397ab-f700-474a-9d9c-276eedb6e5ae"
+}
