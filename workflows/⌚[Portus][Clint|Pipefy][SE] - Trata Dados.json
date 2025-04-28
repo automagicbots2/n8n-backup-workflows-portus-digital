@@ -1,0 +1,385 @@
+{
+  "active": true,
+  "connections": {
+    "cadastro_na_lp": {
+      "main": [
+        [
+          {
+            "node": "formata_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "fila_acoes_funis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_funil": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_variavel_n8n_fluxo_funis": {
+      "main": [
+        [
+          {
+            "node": "busca_funil",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_variavel_n8n_fluxo_funis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-28T04:08:53.805Z",
+  "id": "ouwuR2EdygJjWisC",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[Portus][Clint|Pipefy][SE] - Trata Dados",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"cadastro_na_lp\"].json[\"body\"][\"Qual seu nome?\"] || \"\";\nconst emailAnswer = $node[\"cadastro_na_lp\"].json[\"body\"][\"Qual é o seu e-mail?\"] || \"\";\nconst telefoneClienteOriginal = $node[\"cadastro_na_lp\"].json[\"body\"][\"Qual seu Whatsapp?\"] || \"\";\nconst instagramAnswer = $node[\"cadastro_na_lp\"].json[\"body\"][\"Instagram\"] || \"\";\nconst cpfAnswer = $node[\"cadastro_na_lp\"].json[\"body\"][\"CPF\"] || \"\";\nconst cnpjAnswer = $node[\"cadastro_na_lp\"].json[\"body\"][\"CNPJ\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    let fullname = lname ? `${fname} ${lname}` : fname;\n\n    return { fname, lname, fullname };\n}\n\nfunction formatEmail(email) {\n    return email.toLowerCase().trim();\n}\n\nfunction formatInstagram(instagram) {\n    return instagram.toLowerCase().replace(/^@/, \"\");\n}\n\nfunction formatCPF(cpf) {\n    const cpfLimpo = cpf.replace(/\\D/g, \"\");\n    if (cpfLimpo.length === 11) {\n        return `${cpfLimpo.slice(0, 3)}.${cpfLimpo.slice(3, 6)}.${cpfLimpo.slice(6, 9)}-${cpfLimpo.slice(9, 11)}`;\n    }\n    return cpf;\n}\n\nfunction formatCNPJ(cnpj) {\n    const cnpjLimpo = cnpj.replace(/\\D/g, \"\");\n    if (cnpjLimpo.length === 14) {\n        return `${cnpjLimpo.slice(0, 2)}.${cnpjLimpo.slice(2, 5)}.${cnpjLimpo.slice(5, 8)}/${cnpjLimpo.slice(8, 12)}-${cnpjLimpo.slice(12, 14)}`;\n    }\n    return cnpj;\n}\n\nlet telefoneFinal = \"\";\n\nif (telefoneClienteOriginal) {\n    const telefoneLimpo = telefoneClienteOriginal.replace(/\\D/g, \"\");\n\n    let DDI = '';\n    let DDD = '';\n    let numero = '';\n\n    if (telefoneLimpo.length > 11) {\n        DDI = telefoneLimpo.slice(0, 2);\n        DDD = telefoneLimpo.slice(2, 4);\n        numero = telefoneLimpo.slice(4);\n    } else if (telefoneLimpo.length === 11) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else if (telefoneLimpo.length === 10) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else {\n        telefoneFinal = telefoneLimpo;\n    }\n\n    if (DDD && numero) {\n        if (parseInt(DDD) > 28) {\n            if (numero.length === 9 && numero.startsWith(\"9\")) {\n                numero = numero.slice(1);\n            }\n        } else {\n            if (numero.length === 8) {\n                numero = `9${numero}`;\n            }\n        }\n    }\n\n    if (DDI && DDD && numero) {\n        telefoneFinal = `${DDI}${DDD}${numero}`;\n    }\n}\n\nconst formattedNames = capitalizeName(fullNameAnswer);\nconst formattedEmail = formatEmail(emailAnswer);\nconst formattedInstagram = formatInstagram(instagramAnswer);\nconst formattedCPF = formatCPF(cpfAnswer);\nconst formattedCNPJ = formatCNPJ(cnpjAnswer);\nconst utm_source = $node[\"cadastro_na_lp\"].json[\"body\"][\"utm_source\"] || \"\";\nconst utm_campaign = $node[\"cadastro_na_lp\"].json[\"body\"][\"utm_campaign\"] || \"\";\nconst utm_medium = $node[\"cadastro_na_lp\"].json[\"body\"][\"utm_medium\"] || \"\";\nconst utm_term = $node[\"cadastro_na_lp\"].json[\"body\"][\"utm_term\"] || \"\";\nconst utm_content = $node[\"cadastro_na_lp\"].json[\"body\"][\"utm_content\"] || \"\";\nconst form_id = $node[\"cadastro_na_lp\"].json[\"body\"][\"form_id\"]  || \"\";\nconst form_name = $node[\"cadastro_na_lp\"].json[\"body\"][\"form_name\"] || \"\";\n\nconst nomeEmpresa = $node[\"cadastro_na_lp\"].json[\"body\"][\"Digite o nome da sua empresa\"] || \"\";\nconst siteEmpresa = $node[\"cadastro_na_lp\"].json[\"body\"][\"Sites e/ou redes sociais da empresa\"] || \"\";\nconst qtdFuncionarios = $node[\"cadastro_na_lp\"].json[\"body\"][\"Quantas pessoas trabalham na empresa?\"] || \"\";\nconst modeloNegocio = $node[\"cadastro_na_lp\"].json[\"body\"][\"Descreva seu modelo de negócio aqui:\"] || \"\";\nconst cargo = $node[\"cadastro_na_lp\"].json[\"body\"][\" Qual é o seu cargo?\"] || \"\";\n\nconst result = {\n    ...formattedNames,\n    email: formattedEmail,\n    whatsapp: telefoneFinal,\n    instagram: formattedInstagram,\n    cpf: formattedCPF,\n    cnpj: formattedCNPJ,\n    utm_source: utm_source,\n    utm_campaign: utm_campaign,\n    utm_term: utm_term,\n    utm_medium: utm_medium,\n    utm_content: utm_content,\n    form_id: form_id,\n    form_name: form_name,\n    nomeEmpresa: nomeEmpresa,\n    siteEmpresa: siteEmpresa,\n    qtdFuncionarios: qtdFuncionarios,\n    modeloNegocio: modeloNegocio,\n    cargo: cargo\n};\n\nreturn [{ json: result }];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "cef6ce60-57bf-44a0-b6d1-c6eb207c4993",
+      "name": "formata_dados"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "f077ec25-ab23-4e76-bbf9-e7117f3cc0cd",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "24dc6d6b-7113-4d1b-aacf-0cd6129ebb72",
+      "name": "cadastro_na_lp",
+      "webhookId": "f077ec25-ab23-4e76-bbf9-e7117f3cc0cd"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c74589e2-452e-44a5-8a49-b98c6fcdeca8",
+              "name": "nome",
+              "value": "={{ $node[\"formata_dados\"].json[\"fname\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f17267b5-65b0-4c2b-b9f5-d719193bb457",
+              "name": "sobrenome",
+              "value": "={{ $node[\"formata_dados\"].json[\"lname\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "79edcf9f-8602-409f-8d04-ced41c06d16f",
+              "name": "email",
+              "value": "={{ $node[\"formata_dados\"].json[\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "93103cc7-1870-4962-bb01-59462196b4de",
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados\"].json[\"whatsapp\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4750507c-f44a-45d5-b5ce-2a681d5a5581",
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a68b8a08-b2d1-4352-affb-0a6f4045cf4a",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71c74ec7-51b3-422e-a2d5-ae7bbf3bd1b0",
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "57aa10ae-6631-4352-8925-35138b1c9b7a",
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4e84ee54-3122-48e4-92d9-1f9db59e0b94",
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "2bb4770b-d984-4366-a4c5-6e323c3889c1",
+              "name": "id_funil",
+              "value": "={{ $node[\"busca_funil\"].json[\"id_funil\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "b9134b79-303b-4d22-8c4c-36002bd7e7f8",
+              "name": "instagram",
+              "value": "={{ $node[\"formata_dados\"].json[\"instagram\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "f94127c8-00db-445d-b77e-bfb06bed512a",
+              "name": "id_forms",
+              "value": "={{ $node[\"busca_funil\"].json[\"id_forms\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "e98d611f-7a4b-4d56-882b-73294009efa0",
+              "name": "tipo_forms",
+              "value": "={{ $node[\"busca_funil\"].json[\"tipo_forms\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "b73b995c-f5ad-47e5-8497-43ad7fa1963d",
+              "name": "nomeEmpresa",
+              "value": "={{ $node[\"formata_dados\"].json[\"nomeEmpresa\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "20bcb83f-e980-45dc-bd35-e9ad6cb5ffac",
+              "name": "siteEmpresa",
+              "value": "={{ $node[\"formata_dados\"].json[\"siteEmpresa\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "412ab871-752c-4a88-b793-f257951f452c",
+              "name": "qtdFuncionarios",
+              "value": "={{ $node[\"formata_dados\"].json[\"qtdFuncionarios\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "1103ecdb-d98d-4fcf-9ffc-56fa526237ce",
+              "name": "modeloNegocio",
+              "value": "={{ $node[\"formata_dados\"].json[\"modeloNegocio\"] || \"\" }}",
+              "type": "string"
+            },
+            {
+              "id": "daa68fd0-f465-418d-937c-9086e9804060",
+              "name": "cargo",
+              "value": "={{ $node[\"formata_dados\"].json[\"cargo\"] || \"\" }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d08833b6-7692-4d4b-a03e-186b97497b9b",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        880,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Fila de Ações de Funis",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "3096745e-8bda-4656-852b-7a7500a4eb00",
+      "name": "fila_acoes_funis",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        0
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "quc6gfdQpKCDLaHX",
+          "name": "[RabbitMQ] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_variavel_n8n_fluxo_funis\"].json[\"valor_variavel\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_forms",
+              "value": "={{ $node[\"formata_dados\"].json[\"form_id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        0
+      ],
+      "id": "205a8ca5-4505-41b0-9554-7fcd1e093c4b",
+      "name": "busca_funil"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "variaveis_globais_n8n",
+          "mode": "list",
+          "cachedResultName": "variaveis_globais_n8n"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome_variavel",
+              "value": "URL do Fluxo de Verificação de Funis"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "9c9b3189-8d0d-4f25-af3f-545515d1be46",
+      "name": "pesquisa_variavel_n8n_fluxo_funis",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        460,
+        0
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Já tá feito, precisamos somente configurar no banco de dados o resto das coisas",
+        "height": 280,
+        "width": 340
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -80,
+        -360
+      ],
+      "typeVersion": 1,
+      "id": "cbd1c40a-d0aa-4028-85e3-7502e1fceaf4",
+      "name": "Sticky Note"
+    }
+  ],
+  "pinData": {
+    "cadastro_na_lp": [
+      {
+        "json": {
+          "headers": {
+            "host": "webhooks.portusdigital.com.br",
+            "user-agent": "WordPress/6.7.2; https://portusdigital.com.br",
+            "content-length": "1004",
+            "accept": "*/*",
+            "accept-encoding": "deflate, gzip",
+            "content-type": "application/x-www-form-urlencoded",
+            "x-forwarded-for": "66.206.11.114",
+            "x-forwarded-host": "webhooks.portusdigital.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "6ace3109ce53",
+            "x-real-ip": "66.206.11.114"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "Digite o nome da sua empresa": "Automagic Bots",
+            "Sites e/ou redes sociais da empresa": "https://www.instagram.com/automagicbots/",
+            "Quantas pessoas trabalham na empresa?": "15",
+            "Descreva seu modelo de negócio aqui:": "Agência de automações",
+            "Qual seu nome?": "Gabriel",
+            " Qual é o seu cargo?": "CEO",
+            "Qual é o seu e-mail?": "teste@automagicbots.com.br",
+            "Qual seu Whatsapp?": "(31) 98571-1260",
+            "utm_source": "facebook",
+            "utm_campaign": "organico",
+            "utm_term": "ig",
+            "utm_medium": "reels",
+            "utm_content": "ia-sem-codigo",
+            "Date": "abril 28, 2025",
+            "Time": "4:14 am",
+            "Page URL": "https://portusdigital.com.br/paraempresas/?utm_source=facebook&utm_campaign=organico&utm_term=ig&utm_medium=reels&utm_content=ia-sem-codigo",
+            "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0",
+            "Remote IP": "2804:1b2:1003:d289:789d:1f94:64ad:86db",
+            "Powered by": "Elementor",
+            "form_id": "ec05388",
+            "form_name": "New Form"
+          },
+          "webhookUrl": "https://webhooks.portusdigital.com.br/webhook/f077ec25-ab23-4e76-bbf9-e7117f3cc0cd",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "mKIVAmjjlR8KNTYw"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-04-28T04:28:26.034Z",
+  "versionId": "fc919988-a6ee-45da-a263-b97f531c30ac"
+}
