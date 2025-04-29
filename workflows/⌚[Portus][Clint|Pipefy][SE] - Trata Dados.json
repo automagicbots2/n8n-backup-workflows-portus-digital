@@ -19,6 +19,11 @@
             "node": "fila_acoes_funis",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -50,6 +55,90 @@
         [
           {
             "node": "pesquisa_variavel_n8n_fluxo_funis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_variavel_n8n_fluxo_users": {
+      "main": [
+        [
+          {
+            "node": "cria_atualiza_user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_atualiza_user": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_url_rotacionamento_colaboradores",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_variavel_n8n_fluxo_users",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_no_pipefy_pipe": {
+      "main": [
+        [
+          {
+            "node": "atualiza_ids_user",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cria_card1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_url_rotacionamento_colaboradores": {
+      "main": [
+        [
+          {
+            "node": "consulta_sdr",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "consulta_sdr": {
+      "main": [
+        [
+          {
+            "node": "existe_no_pipefy_pipe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_card1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_ids_user",
             "type": "main",
             "index": 0
           }
@@ -321,6 +410,292 @@
       "typeVersion": 1,
       "id": "cbd1c40a-d0aa-4028-85e3-7502e1fceaf4",
       "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "variaveis_globais_n8n",
+          "mode": "list",
+          "cachedResultName": "variaveis_globais_n8n"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome_variavel",
+              "value": "URL do Fluxo de Verificação de Users"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "90beecde-1415-4fb1-af07-0e99fb21be0d",
+      "name": "pesquisa_variavel_n8n_fluxo_users",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1320,
+        -520
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_variavel_n8n_fluxo_users\"].json[\"valor_variavel\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "nome",
+              "value": "={{ ($node[\"dados\"].json[\"nome\"] || \"\").replace(/[^a-zA-Z0-9\\s]/g, \"\") }}"
+            },
+            {
+              "name": "sobrenome",
+              "value": "={{ ($node[\"dados\"].json[\"sobrenome\"] || \"\").replace(/[^a-zA-Z0-9\\s]/g, \"\") }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"dados\"].json[\"email\"] || \"\" }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"dados\"].json[\"telefone\"] || \"\" }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"dados\"].json[\"instagram\"] || \"\" }}"
+            },
+            {
+              "name": "cpf",
+              "value": "={{ $node[\"dados\"].json[\"cpf\"] || \"\" }}"
+            },
+            {
+              "name": "cnpj",
+              "value": "={{ $node[\"dados\"].json[\"cnpj\"] || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1540,
+        -520
+      ],
+      "id": "550a1006-0619-4339-8be2-e2ef3d5a78ae",
+      "name": "cria_atualiza_user"
+    },
+    {
+      "parameters": {
+        "jsCode": "function formatarTelefone(telefone) {\n    // Remove todos os caracteres que não sejam números\n    let telefoneLimpo = telefone.replace(/\\D/g, \"\");\n\n    // Verifica se o telefone começa com \"55\" (código do Brasil)\n    if (!telefoneLimpo.startsWith(\"55\")) {\n        return \"Número inválido\";\n    }\n\n    // Remove o \"55\" para trabalhar apenas com DDD + número\n    telefoneLimpo = telefoneLimpo.slice(2);\n\n    // Extrai DDD (2 primeiros dígitos) e número (restante)\n    const ddd = telefoneLimpo.slice(0, 2);\n    let numero = telefoneLimpo.slice(2);\n\n    // Garante que o número tenha 9 dígitos, adicionando \"9\" se necessário\n    if (numero.length === 8) {\n        numero = \"9\" + numero;\n    }\n\n    // Se o número final não tiver 9 dígitos, retorna inválido\n    if (numero.length !== 9) {\n        return \"Número inválido\";\n    }\n\n    // Formata para \"+55 DDD 98765-4321\"\n    return `+55 ${ddd} ${numero.slice(0, 5)}-${numero.slice(5)}`;\n}\n\n// Obtém os números do JSON do n8n\nconst telefoneOriginal = $node[\"dados\"].json[\"telefone\"] || \"\";\n\n// Retorna os números formatados com os nomes desejados\nreturn [{\n    json: {\n        telefoneFormatado: formatarTelefone(telefoneOriginal)\n    }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        -520
+      ],
+      "id": "cc464660-83e3-4b39-b3ab-08c8ff4899a4",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_pipefy_pipe",
+              "value": "={{   $node[\"cria_card1\"].runIndex >= 0        ? $node[\"cria_card1\"].json[\"body\"][\"data\"][\"createCard\"][\"card\"][\"id\"] : \"\" }}"
+            },
+            {
+              "column": "data_atualizacao",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "78f1cc4f-ea55-4ebf-b371-46abfc0d5847",
+      "name": "atualiza_ids_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        2620,
+        -520
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  createCard(input: {\n    pipe_id: 302838347,\n    title: \"{{ $node['dados'].json['nome'] + ($node['dados'].json['sobrenome'] ? ' ' + $node['dados'].json['sobrenome'] : '') }} | {{ $node['dados'].json['nomeEmpresa'] || \"\" }}\",\n    fields_attributes:[\n      {field_id: \"respons_vel\", field_value: \"305290154\"},\n      {field_id: \"email\", field_value: \"{{ $node['dados'].json['email'] || \"\" }}\"},\n      {field_id: \"whatsapp_do_lead\", field_value: \"{{ $node['Code'].json['telefoneFormatado'] || \"\" }}\"},\n      {field_id: \"cargo_do_lead\", field_value: \"{{ $node[\"dados\"].json[\"cargo\"] || \"\" }}\"},\n      {field_id: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", field_value: \"{{ $node[\"dados\"].json[\"siteEmpresa\"] }}\"},\n      {field_id: \"empresa\", field_value: \"{{ $node[\"dados\"].json[\"nomeEmpresa\"] || \"\" }}\"}\n    ]}\n  ) {\n    card {\n      id\n    }\n  }\n}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "0eb5cb93-709b-4746-8816-1ff3f808184c",
+      "name": "cria_card1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2420,
+        -420
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "7F0hUjKvKkREj86b",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e2b8e15d-6a40-45db-b5c3-af30777ce544",
+              "leftValue": "={{ $node[\"cria_atualiza_user\"].json[\"id_pipefy_pipe\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2180,
+        -520
+      ],
+      "id": "73186914-d3c4-4b0d-9f80-d732e91b68d9",
+      "name": "existe_no_pipefy_pipe"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "variaveis_globais_n8n",
+          "mode": "list",
+          "cachedResultName": "variaveis_globais_n8n"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome_variavel",
+              "value": "URL do Fluxo de Rotacionamento de Colaboradores"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "fe6aa488-5408-4e01-9656-adb889b225ca",
+      "name": "pesquisa_url_rotacionamento_colaboradores",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1760,
+        -520
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_url_rotacionamento_colaboradores\"].json[\"valor_variavel\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "time",
+              "value": "={{ \n   $node[\"dados\"].json[\"tipo_forms\"] \n    .replace('Cadastro','SDR')\n    .replace('Aplicação','SDR')\n    .replace('Agendamento','Closer')\n    .replace('Pesquisa','SDR')\n    .replace('Checkout', \n      $node[\"dados\"].json[\"status\"] === \"Compra Aprovada\" ? \"CS\" : \"Closer\"\n    ) \n}}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}"
+            },
+            {
+              "name": "email_colaborador",
+              "value": "={{ $node[\"dados\"].json[\"email_responsavel\"] || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1980,
+        -520
+      ],
+      "id": "6bba9307-6d52-4c2e-8a62-1545734a0a26",
+      "name": "consulta_sdr"
     }
   ],
   "pinData": {
@@ -330,7 +705,7 @@
           "headers": {
             "host": "webhooks.portusdigital.com.br",
             "user-agent": "WordPress/6.7.2; https://portusdigital.com.br",
-            "content-length": "1004",
+            "content-length": "996",
             "accept": "*/*",
             "accept-encoding": "deflate, gzip",
             "content-type": "application/x-www-form-urlencoded",
@@ -351,17 +726,17 @@
             "Qual seu nome?": "Gabriel",
             " Qual é o seu cargo?": "CEO",
             "Qual é o seu e-mail?": "teste@automagicbots.com.br",
-            "Qual seu Whatsapp?": "(31) 98571-1260",
+            "Qual seu Whatsapp?": "31985711260",
             "utm_source": "facebook",
             "utm_campaign": "organico",
             "utm_term": "ig",
             "utm_medium": "reels",
             "utm_content": "ia-sem-codigo",
-            "Date": "abril 28, 2025",
-            "Time": "4:14 am",
+            "Date": "abril 29, 2025",
+            "Time": "11:12 am",
             "Page URL": "https://portusdigital.com.br/paraempresas/?utm_source=facebook&utm_campaign=organico&utm_term=ig&utm_medium=reels&utm_content=ia-sem-codigo",
-            "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0",
-            "Remote IP": "2804:1b2:1003:d289:789d:1f94:64ad:86db",
+            "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 OPR/118.0.0.0",
+            "Remote IP": "2804:1b2:1003:d289:412f:e78:42cc:1b75",
             "Powered by": "Elementor",
             "form_id": "ec05388",
             "form_name": "New Form"
@@ -380,6 +755,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-04-28T22:38:06.743Z",
-  "versionId": "1a1284ab-c380-48b0-b735-7e8c1c418376"
+  "updatedAt": "2025-04-29T12:49:18.027Z",
+  "versionId": "278ae765-2b94-4782-aa97-dfaf1be8784e"
 }
