@@ -1,0 +1,182 @@
+{
+  "active": true,
+  "connections": {
+    "fluxo_chamado": {
+      "main": [
+        [
+          {
+            "node": "insert_cadastro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-29T11:14:49.507Z",
+  "id": "wApvh4tBZf3c8InU",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[Portus][Banco de Dados] - Insere Cadastro",
+  "nodes": [
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "cadastros",
+          "mode": "list",
+          "cachedResultName": "cadastros"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"id_user\"] }}"
+            },
+            {
+              "column": "id_funil",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"id_funil\"] }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"nome\"] || NULL }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"sobrenome\"] || NULL }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"email\"] || NULL }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"telefone\"] || NULL }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"instagram\"] || NULL }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"utm_source\"] || NULL }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"utm_campaign\"] || NULL }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"utm_term\"] || NULL }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"utm_medium\"] || NULL }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"utm_content\"] || NULL }}"
+            },
+            {
+              "column": "id_forms",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"id_forms\"] || NULL }}"
+            },
+            {
+              "column": "data_cadastro",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "detailedOutput": true
+        }
+      },
+      "id": "1b4c14d7-f0ce-4017-a3fe-9c423bfbc4ac",
+      "name": "insert_cadastro",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        160,
+        -140
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "insere-cadastro",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -60,
+        -140
+      ],
+      "id": "6f73549f-ff74-4c2f-996d-201748471b8c",
+      "name": "fluxo_chamado",
+      "webhookId": "697ca672-f32b-489c-bc69-d8ae2e5f0679"
+    }
+  ],
+  "pinData": {
+    "fluxo_chamado": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookgrupokedma.automagicbots.com.br",
+            "user-agent": "axios/1.7.4",
+            "content-length": "292",
+            "accept": "application/json,text/html,application/xhtml+xml,application/xml,text/*;q=0.9, image/*;q=0.8, */*;q=0.7",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "content-type": "application/json",
+            "x-forwarded-for": "172.18.0.1",
+            "x-forwarded-host": "n8nwebhookgrupokedma.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "63cf449bb96d",
+            "x-real-ip": "172.18.0.1"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "id_funil": "5",
+            "id_user": 6169,
+            "utm_source": "facebook",
+            "utm_campaign": "organico",
+            "utm_term": "ig",
+            "utm_medium": "reels",
+            "utm_content": "ia-sem-codigo",
+            "id_forms": "3",
+            "graduacao": "2025",
+            "nome": "Gabriel",
+            "sobrenome": "",
+            "email": "teste@automagicbots.com.br",
+            "telefone": "553185711260",
+            "instagram": ""
+          },
+          "webhookUrl": "https://n8nwebhookgrupokedma.automagicbots.com.br/webhook/insere-cadastro",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "mKIVAmjjlR8KNTYw"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-04-29T11:15:27.409Z",
+  "versionId": "325fd1a2-35d2-4042-98ae-5a56d3efc147"
+}
