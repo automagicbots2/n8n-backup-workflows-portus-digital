@@ -1,0 +1,351 @@
+{
+  "active": true,
+  "connections": {
+    "pesquisa_url_rotacionamento_colaboradores": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_etapa_funil",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "consulta_sdr": {
+      "main": [
+        [
+          {
+            "node": "cria_ou_atualiza_contact_na_clint",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_campos_contact1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_url_rotacionamento_colaboradores",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_json_fields_contact1": {
+      "main": [
+        [
+          {
+            "node": "formata_campos_contact1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_etapa_funil": {
+      "main": [
+        [
+          {
+            "node": "consulta_sdr",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "fluxo_chamado": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_json_fields_contact1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-29T11:36:50.354Z",
+  "id": "YVsyNL5wKUXHbb5l",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[Portus][Clint] - Cria ou Atualiza Contatos",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "variaveis_globais_n8n",
+          "mode": "list",
+          "cachedResultName": "variaveis_globais_n8n"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome_variavel",
+              "value": "URL do Fluxo de Rotacionamento de Colaboradores"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "a7bb8fc4-ab4b-4672-abf2-d7f1d7a8b470",
+      "name": "pesquisa_url_rotacionamento_colaboradores",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        760,
+        -180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_url_rotacionamento_colaboradores\"].json[\"valor_variavel\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "time",
+              "value": "={{ \n  $node[\"pesquisa_etapa_funil\"].json[\"nome\"]\n    .replace('Cadastro','SDR')\n    .replace('Aplicação','SDR')\n    .replace('Agendamento','Closer')\n    .replace('Pesquisa','SDR')\n    .replace('Checkout', \n      $node[\"fluxo_chamado\"].json[\"body\"][\"payload\"][\"trans_status\"] === \"Compra Aprovada\" ? \"CS\" : \"Closer\"\n    ) \n}}"
+            },
+            {
+              "name": "id_user",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"id_user\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1160,
+        -180
+      ],
+      "id": "6bd8acc4-78e9-4262-acde-bde456a67515",
+      "name": "consulta_sdr"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Obter o template do banco de dados\nlet template = $node[\"pesquisa_json_fields_contact1\"].json[\"payload_fields\"];\n\n// Verifique se o template é válido (precisa ser um objeto)\nif (typeof template !== \"object\" || template === null) {\n    throw new Error(\"O template payload_fields não é um objeto válido.\");\n}\n\n// Obter os dados diretamente do \"body\" do webhook\nconst payload = $node[\"fluxo_chamado\"].json[\"body\"][\"payload\"];\n\n// Função para substituir os placeholders\nconst replacePlaceholders = (template, data) => {\n    return Object.keys(template).map(key => {\n        let fieldValue = template[key];\n\n        if (typeof fieldValue === \"string\") {\n            // Substituir placeholders no formato {{ chave }}\n            fieldValue = fieldValue.replace(/{{\\s*(\\w+)\\s*}}/g, (_, key) => {\n                return data[key] !== undefined ? data[key] : ''; // Substitui ou deixa vazio se não encontrado\n            });\n        }\n\n        return { field: key, value: fieldValue };\n    });\n};\n\n// Substituir os placeholders no template com os dados do webhook\nlet result = replacePlaceholders(template, payload);\n\n// Retornar o resultado no formato esperado\nreturn {\n    custom_fields_values: result\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        540,
+        -180
+      ],
+      "id": "ea7d477d-88bf-4a70-9e5a-f306a76bfb89",
+      "name": "formata_campos_contact1"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "situacao_pipeline_stage_2",
+          "mode": "list",
+          "cachedResultName": "situacao_pipeline_stage_2"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "entidade",
+              "value": "contact"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "231cd587-927e-4364-890f-106a2de2e31c",
+      "name": "pesquisa_json_fields_contact1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        320,
+        -180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"pesquisa_json_fields_contact1\"].json[\"webhook\"] }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($node[\"formata_campos_contact1\"].json[\"custom_fields_values\"]\n  .concat([{ \"field\": \"dono\", \"value\": $node[\"consulta_sdr\"].json[\"email\"] }])) }}",
+        "options": {}
+      },
+      "id": "a3189e89-8b2e-4623-9b9c-a89122014b80",
+      "name": "cria_ou_atualiza_contact_na_clint",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1360,
+        -180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "etapas_funil",
+          "mode": "list",
+          "cachedResultName": "etapas_funil"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"id_etapa_funil\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "79550d25-59c7-4dc3-9923-167c62c8132f",
+      "name": "pesquisa_etapa_funil",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        960,
+        -180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "add-update-contact-clint",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        80,
+        -180
+      ],
+      "id": "9bab6250-9339-406a-b443-03e93af18d36",
+      "name": "fluxo_chamado",
+      "webhookId": "bcdcc520-6bbf-4601-a1b7-abda1e4eadcc"
+    }
+  ],
+  "pinData": {
+    "fluxo_chamado": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8npamellabrandao.automagicbots.com.br",
+            "user-agent": "axios/1.7.4",
+            "content-length": "1236",
+            "accept": "application/json,text/html,application/xhtml+xml,application/xml,text/*;q=0.9, image/*;q=0.8, */*;q=0.7",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "content-type": "application/json",
+            "x-forwarded-for": "172.18.0.1",
+            "x-forwarded-host": "n8npamellabrandao.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d4ad76bf4c9b",
+            "x-real-ip": "172.18.0.1"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "id_etapa_funil": 2,
+            "id_funil": "4",
+            "id_user": 6582,
+            "payload": {
+              "nome": "Mateus",
+              "sobrenome": "Diniz",
+              "nome_completo": "Mateus Diniz",
+              "email": "mateus@resenhadocafe.com.br",
+              "telefone": "554835191298",
+              "cpf": "",
+              "utm_source": "wpp-oficial",
+              "utm_campaign": "quente",
+              "utm_term": "leads-carrinho-abandonado",
+              "utm_medium": "1x1",
+              "utm_content": "msg-carrinho-abandonado",
+              "form_id": "KNjNpUI",
+              "form_name": "",
+              "value": 839.76,
+              "transaction_id": "5a39106a-0f42-43fd-b841-1001d4655627",
+              "net_value": "",
+              "trans_status": "Compra Cancelada",
+              "payment_method": "Cartão de Crédito",
+              "refund_date": "",
+              "event_date": "2025-01-29 20:58:00",
+              "payment_date": "",
+              "product_type": "Cobrança única",
+              "product_id": "ad387970-d8e3-11ef-abcf-2de0102224c5",
+              "product_name": "Prova Decifrada - Concursos Públicos",
+              "warranty_date": "",
+              "offer_code": "",
+              "discount_coupon": "",
+              "street": "",
+              "address_number": "",
+              "country": "",
+              "district": "",
+              "address_complement": "",
+              "city": "",
+              "address_state": "",
+              "zipcode": "",
+              "affiliate_value": "",
+              "gateway_comission": 65.15,
+              "billet_barcode": "",
+              "currency": "BRL",
+              "bankslip": "",
+              "recurrenceExpirationDate": "",
+              "cancelledDate": "",
+              "id_funil": "4",
+              "tipo_forms": "Checkout",
+              "cnpj": "",
+              "id_forms": "6",
+              "installments": 12,
+              "billetExpirationDate": ""
+            },
+            "id_situacao_checkout": 4
+          },
+          "webhookUrl": "https://n8npamellabrandao.automagicbots.com.br/webhook/cria-atualiza-contato-crm",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "mKIVAmjjlR8KNTYw"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-04-29T11:46:31.415Z",
+  "versionId": "3311745e-d8e6-4156-a74a-114321629c52"
+}
