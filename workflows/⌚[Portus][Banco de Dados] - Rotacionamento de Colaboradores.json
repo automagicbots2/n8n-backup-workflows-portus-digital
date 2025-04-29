@@ -1,0 +1,774 @@
+{
+  "active": true,
+  "connections": {
+    "atualiza_relacionamento1": {
+      "main": [
+        [
+          {
+            "node": "atualize_atribuicao_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "colaborador_existe3": {
+      "main": [
+        [
+          {
+            "node": "dados_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_colaborador1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador5": {
+      "main": [
+        [
+          {
+            "node": "colaborador_existe3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "relacionamento_existe": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_colaborador5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_relacionamento": {
+      "main": [
+        [
+          {
+            "node": "relacionamento_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_relacionamento": {
+      "main": [
+        [
+          {
+            "node": "atualize_atribuicao_colaborador1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_colaborador_existe": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_colaborador3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_relacionamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador3": {
+      "main": [
+        [
+          {
+            "node": "colaborador_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "colaborador_existe": {
+      "main": [
+        [
+          {
+            "node": "insere_relacionamento",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador": {
+      "main": [
+        [
+          {
+            "node": "insere_relacionamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_colaborador1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_relacionamento1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualize_atribuicao_colaborador": {
+      "main": [
+        [
+          {
+            "node": "dados_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualize_atribuicao_colaborador1": {
+      "main": [
+        [
+          {
+            "node": "dados_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "fluxo_chamado": {
+      "main": [
+        [
+          {
+            "node": "email_colaborador_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-29T11:43:14.987Z",
+  "id": "mS4E2rTUE9gFrvHW",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[Portus][Banco de Dados] - Rotacionamento de Colaboradores",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "contato_responsavel",
+          "mode": "list",
+          "cachedResultName": "contato_responsavel"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_relacionamento\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_responsavel",
+              "value": "={{ $node[\"pesquisa_colaborador1\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e1742532-1e55-4ac2-b614-81172cdabc58",
+      "name": "atualiza_relacionamento1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        620,
+        -100
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "d6775303-e8d6-4066-8ded-9807106b76ac",
+              "leftValue": "={{ $node[\"pesquisa_colaborador5\"].json[\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e79b8e5e-40c6-46fb-829d-73aaf318c06c",
+      "name": "colaborador_existe3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        200,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "49bc1770-8197-483a-b0c5-501e42017fa6",
+              "name": "id_chatwoot",
+              "value": "={{   $node[\"pesquisa_colaborador\"].runIndex >= 0        ? $node[\"pesquisa_colaborador\"].json[\"id_chatwoot\"] : $node[\"pesquisa_colaborador1\"].runIndex >= 0      ? $node[\"pesquisa_colaborador1\"].json[\"id_chatwoot\"]     : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"id_chatwoot\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"id_chatwoot\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "46ec6590-4b1e-4db3-869e-39878e2e5ec1",
+              "name": "id_crm",
+              "value": "={{   $node[\"pesquisa_colaborador\"].runIndex >= 0        ? $node[\"pesquisa_colaborador\"].json[\"id_crm\"] : $node[\"pesquisa_colaborador1\"].runIndex >= 0      ? $node[\"pesquisa_colaborador1\"].json[\"id_crm\"]     : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"id_crm\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"id_crm\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "9233bde6-29d1-490f-b2b2-a87d883fdaca",
+              "name": "apikey_whatsapp",
+              "value": "={{   $node[\"pesquisa_colaborador\"].runIndex >= 0        ? $node[\"pesquisa_colaborador\"].json[\"apikey_whatsapp\"] : $node[\"pesquisa_colaborador1\"].runIndex >= 0      ? $node[\"pesquisa_colaborador1\"].json[\"apikey_whatsapp\"]     : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"apikey_whatsapp\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"apikey_whatsapp\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "7af48129-02cd-403f-a276-bdfe0493bb3d",
+              "name": "instancia_whatsapp",
+              "value": "={{   $node[\"pesquisa_colaborador\"].runIndex >= 0        ? $node[\"pesquisa_colaborador\"].json[\"instancia_whatsapp\"] : $node[\"pesquisa_colaborador1\"].runIndex >= 0      ? $node[\"pesquisa_colaborador1\"].json[\"instancia_whatsapp\"]     : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"instancia_whatsapp\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"instancia_whatsapp\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "31f724da-4288-49d0-9cce-d9d284cd1a97",
+              "name": "nome",
+              "value": "={{   $node[\"pesquisa_colaborador\"].runIndex >= 0        ? $node[\"pesquisa_colaborador\"].json[\"nome\"] : $node[\"pesquisa_colaborador1\"].runIndex >= 0      ? $node[\"pesquisa_colaborador1\"].json[\"nome\"]     : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"nome\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"nome\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "dcf235df-2666-436c-a187-8a4a26c73bf2",
+              "name": "telefone",
+              "value": "={{   $node[\"pesquisa_colaborador\"].runIndex >= 0        ? $node[\"pesquisa_colaborador\"].json[\"telefone\"] : $node[\"pesquisa_colaborador1\"].runIndex >= 0      ? $node[\"pesquisa_colaborador1\"].json[\"telefone\"]     : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"telefone\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"telefone\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "ab667355-f462-45fd-951a-a7c01b08e3ac",
+              "name": "id_colaborador",
+              "value": "={{   $node[\"pesquisa_colaborador\"].runIndex >= 0        ? $node[\"pesquisa_colaborador\"].json[\"id\"] : $node[\"pesquisa_colaborador1\"].runIndex >= 0      ? $node[\"pesquisa_colaborador1\"].json[\"id\"]     : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"id\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"id\"] : null }}",
+              "type": "string"
+            },
+            {
+              "id": "0f560186-b774-4a45-ad17-9f71f37671a0",
+              "name": "email",
+              "value": "={{   $node[\"pesquisa_colaborador\"].runIndex >= 0        ? $node[\"pesquisa_colaborador\"].json[\"email\"] : $node[\"pesquisa_colaborador1\"].runIndex >= 0      ? $node[\"pesquisa_colaborador1\"].json[\"email\"]     : $node[\"pesquisa_colaborador3\"].runIndex >= 0        ? $node[\"pesquisa_colaborador3\"].json[\"email\"] : $node[\"pesquisa_colaborador5\"].runIndex >= 0        ? $node[\"pesquisa_colaborador5\"].json[\"email\"] : null }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0d4f21b7-6a1b-41fb-8244-6bd58c4960c5",
+      "name": "dados_colaborador",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1560,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $node[\"pesquisa_relacionamento\"].json[\"id_responsavel\"] }}"
+            },
+            {
+              "column": "status_atividade",
+              "value": "Y"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9baf866a-3a67-485b-9b3e-d0ec1f26f913",
+      "name": "pesquisa_colaborador5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        -220
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "6b7e2434-ab0e-4e63-b61d-527079c2f64a",
+              "leftValue": "={{ $node[\"pesquisa_relacionamento\"].json[\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a677f7b1-9562-4e98-bcc8-4a867820f3ce",
+      "name": "relacionamento_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -300,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "contato_responsavel",
+          "mode": "list",
+          "cachedResultName": "contato_responsavel"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"id_user\"] }}"
+            },
+            {
+              "column": "funcao",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"time\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "cd5e083e-cf25-4c80-a96f-42d7ad0110f9",
+      "name": "pesquisa_relacionamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        -500,
+        380
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "contato_responsavel",
+          "mode": "list",
+          "cachedResultName": "contato_responsavel"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"id_user\"] }}"
+            },
+            {
+              "column": "id_responsavel",
+              "value": "={{\n  $node[\"pesquisa_colaborador\"].runIndex >= 0 \n      ? $node[\"pesquisa_colaborador\"].json[\"id\"] : $node[\"pesquisa_colaborador3\"].runIndex >= 0 \n      ? $node[\"pesquisa_colaborador3\"].json[\"id\"] : null\n}}"
+            },
+            {
+              "column": "funcao",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"time\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "28e90921-00b6-4f3f-9f2b-038e42ede524",
+      "name": "insere_relacionamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        880,
+        320
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "6b7e2434-ab0e-4e63-b61d-527079c2f64a",
+              "leftValue": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"email_colaborador\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "1fba713a-7e33-408a-a6e8-32ce0923f91a",
+      "name": "email_colaborador_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -760,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"fluxo_chamado\"].json[\"body\"][\"email_colaborador\"] }}"
+            },
+            {
+              "column": "status_atividade",
+              "value": "Y"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ad1edfe1-aa07-41c0-9b5e-06388f5c18a1",
+      "name": "pesquisa_colaborador3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        200,
+        180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "1de9a6bc-5395-4840-b6ff-0ac3f9779921",
+              "leftValue": "={{ $node[\"pesquisa_colaborador3\"].json[\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "41cc70be-4e98-446b-a006-c60d3576a3f3",
+      "name": "colaborador_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        400,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT *\nFROM colaboradores\nWHERE funcao = '{{ $node[\"fluxo_chamado\"].json[\"body\"][\"time\"] }}'\n  AND status_atividade = 'Y'\nORDER BY ultima_atribuicao ASC\nLIMIT 1;\n",
+        "options": {}
+      },
+      "id": "7ba90e85-fd58-448b-a34c-e8a49891c01a",
+      "name": "pesquisa_colaborador",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        680,
+        520
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT *\nFROM colaboradores\nWHERE funcao = '{{ $node[\"fluxo_chamado\"].json[\"body\"][\"time\"] }}'\n  AND status_atividade = 'Y'\nORDER BY ultima_atribuicao ASC\nLIMIT 1;\n",
+        "options": {}
+      },
+      "id": "d410ecd8-efcb-4b23-a2e6-55dd632c8606",
+      "name": "pesquisa_colaborador1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        400,
+        -100
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_colaborador1\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "ultima_atribuicao",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e8661fce-6d75-4038-b936-6a9fd3d69a60",
+      "name": "atualize_atribuicao_colaborador",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        860,
+        -100
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{\n  $node[\"pesquisa_colaborador\"].runIndex >= 0 \n      ? $node[\"pesquisa_colaborador\"].json[\"id\"] : $node[\"pesquisa_colaborador3\"].runIndex >= 0 \n      ? $node[\"pesquisa_colaborador3\"].json[\"id\"] : null\n}}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "ultima_atribuicao",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a8049495-5251-4cdd-a09f-f8a74e5acced",
+      "name": "atualize_atribuicao_colaborador1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1100,
+        320
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "consulta-colaborador",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "31dfd8d0-e822-49fd-969b-7b73c6b849af",
+      "name": "fluxo_chamado",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        -1040,
+        280
+      ],
+      "webhookId": "7dff7a1f-1359-475a-8749-d16695e4bf1c"
+    }
+  ],
+  "pinData": {
+    "fluxo_chamado": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookgrupokedma.automagicbots.com.br",
+            "user-agent": "axios/1.7.4",
+            "content-length": "56",
+            "accept": "application/json,text/html,application/xhtml+xml,application/xml,text/*;q=0.9, image/*;q=0.8, */*;q=0.7",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "content-type": "application/json",
+            "x-forwarded-for": "172.18.0.1",
+            "x-forwarded-host": "n8nwebhookgrupokedma.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "63cf449bb96d",
+            "x-real-ip": "172.18.0.1"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "time": "Closer",
+            "id_user": 15452,
+            "email_colaborador": ""
+          },
+          "webhookUrl": "https://n8nwebhookgrupokedma.automagicbots.com.br/webhook/consulta-colaborador",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "mKIVAmjjlR8KNTYw"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-04-29T11:54:53.506Z",
+  "versionId": "f4bf7418-2ec5-4f80-8b4c-8e9126c0e5b9"
+}
