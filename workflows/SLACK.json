@@ -1,0 +1,68 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-29T13:59:14.659Z",
+  "id": "ViipK8bqTW6b9QlS",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "SLACK",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "b0648114-78d1-4780-8e23-980a56b6de0e",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://hooks.slack.com/services/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",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "text",
+              "value": "TESTE"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "3fc5ca18-fb19-4113-b995-b4f56011cee1",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-04-29T13:59:56.998Z",
+  "versionId": "f28b6950-a1ec-4403-a1c5-f5ade4209f0e"
+}
