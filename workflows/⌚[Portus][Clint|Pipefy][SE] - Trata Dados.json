@@ -98,7 +98,7 @@
       "main": [
         [
           {
-            "node": "atualiza_ids_user",
+            "node": "atualiza_card",
             "type": "main",
             "index": 0
           }
@@ -135,6 +135,17 @@
       ]
     },
     "cria_card1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_ids_user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_card": {
       "main": [
         [
           {
@@ -398,21 +409,6 @@
     },
     {
       "parameters": {
-        "content": "## Já tá feito, precisamos somente configurar no banco de dados o resto das coisas",
-        "height": 280,
-        "width": 340
-      },
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [
-        -80,
-        -360
-      ],
-      "typeVersion": 1,
-      "id": "cbd1c40a-d0aa-4028-85e3-7502e1fceaf4",
-      "name": "Sticky Note"
-    },
-    {
-      "parameters": {
         "operation": "select",
         "table": {
           "__rl": true,
@@ -523,7 +519,7 @@
           "values": [
             {
               "column": "id_pipefy_pipe",
-              "value": "={{   $node[\"cria_card1\"].runIndex >= 0        ? $node[\"cria_card1\"].json[\"body\"][\"data\"][\"createCard\"][\"card\"][\"id\"] : \"\" }}"
+              "value": "={{   $node[\"cria_card1\"].runIndex >= 0        ? $node[\"cria_card1\"].json[\"body\"][\"data\"][\"createCard\"][\"card\"][\"id\"] : $node[\"atualiza_card\"].runIndex >= 0        ? $node[\"atualiza_card\"].json[\"body\"][\"data\"][\"updateCardField\"][\"card\"][\"id\"] : \"\" }}"
             },
             {
               "column": "data_atualizacao",
@@ -569,7 +565,7 @@
           "parameters": [
             {
               "name": "query",
-              "value": "=mutation {\n  createCard(input: {\n    pipe_id: 302838347,\n    title: \"{{ $node['dados'].json['nome'] + ($node['dados'].json['sobrenome'] ? ' ' + $node['dados'].json['sobrenome'] : '') }} | {{ $node['dados'].json['nomeEmpresa'] || \"\" }}\",\n    fields_attributes:[\n      {field_id: \"respons_vel\", field_value: \"305290154\"},\n      {field_id: \"email\", field_value: \"{{ $node['dados'].json['email'] || \"\" }}\"},\n      {field_id: \"whatsapp_do_lead\", field_value: \"{{ $node['Code'].json['telefoneFormatado'] || \"\" }}\"},\n      {field_id: \"cargo_do_lead\", field_value: \"{{ $node[\"dados\"].json[\"cargo\"] || \"\" }}\"},\n      {field_id: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", field_value: \"{{ $node[\"dados\"].json[\"siteEmpresa\"] }}\"},\n      {field_id: \"empresa\", field_value: \"{{ $node[\"dados\"].json[\"nomeEmpresa\"] || \"\" }}\"}\n    ]}\n  ) {\n    card {\n      id\n    }\n  }\n}"
+              "value": "=mutation {\n  createCard(input: {\n    pipe_id: 302838347,\n    title: \"{{ $node['dados'].json['nome'] + ($node['dados'].json['sobrenome'] ? ' ' + $node['dados'].json['sobrenome'] : '') }} | {{ $node['dados'].json['nomeEmpresa'] || \"\" }}\",\n    fields_attributes:[\n      {field_id: \"respons_vel\", field_value: \"305290154\"},\n      {field_id: \"email\", field_value: \"{{ $node['dados'].json['email'] || \"\" }}\"},\n      {field_id: \"whatsapp_do_lead\", field_value: \"{{ $node['Code'].json['telefoneFormatado'] || \"\" }}\"},\n      {field_id: \"cargo_do_lead\", field_value: \"{{ $node[\"dados\"].json[\"cargo\"] || \"\" }}\"},\n      {field_id: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", field_value: \"{{ $node[\"dados\"].json[\"siteEmpresa\"] }}\"},\n      {field_id: \"quantas_pessoas_trabalham_na_sua_empresa_1\", field_value: \"{{ $node[\"dados\"].json[\"qtdFuncionarios\"] }}\"},\n      {field_id: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital_1\", field_value: \"{{ $node[\"dados\"].json[\"modeloNegocio\"] }}\"},\n      {field_id: \"empresa\", field_value: \"{{ $node[\"dados\"].json[\"nomeEmpresa\"] || \"\" }}\"}\n    ]}\n  ) {\n    card {\n      id\n    }\n  }\n}"
             }
           ]
         },
@@ -696,6 +692,53 @@
       ],
       "id": "6bba9307-6d52-4c2e-8a62-1545734a0a26",
       "name": "consulta_sdr"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=mutation {\n  updateFieldsValues(input: {\n    nodeId: \"{{ $node['cria_atualiza_user'].json['id_pipefy_pipe'] }}\",\n    values: [\n      { fieldId: \"respons_vel\", value: \"305290154\" },\n      { fieldId: \"email\", value: \"{{ $node['dados'].json['email'] || '' }}\" },\n      { fieldId: \"whatsapp_do_lead\", value: \"{{ $node['Code'].json['telefoneFormatado'] || '' }}\" },\n      { fieldId: \"cargo_do_lead\", value: \"{{ $node['dados'].json['cargo'] || '' }}\" },\n      { fieldId: \"sites_e_ou_redes_sociais_da_empresa_ou_projetos_em_que_o_candidato_atuar\", value: \"{{ $node['dados'].json['siteEmpresa'] || '' }}\" },\n      { fieldId: \"quantas_pessoas_trabalham_na_sua_empresa_1\", value: \"{{ $node['dados'].json['qtdFuncionarios'] || '' }}\" },\n      { fieldId: \"qual_o_seu_modelo_de_neg_cio_aqui_no_digital_1\", value: \"{{ $node['dados'].json['modeloNegocio'] || '' }}\" },\n      { fieldId: \"empresa\", value: \"{{ $node['dados'].json['nomeEmpresa'] || '' }}\" }\n    ]\n  }) {\n    success\n  }\n}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "b8cb419a-74b0-45f6-bd19-657e86f2469a",
+      "name": "atualiza_card",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        2420,
+        -660
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "7F0hUjKvKkREj86b",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
     }
   ],
   "pinData": {
@@ -705,7 +748,7 @@
           "headers": {
             "host": "webhooks.portusdigital.com.br",
             "user-agent": "WordPress/6.7.2; https://portusdigital.com.br",
-            "content-length": "996",
+            "content-length": "1015",
             "accept": "*/*",
             "accept-encoding": "deflate, gzip",
             "content-type": "application/x-www-form-urlencoded",
@@ -721,19 +764,19 @@
           "body": {
             "Digite o nome da sua empresa": "Automagic Bots",
             "Sites e/ou redes sociais da empresa": "https://www.instagram.com/automagicbots/",
-            "Quantas pessoas trabalham na empresa?": "15",
-            "Descreva seu modelo de negócio aqui:": "Agência de automações",
+            "Quantas pessoas trabalham na empresa?": "6 a 15 pessoas",
+            "Descreva seu modelo de negócio aqui:": "Prestação de serviços",
             "Qual seu nome?": "Gabriel",
             " Qual é o seu cargo?": "CEO",
             "Qual é o seu e-mail?": "teste@automagicbots.com.br",
-            "Qual seu Whatsapp?": "31985711260",
+            "Qual seu Whatsapp?": "(31) 98571-1260",
             "utm_source": "facebook",
             "utm_campaign": "organico",
             "utm_term": "ig",
             "utm_medium": "reels",
             "utm_content": "ia-sem-codigo",
             "Date": "abril 29, 2025",
-            "Time": "11:12 am",
+            "Time": "4:24 pm",
             "Page URL": "https://portusdigital.com.br/paraempresas/?utm_source=facebook&utm_campaign=organico&utm_term=ig&utm_medium=reels&utm_content=ia-sem-codigo",
             "User Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 OPR/118.0.0.0",
             "Remote IP": "2804:1b2:1003:d289:412f:e78:42cc:1b75",
@@ -755,6 +798,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-04-29T12:49:18.027Z",
-  "versionId": "278ae765-2b94-4782-aa97-dfaf1be8784e"
+  "updatedAt": "2025-04-29T17:09:20.193Z",
+  "versionId": "28d11db8-85e8-42a9-ada8-97fc78e27122"
 }
