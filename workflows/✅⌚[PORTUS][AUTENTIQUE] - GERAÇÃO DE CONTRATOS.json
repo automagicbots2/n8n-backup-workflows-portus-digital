@@ -280,11 +280,9 @@
       ]
     }
   },
-  "createdAt": "2024-07-15T17:54:09.561Z",
-  "id": "6ubur03Sj2HBxBGp",
-  "meta": {
-    "templateCredsSetupCompleted": true
-  },
+  "createdAt": "2025-02-04T17:45:32.183Z",
+  "id": "8JYjX3bUtcQy3Ske",
+  "meta": null,
   "name": "✅⌚[PORTUS][AUTENTIQUE] - GERAÇÃO DE CONTRATOS",
   "nodes": [
     {
@@ -349,8 +347,8 @@
       "id": "ce2ff457-de42-4507-a0db-518b361ba453",
       "credentials": {
         "googleDriveOAuth2Api": {
-          "id": "FkFkMqymMJCPVMOB",
-          "name": "[Google Drive] - Portus"
+          "id": "",
+          "name": "[Google Drive] - PORTUS"
         }
       }
     },
@@ -530,8 +528,8 @@
       "id": "fded52c6-88a3-4d4d-98e0-878962f31945",
       "credentials": {
         "googleDocsOAuth2Api": {
-          "id": "OBvnBUSoNc25ugKH",
-          "name": "[Google Docs] - Portus"
+          "id": "",
+          "name": "[Google Docs] - PORTUS"
         }
       },
       "continueOnFail": true
@@ -623,8 +621,8 @@
       "id": "b7d4d5a1-91d8-4e2a-8b9a-4451751bd58b",
       "credentials": {
         "googleDriveOAuth2Api": {
-          "id": "FkFkMqymMJCPVMOB",
-          "name": "[Google Drive] - Portus"
+          "id": "",
+          "name": "[Google Drive] - PORTUS"
         }
       }
     },
@@ -871,7 +869,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "DS41BflHYyPSAI7U",
+          "id": "hjxCwlzjBFkdT0gG",
           "name": "[MySQL] - Portus"
         }
       }
@@ -1542,7 +1540,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "UNsBZpoYhAtf5Api",
+          "id": "quc6gfdQpKCDLaHX",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -1577,63 +1575,17 @@
       "webhookId": "6a06856e-09f5-4344-90c7-3332d8841753"
     }
   ],
-  "pinData": {
-    "contrato_enviado": [
-      {
-        "json": {
-          "headers": {
-            "host": "n8nwebhookxtrafego.automagicbots.com.br",
-            "user-agent": "WordPress/6.4.4; https://xtrafego.com.br",
-            "content-length": "358",
-            "accept": "*/*",
-            "accept-encoding": "deflate, gzip",
-            "content-type": "application/json",
-            "x-forwarded-for": "177.154.191.223",
-            "x-forwarded-host": "n8nwebhookxtrafego.automagicbots.com.br",
-            "x-forwarded-port": "443",
-            "x-forwarded-proto": "https",
-            "x-forwarded-server": "cdf1ac2efa2e",
-            "x-real-ip": "177.154.191.223"
-          },
-          "params": {},
-          "query": {},
-          "body": {
-            "email": "wae@jfk.com",
-            "nome_completo": "pge",
-            "cpf": "56564656",
-            "cnpj": "5666665665",
-            "razao_social": "wadaw",
-            "estado": "Acre",
-            "cidade": "aegs",
-            "rua": "srfgs",
-            "numero": 7,
-            "bairro": "77",
-            "cep": "d77",
-            "data_de_nascimento": "07/10/2020",
-            "numero_da_conta_pj": "356",
-            "agencia": "4",
-            "nome_do_banco": "849",
-            "chave_pix_conta_corrente_pj": "84",
-            "tipo_da_chave_pix": "Chave de CNPJ"
-          },
-          "webhookUrl": "https://n8nwebhookxtrafego.automagicbots.com.br/webhook/forms-enviado-pelo-colaborador",
-          "executionMode": "production"
-        }
-      }
-    ]
-  },
+  "pinData": null,
   "settings": {
-    "executionOrder": "v1",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": false,
     "saveDataErrorExecution": "all",
     "saveDataSuccessExecution": "all",
-    "saveExecutionProgress": true,
-    "saveManualExecutions": true,
-    "callerPolicy": "workflowsFromSameOwner",
-    "errorWorkflow": "p3FaRDkYc5EoM9KR"
+    "errorWorkflow": "B5ErT6ObkzMJxzKU"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2024-07-15T19:12:33.882Z",
-  "versionId": "ddbc3764-8a93-4fdc-bee3-41be57cfc8af"
+  "updatedAt": "2025-02-04T17:45:32.183Z",
+  "versionId": "3534ee5d-6960-4bf0-8048-2dbd2c6213d6"
 }
