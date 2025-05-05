@@ -1,0 +1,2694 @@
+{
+  "active": true,
+  "connections": {
+    "onboarding": {
+      "main": [
+        [
+          {
+            "node": "formata_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_variavel_n8n_fluxo_users": {
+      "main": [
+        [
+          {
+            "node": "cria_atualiza_user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados": {
+      "main": [
+        [
+          {
+            "node": "busca_user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_user": {
+      "main": [
+        [
+          {
+            "node": "user_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "user_existe": {
+      "main": [
+        [
+          {
+            "node": "calcula_48h_uteis",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_variavel_n8n_fluxo_users",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "calcula_48h_uteis": {
+      "main": [
+        [
+          {
+            "node": "insere_verificacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_atualiza_user": {
+      "main": [
+        [
+          {
+            "node": "update_id_pipefy_pipe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_id_pipefy_pipe": {
+      "main": [
+        [
+          {
+            "node": "calcula_48h_uteis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1min": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_verificacoes_do_minuto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_verificacoes_do_minuto": {
+      "main": [
+        [
+          {
+            "node": "tem_verificacoes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tem_verificacoes": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "fim",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_copy",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_copy": {
+      "main": [
+        [
+          {
+            "node": "formata_campos_deal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_campos_deal": {
+      "main": [
+        [
+          {
+            "node": "envia_msg_slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "envia_msg_slack": {
+      "main": [
+        [
+          {
+            "node": "update_verificacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_verificacao": {
+      "main": [
+        [
+          {
+            "node": "onboarding1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados1": {
+      "main": [
+        [
+          {
+            "node": "busca_user1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_variavel_n8n_fluxo_users1": {
+      "main": [
+        [
+          {
+            "node": "cria_atualiza_user1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_atualiza_user1": {
+      "main": [
+        [
+          {
+            "node": "update_id_pipefy_pipe1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_user1": {
+      "main": [
+        [
+          {
+            "node": "user_existe1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "user_existe1": {
+      "main": [
+        [
+          {
+            "node": "calcula_48h_uteis1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_variavel_n8n_fluxo_users1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "calcula_48h_uteis1": {
+      "main": [
+        [
+          {
+            "node": "insere_verificacao1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_id_pipefy_pipe1": {
+      "main": [
+        [
+          {
+            "node": "calcula_48h_uteis1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "triagem": {
+      "main": [
+        [
+          {
+            "node": "formata_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "onboarding1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "triagem1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "triagem1": {
+      "main": [
+        [
+          {
+            "node": "primeira_verificacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "primeira_verificacao": {
+      "main": [
+        [
+          {
+            "node": "calcula_48h_uteis2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "calcula_48h_uteis2": {
+      "main": [
+        [
+          {
+            "node": "insere_verificacao2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_verificacao2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados2": {
+      "main": [
+        [
+          {
+            "node": "busca_user2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_variavel_n8n_fluxo_users2": {
+      "main": [
+        [
+          {
+            "node": "cria_atualiza_user2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_atualiza_user2": {
+      "main": [
+        [
+          {
+            "node": "update_id_pipefy_pipe2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_user2": {
+      "main": [
+        [
+          {
+            "node": "user_existe2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "user_existe2": {
+      "main": [
+        [
+          {
+            "node": "calcula_24h_uteis",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_variavel_n8n_fluxo_users2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_id_pipefy_pipe2": {
+      "main": [
+        [
+          {
+            "node": "calcula_24h_uteis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "shortlist": {
+      "main": [
+        [
+          {
+            "node": "formata_dados2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "calcula_24h_uteis": {
+      "main": [
+        [
+          {
+            "node": "insere_verificacao3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados3": {
+      "main": [
+        [
+          {
+            "node": "busca_user3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_variavel_n8n_fluxo_users3": {
+      "main": [
+        [
+          {
+            "node": "cria_atualiza_user3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_atualiza_user3": {
+      "main": [
+        [
+          {
+            "node": "update_id_pipefy_pipe3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_user3": {
+      "main": [
+        [
+          {
+            "node": "user_existe3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "user_existe3": {
+      "main": [
+        [
+          {
+            "node": "calcula_24h_uteis1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_variavel_n8n_fluxo_users3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_id_pipefy_pipe3": {
+      "main": [
+        [
+          {
+            "node": "calcula_24h_uteis1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "calcula_24h_uteis1": {
+      "main": [
+        [
+          {
+            "node": "insere_verificacao4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pos_entrevista": {
+      "main": [
+        [
+          {
+            "node": "formata_dados3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados4": {
+      "main": [
+        [
+          {
+            "node": "busca_user4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_variavel_n8n_fluxo_users4": {
+      "main": [
+        [
+          {
+            "node": "cria_atualiza_user4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_atualiza_user4": {
+      "main": [
+        [
+          {
+            "node": "update_id_pipefy_pipe4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "busca_user4": {
+      "main": [
+        [
+          {
+            "node": "user_existe4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "user_existe4": {
+      "main": [
+        [
+          {
+            "node": "calcula_24h_uteis2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_variavel_n8n_fluxo_users4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_id_pipefy_pipe4": {
+      "main": [
+        [
+          {
+            "node": "calcula_24h_uteis2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "calcula_24h_uteis2": {
+      "main": [
+        [
+          {
+            "node": "insere_verificacao5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "contratados": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "createdAt": "2025-04-29T13:59:14.659Z",
+  "id": "ViipK8bqTW6b9QlS",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[Portus][Pipefy|Slack] - Notificações para Agilizar Pós-Venda",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "7fad9152-d2cb-46d1-ba8d-0d2d926f717f",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "3d2df328-68ac-4fb7-9c97-00b4c0d5732b",
+      "name": "onboarding",
+      "webhookId": "7fad9152-d2cb-46d1-ba8d-0d2d926f717f"
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"onboarding\"].json[\"body\"][\"nome\"] || \"\";\nconst emailAnswer = $node[\"onboarding\"].json[\"body\"][\"email\"] || \"\";\nconst telefoneClienteOriginal = $node[\"onboarding\"].json[\"body\"][\"telefone\"] || \"\";\nconst instagramAnswer = $node[\"onboarding\"].json[\"body\"][\"Instagram\"] || \"\";\nconst cpfAnswer = $node[\"onboarding\"].json[\"body\"][\"CPF\"] || \"\";\nconst cnpjAnswer = $node[\"onboarding\"].json[\"body\"][\"CNPJ\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    let fullname = lname ? `${fname} ${lname}` : fname;\n\n    return { fname, lname, fullname };\n}\n\nfunction formatEmail(email) {\n    return email.toLowerCase().trim();\n}\n\nfunction formatInstagram(instagram) {\n    return instagram.toLowerCase().replace(/^@/, \"\");\n}\n\nfunction formatCPF(cpf) {\n    const cpfLimpo = cpf.replace(/\\D/g, \"\");\n    if (cpfLimpo.length === 11) {\n        return `${cpfLimpo.slice(0, 3)}.${cpfLimpo.slice(3, 6)}.${cpfLimpo.slice(6, 9)}-${cpfLimpo.slice(9, 11)}`;\n    }\n    return cpf;\n}\n\nfunction formatCNPJ(cnpj) {\n    const cnpjLimpo = cnpj.replace(/\\D/g, \"\");\n    if (cnpjLimpo.length === 14) {\n        return `${cnpjLimpo.slice(0, 2)}.${cnpjLimpo.slice(2, 5)}.${cnpjLimpo.slice(5, 8)}/${cnpjLimpo.slice(8, 12)}-${cnpjLimpo.slice(12, 14)}`;\n    }\n    return cnpj;\n}\n\nlet telefoneFinal = \"\";\n\nif (telefoneClienteOriginal) {\n    const telefoneLimpo = telefoneClienteOriginal.replace(/\\D/g, \"\");\n\n    let DDI = '';\n    let DDD = '';\n    let numero = '';\n\n    if (telefoneLimpo.length > 11) {\n        DDI = telefoneLimpo.slice(0, 2);\n        DDD = telefoneLimpo.slice(2, 4);\n        numero = telefoneLimpo.slice(4);\n    } else if (telefoneLimpo.length === 11) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else if (telefoneLimpo.length === 10) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else {\n        telefoneFinal = telefoneLimpo;\n    }\n\n    if (DDD && numero) {\n        if (parseInt(DDD) > 28) {\n            if (numero.length === 9 && numero.startsWith(\"9\")) {\n                numero = numero.slice(1);\n            }\n        } else {\n            if (numero.length === 8) {\n                numero = `9${numero}`;\n            }\n        }\n    }\n\n    if (DDI && DDD && numero) {\n        telefoneFinal = `${DDI}${DDD}${numero}`;\n    }\n}\n\nconst formattedNames = capitalizeName(fullNameAnswer);\nconst formattedEmail = formatEmail(emailAnswer);\nconst formattedInstagram = formatInstagram(instagramAnswer);\nconst formattedCPF = formatCPF(cpfAnswer);\nconst formattedCNPJ = formatCNPJ(cnpjAnswer);\nconst id_pipefy_pipe = $node[\"onboarding\"].json[\"body\"][\"id\"] || \"\";\n\nconst result = {\n    ...formattedNames,\n    email: formattedEmail,\n    whatsapp: telefoneFinal,\n    instagram: formattedInstagram,\n    cpf: formattedCPF,\n    cnpj: formattedCNPJ,\n    id_pipefy_pipe: id_pipefy_pipe\n};\n\nreturn [{ json: result }];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "14f26e42-71d2-420a-81f2-2015b4452a33",
+      "name": "formata_dados"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "variaveis_globais_n8n",
+          "mode": "list",
+          "cachedResultName": "variaveis_globais_n8n"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome_variavel",
+              "value": "URL do Fluxo de Verificação de Users"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "7e29af0c-90a4-46d5-be4e-bd083b48e571",
+      "name": "pesquisa_variavel_n8n_fluxo_users",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        880,
+        120
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_variavel_n8n_fluxo_users\"].json[\"valor_variavel\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "nome",
+              "value": "={{ ($node[\"formata_dados\"].json[\"fname\"]).replace(/[^a-zA-Z0-9\\s]/g, \"\") }}"
+            },
+            {
+              "name": "sobrenome",
+              "value": "={{ ($node[\"formata_dados\"].json[\"lname\"]).replace(/[^a-zA-Z0-9\\s]/g, \"\") }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"formata_dados\"].json[\"email\"] || \"\" }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados\"].json[\"whatsapp\"] || \"\" }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"formata_dados\"].json[\"instagram\"] || \"\" }}"
+            },
+            {
+              "name": "cpf",
+              "value": "={{ $node[\"formata_dados\"].json[\"cpf\"] || \"\" }}"
+            },
+            {
+              "name": "cnpj",
+              "value": "={{ $node[\"formata_dados\"].json[\"cnpj\"] || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1100,
+        120
+      ],
+      "id": "92c918f5-fb68-4e0a-92bd-d57911e8d817",
+      "name": "cria_atualiza_user"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_pipefy_pipe",
+              "value": "={{ $node[\"formata_dados\"].json[\"id_pipefy_pipe\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        440,
+        0
+      ],
+      "id": "cf7693d5-82f8-42c6-8fc3-c8aea4e58a57",
+      "name": "busca_user",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0093b9ce-065b-4b8f-b08f-334c9ce7da08",
+              "leftValue": "={{ $node[\"busca_user\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        640,
+        0
+      ],
+      "id": "ee10b12e-cf2e-4671-9cbe-b1cfcf2e1b37",
+      "name": "user_existe"
+    },
+    {
+      "parameters": {
+        "jsCode": "function adicionarHorasUteis(horasParaAdicionar) {\n  const agora = new Date();\n  let horasRestantes = horasParaAdicionar;\n  let dataAtual = new Date(agora);\n\n  while (horasRestantes > 0) {\n    dataAtual.setHours(dataAtual.getHours() + 1);\n    const diaDaSemana = dataAtual.getDay(); // 0 = domingo, 6 = sábado\n    if (diaDaSemana !== 0 && diaDaSemana !== 6) {\n      horasRestantes--;\n    }\n  }\n\n  return dataAtual;\n}\n\n// Função para formatar a data como \"YYYY-MM-DD HH:mm:ss\" em São Paulo\nfunction formatarDataSP(data) {\n  return new Intl.DateTimeFormat('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n    year: 'numeric',\n    month: '2-digit',\n    day: '2-digit',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit',\n    hour12: false\n  })\n  .formatToParts(data)\n  .reduce((acc, part) => {\n    if (part.type === 'literal') return acc;\n    acc[part.type] = part.value;\n    return acc;\n  }, {});\n}\n\nconst dataCalculada = adicionarHorasUteis(48);\nconst partes = formatarDataSP(dataCalculada);\n\n// Monta a string final: YYYY-MM-DD HH:mm:ss\nconst dataFormatada = `${partes.year}-${partes.month}-${partes.day} ${partes.hour}:${partes.minute}:${partes.second}`;\n\nreturn [\n  {\n    json: {\n      dataCalculada: dataFormatada\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        -120
+      ],
+      "id": "93926254-d060-4dc8-8a9d-96908649a67f",
+      "name": "calcula_48h_uteis"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "verificacoes",
+          "mode": "list",
+          "cachedResultName": "verificacoes"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user\"].runIndex >= 0 ? $node[\"cria_atualiza_user\"].json[\"id\"] \n          : $node[\"busca_user\"].runIndex >= 0 \n            ? $node[\"busca_user\"].json[\"id\"] : null }}"
+            },
+            {
+              "column": "evento",
+              "value": "onboarding"
+            },
+            {
+              "column": "ordem",
+              "value": "1"
+            },
+            {
+              "column": "data",
+              "value": "={{ $node[\"calcula_48h_uteis\"].json[\"dataCalculada\"] }}"
+            },
+            {
+              "column": "status",
+              "value": "N"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1100,
+        -120
+      ],
+      "id": "66cf1cd0-4c43-4e70-9b53-ca12dc42cb17",
+      "name": "insere_verificacao",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"cria_atualiza_user\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_pipefy_pipe",
+              "value": "={{ $node[\"formata_dados\"].json[\"id_pipefy_pipe\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1320,
+        120
+      ],
+      "id": "38f79bb5-e2c4-4fe5-868b-cd2fd81063f3",
+      "name": "update_id_pipefy_pipe",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 1
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -20,
+        -800
+      ],
+      "id": "0f70a660-917d-4d20-b6e8-c5c61e42f858",
+      "name": "1min"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT * FROM verificacoes WHERE (data BETWEEN DATE_SUB(NOW(), INTERVAL 1 MINUTE) AND NOW()) AND status = 'N';",
+        "options": {}
+      },
+      "id": "0794e1b0-71d0-4b42-9354-79870720ba8c",
+      "name": "pesquisa_verificacoes_do_minuto",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        240,
+        -800
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "409a4365-f616-4716-9358-0aee2c7ceb3e",
+              "leftValue": "={{ $node[\"pesquisa_verificacoes_do_minuto\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        480,
+        -800
+      ],
+      "id": "9bdf9834-90fb-40de-939a-e27953bc5dce",
+      "name": "tem_verificacoes"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        700,
+        -660
+      ],
+      "id": "f89e16df-36b0-41f3-898d-16466b2e4d4e",
+      "name": "fim"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        700,
+        -980
+      ],
+      "id": "b6e064a5-7523-44e4-83f3-5e81a134b146",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "verificacoes_copy",
+          "mode": "list",
+          "cachedResultName": "verificacoes_copy"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "evento",
+              "value": "={{ $node[\"pesquisa_verificacoes_do_minuto\"].json[\"evento\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "6eedb3b8-bf47-46bb-94d4-5fa94400b0bb",
+      "name": "pesquisa_copy",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1140,
+        -880
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"id_user\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        940,
+        -880
+      ],
+      "id": "f5b5bff9-0f8c-415b-b4b1-81c44db18228",
+      "name": "pesquisa_user",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const copy = $json[\"copy\"];  // copy com placeholders como {{ nome }}\nconst userData = $node[\"pesquisa_user\"].json;  // dados com os valores reais\n\n// Substitui todas as variáveis do tipo {{ chave }} com os valores do node pesquisa_user\nconst copyFinal = copy.replace(/{{\\s*([^}]+)\\s*}}/g, (match, key) => {\n  const valor = userData[key.trim()];\n  return valor !== undefined ? valor : match; // mantém o placeholder se não achar o valor\n});\n\nreturn [\n  {\n    json: {\n      copy: copyFinal\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1340,
+        -880
+      ],
+      "id": "282e86b6-0bd4-4740-a52c-e20a5f311d30",
+      "name": "formata_campos_deal"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://hooks.slack.com/services/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",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "text",
+              "value": "={{ $node[\"formata_campos_deal\"].json[\"copy\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1580,
+        -880
+      ],
+      "id": "5fec3cd5-d70f-4568-9120-b4463f5997d8",
+      "name": "envia_msg_slack"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "verificacoes",
+          "mode": "list",
+          "cachedResultName": "verificacoes"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"Loop Over Items\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "status",
+              "value": "=Y"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1800,
+        -880
+      ],
+      "id": "09c6bb58-7eff-4279-9cb1-d1b420e1be58",
+      "name": "update_verificacao",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        940,
+        -1060
+      ],
+      "id": "f5a89416-860c-488e-80e5-1dc0dacff229",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"triagem\"].json[\"body\"][\"nome\"] || \"\";\nconst emailAnswer = $node[\"triagem\"].json[\"body\"][\"email\"] || \"\";\nconst telefoneClienteOriginal = $node[\"triagem\"].json[\"body\"][\"telefone\"] || \"\";\nconst instagramAnswer = $node[\"triagem\"].json[\"body\"][\"Instagram\"] || \"\";\nconst cpfAnswer = $node[\"triagem\"].json[\"body\"][\"CPF\"] || \"\";\nconst cnpjAnswer = $node[\"triagem\"].json[\"body\"][\"CNPJ\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    let fullname = lname ? `${fname} ${lname}` : fname;\n\n    return { fname, lname, fullname };\n}\n\nfunction formatEmail(email) {\n    return email.toLowerCase().trim();\n}\n\nfunction formatInstagram(instagram) {\n    return instagram.toLowerCase().replace(/^@/, \"\");\n}\n\nfunction formatCPF(cpf) {\n    const cpfLimpo = cpf.replace(/\\D/g, \"\");\n    if (cpfLimpo.length === 11) {\n        return `${cpfLimpo.slice(0, 3)}.${cpfLimpo.slice(3, 6)}.${cpfLimpo.slice(6, 9)}-${cpfLimpo.slice(9, 11)}`;\n    }\n    return cpf;\n}\n\nfunction formatCNPJ(cnpj) {\n    const cnpjLimpo = cnpj.replace(/\\D/g, \"\");\n    if (cnpjLimpo.length === 14) {\n        return `${cnpjLimpo.slice(0, 2)}.${cnpjLimpo.slice(2, 5)}.${cnpjLimpo.slice(5, 8)}/${cnpjLimpo.slice(8, 12)}-${cnpjLimpo.slice(12, 14)}`;\n    }\n    return cnpj;\n}\n\nlet telefoneFinal = \"\";\n\nif (telefoneClienteOriginal) {\n    const telefoneLimpo = telefoneClienteOriginal.replace(/\\D/g, \"\");\n\n    let DDI = '';\n    let DDD = '';\n    let numero = '';\n\n    if (telefoneLimpo.length > 11) {\n        DDI = telefoneLimpo.slice(0, 2);\n        DDD = telefoneLimpo.slice(2, 4);\n        numero = telefoneLimpo.slice(4);\n    } else if (telefoneLimpo.length === 11) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else if (telefoneLimpo.length === 10) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else {\n        telefoneFinal = telefoneLimpo;\n    }\n\n    if (DDD && numero) {\n        if (parseInt(DDD) > 28) {\n            if (numero.length === 9 && numero.startsWith(\"9\")) {\n                numero = numero.slice(1);\n            }\n        } else {\n            if (numero.length === 8) {\n                numero = `9${numero}`;\n            }\n        }\n    }\n\n    if (DDI && DDD && numero) {\n        telefoneFinal = `${DDI}${DDD}${numero}`;\n    }\n}\n\nconst formattedNames = capitalizeName(fullNameAnswer);\nconst formattedEmail = formatEmail(emailAnswer);\nconst formattedInstagram = formatInstagram(instagramAnswer);\nconst formattedCPF = formatCPF(cpfAnswer);\nconst formattedCNPJ = formatCNPJ(cnpjAnswer);\nconst id_pipefy_pipe = $node[\"triagem\"].json[\"body\"][\"id\"] || \"\";\n\nconst result = {\n    ...formattedNames,\n    email: formattedEmail,\n    whatsapp: telefoneFinal,\n    instagram: formattedInstagram,\n    cpf: formattedCPF,\n    cnpj: formattedCNPJ,\n    id_pipefy_pipe: id_pipefy_pipe\n};\n\nreturn [{ json: result }];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        560
+      ],
+      "id": "4f87d4dd-70cb-42f7-9a9e-a4868693e9fd",
+      "name": "formata_dados1"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "variaveis_globais_n8n",
+          "mode": "list",
+          "cachedResultName": "variaveis_globais_n8n"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome_variavel",
+              "value": "URL do Fluxo de Verificação de Users"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "525a7a9d-f7aa-4864-b9c9-8b0f92416a82",
+      "name": "pesquisa_variavel_n8n_fluxo_users1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        880,
+        680
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_variavel_n8n_fluxo_users1\"].json[\"valor_variavel\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "nome",
+              "value": "={{ ($node[\"formata_dados1\"].json[\"fname\"]).replace(/[^a-zA-Z0-9\\s]/g, \"\") }}"
+            },
+            {
+              "name": "sobrenome",
+              "value": "={{ ($node[\"formata_dados1\"].json[\"lname\"]).replace(/[^a-zA-Z0-9\\s]/g, \"\") }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"formata_dados1\"].json[\"email\"] || \"\" }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados1\"].json[\"whatsapp\"] || \"\" }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"formata_dados1\"].json[\"instagram\"] || \"\" }}"
+            },
+            {
+              "name": "cpf",
+              "value": "={{ $node[\"formata_dados1\"].json[\"cpf\"] || \"\" }}"
+            },
+            {
+              "name": "cnpj",
+              "value": "={{ $node[\"formata_dados1\"].json[\"cnpj\"] || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1100,
+        680
+      ],
+      "id": "98a9df64-dd39-445a-b198-3da162bf80cf",
+      "name": "cria_atualiza_user1"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_pipefy_pipe",
+              "value": "={{ $node[\"formata_dados1\"].json[\"id_pipefy_pipe\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        440,
+        560
+      ],
+      "id": "92d7e6b9-b964-4ed3-8120-7ceff089ea0d",
+      "name": "busca_user1",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0093b9ce-065b-4b8f-b08f-334c9ce7da08",
+              "leftValue": "={{ $node[\"busca_user1\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        640,
+        560
+      ],
+      "id": "a12e3122-ffe1-4761-aa91-a3db958186fe",
+      "name": "user_existe1"
+    },
+    {
+      "parameters": {
+        "jsCode": "function adicionarHorasUteis(horasParaAdicionar) {\n  const agora = new Date();\n  let horasRestantes = horasParaAdicionar;\n  let dataAtual = new Date(agora);\n\n  while (horasRestantes > 0) {\n    dataAtual.setHours(dataAtual.getHours() + 1);\n    const diaDaSemana = dataAtual.getDay(); // 0 = domingo, 6 = sábado\n    if (diaDaSemana !== 0 && diaDaSemana !== 6) {\n      horasRestantes--;\n    }\n  }\n\n  return dataAtual;\n}\n\n// Função para formatar a data como \"YYYY-MM-DD HH:mm:ss\" em São Paulo\nfunction formatarDataSP(data) {\n  return new Intl.DateTimeFormat('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n    year: 'numeric',\n    month: '2-digit',\n    day: '2-digit',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit',\n    hour12: false\n  })\n  .formatToParts(data)\n  .reduce((acc, part) => {\n    if (part.type === 'literal') return acc;\n    acc[part.type] = part.value;\n    return acc;\n  }, {});\n}\n\nconst dataCalculada = adicionarHorasUteis(48);\nconst partes = formatarDataSP(dataCalculada);\n\n// Monta a string final: YYYY-MM-DD HH:mm:ss\nconst dataFormatada = `${partes.year}-${partes.month}-${partes.day} ${partes.hour}:${partes.minute}:${partes.second}`;\n\nreturn [\n  {\n    json: {\n      dataCalculada: dataFormatada\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        440
+      ],
+      "id": "e7569a8b-7ce8-4b94-8fea-9117708a3894",
+      "name": "calcula_48h_uteis1"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "verificacoes",
+          "mode": "list",
+          "cachedResultName": "verificacoes"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user1\"].runIndex >= 0 ? $node[\"cria_atualiza_user1\"].json[\"id\"] \n          : $node[\"busca_user1\"].runIndex >= 0 \n            ? $node[\"busca_user1\"].json[\"id\"] : null }}"
+            },
+            {
+              "column": "evento",
+              "value": "triagem"
+            },
+            {
+              "column": "ordem",
+              "value": "1"
+            },
+            {
+              "column": "data",
+              "value": "={{ $node[\"calcula_48h_uteis1\"].json[\"dataCalculada\"] }}"
+            },
+            {
+              "column": "status",
+              "value": "N"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1100,
+        440
+      ],
+      "id": "d56c54d6-ea35-45f0-85ed-01d04cf4dbcb",
+      "name": "insere_verificacao1",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"cria_atualiza_user1\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_pipefy_pipe",
+              "value": "={{ $node[\"formata_dados1\"].json[\"id_pipefy_pipe\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1320,
+        680
+      ],
+      "id": "bdd88d90-4780-4606-a53c-3466d35464f5",
+      "name": "update_id_pipefy_pipe1",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "7fad9152-d2cb-46d1-ba8d-0d2d926f717g",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        560
+      ],
+      "id": "59cbc3d7-fb03-403a-8a8e-b8171ad5fa0c",
+      "name": "triagem",
+      "webhookId": "7fad9152-d2cb-46d1-ba8d-0d2d926f717f"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bfc2c77a-b310-49ee-ae28-5e80476d9603",
+              "leftValue": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}",
+              "rightValue": "onboarding",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2000,
+        -880
+      ],
+      "id": "4cf254e6-5686-4dc6-9ec0-b4c3af972154",
+      "name": "onboarding1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bfc2c77a-b310-49ee-ae28-5e80476d9603",
+              "leftValue": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}",
+              "rightValue": "triagem",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2200,
+        -740
+      ],
+      "id": "ef8bd238-44d4-4e64-834f-c29db73b09ad",
+      "name": "triagem1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bfc2c77a-b310-49ee-ae28-5e80476d9603",
+              "leftValue": "={{ $node[\"Loop Over Items\"].json[\"ordem\"] }}",
+              "rightValue": 1,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2380,
+        -840
+      ],
+      "id": "fa4eb028-9644-4934-8b55-ae4ec83bcd54",
+      "name": "primeira_verificacao"
+    },
+    {
+      "parameters": {
+        "jsCode": "function adicionarHorasUteis(horasParaAdicionar) {\n  const agora = new Date();\n  let horasRestantes = horasParaAdicionar;\n  let dataAtual = new Date(agora);\n\n  while (horasRestantes > 0) {\n    dataAtual.setHours(dataAtual.getHours() + 1);\n    const diaDaSemana = dataAtual.getDay(); // 0 = domingo, 6 = sábado\n    if (diaDaSemana !== 0 && diaDaSemana !== 6) {\n      horasRestantes--;\n    }\n  }\n\n  return dataAtual;\n}\n\n// Função para formatar a data como \"YYYY-MM-DD HH:mm:ss\" em São Paulo\nfunction formatarDataSP(data) {\n  return new Intl.DateTimeFormat('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n    year: 'numeric',\n    month: '2-digit',\n    day: '2-digit',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit',\n    hour12: false\n  })\n  .formatToParts(data)\n  .reduce((acc, part) => {\n    if (part.type === 'literal') return acc;\n    acc[part.type] = part.value;\n    return acc;\n  }, {});\n}\n\nconst dataCalculada = adicionarHorasUteis(48);\nconst partes = formatarDataSP(dataCalculada);\n\n// Monta a string final: YYYY-MM-DD HH:mm:ss\nconst dataFormatada = `${partes.year}-${partes.month}-${partes.day} ${partes.hour}:${partes.minute}:${partes.second}`;\n\nreturn [\n  {\n    json: {\n      dataCalculada: dataFormatada\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2600,
+        -980
+      ],
+      "id": "1d684089-8422-4f3d-8f4d-a85beb120bd9",
+      "name": "calcula_48h_uteis2"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "verificacoes",
+          "mode": "list",
+          "cachedResultName": "verificacoes"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"id_user\"] }}"
+            },
+            {
+              "column": "evento",
+              "value": "triagem"
+            },
+            {
+              "column": "ordem",
+              "value": "2"
+            },
+            {
+              "column": "data",
+              "value": "={{ $node[\"calcula_48h_uteis2\"].json[\"dataCalculada\"] }}"
+            },
+            {
+              "column": "status",
+              "value": "N"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        2820,
+        -980
+      ],
+      "id": "f69e4d4a-a503-479a-85f0-158035d3cd44",
+      "name": "insere_verificacao2",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"shortlist\"].json[\"body\"][\"nome\"] || \"\";\nconst emailAnswer = $node[\"shortlist\"].json[\"body\"][\"email\"] || \"\";\nconst telefoneClienteOriginal = $node[\"shortlist\"].json[\"body\"][\"telefone\"] || \"\";\nconst instagramAnswer = $node[\"shortlist\"].json[\"body\"][\"Instagram\"] || \"\";\nconst cpfAnswer = $node[\"shortlist\"].json[\"body\"][\"CPF\"] || \"\";\nconst cnpjAnswer = $node[\"shortlist\"].json[\"body\"][\"CNPJ\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    let fullname = lname ? `${fname} ${lname}` : fname;\n\n    return { fname, lname, fullname };\n}\n\nfunction formatEmail(email) {\n    return email.toLowerCase().trim();\n}\n\nfunction formatInstagram(instagram) {\n    return instagram.toLowerCase().replace(/^@/, \"\");\n}\n\nfunction formatCPF(cpf) {\n    const cpfLimpo = cpf.replace(/\\D/g, \"\");\n    if (cpfLimpo.length === 11) {\n        return `${cpfLimpo.slice(0, 3)}.${cpfLimpo.slice(3, 6)}.${cpfLimpo.slice(6, 9)}-${cpfLimpo.slice(9, 11)}`;\n    }\n    return cpf;\n}\n\nfunction formatCNPJ(cnpj) {\n    const cnpjLimpo = cnpj.replace(/\\D/g, \"\");\n    if (cnpjLimpo.length === 14) {\n        return `${cnpjLimpo.slice(0, 2)}.${cnpjLimpo.slice(2, 5)}.${cnpjLimpo.slice(5, 8)}/${cnpjLimpo.slice(8, 12)}-${cnpjLimpo.slice(12, 14)}`;\n    }\n    return cnpj;\n}\n\nlet telefoneFinal = \"\";\n\nif (telefoneClienteOriginal) {\n    const telefoneLimpo = telefoneClienteOriginal.replace(/\\D/g, \"\");\n\n    let DDI = '';\n    let DDD = '';\n    let numero = '';\n\n    if (telefoneLimpo.length > 11) {\n        DDI = telefoneLimpo.slice(0, 2);\n        DDD = telefoneLimpo.slice(2, 4);\n        numero = telefoneLimpo.slice(4);\n    } else if (telefoneLimpo.length === 11) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else if (telefoneLimpo.length === 10) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else {\n        telefoneFinal = telefoneLimpo;\n    }\n\n    if (DDD && numero) {\n        if (parseInt(DDD) > 28) {\n            if (numero.length === 9 && numero.startsWith(\"9\")) {\n                numero = numero.slice(1);\n            }\n        } else {\n            if (numero.length === 8) {\n                numero = `9${numero}`;\n            }\n        }\n    }\n\n    if (DDI && DDD && numero) {\n        telefoneFinal = `${DDI}${DDD}${numero}`;\n    }\n}\n\nconst formattedNames = capitalizeName(fullNameAnswer);\nconst formattedEmail = formatEmail(emailAnswer);\nconst formattedInstagram = formatInstagram(instagramAnswer);\nconst formattedCPF = formatCPF(cpfAnswer);\nconst formattedCNPJ = formatCNPJ(cnpjAnswer);\nconst id_pipefy_pipe = $node[\"shortlist\"].json[\"body\"][\"id\"] || \"\";\n\nconst result = {\n    ...formattedNames,\n    email: formattedEmail,\n    whatsapp: telefoneFinal,\n    instagram: formattedInstagram,\n    cpf: formattedCPF,\n    cnpj: formattedCNPJ,\n    id_pipefy_pipe: id_pipefy_pipe\n};\n\nreturn [{ json: result }];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        1180
+      ],
+      "id": "50b5d586-9451-41ab-9306-d47569dc0602",
+      "name": "formata_dados2"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "variaveis_globais_n8n",
+          "mode": "list",
+          "cachedResultName": "variaveis_globais_n8n"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome_variavel",
+              "value": "URL do Fluxo de Verificação de Users"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "68d0b986-550e-4457-8c4e-9323a01899ee",
+      "name": "pesquisa_variavel_n8n_fluxo_users2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        880,
+        1300
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_variavel_n8n_fluxo_users2\"].json[\"valor_variavel\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "nome",
+              "value": "={{ ($node[\"formata_dados2\"].json[\"fname\"]).replace(/[^a-zA-Z0-9\\s]/g, \"\") }}"
+            },
+            {
+              "name": "sobrenome",
+              "value": "={{ ($node[\"formata_dados2\"].json[\"lname\"]).replace(/[^a-zA-Z0-9\\s]/g, \"\") }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"formata_dados2\"].json[\"email\"] || \"\" }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados2\"].json[\"whatsapp\"] || \"\" }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"formata_dados2\"].json[\"instagram\"] || \"\" }}"
+            },
+            {
+              "name": "cpf",
+              "value": "={{ $node[\"formata_dados2\"].json[\"cpf\"] || \"\" }}"
+            },
+            {
+              "name": "cnpj",
+              "value": "={{ $node[\"formata_dados2\"].json[\"cnpj\"] || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1100,
+        1300
+      ],
+      "id": "f818d734-26a5-4b6f-b6b9-bbee9c52c5a7",
+      "name": "cria_atualiza_user2"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_pipefy_pipe",
+              "value": "={{ $node[\"formata_dados2\"].json[\"id_pipefy_pipe\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        440,
+        1180
+      ],
+      "id": "043c33e8-112d-4cd5-be0b-154d5b7e5271",
+      "name": "busca_user2",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0093b9ce-065b-4b8f-b08f-334c9ce7da08",
+              "leftValue": "={{ $node[\"busca_user2\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        640,
+        1180
+      ],
+      "id": "2d5d98c0-893d-4350-8c82-5dc7208e0af3",
+      "name": "user_existe2"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "verificacoes",
+          "mode": "list",
+          "cachedResultName": "verificacoes"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user2\"].runIndex >= 0 ? $node[\"cria_atualiza_user2\"].json[\"id\"] \n          : $node[\"busca_user2\"].runIndex >= 0 \n            ? $node[\"busca_user2\"].json[\"id\"] : null }}"
+            },
+            {
+              "column": "evento",
+              "value": "shortlists enviadas"
+            },
+            {
+              "column": "ordem",
+              "value": "1"
+            },
+            {
+              "column": "data",
+              "value": "={{ $node[\"calcula_24h_uteis\"].json[\"dataCalculada\"] }}"
+            },
+            {
+              "column": "status",
+              "value": "N"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1100,
+        1060
+      ],
+      "id": "859acacb-3a77-492b-8acd-410ae5e977bb",
+      "name": "insere_verificacao3",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"cria_atualiza_user2\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_pipefy_pipe",
+              "value": "={{ $node[\"formata_dados2\"].json[\"id_pipefy_pipe\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1320,
+        1300
+      ],
+      "id": "a3a6997c-3b8c-4f40-8f86-8d3c4d587802",
+      "name": "update_id_pipefy_pipe2",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "7fad9152-d2cb-46d1-ba8d-0d2d926f717h",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        1180
+      ],
+      "id": "29cb5955-d52e-4693-9189-9932ac0e4b26",
+      "name": "shortlist",
+      "webhookId": "7fad9152-d2cb-46d1-ba8d-0d2d926f717f"
+    },
+    {
+      "parameters": {
+        "jsCode": "function adicionarHorasUteis(horasParaAdicionar) {\n  const agora = new Date();\n  let horasRestantes = horasParaAdicionar;\n  let dataAtual = new Date(agora);\n\n  while (horasRestantes > 0) {\n    dataAtual.setHours(dataAtual.getHours() + 1);\n    const diaDaSemana = dataAtual.getDay(); // 0 = domingo, 6 = sábado\n    if (diaDaSemana !== 0 && diaDaSemana !== 6) {\n      horasRestantes--;\n    }\n  }\n\n  return dataAtual;\n}\n\n// Função para formatar a data como \"YYYY-MM-DD HH:mm:ss\" em São Paulo\nfunction formatarDataSP(data) {\n  return new Intl.DateTimeFormat('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n    year: 'numeric',\n    month: '2-digit',\n    day: '2-digit',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit',\n    hour12: false\n  })\n  .formatToParts(data)\n  .reduce((acc, part) => {\n    if (part.type === 'literal') return acc;\n    acc[part.type] = part.value;\n    return acc;\n  }, {});\n}\n\nconst dataCalculada = adicionarHorasUteis(24);\nconst partes = formatarDataSP(dataCalculada);\n\n// Monta a string final: YYYY-MM-DD HH:mm:ss\nconst dataFormatada = `${partes.year}-${partes.month}-${partes.day} ${partes.hour}:${partes.minute}:${partes.second}`;\n\nreturn [\n  {\n    json: {\n      dataCalculada: dataFormatada\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        1060
+      ],
+      "id": "4e8a3f5d-3cad-4f94-bb42-82b88741e54d",
+      "name": "calcula_24h_uteis"
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"pos_entrevista\"].json[\"body\"][\"nome\"] || \"\";\nconst emailAnswer = $node[\"pos_entrevista\"].json[\"body\"][\"email\"] || \"\";\nconst telefoneClienteOriginal = $node[\"pos_entrevista\"].json[\"body\"][\"telefone\"] || \"\";\nconst instagramAnswer = $node[\"pos_entrevista\"].json[\"body\"][\"Instagram\"] || \"\";\nconst cpfAnswer = $node[\"pos_entrevista\"].json[\"body\"][\"CPF\"] || \"\";\nconst cnpjAnswer = $node[\"pos_entrevista\"].json[\"body\"][\"CNPJ\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    let fullname = lname ? `${fname} ${lname}` : fname;\n\n    return { fname, lname, fullname };\n}\n\nfunction formatEmail(email) {\n    return email.toLowerCase().trim();\n}\n\nfunction formatInstagram(instagram) {\n    return instagram.toLowerCase().replace(/^@/, \"\");\n}\n\nfunction formatCPF(cpf) {\n    const cpfLimpo = cpf.replace(/\\D/g, \"\");\n    if (cpfLimpo.length === 11) {\n        return `${cpfLimpo.slice(0, 3)}.${cpfLimpo.slice(3, 6)}.${cpfLimpo.slice(6, 9)}-${cpfLimpo.slice(9, 11)}`;\n    }\n    return cpf;\n}\n\nfunction formatCNPJ(cnpj) {\n    const cnpjLimpo = cnpj.replace(/\\D/g, \"\");\n    if (cnpjLimpo.length === 14) {\n        return `${cnpjLimpo.slice(0, 2)}.${cnpjLimpo.slice(2, 5)}.${cnpjLimpo.slice(5, 8)}/${cnpjLimpo.slice(8, 12)}-${cnpjLimpo.slice(12, 14)}`;\n    }\n    return cnpj;\n}\n\nlet telefoneFinal = \"\";\n\nif (telefoneClienteOriginal) {\n    const telefoneLimpo = telefoneClienteOriginal.replace(/\\D/g, \"\");\n\n    let DDI = '';\n    let DDD = '';\n    let numero = '';\n\n    if (telefoneLimpo.length > 11) {\n        DDI = telefoneLimpo.slice(0, 2);\n        DDD = telefoneLimpo.slice(2, 4);\n        numero = telefoneLimpo.slice(4);\n    } else if (telefoneLimpo.length === 11) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else if (telefoneLimpo.length === 10) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else {\n        telefoneFinal = telefoneLimpo;\n    }\n\n    if (DDD && numero) {\n        if (parseInt(DDD) > 28) {\n            if (numero.length === 9 && numero.startsWith(\"9\")) {\n                numero = numero.slice(1);\n            }\n        } else {\n            if (numero.length === 8) {\n                numero = `9${numero}`;\n            }\n        }\n    }\n\n    if (DDI && DDD && numero) {\n        telefoneFinal = `${DDI}${DDD}${numero}`;\n    }\n}\n\nconst formattedNames = capitalizeName(fullNameAnswer);\nconst formattedEmail = formatEmail(emailAnswer);\nconst formattedInstagram = formatInstagram(instagramAnswer);\nconst formattedCPF = formatCPF(cpfAnswer);\nconst formattedCNPJ = formatCNPJ(cnpjAnswer);\nconst id_pipefy_pipe = $node[\"pos_entrevista\"].json[\"body\"][\"id\"] || \"\";\n\nconst result = {\n    ...formattedNames,\n    email: formattedEmail,\n    whatsapp: telefoneFinal,\n    instagram: formattedInstagram,\n    cpf: formattedCPF,\n    cnpj: formattedCNPJ,\n    id_pipefy_pipe: id_pipefy_pipe\n};\n\nreturn [{ json: result }];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        1860
+      ],
+      "id": "1249e9eb-1306-4030-b90e-2facda2468d7",
+      "name": "formata_dados3"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "variaveis_globais_n8n",
+          "mode": "list",
+          "cachedResultName": "variaveis_globais_n8n"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome_variavel",
+              "value": "URL do Fluxo de Verificação de Users"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "8122cbe5-39c2-45e4-966b-ad984d2f68cf",
+      "name": "pesquisa_variavel_n8n_fluxo_users3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        880,
+        1980
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_variavel_n8n_fluxo_users3\"].json[\"valor_variavel\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "nome",
+              "value": "={{ ($node[\"formata_dados3\"].json[\"fname\"]).replace(/[^a-zA-Z0-9\\s]/g, \"\") }}"
+            },
+            {
+              "name": "sobrenome",
+              "value": "={{ ($node[\"formata_dados3\"].json[\"lname\"]).replace(/[^a-zA-Z0-9\\s]/g, \"\") }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"formata_dados3\"].json[\"email\"] || \"\" }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados3\"].json[\"whatsapp\"] || \"\" }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"formata_dados3\"].json[\"instagram\"] || \"\" }}"
+            },
+            {
+              "name": "cpf",
+              "value": "={{ $node[\"formata_dados3\"].json[\"cpf\"] || \"\" }}"
+            },
+            {
+              "name": "cnpj",
+              "value": "={{ $node[\"formata_dados3\"].json[\"cnpj\"] || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1100,
+        1980
+      ],
+      "id": "566717f6-96dd-4aa5-9214-abe12c9ac530",
+      "name": "cria_atualiza_user3"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_pipefy_pipe",
+              "value": "={{ $node[\"formata_dados3\"].json[\"id_pipefy_pipe\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        440,
+        1860
+      ],
+      "id": "13010834-b435-4337-a31b-5dc91e7bd3ab",
+      "name": "busca_user3",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0093b9ce-065b-4b8f-b08f-334c9ce7da08",
+              "leftValue": "={{ $node[\"busca_user3\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        640,
+        1860
+      ],
+      "id": "2197e964-93f4-49c6-bb9b-61bb4326e847",
+      "name": "user_existe3"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "verificacoes",
+          "mode": "list",
+          "cachedResultName": "verificacoes"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user3\"].runIndex >= 0 ? $node[\"cria_atualiza_user3\"].json[\"id\"] \n          : $node[\"busca_user3\"].runIndex >= 0 \n            ? $node[\"busca_user3\"].json[\"id\"] : null }}"
+            },
+            {
+              "column": "evento",
+              "value": "pós entrevista"
+            },
+            {
+              "column": "ordem",
+              "value": "1"
+            },
+            {
+              "column": "data",
+              "value": "={{ $node[\"calcula_24h_uteis1\"].json[\"dataCalculada\"] }}"
+            },
+            {
+              "column": "status",
+              "value": "N"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1100,
+        1740
+      ],
+      "id": "133565c4-3ca8-488f-8bfd-893dae417cd8",
+      "name": "insere_verificacao4",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"cria_atualiza_user3\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_pipefy_pipe",
+              "value": "={{ $node[\"formata_dados3\"].json[\"id_pipefy_pipe\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1320,
+        1980
+      ],
+      "id": "436c7e52-d5e7-410e-8aa4-90b699fdc04c",
+      "name": "update_id_pipefy_pipe3",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "function adicionarHorasUteis(horasParaAdicionar) {\n  const agora = new Date();\n  let horasRestantes = horasParaAdicionar;\n  let dataAtual = new Date(agora);\n\n  while (horasRestantes > 0) {\n    dataAtual.setHours(dataAtual.getHours() + 1);\n    const diaDaSemana = dataAtual.getDay(); // 0 = domingo, 6 = sábado\n    if (diaDaSemana !== 0 && diaDaSemana !== 6) {\n      horasRestantes--;\n    }\n  }\n\n  return dataAtual;\n}\n\n// Função para formatar a data como \"YYYY-MM-DD HH:mm:ss\" em São Paulo\nfunction formatarDataSP(data) {\n  return new Intl.DateTimeFormat('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n    year: 'numeric',\n    month: '2-digit',\n    day: '2-digit',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit',\n    hour12: false\n  })\n  .formatToParts(data)\n  .reduce((acc, part) => {\n    if (part.type === 'literal') return acc;\n    acc[part.type] = part.value;\n    return acc;\n  }, {});\n}\n\nconst dataCalculada = adicionarHorasUteis(24);\nconst partes = formatarDataSP(dataCalculada);\n\n// Monta a string final: YYYY-MM-DD HH:mm:ss\nconst dataFormatada = `${partes.year}-${partes.month}-${partes.day} ${partes.hour}:${partes.minute}:${partes.second}`;\n\nreturn [\n  {\n    json: {\n      dataCalculada: dataFormatada\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        1740
+      ],
+      "id": "cca4a8fc-37ba-40fa-a57e-08ab1c296f11",
+      "name": "calcula_24h_uteis1"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "7fad9152-d2cb-46d1-ba8d-0d2d926f717i",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        1860
+      ],
+      "id": "790a0d99-9559-45d6-95d1-8574f3c1ae58",
+      "name": "pos_entrevista",
+      "webhookId": "7fad9152-d2cb-46d1-ba8d-0d2d926f717f"
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"contratados\"].json[\"body\"][\"nome\"] || \"\";\nconst emailAnswer = $node[\"contratados\"].json[\"body\"][\"email\"] || \"\";\nconst telefoneClienteOriginal = $node[\"contratados\"].json[\"body\"][\"telefone\"] || \"\";\nconst instagramAnswer = $node[\"contratados\"].json[\"body\"][\"Instagram\"] || \"\";\nconst cpfAnswer = $node[\"contratados\"].json[\"body\"][\"CPF\"] || \"\";\nconst cnpjAnswer = $node[\"contratados\"].json[\"body\"][\"CNPJ\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    let fullname = lname ? `${fname} ${lname}` : fname;\n\n    return { fname, lname, fullname };\n}\n\nfunction formatEmail(email) {\n    return email.toLowerCase().trim();\n}\n\nfunction formatInstagram(instagram) {\n    return instagram.toLowerCase().replace(/^@/, \"\");\n}\n\nfunction formatCPF(cpf) {\n    const cpfLimpo = cpf.replace(/\\D/g, \"\");\n    if (cpfLimpo.length === 11) {\n        return `${cpfLimpo.slice(0, 3)}.${cpfLimpo.slice(3, 6)}.${cpfLimpo.slice(6, 9)}-${cpfLimpo.slice(9, 11)}`;\n    }\n    return cpf;\n}\n\nfunction formatCNPJ(cnpj) {\n    const cnpjLimpo = cnpj.replace(/\\D/g, \"\");\n    if (cnpjLimpo.length === 14) {\n        return `${cnpjLimpo.slice(0, 2)}.${cnpjLimpo.slice(2, 5)}.${cnpjLimpo.slice(5, 8)}/${cnpjLimpo.slice(8, 12)}-${cnpjLimpo.slice(12, 14)}`;\n    }\n    return cnpj;\n}\n\nlet telefoneFinal = \"\";\n\nif (telefoneClienteOriginal) {\n    const telefoneLimpo = telefoneClienteOriginal.replace(/\\D/g, \"\");\n\n    let DDI = '';\n    let DDD = '';\n    let numero = '';\n\n    if (telefoneLimpo.length > 11) {\n        DDI = telefoneLimpo.slice(0, 2);\n        DDD = telefoneLimpo.slice(2, 4);\n        numero = telefoneLimpo.slice(4);\n    } else if (telefoneLimpo.length === 11) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else if (telefoneLimpo.length === 10) {\n        DDI = '55';\n        DDD = telefoneLimpo.slice(0, 2);\n        numero = telefoneLimpo.slice(2);\n    } else {\n        telefoneFinal = telefoneLimpo;\n    }\n\n    if (DDD && numero) {\n        if (parseInt(DDD) > 28) {\n            if (numero.length === 9 && numero.startsWith(\"9\")) {\n                numero = numero.slice(1);\n            }\n        } else {\n            if (numero.length === 8) {\n                numero = `9${numero}`;\n            }\n        }\n    }\n\n    if (DDI && DDD && numero) {\n        telefoneFinal = `${DDI}${DDD}${numero}`;\n    }\n}\n\nconst formattedNames = capitalizeName(fullNameAnswer);\nconst formattedEmail = formatEmail(emailAnswer);\nconst formattedInstagram = formatInstagram(instagramAnswer);\nconst formattedCPF = formatCPF(cpfAnswer);\nconst formattedCNPJ = formatCNPJ(cnpjAnswer);\nconst id_pipefy_pipe = $node[\"contratados\"].json[\"body\"][\"id\"] || \"\";\n\nconst result = {\n    ...formattedNames,\n    email: formattedEmail,\n    whatsapp: telefoneFinal,\n    instagram: formattedInstagram,\n    cpf: formattedCPF,\n    cnpj: formattedCNPJ,\n    id_pipefy_pipe: id_pipefy_pipe\n};\n\nreturn [{ json: result }];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        2480
+      ],
+      "id": "eb30d5f4-0400-49a2-b2dd-3fa8484db6a6",
+      "name": "formata_dados4"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "variaveis_globais_n8n",
+          "mode": "list",
+          "cachedResultName": "variaveis_globais_n8n"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "nome_variavel",
+              "value": "URL do Fluxo de Verificação de Users"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "6a5b4a09-fb1c-43e9-a665-ff7335dd9e44",
+      "name": "pesquisa_variavel_n8n_fluxo_users4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        880,
+        2600
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $node[\"pesquisa_variavel_n8n_fluxo_users4\"].json[\"valor_variavel\"] }}",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "nome",
+              "value": "={{ ($node[\"formata_dados4\"].json[\"fname\"]).replace(/[^a-zA-Z0-9\\s]/g, \"\") }}"
+            },
+            {
+              "name": "sobrenome",
+              "value": "={{ ($node[\"formata_dados4\"].json[\"lname\"]).replace(/[^a-zA-Z0-9\\s]/g, \"\") }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"formata_dados4\"].json[\"email\"] || \"\" }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados4\"].json[\"whatsapp\"] || \"\" }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"formata_dados4\"].json[\"instagram\"] || \"\" }}"
+            },
+            {
+              "name": "cpf",
+              "value": "={{ $node[\"formata_dados4\"].json[\"cpf\"] || \"\" }}"
+            },
+            {
+              "name": "cnpj",
+              "value": "={{ $node[\"formata_dados4\"].json[\"cnpj\"] || \"\" }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1100,
+        2600
+      ],
+      "id": "b520492b-fc7e-4be4-a7c8-a6ead7418684",
+      "name": "cria_atualiza_user4"
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_pipefy_pipe",
+              "value": "={{ $node[\"formata_dados4\"].json[\"id_pipefy_pipe\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        440,
+        2480
+      ],
+      "id": "177f15b8-d6a7-4a84-b5a4-3c3a1c2f2de6",
+      "name": "busca_user4",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0093b9ce-065b-4b8f-b08f-334c9ce7da08",
+              "leftValue": "={{ $node[\"busca_user4\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        640,
+        2480
+      ],
+      "id": "eb7cff57-7200-4ba3-89b1-db2063800620",
+      "name": "user_existe4"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "verificacoes",
+          "mode": "list",
+          "cachedResultName": "verificacoes"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"cria_atualiza_user4\"].runIndex >= 0 ? $node[\"cria_atualiza_user4\"].json[\"id\"] \n          : $node[\"busca_user4\"].runIndex >= 0 \n            ? $node[\"busca_user4\"].json[\"id\"] : null }}"
+            },
+            {
+              "column": "evento",
+              "value": "pós entrevista"
+            },
+            {
+              "column": "ordem",
+              "value": "1"
+            },
+            {
+              "column": "data",
+              "value": "={{ $node[\"calcula_24h_uteis2\"].json[\"dataCalculada\"] }}"
+            },
+            {
+              "column": "status",
+              "value": "N"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1100,
+        2360
+      ],
+      "id": "2eb0480c-a54d-4030-9d43-be92882da49d",
+      "name": "insere_verificacao5",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"cria_atualiza_user4\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_pipefy_pipe",
+              "value": "={{ $node[\"formata_dados4\"].json[\"id_pipefy_pipe\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1320,
+        2600
+      ],
+      "id": "0ae5097c-58b6-41ff-88d9-38d47fcd40a4",
+      "name": "update_id_pipefy_pipe4",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "function adicionarHorasUteis(horasParaAdicionar) {\n  const agora = new Date();\n  let horasRestantes = horasParaAdicionar;\n  let dataAtual = new Date(agora);\n\n  while (horasRestantes > 0) {\n    dataAtual.setHours(dataAtual.getHours() + 1);\n    const diaDaSemana = dataAtual.getDay(); // 0 = domingo, 6 = sábado\n    if (diaDaSemana !== 0 && diaDaSemana !== 6) {\n      horasRestantes--;\n    }\n  }\n\n  return dataAtual;\n}\n\n// Função para formatar a data como \"YYYY-MM-DD HH:mm:ss\" em São Paulo\nfunction formatarDataSP(data) {\n  return new Intl.DateTimeFormat('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n    year: 'numeric',\n    month: '2-digit',\n    day: '2-digit',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit',\n    hour12: false\n  })\n  .formatToParts(data)\n  .reduce((acc, part) => {\n    if (part.type === 'literal') return acc;\n    acc[part.type] = part.value;\n    return acc;\n  }, {});\n}\n\nconst dataCalculada = adicionarHorasUteis(24);\nconst partes = formatarDataSP(dataCalculada);\n\n// Monta a string final: YYYY-MM-DD HH:mm:ss\nconst dataFormatada = `${partes.year}-${partes.month}-${partes.day} ${partes.hour}:${partes.minute}:${partes.second}`;\n\nreturn [\n  {\n    json: {\n      dataCalculada: dataFormatada\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        2360
+      ],
+      "id": "8c916618-1129-4701-915f-301b2599b037",
+      "name": "calcula_24h_uteis2"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "7fad9152-d2cb-46d1-ba8d-0d2d926f717j",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        2480
+      ],
+      "id": "574f46ce-d07b-482d-afb6-54b8213e631a",
+      "name": "contratados",
+      "webhookId": "7fad9152-d2cb-46d1-ba8d-0d2d926f717f"
+    }
+  ],
+  "pinData": {
+    "onboarding": [
+      {
+        "json": {
+          "headers": {
+            "host": "webhooks.portusdigital.com.br",
+            "user-agent": "Pipefy-UserAgent",
+            "content-length": "103",
+            "accept": "application/json",
+            "content-type": "application/json",
+            "elastic-apm-traceparent": "00-6c8ad6cc84e515ca45d775e24a836b71-2c06b6d88c768dfd-00",
+            "traceparent": "00-6c8ad6cc84e515ca45d775e24a836b71-2c06b6d88c768dfd-00",
+            "tracestate": "es=s:0.0",
+            "x-forwarded-for": "129.153.135.244",
+            "x-forwarded-host": "webhooks.portusdigital.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "6ace3109ce53",
+            "x-real-ip": "129.153.135.244",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "id": "1134029662",
+            "telefone": "+55 11 98204-0414",
+            "email": "",
+            "nome": "TRANSFER VIP EXECUTIVE "
+          },
+          "webhookUrl": "https://webhooks.portusdigital.com.br/webhook/7fad9152-d2cb-46d1-ba8d-0d2d926f717f",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "pesquisa_verificacoes_do_minuto": [
+      {
+        "json": {
+          "id": 4,
+          "id_user": 20,
+          "evento": "onboarding",
+          "ordem": 1,
+          "data": "2025-05-05 08:35:09",
+          "status": "N"
+        }
+      }
+    ],
+    "triagem": [
+      {
+        "json": {
+          "headers": {
+            "host": "webhooks.portusdigital.com.br",
+            "user-agent": "Pipefy-UserAgent",
+            "content-length": "97",
+            "accept": "application/json",
+            "content-type": "application/json",
+            "elastic-apm-traceparent": "00-abe0c205e53d5b26decc2aabfb06cb3c-1183f80e6afcec52-00",
+            "traceparent": "00-abe0c205e53d5b26decc2aabfb06cb3c-1183f80e6afcec52-00",
+            "tracestate": "es=s:0.0",
+            "x-forwarded-for": "129.153.135.244",
+            "x-forwarded-host": "webhooks.portusdigital.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "6ace3109ce53",
+            "x-real-ip": "129.153.135.244",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "id": "1107135947",
+            "telefone": "+55 62 99678-4842",
+            "email": "",
+            "nome": "STANLEY'S HOLDING"
+          },
+          "webhookUrl": "https://webhooks.portusdigital.com.br/webhook/7fad9152-d2cb-46d1-ba8d-0d2d926f717g",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "shortlist": [
+      {
+        "json": {
+          "headers": {
+            "host": "webhooks.portusdigital.com.br",
+            "user-agent": "Pipefy-UserAgent",
+            "content-length": "93",
+            "accept": "application/json",
+            "content-type": "application/json",
+            "elastic-apm-traceparent": "00-22c716e38a38161df35a1104ad6a0ac5-3ba57f08617c599a-00",
+            "traceparent": "00-22c716e38a38161df35a1104ad6a0ac5-3ba57f08617c599a-00",
+            "tracestate": "es=s:0.0",
+            "x-forwarded-for": "129.153.135.244",
+            "x-forwarded-host": "webhooks.portusdigital.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "6ace3109ce53",
+            "x-real-ip": "129.153.135.244",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "id": "1094480289",
+            "telefone": "+55 31 7596-0310",
+            "email": "",
+            "nome": "IQR EDUCAÇÃO"
+          },
+          "webhookUrl": "https://webhooks.portusdigital.com.br/webhook/7fad9152-d2cb-46d1-ba8d-0d2d926f717h",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "pos_entrevista": [
+      {
+        "json": {
+          "headers": {
+            "host": "webhooks.portusdigital.com.br",
+            "user-agent": "Pipefy-UserAgent",
+            "content-length": "99",
+            "accept": "application/json",
+            "content-type": "application/json",
+            "elastic-apm-traceparent": "00-0f5e7843d07e2929afba9cbec7261766-8ac67bd6bf592517-01",
+            "traceparent": "00-0f5e7843d07e2929afba9cbec7261766-8ac67bd6bf592517-01",
+            "tracestate": "es=s:0.1",
+            "x-forwarded-for": "129.153.135.244",
+            "x-forwarded-host": "webhooks.portusdigital.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "6ace3109ce53",
+            "x-real-ip": "129.153.135.244",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "id": "1103507253",
+            "telefone": "+55 77 99903-8012",
+            "email": "",
+            "nome": "A RAIZ DA SOLUÇÃO"
+          },
+          "webhookUrl": "https://webhooks.portusdigital.com.br/webhook/7fad9152-d2cb-46d1-ba8d-0d2d926f717i",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "contratados": [
+      {
+        "json": {
+          "headers": {
+            "host": "webhooks.portusdigital.com.br",
+            "user-agent": "Pipefy-UserAgent",
+            "content-length": "99",
+            "accept": "application/json",
+            "content-type": "application/json",
+            "elastic-apm-traceparent": "00-0f5e7843d07e2929afba9cbec7261766-8ac67bd6bf592517-01",
+            "traceparent": "00-0f5e7843d07e2929afba9cbec7261766-8ac67bd6bf592517-01",
+            "tracestate": "es=s:0.1",
+            "x-forwarded-for": "129.153.135.244",
+            "x-forwarded-host": "webhooks.portusdigital.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "6ace3109ce53",
+            "x-real-ip": "129.153.135.244",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "id": "1103507253",
+            "telefone": "+55 77 99903-8012",
+            "email": "",
+            "nome": "A RAIZ DA SOLUÇÃO"
+          },
+          "webhookUrl": "https://webhooks.portusdigital.com.br/webhook/7fad9152-d2cb-46d1-ba8d-0d2d926f717i",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "mKIVAmjjlR8KNTYw"
+  },
+  "staticData": {
+    "node:1min": {
+      "recurrenceRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 6,
+  "updatedAt": "2025-05-05T13:33:12.012Z",
+  "versionId": "56626da3-61bb-4aa3-ace8-c873ecbad705"
+}
