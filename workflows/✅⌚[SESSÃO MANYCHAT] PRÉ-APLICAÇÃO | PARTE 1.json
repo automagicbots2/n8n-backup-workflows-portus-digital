@@ -35,9 +35,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:31.479Z",
-  "id": "7MAgX5yiEgm18ayt",
-  "meta": null,
+  "createdAt": "2024-05-24T11:50:03.010Z",
+  "id": "53uVo5JmHaMZ5kuD",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "✅⌚[SESSÃO MANYCHAT] PRÉ-APLICAÇÃO | PARTE 1",
   "nodes": [
     {
@@ -660,23 +662,83 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "quc6gfdQpKCDLaHX",
+          "id": "UNsBZpoYhAtf5Api",
           "name": "[RabbitMQ] - Portus"
         }
       }
     }
   ],
-  "pinData": null,
+  "pinData": {
+    "pre-aplicacao_manychat": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "ManyChat",
+            "content-length": "1181",
+            "content-type": "application/json; charset=utf-8",
+            "x-forwarded-for": "18.193.73.165",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "18.193.73.165",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "key": "user:1570075255",
+            "id": "1570075255",
+            "page_id": "106673468731104",
+            "user_refs": [],
+            "status": "active",
+            "first_name": "𝙈𝙖𝙩𝙚𝙪𝙨",
+            "last_name": "𝘿𝙞𝙣𝙞𝙯 | Automações",
+            "name": "𝙈𝙖𝙩𝙚𝙪𝙨 𝘿𝙞𝙣𝙞𝙯 | Automações",
+            "gender": null,
+            "profile_pic": "https://manychat.com/ava/106673468731104/1570075255/8d1d5ed87f9d638fbc200fe5891df3cf",
+            "locale": null,
+            "language": null,
+            "timezone": "UTC±00",
+            "live_chat_url": "https://manychat.com/fb106673468731104/chat/1570075255",
+            "last_input_text": "mateusdiniz@automagicbots.com.br",
+            "optin_phone": false,
+            "phone": null,
+            "optin_email": true,
+            "email": "mateusdiniz@automagicbots.com.br",
+            "subscribed": "2024-05-23T17:28:16-03:00",
+            "last_interaction": null,
+            "ig_last_interaction": "2024-05-24T09:12:59-03:00",
+            "last_seen": null,
+            "ig_last_seen": "2024-05-24T09:12:59-03:00",
+            "is_followup_enabled": true,
+            "ig_username": "prmateusdiniz",
+            "ig_id": 310474522103342,
+            "whatsapp_phone": null,
+            "optin_whatsapp": false,
+            "phone_country_code": null,
+            "last_growth_tool": null,
+            "custom_fields": {
+              "Telefone": 62981196678,
+              "Checkpoint": "nome_empresa",
+              "nome_empresa": null,
+              "qtd_funcionarios": null,
+              "faturamento": null,
+              "modelo_negocio": null,
+              "qual_profissional": null
+            }
+          }
+        }
+      }
+    ]
+  },
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": false,
-    "saveDataErrorExecution": "all",
-    "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "executionOrder": "v1"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-02-04T20:44:49.237Z",
-  "versionId": "00481d75-140f-4fc8-ab17-95ae3fafe85f"
+  "updatedAt": "2024-05-24T14:47:11.581Z",
+  "versionId": "a7446df1-4b89-47a3-83f6-0a1b1b3dcad9"
 }
