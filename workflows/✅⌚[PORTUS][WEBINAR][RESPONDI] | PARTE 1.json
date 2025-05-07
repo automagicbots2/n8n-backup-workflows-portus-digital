@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "formata_dados": {
       "main": [
@@ -97,9 +97,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:31.018Z",
-  "id": "fVTWtWVnk3CZQFqM",
-  "meta": null,
+  "createdAt": "2024-05-20T14:15:15.359Z",
+  "id": "lUKN8O1k9IXL0OtR",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "✅⌚[PORTUS][WEBINAR][RESPONDI] | PARTE 1",
   "nodes": [
     {
@@ -341,7 +343,7 @@
       ],
       "credentials": {
         "rabbitmq": {
-          "id": "quc6gfdQpKCDLaHX",
+          "id": "UNsBZpoYhAtf5Api",
           "name": "[RabbitMQ] - Portus"
         }
       }
@@ -1159,7 +1161,7 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
+          "id": "6haYpAmOsZXFxR68",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
@@ -1424,7 +1426,7 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
+          "id": "6haYpAmOsZXFxR68",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
@@ -1495,7 +1497,7 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
+          "id": "6haYpAmOsZXFxR68",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
@@ -1566,23 +1568,431 @@
       "waitBetweenTries": 5000,
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
+          "id": "6haYpAmOsZXFxR68",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
     }
   ],
-  "pinData": null,
+  "pinData": {
+    "id_etapas": [
+      {
+        "json": {
+          "data": {
+            "pipe": {
+              "phases": [
+                {
+                  "id": "321485752",
+                  "name": "NOVO LEAD"
+                },
+                {
+                  "id": "317628280",
+                  "name": "PRIMEIRO CONTATO"
+                },
+                {
+                  "id": "317628283",
+                  "name": "CONECTADO"
+                },
+                {
+                  "id": "319617945",
+                  "name": "OFERTA / REUNIÃO"
+                },
+                {
+                  "id": "319618284",
+                  "name": "FOLLOW-UP"
+                },
+                {
+                  "id": "322398971",
+                  "name": "CONTRATO ENVIADO"
+                },
+                {
+                  "id": "317720323",
+                  "name": "VENDA REALIZADA"
+                },
+                {
+                  "id": "317762640",
+                  "name": "PERDIDOS"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "get_users": [
+      {
+        "json": {
+          "data": {
+            "organization": {
+              "id": "300890854",
+              "name": "Portus Digital",
+              "members": [
+                {
+                  "role_name": "admin",
+                  "user": {
+                    "id": "302129244",
+                    "email": "kelly@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "super_admin",
+                  "user": {
+                    "id": "302206469",
+                    "email": "igor@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "admin",
+                  "user": {
+                    "id": "302208885",
+                    "email": "bruno@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "admin",
+                  "user": {
+                    "id": "302214410",
+                    "email": "laila@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302214458",
+                    "email": "thais@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "admin",
+                  "user": {
+                    "id": "302237700",
+                    "email": "lucas.lacerda@pipefy.com"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302270341",
+                    "email": "gabriela@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302277865",
+                    "email": "karen@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302284256",
+                    "email": "mariele@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302333602",
+                    "email": "juliana@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302413323",
+                    "email": "giovana@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "super_admin",
+                  "user": {
+                    "id": "302597257",
+                    "email": "marcos@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "302677437",
+                    "email": "financeiro@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303149971",
+                    "email": "vitor@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303175486",
+                    "email": "leticia@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303180119",
+                    "email": "raquel@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303206080",
+                    "email": "romulo@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "303239849",
+                    "email": "beatriz@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304041444",
+                    "email": "jessica.barbara@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304193055",
+                    "email": "stephanie@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304242346",
+                    "email": "acessos@automagicbots.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304308054",
+                    "email": "luiza@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304329483",
+                    "email": "marcelo.eleto@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304398254",
+                    "email": "anna@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304398255",
+                    "email": "jessicadomingues@portusdigital.com.br"
+                  }
+                },
+                {
+                  "role_name": "normal",
+                  "user": {
+                    "id": "304403404",
+                    "email": "ivan@portusdigital.com.br"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "aplicacao_realizada": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookportus.automagicbots.com.br",
+            "user-agent": "GuzzleHttp/7",
+            "content-length": "3116",
+            "content-type": "application/json",
+            "x-forwarded-for": "34.238.85.98",
+            "x-forwarded-host": "n8nwebhookportus.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "d71ef73d891d",
+            "x-real-ip": "34.238.85.98",
+            "accept-encoding": "gzip"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "form": {
+              "form_name": "[Aplicação Sessão Estratégica] [F.WB [PORTUS] - MAI| 24]",
+              "form_id": "fQNRSlLp"
+            },
+            "respondent": {
+              "status": "completed",
+              "date": "2024-05-20 14:32:54",
+              "score": null,
+              "respondent_id": "3d770aa5-4f03-44fa-82ec-da380ea64519",
+              "answers": {
+                "Seu primeiro nome": "Jailson Teste",
+                "Seu DDD+WhatsApp": "55 71992594557",
+                "Seu melhor e-mail": "teste55@gmail.com",
+                "Informe o @ do seu Instagram": "@testtte",
+                "Você está com alguma vaga aberta para contratar agora?": "Não estou com vagas abertas e não pretendo contratar agora",
+                "Qual é o nome da sua empresa?": "Empresa Teste",
+                "Você já tem produto/serviço validado?": "Sim",
+                "Qual foi o seu faturamento em 2023?": "Abaixo de 500k",
+                "Qual é a sua meta de faturamento para 2024?": "500k",
+                "Quantas pessoas trabalham na sua empresa?": "1 a 5 pessoas",
+                "Qual é o seu modelo de negócio aqui no digital?": "Prestação de serviços",
+                "Qual profissional você está procurando? Se ainda não tem certeza, descreva a função que precisa ser realizada.": "Profissional Teste"
+              },
+              "raw_answers": [
+                {
+                  "question": {
+                    "question_title": "Seu primeiro nome",
+                    "question_id": "bb8e185b0a4e",
+                    "question_type": "text"
+                  },
+                  "answer": "Jailson Teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Seu DDD+WhatsApp",
+                    "question_id": "x9kv1zbw07xr",
+                    "question_type": "phone"
+                  },
+                  "answer": {
+                    "country": "55",
+                    "phone": "71992594557"
+                  }
+                },
+                {
+                  "question": {
+                    "question_title": "Seu melhor e-mail",
+                    "question_id": "xu8v732cbnqf",
+                    "question_type": "email"
+                  },
+                  "answer": "teste55@gmail.com"
+                },
+                {
+                  "question": {
+                    "question_title": "Informe o @ do seu Instagram",
+                    "question_id": "xwuk821t94ng",
+                    "question_type": "text"
+                  },
+                  "answer": "@testtte"
+                },
+                {
+                  "question": {
+                    "question_title": "Você está com alguma vaga aberta para contratar agora?",
+                    "question_id": "xea1qeeygsj6",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Não estou com vagas abertas e não pretendo contratar agora"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Qual é o nome da sua empresa?",
+                    "question_id": "xoaipx0gnjec",
+                    "question_type": "text"
+                  },
+                  "answer": "Empresa Teste"
+                },
+                {
+                  "question": {
+                    "question_title": "Você já tem produto/serviço validado?",
+                    "question_id": "xakr7azf13b",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Sim"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Qual foi o seu faturamento em 2023?",
+                    "question_id": "xaxl2l5t1168",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Abaixo de 500k"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Qual é a sua meta de faturamento para 2024?",
+                    "question_id": "xdzzjucj9keh",
+                    "question_type": "text"
+                  },
+                  "answer": "500k"
+                },
+                {
+                  "question": {
+                    "question_title": "Quantas pessoas trabalham na sua empresa?",
+                    "question_id": "x2wt2hx7qdcp",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "1 a 5 pessoas"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Qual é o seu modelo de negócio aqui no digital?",
+                    "question_id": "x4uhr2p7l9yl",
+                    "question_type": "radio"
+                  },
+                  "answer": [
+                    "Prestação de serviços"
+                  ]
+                },
+                {
+                  "question": {
+                    "question_title": "Qual profissional você está procurando? Se ainda não tem certeza, descreva a função que precisa ser realizada.",
+                    "question_id": "xlzfa9dw1ln",
+                    "question_type": "textarea"
+                  },
+                  "answer": "Profissional Teste"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
   "settings": {
-    "saveExecutionProgress": true,
-    "saveManualExecutions": false,
+    "executionOrder": "v1",
     "saveDataErrorExecution": "all",
     "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
   },
   "staticData": null,
-  "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2025-02-04T17:45:31.018Z",
-  "versionId": "f6915932-bcae-40e7-93cc-1fd8892f2471"
+  "tags": [
+    {
+      "createdAt": "2024-05-10T01:47:04.005Z",
+      "updatedAt": "2024-05-10T01:47:04.005Z",
+      "id": "n8TvkiIIDKme6cPt",
+      "name": "[WEBINAR]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-05-20T18:00:03.418Z",
+  "versionId": "5b884b71-f3c4-42ef-aecd-4c025ec71563"
 }
