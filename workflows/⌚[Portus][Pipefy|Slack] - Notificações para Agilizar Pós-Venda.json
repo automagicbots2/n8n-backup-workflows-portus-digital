@@ -158,7 +158,7 @@
       "main": [
         [
           {
-            "node": "pesquisa_copy",
+            "node": "get_cards_via_id",
             "type": "main",
             "index": 0
           }
@@ -202,7 +202,7 @@
       "main": [
         [
           {
-            "node": "onboarding1",
+            "node": "Onboarding1",
             "type": "main",
             "index": 0
           }
@@ -304,29 +304,18 @@
         ]
       ]
     },
-    "onboarding1": {
+    "triagem1": {
       "main": [
         [
           {
-            "node": "Loop Over Items",
+            "node": "primeira_verificacao",
             "type": "main",
             "index": 0
           }
         ],
         [
           {
-            "node": "triagem1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "triagem1": {
-      "main": [
-        [
-          {
-            "node": "primeira_verificacao",
+            "node": "Shortlists enviadas",
             "type": "main",
             "index": 0
           }
@@ -649,7 +638,216 @@
     },
     "contratados": {
       "main": [
-        []
+        [
+          {
+            "node": "formata_dados4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_cards_via_id": {
+      "main": [
+        [
+          {
+            "node": "esta_mesma_stage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "esta_mesma_stage": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_copy",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Onboarding1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "triagem1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Shortlists enviadas": {
+      "main": [
+        [
+          {
+            "node": "primeira_verificacao1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Pós entrevista",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "primeira_verificacao1": {
+      "main": [
+        [
+          {
+            "node": "calcula_24h_uteis3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "segunda_verificacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "segunda_verificacao": {
+      "main": [
+        [
+          {
+            "node": "calcula_24h_uteis4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "primeira_verificacao2": {
+      "main": [
+        [
+          {
+            "node": "calcula_24h_uteis5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "calcula_24h_uteis3": {
+      "main": [
+        [
+          {
+            "node": "insere_verificacao7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_verificacao7": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "calcula_24h_uteis4": {
+      "main": [
+        [
+          {
+            "node": "insere_verificacao8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_verificacao8": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pós entrevista": {
+      "main": [
+        [
+          {
+            "node": "primeira_verificacao2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "calcula_24h_uteis5": {
+      "main": [
+        [
+          {
+            "node": "insere_verificacao9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_verificacao9": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     }
   },
@@ -871,7 +1069,7 @@
             },
             {
               "column": "evento",
-              "value": "onboarding"
+              "value": "Onboarding"
             },
             {
               "column": "ordem",
@@ -957,8 +1155,8 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.2,
       "position": [
-        -20,
-        -800
+        -200,
+        -920
       ],
       "id": "0f70a660-917d-4d20-b6e8-c5c61e42f858",
       "name": "1min"
@@ -974,8 +1172,8 @@
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.4,
       "position": [
-        240,
-        -800
+        60,
+        -920
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -1013,8 +1211,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        480,
-        -800
+        300,
+        -920
       ],
       "id": "9bdf9834-90fb-40de-939a-e27953bc5dce",
       "name": "tem_verificacoes"
@@ -1024,8 +1222,8 @@
       "type": "n8n-nodes-base.noOp",
       "typeVersion": 1,
       "position": [
-        700,
-        -660
+        520,
+        -780
       ],
       "id": "f89e16df-36b0-41f3-898d-16466b2e4d4e",
       "name": "fim"
@@ -1038,7 +1236,7 @@
       "typeVersion": 3,
       "position": [
         700,
-        -980
+        -1200
       ],
       "id": "b6e064a5-7523-44e4-83f3-5e81a134b146",
       "name": "Loop Over Items"
@@ -1068,8 +1266,8 @@
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.4,
       "position": [
-        1140,
-        -880
+        1600,
+        -1040
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -1102,7 +1300,7 @@
       "typeVersion": 2.4,
       "position": [
         940,
-        -880
+        -1100
       ],
       "id": "f5b5bff9-0f8c-415b-b4b1-81c44db18228",
       "name": "pesquisa_user",
@@ -1121,8 +1319,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1340,
-        -880
+        1780,
+        -1040
       ],
       "id": "282e86b6-0bd4-4740-a52c-e20a5f311d30",
       "name": "formata_campos_deal"
@@ -1145,8 +1343,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        1580,
-        -880
+        2020,
+        -1040
       ],
       "id": "5fec3cd5-d70f-4568-9120-b4463f5997d8",
       "name": "envia_msg_slack"
@@ -1176,8 +1374,8 @@
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.4,
       "position": [
-        1800,
-        -880
+        2240,
+        -1040
       ],
       "id": "09c6bb58-7eff-4279-9cb1-d1b420e1be58",
       "name": "update_verificacao",
@@ -1195,7 +1393,7 @@
       "typeVersion": 1,
       "position": [
         940,
-        -1060
+        -1280
       ],
       "id": "f5a89416-860c-488e-80e5-1dc0dacff229",
       "name": "No Operation, do nothing"
@@ -1395,7 +1593,7 @@
             },
             {
               "column": "evento",
-              "value": "triagem"
+              "value": "Triagem"
             },
             {
               "column": "ordem",
@@ -1496,7 +1694,7 @@
             {
               "id": "bfc2c77a-b310-49ee-ae28-5e80476d9603",
               "leftValue": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}",
-              "rightValue": "onboarding",
+              "rightValue": "Triagem",
               "operator": {
                 "type": "string",
                 "operation": "equals",
@@ -1511,42 +1709,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        2000,
-        -880
-      ],
-      "id": "4cf254e6-5686-4dc6-9ec0-b4c3af972154",
-      "name": "onboarding1"
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          },
-          "conditions": [
-            {
-              "id": "bfc2c77a-b310-49ee-ae28-5e80476d9603",
-              "leftValue": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}",
-              "rightValue": "triagem",
-              "operator": {
-                "type": "string",
-                "operation": "equals",
-                "name": "filter.operator.equals"
-              }
-            }
-          ],
-          "combinator": "and"
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2,
-      "position": [
-        2200,
-        -740
+        2640,
+        -900
       ],
       "id": "ef8bd238-44d4-4e64-834f-c29db73b09ad",
       "name": "triagem1"
@@ -1578,8 +1742,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        2380,
-        -840
+        2940,
+        -1000
       ],
       "id": "fa4eb028-9644-4934-8b55-ae4ec83bcd54",
       "name": "primeira_verificacao"
@@ -1591,8 +1755,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        2600,
-        -980
+        3260,
+        -1160
       ],
       "id": "1d684089-8422-4f3d-8f4d-a85beb120bd9",
       "name": "calcula_48h_uteis2"
@@ -1614,11 +1778,11 @@
             },
             {
               "column": "evento",
-              "value": "triagem"
+              "value": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}"
             },
             {
               "column": "ordem",
-              "value": "2"
+              "value": "={{ $node[\"Loop Over Items\"].json[\"ordem\"] +1 }}"
             },
             {
               "column": "data",
@@ -1635,8 +1799,8 @@
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.4,
       "position": [
-        2820,
-        -980
+        3480,
+        -1160
       ],
       "id": "f69e4d4a-a503-479a-85f0-158035d3cd44",
       "name": "insere_verificacao2",
@@ -1830,7 +1994,7 @@
             },
             {
               "column": "evento",
-              "value": "shortlists enviadas"
+              "value": "Shortlists enviadas"
             },
             {
               "column": "ordem",
@@ -2113,7 +2277,7 @@
             },
             {
               "column": "evento",
-              "value": "pós entrevista"
+              "value": "Pós entrevista"
             },
             {
               "column": "ordem",
@@ -2396,7 +2560,7 @@
             },
             {
               "column": "evento",
-              "value": "pós entrevista"
+              "value": "Contratados"
             },
             {
               "column": "ordem",
@@ -2496,6 +2660,474 @@
       "id": "574f46ce-d07b-482d-afb6-54b8213e631a",
       "name": "contratados",
       "webhookId": "7fad9152-d2cb-46d1-ba8d-0d2d926f717f"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pipefy.com/graphql",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=query {\n  card(id: {{ $node[\"pesquisa_user\"].json[\"id_pipefy_pipe\"] }}) {\n    id\n    title\n    done\n    updated_at\n    assignees {\n      name\n      email\n    }\n    attachments {\n      url\n      path\n    }\n    current_phase {\n      name\n    }\n    pipe {\n      name\n    }\n    fields {\n      name\n      value\n      native_value\n      report_value\n      float_value\n      date_value\n      datetime_value\n      indexName\n      updated_at\n      filled_at\n    }\n  }\n}\n"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0fd62b7f-4a2d-4b52-a2db-aa47bb055029",
+      "name": "get_cards_via_id",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1120,
+        -1100
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "7F0hUjKvKkREj86b",
+          "name": "[PIPEFY] - Portus"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1af7d9d3-1587-4971-aa47-de484d111f5f",
+              "leftValue": "={{ $json[\"data\"][\"card\"][\"current_phase\"][\"name\"] }}",
+              "rightValue": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1320,
+        -1100
+      ],
+      "id": "ed85e276-7fe5-4aff-981f-8c086f7872d2",
+      "name": "esta_mesma_stage"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bfc2c77a-b310-49ee-ae28-5e80476d9603",
+              "leftValue": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}",
+              "rightValue": "Onboarding",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2440,
+        -1040
+      ],
+      "id": "4cf254e6-5686-4dc6-9ec0-b4c3af972154",
+      "name": "Onboarding1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bfc2c77a-b310-49ee-ae28-5e80476d9603",
+              "leftValue": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}",
+              "rightValue": "Shortlists enviadas",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2780,
+        -700
+      ],
+      "id": "3870af11-2182-48ee-8624-35bfe1839e04",
+      "name": "Shortlists enviadas"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bfc2c77a-b310-49ee-ae28-5e80476d9603",
+              "leftValue": "={{ $node[\"Loop Over Items\"].json[\"ordem\"] }}",
+              "rightValue": 1,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3020,
+        -780
+      ],
+      "id": "566628d2-3695-4da4-b091-f1dce034b0a0",
+      "name": "primeira_verificacao1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bfc2c77a-b310-49ee-ae28-5e80476d9603",
+              "leftValue": "={{ $node[\"Loop Over Items\"].json[\"ordem\"] }}",
+              "rightValue": 2,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3240,
+        -700
+      ],
+      "id": "cadd72c0-d890-47d7-8989-bb96667e2950",
+      "name": "segunda_verificacao"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bfc2c77a-b310-49ee-ae28-5e80476d9603",
+              "leftValue": "={{ $node[\"Loop Over Items\"].json[\"ordem\"] }}",
+              "rightValue": 1,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3140,
+        -460
+      ],
+      "id": "9e180350-230a-4b92-8c3f-e897a8247fcc",
+      "name": "primeira_verificacao2"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "verificacoes",
+          "mode": "list",
+          "cachedResultName": "verificacoes"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"id_user\"] }}"
+            },
+            {
+              "column": "evento",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}"
+            },
+            {
+              "column": "ordem",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"ordem\"] +1 }}"
+            },
+            {
+              "column": "data",
+              "value": "={{ $node[\"calcula_24h_uteis3\"].json[\"dataCalculada\"] }}"
+            },
+            {
+              "column": "status",
+              "value": "N"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        3480,
+        -940
+      ],
+      "id": "28b4b694-f5a4-4779-96fd-1b2b83ec4401",
+      "name": "insere_verificacao7",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "function adicionarHorasUteis(horasParaAdicionar) {\n  const agora = new Date();\n  let horasRestantes = horasParaAdicionar;\n  let dataAtual = new Date(agora);\n\n  while (horasRestantes > 0) {\n    dataAtual.setHours(dataAtual.getHours() + 1);\n    const diaDaSemana = dataAtual.getDay(); // 0 = domingo, 6 = sábado\n    if (diaDaSemana !== 0 && diaDaSemana !== 6) {\n      horasRestantes--;\n    }\n  }\n\n  return dataAtual;\n}\n\n// Função para formatar a data como \"YYYY-MM-DD HH:mm:ss\" em São Paulo\nfunction formatarDataSP(data) {\n  return new Intl.DateTimeFormat('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n    year: 'numeric',\n    month: '2-digit',\n    day: '2-digit',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit',\n    hour12: false\n  })\n  .formatToParts(data)\n  .reduce((acc, part) => {\n    if (part.type === 'literal') return acc;\n    acc[part.type] = part.value;\n    return acc;\n  }, {});\n}\n\nconst dataCalculada = adicionarHorasUteis(24); // <- agora 24 horas úteis\nconst partes = formatarDataSP(dataCalculada);\n\n// Monta a string final: YYYY-MM-DD HH:mm:ss\nconst dataFormatada = `${partes.year}-${partes.month}-${partes.day} ${partes.hour}:${partes.minute}:${partes.second}`;\n\nreturn [\n  {\n    json: {\n      dataCalculada: dataFormatada\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3260,
+        -940
+      ],
+      "id": "db7491d6-aaec-474c-a409-8b3f8ad58e80",
+      "name": "calcula_24h_uteis3"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "verificacoes",
+          "mode": "list",
+          "cachedResultName": "verificacoes"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"id_user\"] }}"
+            },
+            {
+              "column": "evento",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}"
+            },
+            {
+              "column": "ordem",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"ordem\"] +1 }}"
+            },
+            {
+              "column": "data",
+              "value": "={{ $node[\"calcula_24h_uteis4\"].json[\"dataCalculada\"] }}"
+            },
+            {
+              "column": "status",
+              "value": "N"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        3680,
+        -720
+      ],
+      "id": "cb742060-5376-45c0-96d0-270275f1844a",
+      "name": "insere_verificacao8",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "function adicionarHorasUteis(horasParaAdicionar) {\n  const agora = new Date();\n  let horasRestantes = horasParaAdicionar;\n  let dataAtual = new Date(agora);\n\n  while (horasRestantes > 0) {\n    dataAtual.setHours(dataAtual.getHours() + 1);\n    const diaDaSemana = dataAtual.getDay(); // 0 = domingo, 6 = sábado\n    if (diaDaSemana !== 0 && diaDaSemana !== 6) {\n      horasRestantes--;\n    }\n  }\n\n  return dataAtual;\n}\n\n// Função para formatar a data como \"YYYY-MM-DD HH:mm:ss\" em São Paulo\nfunction formatarDataSP(data) {\n  return new Intl.DateTimeFormat('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n    year: 'numeric',\n    month: '2-digit',\n    day: '2-digit',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit',\n    hour12: false\n  })\n  .formatToParts(data)\n  .reduce((acc, part) => {\n    if (part.type === 'literal') return acc;\n    acc[part.type] = part.value;\n    return acc;\n  }, {});\n}\n\nconst dataCalculada = adicionarHorasUteis(24); // <- agora 24 horas úteis\nconst partes = formatarDataSP(dataCalculada);\n\n// Monta a string final: YYYY-MM-DD HH:mm:ss\nconst dataFormatada = `${partes.year}-${partes.month}-${partes.day} ${partes.hour}:${partes.minute}:${partes.second}`;\n\nreturn [\n  {\n    json: {\n      dataCalculada: dataFormatada\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3460,
+        -720
+      ],
+      "id": "010495ae-1836-4323-b5bf-450dd2526a5c",
+      "name": "calcula_24h_uteis4"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "bfc2c77a-b310-49ee-ae28-5e80476d9603",
+              "leftValue": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}",
+              "rightValue": "Pós entrevista",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2960,
+        -380
+      ],
+      "id": "a858a384-0cb1-4ec1-ba64-1ebb8f1151db",
+      "name": "Pós entrevista"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "verificacoes",
+          "mode": "list",
+          "cachedResultName": "verificacoes"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"id_user\"] }}"
+            },
+            {
+              "column": "evento",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}"
+            },
+            {
+              "column": "ordem",
+              "value": "={{ $node[\"Loop Over Items\"].json[\"ordem\"] +1 }}"
+            },
+            {
+              "column": "data",
+              "value": "={{ $node[\"calcula_24h_uteis5\"].json[\"dataCalculada\"] }}"
+            },
+            {
+              "column": "status",
+              "value": "N"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        3600,
+        -480
+      ],
+      "id": "b4201bcf-309e-4e28-afac-0ac0ce52b311",
+      "name": "insere_verificacao9",
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "77RUzBcezQq9demf",
+          "name": "[MySQL] - Portus 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "function adicionarHorasUteis(horasParaAdicionar) {\n  const agora = new Date();\n  let horasRestantes = horasParaAdicionar;\n  let dataAtual = new Date(agora);\n\n  while (horasRestantes > 0) {\n    dataAtual.setHours(dataAtual.getHours() + 1);\n    const diaDaSemana = dataAtual.getDay(); // 0 = domingo, 6 = sábado\n    if (diaDaSemana !== 0 && diaDaSemana !== 6) {\n      horasRestantes--;\n    }\n  }\n\n  return dataAtual;\n}\n\n// Função para formatar a data como \"YYYY-MM-DD HH:mm:ss\" em São Paulo\nfunction formatarDataSP(data) {\n  return new Intl.DateTimeFormat('pt-BR', {\n    timeZone: 'America/Sao_Paulo',\n    year: 'numeric',\n    month: '2-digit',\n    day: '2-digit',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit',\n    hour12: false\n  })\n  .formatToParts(data)\n  .reduce((acc, part) => {\n    if (part.type === 'literal') return acc;\n    acc[part.type] = part.value;\n    return acc;\n  }, {});\n}\n\nconst dataCalculada = adicionarHorasUteis(24); // <- agora 24 horas úteis\nconst partes = formatarDataSP(dataCalculada);\n\n// Monta a string final: YYYY-MM-DD HH:mm:ss\nconst dataFormatada = `${partes.year}-${partes.month}-${partes.day} ${partes.hour}:${partes.minute}:${partes.second}`;\n\nreturn [\n  {\n    json: {\n      dataCalculada: dataFormatada\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3380,
+        -480
+      ],
+      "id": "8956a286-f118-44e1-9788-329993766b80",
+      "name": "calcula_24h_uteis5"
     }
   ],
   "pinData": {
@@ -2689,6 +3321,6 @@
   },
   "tags": [],
   "triggerCount": 6,
-  "updatedAt": "2025-05-05T13:33:12.012Z",
-  "versionId": "56626da3-61bb-4aa3-ace8-c873ecbad705"
+  "updatedAt": "2025-05-09T15:20:32.146Z",
+  "versionId": "e44e8b06-82e1-4558-83f9-258ccecb3820"
 }
