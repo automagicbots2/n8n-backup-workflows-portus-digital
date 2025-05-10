@@ -291,9 +291,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:33.649Z",
-  "id": "VnGZLBS1bUM2LjAI",
-  "meta": null,
+  "createdAt": "2024-05-20T16:43:40.783Z",
+  "id": "EaXMEe99iKvy0DAW",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "[Evolution] - Disparo em massa - 20/05 20hrs",
   "nodes": [
     {
@@ -322,7 +324,7 @@
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "PTisU6jVH6GN1bDQ",
+          "id": "6haYpAmOsZXFxR68",
           "name": "[Google Sheets] - Automagic Bots"
         }
       }
@@ -518,7 +520,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -552,7 +554,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -580,7 +582,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -617,7 +619,7 @@
       ],
       "credentials": {
         "mySql": {
-          "id": "hjxCwlzjBFkdT0gG",
+          "id": "DS41BflHYyPSAI7U",
           "name": "[MySQL] - Portus"
         }
       }
@@ -840,7 +842,7 @@
       ],
       "credentials": {
         "whatsAppApi": {
-          "id": "jITu8EfE4LVCf9Tz",
+          "id": "jvqZJXjWJXwpV03j",
           "name": "[API Oficial WhatsApp] - Portus"
         }
       }
@@ -861,7 +863,7 @@
       ],
       "credentials": {
         "whatsAppApi": {
-          "id": "jITu8EfE4LVCf9Tz",
+          "id": "jvqZJXjWJXwpV03j",
           "name": "[API Oficial WhatsApp] - Portus"
         }
       },
@@ -1011,17 +1013,20 @@
       ]
     }
   ],
-  "pinData": null,
+  "pinData": {},
   "settings": {
-    "saveExecutionProgress": false,
-    "saveManualExecutions": false,
-    "saveDataErrorExecution": "none",
-    "saveDataSuccessExecution": "none",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "p3FaRDkYc5EoM9KR"
   },
-  "staticData": null,
+  "staticData": {
+    "node:12hrs": {
+      "recurrencyRules": []
+    }
+  },
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2025-02-04T17:45:33.649Z",
-  "versionId": "f805666c-9724-47a5-8bd4-e4a63f483b9e"
+  "triggerCount": 1,
+  "updatedAt": "2024-05-20T16:56:26.348Z",
+  "versionId": "173970e6-11c4-4dd0-b56c-aa054294312c"
 }
