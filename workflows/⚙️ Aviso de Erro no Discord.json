@@ -13,9 +13,11 @@
       ]
     }
   },
-  "createdAt": "2025-02-04T17:45:32.439Z",
-  "id": "mKIVAmjjlR8KNTYw",
-  "meta": null,
+  "createdAt": "2024-03-14T13:31:14.638Z",
+  "id": "p3FaRDkYc5EoM9KR",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
   "name": "⚙️ Aviso de Erro no Discord",
   "nodes": [
     {
@@ -45,17 +47,16 @@
       ]
     }
   ],
-  "pinData": null,
+  "pinData": {},
   "settings": {
-    "saveExecutionProgress": true,
+    "executionOrder": "v1",
     "saveManualExecutions": false,
-    "saveDataErrorExecution": "all",
-    "saveDataSuccessExecution": "all",
-    "errorWorkflow": "B5ErT6ObkzMJxzKU"
+    "callerPolicy": "workflowsFromSameOwner",
+    "saveDataSuccessExecution": "none"
   },
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-02-04T17:45:32.439Z",
-  "versionId": "4fb80070-3d91-46e8-a881-1d1fdb64eba8"
+  "updatedAt": "2025-01-11T16:53:58.395Z",
+  "versionId": "381b2592-e492-409a-8eec-a02127120626"
 }
