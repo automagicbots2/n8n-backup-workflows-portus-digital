@@ -2726,7 +2726,7 @@
           "conditions": [
             {
               "id": "1af7d9d3-1587-4971-aa47-de484d111f5f",
-              "leftValue": "={{ $json[\"data\"][\"card\"][\"current_phase\"][\"name\"] }}",
+              "leftValue": "={{ $node[\"get_cards_via_id\"].json[\"data\"][\"card\"][\"current_phase\"][\"name\"] }}",
               "rightValue": "={{ $node[\"Loop Over Items\"].json[\"evento\"] }}",
               "operator": {
                 "type": "string",
@@ -3359,6 +3359,6 @@
   },
   "tags": [],
   "triggerCount": 6,
-  "updatedAt": "2025-05-12T14:29:25.525Z",
-  "versionId": "a52eecb1-1903-46ab-a0be-f1e049cbe5f0"
+  "updatedAt": "2025-05-12T17:21:21.393Z",
+  "versionId": "335e1699-f48d-4e22-b587-2fbf6b863bd9"
 }
