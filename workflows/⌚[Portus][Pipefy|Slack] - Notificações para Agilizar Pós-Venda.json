@@ -1339,7 +1339,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://hooks.slack.com/services/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",
+        "url": "https://hooks.slack.com/services/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",
         "sendBody": true,
         "bodyParameters": {
           "parameters": [
@@ -3359,6 +3359,6 @@
   },
   "tags": [],
   "triggerCount": 6,
-  "updatedAt": "2025-05-12T17:21:21.393Z",
-  "versionId": "335e1699-f48d-4e22-b587-2fbf6b863bd9"
+  "updatedAt": "2025-05-13T15:02:47.682Z",
+  "versionId": "22ea8877-f5ad-4cdc-a493-8677e5fedd78"
 }
